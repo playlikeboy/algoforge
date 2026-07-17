@@ -1,0 +1,22 @@
+{
+  "type": "pattern",
+  "slug": "mos-algorithm",
+  "name": "Mos Algorithm",
+  "description": "Master the Mos Algorithm coding pattern with curated problems.",
+  "problemCount": 1,
+  "problemSlugs": [
+    "threshold-majority-queries"
+  ],
+  "relatedTopics": [],
+  "seo": {
+    "title": "Mos Algorithm Pattern — Problems & Guide | AlgoForge",
+    "description": "Learn the Mos Algorithm pattern with 1 practice problems, interview tips, and visual intuition.",
+    "keywords": [
+      "Mos Algorithm",
+      "Mos Algorithm pattern",
+      "Mos Algorithm leetcode",
+      "coding patterns"
+    ],
+    "canonicalPath": "/patterns/mos-algorithm"
+  }
+}

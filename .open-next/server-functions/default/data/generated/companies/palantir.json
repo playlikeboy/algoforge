@@ -1,0 +1,21 @@
+{
+  "type": "company",
+  "slug": "palantir",
+  "name": "Palantir",
+  "description": "Coding interview preparation for Palantir: high-frequency patterns and problem sets.",
+  "problemCount": 2,
+  "problemSlugs": [
+    "contains-duplicate-ii",
+    "contains-duplicate-iii"
+  ],
+  "seo": {
+    "title": "Palantir Coding Interview Questions | AlgoForge",
+    "description": "Prepare for Palantir interviews with 2 problems, patterns, and roadmaps.",
+    "keywords": [
+      "Palantir interview questions",
+      "Palantir leetcode",
+      "Palantir oa"
+    ],
+    "canonicalPath": "/companies/palantir"
+  }
+}

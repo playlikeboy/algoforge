@@ -1,0 +1,48 @@
+{
+  "slug": "apple-hash-table-questions",
+  "path": "/explore/apple-hash-table-questions",
+  "h1": "Best Hash Table Questions for Apple",
+  "intro": "A curated set of 5 Hash Table problems frequently useful for Apple interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "two-sum",
+    "valid-sudoku",
+    "max-points-on-a-line",
+    "happy-number",
+    "contains-duplicate"
+  ],
+  "faqs": [
+    {
+      "question": "How many Hash Table problems should I do for Apple?",
+      "answer": "Quality over quantity: master patterns with 5 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Hash Table topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/apple",
+      "label": "Apple interview hub"
+    },
+    {
+      "href": "/topics/hash-table",
+      "label": "Hash Table problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Hash Table Questions for Apple | AlgoForge",
+    "description": "Top Hash Table coding interview questions for Apple. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Apple Hash Table questions",
+      "Hash Table interview",
+      "Apple leetcode"
+    ],
+    "canonicalPath": "/explore/apple-hash-table-questions"
+  },
+  "kind": "company-topic"
+}

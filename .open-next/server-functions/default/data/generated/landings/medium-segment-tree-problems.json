@@ -1,0 +1,43 @@
+{
+  "slug": "medium-segment-tree-problems",
+  "path": "/explore/medium-segment-tree-problems",
+  "h1": "Medium Segment Tree Problems",
+  "intro": "8 medium problems that drill the Segment Tree pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "longest-increasing-subsequence",
+    "range-sum-query-mutable",
+    "best-team-with-no-conflicts",
+    "closest-prime-numbers-in-range",
+    "maximum-profitable-triplets-with-increasing-prices-i",
+    "fruits-into-baskets-iii",
+    "maximize-count-of-distinct-primes-after-split",
+    "longest-balanced-subarray-i"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice medium Segment Tree problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/segment-tree",
+      "label": "Segment Tree pattern"
+    },
+    {
+      "href": "/difficulty/medium",
+      "label": "All Medium problems"
+    }
+  ],
+  "seo": {
+    "title": "Medium Segment Tree Problems | AlgoForge",
+    "description": "Practice medium Segment Tree LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "medium Segment Tree",
+      "Segment Tree problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/medium-segment-tree-problems"
+  },
+  "kind": "difficulty-pattern"
+}

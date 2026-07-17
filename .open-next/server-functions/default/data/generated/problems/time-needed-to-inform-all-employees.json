@@ -1,0 +1,156 @@
+{
+  "id": "1376",
+  "number": 1376,
+  "slug": "time-needed-to-inform-all-employees",
+  "title": "Time Needed to Inform All Employees",
+  "difficulty": "Medium",
+  "topics": [
+    "depth-first-search"
+  ],
+  "patterns": [
+    "dfs-backtracking"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/time-needed-to-inform-all-employees/",
+  "notes": [],
+  "relatedSlugs": [
+    "path-sum-ii",
+    "binary-tree-right-side-view",
+    "lowest-common-ancestor-of-a-binary-tree",
+    "strobogrammatic-number-ii",
+    "count-univalue-subtrees",
+    "nested-list-weight-sum-ii",
+    "find-leaves-of-binary-tree",
+    "pacific-atlantic-water-flow"
+  ],
+  "prevSlug": "bulb-switcher-iii",
+  "nextSlug": "frog-position-after-t-seconds",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Time Needed to Inform All Employees?\n\n**Time Needed to Inform All Employees** (LeetCode #1376) is a **Medium** problem that primarily trains **depth first search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dfs backtracking**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/time-needed-to-inform-all-employees/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Time Needed to Inform All Employees\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dfs backtracking**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(n)** space.\n\n### Pattern focus: dfs backtracking\n\nUse the pattern as a checklist:\n\n- **dfs backtracking** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Time Needed to Inform All Employees\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dfs backtracking — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dfs backtracking**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **depth first search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Time Needed to Inform All Employees** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **depth first search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "time-needed-to-inform-all-employees.cpp",
+      "code": "// Time:  O(n)\n// Space: O(n)\n\n// dfs solution with stack\nclass Solution {\npublic:\n    int numOfMinutes(int n, int headID, vector<int>& manager, vector<int>& informTime) {\n        unordered_map<int, vector<int>> children;\n        for (int i = 0; i < manager.size(); ++i) {\n            if (manager[i] != -1) {\n                children[manager[i]].emplace_back(i);\n            }\n        }\n \n        int result = 0;\n        vector<pair<int, int>> stk = {{headID, 0}};\n        while (!stk.empty()) {\n            auto [node, curr] = stk.back(); stk.pop_back();\n            curr += informTime[node];\n            result = max(result, curr);\n            if (!children.count(node)) {\n                continue;\n            }\n            for (const auto& child : children.at(node)) {\n                stk.emplace_back(child, curr);\n            }\n        }\n        return result;\n    }\n};\n\n// Time:  O(n)\n// Space: O(n)\n// dfs solution with recursion\nclass Solution2 {\npublic:\n    int numOfMinutes(int n, int headID, vector<int>& manager, vector<int>& informTime) {\n        unordered_map<int, vector<int>> children;\n        for (int i = 0; i < manager.size(); ++i) {\n            if (manager[i] != -1) {\n                children[manager[i]].emplace_back(i);\n            }\n        }\n        return dfs(informTime, children, headID);\n    }\n\nprivate:\n    int dfs(const vector<int>& informTime,\n            const unordered_map<int, vector<int>>& children,\n            int node) {\n        if (!children.count(node)) {\n            return informTime[node];\n        }\n        int result = 0;\n        for (const auto& child : children.at(node)) {\n            result = max(result, dfs(informTime, children, child));\n        }\n        return result + informTime[node];\n    }\n};\n",
+      "sourcePath": "C++/time-needed-to-inform-all-employees.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "time-needed-to-inform-all-employees.py",
+      "code": "# Time:  O(n)\n# Space: O(n)\n\nimport collections\n\n\n# dfs solution with stack\nclass Solution(object):\n    def numOfMinutes(self, n, headID, manager, informTime):\n        \"\"\"\n        :type n: int\n        :type headID: int\n        :type manager: List[int]\n        :type informTime: List[int]\n        :rtype: int\n        \"\"\"\n        children = collections.defaultdict(list)\n        for child, parent in enumerate(manager):\n            if parent != -1:\n                children[parent].append(child)\n\n        result = 0\n        stk = [(headID, 0)]\n        while stk:\n            node, curr = stk.pop()\n            curr += informTime[node]\n            result = max(result, curr)\n            if node not in children:\n                continue\n            for c in children[node]:\n                stk.append((c, curr))\n        return result\n\n    \n# Time:  O(n)\n# Space: O(n)\n# dfs solution with recursion\nclass Solution2(object):\n    def numOfMinutes(self, n, headID, manager, informTime):\n        \"\"\"\n        :type n: int\n        :type headID: int\n        :type manager: List[int]\n        :type informTime: List[int]\n        :rtype: int\n        \"\"\"\n        def dfs(informTime, children, node):\n            return (max(dfs(informTime, children, c)\n                        for c in children[node])\n                    if node in children\n                    else 0) + informTime[node]\n\n        children = collections.defaultdict(list)\n        for child, parent in enumerate(manager):\n            if parent != -1:\n                children[parent].append(child)\n        return dfs(informTime, children, headID)\n",
+      "sourcePath": "Python/time-needed-to-inform-all-employees.py"
+    }
+  },
+  "seo": {
+    "title": "Time Needed to Inform All Employees Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Time Needed to Inform All Employees (LeetCode #1376). Pattern: dfs backtracking. Time O(n), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Time Needed to Inform All Employees",
+      "Time Needed to Inform All Employees solution",
+      "Time Needed to Inform All Employees leetcode",
+      "depth-first-search",
+      "dfs-backtracking",
+      "medium"
+    ],
+    "canonicalPath": "/problems/time-needed-to-inform-all-employees"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Time Needed to Inform All Employees?",
+      "answer": "The reference solutions aim for O(n) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Time Needed to Inform All Employees use?",
+      "answer": "It primarily maps to dfs backtracking, within the broader topic of depth first search."
+    },
+    {
+      "question": "Is Time Needed to Inform All Employees good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/time-needed-to-inform-all-employees/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dfs backtracking approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Time Needed to Inform All Employees (#1376) — Medium. Pattern: dfs backtracking. Complexity: O(n) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Time Needed to Inform All Employees: show input structure (depth first search), highlight the moving parts of the dfs backtracking approach, and annotate each step with the maintained invariant and complexity."
+}

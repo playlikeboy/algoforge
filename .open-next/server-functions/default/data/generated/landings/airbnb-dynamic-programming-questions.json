@@ -1,0 +1,47 @@
+{
+  "slug": "airbnb-dynamic-programming-questions",
+  "path": "/explore/airbnb-dynamic-programming-questions",
+  "h1": "Best Dynamic Programming Questions for Airbnb",
+  "intro": "A curated set of 4 Dynamic Programming problems frequently useful for Airbnb interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "house-robber",
+    "maximal-square",
+    "coin-change",
+    "optimal-account-balancing"
+  ],
+  "faqs": [
+    {
+      "question": "How many Dynamic Programming problems should I do for Airbnb?",
+      "answer": "Quality over quantity: master patterns with 4 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Dynamic Programming topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/airbnb",
+      "label": "Airbnb interview hub"
+    },
+    {
+      "href": "/topics/dynamic-programming",
+      "label": "Dynamic Programming problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Dynamic Programming Questions for Airbnb | AlgoForge",
+    "description": "Top Dynamic Programming coding interview questions for Airbnb. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Airbnb Dynamic Programming questions",
+      "Dynamic Programming interview",
+      "Airbnb leetcode"
+    ],
+    "canonicalPath": "/explore/airbnb-dynamic-programming-questions"
+  },
+  "kind": "company-topic"
+}

@@ -1,0 +1,21 @@
+{
+  "type": "company",
+  "slug": "baidu",
+  "name": "Baidu",
+  "description": "Coding interview preparation for Baidu: high-frequency patterns and problem sets.",
+  "problemCount": 2,
+  "problemSlugs": [
+    "zuma-game",
+    "out-of-boundary-paths"
+  ],
+  "seo": {
+    "title": "Baidu Coding Interview Questions | AlgoForge",
+    "description": "Prepare for Baidu interviews with 2 problems, patterns, and roadmaps.",
+    "keywords": [
+      "Baidu interview questions",
+      "Baidu leetcode",
+      "Baidu oa"
+    ],
+    "canonicalPath": "/companies/baidu"
+  }
+}

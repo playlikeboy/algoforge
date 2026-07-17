@@ -1,0 +1,25 @@
+{
+  "type": "pattern",
+  "slug": "wqs-binary-search",
+  "name": "Wqs Binary Search",
+  "description": "Master the Wqs Binary Search coding pattern with curated problems.",
+  "problemCount": 4,
+  "problemSlugs": [
+    "minimum-partition-score",
+    "minimum-partition-score-ii",
+    "maximum-sum-of-m-non-overlapping-subarrays-i",
+    "maximum-sum-of-m-non-overlapping-subarrays-ii"
+  ],
+  "relatedTopics": [],
+  "seo": {
+    "title": "Wqs Binary Search Pattern — Problems & Guide | AlgoForge",
+    "description": "Learn the Wqs Binary Search pattern with 4 practice problems, interview tips, and visual intuition.",
+    "keywords": [
+      "Wqs Binary Search",
+      "Wqs Binary Search pattern",
+      "Wqs Binary Search leetcode",
+      "coding patterns"
+    ],
+    "canonicalPath": "/patterns/wqs-binary-search"
+  }
+}

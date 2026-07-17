@@ -1,0 +1,49 @@
+{
+  "type": "pattern",
+  "slug": "graph-algorithms",
+  "name": "Graph Algorithms",
+  "description": "DFS/BFS, topological sort, Dijkstra, and MST ideas.",
+  "problemCount": 26,
+  "problemSlugs": [
+    "reconstruct-itinerary",
+    "couples-holding-hands",
+    "flower-planting-with-no-adjacent",
+    "maximum-students-taking-exam",
+    "minimum-number-of-vertices-to-reach-all-nodes",
+    "number-of-ways-to-reconstruct-a-tree",
+    "checking-existence-of-edge-length-limited-paths-ii",
+    "restore-the-array-from-adjacent-pairs",
+    "minimum-degree-of-a-connected-trio-in-a-graph",
+    "number-of-restricted-paths-from-first-to-last-node",
+    "find-center-of-star-graph",
+    "maximum-number-of-accepted-invitations",
+    "find-if-path-exists-in-graph",
+    "number-of-ways-to-arrive-at-destination",
+    "paths-in-maze-that-lead-to-same-room",
+    "minimum-cost-to-reach-city-with-discounts",
+    "valid-arrangement-of-pairs",
+    "minimum-operations-to-remove-adjacent-ones-in-matrix",
+    "maximum-employees-to-be-invited-to-a-meeting",
+    "minimum-weighted-subgraph-with-the-required-paths",
+    "distance-to-a-cycle-in-undirected-graph",
+    "maximum-score-of-a-node-sequence",
+    "modify-graph-edge-weights",
+    "find-the-closest-marked-node",
+    "minimum-time-to-visit-disappearing-nodes",
+    "find-edges-in-shortest-paths"
+  ],
+  "relatedTopics": [
+    "graph"
+  ],
+  "seo": {
+    "title": "Graph Algorithms Pattern — Problems & Guide | AlgoForge",
+    "description": "Learn the Graph Algorithms pattern with 26 practice problems, interview tips, and visual intuition.",
+    "keywords": [
+      "Graph Algorithms",
+      "Graph Algorithms pattern",
+      "Graph Algorithms leetcode",
+      "coding patterns"
+    ],
+    "canonicalPath": "/patterns/graph-algorithms"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "slug": "google-greedy-questions",
+  "path": "/explore/google-greedy-questions",
+  "h1": "Best Greedy Questions for Google",
+  "intro": "A curated set of 18 Greedy problems frequently useful for Google interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "container-with-most-water",
+    "trapping-rain-water",
+    "jump-game-ii",
+    "jump-game",
+    "gas-station",
+    "candy",
+    "remove-duplicate-letters",
+    "create-maximum-number",
+    "patching-array",
+    "is-subsequence",
+    "task-scheduler",
+    "course-schedule-iii",
+    "split-array-into-consecutive-subsequences",
+    "employee-free-time",
+    "partition-labels",
+    "score-after-flipping-matrix",
+    "bag-of-tokens",
+    "maximum-width-ramp"
+  ],
+  "faqs": [
+    {
+      "question": "How many Greedy problems should I do for Google?",
+      "answer": "Quality over quantity: master patterns with 15 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Greedy topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/google",
+      "label": "Google interview hub"
+    },
+    {
+      "href": "/topics/greedy",
+      "label": "Greedy problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Greedy Questions for Google | AlgoForge",
+    "description": "Top Greedy coding interview questions for Google. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Google Greedy questions",
+      "Greedy interview",
+      "Google leetcode"
+    ],
+    "canonicalPath": "/explore/google-greedy-questions"
+  },
+  "kind": "company-topic"
+}

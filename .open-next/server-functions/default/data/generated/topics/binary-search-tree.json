@@ -1,0 +1,48 @@
+{
+  "type": "topic",
+  "slug": "binary-search-tree",
+  "name": "Binary Search Tree",
+  "description": "Ordered trees and BST invariants.",
+  "problemCount": 28,
+  "problemSlugs": [
+    "contains-duplicate-iii",
+    "kth-smallest-element-in-a-bst",
+    "lowest-common-ancestor-of-a-binary-search-tree",
+    "closest-binary-search-tree-value",
+    "inorder-successor-in-bst",
+    "data-stream-as-disjoint-intervals",
+    "serialize-and-deserialize-bst",
+    "delete-node-in-a-bst",
+    "inorder-successor-in-bst-ii",
+    "minimum-absolute-difference-in-bst",
+    "split-bst",
+    "minimum-distance-between-bst-nodes",
+    "maximum-sum-bst-in-binary-tree",
+    "balance-a-binary-search-tree",
+    "depth-of-bst-given-insertion-order",
+    "merge-bsts-to-create-single-bst",
+    "number-of-pairs-satisfying-inequality",
+    "extract-kth-character-from-the-rope-tree",
+    "minimum-absolute-difference-between-elements-with-constraint",
+    "maximum-profitable-triplets-with-increasing-prices-i",
+    "maximum-profitable-triplets-with-increasing-prices-ii",
+    "maximum-balanced-subsequence-sum",
+    "distribute-elements-into-two-arrays-ii",
+    "maximum-increasing-triplet-value",
+    "block-placement-queries",
+    "maximum-sum-of-subsequence-with-non-adjacent-elements",
+    "range-xor-queries-with-subarray-reversals",
+    "power-update-after-k-th-largest-insertion-ii"
+  ],
+  "seo": {
+    "title": "Binary Search Tree Interview Questions & Solutions | AlgoForge",
+    "description": "Study 28 Binary Search Tree problems for coding interviews. Roadmaps, patterns, and original explanations on AlgoForge.",
+    "keywords": [
+      "Binary Search Tree",
+      "Binary Search Tree leetcode",
+      "Binary Search Tree interview questions",
+      "dsa"
+    ],
+    "canonicalPath": "/topics/binary-search-tree"
+  }
+}

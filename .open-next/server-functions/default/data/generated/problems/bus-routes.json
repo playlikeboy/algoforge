@@ -1,0 +1,161 @@
+{
+  "id": "815",
+  "number": 815,
+  "slug": "bus-routes",
+  "title": "Bus Routes",
+  "difficulty": "Medium",
+  "topics": [
+    "breadth-first-search"
+  ],
+  "patterns": [
+    "queue-bfs"
+  ],
+  "companies": [
+    "google",
+    "amazon"
+  ],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(\\",
+  "spaceComplexity": "E\\",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/bus-routes/",
+  "notes": [
+    ")_"
+  ],
+  "relatedSlugs": [
+    "binary-tree-zigzag-level-order-traversal",
+    "word-ladder",
+    "surrounded-regions",
+    "clone-graph",
+    "course-schedule",
+    "course-schedule-ii",
+    "graph-valid-tree",
+    "walls-and-gates"
+  ],
+  "prevSlug": "binary-tree-pruning",
+  "nextSlug": "ambiguous-coordinates",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Bus Routes?\n\n**Bus Routes** (LeetCode #815) is a **Medium** problem that primarily trains **breadth first search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **queue bfs**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: )_.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/bus-routes/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Bus Routes\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **queue bfs**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(\\) and **space** (E\\) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(\\** time and **E\\** space.\n\n### Pattern focus: queue bfs\n\nUse the pattern as a checklist:\n\n- **queue bfs** — confirm the invariant holds after each step\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(\\** |\n| Space | **E\\** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Bus Routes\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for queue bfs — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal queue bfs solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `bus-routes`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **queue bfs**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **breadth first search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Bus Routes** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **breadth first search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "bus-routes.cpp",
+      "code": "// Time:  O(|V| + |E|)\n// Space: O(|V| + |E|)\n\nclass Solution {\npublic:\n    int numBusesToDestination(vector<vector<int>>& routes, int S, int T) {\n        if (S == T) {\n            return 0;\n        }\n        unordered_map<int, unordered_set<int>> to_route;\n        for (int i = 0; i < routes.size(); ++i) {\n            for (const auto& stop : routes[i]) {\n                to_route[stop].emplace(i);\n            }\n        }\n        \n        int result = 1;\n        vector<int> q{S};\n        unordered_set<int> lookup{S};\n        while (!q.empty()) {\n            vector<int> next_q;\n            for (const auto& stop : q) {\n                for (const auto& i : to_route[stop]) {\n                    for (const auto& next_stop : routes[i]) {\n                        if (lookup.count(next_stop)) {\n                            continue;\n                        }\n                        if (next_stop == T) {\n                            return result;\n                        }\n                        next_q.emplace_back(next_stop);\n                        to_route[next_stop].erase(i);\n                        lookup.emplace(next_stop);\n                    }\n                }\n            }\n            swap(q, next_q);\n            ++result;\n        }\n        return -1;\n    }\n};\n",
+      "sourcePath": "C++/bus-routes.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "bus-routes.py",
+      "code": "# Time:  O(|V| + |E|)\n# Space: O(|V| + |E|)\n\nimport collections\n\n\nclass Solution(object):\n    def numBusesToDestination(self, routes, S, T):\n        \"\"\"\n        :type routes: List[List[int]]\n        :type S: int\n        :type T: int\n        :rtype: int\n        \"\"\"\n        if S == T:\n            return 0\n\n        to_route = collections.defaultdict(set)\n        for i, route in enumerate(routes):\n            for stop in route:\n                to_route[stop].add(i)\n\n        result = 1\n        q = [S]\n        lookup = set([S])\n        while q:\n            next_q = []\n            for stop in q:\n                for i in to_route[stop]:\n                    for next_stop in routes[i]:\n                        if next_stop in lookup:\n                            continue\n                        if next_stop == T:\n                            return result\n                        next_q.append(next_stop)\n                        to_route[next_stop].remove(i)\n                        lookup.add(next_stop)\n            q = next_q\n            result += 1\n\n        return -1\n\n",
+      "sourcePath": "Python/bus-routes.py"
+    }
+  },
+  "seo": {
+    "title": "Bus Routes Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Bus Routes (LeetCode #815). Pattern: queue bfs. Time O(\\, space E\\. Multi-language solutions and interview tips.",
+    "keywords": [
+      "Bus Routes",
+      "Bus Routes solution",
+      "Bus Routes leetcode",
+      "breadth-first-search",
+      "queue-bfs",
+      "medium"
+    ],
+    "canonicalPath": "/problems/bus-routes"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Bus Routes?",
+      "answer": "The reference solutions aim for O(\\ time and E\\ space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Bus Routes use?",
+      "answer": "It primarily maps to queue bfs, within the broader topic of breadth first search."
+    },
+    {
+      "question": "Is Bus Routes good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/bus-routes/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the queue bfs approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Bus Routes (#815) — Medium. Pattern: queue bfs. Complexity: O(\\ time / E\\ space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Bus Routes: show input structure (breadth first search), highlight the moving parts of the queue bfs approach, and annotate each step with the maintained invariant and complexity."
+}

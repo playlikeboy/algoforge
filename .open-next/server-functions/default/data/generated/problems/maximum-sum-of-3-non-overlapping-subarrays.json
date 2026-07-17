@@ -1,0 +1,159 @@
+{
+  "id": "689",
+  "number": 689,
+  "slug": "maximum-sum-of-3-non-overlapping-subarrays",
+  "title": "Maximum Sum of 3 Non-Overlapping Subarrays",
+  "difficulty": "Hard",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dynamic-programming"
+  ],
+  "companies": [
+    "google",
+    "meta"
+  ],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/",
+  "notes": [],
+  "relatedSlugs": [
+    "regular-expression-matching",
+    "edit-distance",
+    "scramble-string",
+    "interleaving-string",
+    "distinct-subsequences",
+    "best-time-to-buy-and-sell-stock-iii",
+    "palindrome-partitioning-ii",
+    "dungeon-game"
+  ],
+  "prevSlug": "knight-probability-in-chessboard",
+  "nextSlug": "employee-importance",
+  "estimatedMinutes": 60,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Maximum Sum of 3 Non-Overlapping Subarrays?\n\n**Maximum Sum of 3 Non-Overlapping Subarrays** (LeetCode #689) is a **Hard** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Maximum Sum of 3 Non-Overlapping Subarrays\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(n)** space.\n\n### Pattern focus: dynamic programming\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Maximum Sum of 3 Non-Overlapping Subarrays\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal dynamic programming solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `maximum-sum-of-3-non-overlapping-subarrays`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Maximum Sum of 3 Non-Overlapping Subarrays** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "maximum-sum-of-3-non-overlapping-subarrays.cpp",
+      "code": "// Time:  O(n)\n// Space: O(n)\n\nclass Solution {\npublic:\n    vector<int> maxSumOfThreeSubarrays(vector<int>& nums, int k) {\n        const auto n = nums.size();\n        vector<int> accu = {0};\n        for (const auto& num : nums) {\n            accu.emplace_back(accu.back() + num);\n        }\n       \n        vector<int> left_pos(n);\n        for (int i = k, total = accu[k] - accu[0]; i < n; ++i) {\n            if (accu[i + 1] - accu[i + 1 - k] > total) {\n                left_pos[i] = i + 1 - k;\n                total = accu[i + 1] - accu[i + 1 - k];\n            } else { \n                left_pos[i] = left_pos[i - 1];\n            }\n        }\n        \n        vector<int> right_pos(n, n - k);\n        for (int i = n - k - 1, total = accu[n] - accu[n - k]; i >= 0; --i) {\n            if (accu[i + k] - accu[i] > total) {\n                right_pos[i] = i;\n                total = accu[i + k] - accu[i];\n            } else {\n                right_pos[i] = right_pos[i + 1];\n            }\n        }\n        \n        vector<int> result(3);\n        for (int i = k, max_sum = 0; i <= n - 2 * k; ++i) {\n            auto left = left_pos[i - 1], right = right_pos[i + k];\n            auto total = (accu[i + k] - accu[i]) +\n                         (accu[left + k] - accu[left]) +\n                         (accu[right + k] - accu[right]);\n            if (total > max_sum) {\n                max_sum = total;\n                result = {left, i, right};\n            }\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/maximum-sum-of-3-non-overlapping-subarrays.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "maximum-sum-of-3-non-overlapping-subarrays.py",
+      "code": "# Time:  O(n)\n# Space: O(n)\n\nclass Solution(object):\n    def maxSumOfThreeSubarrays(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        n = len(nums)\n        accu = [0]\n        for num in nums:\n            accu.append(accu[-1]+num)\n\n        left_pos = [0] * n\n        total = accu[k]-accu[0]\n        for i in xrange(k, n):\n            if accu[i+1]-accu[i+1-k] > total:\n                left_pos[i] = i+1-k\n                total = accu[i+1]-accu[i+1-k]\n            else:\n                left_pos[i] = left_pos[i-1]\n\n        right_pos = [n-k] * n\n        total = accu[n]-accu[n-k]\n        for i in reversed(xrange(n-k)):\n            if accu[i+k]-accu[i] > total:\n                right_pos[i] = i\n                total = accu[i+k]-accu[i]\n            else:\n                right_pos[i] = right_pos[i+1]\n\n        result, max_sum = [], 0\n        for i in xrange(k, n-2*k+1):\n            left, right = left_pos[i-1], right_pos[i+k]\n            total = (accu[i+k]-accu[i]) + \\\n                    (accu[left+k]-accu[left]) + \\\n                    (accu[right+k]-accu[right])\n            if total > max_sum:\n                max_sum = total\n                result = [left, i, right]\n        return result\n\n",
+      "sourcePath": "Python/maximum-sum-of-3-non-overlapping-subarrays.py"
+    }
+  },
+  "seo": {
+    "title": "Maximum Sum of 3 Non-Overlapping Subarrays Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Maximum Sum of 3 Non-Overlapping Subarrays (LeetCode #689). Pattern: dynamic programming. Time O(n), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Maximum Sum of 3 Non-Overlapping Subarrays",
+      "Maximum Sum of 3 Non-Overlapping Subarrays solution",
+      "Maximum Sum of 3 Non-Overlapping Subarrays leetcode",
+      "dynamic-programming",
+      "dynamic-programming",
+      "hard"
+    ],
+    "canonicalPath": "/problems/maximum-sum-of-3-non-overlapping-subarrays"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Maximum Sum of 3 Non-Overlapping Subarrays?",
+      "answer": "The reference solutions aim for O(n) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Maximum Sum of 3 Non-Overlapping Subarrays use?",
+      "answer": "It primarily maps to dynamic programming, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Maximum Sum of 3 Non-Overlapping Subarrays good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Maximum Sum of 3 Non-Overlapping Subarrays (#689) — Hard. Pattern: dynamic programming. Complexity: O(n) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Maximum Sum of 3 Non-Overlapping Subarrays: show input structure (dynamic programming), highlight the moving parts of the dynamic programming approach, and annotate each step with the maintained invariant and complexity."
+}

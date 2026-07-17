@@ -1,0 +1,162 @@
+{
+  "id": "1649",
+  "number": 1649,
+  "slug": "create-sorted-array-through-instructions",
+  "title": "Create Sorted Array through Instructions",
+  "difficulty": "Hard",
+  "topics": [
+    "tree"
+  ],
+  "patterns": [
+    "fenwick-tree",
+    "merge-sort"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogn)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/create-sorted-array-through-instructions/",
+  "notes": [
+    "BIT",
+    "Fenwick Tree",
+    "Merge Sort"
+  ],
+  "relatedSlugs": [
+    "count-of-smaller-numbers-after-self",
+    "minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits",
+    "count-good-triplets-in-an-array",
+    "queries-on-a-permutation-with-key",
+    "find-the-index-of-permutation",
+    "shortest-path-in-a-weighted-tree",
+    "palindromic-path-queries-in-a-tree",
+    "pancake-sorting"
+  ],
+  "prevSlug": "sell-diminishing-valued-colored-balls",
+  "nextSlug": "lowest-common-ancestor-of-a-binary-tree-iii",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Create Sorted Array through Instructions?\n\n**Create Sorted Array through Instructions** (LeetCode #1649) is a **Hard** problem that primarily trains **tree**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **fenwick tree and merge sort**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: BIT, Fenwick Tree, Merge Sort.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/create-sorted-array-through-instructions/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Create Sorted Array through Instructions\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **fenwick tree and merge sort**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogn)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogn)** time and **O(n)** space.\n\n### Pattern focus: fenwick tree and merge sort\n\nUse the pattern as a checklist:\n\n- **fenwick tree** — confirm the invariant holds after each step\n- **merge sort** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogn)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Create Sorted Array through Instructions\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for fenwick tree and merge sort — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **fenwick tree and merge sort**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **tree**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Create Sorted Array through Instructions** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **tree**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "create-sorted-array-through-instructions.cpp",
+      "code": "// Time:  O(nlogm)\n// Space: O(m)\n\nclass Solution {\npublic:\n    int createSortedArray(vector<int>& instructions) {\n        static const int MOD = 1e9 + 7;\n        BIT bit(*max_element(cbegin(instructions), cend(instructions)));\n        int result = 0;\n        for (int i = 0; i < size(instructions); ++i) {\n            const auto inst = instructions[i] - 1;\n            auto cost = min(bit.query(inst - 1), i - bit.query(inst));\n            if (MOD - result <= cost) {\n                cost -= MOD;\n            }\n            result += cost;\n            bit.add(inst, 1);\n        }\n        return result;\n    }\n\nprivate:\n    class BIT {\n    public:\n        BIT(int n) : bit_(n + 1) {  // 0-indexed\n        }\n        \n        void add(int i, int val) {\n            ++i;\n            for (; i < size(bit_); i += lower_bit(i)) {\n                bit_[i] += val;\n            }\n        }\n\n        int query(int i) const {\n            ++i;\n            int total = 0;\n            for (; i > 0; i -= lower_bit(i)) {\n                total += bit_[i];\n            }\n            return total;\n        }\n    \n    private:\n        int lower_bit(int i) const {\n            return i & -i;\n        }\n        \n        vector<int> bit_;\n    };\n};\n\n// Time:  O(nlogn)\n// Space: O(n)\n// in fact, we could use a raw array instead of vector to avoid TLE\nclass Solution_TLE {\npublic:\n    int createSortedArray(vector<int>& instructions) {\n        static const int MOD = 1e9 + 7;\n        vector<int> smaller_counts(size(instructions)), larger_counts(size(instructions));\n        vector<pair<int, int>> smaller_idxs, larger_idxs;\n        for (int i = 0; i < size(instructions); ++i) {\n            smaller_idxs.emplace_back(instructions[i], i);\n            larger_idxs.emplace_back(instructions[i], i);\n        }\n        smallerMergeSort(&smaller_idxs, 0, size(smaller_idxs) - 1, &smaller_counts);\n        largerMergeSort(&larger_idxs, 0, size(larger_idxs) - 1, &larger_counts);\n        int result = 0;\n        for (int i = 0; i < size(instructions); ++i) {\n            auto cost = min(smaller_counts[i], larger_counts[i]);\n            if (MOD - result <= cost) {\n                cost -= MOD;\n            }\n            result += cost;\n        }\n        return result;\n    }\n\nprivate:\n    void smallerMergeSort(vector<pair<int, int>> *idxs, int start, int end, vector<int> *counts) {\n        if (end - start <= 0) {  // The number of range [start, end] of which size is less than 2 doesn't need sort.\n            return;\n        }\n        int mid = start + (end - start) / 2;\n        smallerMergeSort(idxs, start, mid, counts);\n        smallerMergeSort(idxs, mid + 1, end, counts);\n\n        int r = start;\n        vector<pair<int, int>> tmp;\n        for (int i = mid + 1; i <= end; ++i) {\n            // Merge the two sorted arrays into tmp.\n            while (r <= mid && (*idxs)[r].first < (*idxs)[i].first) {\n                tmp.emplace_back((*idxs)[r++]);\n            }\n            tmp.emplace_back((*idxs)[i]);\n            (*counts)[(*idxs)[i].second] += r - start;\n        }\n        while (r <= mid) {\n            tmp.emplace_back((*idxs)[r++]);\n        }\n        // Copy tmp back to num_idxs.\n        copy(tmp.begin(), tmp.end(), idxs->begin() + start);\n    }\n    \n    void largerMergeSort(vector<pair<int, int>> *idxs, int start, int end, vector<int> *counts) {\n        if (end - start <= 0) {  // The number of range [start, end] of which size is less than 2 doesn't need sort.\n            return;\n        }\n        int mid = start + (end - start) / 2;\n        largerMergeSort(idxs, start, mid, counts);\n        largerMergeSort(idxs, mid + 1, end, counts);\n\n        int r = start;\n        vector<pair<int, int>> tmp;\n        for (int i = mid + 1; i <= end; ++i) {\n            // Merge the two sorted arrays into tmp.\n            while (r <= mid && (*idxs)[r].first <= (*idxs)[i].first) {\n                tmp.emplace_back((*idxs)[r++]);\n            }\n            if (r <= mid) {\n                tmp.emplace_back((*idxs)[i]);\n            }\n            (*counts)[(*idxs)[i].second] += mid - r + 1;\n        }\n        while (r <= mid) {\n            tmp.emplace_back((*idxs)[r++]);\n        }\n        // Copy tmp back to num_idxs.\n        copy(tmp.begin(), tmp.end(), idxs->begin() + start);\n    }\n};\n",
+      "sourcePath": "C++/create-sorted-array-through-instructions.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "create-sorted-array-through-instructions.py",
+      "code": "# Time:  O(nlogm)\n# Space: O(m)\n\nclass BIT(object):  # 0-indexed.\n    def __init__(self, n):\n        self.__bit = [0]*(n+1)  # Extra one for dummy node.\n\n    def add(self, i, val):\n        i += 1  # Extra one for dummy node.\n        while i < len(self.__bit):\n            self.__bit[i] += val\n            i += (i & -i)\n\n    def query(self, i):\n        i += 1  # Extra one for dummy node.\n        ret = 0\n        while i > 0:\n            ret += self.__bit[i]\n            i -= (i & -i)\n        return ret\n\nclass Solution(object):\n    def createSortedArray(self, instructions):\n        \"\"\"\n        :type instructions: List[int]\n        :rtype: int\n        \"\"\"\n        MOD = 10**9 + 7\n        bit = BIT(max(instructions))\n        result = 0\n        for i, inst in enumerate(instructions):\n            inst -= 1\n            result += min(bit.query(inst-1), i-bit.query(inst))\n            bit.add(inst, 1)\n        return result % MOD\n\n\n# Time:  O(nlogn)\n# Space: O(n)\nimport itertools\nclass Solution_TLE(object):\n    def createSortedArray(self, instructions):\n        \"\"\"\n        :type instructions: List[int]\n        :rtype: int\n        \"\"\"\n        MOD = 10**9 + 7\n        def smallerMergeSort(idxs, start, end, counts):\n            if end - start <= 0:  # The size of range [start, end] less than 2 is always with count 0.\n                return 0\n\n            mid = start + (end - start) // 2\n            smallerMergeSort(idxs, start, mid, counts)\n            smallerMergeSort(idxs, mid + 1, end, counts)\n            r = start\n            tmp = []\n            for i in xrange(mid+1, end + 1):\n                # Merge the two sorted arrays into tmp.\n                while r <= mid and idxs[r][0] < idxs[i][0]:\n                    tmp.append(idxs[r])\n                    r += 1\n                tmp.append(idxs[i])\n                counts[idxs[i][1]] += r - start\n            while r <= mid:\n                tmp.append(idxs[r])\n                r += 1\n            # Copy tmp back to idxs\n            idxs[start:start+len(tmp)] = tmp\n        \n        def largerMergeSort(idxs, start, end, counts):\n            if end - start <= 0:  # The size of range [start, end] less than 2 is always with count 0.\n                return 0\n\n            mid = start + (end - start) // 2\n            largerMergeSort(idxs, start, mid, counts)\n            largerMergeSort(idxs, mid + 1, end, counts)\n            r = start\n            tmp = []\n            for i in xrange(mid+1, end + 1):\n                # Merge the two sorted arrays into tmp.\n                while r <= mid and idxs[r][0] <= idxs[i][0]:\n                    tmp.append(idxs[r])\n                    r += 1\n                if r <= mid:\n                    tmp.append(idxs[i])\n                counts[idxs[i][1]] += mid - r + 1\n            while r <= mid:\n                tmp.append(idxs[r])\n                r += 1\n            # Copy tmp back to idxs\n            idxs[start:start+len(tmp)] = tmp\n\n        idxs = []\n        smaller_counts, larger_counts = [[0] * len(instructions) for _ in xrange(2)]\n        for i, inst in enumerate(instructions):\n            idxs.append((inst, i))\n        smallerMergeSort(idxs[:], 0, len(idxs)-1, smaller_counts)\n        largerMergeSort(idxs, 0, len(idxs)-1, larger_counts)\n        return sum(min(s, l) for s, l in itertools.izip(smaller_counts, larger_counts)) % MOD\n",
+      "sourcePath": "Python/create-sorted-array-through-instructions.py"
+    }
+  },
+  "seo": {
+    "title": "Create Sorted Array through Instructions Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Create Sorted Array through Instructions (LeetCode #1649). Pattern: fenwick tree. Time O(nlogn), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Create Sorted Array through Instructions",
+      "Create Sorted Array through Instructions solution",
+      "Create Sorted Array through Instructions leetcode",
+      "tree",
+      "fenwick-tree",
+      "merge-sort",
+      "hard"
+    ],
+    "canonicalPath": "/problems/create-sorted-array-through-instructions"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Create Sorted Array through Instructions?",
+      "answer": "The reference solutions aim for O(nlogn) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Create Sorted Array through Instructions use?",
+      "answer": "It primarily maps to fenwick tree and merge sort, within the broader topic of tree."
+    },
+    {
+      "question": "Is Create Sorted Array through Instructions good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/create-sorted-array-through-instructions/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the fenwick tree and merge sort approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Create Sorted Array through Instructions (#1649) — Hard. Pattern: fenwick tree and merge sort. Complexity: O(nlogn) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Create Sorted Array through Instructions: show input structure (tree), highlight the moving parts of the fenwick tree and merge sort approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,20 @@
+{
+  "type": "company",
+  "slug": "hulu",
+  "name": "Hulu",
+  "description": "Coding interview preparation for Hulu: high-frequency patterns and problem sets.",
+  "problemCount": 1,
+  "problemSlugs": [
+    "sum-of-two-integers"
+  ],
+  "seo": {
+    "title": "Hulu Coding Interview Questions | AlgoForge",
+    "description": "Prepare for Hulu interviews with 1 problems, patterns, and roadmaps.",
+    "keywords": [
+      "Hulu interview questions",
+      "Hulu leetcode",
+      "Hulu oa"
+    ],
+    "canonicalPath": "/companies/hulu"
+  }
+}

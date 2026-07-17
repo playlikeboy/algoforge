@@ -1,0 +1,156 @@
+{
+  "id": "1001",
+  "number": 1001,
+  "slug": "grid-illumination",
+  "title": "Grid Illumination",
+  "difficulty": "Hard",
+  "topics": [
+    "hash-table"
+  ],
+  "patterns": [
+    "hash-map"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(l + q)",
+  "spaceComplexity": "O(l)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/grid-illumination/",
+  "notes": [],
+  "relatedSlugs": [
+    "substring-with-concatenation-of-all-words",
+    "minimum-window-substring",
+    "max-points-on-a-line",
+    "longest-substring-with-at-most-two-distinct-characters",
+    "palindrome-pairs",
+    "longest-substring-with-at-most-k-distinct-characters",
+    "triples-with-bitwise-and-equal-to-zero",
+    "string-transforms-into-another-string"
+  ],
+  "prevSlug": "minimum-cost-to-merge-stones",
+  "nextSlug": "find-common-characters",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Grid Illumination?\n\n**Grid Illumination** (LeetCode #1001) is a **Hard** problem that primarily trains **hash table**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **hash map**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/grid-illumination/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Grid Illumination\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **hash map**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(l + q)) and **space** (O(l)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(l + q)** time and **O(l)** space.\n\n### Pattern focus: hash map\n\nUse the pattern as a checklist:\n\n- **hash map** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(l + q)** |\n| Space | **O(l)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Grid Illumination\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for hash map — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **hash map**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **hash table**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Grid Illumination** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **hash table**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "grid-illumination.cpp",
+      "code": "// Time:  O(l + q)\n// Space: O(l)\n\nclass Solution {\npublic:\n    vector<int> gridIllumination(int N, vector<vector<int>>& lamps, vector<vector<int>>& queries) {\n        unordered_set<int64_t> lookup;\n        unordered_map<int, int> row, col, diag, anti;\n        for (const auto& lamp : lamps) {\n            int r, c;\n            tie(r, c) = make_pair(lamp[0], lamp[1]);\n            if (!lookup.emplace(static_cast<int64_t>(r) * N + c).second) {\n                continue;\n            }\n            ++row[r];\n            ++col[c];\n            ++diag[r - c];\n            ++anti[r + c];\n        }\n        \n        vector<int> result;\n        for (const auto& query : queries) {\n            int r, c;\n            tie(r, c) = make_pair(query[0], query[1]);\n            if (!(row[r] || col[c] || diag[r - c] || anti[r + c])) {\n                result.emplace_back(0);\n                continue;\n            }\n            result.emplace_back(1);\n            for (int nr = max(r - 1, 0); nr <= min(r + 1, N - 1); ++nr) {\n                for (int nc = max(c - 1, 0); nc <= min(c + 1, N - 1); ++nc) {\n                    if (!lookup.erase(static_cast<int64_t>(nr) * N + nc)) {\n                        continue;\n                    }\n                    --row[nr];\n                    --col[nc];\n                    --diag[nr - nc];\n                    --anti[nr + nc];\n                }\n            }\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/grid-illumination.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "grid-illumination.py",
+      "code": "# Time:  O(l + q)\n# Space: O(l)\n\nimport collections\n\n\nclass Solution(object):\n    def gridIllumination(self, N, lamps, queries):\n        \"\"\"\n        :type N: int\n        :type lamps: List[List[int]]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        lookup = set()\n        row = collections.defaultdict(int)\n        col = collections.defaultdict(int)\n        diag = collections.defaultdict(int)\n        anti = collections.defaultdict(int)\n        \n        for r, c in lamps:\n            if (r, c) in lookup:\n                continue\n            lookup.add((r, c))\n            row[r] += 1\n            col[c] += 1\n            diag[r-c] += 1\n            anti[r+c] += 1\n        \n        result = []\n        for r, c in queries:\n            if not (row[r] or col[c] or diag[r-c] or anti[r+c]):\n                result.append(0)\n                continue\n            result.append(1)                \n            for nr in xrange(max(r-1, 0), min(r+1, N-1)+1):\n                for nc in xrange(max(c-1, 0), min(c+1, N-1)+1):\n                    if (nr, nc) not in lookup:\n                        continue\n                    lookup.remove((nr, nc))\n                    row[nr] -= 1\n                    col[nc] -= 1\n                    diag[nr-nc] -= 1\n                    anti[nr+nc] -= 1\n        return result\n",
+      "sourcePath": "Python/grid-illumination.py"
+    }
+  },
+  "seo": {
+    "title": "Grid Illumination Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Grid Illumination (LeetCode #1001). Pattern: hash map. Time O(l + q), space O(l). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Grid Illumination",
+      "Grid Illumination solution",
+      "Grid Illumination leetcode",
+      "hash-table",
+      "hash-map",
+      "hard"
+    ],
+    "canonicalPath": "/problems/grid-illumination"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Grid Illumination?",
+      "answer": "The reference solutions aim for O(l + q) time and O(l) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Grid Illumination use?",
+      "answer": "It primarily maps to hash map, within the broader topic of hash table."
+    },
+    {
+      "question": "Is Grid Illumination good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/grid-illumination/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the hash map approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Grid Illumination (#1001) — Hard. Pattern: hash map. Complexity: O(l + q) time / O(l) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Grid Illumination: show input structure (hash table), highlight the moving parts of the hash map approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,161 @@
+{
+  "id": "691",
+  "number": 691,
+  "slug": "stickers-to-spell-word",
+  "title": "Stickers to Spell Word",
+  "difficulty": "Hard",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dfs-backtracking"
+  ],
+  "companies": [
+    "google"
+  ],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(T * S^T)",
+  "spaceComplexity": "O(T * S^T)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/stickers-to-spell-word/",
+  "notes": [
+    "Backtracking",
+    "Memoization"
+  ],
+  "relatedSlugs": [
+    "minimum-incompatibility",
+    "android-unlock-patterns",
+    "count-numbers-with-unique-digits",
+    "count-subtrees-with-max-distance-between-cities",
+    "painting-a-grid-with-three-different-colors",
+    "difference-between-maximum-and-minimum-price-sum",
+    "minimize-the-total-price-of-the-trips",
+    "minimum-edge-reversals-so-every-node-is-reachable"
+  ],
+  "prevSlug": "employee-importance",
+  "nextSlug": "top-k-frequent-words",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Stickers to Spell Word?\n\n**Stickers to Spell Word** (LeetCode #691) is a **Hard** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dfs backtracking**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Backtracking, Memoization.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/stickers-to-spell-word/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Stickers to Spell Word\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dfs backtracking**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(T * S^T)) and **space** (O(T * S^T)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(T * S^T)** time and **O(T * S^T)** space.\n\n### Pattern focus: dfs backtracking\n\nUse the pattern as a checklist:\n\n- **dfs backtracking** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(T * S^T)** |\n| Space | **O(T * S^T)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Stickers to Spell Word\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dfs backtracking — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dfs backtracking**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Stickers to Spell Word** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "stickers-to-spell-word.cpp",
+      "code": "// Time:  O(T * S^T)\n// Space: O(T * S^T)\n\nclass Solution {\npublic:\n    int minStickers(vector<string>& stickers, string target) {\n        vector<vector<int>> sticker_counts(stickers.size(), vector<int>(26));\n        unordered_map<string, int> dp;\n        for (int i = 0; i < stickers.size(); ++i) {\n            for (const auto& c : stickers[i]) {\n                ++sticker_counts[i][c - 'a'];\n            }\n        }\n        dp[\"\"] = 0;\n        return minStickersHelper(sticker_counts, target, &dp);\n    }\n    \nprivate:\n    int minStickersHelper(const vector<vector<int>>& sticker_counts, const string& target,\n                          unordered_map<string, int> *dp) {\n        if (dp->count(target)) {\n            return (*dp)[target];\n        }\n        int result = numeric_limits<int>::max();\n        vector<int> target_count(26);\n        for (const auto& c : target) {\n            ++target_count[c - 'a'];\n        }\n        for (const auto& sticker_count : sticker_counts) {\n            if (sticker_count[target[0] - 'a'] == 0) {\n                continue; \n            }\n            string new_target;\n            for (int i = 0; i < target_count.size(); ++i) {\n                if (target_count[i] - sticker_count[i] > 0) {\n                    new_target += string(target_count[i] - sticker_count[i], 'a' + i);\n                }\n            }\n            if (new_target.length() != target.length()) {\n                int num = minStickersHelper(sticker_counts, new_target, dp);\n                if (num != -1) {\n                    result = min(result, 1 + num);\n                }\n            }\n        }\n        (*dp)[target] = (result == numeric_limits<int>::max()) ? -1 : result;\n        return (*dp)[target];\n    }\n};",
+      "sourcePath": "C++/stickers-to-spell-word.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "stickers-to-spell-word.py",
+      "code": "# Time:  O(T * S^T)\n# Space: O(T * S^T)\n\nimport collections\n\n\nclass Solution(object):\n    def minStickers(self, stickers, target):\n        \"\"\"\n        :type stickers: List[str]\n        :type target: str\n        :rtype: int\n        \"\"\"\n        def minStickersHelper(sticker_counts, target, dp):\n            if \"\".join(target) in dp:\n                return dp[\"\".join(target)]\n            target_count = collections.Counter(target)\n            result = float(\"inf\")\n            for sticker_count in sticker_counts:\n                if sticker_count[target[0]] == 0:\n                    continue\n                new_target = []\n                for k in target_count.keys():\n                    if target_count[k] > sticker_count[k]:\n                       new_target += [k]*(target_count[k] - sticker_count[k])\n                if len(new_target) != len(target):\n                    num = minStickersHelper(sticker_counts, new_target, dp)\n                    if num != -1:\n                        result = min(result, 1+num)\n            dp[\"\".join(target)] = -1 if result == float(\"inf\") else result\n            return dp[\"\".join(target)]\n\n        sticker_counts = map(collections.Counter, stickers)\n        dp = { \"\":0 }\n        return minStickersHelper(sticker_counts, target, dp)\n\n",
+      "sourcePath": "Python/stickers-to-spell-word.py"
+    }
+  },
+  "seo": {
+    "title": "Stickers to Spell Word Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Stickers to Spell Word (LeetCode #691). Pattern: dfs backtracking. Time O(T * S^T), space O(T * S^T). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Stickers to Spell Word",
+      "Stickers to Spell Word solution",
+      "Stickers to Spell Word leetcode",
+      "dynamic-programming",
+      "dfs-backtracking",
+      "hard"
+    ],
+    "canonicalPath": "/problems/stickers-to-spell-word"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Stickers to Spell Word?",
+      "answer": "The reference solutions aim for O(T * S^T) time and O(T * S^T) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Stickers to Spell Word use?",
+      "answer": "It primarily maps to dfs backtracking, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Stickers to Spell Word good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/stickers-to-spell-word/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dfs backtracking approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Stickers to Spell Word (#691) — Hard. Pattern: dfs backtracking. Complexity: O(T * S^T) time / O(T * S^T) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Stickers to Spell Word: show input structure (dynamic programming), highlight the moving parts of the dfs backtracking approach, and annotate each step with the maintained invariant and complexity."
+}

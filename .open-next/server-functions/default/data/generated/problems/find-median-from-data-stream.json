@@ -1,0 +1,159 @@
+{
+  "id": "295",
+  "number": 295,
+  "slug": "find-median-from-data-stream",
+  "title": "Find Median from Data Stream",
+  "difficulty": "Hard",
+  "topics": [
+    "binary-heap"
+  ],
+  "patterns": [
+    "heap"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogn)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/find-median-from-data-stream/",
+  "notes": [
+    "BST",
+    "Heap"
+  ],
+  "relatedSlugs": [
+    "trapping-rain-water-ii",
+    "sliding-window-median",
+    "ipo",
+    "smallest-range",
+    "minimize-deviation-in-array",
+    "meeting-rooms-iii",
+    "maximum-value-sum-by-placing-three-rooks-i",
+    "maximum-value-sum-by-placing-three-rooks-ii"
+  ],
+  "prevSlug": "flip-game-ii",
+  "nextSlug": "best-meeting-point",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Find Median from Data Stream?\n\n**Find Median from Data Stream** (LeetCode #295) is a **Hard** problem that primarily trains **binary heap**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **heap**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: BST, Heap.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/find-median-from-data-stream/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Find Median from Data Stream\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **heap**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogn)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogn)** time and **O(n)** space.\n\n### Pattern focus: heap\n\nUse the pattern as a checklist:\n\n- **heap** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogn)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Find Median from Data Stream\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for heap — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **heap**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **binary heap**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Find Median from Data Stream** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **binary heap**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "find-median-from-data-stream.cpp",
+      "code": "// Time:  O(nlogn) for total n addNums, O(logn) per addNum, O(1) per findMedian.\n// Space: O(n), total space\n\n// Heap solution.\nclass MedianFinder {\npublic:\n\n    // Adds a number into the data structure.\n    void addNum(int num) {\n        // Balance smaller half and larger half.\n        if (max_heap_.empty() || num > max_heap_.top()) {\n            min_heap_.emplace(num);\n            if (min_heap_.size() > max_heap_.size() + 1) {\n                max_heap_.emplace(min_heap_.top());\n                min_heap_.pop();\n            }\n        } else {\n            max_heap_.emplace(num);\n            if (max_heap_.size() > min_heap_.size()) {\n                min_heap_.emplace(max_heap_.top());\n                max_heap_.pop();\n            }\n        }\n    }\n\n    // Returns the median of current data stream\n    double findMedian() {\n        return min_heap_.size() == max_heap_.size() ?\n                   (max_heap_.top() + min_heap_.top()) / 2.0 :\n                   min_heap_.top();\n\n    }\n\nprivate:\n    // min_heap_ stores the larger half seen so far.\n    priority_queue<int, vector<int>, greater<int>> min_heap_;\n    // max_heap_ stores the smaller half seen so far.\n    priority_queue<int, vector<int>, less<int>> max_heap_;\n};\n\n// BST solution.\nclass MedianFinder2 {\npublic:\n\n    // Adds a number into the data structure.\n    void addNum(int num) {\n        // Balance smaller half and larger half.\n        if (max_bst_.empty() || num > *max_bst_.cbegin()) {\n            min_bst_.emplace(num);\n            if (min_bst_.size() > max_bst_.size() + 1) {\n                max_bst_.emplace(*min_bst_.cbegin());\n                min_bst_.erase(min_bst_.cbegin());\n            }\n        } else {\n            max_bst_.emplace(num);\n            if (max_bst_.size() > min_bst_.size()) {\n                min_bst_.emplace(*max_bst_.cbegin());\n                max_bst_.erase(max_bst_.cbegin());\n            }\n        }\n    }\n\n    // Returns the median of current data stream\n    double findMedian() {\n        return min_bst_.size() == max_bst_.size() ?\n                   (*max_bst_.cbegin() + *min_bst_.cbegin()) / 2.0 :\n                   *min_bst_.cbegin();\n\n    }\n\nprivate:\n   // min_bst_ stores the larger half seen so far.\n    multiset<int, less<int>> min_bst_;\n    // max_bst_ stores the smaller half seen so far.\n    multiset<int, greater<int>> max_bst_;\n};\n\n// Your MedianFinder object will be instantiated and called as such:\n// MedianFinder mf;\n// mf.addNum(1);\n// mf.findMedian();\n",
+      "sourcePath": "C++/find-median-from-data-stream.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "find-median-from-data-stream.py",
+      "code": "# Time:  O(nlogn) for total n addNums, O(logn) per addNum, O(1) per findMedian.\n# Space: O(n), total space\n\nfrom heapq import heappush, heappop\n\nclass MedianFinder(object):\n    def __init__(self):\n        \"\"\"\n        Initialize your data structure here.\n        \"\"\"\n        self.__max_heap = []\n        self.__min_heap = []\n\n    def addNum(self, num):\n        \"\"\"\n        Adds a num into the data structure.\n        :type num: int\n        :rtype: void\n        \"\"\"\n        # Balance smaller half and larger half.\n        if not self.__max_heap or num > -self.__max_heap[0]:\n            heappush(self.__min_heap, num)\n            if len(self.__min_heap) > len(self.__max_heap) + 1:\n                heappush(self.__max_heap, -heappop(self.__min_heap))\n        else:\n            heappush(self.__max_heap, -num)\n            if len(self.__max_heap) > len(self.__min_heap):\n                heappush(self.__min_heap, -heappop(self.__max_heap))\n\n    def findMedian(self):\n        \"\"\"\n        Returns the median of current data stream\n        :rtype: float\n        \"\"\"\n        return (-self.__max_heap[0] + self.__min_heap[0]) / 2.0 \\\n               if len(self.__min_heap) == len(self.__max_heap) \\\n               else self.__min_heap[0]\n\n\n",
+      "sourcePath": "Python/find-median-from-data-stream.py"
+    }
+  },
+  "seo": {
+    "title": "Find Median from Data Stream Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Find Median from Data Stream (LeetCode #295). Pattern: heap. Time O(nlogn), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Find Median from Data Stream",
+      "Find Median from Data Stream solution",
+      "Find Median from Data Stream leetcode",
+      "binary-heap",
+      "heap",
+      "hard"
+    ],
+    "canonicalPath": "/problems/find-median-from-data-stream"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Find Median from Data Stream?",
+      "answer": "The reference solutions aim for O(nlogn) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Find Median from Data Stream use?",
+      "answer": "It primarily maps to heap, within the broader topic of binary heap."
+    },
+    {
+      "question": "Is Find Median from Data Stream good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/find-median-from-data-stream/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the heap approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Find Median from Data Stream (#295) — Hard. Pattern: heap. Complexity: O(nlogn) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Find Median from Data Stream: show input structure (binary heap), highlight the moving parts of the heap approach, and annotate each step with the maintained invariant and complexity."
+}

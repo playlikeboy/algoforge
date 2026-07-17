@@ -1,0 +1,158 @@
+{
+  "id": "1333",
+  "number": 1333,
+  "slug": "filter-restaurants-by-vegan-friendly-price-and-distance",
+  "title": "Filter Restaurants by Vegan-Friendly, Price and Distance",
+  "difficulty": "Medium",
+  "topics": [
+    "array"
+  ],
+  "patterns": [
+    "sort"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(rlogr)",
+  "spaceComplexity": "O(r)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/filter-restaurants-by-vegan-friendly-price-and-distance/",
+  "notes": [
+    "Sort"
+  ],
+  "relatedSlugs": [
+    "sort-the-matrix-diagonally",
+    "maximum-consecutive-floors-without-special-floors",
+    "divide-intervals-into-minimum-number-of-groups",
+    "count-ways-to-group-overlapping-ranges",
+    "find-maximal-uncovered-ranges",
+    "divide-array-into-arrays-with-max-difference",
+    "sort-matrix-by-diagonals",
+    "minimum-energy-to-maintain-brightness"
+  ],
+  "prevSlug": "remove-palindromic-subsequences",
+  "nextSlug": "find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Filter Restaurants by Vegan-Friendly, Price and Distance?\n\n**Filter Restaurants by Vegan-Friendly, Price and Distance** (LeetCode #1333) is a **Medium** problem that primarily trains **array**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sort**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Sort.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/filter-restaurants-by-vegan-friendly-price-and-distance/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Filter Restaurants by Vegan-Friendly, Price and Distance\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sort**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(rlogr)) and **space** (O(r)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(rlogr)** time and **O(r)** space.\n\n### Pattern focus: sort\n\nUse the pattern as a checklist:\n\n- **sort** — confirm the invariant holds after each step\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(rlogr)** |\n| Space | **O(r)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Filter Restaurants by Vegan-Friendly, Price and Distance\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sort — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal sort solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `filter-restaurants-by-vegan-friendly-price-and-distance`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sort**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **array**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Filter Restaurants by Vegan-Friendly, Price and Distance** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **array**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "filter-restaurants-by-vegan-friendly-price-and-distance.cpp",
+      "code": "// Time:  O(rlogr), r is the number of result\n// Space: O(r)\n\nclass Solution {\npublic:\n    vector<int> filterRestaurants(vector<vector<int>>& restaurants, int veganFriendly, int maxPrice, int maxDistance) {\n        vector<int> result;\n        unordered_map<int, int> lookup;\n        for (int i = 0; i < restaurants.size(); ++i) {\n            const auto& r = restaurants[i];\n            if (r[2] >= veganFriendly && r[3] <= maxPrice && r[4] <= maxDistance) {\n                lookup[r[0]] = i;  \n                result.emplace_back(r[0]);\n            }\n        }\n        sort(result.begin(), result.end(),\n             [&restaurants, &lookup](const auto& i, const auto& j) {\n                 return vector<int>{-restaurants[lookup[i]][1], -restaurants[lookup[i]][0]} <\n                        vector<int>{-restaurants[lookup[j]][1], -restaurants[lookup[j]][0]};\n             });\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/filter-restaurants-by-vegan-friendly-price-and-distance.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "filter-restaurants-by-vegan-friendly-price-and-distance.py",
+      "code": "# Time:  O(rlogr), r is the number of result\n# Space: O(r)\n\nclass Solution(object):\n    def filterRestaurants(self, restaurants, veganFriendly, maxPrice, maxDistance):\n        \"\"\"\n        :type restaurants: List[List[int]]\n        :type veganFriendly: int\n        :type maxPrice: int\n        :type maxDistance: int\n        :rtype: List[int]\n        \"\"\"\n        result, lookup = [], {}\n        for j, (i, _, v, p, d) in enumerate(restaurants):\n            if v >= veganFriendly and p <= maxPrice and d <= maxDistance:\n                lookup[i] = j\n                result.append(i)\n        result.sort(key=lambda i: (-restaurants[lookup[i]][1], -restaurants[lookup[i]][0]))\n        return result\n",
+      "sourcePath": "Python/filter-restaurants-by-vegan-friendly-price-and-distance.py"
+    }
+  },
+  "seo": {
+    "title": "Filter Restaurants by Vegan-Friendly, Price and Distance Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Filter Restaurants by Vegan-Friendly, Price and Distance (LeetCode #1333). Pattern: sort. Time O(rlogr), space O(r). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Filter Restaurants by Vegan-Friendly, Price and Distance",
+      "Filter Restaurants by Vegan-Friendly, Price and Distance solution",
+      "Filter Restaurants by Vegan-Friendly, Price and Distance leetcode",
+      "array",
+      "sort",
+      "medium"
+    ],
+    "canonicalPath": "/problems/filter-restaurants-by-vegan-friendly-price-and-distance"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Filter Restaurants by Vegan-Friendly, Price and Distance?",
+      "answer": "The reference solutions aim for O(rlogr) time and O(r) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Filter Restaurants by Vegan-Friendly, Price and Distance use?",
+      "answer": "It primarily maps to sort, within the broader topic of array."
+    },
+    {
+      "question": "Is Filter Restaurants by Vegan-Friendly, Price and Distance good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/filter-restaurants-by-vegan-friendly-price-and-distance/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sort approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Filter Restaurants by Vegan-Friendly, Price and Distance (#1333) — Medium. Pattern: sort. Complexity: O(rlogr) time / O(r) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Filter Restaurants by Vegan-Friendly, Price and Distance: show input structure (array), highlight the moving parts of the sort approach, and annotate each step with the maintained invariant and complexity."
+}

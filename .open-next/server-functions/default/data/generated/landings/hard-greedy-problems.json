@@ -1,0 +1,85 @@
+{
+  "slug": "hard-greedy-problems",
+  "path": "/explore/hard-greedy-problems",
+  "h1": "Hard Greedy Problems",
+  "intro": "112 hard problems that drill the Greedy pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "trapping-rain-water",
+    "wildcard-matching",
+    "jump-game-ii",
+    "candy",
+    "create-maximum-number",
+    "patching-array",
+    "rearrange-string-k-distance-apart",
+    "course-schedule-iii",
+    "cracking-the-safe",
+    "set-intersection-size-at-least-two",
+    "employee-free-time",
+    "smallest-rotation-with-highest-score",
+    "guess-the-word",
+    "stamping-the-sequence",
+    "minimum-number-of-k-consecutive-bit-flips",
+    "last-substring-in-lexicographical-order",
+    "maximum-number-of-ones",
+    "minimum-time-to-build-blocks",
+    "minimum-number-of-taps-to-open-to-water-a-garden",
+    "maximum-performance-of-a-team",
+    "reducing-dishes",
+    "minimum-number-of-increments-on-subarrays-to-form-a-target-array",
+    "check-if-string-is-transformable-with-substring-sort-operations",
+    "strange-printer-ii",
+    "minimum-initial-energy-to-finish-tasks",
+    "maximum-xor-with-an-element-from-array",
+    "maximize-the-beauty-of-the-garden",
+    "maximum-score-of-a-good-subarray",
+    "maximum-number-of-groups-getting-fresh-donuts",
+    "maximum-building-height",
+    "next-palindrome-using-same-digits",
+    "maximum-genetic-difference-query",
+    "smallest-k-length-subsequence-with-occurrences-of-a-letter",
+    "maximum-number-of-tasks-you-can-assign",
+    "earliest-possible-day-of-full-bloom",
+    "maximum-running-time-of-n-computers",
+    "number-of-ways-to-divide-a-long-corridor",
+    "minimum-time-to-finish-the-race",
+    "minimum-number-of-moves-to-make-palindrome",
+    "maximum-total-beauty-of-the-gardens",
+    "make-array-non-decreasing-or-non-increasing",
+    "maximum-score-of-spliced-array",
+    "minimum-replacements-to-sort-the-array",
+    "minimize-maximum-value-in-a-grid",
+    "minimum-money-required-before-transactions",
+    "create-components-with-same-value",
+    "minimum-number-of-operations-to-make-arrays-similar",
+    "sort-array-by-moving-items-to-empty-space",
+    "maximum-number-of-non-overlapping-palindrome-substrings",
+    "maximum-xor-of-two-non-overlapping-subtrees"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice hard Greedy problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/greedy",
+      "label": "Greedy pattern"
+    },
+    {
+      "href": "/difficulty/hard",
+      "label": "All Hard problems"
+    }
+  ],
+  "seo": {
+    "title": "Hard Greedy Problems | AlgoForge",
+    "description": "Practice hard Greedy LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "hard Greedy",
+      "Greedy problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/hard-greedy-problems"
+  },
+  "kind": "difficulty-pattern"
+}

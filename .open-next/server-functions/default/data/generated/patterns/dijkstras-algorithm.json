@@ -1,0 +1,44 @@
+{
+  "type": "pattern",
+  "slug": "dijkstras-algorithm",
+  "name": "Dijkstras Algorithm",
+  "description": "Master the Dijkstras Algorithm coding pattern with curated problems.",
+  "problemCount": 23,
+  "problemSlugs": [
+    "shortest-path-to-get-all-keys",
+    "path-with-maximum-minimum-value",
+    "path-with-minimum-effort",
+    "minimum-path-cost-in-a-hidden-grid",
+    "minimum-cost-to-buy-apples",
+    "minimum-time-to-visit-a-cell-in-a-grid",
+    "minimum-cost-of-a-path-with-special-roads",
+    "find-shortest-path-with-k-hops",
+    "find-the-safest-path-in-a-grid",
+    "minimum-cost-to-convert-string-i",
+    "minimum-cost-to-convert-string-ii",
+    "shortest-distance-after-road-addition-queries-i",
+    "find-minimum-time-to-reach-last-room-i",
+    "find-minimum-time-to-reach-last-room-ii",
+    "digit-operations-to-make-two-integers-equal",
+    "minimize-the-maximum-edge-weight-of-graph",
+    "minimum-time-to-transport-all-individuals",
+    "minimum-time-to-reach-destination-in-directed-graph",
+    "minimum-cost-path-with-edge-reversals",
+    "minimum-distance-excluding-one-maximum-weighted-edge",
+    "minimum-cost-to-buy-apples-ii",
+    "shortest-path-with-at-most-k-consecutive-identical-characters",
+    "minimum-time-to-reach-target-with-limited-power"
+  ],
+  "relatedTopics": [],
+  "seo": {
+    "title": "Dijkstras Algorithm Pattern — Problems & Guide | AlgoForge",
+    "description": "Learn the Dijkstras Algorithm pattern with 23 practice problems, interview tips, and visual intuition.",
+    "keywords": [
+      "Dijkstras Algorithm",
+      "Dijkstras Algorithm pattern",
+      "Dijkstras Algorithm leetcode",
+      "coding patterns"
+    ],
+    "canonicalPath": "/patterns/dijkstras-algorithm"
+  }
+}

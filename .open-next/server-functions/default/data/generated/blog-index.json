@@ -1,0 +1,65 @@
+[
+  {
+    "slug": "how-to-master-dynamic-programming",
+    "title": "How to Master Dynamic Programming for Interviews",
+    "description": "A practical framework for DP: states, transitions, and problem selection.",
+    "date": "2026-01-15",
+    "tags": [
+      "dynamic-programming",
+      "roadmap"
+    ],
+    "readingMinutes": 12,
+    "bodyMarkdown": "# How to Master Dynamic Programming\n\nDynamic Programming is not about memorizing 100 problems. It is about **defining state**, **writing transitions**, and **proving complexity**.\n\n## The AlgoForge DP loop\n\n1. Can the problem be solved with recursion + memo?\n2. What is the minimal state that captures subproblems?\n3. What is the base case?\n4. Bottom-up or top-down?\n\n## Problem order\n\nStart with Climbing Stairs → House Robber → Coin Change → LIS → grid paths.\n\nSee the [DP roadmap](/roadmaps/dynamic-programming) for a full path.\n",
+    "seo": {
+      "title": "How to Master Dynamic Programming | AlgoForge Blog",
+      "description": "Learn DP for coding interviews with a clear state/transition framework.",
+      "keywords": [
+        "master dynamic programming",
+        "dp interview guide"
+      ],
+      "canonicalPath": "/blog/how-to-master-dynamic-programming"
+    }
+  },
+  {
+    "slug": "complete-dfs-guide",
+    "title": "Complete DFS Guide for Coding Interviews",
+    "description": "Depth-first search patterns: trees, graphs, backtracking, and pitfalls.",
+    "date": "2026-02-01",
+    "tags": [
+      "dfs",
+      "graphs"
+    ],
+    "readingMinutes": 10,
+    "bodyMarkdown": "# Complete DFS Guide\n\nDFS is the workhorse for trees, graphs, and backtracking.\n\n## Templates\n\n- Recursive tree DFS\n- Graph adjacency list DFS with visited set\n- Backtracking with choose / explore / unchoose\n\nPractice: [Number of Islands](/problems/number-of-islands), [Clone Graph](/problems/clone-graph).\n",
+    "seo": {
+      "title": "Complete DFS Guide | AlgoForge Blog",
+      "description": "DFS templates for trees, graphs, and backtracking interviews.",
+      "keywords": [
+        "dfs guide",
+        "depth first search interview"
+      ],
+      "canonicalPath": "/blog/complete-dfs-guide"
+    }
+  },
+  {
+    "slug": "why-sliding-window-works",
+    "title": "Why Sliding Window Works",
+    "description": "The invariant that makes sliding window correct and O(n).",
+    "date": "2026-02-20",
+    "tags": [
+      "sliding-window",
+      "patterns"
+    ],
+    "readingMinutes": 8,
+    "bodyMarkdown": "# Why Sliding Window Works\n\nA sliding window works when the feasibility of a range is **monotonic** as you expand or shrink.\n\n## Template\n\nMaintain left/right pointers and a structure that updates in O(1) or O(log n).\n\nSee [Longest Substring Without Repeating Characters](/problems/longest-substring-without-repeating-characters).\n",
+    "seo": {
+      "title": "Why Sliding Window Works | AlgoForge Blog",
+      "description": "Understand the sliding window invariant for interview problems.",
+      "keywords": [
+        "sliding window",
+        "sliding window pattern"
+      ],
+      "canonicalPath": "/blog/why-sliding-window-works"
+    }
+  }
+]

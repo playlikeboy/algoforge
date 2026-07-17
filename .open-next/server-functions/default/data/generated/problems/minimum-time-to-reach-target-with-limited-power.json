@@ -1,0 +1,161 @@
+{
+  "id": "3977",
+  "number": 3977,
+  "slug": "minimum-time-to-reach-target-with-limited-power",
+  "title": "Minimum Time to Reach Target With Limited Power",
+  "difficulty": "Hard",
+  "topics": [
+    "graph"
+  ],
+  "patterns": [
+    "graph",
+    "dijkstras-algorithm"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O((n * p + e * p) * log(n * p))",
+  "spaceComplexity": "O(n * p)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-time-to-reach-target-with-limited-power/",
+  "notes": [
+    "Graph",
+    "Dijkstra's Algorithm"
+  ],
+  "relatedSlugs": [
+    "find-shortest-path-with-k-hops",
+    "minimum-time-to-transport-all-individuals",
+    "minimum-cost-to-buy-apples-ii",
+    "minimum-cost-of-a-path-with-special-roads",
+    "find-minimum-time-to-reach-last-room-i",
+    "find-minimum-time-to-reach-last-room-ii",
+    "digit-operations-to-make-two-integers-equal",
+    "minimum-time-to-reach-destination-in-directed-graph"
+  ],
+  "prevSlug": "maximum-subarray-sum-after-multiplier",
+  "nextSlug": "unique-middle-element",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Minimum Time to Reach Target With Limited Power?\n\n**Minimum Time to Reach Target With Limited Power** (LeetCode #3977) is a **Hard** problem that primarily trains **graph**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **graph and dijkstras algorithm**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Graph, Dijkstra's Algorithm.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/minimum-time-to-reach-target-with-limited-power/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Minimum Time to Reach Target With Limited Power\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **graph and dijkstras algorithm**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O((n * p + e * p) * log(n * p))) and **space** (O(n * p)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O((n * p + e * p) * log(n * p))** time and **O(n * p)** space.\n\n### Pattern focus: graph and dijkstras algorithm\n\nUse the pattern as a checklist:\n\n- **graph** — confirm the invariant holds after each step\n- **dijkstras algorithm** — confirm the invariant holds after each step\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O((n * p + e * p) * log(n * p))** |\n| Space | **O(n * p)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Minimum Time to Reach Target With Limited Power\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for graph and dijkstras algorithm — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal graph and dijkstras algorithm solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `minimum-time-to-reach-target-with-limited-power`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **graph and dijkstras algorithm**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **graph**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Minimum Time to Reach Target With Limited Power** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **graph**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "minimum-time-to-reach-target-with-limited-power.cpp",
+      "code": "// Time:  O((n * p + e * p) * log(n * p))\n// Space: O(n * p)\n\n// dijkstra's algorithm\nclass Solution {\npublic:\n    vector<long long> minTimeMaxPower(int n, vector<vector<int>>& edges, int power, vector<int>& cost, int source, int target) {\n        static const auto& INF = numeric_limits<int64_t>::max();\n\n        vector<vector<pair<int, int>>> adj(n);\n        for (const auto& x : edges) {\n            adj[x[0]].emplace_back(x[1], x[2]);\n        }\n        vector<vector<int64_t>> dist(n, vector<int64_t>(power + 1, INF));\n        dist[source][power] = 0;\n        using T = tuple<int64_t, int, int>;\n        priority_queue<T, vector<T>, greater<T>> min_heap;\n        min_heap.emplace(dist[source][power], -power, source);\n        while (!empty(min_heap)) {\n            auto [t, p, u] = min_heap.top(); min_heap.pop();\n            p = -p;\n            if (t > dist[u][p]) {\n                continue;\n            }\n            if (u == target) {\n                return {t, p};\n            }\n            const auto& np = p - cost[u];\n            if (np < 0) {\n                continue;\n            }\n            for (const auto& [v, w] : adj[u]) {\n                if (t + w >= dist[v][np]) {\n                    continue;\n                }\n                dist[v][np] = t + w;\n                min_heap.emplace(dist[v][np], -np, v);\n            }\n        }\n        return {-1, -1};\n    }\n};\n",
+      "sourcePath": "C++/minimum-time-to-reach-target-with-limited-power.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "minimum-time-to-reach-target-with-limited-power.py",
+      "code": "# Time:  O((n * p + e * p) * log(n * p))\n# Space: O(n * p)\n\nimport heapq\n\n\n# dijkstra's algorithm\nclass Solution(object):\n    def minTimeMaxPower(self, n, edges, power, cost, source, target):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type power: int\n        :type cost: List[int]\n        :type source: int\n        :type target: int\n        :rtype: List[int]\n        \"\"\"\n        adj = [[] for _ in xrange(n)]\n        for u, v, w in edges:\n            adj[u].append((v, w))\n        dist = [[float(\"inf\")]*(power+1) for _ in xrange(n)]\n        dist[source][power] = 0\n        min_heap = [(dist[source][power] , -power, source)]\n        while min_heap:\n            t, p, u = heapq.heappop(min_heap)\n            p = -p\n            if t > dist[u][p]:\n                continue\n            if u == target:\n                return [t, p]\n            np = p-cost[u]\n            if np < 0:\n                continue\n            for v, w in adj[u]:\n                if t+w >= dist[v][np]:\n                    continue\n                dist[v][np] = t+w\n                heapq.heappush(min_heap, (dist[v][np], -np, v))\n        return [-1, -1]\n",
+      "sourcePath": "Python/minimum-time-to-reach-target-with-limited-power.py"
+    }
+  },
+  "seo": {
+    "title": "Minimum Time to Reach Target With Limited Power Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Minimum Time to Reach Target With Limited Power (LeetCode #3977). Pattern: graph. Time O((n * p + e * p) * log(n * p)), space O(n * p). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Minimum Time to Reach Target With Limited Power",
+      "Minimum Time to Reach Target With Limited Power solution",
+      "Minimum Time to Reach Target With Limited Power leetcode",
+      "graph",
+      "graph",
+      "dijkstras-algorithm",
+      "hard"
+    ],
+    "canonicalPath": "/problems/minimum-time-to-reach-target-with-limited-power"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Minimum Time to Reach Target With Limited Power?",
+      "answer": "The reference solutions aim for O((n * p + e * p) * log(n * p)) time and O(n * p) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Minimum Time to Reach Target With Limited Power use?",
+      "answer": "It primarily maps to graph and dijkstras algorithm, within the broader topic of graph."
+    },
+    {
+      "question": "Is Minimum Time to Reach Target With Limited Power good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/minimum-time-to-reach-target-with-limited-power/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the graph and dijkstras algorithm approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Minimum Time to Reach Target With Limited Power (#3977) — Hard. Pattern: graph and dijkstras algorithm. Complexity: O((n * p + e * p) * log(n * p)) time / O(n * p) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Minimum Time to Reach Target With Limited Power: show input structure (graph), highlight the moving parts of the graph and dijkstras algorithm approach, and annotate each step with the maintained invariant and complexity."
+}

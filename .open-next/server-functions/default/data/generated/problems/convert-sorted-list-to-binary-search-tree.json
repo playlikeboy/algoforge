@@ -1,0 +1,157 @@
+{
+  "id": "109",
+  "number": 109,
+  "slug": "convert-sorted-list-to-binary-search-tree",
+  "title": "Convert Sorted List to Binary Search Tree",
+  "difficulty": "Medium",
+  "topics": [
+    "recursion"
+  ],
+  "patterns": [],
+  "companies": [
+    "amazon",
+    "microsoft",
+    "zenefits"
+  ],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(logn)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/",
+  "notes": [],
+  "relatedSlugs": [
+    "unique-binary-search-trees-ii",
+    "validate-binary-search-tree",
+    "construct-binary-tree-from-preorder-and-inorder-traversal",
+    "construct-binary-tree-from-inorder-and-postorder-traversal",
+    "convert-sorted-array-to-binary-search-tree",
+    "flatten-binary-tree-to-linked-list",
+    "populating-next-right-pointers-in-each-node",
+    "sum-root-to-leaf-numbers"
+  ],
+  "prevSlug": "convert-sorted-array-to-binary-search-tree",
+  "nextSlug": "balanced-binary-tree",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Convert Sorted List to Binary Search Tree?\n\n**Convert Sorted List to Binary Search Tree** (LeetCode #109) is a **Medium** problem that primarily trains **recursion**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Convert Sorted List to Binary Search Tree\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(logn)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(logn)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(logn)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Convert Sorted List to Binary Search Tree\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **recursion**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Convert Sorted List to Binary Search Tree** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **recursion**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "convert-sorted-list-to-binary-search-tree.cpp",
+      "code": "// Time:  O(n)\n// Space: O(logn)\n\n/**\n * Definition for singly-linked list.\n * struct ListNode {\n *     int val;\n *     ListNode *next;\n *     ListNode(int x) : val(x), next(NULL) {}\n * };\n */\n/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n * };\n */\nclass Solution {\npublic:\n    TreeNode* sortedListToBST(ListNode* head) {\n        auto curr = head;\n        int n = 0;\n        while (curr) {\n            curr = curr->next;\n            ++n;\n        }\n        return BuildBSTFromSortedDoublyListHelper(&head, 0, n);\n    }\n\n    TreeNode * BuildBSTFromSortedDoublyListHelper(ListNode **head, int s, int e) {\n        if (s == e) {\n            return nullptr;\n        }\n\n        int m = s + ((e - s) / 2);\n        auto left = BuildBSTFromSortedDoublyListHelper(head, s, m);\n        auto curr = new TreeNode((*head)->val);\n\n        *head = (*head)->next;\n        curr->left = left;\n        curr->right = BuildBSTFromSortedDoublyListHelper(head, m + 1, e);\n        return curr;\n    }\n};\n",
+      "sourcePath": "C++/convert-sorted-list-to-binary-search-tree.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "convert-sorted-list-to-binary-search-tree.py",
+      "code": "# Time:  O(n)\n# Space: O(logn)\n\nclass TreeNode(object):\n    def __init__(self, x):\n        self.val = x\n        self.left = None\n        self.right = None\n#\n# Definition for singly-linked list.\nclass ListNode(object):\n    def __init__(self, x):\n        self.val = x\n        self.next = None\n\nclass Solution(object):\n    head = None\n    # @param head, a list node\n    # @return a tree node\n    def sortedListToBST(self, head):\n        current, length = head, 0\n        while current is not None:\n            current, length = current.next, length + 1\n        self.head = head\n        return self.sortedListToBSTRecu(0, length)\n\n    def sortedListToBSTRecu(self, start, end):\n        if start == end:\n            return None\n        mid = start + (end - start) / 2\n        left = self.sortedListToBSTRecu(start, mid)\n        current = TreeNode(self.head.val)\n        current.left = left\n        self.head = self.head.next\n        current.right = self.sortedListToBSTRecu(mid + 1, end)\n        return current\n\n",
+      "sourcePath": "Python/convert-sorted-list-to-binary-search-tree.py"
+    }
+  },
+  "seo": {
+    "title": "Convert Sorted List to Binary Search Tree Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Convert Sorted List to Binary Search Tree (LeetCode #109). Pattern: algorithms. Time O(n), space O(logn). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Convert Sorted List to Binary Search Tree",
+      "Convert Sorted List to Binary Search Tree solution",
+      "Convert Sorted List to Binary Search Tree leetcode",
+      "recursion",
+      "medium"
+    ],
+    "canonicalPath": "/problems/convert-sorted-list-to-binary-search-tree"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Convert Sorted List to Binary Search Tree?",
+      "answer": "The reference solutions aim for O(n) time and O(logn) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Convert Sorted List to Binary Search Tree use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of recursion."
+    },
+    {
+      "question": "Is Convert Sorted List to Binary Search Tree good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Convert Sorted List to Binary Search Tree (#109) — Medium. Pattern: general problem-solving. Complexity: O(n) time / O(logn) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Convert Sorted List to Binary Search Tree: show input structure (recursion), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

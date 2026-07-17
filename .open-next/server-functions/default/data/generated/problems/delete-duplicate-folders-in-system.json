@@ -1,0 +1,162 @@
+{
+  "id": "1948",
+  "number": 1948,
+  "slug": "delete-duplicate-folders-in-system",
+  "title": "Delete Duplicate Folders in System",
+  "difficulty": "Hard",
+  "topics": [
+    "tree"
+  ],
+  "patterns": [
+    "trie",
+    "dfs-backtracking"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n * m * l + tlogt + l * t)",
+  "spaceComplexity": "O(l * t)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/delete-duplicate-folders-in-system/",
+  "notes": [
+    "Trie",
+    "DFS",
+    "Hash"
+  ],
+  "relatedSlugs": [
+    "add-and-search-word-data-structure-design",
+    "maximum-genetic-difference-query",
+    "serialize-and-deserialize-binary-tree",
+    "recover-a-tree-from-preorder-traversal",
+    "stream-of-characters2",
+    "distinct-gate-paths-to-lca",
+    "implement-trie-prefix-tree",
+    "find-duplicate-subtrees"
+  ],
+  "prevSlug": "maximum-compatibility-score-sum",
+  "nextSlug": "strong-friendship",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Delete Duplicate Folders in System?\n\n**Delete Duplicate Folders in System** (LeetCode #1948) is a **Hard** problem that primarily trains **tree**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **trie and dfs backtracking**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Trie, DFS, Hash.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/delete-duplicate-folders-in-system/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Delete Duplicate Folders in System\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **trie and dfs backtracking**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n * m * l + tlogt + l * t)) and **space** (O(l * t)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n * m * l + tlogt + l * t)** time and **O(l * t)** space.\n\n### Pattern focus: trie and dfs backtracking\n\nUse the pattern as a checklist:\n\n- **trie** — confirm the invariant holds after each step\n- **dfs backtracking** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n * m * l + tlogt + l * t)** |\n| Space | **O(l * t)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Delete Duplicate Folders in System\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for trie and dfs backtracking — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **trie and dfs backtracking**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **tree**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Delete Duplicate Folders in System** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **tree**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "delete-duplicate-folders-in-system.cpp",
+      "code": "// Time:  O(n * m * l + tlogt + l * t), m is the max number of folders in a path,\n//                                    , n is the number of paths\n//                                    , l is the max length of folder name\n//                                    , t is the size of trie\n// Space: O(l * t)\n\nclass Solution {\nprivate:\n    template <typename T>\n    struct PairHash {\n        size_t operator()(const pair<T, T>& p) const {\n            size_t seed = 0;\n            seed ^= std::hash<T>{}(p.first)  + 0x9e3779b9 + (seed<<6) + (seed>>2);\n            seed ^= std::hash<T>{}(p.second) + 0x9e3779b9 + (seed<<6) + (seed>>2);\n            return seed;\n        }\n    };\n\n    template<typename T>\n    struct VectorPairHash {\n        size_t operator()(const std::vector<pair<T, T>>& v) const {\n            size_t seed = 0;\n            for (const auto& i : v) {\n                seed ^= PairHash<T>{}(i)  + 0x9e3779b9 + (seed<<6) + (seed>>2);\n            }\n            return seed;\n        }\n    };\n\n    class TrieNode { \n    public:\n        void Insert(const vector<string>& s,\n                    unordered_map<string, int> *folder_ids,\n                    unordered_map<int, string> *id_folders) {\n            auto p = this;\n            for (const auto& c : s) {\n                if (!folder_ids->count(c)) {\n                    (*folder_ids)[c] = size(*folder_ids);\n                    (*id_folders)[(*folder_ids)[c]] = c;\n                }\n                const auto folder_id = (*folder_ids)[c];\n                if (!p->leaves.count(folder_id)) {\n                    p->leaves[folder_id] = make_unique<TrieNode>();\n                }\n                p = p->leaves[folder_id].get();\n            }\n        }\n\n        bool deleted = false;\n        unordered_map<int, unique_ptr<TrieNode>> leaves;\n    };\n  \npublic:\n    vector<vector<string>> deleteDuplicateFolder(vector<vector<string>>& paths) {\n        auto trie = make_unique<TrieNode>();\n        unordered_map<string, int> folder_ids;\n        unordered_map<int, string> id_folders;\n        for (const auto& path : paths) {\n            trie->Insert(path, &folder_ids, &id_folders);\n        }\n        unordered_map<int, TrieNode*> lookup;\n        unordered_map<vector<pair<int, int>>, int, VectorPairHash<int>> node_ids;\n        mark(trie.get(), &lookup, &node_ids);\n        vector<vector<string>> result;\n        vector<int> path;\n        sweep(trie.get(), id_folders, &path, &result);\n        return result;\n    }\n\nprivate:\n    int mark(TrieNode *node,\n             unordered_map<int, TrieNode*> *lookup,\n             unordered_map<vector<pair<int, int>>, int, VectorPairHash<int>> *node_ids) {\n        vector<pair<int, int>> id_pairs;\n        for (const auto& [subfolder_id, child] : node->leaves) {\n            id_pairs.emplace_back(subfolder_id, mark(child.get(), lookup, node_ids));\n        }\n        sort(begin(id_pairs), end(id_pairs));\n        if (!node_ids->count(id_pairs)) {\n            (*node_ids)[id_pairs] = size(*node_ids);\n        }\n        int node_id = (*node_ids)[id_pairs];\n        if (node_id) {\n            if (lookup->count(node_id)) {\n                (*lookup)[node_id]->deleted = true;\n                node->deleted = true;\n            } else {\n                (*lookup)[node_id] = node;\n            }\n        }\n        return node_id;\n    }\n\n    void sweep(TrieNode *node,\n               const unordered_map<int, string>& id_folders,\n               vector<int> *path,\n               vector<vector<string>> *result) {\n        if (!empty(*path)) {\n            result->emplace_back();\n            transform(cbegin(*path), cend(*path), back_inserter(result->back()),\n                      [&id_folders](const auto& i) {\n                          return id_folders.at(i);\n                      });\n        }\n        for (const auto& [subfolder_id, child] : node->leaves) {\n            if (child->deleted) {\n                continue;\n            }\n            path->emplace_back(subfolder_id);\n            sweep(child.get(), id_folders, path, result);\n            path->pop_back();\n        }\n    }\n};\n\n// Time:  O(n * m * l + l * tlogt + l * t^2), m is the max number of folders in a path,\n//                                          , n is the number of paths\n//                                          , l is the max length of folder name\n//                                          , t is the size of trie\n// Space: O(l * t^2)\nclass Solution2 {\nprivate:\n    class TrieNode { \n    public:\n        void Insert(const vector<string>& s) {\n            auto p = this;\n            for (const auto& c : s) {\n                if (!p->leaves.count(c)) {\n                    p->leaves[c] = make_unique<TrieNode>();\n                }\n                p = p->leaves[c].get();\n            }\n        }\n\n        bool deleted = false;\n        map<string, unique_ptr<TrieNode>> leaves;\n    };\n  \npublic:\n    vector<vector<string>> deleteDuplicateFolder(vector<vector<string>>& paths) {\n        auto trie = make_unique<TrieNode>();\n        for (const auto& path : paths) {\n            trie->Insert(path);\n        }\n        unordered_map<string, TrieNode*> lookup;\n        mark(trie.get(), &lookup);\n        vector<vector<string>> result;\n        vector<string> path;\n        sweep(trie.get(), &path, &result);\n        return result;\n    }\n\nprivate:\n    string mark(TrieNode *node, unordered_map<string, TrieNode*> *lookup) {\n        string serialized_tree = \"(\";\n        for (const auto& [subfolder, child] : node->leaves) {\n            serialized_tree += subfolder + mark(child.get(), lookup);\n        }\n        serialized_tree += \")\";\n        if (serialized_tree != \"()\") {\n            if (lookup->count(serialized_tree)) {\n                (*lookup)[serialized_tree]->deleted = true;\n                node->deleted = true;\n            } else {\n                (*lookup)[serialized_tree] = node;\n            }\n        }\n        return serialized_tree;\n    }\n\n    void sweep(TrieNode *node, vector<string> *path, vector<vector<string>> *result) {\n        if (!empty(*path)) {\n            result->emplace_back(*path);\n        }\n        for (const auto& [subfolder, child] : node->leaves) {\n            if (child->deleted) {\n                continue;\n            }\n            path->emplace_back(subfolder);\n            sweep(child.get(), path, result);\n            path->pop_back();\n        }\n    }\n};\n",
+      "sourcePath": "C++/delete-duplicate-folders-in-system.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "delete-duplicate-folders-in-system.py",
+      "code": "# Time:  O(n * m * l + tlogt + l * t), m is the max number of folders in a path,\n#                                    , n is the number of paths\n#                                    , l is the max length of folder name\n#                                    , t is the size of trie\n# Space: O(l * t)\n\nimport collections\n\n\nclass Solution(object):\n    def deleteDuplicateFolder(self, paths):\n        \"\"\"\n        :type paths: List[List[str]]\n        :rtype: List[List[str]]\n        \"\"\"\n        def mark(node, lookup, node_ids):\n            id_pairs = []\n            for subfolder_id, child in node.iteritems():\n                if child == \"_del\":\n                    continue\n                id_pairs.append((subfolder_id, mark(child, lookup, node_ids)))\n            id_pairs.sort()\n            node_id = node_ids[tuple(id_pairs)]\n            if node_id:\n                if node_id in lookup:\n                    lookup[node_id][\"_del\"]\n                    node[\"_del\"]\n                else:\n                    lookup[node_id] = node\n            return node_id\n\n        def sweep(node, id_folders, path, result):\n            if path:\n                result.append([id_folders[i] for i in path])\n            for subfolder_id, child in node.iteritems():\n                if \"_del\" in child:\n                    continue\n                path.append(subfolder_id)\n                sweep(child, id_folders, path, result)\n                path.pop()\n\n        _trie = lambda: collections.defaultdict(_trie)\n        trie = _trie()\n        folder_ids = collections.defaultdict()\n        folder_ids.default_factory = folder_ids.__len__\n        id_folders = {}\n        for path in paths:\n            node = trie\n            for folder in path:\n                if folder_ids[folder] not in id_folders:\n                    id_folders[folder_ids[folder]] = folder\n                node = node[folder_ids[folder]]\n        node_ids = collections.defaultdict()\n        node_ids.default_factory = node_ids.__len__\n        mark(trie, {}, node_ids)\n        result = []\n        sweep(trie, id_folders, [], result)\n        return result\n\n\n# Time:  O(n * m * l + l * tlogt + l * t^2), m is the max number of folders in a path,\n#                                          , n is the number of paths\n#                                          , l is the max length of folder name\n#                                          , t is the size of trie\n# Space: O(l * t^2)\nimport collections\n\n\nclass Solution2(object):\n    def deleteDuplicateFolder(self, paths):\n        \"\"\"\n        :type paths: List[List[str]]\n        :rtype: List[List[str]]\n        \"\"\"\n        def mark(node, lookup):\n            serialized_tree = \"(\" + \"\".join(subfolder + mark(child, lookup) for subfolder, child in sorted(node.iteritems()) if child != \"_del\") + \")\"\n            if serialized_tree != \"()\":\n                if serialized_tree in lookup:\n                    lookup[serialized_tree][\"_del\"]\n                    node[\"_del\"]\n                else:\n                    lookup[serialized_tree] = node\n            return serialized_tree\n        \n        def sweep(node, path, result):\n            if path:\n                result.append(path[:])\n            for subfolder, child in node.iteritems():\n                if \"_del\" in child:\n                    continue\n                path.append(subfolder)\n                sweep(child, path, result)\n                path.pop()\n\n        _trie = lambda: collections.defaultdict(_trie)\n        trie = _trie()\n        for path in paths:\n            reduce(dict.__getitem__, path, trie)\n        mark(trie, {})\n        result = []\n        sweep(trie, [], result)\n        return result\n",
+      "sourcePath": "Python/delete-duplicate-folders-in-system.py"
+    }
+  },
+  "seo": {
+    "title": "Delete Duplicate Folders in System Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Delete Duplicate Folders in System (LeetCode #1948). Pattern: trie. Time O(n * m * l + tlogt + l * t), space O(l * t). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Delete Duplicate Folders in System",
+      "Delete Duplicate Folders in System solution",
+      "Delete Duplicate Folders in System leetcode",
+      "tree",
+      "trie",
+      "dfs-backtracking",
+      "hard"
+    ],
+    "canonicalPath": "/problems/delete-duplicate-folders-in-system"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Delete Duplicate Folders in System?",
+      "answer": "The reference solutions aim for O(n * m * l + tlogt + l * t) time and O(l * t) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Delete Duplicate Folders in System use?",
+      "answer": "It primarily maps to trie and dfs backtracking, within the broader topic of tree."
+    },
+    {
+      "question": "Is Delete Duplicate Folders in System good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/delete-duplicate-folders-in-system/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the trie and dfs backtracking approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Delete Duplicate Folders in System (#1948) — Hard. Pattern: trie and dfs backtracking. Complexity: O(n * m * l + tlogt + l * t) time / O(l * t) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Delete Duplicate Folders in System: show input structure (tree), highlight the moving parts of the trie and dfs backtracking approach, and annotate each step with the maintained invariant and complexity."
+}

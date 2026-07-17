@@ -1,0 +1,162 @@
+{
+  "id": "3533",
+  "number": 3533,
+  "slug": "concatenated-divisibility",
+  "title": "Concatenated Divisibility",
+  "difficulty": "Hard",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dynamic-programming",
+    "bit-manipulation"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogr + k * n * 2^n)",
+  "spaceComplexity": "O(logr + k * 2^n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/concatenated-divisibility/",
+  "notes": [
+    "DP",
+    "Bitmasks",
+    "Backtracing"
+  ],
+  "relatedSlugs": [
+    "minimum-time-to-kill-all-monsters",
+    "minimum-increments-for-target-multiples-in-an-array",
+    "maximum-profit-from-valid-topological-order-in-dag",
+    "longest-palindromic-path-in-graph",
+    "maximum-length-of-a-concatenated-string-with-unique-characters",
+    "remove-all-ones-with-row-and-column-flips-ii",
+    "count-the-number-of-square-free-subsets",
+    "number-of-self-divisible-permutations"
+  ],
+  "prevSlug": "path-existence-queries-in-a-graph-i",
+  "nextSlug": "path-existence-queries-in-a-graph-ii",
+  "estimatedMinutes": 60,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Concatenated Divisibility?\n\n**Concatenated Divisibility** (LeetCode #3533) is a **Hard** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming and bit manipulation**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: DP, Bitmasks, Backtracing.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/concatenated-divisibility/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Concatenated Divisibility\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming and bit manipulation**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogr + k * n * 2^n)) and **space** (O(logr + k * 2^n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogr + k * n * 2^n)** time and **O(logr + k * 2^n)** space.\n\n### Pattern focus: dynamic programming and bit manipulation\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n- **bit manipulation** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogr + k * n * 2^n)** |\n| Space | **O(logr + k * 2^n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Concatenated Divisibility\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming and bit manipulation — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming and bit manipulation**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Concatenated Divisibility** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "concatenated-divisibility.cpp",
+      "code": "// Time:  O(nlogr + k * n * 2^n)\n// Space: O(logr + k * 2^n)\n\n// dp, backtracing\nclass Solution {\npublic:\n    vector<int> concatenatedDivisibility(vector<int>& nums, int k) {\n        const auto& length = [](int x) {\n            int l = 0;\n            for (; x > 0; x /= 10) {\n                ++l;\n            }\n            return max(l, 1);\n        };\n\n        vector<int> lookup(size(nums));\n        for (int i = 0; i < size(nums); ++i) {\n            lookup[i] = length(nums[i]);\n        }\n        const int mx = ranges::max(lookup);\n        vector<int> pow10(mx + 1);\n        pow10[0] = 1 % k;\n        for (int i = 0; i + 1 < size(pow10); ++i) {\n            pow10[i + 1] = (pow10[i] * 10) % k;\n        }\n        vector<vector<bool>> dp(1 << size(nums), vector<bool>(k));\n        dp.back()[0] = true;\n        for (int mask = (size(dp) - 1) - 1; mask >= 0; --mask) {\n            for (int r = 0; r < k; ++r) {\n                for (int i = 0; i < size(nums); ++i) {\n                    if (mask & (1 << i)) {\n                        continue;\n                    }\n                    if (dp[mask | (1 << i)][(r * pow10[lookup[i]] + nums[i]) % k]) {\n                        dp[mask][r] = true;\n                        break;\n                    }\n                }\n            }\n        }\n        vector<int> result;\n        if (!dp[0][0]) {\n            return result;\n        }\n        vector<pair<int,int>> order;\n        for (int i = 0; i < size(nums); ++i) {\n            order.emplace_back(nums[i], i);\n        }\n        sort(begin(order), end(order));\n        for (int _ = 0, mask = 0, r = 0; _ < size(nums); ++_) {\n            for (const auto& [_, i] : order) {\n                if (mask & (1 << i)) {\n                    continue;\n                }\n                if (dp[mask | (1 << i)][(r * pow10[lookup[i]] + nums[i]) % k]) {\n                    result.emplace_back(nums[i]);\n                    mask |= (1 << i);\n                    r = (r * pow10[lookup[i]] + nums[i]) % k;\n                    break;\n                }\n            }\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/concatenated-divisibility.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "concatenated-divisibility.py",
+      "code": "# Time:  O(nlogr + k * n * 2^n)\n# Space: O(logr + k * 2^n)\n\n# dp, backtracing\nclass Solution(object):\n    def concatenatedDivisibility(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        def length(x):\n            l = 0\n            while x:\n                l += 1\n                x //= 10\n            return max(l, 1)\n\n        lookup = [length(x) for x in nums]\n        mx = max(lookup)\n        pow10 = [0]*(mx+1)\n        pow10[0] = 1%k\n        for i in xrange(len(pow10)-1):\n            pow10[i+1] = (pow10[i]*10)%k\n        dp = [[False]*k for _ in xrange(1<<len(nums))]\n        dp[-1][0] = True\n        for mask in reversed(xrange(len(dp)-1)):\n            for r in xrange(k):\n                for i, l in enumerate(lookup):\n                    if mask&(1<<i):\n                        continue\n                    if dp[mask|(1<<i)][(r*pow10[l]+nums[i])%k]:\n                        dp[mask][r] = True\n                        break\n        result = []\n        if not dp[0][0]:\n            return result\n        order = sorted((x, i) for i, x in enumerate(nums))\n        mask = r = 0\n        for _ in xrange(len(nums)):\n            for _, i in order:\n                if mask&(1<<i):\n                    continue\n                if dp[mask|(1<<i)][(r*pow10[lookup[i]]+nums[i])%k]:\n                    result.append(nums[i])\n                    mask |= 1<<i\n                    r = (r*pow10[lookup[i]]+nums[i])%k\n                    break\n        return result\n",
+      "sourcePath": "Python/concatenated-divisibility.py"
+    }
+  },
+  "seo": {
+    "title": "Concatenated Divisibility Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Concatenated Divisibility (LeetCode #3533). Pattern: dynamic programming. Time O(nlogr + k * n * 2^n), space O(logr + k * 2^n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Concatenated Divisibility",
+      "Concatenated Divisibility solution",
+      "Concatenated Divisibility leetcode",
+      "dynamic-programming",
+      "dynamic-programming",
+      "bit-manipulation",
+      "hard"
+    ],
+    "canonicalPath": "/problems/concatenated-divisibility"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Concatenated Divisibility?",
+      "answer": "The reference solutions aim for O(nlogr + k * n * 2^n) time and O(logr + k * 2^n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Concatenated Divisibility use?",
+      "answer": "It primarily maps to dynamic programming and bit manipulation, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Concatenated Divisibility good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/concatenated-divisibility/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming and bit manipulation approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Concatenated Divisibility (#3533) — Hard. Pattern: dynamic programming and bit manipulation. Complexity: O(nlogr + k * n * 2^n) time / O(logr + k * 2^n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Concatenated Divisibility: show input structure (dynamic programming), highlight the moving parts of the dynamic programming and bit manipulation approach, and annotate each step with the maintained invariant and complexity."
+}

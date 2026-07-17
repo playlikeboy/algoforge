@@ -1,0 +1,172 @@
+{
+  "id": "2926",
+  "number": 2926,
+  "slug": "maximum-balanced-subsequence-sum",
+  "title": "Maximum Balanced Subsequence Sum",
+  "difficulty": "Hard",
+  "topics": [
+    "binary-search-tree"
+  ],
+  "patterns": [
+    "sorted-list",
+    "binary-search",
+    "stack",
+    "fenwick-tree",
+    "segment-tree"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogn)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-balanced-subsequence-sum/",
+  "notes": [
+    "Sorted List",
+    "BST",
+    "Binary Search",
+    "Mono Stack",
+    "BIT",
+    "Fenwick Tree",
+    "Segment Tree"
+  ],
+  "relatedSlugs": [
+    "maximum-profitable-triplets-with-increasing-prices-ii",
+    "maximum-profitable-triplets-with-increasing-prices-i",
+    "block-placement-queries",
+    "number-of-pairs-satisfying-inequality",
+    "minimum-absolute-difference-between-elements-with-constraint",
+    "power-update-after-k-th-largest-insertion-ii",
+    "distribute-elements-into-two-arrays-ii",
+    "maximum-sum-of-subsequence-with-non-adjacent-elements"
+  ],
+  "prevSlug": "maximum-score-after-applying-operations-on-a-tree",
+  "nextSlug": "distribute-candies-among-children-iii",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Maximum Balanced Subsequence Sum?\n\n**Maximum Balanced Subsequence Sum** (LeetCode #2926) is a **Hard** problem that primarily trains **binary search tree**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sorted list, binary search, stack, fenwick tree, and segment tree**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Sorted List, BST, Binary Search, Mono Stack.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/maximum-balanced-subsequence-sum/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Maximum Balanced Subsequence Sum\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sorted list, binary search, stack, fenwick tree, and segment tree**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogn)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogn)** time and **O(n)** space.\n\n### Pattern focus: sorted list, binary search, stack, fenwick tree, and segment tree\n\nUse the pattern as a checklist:\n\n- **sorted list** — confirm the invariant holds after each step\n- **binary search** — confirm the invariant holds after each step\n- **stack** — confirm the invariant holds after each step\n- **fenwick tree** — confirm the invariant holds after each step\n- **segment tree** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogn)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Maximum Balanced Subsequence Sum\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sorted list, binary search, stack, fenwick tree, and segment tree — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sorted list, binary search, stack, fenwick tree, and segment tree**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **binary search tree**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Maximum Balanced Subsequence Sum** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **binary search tree**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "maximum-balanced-subsequence-sum.cpp",
+      "code": "// Time:  O(nlogn)\n// Space: O(n)\n\n// bst, binary search, mono stack\nclass Solution {\npublic:\n    long long maxBalancedSubsequenceSum(vector<int>& nums) {\n        static const auto NEG_INF = numeric_limits<int64_t>::min();\n\n        const auto& query = [](const auto& bst, const auto& k) {\n            const auto it = bst.lower_bound(pair(k, 0));\n            return it != begin(bst) ? prev(it)->second : NEG_INF;\n        };\n\n        const auto& update = [](auto& bst, const auto& k, const auto& v) {\n            const auto it = bst.lower_bound(pair(k, 0));\n            if (it != end(bst) && it->first == k) {\n                if (!(it->second < v)) {\n                    return;\n                }\n                bst.erase(it);\n            } else if (!(it == begin(bst) || prev(it)->second < v)) {\n                return;\n            }\n            const auto [jt, _] = bst.emplace(k, v);\n            while (next(jt) != end(bst) && next(jt)->second <= jt->second) {\n                bst.erase(next(jt));\n            }\n        };\n\n        set<pair<int, int64_t>> bst;\n        for (int i = 0; i < size(nums); ++i) {\n            const auto val = max(query(bst, (nums[i] - i) + 1), static_cast<int64_t>(0)) + nums[i];\n            update(bst, nums[i] - i, val);\n        }\n        return rbegin(bst)->second;\n    }\n};\n\n// Time:  O(nlogn)\n// Space: O(n)\n// bit, fenwick tree\nclass Solution2 {\npublic:\n    long long maxBalancedSubsequenceSum(vector<int>& nums) {\n        static const auto NEG_INF = numeric_limits<int64_t>::min();\n\n        unordered_set<int> vals_set;\n        for (int i = 0; i < size(nums); ++i) {\n            vals_set.emplace(nums[i] - i);\n        }\n        vector<int> sorted_vals(cbegin(vals_set), cend(vals_set));\n        sort(begin(sorted_vals), end(sorted_vals));\n        unordered_map<int, int> val_to_idx;\n        for (int i = 0; i < size(sorted_vals); ++i) {\n            val_to_idx[sorted_vals[i]] = i;\n        }\n        const auto& fn = [](const auto& a, const auto& b) {\n            return max(a, b);\n        };\n        BIT<int64_t> bit(size(val_to_idx), NEG_INF, fn);\n        for (int i = 0; i < size(nums); ++i) {\n            const auto val = max(bit.query(val_to_idx[nums[i] - i]), static_cast<int64_t>(0)) + nums[i];\n            bit.update(val_to_idx[nums[i] - i], val);\n        }\n        return bit.query(size(val_to_idx) - 1);\n    }\n\nprivate:\n    template<typename T>\n    class BIT {\n    public:\n        BIT(int n, T val, const function<T (T, T)> fn)\n          : bit_(n + 1, val),\n            fn_(fn) {  // 0-indexed\n        }\n        \n        void update(int i, T val) {\n            ++i;\n            for (; i < size(bit_); i += lower_bit(i)) {\n                bit_[i] = fn_(bit_[i], val);\n            }\n        }\n\n        T query(int i) const {\n            ++i;\n            auto total = bit_[0];\n            for (; i > 0; i -= lower_bit(i)) {\n                total = fn_(total, bit_[i]);\n            }\n            return total;\n        }\n    \n    private:\n        int lower_bit(int i) const {\n            return i & -i;\n        }\n        \n        vector<T> bit_;\n        const function<T (T, T)> fn_;\n    };\n};\n\n// Time:  O(nlogn)\n// Space: O(n)\n// segment tree\nclass Solution3 {\npublic:\n    long long maxBalancedSubsequenceSum(vector<int>& nums) {\n        static const auto NEG_INF = numeric_limits<int64_t>::min();\n\n        unordered_set<int> vals_set;\n        for (int i = 0; i < size(nums); ++i) {\n            vals_set.emplace(nums[i] - i);\n        }\n        vector<int> sorted_vals(cbegin(vals_set), cend(vals_set));\n        sort(begin(sorted_vals), end(sorted_vals));\n        unordered_map<int, int> val_to_idx;\n        for (int i = 0; i < size(sorted_vals); ++i) {\n            val_to_idx[sorted_vals[i]] = i;\n        }\n        SegmentTree<int64_t> st(size(val_to_idx));\n        for (int i = 0; i < size(nums); ++i) {\n            const auto val = max(st.query(0, val_to_idx[nums[i] - i]), static_cast<int64_t>(0)) + nums[i];\n            st.update(val_to_idx[nums[i] - i], val);\n        }\n        return st.query(0, size(val_to_idx) - 1);\n    }\n\nprivate:\n    template<typename T>\n    class SegmentTree {\n    private:\n        const T NEG_INF = numeric_limits<T>::min();\n      \n    public:\n        explicit SegmentTree(int N)\n          : tree(N > 1 ? 1 << (__lg(N - 1) + 2) : 2, NEG_INF),\n            base(N > 1 ? 1 << (__lg(N - 1) + 1) : 1) {\n\n        }\n\n        void update(int i, T h) {\n            int x = base + i;\n            tree[x] = max(tree[x], h);\n            while (x > 1) {\n                x /= 2;\n                tree[x] = max(tree[x * 2], tree[x * 2 + 1]);\n            }\n        }\n\n        T query(int L, int R) {\n            T result = NEG_INF;\n            if (L > R) {\n                return result;\n            }\n            L += base;\n            R += base;\n            for (; L <= R; L /= 2, R /= 2) {\n                if (L & 1) {\n                    result = max(result, tree[L]);\n                    ++L;\n                }\n                if ((R & 1) == 0) {\n                    result = max(tree[R], result);\n                    --R;\n                }\n            }\n            return result;\n        }\n\n        vector<T> tree;\n        int base;\n    };\n};\n",
+      "sourcePath": "C++/maximum-balanced-subsequence-sum.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "maximum-balanced-subsequence-sum.py",
+      "code": "# Time:  O(nlogn)\n# Space: O(n)\n\nfrom sortedcontainers import SortedList\n\n\n# sorted list, binary search, mono stack\nclass Solution(object):\n    def maxBalancedSubsequenceSum(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        NEG_INF = float(\"-inf\")\n        def query(sl, k):\n            j = sl.bisect_left((k,))\n            return sl[j-1][1] if j-1 >= 0 else NEG_INF\n    \n        def update(sl, k, v):\n            j = sl.bisect_left((k,))\n            if j < len(sl) and sl[j][0] == k:\n                if not (sl[j][1] < v):\n                    return\n                del sl[j]\n            elif not (j-1 < 0 or sl[j-1][1] < v):\n                return\n            sl.add((k, v))\n            while j+1 < len(sl) and sl[j+1][1] <= sl[j][1]:\n                del sl[j+1]\n\n        sl = SortedList()\n        for i, x in enumerate(nums):\n            v = max(query(sl, (x-i)+1), 0)+x\n            update(sl, x-i, v)\n        return sl[-1][1]\n\n\n# Time:  O(nlogn)\n# Space: O(n)\n# bit, fenwick tree\nclass Solution2(object):\n    def maxBalancedSubsequenceSum(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        NEG_INF = float(\"-inf\")\n        class BIT(object):  # 0-indexed.\n            def __init__(self, n, default=0, fn=lambda x, y: x+y):\n                self.__bit = [NEG_INF]*(n+1)  # Extra one for dummy node.\n                self.__default = default\n                self.__fn = fn\n\n            def update(self, i, val):\n                i += 1  # Extra one for dummy node.\n                while i < len(self.__bit):\n                    self.__bit[i] = self.__fn(self.__bit[i], val)\n                    i += (i & -i)\n\n            def query(self, i):\n                i += 1  # Extra one for dummy node.\n                ret = self.__default\n                while i > 0:\n                    ret = self.__fn(ret, self.__bit[i])\n                    i -= (i & -i)\n                return ret\n\n        val_to_idx = {x:i for i, x in enumerate(sorted({x-i for i, x in enumerate(nums)}))}\n        bit = BIT(len(val_to_idx), default=NEG_INF, fn=max)\n        for i, x in enumerate(nums):\n            v = max(bit.query(val_to_idx[x-i]), 0)+x\n            bit.update(val_to_idx[x-i], v)\n        return bit.query(len(val_to_idx)-1)\n\n\n# Time:  O(nlogn)\n# Space: O(n)\n# segment tree\nclass Solution3(object):\n    def maxBalancedSubsequenceSum(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        NEG_INF = float(\"-inf\")\n        # Range Maximum Query\n        class SegmentTree(object):\n            def __init__(self, N,\n                         build_fn=lambda _: None,\n                         query_fn=lambda x, y: max(x, y),\n                         update_fn=lambda x, y: max(x, y)):\n                self.tree = [None]*(2*2**((N-1).bit_length()))\n                self.base = len(self.tree)//2\n                self.query_fn = query_fn\n                self.update_fn = update_fn\n                for i in xrange(self.base, self.base+N):\n                    self.tree[i] = build_fn(i-self.base)\n                for i in reversed(xrange(1, self.base)):\n                    self.tree[i] = query_fn(self.tree[2*i], self.tree[2*i+1])\n\n            def update(self, i, h):\n                x = self.base+i\n                self.tree[x] = self.update_fn(self.tree[x], h)\n                while x > 1:\n                    x //= 2\n                    self.tree[x] = self.query_fn(self.tree[x*2], self.tree[x*2+1])\n\n            def query(self, L, R):\n                if L > R:\n                    return None\n                L += self.base\n                R += self.base\n                left = right = None\n                while L <= R:\n                    if L & 1:\n                        left = self.query_fn(left, self.tree[L])\n                        L += 1\n                    if R & 1 == 0:\n                        right = self.query_fn(self.tree[R], right)\n                        R -= 1\n                    L //= 2\n                    R //= 2\n                return self.query_fn(left, right)\n\n        val_to_idx = {x:i for i, x in enumerate(sorted({x-i for i, x in enumerate(nums)}))}\n        st = SegmentTree(len(val_to_idx))\n        for i, x in enumerate(nums):\n            v = max(st.query(0, val_to_idx[x-i]), 0)+x\n            st.update(val_to_idx[x-i], v)\n        return st.query(0, len(val_to_idx)-1)\n",
+      "sourcePath": "Python/maximum-balanced-subsequence-sum.py"
+    }
+  },
+  "seo": {
+    "title": "Maximum Balanced Subsequence Sum Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Maximum Balanced Subsequence Sum (LeetCode #2926). Pattern: sorted list. Time O(nlogn), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Maximum Balanced Subsequence Sum",
+      "Maximum Balanced Subsequence Sum solution",
+      "Maximum Balanced Subsequence Sum leetcode",
+      "binary-search-tree",
+      "sorted-list",
+      "binary-search",
+      "stack",
+      "fenwick-tree",
+      "segment-tree",
+      "hard"
+    ],
+    "canonicalPath": "/problems/maximum-balanced-subsequence-sum"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Maximum Balanced Subsequence Sum?",
+      "answer": "The reference solutions aim for O(nlogn) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Maximum Balanced Subsequence Sum use?",
+      "answer": "It primarily maps to sorted list, binary search, stack, fenwick tree, and segment tree, within the broader topic of binary search tree."
+    },
+    {
+      "question": "Is Maximum Balanced Subsequence Sum good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/maximum-balanced-subsequence-sum/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sorted list, binary search, stack, fenwick tree, and segment tree approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Maximum Balanced Subsequence Sum (#2926) — Hard. Pattern: sorted list, binary search, stack, fenwick tree, and segment tree. Complexity: O(nlogn) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Maximum Balanced Subsequence Sum: show input structure (binary search tree), highlight the moving parts of the sorted list, binary search, stack, fenwick tree, and segment tree approach, and annotate each step with the maintained invariant and complexity."
+}

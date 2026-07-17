@@ -1,0 +1,47 @@
+{
+  "slug": "meta-tree-questions",
+  "path": "/explore/meta-tree-questions",
+  "h1": "Best Tree Questions for Meta",
+  "intro": "A curated set of 4 Tree problems frequently useful for Meta interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "diameter-of-binary-tree",
+    "two-sum-iv-input-is-a-bst",
+    "all-nodes-distance-k-in-binary-tree",
+    "check-completeness-of-a-binary-tree"
+  ],
+  "faqs": [
+    {
+      "question": "How many Tree problems should I do for Meta?",
+      "answer": "Quality over quantity: master patterns with 4 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Tree topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/meta",
+      "label": "Meta interview hub"
+    },
+    {
+      "href": "/topics/tree",
+      "label": "Tree problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Tree Questions for Meta | AlgoForge",
+    "description": "Top Tree coding interview questions for Meta. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Meta Tree questions",
+      "Tree interview",
+      "Meta leetcode"
+    ],
+    "canonicalPath": "/explore/meta-tree-questions"
+  },
+  "kind": "company-topic"
+}

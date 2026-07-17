@@ -1,0 +1,50 @@
+{
+  "type": "topic",
+  "slug": "recursion",
+  "name": "Recursion",
+  "description": "Base cases, divide-and-conquer, and recursive state.",
+  "problemCount": 30,
+  "problemSlugs": [
+    "unique-binary-search-trees-ii",
+    "validate-binary-search-tree",
+    "same-tree",
+    "maximum-depth-of-binary-tree",
+    "construct-binary-tree-from-preorder-and-inorder-traversal",
+    "construct-binary-tree-from-inorder-and-postorder-traversal",
+    "convert-sorted-array-to-binary-search-tree",
+    "convert-sorted-list-to-binary-search-tree",
+    "balanced-binary-tree",
+    "minimum-depth-of-binary-tree",
+    "flatten-binary-tree-to-linked-list",
+    "populating-next-right-pointers-in-each-node",
+    "binary-tree-maximum-path-sum",
+    "sum-root-to-leaf-numbers",
+    "binary-tree-upside-down",
+    "different-ways-to-add-parentheses",
+    "binary-tree-longest-consecutive-sequence",
+    "count-of-range-sum",
+    "largest-bst-subtree",
+    "house-robber-iii",
+    "longest-substring-with-at-least-k-repeating-characters",
+    "sum-of-left-leaves",
+    "path-sum-iii",
+    "output-contest-matches",
+    "binary-tree-longest-consecutive-sequence-ii",
+    "trim-a-binary-search-tree",
+    "second-minimum-node-in-a-binary-tree",
+    "special-binary-string",
+    "parsing-a-boolean-expression",
+    "beautiful-pairs"
+  ],
+  "seo": {
+    "title": "Recursion Interview Questions & Solutions | AlgoForge",
+    "description": "Study 30 Recursion problems for coding interviews. Roadmaps, patterns, and original explanations on AlgoForge.",
+    "keywords": [
+      "Recursion",
+      "Recursion leetcode",
+      "Recursion interview questions",
+      "dsa"
+    ],
+    "canonicalPath": "/topics/recursion"
+  }
+}

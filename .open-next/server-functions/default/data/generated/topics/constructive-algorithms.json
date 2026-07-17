@@ -1,0 +1,46 @@
+{
+  "type": "topic",
+  "slug": "constructive-algorithms",
+  "name": "Constructive Algorithms",
+  "description": "Practice Constructive Algorithms interview problems with patterns, complexity analysis, and multi-language solutions.",
+  "problemCount": 26,
+  "problemSlugs": [
+    "maximize-the-topmost-element-after-k-moves",
+    "minimum-amount-of-time-to-fill-cups",
+    "shortest-impossible-sequence-of-rolls",
+    "maximum-number-of-groups-entering-a-competition",
+    "apply-bitwise-operations-to-make-strings-equal",
+    "convert-an-array-into-a-2d-array-with-conditions",
+    "color-the-triangle-red",
+    "minimum-number-of-operations-to-make-all-array-elements-equal-to-1",
+    "count-houses-in-a-circular-street",
+    "find-a-good-subset-of-the-matrix",
+    "construct-the-longest-new-string",
+    "count-houses-in-a-circular-street-ii",
+    "check-if-it-is-possible-to-split-array",
+    "determine-the-minimum-sum-of-a-k-avoiding-array",
+    "find-the-minimum-possible-sum-of-a-beautiful-array",
+    "determine-if-a-cell-is-reachable-at-a-given-time",
+    "minimum-array-length-after-pair-removals",
+    "minimum-cost-to-equalize-array",
+    "find-the-largest-palindrome-divisible-by-k",
+    "construct-2d-grid-matching-graph-layout",
+    "minimum-operations-to-make-array-values-equal-to-k",
+    "generate-schedule",
+    "construct-uniform-parity-array-i",
+    "construct-uniform-parity-array-ii",
+    "create-grid-with-exactly-k-paths-i",
+    "create-grid-with-exactly-k-paths-ii"
+  ],
+  "seo": {
+    "title": "Constructive Algorithms Interview Questions & Solutions | AlgoForge",
+    "description": "Study 26 Constructive Algorithms problems for coding interviews. Roadmaps, patterns, and original explanations on AlgoForge.",
+    "keywords": [
+      "Constructive Algorithms",
+      "Constructive Algorithms leetcode",
+      "Constructive Algorithms interview questions",
+      "dsa"
+    ],
+    "canonicalPath": "/topics/constructive-algorithms"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "id": "362",
+  "number": 362,
+  "slug": "design-hit-counter",
+  "title": "Design Hit Counter",
+  "difficulty": "Medium",
+  "topics": [
+    "design"
+  ],
+  "patterns": [],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(1), amortized",
+  "spaceComplexity": "O(k)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/design-hit-counter/",
+  "notes": [
+    "Deque"
+  ],
+  "relatedSlugs": [
+    "binary-search-tree-iterator",
+    "peeking-iterator",
+    "design-tic-tac-toe",
+    "design-snake-game",
+    "design-twitter",
+    "design-phone-directory",
+    "encode-and-decode-tinyurl",
+    "design-circular-queue"
+  ],
+  "prevSlug": "bomb-enemy",
+  "nextSlug": "max-sum-of-sub-matrix-no-larger-than-k",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Design Hit Counter?\n\n**Design Hit Counter** (LeetCode #362) is a **Medium** problem that primarily trains **design**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Deque.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/design-hit-counter/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Design Hit Counter\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(1), amortized) and **space** (O(k)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(1), amortized** time and **O(k)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(1), amortized** |\n| Space | **O(k)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Design Hit Counter\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **design**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Design Hit Counter** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **design**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "design-hit-counter.cpp",
+      "code": "// Time:  O(1), amortized\n// Space: O(k), k is the count of seconds.\n\nclass HitCounter {\npublic:\n    /** Initialize your data structure here. */\n    HitCounter() : count_(0) {\n        \n    }\n    \n    /** Record a hit.\n        @param timestamp - The current timestamp (in seconds granularity). */\n    void hit(int timestamp) {\n        getHits(timestamp);\n        if (!dq_.empty() && dq_.back().first == timestamp) {\n            ++dq_.back().second;\n        } else {\n            dq_.emplace_back(timestamp, 1);\n        }\n        ++count_;\n    }\n    \n    /** Return the number of hits in the past 5 minutes.\n        @param timestamp - The current timestamp (in seconds granularity). */\n    int getHits(int timestamp) {\n        while (!dq_.empty() && dq_.front().first <= timestamp - k_) {\n            count_ -= dq_.front().second;\n            dq_.pop_front();\n        }\n        return count_;\n    }\n\nprivate:\n    const int k_ = 300;\n    int count_;\n    deque<pair<int, int>> dq_;\n};\n\n/**\n * Your HitCounter object will be instantiated and called as such:\n * HitCounter obj = new HitCounter();\n * obj.hit(timestamp);\n * int param_2 = obj.getHits(timestamp);\n */\n \n",
+      "sourcePath": "C++/design-hit-counter.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "design-hit-counter.py",
+      "code": "# Time:  O(1), amortized\n# Space: O(k), k is the count of seconds.\n\nfrom collections import deque\n\nclass HitCounter(object):\n\n    def __init__(self):\n        \"\"\"\n        Initialize your data structure here.\n        \"\"\"\n        self.__k = 300\n        self.__dq = deque()\n        self.__count = 0\n\n    def hit(self, timestamp):\n        \"\"\"\n        Record a hit.\n        @param timestamp - The current timestamp (in seconds granularity).\n        :type timestamp: int\n        :rtype: void\n        \"\"\"\n        self.getHits(timestamp)\n        if self.__dq and self.__dq[-1][0] == timestamp:\n            self.__dq[-1][1] += 1\n        else:\n            self.__dq.append([timestamp, 1])\n        self.__count += 1\n\n    def getHits(self, timestamp):\n        \"\"\"\n        Return the number of hits in the past 5 minutes.\n        @param timestamp - The current timestamp (in seconds granularity).\n        :type timestamp: int\n        :rtype: int\n        \"\"\"\n        while self.__dq and self.__dq[0][0] <= timestamp - self.__k:\n            self.__count -= self.__dq.popleft()[1]\n        return self.__count\n\n\n",
+      "sourcePath": "Python/design-hit-counter.py"
+    }
+  },
+  "seo": {
+    "title": "Design Hit Counter Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Design Hit Counter (LeetCode #362). Pattern: algorithms. Time O(1), amortized, space O(k). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Design Hit Counter",
+      "Design Hit Counter solution",
+      "Design Hit Counter leetcode",
+      "design",
+      "medium"
+    ],
+    "canonicalPath": "/problems/design-hit-counter"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Design Hit Counter?",
+      "answer": "The reference solutions aim for O(1), amortized time and O(k) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Design Hit Counter use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of design."
+    },
+    {
+      "question": "Is Design Hit Counter good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/design-hit-counter/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Design Hit Counter (#362) — Medium. Pattern: general problem-solving. Complexity: O(1), amortized time / O(k) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Design Hit Counter: show input structure (design), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,163 @@
+{
+  "id": "3251",
+  "number": 3251,
+  "slug": "find-the-count-of-monotonic-pairs-ii",
+  "title": "Find the Count of Monotonic Pairs II",
+  "difficulty": "Hard",
+  "topics": [
+    "math"
+  ],
+  "patterns": [
+    "dynamic-programming",
+    "prefix-sum"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n + r)",
+  "spaceComplexity": "O(n + r)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/find-the-count-of-monotonic-pairs-ii/",
+  "notes": [
+    "Combinatorics",
+    "Stars and Bars",
+    "DP",
+    "Prefix Sum"
+  ],
+  "relatedSlugs": [
+    "find-the-count-of-monotonic-pairs-i",
+    "sum-of-consecutive-subsequences",
+    "handshakes-that-dont-cross",
+    "find-array-given-subset-sums",
+    "count-the-number-of-ideal-arrays",
+    "find-the-number-of-possible-ways-for-an-event",
+    "subsequences-with-a-unique-middle-mode-i",
+    "subsequences-with-a-unique-middle-mode-ii"
+  ],
+  "prevSlug": "find-the-count-of-monotonic-pairs-i",
+  "nextSlug": "premier-league-table-ranking-ii",
+  "estimatedMinutes": 60,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Find the Count of Monotonic Pairs II?\n\n**Find the Count of Monotonic Pairs II** (LeetCode #3251) is a **Hard** problem that primarily trains **math**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming and prefix sum**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Combinatorics, Stars and Bars, DP, Prefix Sum.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/find-the-count-of-monotonic-pairs-ii/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Find the Count of Monotonic Pairs II\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming and prefix sum**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n + r)) and **space** (O(n + r)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n + r)** time and **O(n + r)** space.\n\n### Pattern focus: dynamic programming and prefix sum\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n- **prefix sum** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n + r)** |\n| Space | **O(n + r)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Find the Count of Monotonic Pairs II\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming and prefix sum — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming and prefix sum**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **math**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Find the Count of Monotonic Pairs II** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **math**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "find-the-count-of-monotonic-pairs-ii.cpp",
+      "code": "// Time:  O(n + r), r = max(nums)\n// Space: O(n + r)\n\n// combinatorics, stars and bars\nclass Solution {\npublic:\n    int countOfPairs(vector<int>& nums) {\n        // arr1 = [0+x1, arr1[0]+max(nums[1]-nums[0], 0)+x2, ..., arr[n-2]+max(nums[n-1]-nums[n-2], 0)+xn]\n        // => sum(max(nums[i]-nums[i-1], 0) for i in xrange(1, len(nums)))+(x1+x2+...+xn) <= nums[-1]\n        // => x1+x2+...+xn <= nums[-1]-sum(max(nums[i]-nums[i-1], 0) for i in xrange(1, len(nums))) = cnt <= min(nums)\n        // => the answer is the number of solutions s.t. x1+x2+...+xn <= cnt, where cnt >= 0\n        int cnt = nums.back();\n        for (int i = 1; i < size(nums); ++i) {\n            cnt -= max(nums[i] - nums[i - 1], 0);\n        }\n        return cnt >= 0 ? nHr(size(nums) + 1, cnt) : 0;\n    }\n\nprivate:\n    int nHr(int n, int r) {\n        return nCr(n + r - 1, r);\n    }\n\n    int nCr(int n, int k) {\n        while (size(inv_) <= n) {  // lazy initialization\n            fact_.emplace_back(mulmod(fact_.back(), size(inv_)));\n            inv_.emplace_back(mulmod(inv_[MOD % size(inv_)], MOD - MOD / size(inv_)));  // https://cp-algorithms.com/algebra/module-inverse.html\n            inv_fact_.emplace_back(mulmod(inv_fact_.back(), inv_.back()));\n        }\n        return mulmod(mulmod(fact_[n], inv_fact_[n - k]), inv_fact_[k]);\n    }\n\n    uint32_t addmod(uint32_t a, uint32_t b) {  // avoid overflow\n        a %= MOD, b %= MOD;\n        if (MOD - a <= b) {\n            b -= MOD;  // relied on unsigned integer overflow in order to give the expected results\n        }\n        return a + b;\n    }\n\n    // reference: https://stackoverflow.com/questions/12168348/ways-to-do-modulo-multiplication-with-primitive-types\n    uint32_t mulmod(uint32_t a, uint32_t b)  {  // avoid overflow\n        a %= MOD, b %= MOD;\n        uint32_t result = 0;\n        if (a < b) {\n            swap(a, b);\n        }\n        while (b > 0)  { \n            if (b & 1) {\n                result = addmod(result, a);\n            }\n            a = addmod(a, a);\n            b >>= 1;\n        } \n        return result; \n    }\n   \n    static const uint32_t MOD = 1e9 + 7;\n    vector<int> fact_ = {1, 1};\n    vector<int> inv_ = {1, 1};\n    vector<int> inv_fact_ = {1, 1};\n};\n\n// Time:  O(n * r), r = max(nums)\n// Space: O(r)\n// dp, prefix sum\nclass Solution2 {\npublic:\n    int countOfPairs(vector<int>& nums) {\n        static const int MOD = 1e9 + 7;\n        vector<int> dp(ranges::max(nums) + 1);  // dp[j]: numbers of arr1, which is of length i+1 and arr1[i] is j\n        for (int i = 0; i <= nums[0]; ++i) {\n            dp[i] = 1;\n        }\n        for (int i = 1; i < size(nums); ++i) {\n            // arr1[i-1] <= arr1[i]\n            // => arr1[i]-arr1[i-1] >= 0 (1)\n            //\n            // arr2[i-1] >= arr2[i]\n            // => nums[i-1]-arr1[i-1] >= nums[i]-arr1[i] \n            // => arr1[i]-arr1[i-1] >= nums[i]-nums[i-1] (2)\n            //\n            // (1)+(2): arr1[i]-arr1[i-1] >= max(nums[i]-nums[i-1], 0)\n            vector<int> new_dp(size(dp));\n            const int diff = max(nums[i] - nums[i - 1], 0);\n            for (int j = diff; j <= nums[i]; ++j) {\n                new_dp[j] = ((j - 1 >= 0 ? new_dp[j - 1] : 0) + dp[j - diff]) % MOD;\n            }\n            dp = move(new_dp);\n        }\n        return accumulate(cbegin(dp), cend(dp), 0, [&](const auto& accu, const auto& x) {\n            return (accu + x) % MOD;\n        });\n    }\n};\n",
+      "sourcePath": "C++/find-the-count-of-monotonic-pairs-ii.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "find-the-count-of-monotonic-pairs-ii.py",
+      "code": "# Time:  O(n + r), r = max(nums)\n# Space: O(n + r)\n\n# combinatorics, stars and bars\nclass Solution(object):\n    def countOfPairs(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        fact, inv, inv_fact = [[1]*2 for _ in xrange(3)]\n        def nCr(n, k):\n            while len(inv) <= n:  # lazy initialization\n                fact.append(fact[-1]*len(inv) % MOD)\n                inv.append(inv[MOD%len(inv)]*(MOD-MOD//len(inv)) % MOD)  # https://cp-algorithms.com/algebra/module-inverse.html\n                inv_fact.append(inv_fact[-1]*inv[-1] % MOD)\n            return (fact[n]*inv_fact[n-k] % MOD) * inv_fact[k] % MOD\n    \n        def nHr(n, r):\n            return nCr(n+r-1, r)\n\n        MOD = 10**9+7\n        # arr1 = [0+x1, arr1[0]+max(nums[1]-nums[0], 0)+x2, ..., arr[n-2]+max(nums[n-1]-nums[n-2], 0)+xn]\n        # => sum(max(nums[i]-nums[i-1], 0) for i in xrange(1, len(nums)))+(x1+x2+...+xn) <= nums[-1]\n        # => x1+x2+...+xn <= nums[-1]-sum(max(nums[i]-nums[i-1], 0) for i in xrange(1, len(nums))) = cnt <= min(nums)\n        # => the answer is the number of solutions s.t. x1+x2+...+xn <= cnt, where cnt >= 0\n        cnt = nums[-1]-sum(max(nums[i]-nums[i-1], 0) for i in xrange(1, len(nums)))\n        return nHr(len(nums)+1, cnt) if cnt >= 0 else 0\n    \n\n# Time:  O(n * r), r = max(nums)\n# Space: O(r)\n# dp, prefix sum\nclass Solution2(object):\n    def countOfPairs(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        MOD = 10**9+7\n        dp = [int(i <= nums[0]) for i in xrange(max(nums)+1)]  # dp[j]: numbers of arr1, which is of length i+1 and arr1[i] is j\n        for i in xrange(1, len(nums)):\n            # arr1[i-1] <= arr1[i]\n            # => arr1[i]-arr1[i-1] >= 0 (1)\n            #\n            # arr2[i-1] >= arr2[i]\n            # => nums[i-1]-arr1[i-1] >= nums[i]-arr1[i] \n            # => arr1[i]-arr1[i-1] >= nums[i]-nums[i-1] (2)\n            #\n            # (1)+(2): arr1[i]-arr1[i-1] >= max(nums[i]-nums[i-1], 0)\n            new_dp = [0]*len(dp)\n            diff = max(nums[i]-nums[i-1], 0)\n            for j in xrange(diff, nums[i]+1):\n                new_dp[j] = (new_dp[j-1]+dp[j-diff])%MOD\n            dp = new_dp\n        return reduce(lambda accu, x: (accu+x)%MOD, dp, 0)\n",
+      "sourcePath": "Python/find-the-count-of-monotonic-pairs-ii.py"
+    }
+  },
+  "seo": {
+    "title": "Find the Count of Monotonic Pairs II Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Find the Count of Monotonic Pairs II (LeetCode #3251). Pattern: dynamic programming. Time O(n + r), space O(n + r). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Find the Count of Monotonic Pairs II",
+      "Find the Count of Monotonic Pairs II solution",
+      "Find the Count of Monotonic Pairs II leetcode",
+      "math",
+      "dynamic-programming",
+      "prefix-sum",
+      "hard"
+    ],
+    "canonicalPath": "/problems/find-the-count-of-monotonic-pairs-ii"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Find the Count of Monotonic Pairs II?",
+      "answer": "The reference solutions aim for O(n + r) time and O(n + r) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Find the Count of Monotonic Pairs II use?",
+      "answer": "It primarily maps to dynamic programming and prefix sum, within the broader topic of math."
+    },
+    {
+      "question": "Is Find the Count of Monotonic Pairs II good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/find-the-count-of-monotonic-pairs-ii/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming and prefix sum approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Find the Count of Monotonic Pairs II (#3251) — Hard. Pattern: dynamic programming and prefix sum. Complexity: O(n + r) time / O(n + r) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Find the Count of Monotonic Pairs II: show input structure (math), highlight the moving parts of the dynamic programming and prefix sum approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,20 @@
+{
+  "type": "company",
+  "slug": "pinterest",
+  "name": "Pinterest",
+  "description": "Coding interview preparation for Pinterest: high-frequency patterns and problem sets.",
+  "problemCount": 1,
+  "problemSlugs": [
+    "is-subsequence"
+  ],
+  "seo": {
+    "title": "Pinterest Coding Interview Questions | AlgoForge",
+    "description": "Prepare for Pinterest interviews with 1 problems, patterns, and roadmaps.",
+    "keywords": [
+      "Pinterest interview questions",
+      "Pinterest leetcode",
+      "Pinterest oa"
+    ],
+    "canonicalPath": "/companies/pinterest"
+  }
+}

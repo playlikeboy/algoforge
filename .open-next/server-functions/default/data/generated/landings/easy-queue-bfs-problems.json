@@ -1,0 +1,41 @@
+{
+  "slug": "easy-queue-bfs-problems",
+  "path": "/explore/easy-queue-bfs-problems",
+  "h1": "Easy Queue / BFS Problems",
+  "intro": "6 easy problems that drill the Queue / BFS pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "binary-tree-level-order-traversal",
+    "binary-tree-level-order-traversal-ii",
+    "moving-average-from-data-stream",
+    "employee-importance",
+    "number-of-recent-calls",
+    "rotting-oranges"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice easy Queue / BFS problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/queue-bfs",
+      "label": "Queue / BFS pattern"
+    },
+    {
+      "href": "/difficulty/easy",
+      "label": "All Easy problems"
+    }
+  ],
+  "seo": {
+    "title": "Easy Queue / BFS Problems | AlgoForge",
+    "description": "Practice easy Queue / BFS LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "easy Queue / BFS",
+      "Queue / BFS problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/easy-queue-bfs-problems"
+  },
+  "kind": "difficulty-pattern"
+}

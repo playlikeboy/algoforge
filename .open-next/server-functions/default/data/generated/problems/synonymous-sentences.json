@@ -1,0 +1,158 @@
+{
+  "id": "1258",
+  "number": 1258,
+  "slug": "synonymous-sentences",
+  "title": "Synonymous Sentences",
+  "difficulty": "Medium",
+  "topics": [
+    "backtracking"
+  ],
+  "patterns": [
+    "union-find"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(p * l * log(p * l))",
+  "spaceComplexity": "O(p * l)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/synonymous-sentences/",
+  "notes": [
+    "Union Find"
+  ],
+  "relatedSlugs": [
+    "number-of-connected-components-in-an-undirected-graph",
+    "friend-circles",
+    "redundant-connection",
+    "accounts-merge",
+    "sentence-similarity-ii",
+    "most-stones-removed-with-same-row-or-column",
+    "regions-cut-by-slashes",
+    "satisfiability-of-equality-equations"
+  ],
+  "prevSlug": "smallest-common-region",
+  "nextSlug": "handshakes-that-dont-cross",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Synonymous Sentences?\n\n**Synonymous Sentences** (LeetCode #1258) is a **Medium** problem that primarily trains **backtracking**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **union find**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Union Find.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/synonymous-sentences/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Synonymous Sentences\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **union find**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(p * l * log(p * l))) and **space** (O(p * l)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(p * l * log(p * l))** time and **O(p * l)** space.\n\n### Pattern focus: union find\n\nUse the pattern as a checklist:\n\n- **union find** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(p * l * log(p * l))** |\n| Space | **O(p * l)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Synonymous Sentences\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for union find — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **union find**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **backtracking**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Synonymous Sentences** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **backtracking**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "synonymous-sentences.cpp",
+      "code": "// Time:  O(p*l * log(p*l)), p is the production of all number of synonyms\n//                         , l is the length of a word\n// Space: O(p*l)\n\nclass Solution {\npublic:\n    vector<string> generateSentences(vector<vector<string>>& synonyms, string text) {\n        unordered_map<string, int> lookup;\n        unordered_map<int, string> inv_lookup;\n        for (const auto& synonym : synonyms) {\n            assign_id(synonym[0], &lookup, &inv_lookup);\n            assign_id(synonym[1], &lookup, &inv_lookup);\n        }\n        UnionFind union_find(lookup.size());\n        for (const auto& synonym : synonyms) {\n            union_find.union_set(lookup[synonym[0]], lookup[synonym[1]]);\n        }\n        unordered_map<int, vector<int>> groups;\n        for (int i = 0; i < union_find.set().size(); ++i) {\n            groups[union_find.find_set(i)].emplace_back(i);\n        }\n        vector<vector<string>> result;\n        for (const auto& w : split(text, ' ')) {\n            if (!lookup.count(w)) {\n                result.push_back({w});\n                continue;\n            }\n            result.emplace_back();\n            for (const auto& x : groups[union_find.find_set(lookup[w])]) {\n                result.back().emplace_back(inv_lookup[x]);\n            }\n            sort(result.back().begin(), result.back().end());\n        }\n        return product(result);\n    }\n\nprivate:\n    void assign_id(const string& x,\n                   unordered_map<string, int> *lookup,\n                   unordered_map<int, string> *inv_lookup) {\n        if (lookup->count(x)) {\n            return;\n        }\n        (*lookup)[x] = lookup->size();\n        (*inv_lookup)[(*lookup)[x]] = x;\n    }\n    \n    vector<string> split(const string& s, const char delim) const {\n        vector<string> tokens;\n        stringstream ss(s);\n        string token;\n        while (getline(ss, token, delim)) {\n            if (!token.empty()) {\n                tokens.emplace_back(token);\n            }\n        }\n        return tokens;\n    }\n    \n    vector<string> product(const vector<vector<string>>& options) const {\n        vector<string> result;\n        int total = 1;\n        for (const auto& opt : options) {\n            total *= opt.size();\n        }\n        for (int i = 0; i < total; ++i) {\n            vector<string> tmp;\n            int curr = i;\n            for (int j = options.size() - 1; j >= 0; --j) {\n                tmp.emplace_back(options[j][curr % options[j].size()]);\n                curr /= options[j].size();\n            }\n            reverse(tmp.begin(), tmp.end());\n            result.emplace_back(join(tmp, \" \"));\n        }\n        return result;\n    }\n    \n    string join(const vector<string>& strings, const string& delim) const {\n        if (strings.empty()) {\n            return \"\";\n        }\n        ostringstream imploded;\n        copy(strings.begin(), prev(strings.end()), ostream_iterator<string>(imploded, delim.c_str()));\n        return imploded.str() + *prev(strings.end());\n    }\n    \n    class UnionFind {\n        public:\n            UnionFind(const int n) : set_(n) {\n                iota(set_.begin(), set_.end(), 0);\n            }\n\n            int find_set(const int x) {\n               if (set_[x] != x) {\n                   set_[x] = find_set(set_[x]);  // Path compression.\n               }\n               return set_[x];\n            }\n\n            bool union_set(const int x, const int y) {\n                int x_root = find_set(x), y_root = find_set(y);\n                if (x_root == y_root) {\n                    return false;\n                }\n                set_[min(x_root, y_root)] = max(x_root, y_root);\n                return true;\n            }\n        \n            vector<int> set() const {\n                return set_;\n            }\n\n        private:\n            vector<int> set_;\n    };\n};\n",
+      "sourcePath": "C++/synonymous-sentences.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "synonymous-sentences.py",
+      "code": "# Time:  O(p*l * log(p*l)), p is the production of all number of synonyms\n#                         , l is the length of a word\n# Space: O(p*l)\n\nimport collections\nimport itertools\n\n\nclass UnionFind(object):\n    def __init__(self, n):\n        self.set = range(n)\n        self.count = n\n\n    def find_set(self, x):\n        if self.set[x] != x:\n            self.set[x] = self.find_set(self.set[x])  # path compression.\n        return self.set[x]\n\n    def union_set(self, x, y):\n        x_root, y_root = map(self.find_set, (x, y))\n        if x_root == y_root:\n            return False\n        self.set[max(x_root, y_root)] = min(x_root, y_root)\n        return True\n\n\nclass Solution(object):\n    def generateSentences(self, synonyms, text):\n        \"\"\"\n        :type synonyms: List[List[str]]\n        :type text: str\n        :rtype: List[str]\n        \"\"\"\n        def assign_id(x, lookup, inv_lookup):\n            if x in lookup:\n                return\n            lookup[x] = len(lookup)\n            inv_lookup[lookup[x]] = x\n        \n        lookup, inv_lookup = {}, {}\n        for u, v in synonyms:\n            assign_id(u, lookup, inv_lookup), assign_id(v, lookup, inv_lookup)\n        union_find = UnionFind(len(lookup))\n        for u, v in synonyms:\n            union_find.union_set(lookup[u], lookup[v])\n        groups = collections.defaultdict(list)\n        for i in xrange(len(union_find.set)):\n            groups[union_find.find_set(i)].append(i)\n        result = []\n        for w in text.split(' '):\n            if w not in lookup:\n                result.append([w])\n                continue\n            result.append(sorted(map(lambda x: inv_lookup[x], \n                                 groups[union_find.find_set(lookup[w])])))\n        return [\" \".join(sentense) for sentense in itertools.product(*result)]\n",
+      "sourcePath": "Python/synonymous-sentences.py"
+    }
+  },
+  "seo": {
+    "title": "Synonymous Sentences Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Synonymous Sentences (LeetCode #1258). Pattern: union find. Time O(p * l * log(p * l)), space O(p * l). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Synonymous Sentences",
+      "Synonymous Sentences solution",
+      "Synonymous Sentences leetcode",
+      "backtracking",
+      "union-find",
+      "medium"
+    ],
+    "canonicalPath": "/problems/synonymous-sentences"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Synonymous Sentences?",
+      "answer": "The reference solutions aim for O(p * l * log(p * l)) time and O(p * l) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Synonymous Sentences use?",
+      "answer": "It primarily maps to union find, within the broader topic of backtracking."
+    },
+    {
+      "question": "Is Synonymous Sentences good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/synonymous-sentences/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the union find approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Synonymous Sentences (#1258) — Medium. Pattern: union find. Complexity: O(p * l * log(p * l)) time / O(p * l) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Synonymous Sentences: show input structure (backtracking), highlight the moving parts of the union find approach, and annotate each step with the maintained invariant and complexity."
+}

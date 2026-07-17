@@ -1,0 +1,164 @@
+{
+  "id": "3661",
+  "number": 3661,
+  "slug": "maximum-walls-destroyed-by-robots",
+  "title": "Maximum Walls Destroyed by Robots",
+  "difficulty": "Hard",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "sort",
+    "dynamic-programming",
+    "two-pointers"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogn + mlogm)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-walls-destroyed-by-robots/",
+  "notes": [
+    "Sort",
+    "DP",
+    "Two Pointers"
+  ],
+  "relatedSlugs": [
+    "maximum-total-damage-with-spell-casting",
+    "subsequence-with-the-minimum-score",
+    "power-of-heroes",
+    "maximum-strictly-increasing-cells-in-a-matrix",
+    "maximize-consecutive-elements-in-an-array-after-modification",
+    "minimum-sum-of-values-by-dividing-array",
+    "maximum-total-reward-using-operations-ii",
+    "maximum-total-reward-using-operations-i"
+  ],
+  "prevSlug": "jump-game-ix",
+  "nextSlug": "filter-characters-by-frequency",
+  "estimatedMinutes": 60,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Maximum Walls Destroyed by Robots?\n\n**Maximum Walls Destroyed by Robots** (LeetCode #3661) is a **Hard** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sort, dynamic programming, and two pointers**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Sort, DP, Two Pointers.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/maximum-walls-destroyed-by-robots/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Maximum Walls Destroyed by Robots\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sort, dynamic programming, and two pointers**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogn + mlogm)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogn + mlogm)** time and **O(n)** space.\n\n### Pattern focus: sort, dynamic programming, and two pointers\n\nUse the pattern as a checklist:\n\n- **sort** — confirm the invariant holds after each step\n- **dynamic programming** — confirm the invariant holds after each step\n- **two pointers** — confirm the invariant holds after each step\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogn + mlogm)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Maximum Walls Destroyed by Robots\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sort, dynamic programming, and two pointers — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal sort, dynamic programming, and two pointers solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `maximum-walls-destroyed-by-robots`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sort, dynamic programming, and two pointers**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Maximum Walls Destroyed by Robots** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "maximum-walls-destroyed-by-robots.cpp",
+      "code": "// Time:  O(nlogn + mlogm)\n// Space: O(n)\n\n// sort, dp, two pointers\nclass Solution {\npublic:\n    int maxWalls(vector<int>& robots, vector<int>& distance, vector<int>& walls) {\n        static const int INF = numeric_limits<int>::max();\n\n        vector<pair<int, int>> x_d;\n        x_d.emplace_back(0, 0);\n        for (int i = 0; i < size(robots); ++i) {\n            x_d.emplace_back(robots[i], distance[i]);\n        }\n        x_d.emplace_back(INF, 0);\n        sort(begin(x_d), end(x_d), [](const auto& a, const auto& b) {\n          return a.first < b.first;\n        });\n        sort(begin(walls), end(walls));\n        int left0 = 0, left1 = 0, right = 0, curr = 0;\n        vector<int> dp(2), new_dp(2);\n        for (int i = 1; i + 1 < size(x_d); ++i) {\n            for (; curr < size(walls) && walls[curr] < x_d[i].first; ++curr);\n            const auto& r = min(x_d[i].first + x_d[i].second, x_d[i + 1].first - 1);\n            for (; right < size(walls) && walls[right] <= r; ++right);\n            new_dp[1] = max(dp[0], dp[1]) + (right - curr);\n            if (curr < size(walls) && walls[curr] == x_d[i].first) {\n                ++curr;\n            }\n            const auto& l0 = max(x_d[i].first - x_d[i].second, x_d[i - 1].first + 1);\n            for (; left0 < size(walls) && walls[left0] < l0; ++left0);\n            const auto& l1 = max(\n                min(x_d[i - 1].first + x_d[i - 1].second, x_d[i].first - 1) + 1,\n                max(x_d[i].first - x_d[i].second, x_d[i - 1].first + 1)\n            );\n            for (; left1 < size(walls) && walls[left1] < l1; ++left1);\n            new_dp[0] = max(dp[0] + (curr - left0), dp[1] + (curr - left1));\n            swap(dp, new_dp);\n        }\n        return max(dp[0], dp[1]);\n    }\n};\n",
+      "sourcePath": "C++/maximum-walls-destroyed-by-robots.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "maximum-walls-destroyed-by-robots.py",
+      "code": "# Time:  O(nlogn + mlogm)\n# Space: O(n)\n\n# sort, dp, two pointers\nclass Solution(object):\n    def maxWalls(self, robots, distance, walls):\n        \"\"\"\n        :type robots: List[int]\n        :type distance: List[int]\n        :type walls: List[int]\n        :rtype: int\n        \"\"\"\n        x_d = [(0, 0)]+sorted(zip(robots, distance), key=lambda x: x[0])+[(float(\"inf\"), 0)]\n        walls.sort()\n        left0 = left1 = right = curr = 0\n        dp, new_dp = [0]*2, [0]*2\n        for i in xrange(1, len(x_d)-1):\n            while curr < len(walls) and walls[curr] < x_d[i][0]:\n                curr += 1\n            r = min(x_d[i][0]+x_d[i][1], x_d[i+1][0]-1)\n            while right < len(walls) and walls[right] <= r:\n                right += 1\n            new_dp[1] = max(dp[0], dp[1])+(right-curr)\n            if curr < len(walls) and walls[curr] == x_d[i][0]:\n                curr += 1\n            l0 = max(x_d[i][0]-x_d[i][1], x_d[i-1][0]+1)\n            while left0 < len(walls) and walls[left0] < l0:\n                left0 += 1\n            l1 = max(min(x_d[i-1][0]+x_d[i-1][1], x_d[i][0]-1)+1,\n                     max(x_d[i][0]-x_d[i][1], x_d[i-1][0]+1))\n            while left1 < len(walls) and walls[left1] < l1:\n                left1 += 1\n            new_dp[0] = max(dp[0]+(curr-left0), dp[1]+(curr-left1))\n            dp, new_dp = new_dp, dp\n        return max(dp[0], dp[1])\n",
+      "sourcePath": "Python/maximum-walls-destroyed-by-robots.py"
+    }
+  },
+  "seo": {
+    "title": "Maximum Walls Destroyed by Robots Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Maximum Walls Destroyed by Robots (LeetCode #3661). Pattern: sort. Time O(nlogn + mlogm), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Maximum Walls Destroyed by Robots",
+      "Maximum Walls Destroyed by Robots solution",
+      "Maximum Walls Destroyed by Robots leetcode",
+      "dynamic-programming",
+      "sort",
+      "dynamic-programming",
+      "two-pointers",
+      "hard"
+    ],
+    "canonicalPath": "/problems/maximum-walls-destroyed-by-robots"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Maximum Walls Destroyed by Robots?",
+      "answer": "The reference solutions aim for O(nlogn + mlogm) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Maximum Walls Destroyed by Robots use?",
+      "answer": "It primarily maps to sort, dynamic programming, and two pointers, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Maximum Walls Destroyed by Robots good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/maximum-walls-destroyed-by-robots/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sort, dynamic programming, and two pointers approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Maximum Walls Destroyed by Robots (#3661) — Hard. Pattern: sort, dynamic programming, and two pointers. Complexity: O(nlogn + mlogm) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Maximum Walls Destroyed by Robots: show input structure (dynamic programming), highlight the moving parts of the sort, dynamic programming, and two pointers approach, and annotate each step with the maintained invariant and complexity."
+}

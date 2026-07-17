@@ -1,0 +1,40 @@
+{
+  "slug": "hard-merge-sort-problems",
+  "path": "/explore/hard-merge-sort-problems",
+  "h1": "Hard Merge Sort Problems",
+  "intro": "5 hard problems that drill the Merge Sort pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "count-of-smaller-numbers-after-self",
+    "create-sorted-array-through-instructions",
+    "number-of-pairs-satisfying-inequality",
+    "beautiful-pairs",
+    "count-nodes-that-are-great-enough"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice hard Merge Sort problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/merge-sort",
+      "label": "Merge Sort pattern"
+    },
+    {
+      "href": "/difficulty/hard",
+      "label": "All Hard problems"
+    }
+  ],
+  "seo": {
+    "title": "Hard Merge Sort Problems | AlgoForge",
+    "description": "Practice hard Merge Sort LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "hard Merge Sort",
+      "Merge Sort problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/hard-merge-sort-problems"
+  },
+  "kind": "difficulty-pattern"
+}

@@ -1,0 +1,166 @@
+{
+  "id": "3104",
+  "number": 3104,
+  "slug": "find-longest-self-contained-substring",
+  "title": "Find Longest Self-Contained Substring",
+  "difficulty": "Hard",
+  "topics": [
+    "binary-search"
+  ],
+  "patterns": [
+    "two-pointers",
+    "hash-map",
+    "binary-search"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n + 26^3 * logn)",
+  "spaceComplexity": "O(n)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/find-longest-self-contained-substring/",
+  "notes": [
+    "Brute Force",
+    "Freq Table",
+    "Two Pointers",
+    "Hash Table",
+    "Binary Search"
+  ],
+  "relatedSlugs": [
+    "find-the-distance-value-between-two-arrays",
+    "find-the-median-of-the-uniqueness-array",
+    "median-of-two-sorted-arrays",
+    "find-minimum-in-rotated-sorted-array-ii",
+    "smallest-rectangle-enclosing-black-pixels",
+    "russian-doll-envelopes",
+    "max-sum-of-sub-matrix-no-larger-than-k",
+    "split-array-largest-sum"
+  ],
+  "prevSlug": "find-trending-hashtags-ii",
+  "nextSlug": "longest-strictly-increasing-or-strictly-decreasing-subarray",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Find Longest Self-Contained Substring?\n\n**Find Longest Self-Contained Substring** (LeetCode #3104) is a **Hard** problem that primarily trains **binary search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **two pointers, hash map, and binary search**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Brute Force, Freq Table, Two Pointers, Hash Table.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/find-longest-self-contained-substring/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Find Longest Self-Contained Substring\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **two pointers, hash map, and binary search**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n + 26^3 * logn)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n + 26^3 * logn)** time and **O(n)** space.\n\n### Pattern focus: two pointers, hash map, and binary search\n\nUse the pattern as a checklist:\n\n- **two pointers** — confirm the invariant holds after each step\n- **hash map** — confirm the invariant holds after each step\n- **binary search** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n + 26^3 * logn)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Find Longest Self-Contained Substring\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for two pointers, hash map, and binary search — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **two pointers, hash map, and binary search**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **binary search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Find Longest Self-Contained Substring** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **binary search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "find-longest-self-contained-substring.cpp",
+      "code": "// Time:  O(n + 26^3 * logn)\n// Space: O(n)\n\n// hash table, binary search\nclass Solution {\npublic:\n    int maxSubstringLength(string s) {\n        vector<vector<int>> idxs(26);\n        for (int i = 0; i < size(s); ++i) {\n            idxs[s[i] - 'a'].emplace_back(i);\n        }\n        const auto& check = [&](int left, int right) {\n            for (const auto& x : idxs) {\n                if (empty(x) || x.back() < left || x[0] > right || (left <= x[0] && x.back() <= right)) {\n                    continue;\n                }\n                const int i = distance(cbegin(x), lower_bound(cbegin(x), cend(x), left));\n                if (i != size(x) && x[i] <= right) {\n                    return false;\n                }\n            }\n            return true;\n        };\n\n        int result = -1;\n        for (const auto& x : idxs) {\n            if (empty(x)) {\n                continue;\n            }\n            const int left = x[0];\n            for (const auto& y : idxs) {\n                if (empty(y)) {\n                    continue;\n                }\n                const int right = y.back();\n                if (left <= right && result < right - left + 1 && right - left + 1 != size(s) && check(left, right)) {\n                    result = right - left + 1;\n                }\n            }\n        }\n        return result;\n    }\n};\n\n// Time:  O(n + 26^3 * logn)\n// Space: O(n)\n// hash table, binary search\nclass Solution2 {\npublic:\n    int maxSubstringLength(string s) {\n        vector<vector<int>> idxs(26);\n        for (int i = 0; i < size(s); ++i) {\n            idxs[s[i] - 'a'].emplace_back(i);\n        }\n        const auto& check = [&](int left, int right) {\n            for (const auto& x : idxs) {\n                if (empty(x)) {\n                    continue;\n                }\n                const int l = distance(cbegin(x), lower_bound(cbegin(x), cend(x), left));\n                const int r = distance(cbegin(x), upper_bound(cbegin(x), cend(x), right)) - 1;\n                if (!(r - l + 1 == size(x) || r - l + 1 == 0)) {\n                    return false;\n                }\n            }\n            return true;\n        };\n\n        int result = -1;\n        for (const auto& x : idxs) {\n            if (empty(x)) {\n                continue;\n            }\n            const int left = x[0];\n            for (const auto& y : idxs) {\n                if (empty(y)) {\n                    continue;\n                }\n                const int right = y.back();\n                if (left <= right && right - left + 1 != size(s) && check(left, right)) {\n                    result = max(result, right - left + 1);\n                }\n            }\n        }\n        return result;\n    }\n};\n\n// Time:  O(26 * n)\n// Space: O(n)\n// freq table, two pointers\nclass Solution3 {\npublic:\n    int maxSubstringLength(string s) {\n        vector<int> cnt(26);\n        for (const auto& x : s) {\n            ++cnt[x - 'a'];\n        }\n        const auto& update = [&](auto& cnt2, char x, int d, int& distinct, int& valid) {\n            const int k = x - 'a';\n            if (cnt2[k] == cnt[k]) {\n                --valid;\n            }\n            if (cnt2[k] == 0) {\n                ++distinct;\n            }\n            cnt2[k] += d;\n            if (cnt2[k] == 0) {\n                --distinct;\n            }\n            if (cnt2[k] == cnt[k]) {\n                ++valid;\n            }\n         };\n\n        const int total = accumulate(cbegin(cnt), cend(cnt), 0, [](const int accu, const int x) {\n            return accu + (x != 0 ? 1 : 0);\n        });\n        int result = -1;\n        for (int l = 1; l < total; ++l) {\n            vector<int> cnt2(26);\n            for (int right = 0, left = 0, distinct = 0, valid = 0; right < size(s); ++right) {\n                update(cnt2, s[right], +1, distinct, valid);\n                while (distinct == l + 1) {\n                    update(cnt2, s[left++], -1, distinct, valid);\n                }\n                if (valid == l) {\n                    result = max(result, right - left + 1);\n                }\n            }\n        }\n        return result;\n    }\n};\n\n// Time:  O(26^2 * n)\n// Space: O(26)\n// hash table, brute force\nclass Solution5 {\npublic:\n    int maxSubstringLength(string s) {\n        vector<int> left(26, -1), right(26, -1);\n        for (int i = 0; i < size(s); ++i) {\n            const int x = s[i] - 'a';\n            if (left[x] == -1) {\n                left[x] = i;\n            }\n            right[x] = i;\n        }\n        const auto& check = [&](int l, int r) {\n            for (int i = l; i <= r; ++i) {\n                const int x = s[i] - 'a';\n                if (!(l <= left[x] && right[x] <= r))  {\n                    return false;\n                }\n            }\n            return true;\n        };\n\n        int result = -1;\n        for (const auto& l : left) {\n            if (l == -1) {\n                continue;\n            }\n            for (const auto& r : right) {\n                if (r == -1) {\n                    continue;\n                }\n                if (l <= r && result < r - l + 1 && r - l + 1 != size(s) && check(l, r)) {\n                    result = r - l + 1;\n                }\n            }\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/find-longest-self-contained-substring.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "find-longest-self-contained-substring.py",
+      "code": "# Time:  O(n + 26^3 * logn)\n# Space: O(n)\n\nimport bisect\n\n\n# hash table, binary search\nclass Solution(object):\n    def maxSubstringLength(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        def check(left, right):\n            for x in idxs:\n                if not x or x[-1] < left or x[0] > right or (left <= x[0] and x[-1] <= right):\n                    continue\n                i = bisect.bisect_left(x, left)\n                if i != len(x) and x[i] <= right:\n                    return False\n            return True\n\n        idxs = [[] for _ in xrange(26)]\n        for i, x in enumerate(s):\n            idxs[ord(x)-ord('a')].append(i)\n        result = -1\n        for x in idxs:\n            if not x:\n                continue\n            left = x[0]\n            for y in idxs:\n                if not y:\n                    continue\n                right = y[-1]\n                if left <= right and result < right-left+1 != len(s) and check(left, right):\n                    result = right-left+1\n        return result\n\n\n# Time:  O(n + 26^3 * logn)\n# Space: O(n)\nimport bisect\n\n\n# hash table, binary search\nclass Solution2(object):\n    def maxSubstringLength(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        def check(left, right):\n            for x in idxs:\n                if not x:\n                    continue\n                l = bisect.bisect_left(x, left)\n                r = bisect.bisect_right(x, right)-1\n                if not (r-l+1 == len(x) or r-l+1 == 0):\n                    return False\n            return True\n\n        idxs = [[] for _ in xrange(26)]\n        for i, x in enumerate(s):\n            idxs[ord(x)-ord('a')].append(i)\n        result = -1\n        for x in idxs:\n            if not x:\n                continue\n            left = x[0]\n            for y in idxs:\n                if not y:\n                    continue\n                right = y[-1]\n                if left <= right and right-left+1 != len(s) and check(left, right):\n                    result = max(result, right-left+1)\n        return result\n\n\n# Time:  O(26 * n)\n# Space: O(26)\n# freq table, two pointers\nclass Solution3(object):\n    def maxSubstringLength(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        def update(x, d, distinct, valid):\n            x = ord(x)-ord('a')\n            if cnt2[x] == cnt[x]:\n                valid -= 1\n            if cnt2[x] == 0:\n                distinct += 1\n            cnt2[x] += d\n            if cnt2[x] == 0:\n                distinct -= 1\n            if cnt2[x] == cnt[x]:\n                valid += 1\n            return distinct, valid\n                \n        cnt = [0]*26\n        for x in s:\n            cnt[ord(x)-ord('a')] += 1\n        result = -1\n        for l in xrange(1, sum(x != 0 for x in cnt)):\n            cnt2 = [0]*26\n            left = distinct = valid = 0\n            for right in xrange(len(s)):\n                distinct, valid = update(s[right], +1, distinct, valid)\n                while distinct == l+1:\n                    distinct, valid = update(s[left], -1, distinct, valid)\n                    left += 1\n                if valid == l:\n                    result = max(result, right-left+1)\n        return result\n\n\n# Time:  O(26^2 * n)\n# Space: O(26)\n# hash table, brute force\nclass Solution5(object):\n    def maxSubstringLength(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        def check(l, r):\n            return all(l <= left[ord(s[i])-ord('a')] and right[ord(s[i])-ord('a')] <= r for i in xrange(l, r+1))\n\n        left, right = [-1]*26, [-1]*26\n        for i, x in enumerate(s):\n            x = ord(x)-ord('a')\n            if left[x] == -1:\n                left[x] = i\n            right[x] = i\n        result = -1\n        for l in left:\n            if l == -1:\n                continue\n            for r in right:\n                if r == -1:\n                    continue\n                if l <= r and result < r-l+1 != len(s) and check(l, r):\n                    result = r-l+1\n        return result\n",
+      "sourcePath": "Python/find-longest-self-contained-substring.py"
+    }
+  },
+  "seo": {
+    "title": "Find Longest Self-Contained Substring Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Find Longest Self-Contained Substring (LeetCode #3104). Pattern: two pointers. Time O(n + 26^3 * logn), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Find Longest Self-Contained Substring",
+      "Find Longest Self-Contained Substring solution",
+      "Find Longest Self-Contained Substring leetcode",
+      "binary-search",
+      "two-pointers",
+      "hash-map",
+      "binary-search",
+      "hard"
+    ],
+    "canonicalPath": "/problems/find-longest-self-contained-substring"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Find Longest Self-Contained Substring?",
+      "answer": "The reference solutions aim for O(n + 26^3 * logn) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Find Longest Self-Contained Substring use?",
+      "answer": "It primarily maps to two pointers, hash map, and binary search, within the broader topic of binary search."
+    },
+    {
+      "question": "Is Find Longest Self-Contained Substring good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/find-longest-self-contained-substring/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the two pointers, hash map, and binary search approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Find Longest Self-Contained Substring (#3104) — Hard. Pattern: two pointers, hash map, and binary search. Complexity: O(n + 26^3 * logn) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Find Longest Self-Contained Substring: show input structure (binary search), highlight the moving parts of the two pointers, hash map, and binary search approach, and annotate each step with the maintained invariant and complexity."
+}

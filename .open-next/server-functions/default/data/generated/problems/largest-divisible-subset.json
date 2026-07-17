@@ -1,0 +1,156 @@
+{
+  "id": "368",
+  "number": 368,
+  "slug": "largest-divisible-subset",
+  "title": "Largest Divisible Subset",
+  "difficulty": "Medium",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dynamic-programming"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n^2)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/largest-divisible-subset/",
+  "notes": [],
+  "relatedSlugs": [
+    "unique-paths",
+    "unique-paths-ii",
+    "minimum-path-sum",
+    "decode-ways",
+    "unique-binary-search-trees",
+    "triangle",
+    "word-break",
+    "maximum-product-subarray"
+  ],
+  "prevSlug": "valid-perfect-square",
+  "nextSlug": "plus-one-linked-list",
+  "estimatedMinutes": 45,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Largest Divisible Subset?\n\n**Largest Divisible Subset** (LeetCode #368) is a **Medium** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/largest-divisible-subset/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Largest Divisible Subset\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n^2)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n^2)** time and **O(n)** space.\n\n### Pattern focus: dynamic programming\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n^2)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Largest Divisible Subset\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal dynamic programming solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `largest-divisible-subset`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Largest Divisible Subset** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "largest-divisible-subset.cpp",
+      "code": "// Time:  O(n^2)\n// Space: O(n)\n\nclass Solution {\npublic:\n    vector<int> largestDivisibleSubset(vector<int>& nums) {\n        if (nums.empty()) {\n            return {};\n        }\n\n        sort(nums.begin(), nums.end());\n        // dp[i]: the size of the largest distinct subset of\n        //        the first i+1 numbers including nums[i]\n        vector<int> dp(nums.size() , 1);\n        vector<int> prev(nums.size(), -1);\n        int largest_idx = 0;\n        for (int i = 0; i < nums.size(); ++i) {\n            for (int j = 0; j < i; ++j) {\n                if (nums[i] % nums[j] == 0) {\n                    if (dp[i] < dp[j] + 1) {\n                        dp[i] = dp[j] + 1;\n                        prev[i] = j;\n                    }\n                }\n            }\n            if (dp[largest_idx] < dp[i]) {\n                largest_idx = i;\n            }\n        }\n\n        vector<int> result;\n        for (int i = largest_idx; i != -1; i = prev[i]) {\n            result.emplace_back(nums[i]);\n        }\n        reverse(result.begin(), result.end());\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/largest-divisible-subset.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "largest-divisible-subset.py",
+      "code": "# Time:  O(n^2)\n# Space: O(n)\n\nclass Solution(object):\n    def largestDivisibleSubset(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        if not nums:\n            return []\n\n        nums.sort()\n        dp = [1] * len(nums)\n        prev = [-1] * len(nums)\n        largest_idx = 0\n        for i in xrange(len(nums)):\n            for j in xrange(i):\n                if nums[i] % nums[j] == 0:\n                    if dp[i] < dp[j] + 1:\n                        dp[i] = dp[j] + 1\n                        prev[i] = j\n            if dp[largest_idx] < dp[i]:\n                largest_idx = i\n\n        result = []\n        i = largest_idx\n        while i != -1:\n            result.append(nums[i])\n            i = prev[i]\n        return result[::-1]\n\n",
+      "sourcePath": "Python/largest-divisible-subset.py"
+    }
+  },
+  "seo": {
+    "title": "Largest Divisible Subset Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Largest Divisible Subset (LeetCode #368). Pattern: dynamic programming. Time O(n^2), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Largest Divisible Subset",
+      "Largest Divisible Subset solution",
+      "Largest Divisible Subset leetcode",
+      "dynamic-programming",
+      "dynamic-programming",
+      "medium"
+    ],
+    "canonicalPath": "/problems/largest-divisible-subset"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Largest Divisible Subset?",
+      "answer": "The reference solutions aim for O(n^2) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Largest Divisible Subset use?",
+      "answer": "It primarily maps to dynamic programming, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Largest Divisible Subset good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/largest-divisible-subset/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Largest Divisible Subset (#368) — Medium. Pattern: dynamic programming. Complexity: O(n^2) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Largest Divisible Subset: show input structure (dynamic programming), highlight the moving parts of the dynamic programming approach, and annotate each step with the maintained invariant and complexity."
+}

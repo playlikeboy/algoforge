@@ -1,0 +1,51 @@
+{
+  "slug": "microsoft-string-questions",
+  "path": "/explore/microsoft-string-questions",
+  "h1": "Best String Questions for Microsoft",
+  "intro": "A curated set of 8 String problems frequently useful for Microsoft interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "longest-palindromic-substring",
+    "string-to-integer-atoi",
+    "add-binary",
+    "valid-palindrome",
+    "reverse-words-in-a-string",
+    "compare-version-numbers",
+    "string-compression",
+    "most-common-word"
+  ],
+  "faqs": [
+    {
+      "question": "How many String problems should I do for Microsoft?",
+      "answer": "Quality over quantity: master patterns with 8 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the String topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/microsoft",
+      "label": "Microsoft interview hub"
+    },
+    {
+      "href": "/topics/string",
+      "label": "String problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best String Questions for Microsoft | AlgoForge",
+    "description": "Top String coding interview questions for Microsoft. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Microsoft String questions",
+      "String interview",
+      "Microsoft leetcode"
+    ],
+    "canonicalPath": "/explore/microsoft-string-questions"
+  },
+  "kind": "company-topic"
+}

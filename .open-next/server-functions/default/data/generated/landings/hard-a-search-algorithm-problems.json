@@ -1,0 +1,41 @@
+{
+  "slug": "hard-a-search-algorithm-problems",
+  "path": "/explore/hard-a-search-algorithm-problems",
+  "h1": "Hard A Search Algorithm Problems",
+  "intro": "6 hard problems that drill the A Search Algorithm pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "cut-off-trees-for-golf-event",
+    "sliding-puzzle",
+    "minimum-moves-to-move-a-box-to-their-target-location",
+    "shortest-path-in-a-grid-with-obstacles-elimination",
+    "minimum-cost-to-make-at-least-one-valid-path-in-a-grid",
+    "minimum-obstacle-removal-to-reach-corner"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice hard A Search Algorithm problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/a-search-algorithm",
+      "label": "A Search Algorithm pattern"
+    },
+    {
+      "href": "/difficulty/hard",
+      "label": "All Hard problems"
+    }
+  ],
+  "seo": {
+    "title": "Hard A Search Algorithm Problems | AlgoForge",
+    "description": "Practice hard A Search Algorithm LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "hard A Search Algorithm",
+      "A Search Algorithm problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/hard-a-search-algorithm-problems"
+  },
+  "kind": "difficulty-pattern"
+}

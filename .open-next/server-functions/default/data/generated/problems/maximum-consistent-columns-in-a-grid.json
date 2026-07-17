@@ -1,0 +1,170 @@
+{
+  "id": "3989",
+  "number": 3989,
+  "slug": "maximum-consistent-columns-in-a-grid",
+  "title": "Maximum Consistent Columns in a Grid",
+  "difficulty": "Hard",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "sort",
+    "prefix-sum",
+    "binary-search",
+    "dynamic-programming",
+    "bit-manipulation"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(m * n^2 / 64)",
+  "spaceComplexity": "O(n^2 / 64)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-consistent-columns-in-a-grid/",
+  "notes": [
+    "Sort",
+    "Prefix Sum",
+    "Binary Search",
+    "DP",
+    "Bitmasks"
+  ],
+  "relatedSlugs": [
+    "minimum-total-distance-traveled",
+    "maximum-gcd-sum-of-a-subarray",
+    "find-the-minimum-area-to-cover-all-ones-ii",
+    "find-the-maximum-sequence-value-of-array",
+    "subsequence-sum-after-capping-elements",
+    "minimum-cost-to-merge-sorted-lists",
+    "minimum-time-to-kill-all-monsters",
+    "count-increasing-quadruplets"
+  ],
+  "prevSlug": "create-grid-with-exactly-k-paths-i",
+  "nextSlug": "create-grid-with-exactly-k-paths-ii",
+  "estimatedMinutes": 60,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Maximum Consistent Columns in a Grid?\n\n**Maximum Consistent Columns in a Grid** (LeetCode #3989) is a **Hard** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sort, prefix sum, binary search, dynamic programming, and bit manipulation**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Sort, Prefix Sum, Binary Search, DP.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/maximum-consistent-columns-in-a-grid/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Maximum Consistent Columns in a Grid\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sort, prefix sum, binary search, dynamic programming, and bit manipulation**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(m * n^2 / 64)) and **space** (O(n^2 / 64)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(m * n^2 / 64)** time and **O(n^2 / 64)** space.\n\n### Pattern focus: sort, prefix sum, binary search, dynamic programming, and bit manipulation\n\nUse the pattern as a checklist:\n\n- **sort** — confirm the invariant holds after each step\n- **prefix sum** — confirm the invariant holds after each step\n- **binary search** — confirm the invariant holds after each step\n- **dynamic programming** — confirm the invariant holds after each step\n- **bit manipulation** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(m * n^2 / 64)** |\n| Space | **O(n^2 / 64)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Maximum Consistent Columns in a Grid\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sort, prefix sum, binary search, dynamic programming, and bit manipulation — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sort, prefix sum, binary search, dynamic programming, and bit manipulation**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Maximum Consistent Columns in a Grid** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "maximum-consistent-columns-in-a-grid.cpp",
+      "code": "// Time:  O(m * nlogn + m * n^2 / 64 + n^2 / 64 + n^2) = O(m * n^2 / 64)\n// Space: O(n^2 / 64)\n\n// sort, prefix sum, binary search, dp, bitmasks\nclass Solution {\npublic:\n    int maxConsistentColumns(vector<vector<int>>& grid, int limit) {\n        static const int N = 250;\n\n        vector<bitset<N>> lookup(size(grid[0]));\n        for (auto& x : lookup) {\n            x.set();\n        }\n        for (int i = 0; i < size(grid); ++i) {\n            vector<int> idxs(size(grid[0]));\n            iota(begin(idxs), end(idxs), 0);\n            sort(begin(idxs), end(idxs), [&](const auto& a, const auto& b){\n                return grid[i][a] < grid[i][b];\n            });\n            vector<int> arr(size(grid[0]));\n            for (int j = 0; j < size(grid[0]); ++j) {\n                arr[j] = grid[i][idxs[j]];\n            }\n            vector<bitset<N>> prefix(size(grid[0]) + 1);\n            for (int j = 0; j < size(grid[0]); ++j) {\n                prefix[j + 1] = prefix[j];\n                prefix[j + 1][idxs[j]] = 1;\n            }\n            for (int j = 0; j < size(grid[0]); ++j) {\n                lookup[j] &= prefix[distance(begin(arr), upper_bound(begin(arr), end(arr), grid[i][j] + limit))]\n                           ^ prefix[distance(begin(arr), lower_bound(begin(arr), end(arr), grid[i][j] - limit))];\n            }\n        }\n        vector<int> dp(size(grid[0]));\n        for (int j = 0; j < size(grid[0]); ++j) {\n            int mx = 0;\n            for (int k = lookup[j]._Find_first(); k < j; k = lookup[j]._Find_next(k)) {\n                mx = max(mx, dp[k]);\n            }\n            dp[j] = mx + 1;\n        }\n        return ranges::max(dp);\n    }\n};\n\n// Time:  O(m * n^2)\n// Space: O(n)\n// dp\nclass Solution2 {\npublic:\n    int maxConsistentColumns(vector<vector<int>>& grid, int limit) {\n        vector<int> dp(size(grid[0]), 1);\n        for (int i = 0; i < size(grid[0]); ++i) {\n            for (int j = 0; j < i; ++j) {\n                if (dp[j] + 1 <= dp[i]) {\n                    continue;\n                }\n                if (all_of(cbegin(grid), cend(grid), [&](const auto& row) {\n                    return abs(row[i] - row[j]) <= limit;\n                })) {\n                    dp[i] = dp[j] + 1;\n                }\n            }\n        }\n        return ranges::max(dp);\n    }\n};\n",
+      "sourcePath": "C++/maximum-consistent-columns-in-a-grid.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "maximum-consistent-columns-in-a-grid.py",
+      "code": "# Time:  O(m * nlogn + m * n^2 / 64 + n^3 / 64 + n^2) = O(max(m, n) * n^2 / 64)\n# Space: O(n^2 / 64)\n\nimport bisect\n\n\n# sort, prefix sum, binary search, dp, bitmasks\nclass Solution(object):\n    def maxConsistentColumns(self, grid, limit):\n        lookup = [(1<<len(grid[0]))-1]*len(grid[0])\n        for i in xrange(len(grid)):\n            idxs = sorted(xrange(len(grid[0])), key=lambda j: grid[i][j])\n            arr = [grid[i][j] for j in idxs]\n            prefix = [0]*(len(grid[0])+1) \n            for j in xrange(len(grid[0])):\n                prefix[j+1] = prefix[j]|(1<<idxs[j])\n            for j in xrange(len(grid[0])):\n                lookup[j] &= prefix[bisect.bisect_right(arr, grid[i][j]+limit)]^prefix[bisect.bisect_left(arr, grid[i][j]-limit)]\n        dp = [1]*len(grid[0])\n        for j in xrange(len(grid[0])):\n            mx = 0\n            mask = lookup[j]&((1<<j)-1)\n            while mask:\n                k = (mask&-mask).bit_length()-1\n                mx = max(mx, dp[k])\n                mask ^= (mask&-mask)\n            dp[j] = mx+1\n        return max(dp)\n\n\n# Time:  O(m * n^2)\n# Space: O(n)\n# dp\nclass Solution2(object):\n    def maxConsistentColumns(self, grid, limit):\n        \"\"\"\n        :type grid: List[List[int]]\n        :type limit: int\n        :rtype: int\n        \"\"\"\n        dp = [1]*len(grid[0])\n        for i in xrange(len(grid[0])):\n            for j in xrange(i):\n                if dp[j]+1 <= dp[i]:\n                    continue\n                if all(abs(row[i]-row[j]) <= limit for row in grid):\n                    dp[i] = dp[j]+1\n        return max(dp)\n",
+      "sourcePath": "Python/maximum-consistent-columns-in-a-grid.py"
+    }
+  },
+  "seo": {
+    "title": "Maximum Consistent Columns in a Grid Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Maximum Consistent Columns in a Grid (LeetCode #3989). Pattern: sort. Time O(m * n^2 / 64), space O(n^2 / 64). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Maximum Consistent Columns in a Grid",
+      "Maximum Consistent Columns in a Grid solution",
+      "Maximum Consistent Columns in a Grid leetcode",
+      "dynamic-programming",
+      "sort",
+      "prefix-sum",
+      "binary-search",
+      "dynamic-programming",
+      "bit-manipulation",
+      "hard"
+    ],
+    "canonicalPath": "/problems/maximum-consistent-columns-in-a-grid"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Maximum Consistent Columns in a Grid?",
+      "answer": "The reference solutions aim for O(m * n^2 / 64) time and O(n^2 / 64) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Maximum Consistent Columns in a Grid use?",
+      "answer": "It primarily maps to sort, prefix sum, binary search, dynamic programming, and bit manipulation, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Maximum Consistent Columns in a Grid good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/maximum-consistent-columns-in-a-grid/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sort, prefix sum, binary search, dynamic programming, and bit manipulation approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Maximum Consistent Columns in a Grid (#3989) — Hard. Pattern: sort, prefix sum, binary search, dynamic programming, and bit manipulation. Complexity: O(m * n^2 / 64) time / O(n^2 / 64) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Maximum Consistent Columns in a Grid: show input structure (dynamic programming), highlight the moving parts of the sort, prefix sum, binary search, dynamic programming, and bit manipulation approach, and annotate each step with the maintained invariant and complexity."
+}

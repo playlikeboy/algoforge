@@ -1,0 +1,67 @@
+{
+  "slug": "amazon-dynamic-programming-questions",
+  "path": "/explore/amazon-dynamic-programming-questions",
+  "h1": "Best Dynamic Programming Questions for Amazon",
+  "intro": "A curated set of 24 Dynamic Programming problems frequently useful for Amazon interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "maximum-subarray",
+    "unique-paths",
+    "unique-paths-ii",
+    "climbing-stairs",
+    "edit-distance",
+    "decode-ways",
+    "unique-binary-search-trees",
+    "interleaving-string",
+    "distinct-subsequences",
+    "triangle",
+    "best-time-to-buy-and-sell-stock-iii",
+    "palindrome-partitioning-ii",
+    "word-break",
+    "maximum-product-subarray",
+    "best-time-to-buy-and-sell-stock-iv",
+    "house-robber",
+    "maximal-square",
+    "range-sum-query-2d-immutable",
+    "coin-change",
+    "number-of-longest-increasing-subsequence",
+    "knight-probability-in-chessboard",
+    "min-cost-climbing-stairs",
+    "minimum-falling-path-sum",
+    "minimum-cost-for-tickets"
+  ],
+  "faqs": [
+    {
+      "question": "How many Dynamic Programming problems should I do for Amazon?",
+      "answer": "Quality over quantity: master patterns with 15 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Dynamic Programming topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/amazon",
+      "label": "Amazon interview hub"
+    },
+    {
+      "href": "/topics/dynamic-programming",
+      "label": "Dynamic Programming problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Dynamic Programming Questions for Amazon | AlgoForge",
+    "description": "Top Dynamic Programming coding interview questions for Amazon. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Amazon Dynamic Programming questions",
+      "Dynamic Programming interview",
+      "Amazon leetcode"
+    ],
+    "canonicalPath": "/explore/amazon-dynamic-programming-questions"
+  },
+  "kind": "company-topic"
+}

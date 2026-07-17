@@ -1,0 +1,153 @@
+{
+  "id": "556",
+  "number": 556,
+  "slug": "next-greater-element-iii",
+  "title": "Next Greater Element III",
+  "difficulty": "Medium",
+  "topics": [
+    "string"
+  ],
+  "patterns": [],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(1)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/next-greater-element-iii/",
+  "notes": [],
+  "relatedSlugs": [
+    "longest-palindromic-substring",
+    "multiply-strings",
+    "reverse-words-in-a-string",
+    "one-edit-distance",
+    "reverse-words-in-a-string-ii",
+    "encode-and-decode-strings",
+    "additive-number",
+    "validate-ip-address"
+  ],
+  "prevSlug": "split-concatenated-strings",
+  "nextSlug": "reverse-words-in-a-string-iii",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Next Greater Element III?\n\n**Next Greater Element III** (LeetCode #556) is a **Medium** problem that primarily trains **string**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/next-greater-element-iii/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Next Greater Element III\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(1)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(1)** time and **O(1)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(1)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Next Greater Element III\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal general problem-solving solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `next-greater-element-iii`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **string**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Next Greater Element III** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **string**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "next-greater-element-iii.cpp",
+      "code": "// Time:  O(logn) = O(1)\n// Space: O(logn) = O(1)\n\nclass Solution {\npublic:\n    int nextGreaterElement(int n) {\n        auto digits = to_string(n);\n        nextPermutation(begin(digits), end(digits));  // self-implemented next_permutattion()\n        auto result = stoll(digits);\n        return (result > numeric_limits<int>::max() || result <= n) ? -1 : result;\n    }\n\nprivate:\n    template<typename BidiIt>\n    bool nextPermutation(BidiIt begin, BidiIt end) {\n        const auto rbegin = reverse_iterator<BidiIt>(end);\n        const auto rend = reverse_iterator<BidiIt>(begin);\n        \n        // Find the first element (pivot) which is less than its successor.\n        auto pivot = next(rbegin);\n        while (pivot != rend && *pivot >= *prev(pivot)) {\n            ++pivot;\n        }\n\n        bool is_greater = true;\n        if (pivot != rend) {\n            // Find the number which is greater than pivot, and swap it with pivot\n            auto change = find_if(rbegin, pivot, bind1st(less<int>(), *pivot));\n            swap(*change, *pivot);\n        } else {\n            is_greater = false;\n        }\n        \n        // Make the sequence after pivot non-descending\n        reverse(rbegin, pivot);\n        \n        return is_greater;\n    }\n};\n",
+      "sourcePath": "C++/next-greater-element-iii.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "next-greater-element-iii.py",
+      "code": "# Time:  O(logn) = O(1)\n# Space: O(logn) = O(1)\n\n\nclass Solution(object):\n    def nextGreaterElement(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        digits = map(int, list(str(n)))\n        k, l = -1, 0\n        for i in xrange(len(digits) - 1):\n            if digits[i] < digits[i + 1]:\n                k = i\n\n        if k == -1:\n            digits.reverse()\n            return -1\n\n        for i in xrange(k + 1, len(digits)):\n            if digits[i] > digits[k]:\n                l = i\n\n        digits[k], digits[l] = digits[l], digits[k]\n        digits[k + 1:] = digits[:k:-1]\n        result = int(\"\".join(map(str, digits)))\n        return -1 if result >= 0x7FFFFFFF else result\n\n",
+      "sourcePath": "Python/next-greater-element-iii.py"
+    }
+  },
+  "seo": {
+    "title": "Next Greater Element III Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Next Greater Element III (LeetCode #556). Pattern: algorithms. Time O(1), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Next Greater Element III",
+      "Next Greater Element III solution",
+      "Next Greater Element III leetcode",
+      "string",
+      "medium"
+    ],
+    "canonicalPath": "/problems/next-greater-element-iii"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Next Greater Element III?",
+      "answer": "The reference solutions aim for O(1) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Next Greater Element III use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of string."
+    },
+    {
+      "question": "Is Next Greater Element III good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/next-greater-element-iii/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Next Greater Element III (#556) — Medium. Pattern: general problem-solving. Complexity: O(1) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Next Greater Element III: show input structure (string), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

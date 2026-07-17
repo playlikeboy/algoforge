@@ -1,0 +1,162 @@
+{
+  "id": "3869",
+  "number": 3869,
+  "slug": "count-fancy-numbers-in-a-range",
+  "title": "Count Fancy Numbers in a Range",
+  "difficulty": "Hard",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "queue-bfs",
+    "dynamic-programming"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(g * d + d^2)",
+  "spaceComplexity": "O(g + d)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/count-fancy-numbers-in-a-range/",
+  "notes": [
+    "BFS",
+    "DP",
+    "Principle of Inclusion and Exclusion"
+  ],
+  "relatedSlugs": [
+    "jump-game-vii",
+    "maximum-number-of-moves-in-a-grid",
+    "maximum-cost-of-trip-with-k-highways",
+    "maximum-number-of-moves-to-kill-all-pawns",
+    "minimum-removals-to-achieve-target-xor",
+    "regular-expression-matching",
+    "edit-distance",
+    "scramble-string"
+  ],
+  "prevSlug": "minimum-cost-to-equalize-arrays-using-swaps",
+  "nextSlug": "count-commas-in-range",
+  "estimatedMinutes": 60,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Count Fancy Numbers in a Range?\n\n**Count Fancy Numbers in a Range** (LeetCode #3869) is a **Hard** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **queue bfs and dynamic programming**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: BFS, DP, Principle of Inclusion and Exclusion.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/count-fancy-numbers-in-a-range/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Count Fancy Numbers in a Range\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **queue bfs and dynamic programming**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(g * d + d^2)) and **space** (O(g + d)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(g * d + d^2)** time and **O(g + d)** space.\n\n### Pattern focus: queue bfs and dynamic programming\n\nUse the pattern as a checklist:\n\n- **queue bfs** — confirm the invariant holds after each step\n- **dynamic programming** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(g * d + d^2)** |\n| Space | **O(g + d)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Count Fancy Numbers in a Range\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for queue bfs and dynamic programming — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **queue bfs and dynamic programming**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Count Fancy Numbers in a Range** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "count-fancy-numbers-in-a-range.cpp",
+      "code": "// Time:  O(dlogd + g + d^2 + g * d) = O(g * d + d^2), d = logr, g = len(good)\n// Space: O(g + d)\n\n// bfs, dp, principle of inclusion and exclusion\nclass Solution {\npublic:\n    long long countFancy(long long l, long long r) {\n        const auto& count = [&](int64_t x) {\n            const auto& total = [](int64_t n) { // Time: O(logn)\n                int result = 0;\n                for (; n; n /= 10) {\n                    result += n % 10;\n                }\n                return result;\n            };\n\n            const auto& length = [](int64_t n) { // Time: O(logn)\n                int result = 0;\n                for (; n; n /= 10) {\n                    ++result;\n                }\n                return result;\n            };\n\n            const auto& check = [](int n) { // Time: O(logn)\n                bool asc = true, desc = true;\n                for (; n >= 10; n /= 10) {\n                    if (!((n / 10) % 10 < n % 10)) {\n                        asc = false;\n                    }\n                    if (!((n / 10) % 10 > n % 10)) {\n                        desc = false;\n                    }\n                }\n                return asc || desc;\n            };\n\n            const auto& bfs = [](int64_t x) {  // Time: O(g), g = len(result)\n                vector<int64_t> result;\n                for (int i = 1; i <= min(static_cast<int64_t>(9), x); ++i) {\n                    result.emplace_back(i);\n                }\n                for (const auto& diff : {1, -1}) {\n                    vector<int64_t> q;\n                    for (int i = 1; i <= min(static_cast<int64_t>(9), x); ++i) {\n                        q.emplace_back(i);\n                    }\n                    while (!empty(q)) {\n                        vector<int64_t> new_q;\n                        for (const auto& u : q) {\n                            const auto& curr = u % 10;\n                            for (int d = curr + diff; 0 <= d && d <= 9; d += diff) {\n                                const auto& v = u * 10 + d;\n                                if (v <= x) {\n                                    new_q.emplace_back(v);\n                                    result.emplace_back(v);\n                                }\n                            }\n                        }\n                        q = move(new_q);\n                    }\n                }\n                return result;\n            };\n\n            vector<bool> lookup(length(x) * 9 + 1);\n            const auto& dp = [&](int64_t x) {  // Time: O(d^2), d = logr\n                const auto& l = length(x);\n                const auto& mx = l * 9;\n                vector<vector<int64_t>> dp(2, vector<int64_t>(mx + 1));  // dp[tight][sum]\n                dp[1][0] = 1;\n                int64_t base = pow(10LL, l - 1);\n                for (int i = 0; i < l; ++i) {\n                    vector<vector<int64_t>> new_dp(2, vector<int64_t>(mx + 1));\n                    const auto& v = (x / base) % 10;\n                    base /= 10;\n                    for (int t = 0; t < 2; ++t) {\n                        for (int s = 0; s <= mx; ++s) {\n                            if (dp[t][s] == 0) {\n                                continue;\n                            }\n                            const auto& bound = (t == 1) ? v : 9;\n                            for (int d = 0; d <= bound; ++d) {\n                                new_dp[t == 1 && d == v][s + d] += dp[t][s];\n                            }\n                        }\n                    }\n                    dp = move(new_dp);\n                };\n\n                int64_t result = 0;\n                for (int i = 0; i <= mx; ++i) {\n                    if (lookup[i]) {\n                        result += dp[0][i] + dp[1][i];\n                    }\n                }\n                return result;\n            };\n    \n            for (int i = 0; i < size(lookup); ++i) {\n                lookup[i] = check(i);\n            }\n            const auto& good = bfs(x);\n            int64_t cnt = 0;\n            for (const auto& x : good) {\n                if (lookup[total(x)]) {\n                    ++cnt;\n                }\n            }\n            return size(good) + dp(x) - cnt;\n        };\n\n        return count(r) - count(l - 1);\n    }\n};\n",
+      "sourcePath": "C++/count-fancy-numbers-in-a-range.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "count-fancy-numbers-in-a-range.py",
+      "code": "# Time:  O(dlogd + g + d^2 + g * d) = O(g * d + d^2), d = logr, g = len(good)\n# Space: O(g + d)\n\n# bfs, dp, principle of inclusion and exclusion\nclass Solution(object):\n    def countFancy(self, l, r):\n        \"\"\"\n        :type l: int\n        :type r: int\n        :rtype: int\n        \"\"\"\n        def count(x):\n            def length(n):  # Time: O(logn)\n                result = 0\n                while n:\n                    result += 1\n                    n //= 10\n                return result\n\n            def total(n):  # Time: O(logn)\n                result = 0\n                while n:\n                    result += i%10\n                    n //= 10\n                return result\n\n            def check(n):  # Time: O(logn)\n                asc = desc = True\n                while n >= 10:\n                    if not (n//10)%10 < n%10:\n                        asc = False\n                    if not (n//10)%10 > n%10:\n                        desc = False\n                    n //= 10\n                return asc or desc\n\n            def bfs(x):  # Time: O(g), g = len(result)\n                result = [i for i in xrange(1, min(9, x)+1)]\n                for diff in (1, -1):\n                    q = []\n                    for i in xrange(1, min(9, x)+1):\n                        q.append(i)\n                    while q:\n                        new_q = []\n                        for u in q:\n                            curr = u%10\n                            d = curr+diff\n                            while 0 <= d <= 9:\n                                v = u*10+d\n                                if v <= x:\n                                    new_q.append(v)\n                                    result.append(v)\n                                d += diff\n                        q = new_q\n                return result\n\n            def dp(x):  # Time: O(d^2), d = logr\n                l = length(x)\n                mx = l*9\n                dp = [[0]*(mx+1) for _ in xrange(2)]  # dp[tight][sum]\n                dp[1][0] = 1\n                base = 10**(l-1)\n                for i in xrange(l):\n                    new_dp = [[0]*(mx+1) for _ in xrange(2)]\n                    v = (x//base)%10\n                    base //= 10\n                    for t in xrange(2):\n                        for s in xrange(mx+1):\n                            if dp[t][s] == 0:\n                                continue\n                            for d in xrange((v if t == 1 else 9)+1):\n                                new_dp[t == 1 and d == v][s+d] += dp[t][s]\n                    dp = new_dp\n                return sum(dp[0][i]+dp[1][i] for i in xrange(mx+1) if lookup[i])\n\n            lookup = [check(i) for i in xrange(length(x)*9+1)]\n            good = bfs(x)\n            return len(good)+dp(x)-sum(lookup[total(x)] for x in good)\n\n        return count(r)-count(l-1)\n",
+      "sourcePath": "Python/count-fancy-numbers-in-a-range.py"
+    }
+  },
+  "seo": {
+    "title": "Count Fancy Numbers in a Range Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Count Fancy Numbers in a Range (LeetCode #3869). Pattern: queue bfs. Time O(g * d + d^2), space O(g + d). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Count Fancy Numbers in a Range",
+      "Count Fancy Numbers in a Range solution",
+      "Count Fancy Numbers in a Range leetcode",
+      "dynamic-programming",
+      "queue-bfs",
+      "dynamic-programming",
+      "hard"
+    ],
+    "canonicalPath": "/problems/count-fancy-numbers-in-a-range"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Count Fancy Numbers in a Range?",
+      "answer": "The reference solutions aim for O(g * d + d^2) time and O(g + d) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Count Fancy Numbers in a Range use?",
+      "answer": "It primarily maps to queue bfs and dynamic programming, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Count Fancy Numbers in a Range good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/count-fancy-numbers-in-a-range/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the queue bfs and dynamic programming approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Count Fancy Numbers in a Range (#3869) — Hard. Pattern: queue bfs and dynamic programming. Complexity: O(g * d + d^2) time / O(g + d) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Count Fancy Numbers in a Range: show input structure (dynamic programming), highlight the moving parts of the queue bfs and dynamic programming approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,25 @@
+{
+  "type": "company",
+  "slug": "yelp",
+  "name": "Yelp",
+  "description": "Coding interview preparation for Yelp: high-frequency patterns and problem sets.",
+  "problemCount": 6,
+  "problemSlugs": [
+    "reverse-linked-list",
+    "valid-anagram",
+    "top-k-frequent-elements",
+    "insert-delete-getrandom-o1-duplicates-allowed",
+    "string-compression",
+    "find-the-closest-palindrome"
+  ],
+  "seo": {
+    "title": "Yelp Coding Interview Questions | AlgoForge",
+    "description": "Prepare for Yelp interviews with 6 problems, patterns, and roadmaps.",
+    "keywords": [
+      "Yelp interview questions",
+      "Yelp leetcode",
+      "Yelp oa"
+    ],
+    "canonicalPath": "/companies/yelp"
+  }
+}

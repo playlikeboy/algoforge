@@ -1,0 +1,50 @@
+{
+  "slug": "easy-tree-traversal-problems",
+  "path": "/explore/easy-tree-traversal-problems",
+  "h1": "Easy Tree Traversal Problems",
+  "intro": "15 easy problems that drill the Tree Traversal pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "invert-binary-tree",
+    "lowest-common-ancestor-of-a-binary-search-tree",
+    "closest-binary-search-tree-value",
+    "minimum-absolute-difference-in-bst",
+    "convert-bst-to-greater-tree",
+    "diameter-of-binary-tree",
+    "binary-tree-tilt",
+    "subtree-of-another-tree",
+    "construct-string-from-binary-tree",
+    "merge-two-binary-trees",
+    "average-of-levels-in-binary-tree",
+    "longest-univalue-path",
+    "minimum-distance-between-bst-nodes",
+    "sum-of-root-to-leaf-binary-numbers",
+    "path-in-zigzag-labelled-binary-tree"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice easy Tree Traversal problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/tree-traversal",
+      "label": "Tree Traversal pattern"
+    },
+    {
+      "href": "/difficulty/easy",
+      "label": "All Easy problems"
+    }
+  ],
+  "seo": {
+    "title": "Easy Tree Traversal Problems | AlgoForge",
+    "description": "Practice easy Tree Traversal LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "easy Tree Traversal",
+      "Tree Traversal problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/easy-tree-traversal-problems"
+  },
+  "kind": "difficulty-pattern"
+}

@@ -1,0 +1,159 @@
+{
+  "id": "336",
+  "number": 336,
+  "slug": "palindrome-pairs",
+  "title": "Palindrome Pairs",
+  "difficulty": "Hard",
+  "topics": [
+    "hash-table"
+  ],
+  "patterns": [
+    "hash-map"
+  ],
+  "companies": [
+    "airbnb",
+    "google"
+  ],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n * k^2)",
+  "spaceComplexity": "O(n * k)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/palindrome-pairs/",
+  "notes": [],
+  "relatedSlugs": [
+    "substring-with-concatenation-of-all-words",
+    "minimum-window-substring",
+    "max-points-on-a-line",
+    "longest-substring-with-at-most-two-distinct-characters",
+    "longest-substring-with-at-most-k-distinct-characters",
+    "triples-with-bitwise-and-equal-to-zero",
+    "grid-illumination",
+    "string-transforms-into-another-string"
+  ],
+  "prevSlug": "self-crossing",
+  "nextSlug": "house-robber-iii",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Palindrome Pairs?\n\n**Palindrome Pairs** (LeetCode #336) is a **Hard** problem that primarily trains **hash table**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **hash map**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/palindrome-pairs/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Palindrome Pairs\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **hash map**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n * k^2)) and **space** (O(n * k)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n * k^2)** time and **O(n * k)** space.\n\n### Pattern focus: hash map\n\nUse the pattern as a checklist:\n\n- **hash map** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n * k^2)** |\n| Space | **O(n * k)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Palindrome Pairs\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for hash map — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **hash map**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **hash table**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Palindrome Pairs** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **hash table**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "palindrome-pairs.cpp",
+      "code": "// Time:  O(n * k^2), n is the number of the words, k is the max length of the words.\n// Space: O(n * k)\n\nclass Solution {\npublic:\n    vector<vector<int>> palindromePairs(vector<string>& words) {\n        vector<vector<int>> res;\n        unordered_map<int, unordered_map<string, int>> lookup;\n        for (int i = 0; i < words.size(); ++i) {\n            lookup[size(words[i])][words[i]] = i;\n        }\n\n        for (int i = 0; i < words.size(); ++i) {\n            for (int j = 0; j <= words[i].length(); ++j) {\n                if (lookup.count(j) && is_palindrome(words[i], j, words[i].length() - 1)) {\n                    string suffix = words[i].substr(0, j); \n                    reverse(suffix.begin(), suffix.end());\n                    auto& bucket = lookup[size(suffix)];\n                    if (bucket.count(suffix) && i != bucket[suffix]) {\n                        res.push_back({i, bucket[suffix]});\n                    }\n                }\n                if (j > 0 && lookup.count(size(words[i]) - j) && is_palindrome(words[i], 0, j - 1)) {\n                    string prefix = words[i].substr(j);\n                    reverse(prefix.begin(), prefix.end());\n                    auto& bucket = lookup[size(prefix)];\n                    if (bucket.count(prefix) && bucket[prefix] != i) {\n                        res.push_back({bucket[prefix], i});\n                    }\n                }\n            }\n        }\n        return res;\n    }\n\nprivate:\n    bool is_palindrome(string& s, int start, int end) {\n        while (start < end) {\n            if (s[start++] != s[end--]) {\n                return false;\n            }\n        }\n        return true;\n    }\n};\n\n// Time:  O(n * k^2), n is the number of the words, k is the max length of the words.\n// Space: O(n * k^2)\n// Manacher solution.\nclass Solution2_TLE {\npublic:\n    vector<vector<int>> palindromePairs(vector<string>& words) {\n        unordered_multimap<string, int> prefix, suffix;\n        for (int i = 0; i < words.size(); ++i) {  // O(n)\n            vector<int> P;\n            manacher(words[i], &P);\n            for (int j = 0; j < P.size(); ++j) {  // O(k)\n                if (j - P[j] == 1) {\n                    prefix.emplace(words[i].substr((j + P[j]) / 2), i);  // O(k)\n                }\n                if (j + P[j] == P.size() - 2) {\n                    suffix.emplace(words[i].substr(0, (j - P[j]) / 2), i);\n                }\n            }\n        }\n\n        vector<vector<int>> res;\n        for (int i = 0; i < words.size(); ++i) {  // O(n)\n            string reversed_word(words[i].rbegin(), words[i].rend());  // O(k)\n            auto its = prefix.equal_range(reversed_word);\n            for (auto it = its.first; it != its.second; ++it) {\n                if (it->second != i) {\n                    res.push_back({i, it->second});\n                }\n            }\n            its = suffix.equal_range(reversed_word);\n            for (auto it = its.first; it != its.second; ++it) {\n                if (words[i].size() != words[it->second].size()) {\n                    res.push_back({it->second, i});\n                }\n            }\n        }\n        return res;\n    }\n\n    void manacher(const string& s, vector<int> *P) {\n        string T = preProcess(s);\n        const int n = T.length();\n        P->resize(n);\n        int C = 0, R = 0;\n        for (int i = 1; i < n - 1; ++i) {\n            int i_mirror = 2 * C - i;\n            (*P)[i] = (R > i) ? min(R - i, (*P)[i_mirror]) : 0;\n            while (T[i + 1 + (*P)[i]] == T[i - 1 - (*P)[i]]) {\n                ++(*P)[i];\n            }\n            if (i + (*P)[i] > R) {\n                C = i;\n                R = i + (*P)[i];\n            }\n        }\n    }\n\n    string preProcess(const string& s) {\n        if (s.empty()) {\n            return \"^$\";\n        }\n        string ret = \"^\";\n        for (int i = 0; i < s.length(); ++i) {\n            ret += \"#\" + s.substr(i, 1);\n        }\n        ret += \"#$\";\n        return ret;\n    }\n};\n\n// Time:  O(n * k^2), n is the number of the words, k is the max length of the words.\n// Space: O(n * k)\n// Trie solution.\nclass Solution_MLE {\npublic:\n    vector<vector<int>> palindromePairs(vector<string>& words) {\n        vector<vector<int>> res;\n        TrieNode trie;\n        for (int i = 0; i < words.size(); ++i) {\n            trie.insert(words[i], i);\n        }\n        for (int i = 0; i < words.size(); ++i) {\n            trie.find(words[i], i, &res);\n        }\n        return res;\n    }\n\nprivate:\n    struct TrieNode {\n        int word_idx = -1;\n        unordered_map<char, TrieNode *> leaves;\n        \n        void insert(const string& s, int i) {\n            auto* p = this;\n            for (const auto& c : s) {\n                if (p->leaves.find(c) == p->leaves.cend()) {\n                    p->leaves[c] = new TrieNode;\n                }\n                p = p->leaves[c];\n            }\n            p->word_idx = i;\n        }\n\n        void find(const string& s, int idx, vector<vector<int>> *res) {\n            auto* p = this;\n            for (int i = s.length() - 1; i >= 0; --i) {  // O(k)\n                if (p->leaves.find(s[i]) != p->leaves.cend()) {\n                    p = p->leaves[s[i]];\n                    if (p->word_idx != -1 && p->word_idx != idx &&\n                        is_palindrome(s, i - 1)) {  // O(k)\n                        res->push_back({p->word_idx, idx});\n                    }\n                } else {\n                    break;\n                }\n            }\n        }\n\n        bool is_palindrome(const string& s, int j) {\n            int i = 0;\n            while (i <= j) {\n                if (s[i++] != s[j--]) {\n                    return false;\n                }\n            }\n            return true;\n        }\n\n        ~TrieNode() {\n            for (auto& kv : leaves) {\n                if (kv.second) {\n                    delete kv.second;\n                }\n            }\n        }\n    };\n};\n",
+      "sourcePath": "C++/palindrome-pairs.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "palindrome-pairs.py",
+      "code": "# Time:  O(n * k^2), n is the number of the words, k is the max length of the words.\n# Space: O(n * k)\n\nimport collections\n\n\nclass Solution(object):\n    def palindromePairs(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: List[List[int]]\n        \"\"\"\n        def is_palindrome(s, i, j):\n            while i < j:\n                if s[i] != s[j]:\n                    return False\n                i += 1\n                j -= 1\n            return True\n \n        res = []\n        lookup = collections.defaultdict(dict)\n        for i, word in enumerate(words):\n            lookup[len(word)][word] = i\n\n        for i in xrange(len(words)):\n            for j in xrange(len(words[i]) + 1):\n                if j in lookup and is_palindrome(words[i], j, len(words[i])-1):\n                    suffix = words[i][:j][::-1]\n                    bucket = lookup[len(suffix)]\n                    if suffix in bucket and bucket[suffix] != i:\n                        res.append([i, bucket[suffix]])\n                if j > 0 and len(words[i])-j in lookup and is_palindrome(words[i], 0, j-1):\n                    prefix = words[i][j:][::-1]\n                    bucket = lookup[len(prefix)]\n                    if prefix in bucket and bucket[prefix] != i:\n                        res.append([bucket[prefix], i])\n        return res\n\n\n# Time:  O(n * k^2), n is the number of the words, k is the max length of the words.\n# Space: O(n * k^2)\n# Manacher solution.\nclass Solution_TLE(object):\n    def palindromePairs(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: List[List[int]]\n        \"\"\"\n        def manacher(s, P):\n            def preProcess(s):\n                if not s:\n                    return ['^', '$']\n                T = ['^']\n                for c in s:\n                    T +=  [\"#\", c]\n                T += ['#', '$']\n                return T\n\n            T = preProcess(s)\n            center, right = 0, 0\n            for i in xrange(1, len(T) - 1):\n                i_mirror = 2 * center - i\n                if right > i:\n                    P[i] = min(right - i, P[i_mirror])\n                else:\n                    P[i] = 0\n                while T[i + 1 + P[i]] == T[i - 1 - P[i]]:\n                    P[i] += 1\n                if i + P[i] > right:\n                    center, right = i, i + P[i]\n\n        prefix, suffix = collections.defaultdict(list), collections.defaultdict(list)\n        for i, word in enumerate(words):\n            P = [0] * (2 * len(word) + 3)\n            manacher(word, P)\n            for j in xrange(len(P)):\n                if j - P[j] == 1:\n                    prefix[word[(j + P[j]) // 2:]].append(i)\n                if j + P[j] == len(P) - 2:\n                    suffix[word[:(j - P[j]) // 2]].append(i)\n        res = []\n        for i, word in enumerate(words):\n            for j in prefix[word[::-1]]:\n                if j != i:\n                    res.append([i, j])\n            for j in suffix[word[::-1]]:\n                if len(word) != len(words[j]):\n                    res.append([j, i])\n        return res\n\n\n# Time:  O(n * k^2), n is the number of the words, k is the max length of the words.\n# Space: O(n * k)\n# Trie solution.\nclass TrieNode(object):\n    def __init__(self):\n        self.word_idx = -1\n        self.leaves = {}\n\n    def insert(self, word, i):\n        cur = self\n        for c in word:\n            if not c in cur.leaves:\n                cur.leaves[c] = TrieNode()\n            cur = cur.leaves[c]\n        cur.word_idx = i\n\n    def find(self, s, idx, res):\n        cur = self\n        for i in reversed(xrange(len(s))):\n            if s[i] in cur.leaves:\n                cur = cur.leaves[s[i]]\n                if cur.word_idx not in (-1, idx) and \\\n                   self.is_palindrome(s, i - 1):\n                    res.append([cur.word_idx, idx])\n            else:\n                break\n\n    def is_palindrome(self, s, j):\n        i = 0\n        while i <= j:\n            if s[i] != s[j]:\n                return False\n            i += 1\n            j -= 1\n        return True\n\nclass Solution_MLE(object):\n    def palindromePairs(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: List[List[int]]\n        \"\"\"\n        res = []\n        trie = TrieNode()\n        for i in xrange(len(words)):\n            trie.insert(words[i], i)\n\n        for i in xrange(len(words)):\n            trie.find(words[i], i, res)\n\n        return res\n\n",
+      "sourcePath": "Python/palindrome-pairs.py"
+    }
+  },
+  "seo": {
+    "title": "Palindrome Pairs Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Palindrome Pairs (LeetCode #336). Pattern: hash map. Time O(n * k^2), space O(n * k). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Palindrome Pairs",
+      "Palindrome Pairs solution",
+      "Palindrome Pairs leetcode",
+      "hash-table",
+      "hash-map",
+      "hard"
+    ],
+    "canonicalPath": "/problems/palindrome-pairs"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Palindrome Pairs?",
+      "answer": "The reference solutions aim for O(n * k^2) time and O(n * k) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Palindrome Pairs use?",
+      "answer": "It primarily maps to hash map, within the broader topic of hash table."
+    },
+    {
+      "question": "Is Palindrome Pairs good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/palindrome-pairs/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the hash map approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Palindrome Pairs (#336) — Hard. Pattern: hash map. Complexity: O(n * k^2) time / O(n * k) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Palindrome Pairs: show input structure (hash table), highlight the moving parts of the hash map approach, and annotate each step with the maintained invariant and complexity."
+}

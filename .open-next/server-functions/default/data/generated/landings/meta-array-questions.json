@@ -1,0 +1,51 @@
+{
+  "slug": "meta-array-questions",
+  "path": "/explore/meta-array-questions",
+  "h1": "Best Array Questions for Meta",
+  "intro": "A curated set of 8 Array problems frequently useful for Meta interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "remove-duplicates-from-sorted-array-ii",
+    "best-time-to-buy-and-sell-stock",
+    "longest-consecutive-sequence",
+    "kth-largest-element-in-an-array",
+    "product-of-array-except-self",
+    "increasing-triplet-subsequence",
+    "island-perimeter",
+    "maximum-swap"
+  ],
+  "faqs": [
+    {
+      "question": "How many Array problems should I do for Meta?",
+      "answer": "Quality over quantity: master patterns with 8 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Array topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/meta",
+      "label": "Meta interview hub"
+    },
+    {
+      "href": "/topics/array",
+      "label": "Array problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Array Questions for Meta | AlgoForge",
+    "description": "Top Array coding interview questions for Meta. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Meta Array questions",
+      "Array interview",
+      "Meta leetcode"
+    ],
+    "canonicalPath": "/explore/meta-array-questions"
+  },
+  "kind": "company-topic"
+}

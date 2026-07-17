@@ -1,0 +1,153 @@
+{
+  "id": "1206",
+  "number": 1206,
+  "slug": "design-skiplist",
+  "title": "Design Skiplist",
+  "difficulty": "Hard",
+  "topics": [
+    "design"
+  ],
+  "patterns": [],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(logn), on average",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/design-skiplist/",
+  "notes": [],
+  "relatedSlugs": [
+    "lru-cache",
+    "insert-delete-getrandom-o1",
+    "insert-delete-getrandom-o1-duplicates-allowed",
+    "all-oone-data-structure",
+    "lfu-cache",
+    "robot-room-cleaner",
+    "design-in-memory-file-system",
+    "design-excel-sum-formula"
+  ],
+  "prevSlug": "monthly-transactions-ii",
+  "nextSlug": "unique-number-of-occurrences",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Design Skiplist?\n\n**Design Skiplist** (LeetCode #1206) is a **Hard** problem that primarily trains **design**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/design-skiplist/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Design Skiplist\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(logn), on average) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(logn), on average** time and **O(n)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(logn), on average** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Design Skiplist\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **design**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Design Skiplist** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **design**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "design-skiplist.cpp",
+      "code": "// Time:  O(logn) on average for each operation\n// Space: O(n)\n\n// see proof in references:\n// 1. https://kunigami.blog/2012/09/25/skip-lists-in-python/\n// 2. https://opendatastructures.org/ods-cpp/4_4_Analysis_Skiplists.html\n// 3. https://brilliant.org/wiki/skip-lists/\nclass Skiplist {\nprivate:\n    class SkipNode {\n    public:\n        SkipNode() : SkipNode(0, -1) {\n            \n        }\n    \n        SkipNode(int level, int num)\n          : num(num)\n          , nexts(level) {\n            \n        }\n\n        int num;\n        vector<SkipNode *> nexts;\n    };\n\npublic:\n    Skiplist()\n      : gen_((random_device())())\n      , len_(0)\n      , head_(new SkipNode()) {\n        \n    }\n    \n    ~Skiplist() {\n        if (head_->nexts.empty()) {\n            return;\n        }\n        auto curr = head_->nexts[0];\n        while (curr) {\n            auto next = curr->nexts[0];\n            delete curr;\n            curr = next;\n        }\n    }\n    \n    bool search(int target) const {\n        return find(target, find_prev_nodes(target)) != nullptr;\n    }\n    \n    void add(int num) {\n        auto node = new SkipNode(random_level(), num);\n        if (head_->nexts.size() < node->nexts.size()) {\n            head_->nexts.resize(node->nexts.size());\n        }\n        auto prevs = find_prev_nodes(num);\n        for (int i = 0; i < node->nexts.size(); ++i) {\n            node->nexts[i] = prevs[i]->nexts[i];\n            prevs[i]->nexts[i] = node;\n        }\n        ++len_;\n    }\n    \n    bool erase(int num) {\n        auto prevs = find_prev_nodes(num);\n        auto curr = find(num, prevs);\n        if (!curr) {\n            return false;\n        }\n        --len_;\n        for (int i = curr->nexts.size() - 1; i >= 0; --i) {\n            prevs[i]->nexts[i] = curr->nexts[i];\n            if (!head_->nexts[i]) {\n                head_->nexts.pop_back();\n            }\n        }\n        delete curr;\n        return true;\n    }\n\n    int size() const {\n        return len_;\n    }\n    \nprivate:\n    SkipNode *find(int num, const vector<SkipNode *>& prevs) const {\n        if (!prevs.empty()) {\n            auto candidate = prevs[0]->nexts[0];\n            if (candidate && candidate->num == num) {\n                return candidate;\n            }\n        }\n        return nullptr;\n    }\n    \n    vector<SkipNode *> find_prev_nodes(int num) const {\n        vector<SkipNode *> prevs(head_->nexts.size());\n        auto curr = head_;\n        for (int i = head_->nexts.size() - 1; i >= 0; --i) {\n            while (curr->nexts[i] && curr->nexts[i]->num < num) {\n                curr = curr->nexts[i];\n            }\n            prevs[i] = curr;\n        }\n        return prevs;\n    }\n    \n    int random_level() {\n        static const int P_NUMERATOR = 1;\n        static const int P_DENOMINATOR = 2;  // P = 1/4 in redis implementation\n        static const int MAX_LEVEL = 32;  // enough for 2^32 elements\n        int level = 1;\n        while (uniform_int_distribution<int>{1, P_DENOMINATOR}(gen_) <= P_NUMERATOR &&\n               level < MAX_LEVEL) {\n            ++level;\n        }\n        return level;\n    }\n    \n    void print_list() const {\n        for (int i = head_->nexts.size() - 1; i >= 0; --i) {\n            auto curr = head_->nexts[i];\n            cout << curr->num;\n            curr = curr->nexts[i];\n            while (curr) {\n                cout << \"->\" << curr->num;\n                curr = curr->nexts[i];\n            }\n            cout << endl;\n        }\n    }\n\n    default_random_engine gen_;\n    int len_;\n    SkipNode *head_;\n};\n\n// Time:  O(logn) on average for each operation\n// Space: O(n)\n// smart pointer version (a little bit slower)\nclass Skiplist2 {\nprivate:\n    class SkipNode {\n    public:\n        SkipNode() : SkipNode(0, -1) {\n            \n        }\n    \n        SkipNode(int level, int num)\n          : num(num)\n          , nexts(level) {\n            \n        }\n\n        int num;\n        vector<shared_ptr<SkipNode>> nexts;\n    };\n\npublic:\n    Skiplist2()\n      : gen_((random_device())())\n      , len_(0)\n      , head_(make_shared<SkipNode>()) {\n        \n    }\n    \n    bool search(int target) const {\n        return find(target, find_prev_nodes(target)) != nullptr;\n    }\n    \n    void add(int num) {\n        auto node = make_shared<SkipNode>(random_level(), num);\n        if (head_->nexts.size() < node->nexts.size()) {\n            head_->nexts.resize(node->nexts.size());\n        }\n        auto prevs = find_prev_nodes(num);\n        for (int i = 0; i < node->nexts.size(); ++i) {\n            node->nexts[i] = prevs[i]->nexts[i];\n            prevs[i]->nexts[i] = node;\n        }\n        ++len_;\n    }\n    \n    bool erase(int num) {\n        auto prevs = find_prev_nodes(num);\n        auto curr = find(num, prevs);\n        if (!curr) {\n            return false;\n        }\n        --len_;\n        for (int i = curr->nexts.size() - 1; i >= 0; --i) {\n            prevs[i]->nexts[i] = curr->nexts[i];\n            if (!head_->nexts[i]) {\n                head_->nexts.pop_back();\n            }\n        }\n        return true;\n    }\n\n    int size() const {\n        return len_;\n    }\n\nprivate:\n    shared_ptr<SkipNode> find(int num, const vector<shared_ptr<SkipNode>>& prevs) const {\n        if (!prevs.empty()) {\n            auto candidate = prevs[0]->nexts[0];\n            if (candidate && candidate->num == num) {\n                return candidate;\n            }\n        }\n        return nullptr;\n    }\n    \n    vector<shared_ptr<SkipNode>> find_prev_nodes(int num) const {\n        vector<shared_ptr<SkipNode>> prevs(head_->nexts.size());\n        auto curr = head_;\n        for (int i = head_->nexts.size() - 1; i >= 0; --i) {\n            while (curr->nexts[i] && curr->nexts[i]->num < num) {\n                curr = curr->nexts[i];\n            }\n            prevs[i] = curr;\n        }\n        return prevs;\n    }\n    \n    int random_level() {\n        static const int P_NUMERATOR = 1;\n        static const int P_DENOMINATOR = 2;  // P = 1/4 in redis implementation\n        static const int MAX_LEVEL = 32;  // enough for 2^32 elements\n        int level = 1;\n        while (uniform_int_distribution<int>{1, P_DENOMINATOR}(gen_) <= P_NUMERATOR &&\n               level < MAX_LEVEL) {\n            ++level;\n        }\n        return level;\n    }\n    \n    void print_list() const {\n        for (int i = head_->nexts.size() - 1; i >= 0; --i) {\n            auto curr = head_->nexts[i];\n            cout << curr->num;\n            curr = curr->nexts[i];\n            while (curr) {\n                cout << \"->\" << curr->num;\n                curr = curr->nexts[i];\n            }\n            cout << endl;\n        }\n    }\n\n    default_random_engine gen_;\n    int len_;\n    shared_ptr<SkipNode> head_;\n};\n",
+      "sourcePath": "C++/design-skiplist.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "design-skiplist.py",
+      "code": "# Time:  O(logn) on average for each operation\n# Space: O(n)\n\n# see proof in references:\n# 1. https://kunigami.blog/2012/09/25/skip-lists-in-python/\n# 2. https://opendatastructures.org/ods-cpp/4_4_Analysis_Skiplists.html\n# 3. https://brilliant.org/wiki/skip-lists/\nimport random\n\n\nclass SkipNode(object):\n    def __init__(self, level=0, num=None):\n        self.num = num\n        self.nexts = [None]*level\n\n\nclass Skiplist(object):\n    P_NUMERATOR, P_DENOMINATOR = 1, 2  # P = 1/4 in redis implementation\n    MAX_LEVEL = 32  # enough for 2^32 elements\n\n    def __init__(self):\n        self.__head = SkipNode()\n        self.__len = 0\n\n    def search(self, target):\n        \"\"\"\n        :type target: int\n        :rtype: bool\n        \"\"\"\n        return True if self.__find(target, self.__find_prev_nodes(target)) else False\n        \n    def add(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: None\n        \"\"\"\n        node = SkipNode(self.__random_level(), num)\n        if len(self.__head.nexts) < len(node.nexts): \n            self.__head.nexts.extend([None]*(len(node.nexts)-len(self.__head.nexts)))\n        prevs = self.__find_prev_nodes(num)\n        for i in xrange(len(node.nexts)):\n            node.nexts[i] = prevs[i].nexts[i]\n            prevs[i].nexts[i] = node\n        self.__len += 1\n\n    def erase(self, num):\n        \"\"\"\n        :type num: int\n        :rtype: bool\n        \"\"\"\n        prevs = self.__find_prev_nodes(num)\n        curr = self.__find(num, prevs)\n        if not curr:\n            return False\n        self.__len -= 1   \n        for i in reversed(xrange(len(curr.nexts))):\n            prevs[i].nexts[i] = curr.nexts[i]\n            if not self.__head.nexts[i]:\n                self.__head.nexts.pop()\n        return True\n    \n    def __find(self, num, prevs):\n        if prevs:\n            candidate = prevs[0].nexts[0]\n            if candidate and candidate.num == num:\n                return candidate\n        return None\n\n    def __find_prev_nodes(self, num):\n        prevs = [None]*len(self.__head.nexts)\n        curr = self.__head\n        for i in reversed(xrange(len(self.__head.nexts))):\n            while curr.nexts[i] and curr.nexts[i].num < num:\n                curr = curr.nexts[i]\n            prevs[i] = curr\n        return prevs\n\n    def __random_level(self):\n        level = 1\n        while random.randint(1, Skiplist.P_DENOMINATOR) <= Skiplist.P_NUMERATOR and \\\n              level < Skiplist.MAX_LEVEL:\n            level += 1\n        return level\n\n    def __len__(self):\n        return self.__len\n    \n    def __str__(self):\n        result = []\n        for i in reversed(xrange(len(self.__head.nexts))):\n            result.append([])\n            curr = self.__head.nexts[i]\n            while curr:\n                result[-1].append(str(curr.num))\n                curr = curr.nexts[i]\n        return \"\\n\".join(map(lambda x: \"->\".join(x), result))\n",
+      "sourcePath": "Python/design-skiplist.py"
+    }
+  },
+  "seo": {
+    "title": "Design Skiplist Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Design Skiplist (LeetCode #1206). Pattern: algorithms. Time O(logn), on average, space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Design Skiplist",
+      "Design Skiplist solution",
+      "Design Skiplist leetcode",
+      "design",
+      "hard"
+    ],
+    "canonicalPath": "/problems/design-skiplist"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Design Skiplist?",
+      "answer": "The reference solutions aim for O(logn), on average time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Design Skiplist use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of design."
+    },
+    {
+      "question": "Is Design Skiplist good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/design-skiplist/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Design Skiplist (#1206) — Hard. Pattern: general problem-solving. Complexity: O(logn), on average time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Design Skiplist: show input structure (design), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

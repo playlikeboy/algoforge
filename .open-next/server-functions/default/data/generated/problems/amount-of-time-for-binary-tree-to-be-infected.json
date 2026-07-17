@@ -1,0 +1,164 @@
+{
+  "id": "2385",
+  "number": 2385,
+  "slug": "amount-of-time-for-binary-tree-to-be-infected",
+  "title": "Amount of Time for Binary Tree to Be Infected",
+  "difficulty": "Medium",
+  "topics": [
+    "depth-first-search"
+  ],
+  "patterns": [
+    "queue-bfs",
+    "dfs-backtracking",
+    "tree-dp"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(h)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/",
+  "notes": [
+    "BFS",
+    "DFS",
+    "Tree DP"
+  ],
+  "relatedSlugs": [
+    "find-minimum-diameter-after-merging-two-trees",
+    "kill-process",
+    "count-pairs-of-connectable-servers-in-a-weighted-tree-network",
+    "employee-importance",
+    "number-of-islands",
+    "number-of-nodes-with-value-one",
+    "height-of-special-binary-tree",
+    "frog-position-after-t-seconds"
+  ],
+  "prevSlug": "largest-palindromic-number",
+  "nextSlug": "find-the-k-sum-of-an-array",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Amount of Time for Binary Tree to Be Infected?\n\n**Amount of Time for Binary Tree to Be Infected** (LeetCode #2385) is a **Medium** problem that primarily trains **depth first search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **queue bfs, dfs backtracking, and tree dp**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: BFS, DFS, Tree DP.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Amount of Time for Binary Tree to Be Infected\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **queue bfs, dfs backtracking, and tree dp**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(h)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(h)** space.\n\n### Pattern focus: queue bfs, dfs backtracking, and tree dp\n\nUse the pattern as a checklist:\n\n- **queue bfs** — confirm the invariant holds after each step\n- **dfs backtracking** — confirm the invariant holds after each step\n- **tree dp** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(h)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Amount of Time for Binary Tree to Be Infected\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for queue bfs, dfs backtracking, and tree dp — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **queue bfs, dfs backtracking, and tree dp**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **depth first search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Amount of Time for Binary Tree to Be Infected** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **depth first search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "amount-of-time-for-binary-tree-to-be-infected.cpp",
+      "code": "// Time:  O(n)\n// Space: O(h)\n\n// iterative dfs, tree dp\nclass Solution {\npublic:\n    int amountOfTime(TreeNode* root, int start) {\n        const auto& iter_dfs = [&]() {\n            int result = -1;\n            using RET = pair<int, int>;\n            RET ret = {-1, -1};\n            vector<tuple<int, TreeNode *, shared_ptr<RET>, shared_ptr<RET>, RET *>> stk;\n            stk.emplace_back(1, root, nullptr, nullptr, &ret);\n            while (!empty(stk)) {\n                auto [step, curr, left, right, ret] = stk.back(); stk.pop_back();\n                if (step == 1) {\n                    if (!curr) {\n                        continue;\n                    }\n                    auto left = make_shared<RET>(-1, -1), right = make_shared<RET>(-1, -1);\n                    stk.emplace_back(2, curr, left, right, ret);\n                    stk.emplace_back(1, curr->right, nullptr, nullptr, right.get());\n                    stk.emplace_back(1, curr->left, nullptr, nullptr, left.get());\n                } else if (step == 2) {\n                    int d = -1;\n                    if (curr->val == start) {\n                        d = 0;\n                        result = max(left->first, right->first) + 1;\n                    } else if (left->second >= 0) {\n                        d = left->second + 1;\n                        result = max(result, right->first + 1 + d);\n                    } else if (right->second >= 0) {\n                        d = right->second + 1;\n                        result = max(result, left->first + 1 + d);\n                    }\n                    *ret = make_pair(max(left->first, right->first) + 1, d);  // [height, dist_to_start]\n                }\n            }\n            return result;\n        };\n\n        return iter_dfs();\n    }\n};\n\n\n// Time:  O(n)\n// Space: O(h)\n// dfs, tree dp\nclass Solution2 {\npublic:\n    int amountOfTime(TreeNode* root, int start) {\n        int result = -1;\n\n        const function<pair<int, int>(TreeNode *)> dfs = [&](TreeNode *curr) {\n            if (!curr) {\n                return make_pair(-1, -1);\n            }\n            const auto& left = dfs(curr->left);\n            const auto& right = dfs(curr->right);\n            int d = -1;\n            if (curr->val == start) {\n                d = 0;\n                result = max(left.first, right.first) + 1;\n            } else if (left.second >= 0) {\n                d = left.second + 1;\n                result = max(result, right.first + 1 + d);\n            } else if (right.second >= 0) {\n                d = right.second + 1;\n                result = max(result, left.first + 1 + d);\n            }\n            return make_pair(max(left.first, right.first) + 1, d);  // [height, dist_to_start]\n        };\n\n        dfs(root);\n        return result;\n    }\n};\n\n// Time:  O(n)\n// Space: O(n)\n// bfs\nclass Solution3 {\npublic:\n    int amountOfTime(TreeNode* root, int start) {\n        const auto& bfs = [](const auto& root) {\n            unordered_map<int, vector<int>> adj;\n            vector<TreeNode *> q = {root};\n            while (!empty(q)) {\n                vector<TreeNode *> new_q;\n                for (const auto& u : q) {\n                    for (const auto& v : {u->left, u->right}) {\n                        if (!v) {\n                            continue;\n                        }\n                        adj[u->val].emplace_back(v->val);\n                        adj[v->val].emplace_back(u->val);\n                        new_q.emplace_back(v);\n                    }\n                }\n                q = move(new_q);\n            }\n            return adj;\n        };\n        \n        const auto& bfs2 = [](const auto& adj, const auto& start) {\n            int result = -1;\n            vector<int> q = {start};\n            unordered_set<int> lookup = {start};\n            while (!empty(q)) {\n                vector<int> new_q;\n                for (const auto& u : q) {\n                    if (!adj.count(u)) {\n                        continue;\n                    }\n                    for (const auto& v : adj.at(u)) {\n                        if (lookup.count(v)) {\n                            continue;\n                        }\n                        lookup.emplace(v);\n                        new_q.emplace_back(v);\n                    }\n                }\n                q = move(new_q);\n                ++result;\n            }\n            return result;\n        };\n\n        const auto& adj = bfs(root);\n        return bfs2(adj, start);\n    }\n};\n",
+      "sourcePath": "C++/amount-of-time-for-binary-tree-to-be-infected.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "amount-of-time-for-binary-tree-to-be-infected.py",
+      "code": "# Time:  O(n)\n# Space: O(h)\n\n# Definition for a binary tree node.\nclass TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        pass\n\n\n# iterative dfs, tree dp\nclass Solution(object):\n    def amountOfTime(self, root, start):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :type start: int\n        :rtype: int\n        \"\"\"\n        def iter_dfs(root, start):\n            result = -1\n            stk = [(1, (root, [-1]*2))]\n            while stk:\n                step, args = stk.pop()\n                if step == 1:\n                    curr, ret = args\n                    if curr is None:\n                        continue\n                    left, right = [-1]*2, [-1]*2\n                    stk.append((2, (curr, left, right, ret)))\n                    stk.append((1, (curr.right, right)))\n                    stk.append((1, (curr.left, left)))\n                elif step == 2:\n                    curr, left, right, ret = args\n                    d = -1\n                    if curr.val == start:\n                        d = 0\n                        result = max(left[0], right[0])+1\n                    elif left[1] >= 0:\n                        d = left[1]+1\n                        result = max(result, right[0]+1+d)\n                    elif right[1] >= 0:\n                        d = right[1]+1\n                        result = max(result, left[0]+1+d)\n                    ret[:] = [max(left[0], right[0])+1, d]  # [height, dist_to_start]\n            return result\n\n        return iter_dfs(root, start)\n\n\n# Time:  O(n)\n# Space: O(h)\n# dfs, tree dp\nclass Solution2(object):\n    def amountOfTime(self, root, start):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :type start: int\n        :rtype: int\n        \"\"\"\n        def dfs(curr, start, result):\n            if curr is None:\n                return [-1, -1]\n            left = dfs(curr.left, start, result)\n            right = dfs(curr.right, start, result)\n            d = -1\n            if curr.val == start:\n                d = 0\n                result[0] = max(left[0], right[0])+1\n            elif left[1] >= 0:\n                d = left[1]+1\n                result[0] = max(result[0], right[0]+1+d)\n            elif right[1] >= 0:\n                d = right[1]+1\n                result[0] = max(result[0], left[0]+1+d)\n            return [max(left[0], right[0])+1, d]  # [height, dist_to_start]\n\n        result = [-1]\n        dfs(root, start, result)\n        return result[0]\n\n\n# Time:  O(n)\n# Space: O(n)\n# bfs\nclass Solution3(object):\n    def amountOfTime(self, root, start):\n        \"\"\"\n        :type root: Optional[TreeNode]\n        :type start: int\n        :rtype: int\n        \"\"\"\n        def bfs(root):\n            adj = collections.defaultdict(list)\n            q = [root]\n            while q:\n                new_q = []\n                for u in q:\n                    for v in (u.left, u.right):\n                        if v is None:\n                            continue\n                        adj[u.val].append(v.val)\n                        adj[v.val].append(u.val)\n                        new_q.append(v)\n                q = new_q\n            return adj\n\n        def bfs2(adj, start):\n            result = -1\n            q = [start]\n            lookup = {start}\n            while q:\n                new_q = []\n                for u in q:\n                    for v in adj[u]:\n                        if v in lookup:\n                            continue\n                        lookup.add(v)\n                        new_q.append(v)\n                q = new_q\n                result += 1\n            return result\n\n        adj = bfs(root)\n        return bfs2(adj, start)\n",
+      "sourcePath": "Python/amount-of-time-for-binary-tree-to-be-infected.py"
+    }
+  },
+  "seo": {
+    "title": "Amount of Time for Binary Tree to Be Infected Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Amount of Time for Binary Tree to Be Infected (LeetCode #2385). Pattern: queue bfs. Time O(n), space O(h). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Amount of Time for Binary Tree to Be Infected",
+      "Amount of Time for Binary Tree to Be Infected solution",
+      "Amount of Time for Binary Tree to Be Infected leetcode",
+      "depth-first-search",
+      "queue-bfs",
+      "dfs-backtracking",
+      "tree-dp",
+      "medium"
+    ],
+    "canonicalPath": "/problems/amount-of-time-for-binary-tree-to-be-infected"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Amount of Time for Binary Tree to Be Infected?",
+      "answer": "The reference solutions aim for O(n) time and O(h) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Amount of Time for Binary Tree to Be Infected use?",
+      "answer": "It primarily maps to queue bfs, dfs backtracking, and tree dp, within the broader topic of depth first search."
+    },
+    {
+      "question": "Is Amount of Time for Binary Tree to Be Infected good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the queue bfs, dfs backtracking, and tree dp approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Amount of Time for Binary Tree to Be Infected (#2385) — Medium. Pattern: queue bfs, dfs backtracking, and tree dp. Complexity: O(n) time / O(h) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Amount of Time for Binary Tree to Be Infected: show input structure (depth first search), highlight the moving parts of the queue bfs, dfs backtracking, and tree dp approach, and annotate each step with the maintained invariant and complexity."
+}

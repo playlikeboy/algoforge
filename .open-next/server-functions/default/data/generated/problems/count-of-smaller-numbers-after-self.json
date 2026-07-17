@@ -1,0 +1,164 @@
+{
+  "id": "315",
+  "number": 315,
+  "slug": "count-of-smaller-numbers-after-self",
+  "title": "Count of Smaller Numbers After Self",
+  "difficulty": "Hard",
+  "topics": [
+    "tree"
+  ],
+  "patterns": [
+    "fenwick-tree",
+    "merge-sort"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogn)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/count-of-smaller-numbers-after-self/",
+  "notes": [
+    "BST",
+    "BIT",
+    "Fenwick Tree",
+    "Divide and Conquer",
+    "Merge Sort"
+  ],
+  "relatedSlugs": [
+    "create-sorted-array-through-instructions",
+    "minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits",
+    "count-good-triplets-in-an-array",
+    "queries-on-a-permutation-with-key",
+    "find-the-index-of-permutation",
+    "shortest-path-in-a-weighted-tree",
+    "palindromic-path-queries-in-a-tree",
+    "pancake-sorting"
+  ],
+  "prevSlug": "binary-tree-vertical-order-traversal",
+  "nextSlug": "remove-duplicate-letters",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Count of Smaller Numbers After Self?\n\n**Count of Smaller Numbers After Self** (LeetCode #315) is a **Hard** problem that primarily trains **tree**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **fenwick tree and merge sort**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: BST, BIT, Fenwick Tree, Divide and Conquer.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Count of Smaller Numbers After Self\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **fenwick tree and merge sort**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogn)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogn)** time and **O(n)** space.\n\n### Pattern focus: fenwick tree and merge sort\n\nUse the pattern as a checklist:\n\n- **fenwick tree** — confirm the invariant holds after each step\n- **merge sort** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogn)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Count of Smaller Numbers After Self\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for fenwick tree and merge sort — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **fenwick tree and merge sort**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **tree**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Count of Smaller Numbers After Self** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **tree**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "count-of-smaller-numbers-after-self.cpp",
+      "code": "// Time:  O(nlogn)\n// Space: O(n)\n\n// BIT solution. (24ms)\nclass Solution {\npublic:\n    vector<int> countSmaller(vector<int>& nums) {\n        // Get the place (position in the ascending order) of each number.\n        vector<int> idx(size(nums));\n        iota(begin(idx), end(idx), 0);\n        vector<int> lookup(size(nums));\n        sort(begin(idx), end(idx),\n             [&nums](const auto& a, const auto& b) {\n                 return nums[a] == nums[b] ? a < b : nums[a] < nums[b];\n             });\n        for (int i = 0; i < size(idx); ++i) {\n            lookup[idx[i]] = i;\n        }\n        // Count the smaller elements after the number.\n        BIT bit(size(nums));\n        vector<int> result(size(nums));\n        for (int i = size(nums) - 1; i >= 0; --i) {\n            result[i] = bit.query(lookup[i] - 1);\n            bit.add(lookup[i], 1);\n        }\n        return result;\n    }\n\nprivate:\n    class BIT {\n    public:\n        BIT(int n) : bit_(n + 1) {  // 0-indexed\n        }\n        \n        void add(int i, int val) {\n            ++i;\n            for (; i < size(bit_); i += lower_bit(i)) {\n                bit_[i] += val;\n            }\n        }\n\n        int query(int i) const {\n            ++i;\n            int total = 0;\n            for (; i > 0; i -= lower_bit(i)) {\n                total += bit_[i];\n            }\n            return total;\n        }\n    \n    private:\n        int lower_bit(int i) const {\n            return i & -i;\n        }\n        \n        vector<int> bit_;\n    };\n};\n\n// Time:  O(nlogn)\n// Space: O(n)\n// Divide and Conquer solution. (80ms)\nclass Solution2 {\npublic:\n    vector<int> countSmaller(vector<int>& nums) {\n        vector<int> counts(nums.size());\n        vector<pair<int, int>> num_idxs;\n        for (int i = 0; i < nums.size(); ++i) {\n            num_idxs.emplace_back(nums[i], i);\n        }\n        countAndMergeSort(&num_idxs, 0, num_idxs.size() - 1, &counts);\n        return counts;\n    }\n\n    void countAndMergeSort(vector<pair<int, int>> *num_idxs, int start, int end, vector<int> *counts) {\n        if (end - start <= 0) {  // The number of range [start, end] of which size is less than 2 doesn't need sort.\n            return;\n        }\n        int mid = start + (end - start) / 2;\n        countAndMergeSort(num_idxs, start, mid, counts);\n        countAndMergeSort(num_idxs, mid + 1, end, counts);\n\n        int r = mid + 1;\n        vector<pair<int, int>> tmp;\n        for (int i = start; i <= mid; ++i) {\n            // Merge the two sorted arrays into tmp.\n            while (r <= end && (*num_idxs)[r].first < (*num_idxs)[i].first) {\n                tmp.emplace_back((*num_idxs)[r++]);\n            }\n            tmp.emplace_back((*num_idxs)[i]);\n            (*counts)[(*num_idxs)[i].second] += r - (mid + 1);\n        }\n        // Copy tmp back to num_idxs.\n        copy(tmp.begin(), tmp.end(), num_idxs->begin() + start);\n    }\n};\n\n// Time:  O(nlogn) ~ O(n^2)\n// Space: O(n)\n// BST solution. (40ms)\nclass Solution3 {\npublic:\n    class BSTreeNode {\n    public:\n        int val, count;\n        BSTreeNode *left, *right;\n        BSTreeNode(int val, int count) {\n            this->val = val;\n            this->count = count;\n            this->left = this->right = nullptr;\n        }\n    };\n\n    vector<int> countSmaller(vector<int>& nums) {\n        vector<int> res(nums.size());\n\n        BSTreeNode *root = nullptr;\n\n        // Insert into BST and get left count.\n        for (int i = nums.size() - 1; i >= 0; --i) {\n            BSTreeNode *node = new BSTreeNode(nums[i], 0);\n            root = insertNode(root, node);\n            res[i] = query(root, nums[i]);\n        }\n\n        return res;\n    }\n\n    // Insert node into BST.\n    BSTreeNode* insertNode(BSTreeNode* root, BSTreeNode* node) {\n        if (root == nullptr) {\n            return node;\n        }\n        BSTreeNode* curr = root;\n        while (curr) {\n            // Insert left if smaller.\n            if (node->val < curr->val) {\n                ++curr->count; // Increase the number of left children.\n                if (curr->left != nullptr) {\n                    curr = curr->left;\n                } else {\n                    curr->left = node;\n                    break;\n                }\n            } else {  // Insert right if larger or equal.\n                if (curr->right != nullptr) {\n                    curr = curr->right;\n                } else {\n                    curr->right = node;\n                    break;\n                }\n            }\n        }\n        return root;\n    }\n\n    // Query the smaller count of the value.\n    int query(BSTreeNode* root, int val) {\n        if (root == nullptr) {\n            return 0;\n        }\n        int count = 0;\n        BSTreeNode* curr = root;\n        while (curr) {\n            // Insert left.\n            if (val < curr->val) {\n                curr = curr->left;\n            } else if (val > curr->val) {\n                count += 1 + curr->count; // Count the number of the smaller nodes.\n                curr = curr->right;\n            } else {  // Equal.\n                return count + curr->count;\n            }\n        }\n        return 0;\n    }\n};\n",
+      "sourcePath": "C++/count-of-smaller-numbers-after-self.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "count-of-smaller-numbers-after-self.py",
+      "code": "# Time:  O(nlogn)\n# Space: O(n)\n\nclass Solution(object):\n    def countSmaller(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        def countAndMergeSort(num_idxs, start, end, counts):\n            if end - start <= 0:  # The size of range [start, end] less than 2 is always with count 0.\n                return\n\n            mid = start + (end - start) // 2\n            countAndMergeSort(num_idxs, start, mid, counts)\n            countAndMergeSort(num_idxs, mid + 1, end, counts)\n            r = mid + 1\n            tmp = []\n            for i in xrange(start, mid + 1):\n                # Merge the two sorted arrays into tmp.\n                while r <= end and num_idxs[r][0] < num_idxs[i][0]:\n                    tmp.append(num_idxs[r])\n                    r += 1\n                tmp.append(num_idxs[i])\n                counts[num_idxs[i][1]] += r - (mid + 1)\n\n            # Copy tmp back to num_idxs\n            num_idxs[start:start+len(tmp)] = tmp\n\n        num_idxs = []\n        counts = [0] * len(nums)\n        for i, num in enumerate(nums):\n            num_idxs.append((num, i))\n        countAndMergeSort(num_idxs, 0, len(num_idxs) - 1, counts)\n        return counts\n\n\n# Time:  O(nlogn)\n# Space: O(n)\n# BIT solution.\nclass Solution2(object):\n    def countSmaller(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        class BIT(object):  # 0-indexed.\n            def __init__(self, n):\n                self.__bit = [0]*(n+1)  # Extra one for dummy node.\n\n            def add(self, i, val):\n                i += 1  # Extra one for dummy node.\n                while i < len(self.__bit):\n                    self.__bit[i] += val\n                    i += (i & -i)\n\n            def query(self, i):\n                i += 1  # Extra one for dummy node.\n                ret = 0\n                while i > 0:\n                    ret += self.__bit[i]\n                    i -= (i & -i)\n                return ret\n\n        # Get the place (position in the ascending order) of each number.\n        sorted_nums = sorted(zip(nums, range(len(nums))))\n        lookup = {i:new_i for new_i, (_, i) in enumerate(sorted_nums)}\n\n        # Count the smaller elements after the number.\n        result, bit = [0]*len(nums), BIT(len(nums))\n        for i in reversed(xrange(len(nums))):\n            result[i] = bit.query(lookup[i]-1)\n            bit.add(lookup[i], 1)\n        return result\n\n\n# Time:  O(nlogn) ~ O(n^2)\n# Space: O(n)\n# BST solution.\nclass Solution3(object):\n    def countSmaller(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        res = [0] * len(nums)\n        bst = self.BST()\n        # Insert into BST and get left count.\n        for i in reversed(xrange(len(nums))):\n            bst.insertNode(nums[i])\n            res[i] = bst.query(nums[i])\n\n        return res\n\n    class BST(object):\n        class BSTreeNode(object):\n            def __init__(self, val):\n                self.val = val\n                self.count = 0\n                self.left = self.right = None\n\n        def __init__(self):\n            self.root = None\n\n        # Insert node into BST.\n        def insertNode(self, val):\n            node = self.BSTreeNode(val)\n            if not self.root:\n                self.root = node\n                return\n            curr = self.root\n            while curr:\n                # Insert left if smaller.\n                if node.val < curr.val:\n                    curr.count += 1  # Increase the number of left children.\n                    if curr.left:\n                        curr = curr.left\n                    else:\n                        curr.left = node\n                        break\n                else:  # Insert right if larger or equal.\n                    if curr.right:\n                        curr = curr.right\n                    else:\n                        curr.right = node\n                        break\n\n        # Query the smaller count of the value.\n        def query(self, val):\n            count = 0\n            curr = self.root\n            while curr:\n                # Insert left.\n                if val < curr.val:\n                    curr = curr.left\n                elif val > curr.val:\n                    count += 1 + curr.count  # Count the number of the smaller nodes.\n                    curr = curr.right\n                else:  # Equal.\n                    return count + curr.count\n            return 0\n\n",
+      "sourcePath": "Python/count-of-smaller-numbers-after-self.py"
+    }
+  },
+  "seo": {
+    "title": "Count of Smaller Numbers After Self Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Count of Smaller Numbers After Self (LeetCode #315). Pattern: fenwick tree. Time O(nlogn), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Count of Smaller Numbers After Self",
+      "Count of Smaller Numbers After Self solution",
+      "Count of Smaller Numbers After Self leetcode",
+      "tree",
+      "fenwick-tree",
+      "merge-sort",
+      "hard"
+    ],
+    "canonicalPath": "/problems/count-of-smaller-numbers-after-self"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Count of Smaller Numbers After Self?",
+      "answer": "The reference solutions aim for O(nlogn) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Count of Smaller Numbers After Self use?",
+      "answer": "It primarily maps to fenwick tree and merge sort, within the broader topic of tree."
+    },
+    {
+      "question": "Is Count of Smaller Numbers After Self good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/count-of-smaller-numbers-after-self/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the fenwick tree and merge sort approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Count of Smaller Numbers After Self (#315) — Hard. Pattern: fenwick tree and merge sort. Complexity: O(nlogn) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Count of Smaller Numbers After Self: show input structure (tree), highlight the moving parts of the fenwick tree and merge sort approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,30 @@
+{
+  "type": "pattern",
+  "slug": "manachers-algorithm",
+  "name": "Manachers Algorithm",
+  "description": "Master the Manachers Algorithm coding pattern with curated problems.",
+  "problemCount": 9,
+  "problemSlugs": [
+    "longest-palindromic-substring",
+    "shortest-palindrome",
+    "palindromic-substrings",
+    "palindrome-partitioning-iv",
+    "maximum-product-of-the-length-of-two-palindromic-substrings",
+    "check-if-dfs-strings-are-palindromes",
+    "longest-palindrome-after-substring-concatenation-i",
+    "longest-palindrome-after-substring-concatenation-ii",
+    "palindromic-subarray-sum"
+  ],
+  "relatedTopics": [],
+  "seo": {
+    "title": "Manachers Algorithm Pattern — Problems & Guide | AlgoForge",
+    "description": "Learn the Manachers Algorithm pattern with 9 practice problems, interview tips, and visual intuition.",
+    "keywords": [
+      "Manachers Algorithm",
+      "Manachers Algorithm pattern",
+      "Manachers Algorithm leetcode",
+      "coding patterns"
+    ],
+    "canonicalPath": "/patterns/manachers-algorithm"
+  }
+}

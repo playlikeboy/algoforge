@@ -1,0 +1,165 @@
+{
+  "id": "3672",
+  "number": 3672,
+  "slug": "sum-of-weighted-modes-in-subarrays",
+  "title": "Sum of Weighted Modes in Subarrays",
+  "difficulty": "Medium",
+  "topics": [
+    "two-pointers"
+  ],
+  "patterns": [
+    "sorted-list",
+    "two-pointers",
+    "sliding-window"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogk)",
+  "spaceComplexity": "O(k)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/sum-of-weighted-modes-in-subarrays/",
+  "notes": [
+    "Sorted List",
+    "BST",
+    "Two Pointers",
+    "Sliding Window"
+  ],
+  "relatedSlugs": [
+    "minimum-operations-to-make-subarray-elements-equal",
+    "find-x-sum-of-all-k-long-subarrays-i",
+    "find-x-sum-of-all-k-long-subarrays-ii",
+    "minimum-absolute-difference-in-sliding-submatrix",
+    "replace-the-substring-for-balanced-string",
+    "count-number-of-nice-subarrays",
+    "alert-using-same-key-card-three-or-more-times-in-a-one-hour-period",
+    "maximum-erasure-value"
+  ],
+  "prevSlug": "sum-of-beautiful-subsequences",
+  "nextSlug": "find-zombie-sessions",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Sum of Weighted Modes in Subarrays?\n\n**Sum of Weighted Modes in Subarrays** (LeetCode #3672) is a **Medium** problem that primarily trains **two pointers**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sorted list, two pointers, and sliding window**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Sorted List, BST, Two Pointers, Sliding Window.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/sum-of-weighted-modes-in-subarrays/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Sum of Weighted Modes in Subarrays\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sorted list, two pointers, and sliding window**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogk)) and **space** (O(k)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogk)** time and **O(k)** space.\n\n### Pattern focus: sorted list, two pointers, and sliding window\n\nUse the pattern as a checklist:\n\n- **sorted list** — confirm the invariant holds after each step\n- **two pointers** — confirm the invariant holds after each step\n- **sliding window** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogk)** |\n| Space | **O(k)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Sum of Weighted Modes in Subarrays\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sorted list, two pointers, and sliding window — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sorted list, two pointers, and sliding window**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **two pointers**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Sum of Weighted Modes in Subarrays** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **two pointers**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "sum-of-weighted-modes-in-subarrays.cpp",
+      "code": "// Time:  O(nlogk)\n// Space: O(k)\n\n// bst, two pointers, sliding window\nclass Solution {\npublic:\n    long long modeWeight(vector<int>& nums, int k) {\n        unordered_map<int, int> cnt;\n        set<pair<int, int>> bst;\n        const auto& add = [&](int x, int diff) {\n            if (cnt[x]) {\n                bst.erase(pair(-cnt[x], x));\n            }\n            cnt[x] += diff;\n            if (cnt[x]) {\n                bst.emplace(-cnt[x], x);\n            } else {\n                cnt.erase(x);\n            }\n        };\n\n        int64_t result = 0;\n        for (int i = 0; i < size(nums); ++i) {\n            add(nums[i], +1);\n            if (i >= k - 1) {\n                result += static_cast<int64_t>(-cbegin(bst)->first) * cbegin(bst)->second;\n                add(nums[i - k + 1], -1);\n            }\n        }\n        return result;\n    }\n};\n\n// Time:  O(nlogn)\n// Space: O(n)\n// bst, two pointers, sliding window\nclass Solution2 {\npublic:\n    long long modeWeight(vector<int>& nums, int k) {\n        unordered_map<int, int> cnt;\n        priority_queue<pair<int, int>> max_heap;\n        int64_t result = 0;\n        for (int i = 0; i < size(nums); ++i) {\n            ++cnt[nums[i]];\n            max_heap.emplace(cnt[nums[i]], -nums[i]);\n            if (i >= k - 1) {\n                while (max_heap.top().first != cnt[-max_heap.top().second]) {\n                    max_heap.pop();\n                }\n                result += static_cast<int64_t>(max_heap.top().first) * -max_heap.top().second;\n                --cnt[nums[i - k + 1]];\n            }\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/sum-of-weighted-modes-in-subarrays.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "sum-of-weighted-modes-in-subarrays.py",
+      "code": "# Time:  O(nlogk)\n# Space: O(k)\n\nimport collections\nfrom sortedcontainers import SortedList\n\n\n# sorted list, two pointers, sliding window\nclass Solution(object):\n    def modeWeight(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        def add(x, diff):\n            if cnt[x]:\n                sl.remove((-cnt[x], x))\n            cnt[x] += diff\n            if cnt[x]:\n                sl.add((-cnt[x], x))\n            else:\n                del cnt[x]\n    \n        cnt = collections.defaultdict(int)\n        sl = SortedList()\n        result = 0\n        for i in xrange(len(nums)):\n            add(nums[i], +1)\n            if i >= k-1:\n                result += -sl[0][0]*sl[0][1]\n                add(nums[i-k+1], -1)\n        return result\n\n\n# Time:  O(nlogn)\n# Space: O(n)\nimport collections\nimport heapq\n\n\n# heap, two pointers, sliding window\nclass Solution2(object):\n    def modeWeight(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        cnt = collections.defaultdict(int)\n        max_heap = []\n        result = 0\n        for i in xrange(len(nums)):\n            cnt[nums[i]] += 1\n            heapq.heappush(max_heap, (-cnt[nums[i]], nums[i]))\n            if i >= k-1:\n                while -max_heap[0][0] != cnt[max_heap[0][1]]:\n                    heapq.heappop(max_heap)\n                result += -max_heap[0][0]*max_heap[0][1]\n                cnt[nums[i-k+1]] -= 1\n        return result\n",
+      "sourcePath": "Python/sum-of-weighted-modes-in-subarrays.py"
+    }
+  },
+  "seo": {
+    "title": "Sum of Weighted Modes in Subarrays Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Sum of Weighted Modes in Subarrays (LeetCode #3672). Pattern: sorted list. Time O(nlogk), space O(k). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Sum of Weighted Modes in Subarrays",
+      "Sum of Weighted Modes in Subarrays solution",
+      "Sum of Weighted Modes in Subarrays leetcode",
+      "two-pointers",
+      "sorted-list",
+      "two-pointers",
+      "sliding-window",
+      "medium"
+    ],
+    "canonicalPath": "/problems/sum-of-weighted-modes-in-subarrays"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Sum of Weighted Modes in Subarrays?",
+      "answer": "The reference solutions aim for O(nlogk) time and O(k) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Sum of Weighted Modes in Subarrays use?",
+      "answer": "It primarily maps to sorted list, two pointers, and sliding window, within the broader topic of two pointers."
+    },
+    {
+      "question": "Is Sum of Weighted Modes in Subarrays good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/sum-of-weighted-modes-in-subarrays/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sorted list, two pointers, and sliding window approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Sum of Weighted Modes in Subarrays (#3672) — Medium. Pattern: sorted list, two pointers, and sliding window. Complexity: O(nlogk) time / O(k) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Sum of Weighted Modes in Subarrays: show input structure (two pointers), highlight the moving parts of the sorted list, two pointers, and sliding window approach, and annotate each step with the maintained invariant and complexity."
+}

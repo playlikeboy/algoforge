@@ -1,0 +1,69 @@
+{
+  "slug": "hard-bit-manipulation-problems",
+  "path": "/explore/hard-bit-manipulation-problems",
+  "h1": "Hard Bit Manipulation Problems",
+  "intro": "34 hard problems that drill the Bit Manipulation pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "minimum-unique-word-abbreviation",
+    "number-of-valid-words-for-each-puzzle",
+    "maximum-good-people-based-on-statements",
+    "groups-of-strings",
+    "maximum-cost-of-trip-with-k-highways",
+    "number-of-excellent-pairs",
+    "minimum-time-to-kill-all-monsters",
+    "find-a-good-subset-of-the-matrix",
+    "minimum-operations-to-form-subsequence-with-target-sum",
+    "apply-operations-on-array-to-maximize-sum-of-squares",
+    "maximum-strong-pair-xor-ii",
+    "minimize-or-of-remaining-elements-using-operations",
+    "maximum-hamming-distances",
+    "find-products-of-elements-of-big-array",
+    "select-cells-in-grid-with-maximum-score",
+    "maximum-number-of-moves-to-kill-all-pawns",
+    "find-the-maximum-sequence-value-of-array",
+    "find-the-k-th-character-in-string-game-ii",
+    "frequencies-of-shortest-supersequences",
+    "minimum-increments-for-target-multiples-in-an-array",
+    "maximum-profit-from-valid-topological-order-in-dag",
+    "concatenated-divisibility",
+    "maximum-good-subtree-score",
+    "longest-palindromic-path-in-graph",
+    "partition-array-for-maximum-xor-and-and",
+    "subarrays-with-xor-at-least-k",
+    "next-special-palindrome-number",
+    "count-binary-palindromic-numbers",
+    "maximum-xor-of-subsequences",
+    "last-remaining-integer-after-alternating-deletion-operations",
+    "maximum-bitwise-and-after-increment-operations",
+    "minimum-edge-toggles-on-a-tree",
+    "maximum-subarray-xor-with-bounded-range",
+    "maximum-consistent-columns-in-a-grid"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice hard Bit Manipulation problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/bit-manipulation",
+      "label": "Bit Manipulation pattern"
+    },
+    {
+      "href": "/difficulty/hard",
+      "label": "All Hard problems"
+    }
+  ],
+  "seo": {
+    "title": "Hard Bit Manipulation Problems | AlgoForge",
+    "description": "Practice hard Bit Manipulation LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "hard Bit Manipulation",
+      "Bit Manipulation problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/hard-bit-manipulation-problems"
+  },
+  "kind": "difficulty-pattern"
+}

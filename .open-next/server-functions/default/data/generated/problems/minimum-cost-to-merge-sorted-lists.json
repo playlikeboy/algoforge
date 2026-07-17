@@ -1,0 +1,168 @@
+{
+  "id": "3801",
+  "number": 3801,
+  "slug": "minimum-cost-to-merge-sorted-lists",
+  "title": "Minimum Cost to Merge Sorted Lists",
+  "difficulty": "Hard",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dynamic-programming",
+    "sort",
+    "heap",
+    "binary-search"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(l * nlogn + 2^n * log(n * l) * n * logl + 3^n)",
+  "spaceComplexity": "O(n * l + 2^n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-to-merge-sorted-lists/",
+  "notes": [
+    "DP",
+    "Sort",
+    "Heap",
+    "Binary Search",
+    "Submask Enumeration"
+  ],
+  "relatedSlugs": [
+    "maximum-profit-in-job-scheduling",
+    "power-of-heroes",
+    "maximum-strictly-increasing-cells-in-a-matrix",
+    "maximize-consecutive-elements-in-an-array-after-modification",
+    "maximum-total-reward-using-operations-ii",
+    "maximum-score-of-non-overlapping-intervals",
+    "maximize-subarray-gcd-score",
+    "maximum-consistent-columns-in-a-grid"
+  ],
+  "prevSlug": "minimum-cost-to-make-two-binary-strings-equal",
+  "nextSlug": "number-of-ways-to-paint-sheets",
+  "estimatedMinutes": 60,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Minimum Cost to Merge Sorted Lists?\n\n**Minimum Cost to Merge Sorted Lists** (LeetCode #3801) is a **Hard** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming, sort, heap, and binary search**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: DP, Sort, Heap, Binary Search.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/minimum-cost-to-merge-sorted-lists/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Minimum Cost to Merge Sorted Lists\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming, sort, heap, and binary search**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(l * nlogn + 2^n * log(n * l) * n * logl + 3^n)) and **space** (O(n * l + 2^n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(l * nlogn + 2^n * log(n * l) * n * logl + 3^n)** time and **O(n * l + 2^n)** space.\n\n### Pattern focus: dynamic programming, sort, heap, and binary search\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n- **sort** — confirm the invariant holds after each step\n- **heap** — confirm the invariant holds after each step\n- **binary search** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(l * nlogn + 2^n * log(n * l) * n * logl + 3^n)** |\n| Space | **O(n * l + 2^n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Minimum Cost to Merge Sorted Lists\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming, sort, heap, and binary search — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming, sort, heap, and binary search**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Minimum Cost to Merge Sorted Lists** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "minimum-cost-to-merge-sorted-lists.cpp",
+      "code": "// Time:  O(l * nlogn + 2^n * log(n * l) * n * logl + 3^n), n = len(lists), l = max(len(list) for list in lists)\n// Space: O(n * l + 2^n)\n\n// dp, sort, heap, binary search, submask enumeration\nclass Solution {\npublic:\n    long long minMergeCost(vector<vector<int>>& lists) {\n        static const int64_t INF = numeric_limits<int64_t>::max();\n\n        const auto& merge = [](const auto& lists) {\n            using T = tuple<int, int, int>;\n            vector<T> data;\n            data.reserve(size(lists));\n            for (int i = 0; i < size(lists); ++i) {\n                data.emplace_back(lists[i][0], i, 0);\n            }\n            priority_queue<T, vector<T>, greater<T>> min_heap(cbegin(data), cend(data));\n            vector<int> result;\n            while (!empty(min_heap)) {\n                const auto [x, i, j] = min_heap.top(); min_heap.pop();\n                result.emplace_back(x);\n                if (j + 1 < size(lists[i])) {\n                    min_heap.emplace(lists[i][j + 1], i, j + 1);\n                }\n            }\n            return result;\n        };\n\n        const auto& binary_search = [](int left, int right, const auto& check) {\n            while (left <= right) {\n                const auto& mid = left + (right - left) / 2;\n                if (check(mid)) {\n                    right = mid - 1;\n                } else {\n                    left = mid + 1;\n                }\n            }\n            return left;\n        }; \n\n        vector<int> dp1(1 << size(lists));\n        for (int i = 0; i < size(lists); ++i) {  // Time: O(2^n)\n            dp1[1 << i] = size(lists[i]);\n        }\n        for (int mask = 1; mask < size(dp1); ++mask) {  // Time: O(2^n)\n            dp1[mask] = dp1[mask ^ (mask & -mask)] + dp1[mask & -mask];\n        }\n        auto sorted_vals = merge(lists);  // Time: O((n * l) * logn)\n        sorted_vals.erase(unique(begin(sorted_vals), end(sorted_vals)), end(sorted_vals));\n        vector<int> dp2(1 << size(lists));\n        for (int mask = 1; mask < size(dp2); ++mask) {  // Time: O(2^n * log(n * l) * n * logl)\n            const auto& check = [&](int x) {\n                int cnt = 0;\n                for (int i = 0; i < size(lists); ++i) {\n                    if ((mask & (1 << i)) == 0) {\n                        continue;\n                    }\n                    cnt += distance(cbegin(lists[i]), upper_bound(cbegin(lists[i]), cend(lists[i]), sorted_vals[x]));\n                }\n                return cnt >= (dp1[mask] + 1) / 2;\n            };\n\n            dp2[mask] = sorted_vals[binary_search(0, size(sorted_vals) - 1, check)];\n        }\n        vector<int64_t> dp3(1 << size(lists));\n        for (int mask = 1; mask < size(dp3); ++mask) {  // Time: O(3^n)\n            if ((mask & (mask - 1)) == 0) {\n                continue;\n            }\n            dp3[mask] = INF;\n            for (int submask = (mask - 1) & mask; submask > (mask ^ submask); submask = (submask - 1) & mask) {\n                dp3[mask] = min(dp3[mask], dp3[submask] + dp3[mask ^ submask] + abs(dp2[submask] - dp2[mask ^ submask]) + dp1[mask]);\n            }\n        }\n        return dp3.back();\n    }\n};\n",
+      "sourcePath": "C++/minimum-cost-to-merge-sorted-lists.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "minimum-cost-to-merge-sorted-lists.py",
+      "code": "# Time:  O(l * nlogn + 2^n * log(n * l) * n * logl + 3^n), n = len(lists), l = max(len(list) for list in lists)\n# Space: O(n * l + 2^n)\n\nimport heapq\nimport bisect\n\n\n# dp, sort, heap, binary search, submask enumeration\nclass Solution(object):\n    def minMergeCost(self, lists):\n        \"\"\"\n        :type lists: List[List[int]]\n        :rtype: int\n        \"\"\"\n        INF = float(\"inf\")\n        def merge(lists):\n            result = []\n            min_heap = [(lists[i][0], i, 0) for i in xrange(len(lists))]\n            heapq.heapify(min_heap)\n            while min_heap:\n                x, i, j = heapq.heappop(min_heap)\n                result.append(x)\n                if j+1 < len(lists[i]):\n                    heapq.heappush(min_heap, (lists[i][j+1], i, j+1))\n            return result\n\n        def binary_search(left, right, check):\n            while left <= right:\n                mid = left+(right-left)//2\n                if check(mid):\n                    right = mid-1\n                else:\n                    left = mid+1\n            return left\n\n        def check(x):\n            return sum(bisect.bisect_right(lists[i], sorted_vals[x]) for i in range(len(lists)) if mask&(1<<i)) >= (dp1[mask]+1)//2\n\n        dp1 = [0]*(1<<len(lists))\n        for i in xrange(len(lists)):  # Time: O(2^n)\n            dp1[1<<i] = len(lists[i])\n        for mask in xrange(1, len(dp1)):  # Time: O(2^n)\n            dp1[mask] = dp1[mask^(mask&-mask)]+dp1[mask&-mask]\n        sorted_vals = merge(lists)  # Time: O(l * nlogn)\n        sorted_vals = [sorted_vals[i] for i in xrange(len(sorted_vals)) if i+1 == len(sorted_vals) or sorted_vals[i+1] != sorted_vals[i]]\n        dp2 = [0]*(1<<len(lists))\n        for mask in xrange(1, len(dp2)):  # Time: O(2^n * log(n * l) * n * logl)\n            dp2[mask] = sorted_vals[binary_search(0, len(sorted_vals)-1, check)]\n        dp3 = [0]*(1<<len(lists))\n        for mask in xrange(1, len(dp3)):  # Time: O(3^n)\n            if mask&(mask-1) == 0:\n                continue\n            dp3[mask] = INF\n            submask = (mask-1)&mask\n            while submask > mask^submask:\n                dp3[mask] = min(dp3[mask], dp3[submask]+dp3[mask^submask]+abs(dp2[submask]-dp2[mask^submask])+dp1[mask])\n                submask = (submask-1)&mask\n        return dp3[-1]\n",
+      "sourcePath": "Python/minimum-cost-to-merge-sorted-lists.py"
+    }
+  },
+  "seo": {
+    "title": "Minimum Cost to Merge Sorted Lists Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Minimum Cost to Merge Sorted Lists (LeetCode #3801). Pattern: dynamic programming. Time O(l * nlogn + 2^n * log(n * l) * n * logl + 3^n), space O(n * l + 2^n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Minimum Cost to Merge Sorted Lists",
+      "Minimum Cost to Merge Sorted Lists solution",
+      "Minimum Cost to Merge Sorted Lists leetcode",
+      "dynamic-programming",
+      "dynamic-programming",
+      "sort",
+      "heap",
+      "binary-search",
+      "hard"
+    ],
+    "canonicalPath": "/problems/minimum-cost-to-merge-sorted-lists"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Minimum Cost to Merge Sorted Lists?",
+      "answer": "The reference solutions aim for O(l * nlogn + 2^n * log(n * l) * n * logl + 3^n) time and O(n * l + 2^n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Minimum Cost to Merge Sorted Lists use?",
+      "answer": "It primarily maps to dynamic programming, sort, heap, and binary search, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Minimum Cost to Merge Sorted Lists good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/minimum-cost-to-merge-sorted-lists/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming, sort, heap, and binary search approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Minimum Cost to Merge Sorted Lists (#3801) — Hard. Pattern: dynamic programming, sort, heap, and binary search. Complexity: O(l * nlogn + 2^n * log(n * l) * n * logl + 3^n) time / O(n * l + 2^n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Minimum Cost to Merge Sorted Lists: show input structure (dynamic programming), highlight the moving parts of the dynamic programming, sort, heap, and binary search approach, and annotate each step with the maintained invariant and complexity."
+}

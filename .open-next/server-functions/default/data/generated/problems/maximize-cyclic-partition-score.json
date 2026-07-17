@@ -1,0 +1,158 @@
+{
+  "id": "3743",
+  "number": 3743,
+  "slug": "maximize-cyclic-partition-score",
+  "title": "Maximize Cyclic Partition Score",
+  "difficulty": "Hard",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dynamic-programming"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n * k)",
+  "spaceComplexity": "O(k)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/maximize-cyclic-partition-score/",
+  "notes": [
+    "DP"
+  ],
+  "relatedSlugs": [
+    "regular-expression-matching",
+    "edit-distance",
+    "scramble-string",
+    "interleaving-string",
+    "distinct-subsequences",
+    "best-time-to-buy-and-sell-stock-iii",
+    "palindrome-partitioning-ii",
+    "dungeon-game"
+  ],
+  "prevSlug": "maximum-path-score-in-a-grid",
+  "nextSlug": "find-kth-character-in-expanded-string",
+  "estimatedMinutes": 60,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Maximize Cyclic Partition Score?\n\n**Maximize Cyclic Partition Score** (LeetCode #3743) is a **Hard** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: DP.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/maximize-cyclic-partition-score/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Maximize Cyclic Partition Score\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n * k)) and **space** (O(k)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n * k)** time and **O(k)** space.\n\n### Pattern focus: dynamic programming\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n * k)** |\n| Space | **O(k)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Maximize Cyclic Partition Score\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Maximize Cyclic Partition Score** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "maximize-cyclic-partition-score.cpp",
+      "code": "// Time:  O(n * k)\n// Space: O(k)\n\n// dp\nclass Solution {\npublic:\n    long long maximumScore(vector<int>& nums, int k) {\n        const auto& best_time_to_buy_and_sell_stock_v = [&](int base) {\n            static const int64_t NEG_INF = numeric_limits<int64_t>::min();\n\n            vector<int64_t> dp(size(nums) + 1);\n            int64_t result = 0;\n            for (int i = 0; i < k; ++i) {\n                vector<int64_t> new_dp(size(nums) + 1, NEG_INF);\n                int64_t x = NEG_INF, y = NEG_INF;\n                for (int j = i; j < size(nums); ++j) {\n                    x = max(x, dp[j] - nums[(base + j) % size(nums)]);\n                    y = max(y, dp[j] + nums[(base + j) % size(nums)]);\n                    new_dp[j + 1] = max({new_dp[j], x + nums[(base + j) % size(nums)], y - nums[(base + j) % size(nums)]});\n                }\n                dp = move(new_dp);\n                result = max(result, dp.back());\n            }\n            return result;\n        };\n\n        const int i = distance(cbegin(nums), min_element(cbegin(nums), cend(nums)));\n        return max(best_time_to_buy_and_sell_stock_v(i), best_time_to_buy_and_sell_stock_v(i + 1));\n    }\n};\n",
+      "sourcePath": "C++/maximize-cyclic-partition-score.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "maximize-cyclic-partition-score.py",
+      "code": "# Time:  O(n * k)\n# Space: O(k)\n\n# dp\nclass Solution(object):\n    def maximumScore(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        def best_time_to_buy_and_sell_stock_v(base):\n            dp = [0]*(len(nums)+1)\n            result = 0\n            for i in xrange(k):\n                x, y = float(\"-inf\"), float(\"-inf\")\n                new_dp = [float(\"-inf\")]*(len(nums)+1)\n                for j in xrange(i, len(nums)):\n                    x, y = max(x, dp[j]-nums[(base+j)%len(nums)]), max(y, dp[j]+nums[(base+j)%len(nums)])\n                    new_dp[j+1] = max(new_dp[j], x+nums[(base+j)%len(nums)], y-nums[(base+j)%len(nums)])\n                dp = new_dp\n                result = max(result, dp[-1])\n            return result\n    \n        i = min(xrange(len(nums)), key=lambda x: nums[x])\n        return max(best_time_to_buy_and_sell_stock_v(i), best_time_to_buy_and_sell_stock_v(i+1))\n",
+      "sourcePath": "Python/maximize-cyclic-partition-score.py"
+    }
+  },
+  "seo": {
+    "title": "Maximize Cyclic Partition Score Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Maximize Cyclic Partition Score (LeetCode #3743). Pattern: dynamic programming. Time O(n * k), space O(k). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Maximize Cyclic Partition Score",
+      "Maximize Cyclic Partition Score solution",
+      "Maximize Cyclic Partition Score leetcode",
+      "dynamic-programming",
+      "dynamic-programming",
+      "hard"
+    ],
+    "canonicalPath": "/problems/maximize-cyclic-partition-score"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Maximize Cyclic Partition Score?",
+      "answer": "The reference solutions aim for O(n * k) time and O(k) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Maximize Cyclic Partition Score use?",
+      "answer": "It primarily maps to dynamic programming, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Maximize Cyclic Partition Score good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/maximize-cyclic-partition-score/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Maximize Cyclic Partition Score (#3743) — Hard. Pattern: dynamic programming. Complexity: O(n * k) time / O(k) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Maximize Cyclic Partition Score: show input structure (dynamic programming), highlight the moving parts of the dynamic programming approach, and annotate each step with the maintained invariant and complexity."
+}

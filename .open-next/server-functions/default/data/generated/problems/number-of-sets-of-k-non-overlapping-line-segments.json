@@ -1,0 +1,156 @@
+{
+  "id": "1621",
+  "number": 1621,
+  "slug": "number-of-sets-of-k-non-overlapping-line-segments",
+  "title": "Number of Sets of K Non-Overlapping Line Segments",
+  "difficulty": "Medium",
+  "topics": [
+    "sort"
+  ],
+  "patterns": [],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(1)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments/",
+  "notes": [
+    "Binomial Coefficients",
+    "Euler's Theorem"
+  ],
+  "relatedSlugs": [
+    "sort-colors",
+    "insertion-sort-list",
+    "sort-list",
+    "largest-number",
+    "meeting-rooms-ii",
+    "h-index",
+    "wiggle-sort",
+    "wiggle-sort-ii"
+  ],
+  "prevSlug": "coordinate-with-maximum-network-quality",
+  "nextSlug": "fancy-sequence",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Number of Sets of K Non-Overlapping Line Segments?\n\n**Number of Sets of K Non-Overlapping Line Segments** (LeetCode #1621) is a **Medium** problem that primarily trains **sort**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Binomial Coefficients, Euler's Theorem.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Number of Sets of K Non-Overlapping Line Segments\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(1)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(1)** time and **O(n)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(1)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Number of Sets of K Non-Overlapping Line Segments\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **sort**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Number of Sets of K Non-Overlapping Line Segments** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **sort**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "number-of-sets-of-k-non-overlapping-line-segments.cpp",
+      "code": "// Time:  O(1), excluding precomputation time\n// Space: O(n)\n\nclass Solution {\npublic:\n    Solution()\n     : fact_(2 * MAX_N - 1 + 1)\n     , inv_(2 * MAX_N - 1 + 1)\n     , inv_fact_(2 * MAX_N - 1 + 1) {\n\n        fact_[0] = inv_fact_[0] = fact_[1] = inv_fact_[1] = inv_[1] = 1;\n        for (int i = 2; i < size(fact_); ++i) {\n            fact_[i] = mulmod(fact_[i - 1], i, MOD);\n            inv_[i] = mulmod(inv_[MOD % i], MOD - MOD / i, MOD);  // https://cp-algorithms.com/algebra/module-inverse.html\n            inv_fact_[i] = mulmod(inv_fact_[i - 1], inv_[i], MOD);\n        }\n    }\n\n    int numberOfSets(int n, int k) {\n        // find k segments with 1+ length and (k+1) spaces with 0+ length s.t. total length is n-1\n        // => find k segments with 0+ length and (k+1) spaces with 0+ length s.t. total length is n-k-1\n        // => find the number of combinations of 2k+1 variables with total sum n-k-1\n        // => H(2k+1, n-k-1)\n        // => C((2k+1) + (n-k-1) - 1, n-k-1)\n        // => C(n+k-1, n-k-1) = C(n+k-1, 2k)\n        return nCr(n + k - 1, 2 * k, MOD);\n    }\n\nprivate:\n    int nCr(int n, int k, uint32_t mod) {\n        return mulmod(mulmod(fact_[n], inv_fact_[n - k], mod), inv_fact_[k], mod);\n    }\n\n    uint32_t addmod(uint32_t a, uint32_t b, uint32_t mod) {  // avoid overflow\n        a %= mod, b %= mod;\n        if (mod - a <= b) {\n            b -= mod;  // relied on unsigned integer overflow in order to give the expected results\n        }\n        return a + b;\n    }\n\n    // reference: https://stackoverflow.com/questions/12168348/ways-to-do-modulo-multiplication-with-primitive-types\n    uint32_t mulmod(uint32_t a, uint32_t b, uint32_t mod)  {  // avoid overflow\n        a %= mod, b %= mod;\n        uint32_t result = 0;\n        if (a < b) {\n            swap(a, b);\n        }\n        while (b > 0)  { \n            if (b % 2 == 1) {\n                result = addmod(result, a, mod);\n            }\n            a = addmod(a, a, mod);\n            b /= 2; \n        } \n        return result; \n    }\n    \n    static const int MOD = 1e9 + 7;\n    static const int MAX_N = 1000;\n    vector<int> fact_;\n    vector<int> inv_;\n    vector<int> inv_fact_;\n};\n",
+      "sourcePath": "C++/number-of-sets-of-k-non-overlapping-line-segments.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "number-of-sets-of-k-non-overlapping-line-segments.py",
+      "code": "# Time:  O(1), excluding precomputation time\n# Space: O(n)\n\n# precompute\nMOD = 10**9+7\nMAX_N = 1000\nfact = [0]*(2*MAX_N-1+1)\ninv = [0]*(2*MAX_N-1+1)\ninv_fact = [0]*(2*MAX_N-1+1)\nfact[0] = inv_fact[0] = fact[1] = inv_fact[1] = inv[1] = 1\nfor i in xrange(2, len(fact)):\n    fact[i] = fact[i-1]*i % MOD\n    inv[i] = inv[MOD%i]*(MOD-MOD//i) % MOD  # https://cp-algorithms.com/algebra/module-inverse.html\n    inv_fact[i] = inv_fact[i-1]*inv[i] % MOD\n\nclass Solution(object):\n    def numberOfSets(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        def nCr(n, k, mod):\n            return (fact[n]*inv_fact[n-k] % mod) * inv_fact[k] % mod\n    \n        # find k segments with 1+ length and (k+1) spaces with 0+ length s.t. total length is n-1\n        # => find k segments with 0+ length and (k+1) spaces with 0+ length s.t. total length is n-k-1\n        # => find the number of combinations of 2k+1 variables with total sum n-k-1\n        # => H(2k+1, n-k-1)\n        # => C((2k+1) + (n-k-1) - 1, n-k-1)\n        # => C(n+k-1, n-k-1) = C(n+k-1, 2k)\n        return nCr(n+k-1, 2*k, MOD)\n\n\n# Time:  O(min(k, min(n - k)))\n# Space: O(1)\nclass Solution2(object):\n    def numberOfSets(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        MOD = 10**9+7\n        def nCr(n, r):  # Time: O(n), Space: O(1)\n            if n-r < r:\n                return nCr(n, n-r)\n            c = 1\n            for k in xrange(1, r+1):\n                c *= n-k+1\n                c //= k\n            return c\n        \n        # find k segments with 1+ length and (k+1) spaces with 0+ length s.t. total length is n-1\n        # => find k segments with 0+ length and (k+1) spaces with 0+ length s.t. total length is n-k-1\n        # => find the number of combinations of 2k+1 variables with total sum n-k-1\n        # => H(2k+1, n-k-1)\n        # => C((2k+1) + (n-k-1) - 1, n-k-1)\n        # => C(n+k-1, n-k-1) = C(n+k-1, 2k)\n        return nCr(n+k-1, 2*k) % MOD\n",
+      "sourcePath": "Python/number-of-sets-of-k-non-overlapping-line-segments.py"
+    }
+  },
+  "seo": {
+    "title": "Number of Sets of K Non-Overlapping Line Segments Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Number of Sets of K Non-Overlapping Line Segments (LeetCode #1621). Pattern: algorithms. Time O(1), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Number of Sets of K Non-Overlapping Line Segments",
+      "Number of Sets of K Non-Overlapping Line Segments solution",
+      "Number of Sets of K Non-Overlapping Line Segments leetcode",
+      "sort",
+      "medium"
+    ],
+    "canonicalPath": "/problems/number-of-sets-of-k-non-overlapping-line-segments"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Number of Sets of K Non-Overlapping Line Segments?",
+      "answer": "The reference solutions aim for O(1) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Number of Sets of K Non-Overlapping Line Segments use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of sort."
+    },
+    {
+      "question": "Is Number of Sets of K Non-Overlapping Line Segments good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Number of Sets of K Non-Overlapping Line Segments (#1621) — Medium. Pattern: general problem-solving. Complexity: O(1) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Number of Sets of K Non-Overlapping Line Segments: show input structure (sort), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

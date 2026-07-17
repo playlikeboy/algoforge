@@ -1,0 +1,158 @@
+{
+  "id": "773",
+  "number": 773,
+  "slug": "sliding-puzzle",
+  "title": "Sliding Puzzle",
+  "difficulty": "Hard",
+  "topics": [
+    "breadth-first-search"
+  ],
+  "patterns": [
+    "a-search-algorithm"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O((m * n) * (m * n)!)",
+  "spaceComplexity": "O((m * n) * (m * n)!)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/sliding-puzzle/",
+  "notes": [
+    "A* Search Algorithm"
+  ],
+  "relatedSlugs": [
+    "cut-off-trees-for-golf-event",
+    "minimum-moves-to-move-a-box-to-their-target-location",
+    "shortest-path-in-a-grid-with-obstacles-elimination",
+    "minimum-cost-to-make-at-least-one-valid-path-in-a-grid",
+    "minimum-obstacle-removal-to-reach-corner",
+    "populating-next-right-pointers-in-each-node-ii",
+    "alien-dictionary",
+    "shortest-distance-from-all-buildings"
+  ],
+  "prevSlug": "basic-calculator-iii",
+  "nextSlug": "minimize-max-distance-to-gas-station",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Sliding Puzzle?\n\n**Sliding Puzzle** (LeetCode #773) is a **Hard** problem that primarily trains **breadth first search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **a search algorithm**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: A* Search Algorithm.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/sliding-puzzle/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Sliding Puzzle\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **a search algorithm**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O((m * n) * (m * n)!)) and **space** (O((m * n) * (m * n)!)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O((m * n) * (m * n)!)** time and **O((m * n) * (m * n)!)** space.\n\n### Pattern focus: a search algorithm\n\nUse the pattern as a checklist:\n\n- **a search algorithm** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O((m * n) * (m * n)!)** |\n| Space | **O((m * n) * (m * n)!)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Sliding Puzzle\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for a search algorithm — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **a search algorithm**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **breadth first search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Sliding Puzzle** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **breadth first search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "sliding-puzzle.cpp",
+      "code": "// Time:  O((m * n) * (m * n)!)\n// Space: O((m * n) * (m * n)!)\n\n// A* Search Algorithm\nclass Solution {\npublic:\n    int slidingPuzzle(vector<vector<int>>& board) {\n        const auto& R = board.size(), &C = board[0].size();\n        vector<int> begin, end;\n        unordered_map<int, pair<int, int>> expected;\n        int zero_idx = 0;\n        for (int i = 0; i < R; ++i) {\n            for (int j = 0; j < C; ++j) {\n                auto val = (C * i + j + 1) % (R * C);\n                expected[val] = {i, j};\n                if (board[i][j] == 0) {\n                    zero_idx = begin.size();\n                }\n                begin.emplace_back(board[i][j]);\n                end.emplace_back(val);\n            }\n        }\n        \n        int min_steps = heuristic_estimate(begin, R, C, expected);\n        unordered_set<vector<int>, Hash<vector<int>>> lookup;\n        vector<pair<int, vector<int>>> closer{make_pair(zero_idx, begin)}, detour;\n        while (true) {\n            if (closer.empty()) {\n                if (detour.empty()) {\n                    return -1;\n                }\n                min_steps += 2;\n                swap(closer, detour);\n            }\n            int zero;\n            vector<int> board;\n            tie(zero, board) = closer.back(); closer.pop_back();\n            if (board == end) {\n                return min_steps;\n            }\n            if (!lookup.count(board)) {\n                lookup.emplace(board);\n                int r = zero / C;\n                int c = zero % C;\n                static const vector<pair<int, int>> directions{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};\n                for (const auto& direction : directions) {\n                    int i = r + direction.first;\n                    int j = c + direction.second;\n                    if (0 <= i && i < R && 0 <= j && j < C) {\n                        auto new_zero = C * i + j;\n                        auto new_board = board;\n                        swap(new_board[zero], new_board[new_zero]);\n                        int r2, c2;\n                        tie(r2, c2) = expected[board[new_zero]];\n                        int r1 = zero / C;\n                        int c1 = zero % C;\n                        int r0 = new_zero / C;\n                        int c0 = new_zero % C;\n                        bool is_closer = dot({r1 - r0, c1 - c0}, {r2 - r0, c2 - c0}) > 0;\n                        is_closer ? closer.emplace_back(new_zero, new_board) : detour.emplace_back(new_zero, new_board);\n                    }\n                }\n            }\n        }\n\n        return min_steps;\n    }\n\nprivate:\n    int heuristic_estimate(const vector<int>& board, int R, int C, const unordered_map<int, pair<int, int>>& expected) {\n        int result = 0;\n        for (int i = 0; i < R; ++i) {\n            for (int j = 0; j < C; ++j) {\n                const auto& val = board[C * i + j];\n                if (val == 0) {\n                    continue;\n                }\n                int r, c;\n                tie(r, c) = expected.at(val);\n                result += abs(r - i) + abs(c - j);\n            }\n        }\n        return result;\n    }\n\n    inline int dot(const pair<int, int>& a, const pair<int, int>& b) {\n        return a.first * b.first + a.second * b.second;\n    }\n                        \n    template<typename ContType>\n    struct Hash {\n        size_t operator()(const ContType& v) const {\n            size_t seed = 0;\n            for (const auto& i : v) {\n                seed ^= std::hash<typename ContType::value_type>{}(i)  + 0x9e3779b9 + (seed<<6) + (seed>>2);\n            }\n            return seed;\n        }\n    };\n};\n\n// Time:  O((m * n) * (m * n)! * log((m * n)!))\n// Space: O((m * n) * (m * n)!)\n// A* Search Algorithm\nclass Solution2 {\npublic:\n    int slidingPuzzle(vector<vector<int>>& board) {\n        const auto& R = board.size(), &C = board[0].size();\n        vector<int> begin, end;\n        unordered_map<int, pair<int, int>> expected;\n        int zero_idx = 0;\n        for (int i = 0; i < R; ++i) {\n            for (int j = 0; j < C; ++j) {\n                auto val = (C * i + j + 1) % (R * C);\n                expected[val] = {i, j};\n                if (board[i][j] == 0) {\n                    zero_idx = begin.size();\n                }\n                begin.emplace_back(board[i][j]);\n                end.emplace_back(val);\n            }\n        }\n        vector<int> end_wrong(end);\n        swap(end_wrong[end_wrong.size() - 2], end_wrong[end_wrong.size() - 3]);\n           \n        using P = tuple<int, int, int, vector<int>>;\n        priority_queue<P, vector<P>, greater<P>> min_heap;\n        min_heap.emplace(make_tuple(0, 0, zero_idx, begin));\n        unordered_map<vector<int>, int, Hash<vector<int>>> lookup;\n        lookup[begin] = 0;\n        while (!min_heap.empty()) {\n            int f, g, zero;\n            vector<int> board;\n            tie(f, g, zero, board) = min_heap.top(); min_heap.pop();\n            if (board == end) {\n                return g;\n            }\n            if (board == end_wrong) {\n                return -1;\n            }\n            if (f > lookup[board]) {\n                continue;\n            }\n            int r = zero / C;\n            int c = zero % C;\n            static const vector<pair<int, int>> directions{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};\n            for (const auto& direction : directions) {\n                int i = r + direction.first;\n                int j = c + direction.second;\n                if (0 <= i && i < R && 0 <= j && j < C) {\n                    auto new_zero = C * i + j;\n                    auto new_board = board;\n                    swap(new_board[zero], new_board[new_zero]);\n                    f = g + 1 + heuristic_estimate(new_board, R, C, expected);\n                    if (!lookup.count(new_board) || f < lookup[new_board])\n                        lookup[new_board] = f;\n                        min_heap.emplace(make_tuple(f, g + 1, new_zero, new_board));\n                    }\n                }\n            }\n        }\n        return -1;\n    }\n\nprivate:\n    int heuristic_estimate(const vector<int>& board, int R, int C, const unordered_map<int, pair<int, int>>& expected) {\n        int result = 0;\n        for (int i = 0; i < R; ++i) {\n            for (int j = 0; j < C; ++j) {\n                const auto& val = board[C * i + j];\n                if (val == 0) {\n                    continue;\n                }\n                int r, c;\n                tie(r, c) = expected.at(val);\n                result += abs(r - i) + abs(c - j);\n            }\n        }\n        return result;\n    }\n                        \n    template<typename ContType>\n    struct Hash {\n        size_t operator()(const ContType& v) const {\n            size_t seed = 0;\n            for (const auto& i : v) {\n                seed ^= std::hash<typename ContType::value_type>{}(i)  + 0x9e3779b9 + (seed<<6) + (seed>>2);\n            }\n            return seed;\n        }\n    };\n};\n",
+      "sourcePath": "C++/sliding-puzzle.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "sliding-puzzle.py",
+      "code": "# Time:  O((m * n) * (m * n)!)\n# Space: O((m * n) * (m * n)!)\n\nimport heapq\nimport itertools\n\n\n# A* Search Algorithm\nclass Solution(object):\n    def slidingPuzzle(self, board):\n        \"\"\"\n        :type board: List[List[int]]\n        :rtype: int\n        \"\"\"\n        def dot(p1, p2):\n            return p1[0]*p2[0]+p1[1]*p2[1]\n\n        def heuristic_estimate(board, R, C, expected):\n            result = 0\n            for i in xrange(R):\n                for j in xrange(C):\n                    val = board[C*i + j]\n                    if val == 0: continue\n                    r, c = expected[val]\n                    result += abs(r-i) + abs(c-j)\n            return result\n\n        R, C = len(board), len(board[0])\n        begin = tuple(itertools.chain(*board))\n        end = tuple(range(1, R*C) + [0])\n        expected = {(C*i+j+1) % (R*C) : (i, j)\n                    for i in xrange(R) for j in xrange(C)}\n\n        min_steps = heuristic_estimate(begin, R, C, expected)\n        closer, detour = [(begin.index(0), begin)], []\n        lookup = set()\n        while True:\n            if not closer:\n                if not detour:\n                    return -1\n                min_steps += 2\n                closer, detour = detour, closer\n            zero, board = closer.pop()\n            if board == end:\n                return min_steps\n            if board not in lookup:\n                lookup.add(board)\n                r, c = divmod(zero, C)\n                for direction in ((-1, 0), (1, 0), (0, -1), (0, 1)):\n                    i, j = r+direction[0], c+direction[1]\n                    if 0 <= i < R and 0 <= j < C:\n                        new_zero = i*C+j\n                        tmp = list(board)\n                        tmp[zero], tmp[new_zero] = tmp[new_zero], tmp[zero]\n                        new_board = tuple(tmp)\n                        r2, c2 = expected[board[new_zero]]\n                        r1, c1 = divmod(zero, C)\n                        r0, c0 = divmod(new_zero, C)\n                        is_closer = dot((r1-r0, c1-c0), (r2-r0, c2-c0)) > 0\n                        (closer if is_closer else detour).append((new_zero, new_board))\n        return min_steps\n\n\n# Time:  O((m * n) * (m * n)! * log((m * n)!))\n# Space: O((m * n) * (m * n)!)\n# A* Search Algorithm\nclass Solution2(object):\n    def slidingPuzzle(self, board):\n        \"\"\"\n        :type board: List[List[int]]\n        :rtype: int\n        \"\"\"\n        def heuristic_estimate(board, R, C, expected):\n            result = 0\n            for i in xrange(R):\n                for j in xrange(C):\n                    val = board[C*i + j]\n                    if val == 0: continue\n                    r, c = expected[val]\n                    result += abs(r-i) + abs(c-j)\n            return result\n\n        R, C = len(board), len(board[0])\n        begin = tuple(itertools.chain(*board))\n        end = tuple(range(1, R*C) + [0])\n        end_wrong = tuple(range(1, R*C-2) + [R*C-1, R*C-2, 0])\n        expected = {(C*i+j+1) % (R*C) : (i, j)\n                    for i in xrange(R) for j in xrange(C)}\n\n        min_heap = [(0, 0, begin.index(0), begin)]\n        lookup = {begin: 0}\n        while min_heap:\n            f, g, zero, board = heapq.heappop(min_heap)\n            if board == end: return g\n            if board == end_wrong: return -1\n            if f > lookup[board]: continue\n\n            r, c = divmod(zero, C)\n            for direction in ((-1, 0), (1, 0), (0, -1), (0, 1)):\n                i, j = r+direction[0], c+direction[1]\n                if 0 <= i < R and 0 <= j < C:\n                    new_zero = C*i+j\n                    tmp = list(board)\n                    tmp[zero], tmp[new_zero] = tmp[new_zero], tmp[zero]\n                    new_board = tuple(tmp)\n                    f = g+1+heuristic_estimate(new_board, R, C, expected)\n                    if f < lookup.get(new_board, float(\"inf\")):\n                        lookup[new_board] = f\n                        heapq.heappush(min_heap, (f, g+1, new_zero, new_board))\n        return -1\n\n",
+      "sourcePath": "Python/sliding-puzzle.py"
+    }
+  },
+  "seo": {
+    "title": "Sliding Puzzle Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Sliding Puzzle (LeetCode #773). Pattern: a search algorithm. Time O((m * n) * (m * n)!), space O((m * n) * (m * n)!). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Sliding Puzzle",
+      "Sliding Puzzle solution",
+      "Sliding Puzzle leetcode",
+      "breadth-first-search",
+      "a-search-algorithm",
+      "hard"
+    ],
+    "canonicalPath": "/problems/sliding-puzzle"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Sliding Puzzle?",
+      "answer": "The reference solutions aim for O((m * n) * (m * n)!) time and O((m * n) * (m * n)!) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Sliding Puzzle use?",
+      "answer": "It primarily maps to a search algorithm, within the broader topic of breadth first search."
+    },
+    {
+      "question": "Is Sliding Puzzle good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/sliding-puzzle/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the a search algorithm approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Sliding Puzzle (#773) — Hard. Pattern: a search algorithm. Complexity: O((m * n) * (m * n)!) time / O((m * n) * (m * n)!) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Sliding Puzzle: show input structure (breadth first search), highlight the moving parts of the a search algorithm approach, and annotate each step with the maintained invariant and complexity."
+}

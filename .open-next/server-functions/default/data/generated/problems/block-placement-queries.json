@@ -1,0 +1,166 @@
+{
+  "id": "3161",
+  "number": 3161,
+  "slug": "block-placement-queries",
+  "title": "Block Placement Queries",
+  "difficulty": "Hard",
+  "topics": [
+    "binary-search-tree"
+  ],
+  "patterns": [
+    "sorted-list",
+    "fenwick-tree",
+    "segment-tree"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(qlogq)",
+  "spaceComplexity": "O(q)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/block-placement-queries/",
+  "notes": [
+    "Sorted List",
+    "BST",
+    "BIT",
+    "Fenwick Tree",
+    "Segment Tree"
+  ],
+  "relatedSlugs": [
+    "maximum-balanced-subsequence-sum",
+    "maximum-profitable-triplets-with-increasing-prices-ii",
+    "power-update-after-k-th-largest-insertion-ii",
+    "maximum-profitable-triplets-with-increasing-prices-i",
+    "number-of-pairs-satisfying-inequality",
+    "distribute-elements-into-two-arrays-ii",
+    "maximum-sum-of-subsequence-with-non-adjacent-elements",
+    "minimum-absolute-difference-between-elements-with-constraint"
+  ],
+  "prevSlug": "find-the-number-of-distinct-colors-among-the-balls",
+  "nextSlug": "find-the-number-of-good-pairs-i",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Block Placement Queries?\n\n**Block Placement Queries** (LeetCode #3161) is a **Hard** problem that primarily trains **binary search tree**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sorted list, fenwick tree, and segment tree**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Sorted List, BST, BIT, Fenwick Tree.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/block-placement-queries/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Block Placement Queries\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sorted list, fenwick tree, and segment tree**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(qlogq)) and **space** (O(q)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(qlogq)** time and **O(q)** space.\n\n### Pattern focus: sorted list, fenwick tree, and segment tree\n\nUse the pattern as a checklist:\n\n- **sorted list** — confirm the invariant holds after each step\n- **fenwick tree** — confirm the invariant holds after each step\n- **segment tree** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(qlogq)** |\n| Space | **O(q)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Block Placement Queries\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sorted list, fenwick tree, and segment tree — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sorted list, fenwick tree, and segment tree**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **binary search tree**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Block Placement Queries** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **binary search tree**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "block-placement-queries.cpp",
+      "code": "// Time:  O(qlogq)\n// Space: O(q)\n\n// bst, bit, fenwick tree\nclass Solution {\npublic:\n    vector<bool> getResults(vector<vector<int>>& queries) {\n        set<int> bst;\n        for (const auto& q: queries) {\n            if (q[0] == 1) {\n                bst.emplace(q[1]);\n            }\n        }\n        unordered_map<int, int> val_to_idx;\n        int i = 0;\n        for (const auto& x : bst) {\n            val_to_idx[x] = i++;\n        }\n        const auto& fn = [](const auto& a, const auto& b) {\n            return max(a, b);\n        };\n\n        BIT<int64_t> bit(size(val_to_idx), 0, fn);\n        for (auto it = begin(bst); it != end(bst); ++it) {\n            bit.update(val_to_idx[*it], *it - (it != begin(bst) ? *prev(it) : 0));\n        }\n        vector<bool> result;\n        for (int i = size(queries) - 1; i >= 0; --i) {\n            auto it = bst.lower_bound(queries[i][1]);\n            if (queries[i][0] == 1) {\n                if (next(it) != end(bst)) {\n                    bit.update(val_to_idx[*next(it)], *next(it) - (it != begin(bst) ? *prev(it) : 0));\n                }\n                bst.erase(it);\n            } else {\n                result.emplace_back(queries[i][1] -  (it != begin(bst) ? *prev(it) : 0) >= queries[i][2] ||\n                                    (it != begin(bst) && bit.query(val_to_idx[*prev(it)]) >= queries[i][2]));\n            }\n        }\n        reverse(begin(result), end(result));\n        return result;\n    }\n\nprivate:\n    template<typename T>\n    class BIT {\n    public:\n        BIT(int n, T val, const function<T (T, T)> fn)\n          : bit_(n + 1, val),\n            fn_(fn) {  // 0-indexed\n        }\n        \n        void update(int i, T val) {\n            ++i;\n            for (; i < size(bit_); i += lower_bit(i)) {\n                bit_[i] = fn_(bit_[i], val);\n            }\n        }\n\n        T query(int i) const {\n            ++i;\n            auto total = bit_[0];\n            for (; i > 0; i -= lower_bit(i)) {\n                total = fn_(total, bit_[i]);\n            }\n            return total;\n        }\n    \n    private:\n        int lower_bit(int i) const {\n            return i & -i;\n        }\n        \n        vector<T> bit_;\n        const function<T (T, T)> fn_;\n    };\n};\n\n// Time:  O(qlogq)\n// Space: O(q)\n// bst, segment tree\nclass Solution2 {\npublic:\n    vector<bool> getResults(vector<vector<int>>& queries) {\n        set<int> bst;\n        for (const auto& q: queries) {\n            if (q[0] == 1) {\n                bst.emplace(q[1]);\n            }\n        }\n        unordered_map<int, int> val_to_idx;\n        int i = 0;\n        for (const auto& x : bst) {\n            val_to_idx[x] = i++;\n        }\n        SegmentTree st(size(val_to_idx));\n        const auto& update = [&](const auto& x) {\n            bst.emplace(x);\n            auto it = bst.find(x);\n            st.update(val_to_idx[x], x - (it != begin(bst) ? *prev(it) : 0));\n            if (next(it) != end(bst)) {\n                st.update(val_to_idx[*next(it)], *next(it) - x);\n            }\n        };\n\n        vector<bool> result;\n        bst.clear();\n        for (int i = 0; i < size(queries); ++i) {\n            if (queries[i][0] == 1) {\n                update(queries[i][1]);\n            } else {\n                auto it = bst.lower_bound(queries[i][1]);\n                result.emplace_back(queries[i][1] - (it != begin(bst) ? *prev(it) : 0) >= queries[i][2] ||\n                                    (it != begin(bst) && st.query(0, val_to_idx[*prev(it)]) >= queries[i][2]));\n            }\n        }\n        return result;\n    }\n\nprivate:\n    class SegmentTree {\n     public:\n        explicit SegmentTree(int N)\n          : tree(N > 1 ? 1 << (__lg(N - 1) + 2) : 2),\n            base(N > 1 ? 1 << (__lg(N - 1) + 1) : 1) {\n        }\n\n        void update(int i, const auto& h) {\n            int x = base + i;\n            tree[x] = h;\n            while (x > 1) {\n                x >>= 1;\n                tree[x] = max(tree[x << 1], tree[(x << 1) + 1]);\n            }\n        }\n\n        int64_t query(int L, int R) {\n            L += base;\n            R += base;\n            int64_t result = 0;\n            for (; L <= R; L >>= 1, R >>= 1) {\n                if (L & 1) {\n                    result = max(result, tree[L]);\n                    ++L;\n                }\n                if ((R & 1) == 0) {\n                    result = max(result, tree[R]);\n                    --R;\n                }\n            }\n            return result;\n        }\n\n        vector<int64_t> tree;\n        const int base;\n    };\n};\n",
+      "sourcePath": "C++/block-placement-queries.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "block-placement-queries.py",
+      "code": "# Time:  O(qlogq)\n# Space: O(q)\n\nfrom sortedcontainers import SortedList\n\n\n# sorted list, bit, fenwick tree\nclass Solution(object):\n    def getResults(self, queries):\n        \"\"\"\n        :type queries: List[List[int]]\n        :rtype: List[bool]\n        \"\"\"\n        class BIT(object):  # 0-indexed.\n            def __init__(self, n, default=0, fn=lambda x, y: x+y):\n                self.__bit = [default]*(n+1)  # Extra one for dummy node.\n                self.__default = default\n                self.__fn = fn\n\n            def update(self, i, val):\n                i += 1  # Extra one for dummy node.\n                while i < len(self.__bit):\n                    self.__bit[i] = self.__fn(self.__bit[i], val)\n                    i += (i & -i)\n\n            def query(self, i):\n                i += 1  # Extra one for dummy node.\n                ret = self.__default\n                while i > 0:\n                    ret = self.__fn(ret, self.__bit[i])\n                    i -= (i & -i)\n                return ret\n            \n        sl = SortedList(q[1] for q in queries if q[0] == 1)\n        val_to_idx = {x:i for i, x in enumerate(sl)}\n        bit = BIT(len(val_to_idx), fn=max)\n        for i in xrange(len(sl)):\n            bit.update(val_to_idx[sl[i]], sl[i]-(sl[i-1] if i-1 >= 0 else 0))\n        result = []\n        for q in reversed(queries):\n            i = sl.bisect_left(q[1])\n            if q[0] == 1:\n                if i+1 < len(sl):\n                    bit.update(val_to_idx[sl[i+1]], sl[i+1]-(sl[i-1] if i-1 >= 0 else 0))\n                del sl[i]\n            else:\n                result.append(q[1]-(sl[i-1] if i-1 >= 0 else 0) >= q[2] or (i-1 >= 0 and bit.query(val_to_idx[sl[i-1]]) >= q[2]))\n        result.reverse()\n        return result\n\n\n# Time:  O(qlogq)\n# Space: O(q)\nfrom sortedcontainers import SortedList\n\n\n# sorted list, segment tree\nclass Solution2(object):\n    def getResults(self, queries):\n        \"\"\"\n        :type queries: List[List[int]]\n        :rtype: List[bool]\n        \"\"\"\n        # Template:\n        # https://github.com/kamyu104/LeetCode-Solutions/blob/master/Python/booking-concert-tickets-in-groups.py\n        class SegmentTree(object):\n            def __init__(self, N,\n                        build_fn=lambda _: None,\n                        query_fn=lambda x, y: y if x is None else x if y is None else max(x, y),\n                        update_fn=lambda x: x):\n                self.tree = [None]*(1<<((N-1).bit_length()+1))\n                self.base = len(self.tree)>>1\n                self.query_fn = query_fn\n                self.update_fn = update_fn\n                for i in xrange(self.base, self.base+N):\n                    self.tree[i] = build_fn(i-self.base)\n                for i in reversed(xrange(1, self.base)):\n                    self.tree[i] = query_fn(self.tree[i<<1], self.tree[(i<<1)+1])\n\n            def update(self, i, h):\n                x = self.base+i\n                self.tree[x] = self.update_fn(h)\n                while x > 1:\n                    x >>= 1\n                    self.tree[x] = self.query_fn(self.tree[x<<1], self.tree[(x<<1)+1])\n\n            def query(self, L, R):\n                L += self.base\n                R += self.base\n                left = right = None\n                while L <= R:\n                    if L & 1:\n                        left = self.query_fn(left, self.tree[L])\n                        L += 1\n                    if R & 1 == 0:\n                        right = self.query_fn(self.tree[R], right)\n                        R -= 1\n                    L >>= 1\n                    R >>= 1\n                return self.query_fn(left, right)\n\n        def update(x):\n            sl.add(x)\n            i = sl.bisect_left(x)\n            st.update(val_to_idx[x], x-(sl[i-1] if i-1 >= 0 else 0))\n            if i+1 < len(sl):\n                st.update(val_to_idx[sl[i+1]], sl[i+1]-x)\n            \n        val_to_idx = {x:i for i, x in enumerate(sorted(q[1] for q in queries if q[0] == 1))}\n        st = SegmentTree(len(val_to_idx))\n        sl = SortedList()\n        result = []\n        for q in queries:\n            if q[0] == 1:\n                update(q[1])\n            else:\n                i = sl.bisect_left(q[1])\n                result.append(q[1]-(sl[i-1] if i-1 >= 0 else 0) >= q[2] or (i-1 >= 0 and st.query(0, val_to_idx[sl[i-1]]) >= q[2]))\n        return result\n",
+      "sourcePath": "Python/block-placement-queries.py"
+    }
+  },
+  "seo": {
+    "title": "Block Placement Queries Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Block Placement Queries (LeetCode #3161). Pattern: sorted list. Time O(qlogq), space O(q). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Block Placement Queries",
+      "Block Placement Queries solution",
+      "Block Placement Queries leetcode",
+      "binary-search-tree",
+      "sorted-list",
+      "fenwick-tree",
+      "segment-tree",
+      "hard"
+    ],
+    "canonicalPath": "/problems/block-placement-queries"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Block Placement Queries?",
+      "answer": "The reference solutions aim for O(qlogq) time and O(q) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Block Placement Queries use?",
+      "answer": "It primarily maps to sorted list, fenwick tree, and segment tree, within the broader topic of binary search tree."
+    },
+    {
+      "question": "Is Block Placement Queries good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/block-placement-queries/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sorted list, fenwick tree, and segment tree approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Block Placement Queries (#3161) — Hard. Pattern: sorted list, fenwick tree, and segment tree. Complexity: O(qlogq) time / O(q) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Block Placement Queries: show input structure (binary search tree), highlight the moving parts of the sorted list, fenwick tree, and segment tree approach, and annotate each step with the maintained invariant and complexity."
+}

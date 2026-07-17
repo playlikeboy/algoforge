@@ -1,0 +1,61 @@
+{
+  "slug": "easy-sort-problems",
+  "path": "/explore/easy-sort-problems",
+  "h1": "Easy Sort Problems",
+  "intro": "26 easy problems that drill the Sort pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "relative-ranks",
+    "increasing-decreasing-string",
+    "sorting-the-sentence",
+    "check-if-all-the-integers-in-a-range-are-covered",
+    "minimum-cost-of-buying-candies-with-discount",
+    "check-if-an-array-is-consecutive",
+    "find-resultant-array-after-removing-anagrams",
+    "merge-similar-items",
+    "longest-subsequence-with-limited-sum",
+    "sort-the-people",
+    "split-with-minimum-sum",
+    "sort-by",
+    "count-pairs-whose-sum-is-less-than-target",
+    "points-that-intersect-with-cars",
+    "maximum-strong-pair-xor-i",
+    "minimum-number-game",
+    "apple-redistribution-into-boxes",
+    "minimum-average-of-smallest-and-largest-elements",
+    "final-array-state-after-k-multiplication-operations-i",
+    "phone-number-prefix",
+    "coupon-code-validator",
+    "sort-array-by-absolute-value",
+    "maximize-sum-of-at-most-k-distinct-elements",
+    "sort-integers-by-binary-reflection",
+    "absolute-difference-between-maximum-and-minimum-k-elements",
+    "toggle-light-bulbs"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice easy Sort problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/sort",
+      "label": "Sort pattern"
+    },
+    {
+      "href": "/difficulty/easy",
+      "label": "All Easy problems"
+    }
+  ],
+  "seo": {
+    "title": "Easy Sort Problems | AlgoForge",
+    "description": "Practice easy Sort LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "easy Sort",
+      "Sort problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/easy-sort-problems"
+  },
+  "kind": "difficulty-pattern"
+}

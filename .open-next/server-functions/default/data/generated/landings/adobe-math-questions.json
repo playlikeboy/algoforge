@@ -1,0 +1,46 @@
+{
+  "slug": "adobe-math-questions",
+  "path": "/explore/adobe-math-questions",
+  "h1": "Best Math Questions for Adobe",
+  "intro": "A curated set of 3 Math problems frequently useful for Adobe interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "add-digits",
+    "ugly-number",
+    "nim-game"
+  ],
+  "faqs": [
+    {
+      "question": "How many Math problems should I do for Adobe?",
+      "answer": "Quality over quantity: master patterns with 3 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Math topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/adobe",
+      "label": "Adobe interview hub"
+    },
+    {
+      "href": "/topics/math",
+      "label": "Math problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Math Questions for Adobe | AlgoForge",
+    "description": "Top Math coding interview questions for Adobe. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Adobe Math questions",
+      "Math interview",
+      "Adobe leetcode"
+    ],
+    "canonicalPath": "/explore/adobe-math-questions"
+  },
+  "kind": "company-topic"
+}

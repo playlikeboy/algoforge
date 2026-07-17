@@ -1,0 +1,169 @@
+{
+  "id": "2813",
+  "number": 2813,
+  "slug": "maximum-elegance-of-a-k-length-subsequence",
+  "title": "Maximum Elegance of a K-Length Subsequence",
+  "difficulty": "Hard",
+  "topics": [
+    "greedy"
+  ],
+  "patterns": [
+    "partial-sort",
+    "heap",
+    "sorted-list",
+    "greedy"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogk)",
+  "spaceComplexity": "O(k)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-elegance-of-a-k-length-subsequence/",
+  "notes": [
+    "Partial Sort",
+    "Heap",
+    "Quick Select",
+    "BST",
+    "Sorted List",
+    "Greedy"
+  ],
+  "relatedSlugs": [
+    "maximum-performance-of-a-team",
+    "maximum-spending-after-buying-items",
+    "find-time-required-to-eliminate-bacterial-strains",
+    "minimum-operations-to-achieve-at-least-k-peaks",
+    "number-of-orders-in-the-backlog",
+    "maximum-subsequence-score",
+    "maximum-transactions-without-negative-balance",
+    "maximum-number-of-tasks-you-can-assign"
+  ],
+  "prevSlug": "find-the-safest-path-in-a-grid",
+  "nextSlug": "minimum-time-takes-to-reach-destination-without-drowning",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Maximum Elegance of a K-Length Subsequence?\n\n**Maximum Elegance of a K-Length Subsequence** (LeetCode #2813) is a **Hard** problem that primarily trains **greedy**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **partial sort, heap, sorted list, and greedy**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Partial Sort, Heap, Quick Select, BST.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/maximum-elegance-of-a-k-length-subsequence/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Maximum Elegance of a K-Length Subsequence\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **partial sort, heap, sorted list, and greedy**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogk)) and **space** (O(k)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogk)** time and **O(k)** space.\n\n### Pattern focus: partial sort, heap, sorted list, and greedy\n\nUse the pattern as a checklist:\n\n- **partial sort** — confirm the invariant holds after each step\n- **heap** — confirm the invariant holds after each step\n- **sorted list** — confirm the invariant holds after each step\n- **greedy** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogk)** |\n| Space | **O(k)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Maximum Elegance of a K-Length Subsequence\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for partial sort, heap, sorted list, and greedy — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **partial sort, heap, sorted list, and greedy**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **greedy**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Maximum Elegance of a K-Length Subsequence** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **greedy**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "maximum-elegance-of-a-k-length-subsequence.cpp",
+      "code": "// Time:  O(nlogk)\n// Space: O(k)\n\n// partial sort, bst, greedy\nclass Solution {\npublic:\n    long long findMaximumElegance(vector<vector<int>>& items, int k) {\n        partial_sort(begin(items), begin(items) + k, end(items), greater<vector<int>>());\n        vector<bool> lookup(size(items));\n        vector<int> stk;\n        int64_t curr = 0, l = 0;\n        for (int i = 0; i < k; ++i) {\n            if (lookup[items[i][1] - 1]) {\n                stk.emplace_back(items[i][0]);\n            }\n            curr += items[i][0];\n            if (!lookup[items[i][1] - 1]) {\n                lookup[items[i][1] - 1] = true;\n                ++l;\n            }\n        }\n        set<pair<int, int>> bst;\n        vector<int> lookup2(size(items));\n        for (int i = k; i < size(items); ++i) {\n            const auto& p = items[i][0], &c = items[i][1];\n            if (lookup[c - 1]) {\n                continue;\n            }\n            if (lookup2[c - 1]) {\n                if (lookup2[c - 1] >= p) {\n                    continue;\n                }\n                bst.erase({lookup2[c - 1], c});\n            }\n            bst.emplace(p, c);\n            lookup2[c - 1] = p;\n            if (size(bst) > size(stk)) {\n                auto it = begin(bst);\n                lookup2[it->second - 1] = 0;\n                bst.erase(it);\n            }\n        }\n        int64_t result = curr + l * l;\n        for (auto rit = rbegin(bst); rit != rend(bst); ++rit) {\n            curr += rit->first - stk.back(); stk.pop_back();\n            ++l;\n            result = max(result, curr + l * l);\n        }\n        return result;\n    }\n};\n\n// Time:  O(n + klogk)\n// Space: O(n)\n// quick select, sort, greedy\nclass Solution2 {\npublic:\n    long long findMaximumElegance(vector<vector<int>>& items, int k) {\n        const auto& nlargest = [](const auto& k, auto nums) {\n            if (empty(nums)) {\n                return vector<vector<int>>();\n            }\n            nth_element(begin(nums), begin(nums) + (k - 1), end(nums), greater<vector<int>>());\n            sort(begin(nums), begin(nums) + k, greater<vector<int>>());\n            return vector<vector<int>>(begin(nums), begin(nums) + k);\n        };\n\n        vector<bool> lookup(size(items));\n        vector<int> stk;\n        int64_t curr = 0, l = 0;\n        for (const auto& x : nlargest(k, items)) {\n            if (lookup[x[1] - 1]) {\n                stk.emplace_back(x[0]);\n            }\n            curr += x[0];\n            if (!lookup[x[1] - 1]) {\n                lookup[x[1] - 1] = true;\n                ++l;\n            }\n        }\n        vector<int> lookup2(size(items));\n        for (const auto& x : items) {\n            if (lookup[x[1] - 1]) {\n                continue;\n            }\n            lookup2[x[1] - 1] = max(lookup2[x[1] - 1], x[0]);\n        }\n        vector<vector<int>> candidates;\n        for (int c = 0; c < size(lookup2); ++c) {\n            if (lookup2[c]) {\n                candidates.push_back({lookup2[c], c});\n            }\n        }\n        int64_t result = curr + l * l;\n        for (const auto& x : nlargest(min(size(stk), size(candidates)), candidates)) {\n            curr += x[0] - stk.back(); stk.pop_back();\n            ++l;\n            result = max(result, curr + l * l);\n        }\n        return result;\n    }\n};\n\n// Time:  O(nlogn)\n// Space: O(n)\n// sort, greedy\nclass Solution3 {\npublic:\n    long long findMaximumElegance(vector<vector<int>>& items, int k) {\n        sort(rbegin(items), rend(items));\n        vector<bool> lookup(size(items));\n        vector<int> stk;\n        int64_t curr = 0, l = 0;\n        for (int i = 0; i < k; ++i) {\n            if (lookup[items[i][1] - 1]) {\n                stk.emplace_back(items[i][0]);\n            }\n            curr += items[i][0];\n            if (!lookup[items[i][1] - 1]) {\n                lookup[items[i][1] - 1] = true;\n                ++l;\n            }\n        }\n        int64_t result = curr + l * l;\n        for (int i = k; i < size(items); ++i) {\n            if (lookup[items[i][1] - 1]) {\n                continue;\n            }\n            if (empty(stk)) {\n                break;\n            }\n            curr += items[i][0] - stk.back(); stk.pop_back();\n            lookup[items[i][1] - 1] = true;\n            ++l;\n            result = max(result, curr + l * l);\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/maximum-elegance-of-a-k-length-subsequence.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "maximum-elegance-of-a-k-length-subsequence.py",
+      "code": "# Time:  O(nlogk)\n# Space: O(k)\n\nimport heapq\nfrom sortedcontainers import SortedList\n\n\n# heap, sorted list, greedy\nclass Solution(object):\n    def findMaximumElegance(self, items, k):\n        \"\"\"\n        :type items: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        curr = 0\n        lookup = set()\n        stk = []\n        for p, c in heapq.nlargest(k, items):\n            if c in lookup:\n                stk.append(p)\n            curr += p\n            lookup.add(c)\n        sl = SortedList()\n        lookup2 = {}\n        for p, c in items:\n            if c in lookup:\n                continue\n            if c in lookup2:\n                if lookup2[c] >= p:\n                    continue\n                sl.remove((lookup2[c], c))\n            sl.add((p, c))\n            lookup2[c] = p\n            if len(sl) > len(stk):\n                del lookup2[sl[0][1]]\n                del sl[0]\n        result = curr+len(lookup)**2\n        for p, c in reversed(sl):\n            curr += p-stk.pop()\n            lookup.add(c)\n            result = max(result, curr+len(lookup)**2) \n        return result\n\n\n# Time:  O(n + klogk)\n# Space: O(n)\nimport random\nimport collections\n\n# quick select, sort, greedy\nclass Solution2(object):\n    def findMaximumElegance(self, items, k):\n        \"\"\"\n        :type items: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        def nth_element(nums, n, left=0, compare=lambda a, b: a < b):\n            def tri_partition(nums, left, right, target, compare):\n                mid = left\n                while mid <= right:\n                    if nums[mid] == target:\n                        mid += 1\n                    elif compare(nums[mid], target):\n                        nums[left], nums[mid] = nums[mid], nums[left]\n                        left += 1\n                        mid += 1\n                    else:\n                        nums[mid], nums[right] = nums[right], nums[mid]\n                        right -= 1\n                return left, right\n            \n            right = len(nums)-1\n            while left <= right:\n                pivot_idx = random.randint(left, right)\n                pivot_left, pivot_right = tri_partition(nums, left, right, nums[pivot_idx], compare)\n                if pivot_left <= n <= pivot_right:\n                    return\n                elif pivot_left > n:\n                    right = pivot_left-1\n                else:  # pivot_right < n.\n                    left = pivot_right+1\n    \n        def nlargest(k, nums):\n            nth_element(nums, k-1, compare=lambda a, b: a > b)\n            return sorted(nums[:k], reverse=True)\n    \n        curr = 0\n        lookup = set()\n        stk = []\n        for p, c in nlargest(k, items):\n            if c in lookup:\n                stk.append(p)\n            curr += p\n            lookup.add(c)\n        lookup2 = collections.defaultdict(int)\n        for p, c in items:\n            if c in lookup:\n                continue\n            lookup2[c] = max(lookup2[c], p)\n        l = len(lookup)\n        result = curr+l**2\n        for p in nlargest(min(len(stk), len(lookup2)), lookup2.values()):\n            curr += p-stk.pop()\n            l += 1\n            result = max(result, curr+l**2) \n        return result\n\n\n# Time:  O(nlogn)\n# Space: O(k)\n# sort, greedy\nclass Solution3(object):\n    def findMaximumElegance(self, items, k):\n        \"\"\"\n        :type items: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        items.sort(reverse=True)\n        result = curr = 0\n        lookup = set()\n        stk = []\n        for i in xrange(k):\n            if items[i][1] in lookup:\n                stk.append(items[i][0])\n            curr += items[i][0]\n            lookup.add(items[i][1])\n        result = curr+len(lookup)**2\n        for i in xrange(k, len(items)):\n            if items[i][1] in lookup:\n                continue\n            if not stk:\n                break\n            curr += items[i][0]-stk.pop()\n            lookup.add(items[i][1])\n            result = max(result, curr+len(lookup)**2)\n        return result\n",
+      "sourcePath": "Python/maximum-elegance-of-a-k-length-subsequence.py"
+    }
+  },
+  "seo": {
+    "title": "Maximum Elegance of a K-Length Subsequence Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Maximum Elegance of a K-Length Subsequence (LeetCode #2813). Pattern: partial sort. Time O(nlogk), space O(k). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Maximum Elegance of a K-Length Subsequence",
+      "Maximum Elegance of a K-Length Subsequence solution",
+      "Maximum Elegance of a K-Length Subsequence leetcode",
+      "greedy",
+      "partial-sort",
+      "heap",
+      "sorted-list",
+      "greedy",
+      "hard"
+    ],
+    "canonicalPath": "/problems/maximum-elegance-of-a-k-length-subsequence"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Maximum Elegance of a K-Length Subsequence?",
+      "answer": "The reference solutions aim for O(nlogk) time and O(k) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Maximum Elegance of a K-Length Subsequence use?",
+      "answer": "It primarily maps to partial sort, heap, sorted list, and greedy, within the broader topic of greedy."
+    },
+    {
+      "question": "Is Maximum Elegance of a K-Length Subsequence good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/maximum-elegance-of-a-k-length-subsequence/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the partial sort, heap, sorted list, and greedy approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Maximum Elegance of a K-Length Subsequence (#2813) — Hard. Pattern: partial sort, heap, sorted list, and greedy. Complexity: O(nlogk) time / O(k) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Maximum Elegance of a K-Length Subsequence: show input structure (greedy), highlight the moving parts of the partial sort, heap, sorted list, and greedy approach, and annotate each step with the maintained invariant and complexity."
+}

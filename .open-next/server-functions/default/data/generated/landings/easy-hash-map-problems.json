@@ -1,0 +1,85 @@
+{
+  "slug": "easy-hash-map-problems",
+  "path": "/explore/easy-hash-map-problems",
+  "h1": "Easy Hash Map Problems",
+  "intro": "115 easy problems that drill the Hash Map pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "two-sum",
+    "valid-sudoku",
+    "two-sum-iii-data-structure-design",
+    "happy-number",
+    "count-primes",
+    "isomorphic-strings",
+    "contains-duplicate",
+    "contains-duplicate-ii",
+    "strobogrammatic-number",
+    "group-shifted-strings",
+    "palindrome-permutation",
+    "unique-word-abbreviation",
+    "word-pattern",
+    "bulls-and-cows",
+    "first-unique-character-in-a-string",
+    "longest-palindrome",
+    "find-all-anagrams-in-a-string",
+    "number-of-boomerangs",
+    "k-diff-pairs-in-an-array",
+    "array-partition-i",
+    "distribute-candies",
+    "longest-harmonious-subsequence",
+    "minimum-index-sum-of-two-lists",
+    "sentence-similarity",
+    "shortest-completing-word",
+    "find-anagram-mappings",
+    "jewels-and-stones",
+    "subdomain-visit-count",
+    "largest-unique-number",
+    "find-words-that-can-be-formed-by-characters",
+    "single-row-keyboard",
+    "unique-number-of-occurrences",
+    "check-array-formation-through-concatenation",
+    "sum-of-unique-elements",
+    "count-square-sum-triples",
+    "check-if-all-characters-have-equal-number-of-occurrences",
+    "count-special-quadruplets",
+    "count-number-of-pairs-with-absolute-difference-k",
+    "two-out-of-three",
+    "kth-distinct-string-in-an-array",
+    "check-whether-two-strings-are-almost-equivalent",
+    "count-common-words-with-one-occurrence",
+    "keep-multiplying-found-values-by-two",
+    "most-frequent-number-following-key-in-an-array",
+    "divide-array-into-equal-pairs",
+    "find-the-difference-of-two-arrays",
+    "check-if-an-array-is-consecutive",
+    "intersection-of-multiple-arrays",
+    "check-if-number-has-equal-digit-count-and-digit-value",
+    "rearrange-characters-to-make-target-string"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice easy Hash Map problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/hash-map",
+      "label": "Hash Map pattern"
+    },
+    {
+      "href": "/difficulty/easy",
+      "label": "All Easy problems"
+    }
+  ],
+  "seo": {
+    "title": "Easy Hash Map Problems | AlgoForge",
+    "description": "Practice easy Hash Map LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "easy Hash Map",
+      "Hash Map problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/easy-hash-map-problems"
+  },
+  "kind": "difficulty-pattern"
+}

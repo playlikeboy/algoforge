@@ -1,0 +1,160 @@
+{
+  "id": "3233",
+  "number": 3233,
+  "slug": "find-the-count-of-numbers-which-are-not-special",
+  "title": "Find the Count of Numbers Which Are Not Special",
+  "difficulty": "Medium",
+  "topics": [
+    "binary-search"
+  ],
+  "patterns": [
+    "binary-search"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "precompute: O(sqrt(r)) runtime: O(logr)",
+  "spaceComplexity": "O(sqrt(r))",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/find-the-count-of-numbers-which-are-not-special/",
+  "notes": [
+    "Number Theory",
+    "Linear Sieve of Eratosthenes",
+    "Binary Search"
+  ],
+  "relatedSlugs": [
+    "search-in-rotated-sorted-array",
+    "find-first-and-last-position-of-element-in-sorted-array",
+    "search-insert-position",
+    "sqrtx",
+    "search-a-2d-matrix",
+    "search-in-rotated-sorted-array-ii",
+    "find-minimum-in-rotated-sorted-array",
+    "find-peak-element"
+  ],
+  "prevSlug": "find-if-digit-game-can-be-won",
+  "nextSlug": "count-the-number-of-substrings-with-dominant-ones",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Find the Count of Numbers Which Are Not Special?\n\n**Find the Count of Numbers Which Are Not Special** (LeetCode #3233) is a **Medium** problem that primarily trains **binary search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **binary search**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Number Theory, Linear Sieve of Eratosthenes, Binary Search.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/find-the-count-of-numbers-which-are-not-special/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Find the Count of Numbers Which Are Not Special\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **binary search**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (precompute: O(sqrt(r)) runtime: O(logr)) and **space** (O(sqrt(r))) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **precompute: O(sqrt(r)) runtime: O(logr)** time and **O(sqrt(r))** space.\n\n### Pattern focus: binary search\n\nUse the pattern as a checklist:\n\n- **binary search** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **precompute: O(sqrt(r)) runtime: O(logr)** |\n| Space | **O(sqrt(r))** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Find the Count of Numbers Which Are Not Special\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for binary search — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **binary search**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **binary search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Find the Count of Numbers Which Are Not Special** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **binary search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "find-the-count-of-numbers-which-are-not-special.cpp",
+      "code": "// Time:  precompute:  O(sqrt(r))\n//        runtime:     O(logr + log(sqrt(r))) = O(logr)\n// Space: O(sqrt(r))\n\n// number theory, binary search\nvector<int> linear_sieve_of_eratosthenes(int n) {  // Time: O(n), Space: O(n)\n    vector<int> spf(n + 1, -1);\n    vector<int> primes;\n    for (int i = 2; i <= n; ++i) {\n        if (spf[i] == -1) {\n            spf[i] = i;\n            primes.emplace_back(i);\n        }\n        for (const auto& p : primes) {\n            if (i * p > n || p > spf[i]) {\n                break;\n            }\n            spf[i * p] = p;\n        }\n    }\n    return primes;\n};\n\nconst int MAX_R = 1e9;\nconst auto& PRIMES = linear_sieve_of_eratosthenes(sqrt(MAX_R));\nclass Solution {\npublic:\n    int nonSpecialCount(int l, int r) {\n        const auto& count = [](int x) {\n            return x - distance(cbegin(PRIMES), upper_bound(cbegin(PRIMES), cend(PRIMES), sqrt(x)));\n        };\n\n        return count(r) - count(l - 1);\n    }\n};\n",
+      "sourcePath": "C++/find-the-count-of-numbers-which-are-not-special.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "find-the-count-of-numbers-which-are-not-special.py",
+      "code": "# Time:  precompute:  O(sqrt(r))\n#        runtime:     O(logr + log(sqrt(r))) = O(logr)\n# Space: O(sqrt(r))\n\nimport bisect\n\n\n# number theory, binary search\ndef linear_sieve_of_eratosthenes(n):  # Time: O(n), Space: O(n)\n    primes = []\n    spf = [-1]*(n+1)  # the smallest prime factor\n    for i in xrange(2, n+1):\n        if spf[i] == -1:\n            spf[i] = i\n            primes.append(i)\n        for p in primes:\n            if i*p > n or p > spf[i]:\n                break\n            spf[i*p] = p\n    return primes  # len(primes) = O(n/(logn-1)), reference: https://math.stackexchange.com/questions/264544/how-to-find-number-of-prime-numbers-up-to-to-n\n\n\nMAX_R = 10**9\nPRIMES = linear_sieve_of_eratosthenes(int(MAX_R**0.5))\nclass Solution(object):\n    def nonSpecialCount(self, l, r):\n        \"\"\"\n        :type l: int\n        :type r: int\n        :rtype: int\n        \"\"\"\n        def count(x):\n            return x-bisect.bisect_right(PRIMES, int(x**0.5))\n\n        return count(r)-count(l-1)\n",
+      "sourcePath": "Python/find-the-count-of-numbers-which-are-not-special.py"
+    }
+  },
+  "seo": {
+    "title": "Find the Count of Numbers Which Are Not Special Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Find the Count of Numbers Which Are Not Special (LeetCode #3233). Pattern: binary search. Time precompute: O(sqrt(r)) runtime: O(logr), space O(sqrt(r)). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Find the Count of Numbers Which Are Not Special",
+      "Find the Count of Numbers Which Are Not Special solution",
+      "Find the Count of Numbers Which Are Not Special leetcode",
+      "binary-search",
+      "binary-search",
+      "medium"
+    ],
+    "canonicalPath": "/problems/find-the-count-of-numbers-which-are-not-special"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Find the Count of Numbers Which Are Not Special?",
+      "answer": "The reference solutions aim for precompute: O(sqrt(r)) runtime: O(logr) time and O(sqrt(r)) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Find the Count of Numbers Which Are Not Special use?",
+      "answer": "It primarily maps to binary search, within the broader topic of binary search."
+    },
+    {
+      "question": "Is Find the Count of Numbers Which Are Not Special good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/find-the-count-of-numbers-which-are-not-special/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the binary search approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Find the Count of Numbers Which Are Not Special (#3233) — Medium. Pattern: binary search. Complexity: precompute: O(sqrt(r)) runtime: O(logr) time / O(sqrt(r)) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Find the Count of Numbers Which Are Not Special: show input structure (binary search), highlight the moving parts of the binary search approach, and annotate each step with the maintained invariant and complexity."
+}

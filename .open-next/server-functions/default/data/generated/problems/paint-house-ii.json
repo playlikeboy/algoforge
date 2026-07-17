@@ -1,0 +1,156 @@
+{
+  "id": "265",
+  "number": 265,
+  "slug": "paint-house-ii",
+  "title": "Paint House II",
+  "difficulty": "Hard",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dynamic-programming"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n * k)",
+  "spaceComplexity": "O(k)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/paint-house-ii/",
+  "notes": [],
+  "relatedSlugs": [
+    "regular-expression-matching",
+    "edit-distance",
+    "scramble-string",
+    "interleaving-string",
+    "distinct-subsequences",
+    "best-time-to-buy-and-sell-stock-iii",
+    "palindrome-partitioning-ii",
+    "dungeon-game"
+  ],
+  "prevSlug": "ugly-number-ii",
+  "nextSlug": "palindrome-permutation",
+  "estimatedMinutes": 60,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Paint House II?\n\n**Paint House II** (LeetCode #265) is a **Hard** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/paint-house-ii/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Paint House II\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n * k)) and **space** (O(k)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n * k)** time and **O(k)** space.\n\n### Pattern focus: dynamic programming\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n * k)** |\n| Space | **O(k)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Paint House II\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Paint House II** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "paint-house-ii.cpp",
+      "code": "// Time:  O(n * k)\n// Space: O(k)\n\nclass Solution {\npublic:\n    int minCostII(vector<vector<int>>& costs) {\n        if (costs.empty()) {\n            return 0;\n        }\n        \n        vector<vector<int>> min_cost(2, costs[0]);\n\n        const int n = costs.size();\n        const int k = costs[0].size();\n        for (int i = 1; i < n; ++i) {\n            int smallest = numeric_limits<int>::max(), second_smallest = numeric_limits<int>::max();\n            for (int j = 0; j < k; ++j) {\n                if (min_cost[(i - 1) % 2][j] < smallest) {\n                    second_smallest = smallest;\n                    smallest = min_cost[(i - 1) % 2][j];\n                } else if (min_cost[(i - 1) % 2][j] < second_smallest) {\n                    second_smallest = min_cost[(i - 1) % 2][j];\n                }\n            }\n            for (int j = 0; j < k; ++j) {\n                const int min_j = (min_cost[(i - 1) % 2][j] != smallest) ? smallest : second_smallest;\n                min_cost[i % 2][j] = costs[i][j] + min_j;\n            }\n        }\n\n        return *min_element(min_cost[(n - 1) % 2].cbegin(), min_cost[(n - 1) % 2].cend());\n    }\n};\n\n// Time:  O(n * k)\n// Space: O(k)\nclass Solution2{\npublic:\n    int minCostII(vector<vector<int>>& costs) {\n        if (costs.empty()) {\n            return 0;\n        }\n        auto combine = [](const vector<int>& tmp, const vector<int>& house) {\n                            const int smallest = *min_element(tmp.cbegin(), tmp.cend());\n                            const int i = distance(tmp.begin(), find(tmp.cbegin(), tmp.cend(), smallest));\n                            vector<int> tmp2(tmp);\n                            tmp2.erase(tmp2.begin() + i);\n                            const int second_smallest = *min_element(tmp2.cbegin(), tmp2.cend());\n                            vector<int> min_cost(tmp.size(), smallest);\n                            min_cost[i] = second_smallest;\n                            transform(min_cost.cbegin(), min_cost.cend(), house.cbegin(),\n                                      min_cost.begin(), std::plus<int>());\n                            return min_cost;\n                        };\n        vector<int> min_cost = accumulate(costs.cbegin(), costs.cend(), vector<int>(costs[0].size(), 0), combine);\n        return *min_element(min_cost.cbegin(), min_cost.cend());\n    }\n};\n",
+      "sourcePath": "C++/paint-house-ii.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "paint-house-ii.py",
+      "code": "# Time:  O(n * k)\n# Space: O(k)\n\nclass Solution2(object):\n    def minCostII(self, costs):\n        \"\"\"\n        :type costs: List[List[int]]\n        :rtype: int\n        \"\"\"\n        return min(reduce(self.combine, costs)) if costs else 0\n\n    def combine(self, tmp, house):\n        smallest, k, i = min(tmp), len(tmp), tmp.index(min(tmp))\n        tmp, tmp[i] = [smallest] * k, min(tmp[:i] + tmp[i+1:])\n        return map(sum, zip(tmp, house))\n\n\nclass Solution2(object):\n    def minCostII(self, costs):\n        \"\"\"\n        :type costs: List[List[int]]\n        :rtype: int\n        \"\"\"\n        if not costs:\n            return 0\n\n        n = len(costs)\n        k = len(costs[0])\n        min_cost = [costs[0], [0] * k]\n        for i in xrange(1, n):\n            smallest, second_smallest = float(\"inf\"), float(\"inf\")\n            for j in xrange(k):\n                if min_cost[(i - 1) % 2][j] < smallest:\n                    smallest, second_smallest = min_cost[(i - 1) % 2][j], smallest\n                elif min_cost[(i - 1) % 2][j] < second_smallest:\n                    second_smallest = min_cost[(i - 1) % 2][j]\n            for j in xrange(k):\n                min_j = smallest if min_cost[(i - 1) % 2][j] != smallest else second_smallest\n                min_cost[i % 2][j] = costs[i][j] + min_j\n\n        return min(min_cost[(n - 1) % 2])\n\n",
+      "sourcePath": "Python/paint-house-ii.py"
+    }
+  },
+  "seo": {
+    "title": "Paint House II Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Paint House II (LeetCode #265). Pattern: dynamic programming. Time O(n * k), space O(k). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Paint House II",
+      "Paint House II solution",
+      "Paint House II leetcode",
+      "dynamic-programming",
+      "dynamic-programming",
+      "hard"
+    ],
+    "canonicalPath": "/problems/paint-house-ii"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Paint House II?",
+      "answer": "The reference solutions aim for O(n * k) time and O(k) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Paint House II use?",
+      "answer": "It primarily maps to dynamic programming, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Paint House II good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/paint-house-ii/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Paint House II (#265) — Hard. Pattern: dynamic programming. Complexity: O(n * k) time / O(k) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Paint House II: show input structure (dynamic programming), highlight the moving parts of the dynamic programming approach, and annotate each step with the maintained invariant and complexity."
+}

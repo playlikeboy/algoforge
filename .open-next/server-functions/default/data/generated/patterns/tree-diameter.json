@@ -1,0 +1,24 @@
+{
+  "type": "pattern",
+  "slug": "tree-diameter",
+  "name": "Tree Diameter",
+  "description": "Master the Tree Diameter coding pattern with curated problems.",
+  "problemCount": 3,
+  "problemSlugs": [
+    "find-minimum-diameter-after-merging-two-trees",
+    "find-the-last-marked-nodes-in-tree",
+    "find-diameter-endpoints-of-a-tree"
+  ],
+  "relatedTopics": [],
+  "seo": {
+    "title": "Tree Diameter Pattern — Problems & Guide | AlgoForge",
+    "description": "Learn the Tree Diameter pattern with 3 practice problems, interview tips, and visual intuition.",
+    "keywords": [
+      "Tree Diameter",
+      "Tree Diameter pattern",
+      "Tree Diameter leetcode",
+      "coding patterns"
+    ],
+    "canonicalPath": "/patterns/tree-diameter"
+  }
+}

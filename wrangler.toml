@@ -1,16 +1,12 @@
 name = "algoforge"
-compatibility_date = "2026-01-01"
-pages_build_output_dir = ".vercel/output/static"
+main = ".open-next/worker.js"
+compatibility_date = "2026-07-17"
+compatibility_flags = ["nodejs_compat"]
 
-# Reserved for Phase D
-# [[kv_namespaces]]
-# binding = "USER_DATA"
-# id = "REPLACE_ME"
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
 
-# [[kv_namespaces]]
-# binding = "RATE_LIMIT"
-# id = "REPLACE_ME"
-
-# [[r2_buckets]]
-# binding = "ASSETS"
-# bucket_name = "algoforge-assets"
+[[r2_buckets]]
+binding = "NEXT_INC_CACHE_R2_BUCKET"
+bucket_name = "algoforge-opennext-cache"

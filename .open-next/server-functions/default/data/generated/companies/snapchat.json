@@ -1,0 +1,31 @@
+{
+  "type": "company",
+  "slug": "snapchat",
+  "name": "Snapchat",
+  "description": "Coding interview preparation for Snapchat: high-frequency patterns and problem sets.",
+  "problemCount": 12,
+  "problemSlugs": [
+    "sudoku-solver",
+    "unique-binary-search-trees",
+    "word-ladder-ii",
+    "word-ladder",
+    "lru-cache",
+    "min-stack",
+    "reverse-linked-list",
+    "course-schedule-ii",
+    "game-of-life",
+    "burst-balloons",
+    "longest-substring-with-at-most-k-distinct-characters",
+    "string-compression"
+  ],
+  "seo": {
+    "title": "Snapchat Coding Interview Questions | AlgoForge",
+    "description": "Prepare for Snapchat interviews with 12 problems, patterns, and roadmaps.",
+    "keywords": [
+      "Snapchat interview questions",
+      "Snapchat leetcode",
+      "Snapchat oa"
+    ],
+    "canonicalPath": "/companies/snapchat"
+  }
+}

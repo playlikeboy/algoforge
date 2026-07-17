@@ -1,0 +1,156 @@
+{
+  "id": "826",
+  "number": 826,
+  "slug": "most-profit-assigning-work",
+  "title": "Most Profit Assigning Work",
+  "difficulty": "Medium",
+  "topics": [
+    "two-pointers"
+  ],
+  "patterns": [
+    "two-pointers"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(mlogm + nlogn)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/most-profit-assigning-work/",
+  "notes": [],
+  "relatedSlugs": [
+    "3sum",
+    "3sum-closest",
+    "4sum",
+    "remove-nth-node-from-end-of-list",
+    "partition-list",
+    "linked-list-cycle-ii",
+    "reorder-list",
+    "two-sum-ii-input-array-is-sorted"
+  ],
+  "prevSlug": "friends-of-appropriate-ages",
+  "nextSlug": "making-a-large-island",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Most Profit Assigning Work?\n\n**Most Profit Assigning Work** (LeetCode #826) is a **Medium** problem that primarily trains **two pointers**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **two pointers**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/most-profit-assigning-work/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Most Profit Assigning Work\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **two pointers**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(mlogm + nlogn)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(mlogm + nlogn)** time and **O(n)** space.\n\n### Pattern focus: two pointers\n\nUse the pattern as a checklist:\n\n- **two pointers** — confirm the invariant holds after each step\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(mlogm + nlogn)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Most Profit Assigning Work\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for two pointers — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal two pointers solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `most-profit-assigning-work`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **two pointers**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **two pointers**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Most Profit Assigning Work** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **two pointers**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "most-profit-assigning-work.cpp",
+      "code": "// Time:  O(mlogm + nlogn), m is the number of workers,\n//                        , n is the number of jobs\n// Space: O(n)\n\nclass Solution {\npublic:\n    int maxProfitAssignment(vector<int>& difficulty, vector<int>& profit, vector<int>& worker) {\n        vector<pair<int,int>> jobs;\n        for (int i = 0; i < profit.size(); ++i) {\n            jobs.emplace_back(difficulty[i], profit[i]);\n        }\n        sort(jobs.begin(), jobs.end());\n        sort(worker.begin(), worker.end());\n        \n        int result = 0, i = 0, max_profit = 0;\n        for (const auto& ability: worker) {\n            while (i < profit.size() && jobs[i].first <= ability) {\n                max_profit = max(max_profit, jobs[i++].second);\n            }\n            result += max_profit;\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/most-profit-assigning-work.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "most-profit-assigning-work.py",
+      "code": "# Time:  O(mlogm + nlogn), m is the number of workers,\n#                        , n is the number of jobs\n# Space: O(n)\n\nclass Solution(object):\n    def maxProfitAssignment(self, difficulty, profit, worker):\n        \"\"\"\n        :type difficulty: List[int]\n        :type profit: List[int]\n        :type worker: List[int]\n        :rtype: int\n        \"\"\"\n        jobs = zip(difficulty, profit)\n        jobs.sort()\n        worker.sort()\n        result, i, max_profit = 0, 0, 0\n        for ability in worker:\n            while i < len(jobs) and jobs[i][0] <= ability:\n                max_profit = max(max_profit, jobs[i][1])\n                i += 1\n            result += max_profit\n        return result\n\n",
+      "sourcePath": "Python/most-profit-assigning-work.py"
+    }
+  },
+  "seo": {
+    "title": "Most Profit Assigning Work Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Most Profit Assigning Work (LeetCode #826). Pattern: two pointers. Time O(mlogm + nlogn), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Most Profit Assigning Work",
+      "Most Profit Assigning Work solution",
+      "Most Profit Assigning Work leetcode",
+      "two-pointers",
+      "two-pointers",
+      "medium"
+    ],
+    "canonicalPath": "/problems/most-profit-assigning-work"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Most Profit Assigning Work?",
+      "answer": "The reference solutions aim for O(mlogm + nlogn) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Most Profit Assigning Work use?",
+      "answer": "It primarily maps to two pointers, within the broader topic of two pointers."
+    },
+    {
+      "question": "Is Most Profit Assigning Work good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/most-profit-assigning-work/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the two pointers approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Most Profit Assigning Work (#826) — Medium. Pattern: two pointers. Complexity: O(mlogm + nlogn) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Most Profit Assigning Work: show input structure (two pointers), highlight the moving parts of the two pointers approach, and annotate each step with the maintained invariant and complexity."
+}

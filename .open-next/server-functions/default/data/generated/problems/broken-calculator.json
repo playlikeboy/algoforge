@@ -1,0 +1,156 @@
+{
+  "id": "991",
+  "number": 991,
+  "slug": "broken-calculator",
+  "title": "Broken Calculator",
+  "difficulty": "Medium",
+  "topics": [
+    "greedy"
+  ],
+  "patterns": [
+    "greedy"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(logn)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/broken-calculator/",
+  "notes": [],
+  "relatedSlugs": [
+    "container-with-most-water",
+    "jump-game",
+    "gas-station",
+    "wiggle-subsequence",
+    "is-subsequence",
+    "integer-replacement",
+    "remove-k-digits",
+    "non-overlapping-intervals"
+  ],
+  "prevSlug": "satisfiability-of-equality-equations",
+  "nextSlug": "subarrays-with-k-different-integers",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Broken Calculator?\n\n**Broken Calculator** (LeetCode #991) is a **Medium** problem that primarily trains **greedy**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **greedy**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/broken-calculator/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Broken Calculator\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **greedy**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(logn)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(logn)** time and **O(1)** space.\n\n### Pattern focus: greedy\n\nUse the pattern as a checklist:\n\n- **greedy** — confirm the invariant holds after each step\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(logn)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Broken Calculator\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for greedy — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal greedy solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `broken-calculator`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **greedy**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **greedy**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Broken Calculator** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **greedy**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "broken-calculator.cpp",
+      "code": "// Time:  O(logn)\n// Space: O(1)\n\nclass Solution {\npublic:\n    int brokenCalc(int X, int Y) {\n        int result = 0;\n        while (X < Y) {\n            if (Y % 2) {\n                ++Y;\n            } else {\n                Y /= 2;\n            }\n            ++result;\n        }\n        return result + X - Y;\n    }\n};\n",
+      "sourcePath": "C++/broken-calculator.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "broken-calculator.py",
+      "code": "# Time:  O(logn)\n# Space: O(1)\n\nclass Solution(object):\n    def brokenCalc(self, X, Y):\n        \"\"\"\n        :type X: int\n        :type Y: int\n        :rtype: int\n        \"\"\"\n        result = 0\n        while X < Y:\n            if Y%2:\n                Y += 1\n            else:\n                Y /= 2\n            result += 1\n        return result + X-Y\n",
+      "sourcePath": "Python/broken-calculator.py"
+    }
+  },
+  "seo": {
+    "title": "Broken Calculator Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Broken Calculator (LeetCode #991). Pattern: greedy. Time O(logn), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Broken Calculator",
+      "Broken Calculator solution",
+      "Broken Calculator leetcode",
+      "greedy",
+      "greedy",
+      "medium"
+    ],
+    "canonicalPath": "/problems/broken-calculator"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Broken Calculator?",
+      "answer": "The reference solutions aim for O(logn) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Broken Calculator use?",
+      "answer": "It primarily maps to greedy, within the broader topic of greedy."
+    },
+    {
+      "question": "Is Broken Calculator good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/broken-calculator/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the greedy approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Broken Calculator (#991) — Medium. Pattern: greedy. Complexity: O(logn) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Broken Calculator: show input structure (greedy), highlight the moving parts of the greedy approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,168 @@
+{
+  "id": "3636",
+  "number": 3636,
+  "slug": "threshold-majority-queries",
+  "title": "Threshold Majority Queries",
+  "difficulty": "Hard",
+  "topics": [
+    "hash-table"
+  ],
+  "patterns": [
+    "sort",
+    "mos-algorithm",
+    "sorted-list"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogn + qlogq + (n + q) * sqrt(n) * logn)",
+  "spaceComplexity": "O(q + n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/threshold-majority-queries/",
+  "notes": [
+    "Sort",
+    "Coordinate Compression",
+    "Sqrt Decomposition",
+    "Mo's Algorithm",
+    "Freq Table",
+    "Sorted List",
+    "BST"
+  ],
+  "relatedSlugs": [
+    "merge-similar-items",
+    "toggle-light-bulbs",
+    "integers-with-multiple-sum-of-two-cubes",
+    "sort-vowels-by-frequency",
+    "frequency-balance-subarray",
+    "alternating-groups-iii",
+    "number-of-excellent-pairs",
+    "find-players-with-zero-or-one-losses"
+  ],
+  "prevSlug": "earliest-finish-time-for-land-and-water-rides-ii",
+  "nextSlug": "trionic-array-i",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Threshold Majority Queries?\n\n**Threshold Majority Queries** (LeetCode #3636) is a **Hard** problem that primarily trains **hash table**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sort, mos algorithm, and sorted list**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Sort, Coordinate Compression, Sqrt Decomposition, Mo's Algorithm.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/threshold-majority-queries/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Threshold Majority Queries\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sort, mos algorithm, and sorted list**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogn + qlogq + (n + q) * sqrt(n) * logn)) and **space** (O(q + n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogn + qlogq + (n + q) * sqrt(n) * logn)** time and **O(q + n)** space.\n\n### Pattern focus: sort, mos algorithm, and sorted list\n\nUse the pattern as a checklist:\n\n- **sort** — confirm the invariant holds after each step\n- **mos algorithm** — confirm the invariant holds after each step\n- **sorted list** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogn + qlogq + (n + q) * sqrt(n) * logn)** |\n| Space | **O(q + n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Threshold Majority Queries\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sort, mos algorithm, and sorted list — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sort, mos algorithm, and sorted list**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **hash table**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Threshold Majority Queries** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **hash table**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "threshold-majority-queries.cpp",
+      "code": "// Time:  O(nlogn + qlogq + (n + q) * sqrt(n) + q * n)\n// Space: O(n + q)\n\n// sort, coordinate compression, mo's algorithm\nclass Solution {\npublic:\n    vector<int> subarrayMajority(vector<int>& nums, vector<vector<int>>& queries) {\n        vector<int> sorted_nums(nums);\n        sort(begin(sorted_nums), end(sorted_nums));\n        sorted_nums.erase(unique(begin(sorted_nums), end(sorted_nums)), end(sorted_nums));\n        unordered_map<int, int> num_to_idx;\n        for (int i = 0; i < size(sorted_nums); ++i) {\n            num_to_idx[sorted_nums[i]] = i;\n        } \n        \n        // reference: https://cp-algorithms.com/data_structures/sqrt_decomposition.html\n        const auto& mo_s_algorithm = [&]() {\n            vector<int> cnt(size(num_to_idx));\n            vector<int> cnt2(size(nums) + 1);\n            int max_freq = 0;\n            const auto& add = [&](int i) {\n                const auto& idx = num_to_idx[nums[i]];\n                if (cnt[idx]) {\n                    --cnt2[cnt[idx]];\n                }\n                ++cnt[idx];\n                ++cnt2[cnt[idx]];\n                max_freq = max(max_freq, cnt[idx]);\n            };\n\n            const auto& remove = [&](int i) {\n                const auto& idx = num_to_idx[nums[i]];\n                --cnt2[cnt[idx]];\n                if (!cnt2[max_freq]) {\n                    --max_freq;\n                }\n                --cnt[idx];\n                if (cnt[idx]) {\n                    ++cnt2[cnt[idx]];\n                }\n            };\n\n            const auto& get_ans = [&](int t) {\n                if (max_freq < t) {\n                    return -1;\n                }\n                int i = 0;\n                for (; i < size(cnt); ++i) {\n                    if (cnt[i] == max_freq) {\n                        break;\n                    }\n                }\n                return sorted_nums[i];\n            };\n\n            vector<int> result(size(queries), -1);\n            const int block_size = sqrt(size(nums)) + 1;\n            vector<int> idxs(size(queries));\n            iota(begin(idxs), end(idxs), 0);\n            sort(begin(idxs), end(idxs), [&](const auto& a, const auto& b) {\n                const auto& i = queries[a][0] / block_size;\n                const auto& j = queries[b][0] / block_size;\n                return i != j ? i < j : (i & 1 ? queries[a][1] < queries[b][1] : queries[a][1] > queries[b][1]);\n            });\n            int left = 0, right = -1;\n            for (const auto& i : idxs) {\n                const auto& l = queries[i][0];\n                const auto& r = queries[i][1];\n                const auto& t = queries[i][2];\n                while (left > l) {\n                    left -= 1;\n                    add(left);\n                }\n                while (right < r) {\n                    ++right;\n                    add(right);\n                }\n                while (left < l) {\n                    remove(left);\n                    ++left;\n                }\n                while (right > r) {\n                    remove(right);\n                    --right;\n                }\n                result[i] = get_ans(t);\n            }\n            return result;\n        };\n\n        return mo_s_algorithm();\n    }\n};\n\n// Time:  O(nlogn + qlogq + (n + q) * sqrt(n) * logn)\n// Space: O(n + q)\n// sort, coordinate compression, mo's algorithm, bst\nclass Solution2 {\npublic:\n    vector<int> subarrayMajority(vector<int>& nums, vector<vector<int>>& queries) {\n        vector<int> sorted_nums(nums);\n        sort(begin(sorted_nums), end(sorted_nums));\n        sorted_nums.erase(unique(begin(sorted_nums), end(sorted_nums)), end(sorted_nums));\n        unordered_map<int, int> num_to_idx;\n        for (int i = 0; i < size(sorted_nums); ++i) {\n            num_to_idx[sorted_nums[i]] = i;\n        } \n    \n        // reference: https://cp-algorithms.com/data_structures/sqrt_decomposition.html\n        const auto& mo_s_algorithm = [&]() {\n            vector<int> cnt(size(num_to_idx));\n            vector<multiset<int>> lookup(size(nums) + 1);\n            int max_freq = 0;\n            const auto& add = [&](int i) {\n                const auto& idx = num_to_idx[nums[i]];\n                if (cnt[idx]) {\n                    auto it = lookup[cnt[idx]].find(nums[i]);\n                    lookup[cnt[idx]].erase(it);\n                }\n                ++cnt[idx];\n                lookup[cnt[idx]].emplace(nums[i]);\n                max_freq = max(max_freq, cnt[idx]);\n            };\n\n            const auto& remove = [&](int i) {\n                const auto& idx = num_to_idx[nums[i]];\n                auto it = lookup[cnt[idx]].find(nums[i]);\n                lookup[cnt[idx]].erase(it);\n                if (empty(lookup[max_freq])) {\n                    --max_freq;\n                }\n                --cnt[idx];\n                if (cnt[idx]) {\n                    lookup[cnt[idx]].emplace(nums[i]);\n                }\n            };\n\n            const auto& get_ans = [&](int t) {\n                return max_freq >= t ? *begin(lookup[max_freq]) : -1;\n            };\n\n            vector<int> result(size(queries), -1);\n            const int block_size = sqrt(size(nums)) + 1;\n            vector<int> idxs(size(queries));\n            iota(begin(idxs), end(idxs), 0);\n            sort(begin(idxs), end(idxs), [&](const auto& a, const auto& b) {\n                const auto& i = queries[a][0] / block_size;\n                const auto& j = queries[b][0] / block_size;\n                return i != j ? i < j : (i & 1 ? queries[a][1] < queries[b][1] : queries[a][1] > queries[b][1]);\n            });\n            int left = 0, right = -1;\n            for (const auto& i : idxs) {\n                const auto& l = queries[i][0];\n                const auto& r = queries[i][1];\n                const auto& t = queries[i][2];\n                while (left > l) {\n                    left -= 1;\n                    add(left);\n                }\n                while (right < r) {\n                    ++right;\n                    add(right);\n                }\n                while (left < l) {\n                    remove(left);\n                    ++left;\n                }\n                while (right > r) {\n                    remove(right);\n                    --right;\n                }\n                result[i] = get_ans(t);\n            }\n            return result;\n        };\n\n        return mo_s_algorithm();\n    }\n};\n",
+      "sourcePath": "C++/threshold-majority-queries.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "threshold-majority-queries.py",
+      "code": "# Time:  O(nlogn + qlogq + (n + q) * sqrt(n) + q * n)\n# Space: O(n + q)\n\n# sort, coordinate compression, mo's algorithm\nclass Solution(object):\n    def subarrayMajority(self, nums, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        # reference: https://cp-algorithms.com/data_structures/sqrt_decomposition.html\n        def mo_s_algorithm():  # Time: O(QlogQ + (N + Q) * sqrt(N) + Q * N)\n            def add(i):  # Time: O(F) = O(1)\n                idx = num_to_idx[nums[i]]\n                if cnt[idx]:\n                    cnt2[cnt[idx]] -= 1\n                cnt[idx] += 1\n                cnt2[cnt[idx]] += 1\n                max_freq[0] = max(max_freq[0], cnt[idx])\n\n            def remove(i):  # Time: O(F) = O(1)\n                idx = num_to_idx[nums[i]]\n                cnt2[cnt[idx]] -= 1\n                if not cnt2[max_freq[0]]:\n                    max_freq[0] -= 1\n                cnt[idx] -= 1\n                if cnt[idx]:\n                    cnt2[cnt[idx]] += 1\n\n            def get_ans(t):  # Time: O(A) = O(N)\n                if max_freq[0] < t:\n                    return -1\n                i = next(i for i in xrange(len(cnt)) if cnt[i] == max_freq[0])\n                return sorted_nums[i]\n\n            cnt = [0]*len(num_to_idx)\n            cnt2 = [0]*(len(nums)+1)\n            max_freq = [0]\n            result = [-1]*len(queries)\n            block_size = int(len(nums)**0.5)+1  # O(S) = O(sqrt(N))\n            idxs = range(len(queries))\n            idxs.sort(key=lambda x: (queries[x][0]//block_size, queries[x][1] if (queries[x][0]//block_size)&1 else -queries[x][1]))  # Time: O(QlogQ)\n            left, right = 0, -1\n            for i in idxs:  # Time: O((N / S) * N * F + S * Q * F + Q * A) = O((N + Q) * sqrt(N) + Q * N), O(S) = O(sqrt(N)), O(F) = O(logN), O(A) = O(1)\n                l, r, t = queries[i]\n                while left > l:\n                    left -= 1\n                    add(left)\n                while right < r:\n                    right += 1\n                    add(right)\n                while left < l:\n                    remove(left)\n                    left += 1\n                while right > r:\n                    remove(right)\n                    right -= 1\n                result[i] = get_ans(t)\n            return result\n\n        sorted_nums = sorted(set(nums))\n        num_to_idx = {x:i for i, x in enumerate(sorted_nums)}\n        return mo_s_algorithm()\n\n\n# Time:  O(nlogn + qlogq + (n + q) * sqrt(n) * logn)\n# Space: O(n + q)\nfrom sortedcontainers import SortedList\n\n\n# sort, coordinate compression, mo's algorithm, sorted list\nclass Solution_TLE(object):\n    def subarrayMajority(self, nums, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        # reference: https://cp-algorithms.com/data_structures/sqrt_decomposition.html\n        def mo_s_algorithm():  # Time: O(QlogQ + (N + Q) * sqrt(N) * logN)\n            def add(i):  # Time: O(F) = O(logN)\n                idx = num_to_idx[nums[i]]\n                if cnt[idx]:\n                    lookup[cnt[idx]].remove(nums[i])\n                cnt[idx] += 1\n                lookup[cnt[idx]].add(nums[i])\n                max_freq[0] = max(max_freq[0], cnt[idx])\n\n            def remove(i):  # Time: O(F) = O(logN)\n                idx = num_to_idx[nums[i]]\n                lookup[cnt[idx]].remove(nums[i])\n                if not lookup[max_freq[0]]:\n                    max_freq[0] -= 1\n                cnt[idx] -= 1\n                if cnt[idx]:\n                    lookup[cnt[idx]].add(nums[i])\n\n            def get_ans(t):  # Time: O(A) = O(logN)\n                return lookup[max_freq[0]][0] if max_freq[0] >= t else -1\n\n            cnt = [0]*len(num_to_idx)\n            lookup = [SortedList() for _ in xrange(len(nums)+1)]\n            max_freq = [0]\n            result = [-1]*len(queries)\n            block_size = int(len(nums)**0.5)+1  # O(S) = O(sqrt(N))\n            idxs = range(len(queries))\n            idxs.sort(key=lambda x: (queries[x][0]//block_size, queries[x][1] if (queries[x][0]//block_size)&1 else -queries[x][1]))  # Time: O(QlogQ)\n            left, right = 0, -1\n            for i in idxs:  # Time: O((N / S) * N * F + S * Q * F + Q * A) = O((N + Q) * sqrt(N) * logN), O(S) = O(sqrt(N)), O(F) = O(logN), O(A) = O(1)\n                l, r, t = queries[i]\n                while left > l:\n                    left -= 1\n                    add(left)\n                while right < r:\n                    right += 1\n                    add(right)\n                while left < l:\n                    remove(left)\n                    left += 1\n                while right > r:\n                    remove(right)\n                    right -= 1\n                result[i] = get_ans(t)\n            return result\n\n        num_to_idx = {x:i for i, x in enumerate(sorted(set(nums)))}\n        return mo_s_algorithm()\n",
+      "sourcePath": "Python/threshold-majority-queries.py"
+    }
+  },
+  "seo": {
+    "title": "Threshold Majority Queries Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Threshold Majority Queries (LeetCode #3636). Pattern: sort. Time O(nlogn + qlogq + (n + q) * sqrt(n) * logn), space O(q + n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Threshold Majority Queries",
+      "Threshold Majority Queries solution",
+      "Threshold Majority Queries leetcode",
+      "hash-table",
+      "sort",
+      "mos-algorithm",
+      "sorted-list",
+      "hard"
+    ],
+    "canonicalPath": "/problems/threshold-majority-queries"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Threshold Majority Queries?",
+      "answer": "The reference solutions aim for O(nlogn + qlogq + (n + q) * sqrt(n) * logn) time and O(q + n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Threshold Majority Queries use?",
+      "answer": "It primarily maps to sort, mos algorithm, and sorted list, within the broader topic of hash table."
+    },
+    {
+      "question": "Is Threshold Majority Queries good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/threshold-majority-queries/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sort, mos algorithm, and sorted list approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Threshold Majority Queries (#3636) — Hard. Pattern: sort, mos algorithm, and sorted list. Complexity: O(nlogn + qlogq + (n + q) * sqrt(n) * logn) time / O(q + n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Threshold Majority Queries: show input structure (hash table), highlight the moving parts of the sort, mos algorithm, and sorted list approach, and annotate each step with the maintained invariant and complexity."
+}

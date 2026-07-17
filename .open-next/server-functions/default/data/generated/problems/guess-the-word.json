@@ -1,0 +1,159 @@
+{
+  "id": "843",
+  "number": 843,
+  "slug": "guess-the-word",
+  "title": "Guess the Word",
+  "difficulty": "Hard",
+  "topics": [
+    "greedy"
+  ],
+  "patterns": [
+    "greedy"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/guess-the-word/",
+  "notes": [
+    "MinMax",
+    "Math"
+  ],
+  "relatedSlugs": [
+    "trapping-rain-water",
+    "jump-game-ii",
+    "candy",
+    "patching-array",
+    "course-schedule-iii",
+    "set-intersection-size-at-least-two",
+    "employee-free-time",
+    "smallest-rotation-with-highest-score"
+  ],
+  "prevSlug": "split-array-into-fibonacci-sequence",
+  "nextSlug": "backspace-string-compare",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Guess the Word?\n\n**Guess the Word** (LeetCode #843) is a **Hard** problem that primarily trains **greedy**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **greedy**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: MinMax, Math.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/guess-the-word/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Guess the Word\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **greedy**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(n)** space.\n\n### Pattern focus: greedy\n\nUse the pattern as a checklist:\n\n- **greedy** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Guess the Word\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for greedy — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **greedy**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **greedy**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Guess the Word** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **greedy**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "guess-the-word.cpp",
+      "code": "// Time:  O(n)\n// Space: O(n)\n\n/**\n * // This is the Master's API interface.\n * // You should not implement it, or speculate about its implementation\n * class Master {\n *   public:\n *     int guess(string word);\n * };\n */\nclass Solution {\npublic:\n    void findSecretWord(vector<string>& wordlist, Master& master) {\n        vector<int> possible(size(wordlist));\n        iota(begin(possible), end(possible), 0);\n        int n = 0;\n        while (n < 6) {\n            auto guess = find_guess_with_most_frequent_chars(wordlist, possible);\n            n = master.guess(wordlist[guess]);\n            vector<int> new_possible;\n            for (const auto& j : possible) {\n                if (match(wordlist[guess], wordlist[j]) == n) {\n                    new_possible.emplace_back(j);\n                }\n            }\n            possible = move(new_possible);\n        }\n    }\n\nprivate:\n    int find_guess_with_most_frequent_chars(\n        const vector<string>& wordlist,\n        const vector<int>& possible) {\n        vector<vector<int>> count(6, vector<int>(26));\n        for (int i = 0; i < 6; ++i) {\n            for (const auto& p : possible) {\n                ++count[i][wordlist[p][i] - 'a'];\n            }\n        }\n        int guess = 0, max_score = 0;\n        for (const auto& p : possible) {\n            int score = 0;\n            for (int i = 0; i < 6; ++i) {\n                score += count[i][wordlist[p][i] - 'a'];\n            }\n            if (score > max_score) {\n                max_score = score;\n                guess = p;\n            }\n        }\n        return guess;\n    }\n\n    int match(const string& a, const string& b) {\n        int matches = 0;\n        for (int i = 0; i < size(a); ++i) {\n            if (a[i] == b[i]) {\n                ++matches;\n            }\n        }\n        return matches;\n    }\n};\n\n// Time:  O(n^2)\n// Space: O(n)\nclass Solution2 {\npublic:\n    void findSecretWord(vector<string>& wordlist, Master& master) {\n        vector<vector<int>> H(size(wordlist), vector<int>(size(wordlist)));\n        for (int i = 0; i < size(wordlist); ++i) {\n            for (int j = 0; j < size(wordlist); ++j) {\n                H[i][j] = match(wordlist[i], wordlist[j]);\n            }\n        }\n\n        vector<int> possible(size(wordlist));\n        iota(begin(possible), end(possible), 0);\n        int n = 0;\n        while (n < 6) {\n            auto guess = solve(H, possible);\n            n = master.guess(wordlist[guess]);\n            vector<int> new_possible;\n            for (const auto& j : possible) {\n                if (H[guess][j] == n) {\n                    new_possible.emplace_back(j);\n                }\n            }\n            possible = move(new_possible);\n        }\n    }\n\nprivate:\n    int solve(const vector<vector<int>>& H,\n              const vector<int>& possible) {\n\n        int min_max_size = size(possible);\n        int best_guess = -1; \n        for (const auto& guess : possible) {\n            vector<vector<int>> groups(7);\n            for (const auto& j : possible) {\n                if (j != guess) {\n                    groups[H[guess][j]].emplace_back(j);\n                }\n            }\n            int max_group_i = 0;\n            for (int i = 0; i < size(groups); ++i) {\n                if (size(groups[i]) > size(groups[max_group_i])) {\n                    max_group_i = i;\n                }\n            }\n            if (size(groups[max_group_i]) < min_max_size) {\n                min_max_size = size(groups[max_group_i]);\n                best_guess = guess;\n            }\n        }\n        return best_guess;\n    }\n\n    int match(const string& a, const string& b) {\n        int matches = 0;\n        for (int i = 0; i < size(a); ++i) {\n            if (a[i] == b[i]) {\n                ++matches;\n            }\n        }\n        return matches;\n    }\n};\n\n// Time:  O(n^2)\n// Space: O(n)\nclass Solution3 {\npublic:\n    void findSecretWord(vector<string>& wordlist, Master& master) {\n        vector<vector<int>> H(size(wordlist), vector<int>(size(wordlist)));\n        for (int i = 0; i < size(wordlist); ++i) {\n            for (int j = 0; j < size(wordlist); ++j) {\n                H[i][j] = match(wordlist[i], wordlist[j]);\n            }\n        }\n\n        vector<int> possible(size(wordlist));\n        iota(begin(possible), end(possible), 0);\n        int n = 0;\n        while (n < 6) {\n            auto guess = solve(H, possible);\n            n = master.guess(wordlist[guess]);\n            vector<int> new_possible;\n            for (const auto& j : possible) {\n                if (H[guess][j] == n) {\n                    new_possible.emplace_back(j);\n                }\n            }\n            possible = move(new_possible);\n        }\n    }\n\nprivate:\n    int solve(const vector<vector<int>>& H,\n              const vector<int>& possible) {\n\n        int min_max_size = size(possible);\n        int best_guess = -1; \n        for (const auto& guess : possible) {\n            vector<vector<int>> groups(7);\n            for (const auto& j : possible) {\n                if (j != guess) {\n                    groups[H[guess][j]].emplace_back(j);\n                }\n            }\n            int max_group_i = 0;  // assumed the size of the other groups equals to the size of 0-group\n            if (size(groups[max_group_i]) < min_max_size) {\n                min_max_size = size(groups[max_group_i]);\n                best_guess = guess;\n            }\n        }\n        return best_guess;\n    }\n\n    int match(const string& a, const string& b) {\n        int matches = 0;\n        for (int i = 0; i < size(a); ++i) {\n            if (a[i] == b[i]) {\n                ++matches;\n            }\n        }\n        return matches;\n    }\n};\n",
+      "sourcePath": "C++/guess-the-word.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "guess-the-word.py",
+      "code": "# Time:  O(n)\n# Space: O(n)\n\nimport collections\nimport itertools\n\n\nclass Solution(object):\n    def findSecretWord(self, wordlist, master):\n        \"\"\"\n        :type wordlist: List[Str]\n        :type master: Master\n        :rtype: None\n        \"\"\"\n        possible = range(len(wordlist))\n        n = 0\n        while n < 6:\n            count = [collections.Counter(w[i] for w in wordlist) for i in xrange(6)]\n            guess = max(possible, key=lambda x: sum(count[i][c] for i, c in enumerate(wordlist[x])))\n            n = master.guess(wordlist[guess])\n            possible = [j for j in possible if sum(a == b for a, b in itertools.izip(wordlist[guess], wordlist[j])) == n]\n\n\n# Time:  O(n^2)\n# Space: O(n)\nclass Solution2(object):\n    def findSecretWord(self, wordlist, master):\n        \"\"\"\n        :type wordlist: List[Str]\n        :type master: Master\n        :rtype: None\n        \"\"\"\n        def solve(H, possible):\n            min_max_group, best_guess = possible, None\n            for guess in possible:\n                groups = [[] for _ in xrange(7)]\n                for j in possible:\n                    if j != guess:\n                        groups[H[guess][j]].append(j)\n                max_group = max(groups, key=len)\n                if len(max_group) < len(min_max_group):\n                    min_max_group, best_guess = max_group, guess\n            return best_guess\n\n        H = [[sum(a == b for a, b in itertools.izip(wordlist[i], wordlist[j]))\n                  for j in xrange(len(wordlist))]\n                  for i in xrange(len(wordlist))]\n        possible = range(len(wordlist))\n        n = 0\n        while n < 6:\n            guess = solve(H, possible)\n            n = master.guess(wordlist[guess])\n            possible = [j for j in possible if H[guess][j] == n]\n\n\n# Time:  O(n^2)\n# Space: O(n)\nclass Solution3(object):\n    def findSecretWord(self, wordlist, master):\n        \"\"\"\n        :type wordlist: List[Str]\n        :type master: Master\n        :rtype: None\n        \"\"\"\n        def solve(H, possible):\n            min_max_group, best_guess = possible, None\n            for guess in possible:\n                groups = [[] for _ in xrange(7)]\n                for j in possible:\n                    if j != guess:\n                        groups[H[guess][j]].append(j)\n                max_group = groups[0]\n                if len(max_group) < len(min_max_group):\n                    min_max_group, best_guess = max_group, guess\n            return best_guess\n\n        H = [[sum(a == b for a, b in itertools.izip(wordlist[i], wordlist[j]))\n                  for j in xrange(len(wordlist))]\n                  for i in xrange(len(wordlist))]\n        possible = range(len(wordlist))\n        n = 0\n        while n < 6:\n            guess = solve(H, possible)\n            n = master.guess(wordlist[guess])\n            possible = [j for j in possible if H[guess][j] == n]\n\n",
+      "sourcePath": "Python/guess-the-word.py"
+    }
+  },
+  "seo": {
+    "title": "Guess the Word Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Guess the Word (LeetCode #843). Pattern: greedy. Time O(n), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Guess the Word",
+      "Guess the Word solution",
+      "Guess the Word leetcode",
+      "greedy",
+      "greedy",
+      "hard"
+    ],
+    "canonicalPath": "/problems/guess-the-word"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Guess the Word?",
+      "answer": "The reference solutions aim for O(n) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Guess the Word use?",
+      "answer": "It primarily maps to greedy, within the broader topic of greedy."
+    },
+    {
+      "question": "Is Guess the Word good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/guess-the-word/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the greedy approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Guess the Word (#843) — Hard. Pattern: greedy. Complexity: O(n) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Guess the Word: show input structure (greedy), highlight the moving parts of the greedy approach, and annotate each step with the maintained invariant and complexity."
+}

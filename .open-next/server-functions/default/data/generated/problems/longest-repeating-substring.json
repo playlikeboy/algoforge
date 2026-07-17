@@ -1,0 +1,158 @@
+{
+  "id": "1062",
+  "number": 1062,
+  "slug": "longest-repeating-substring",
+  "title": "Longest Repeating Substring",
+  "difficulty": "Medium",
+  "topics": [
+    "binary-search"
+  ],
+  "patterns": [
+    "rabin-karp-algorithm"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogn)",
+  "spaceComplexity": "O(n)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/longest-repeating-substring/",
+  "notes": [
+    "Rabin-Karp Algorithm"
+  ],
+  "relatedSlugs": [
+    "lexicographically-smallest-string-after-reverse",
+    "lexicographically-smallest-string-after-reverse-ii",
+    "smallest-unique-subarray",
+    "strings-differ-by-one-character",
+    "find-substring-with-given-hash-value",
+    "unique-substrings-with-equal-digit-frequency",
+    "equalize-strings-by-adding-or-removing-characters-at-ends",
+    "repeated-string-match"
+  ],
+  "prevSlug": "lexicographically-smallest-equivalent-string",
+  "nextSlug": "number-of-valid-subarrays",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Longest Repeating Substring?\n\n**Longest Repeating Substring** (LeetCode #1062) is a **Medium** problem that primarily trains **binary search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **rabin karp algorithm**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Rabin-Karp Algorithm.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/longest-repeating-substring/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Longest Repeating Substring\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **rabin karp algorithm**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogn)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogn)** time and **O(n)** space.\n\n### Pattern focus: rabin karp algorithm\n\nUse the pattern as a checklist:\n\n- **rabin karp algorithm** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogn)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Longest Repeating Substring\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for rabin karp algorithm — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **rabin karp algorithm**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **binary search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Longest Repeating Substring** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **binary search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "longest-repeating-substring.cpp",
+      "code": "// Time:  O(nlogn)\n// Space: O(n)\n\nclass Solution {\npublic:\n    int longestRepeatingSubstring(string S) {\n        auto left = 1ul, right = S.length() - 1;\n        while (left <= right) {\n            const auto mid = left + (right - left) / 2;\n            if (!check(S, mid)) {\n                right = mid - 1;\n            } else {\n                left = mid + 1;\n            }\n        }\n        return right;\n    }\n    \nprivate:\n    uint64_t check(const string& S, uint64_t L) {\n        static const uint64_t M = 1e9 + 7;\n        static const uint64_t D = 26;\n        uint64_t p = power(D, L, M);\n        uint64_t curr = 0;\n        for (uint64_t i = 0; i < L; ++i) {\n            curr = ((D * curr) + S[i] - 'a') % M;\n        }\n        unordered_map<uint64_t, vector<uint64_t>> lookup;\n        lookup[curr].emplace_back(L - 1);\n        for (uint64_t i = L; i < S.length(); ++i) {\n            curr = (D * curr) % M;\n            curr = (curr + (S[i] - 'a')) % M;\n            curr = (curr + (M - ((S[i - L] - 'a') * p) % M)) % M;\n            if (lookup.count(curr)) {\n                for (const auto& j : lookup[curr]) {  // check if string is the same when hash is the same\n                    if (S.substr(j - L + 1, L) == S.substr(i - L + 1, L)) {\n                        return i - L + 1;\n                    }\n                }\n            }\n            lookup[curr].emplace_back(i);\n        }\n        return 0;\n    }\n    \n    uint64_t power(uint64_t D, uint64_t L, uint64_t M) {\n        uint64_t result = 1;\n        for (uint64_t i = 0; i < L; ++i) {\n            result = (result * D) % M;\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/longest-repeating-substring.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "longest-repeating-substring.py",
+      "code": "# Time:  O(nlogn)\n# Space: O(n)\n\nimport collections\n\n\nclass Solution(object):\n    def longestRepeatingSubstring(self, S):\n        \"\"\"\n        :type S: str\n        :rtype: int\n        \"\"\"\n        M = 10**9+7\n        D = 26\n\n        def check(S, L):\n            p = pow(D, L, M)\n            curr = reduce(lambda x, y: (D*x+ord(y)-ord('a')) % M, S[:L], 0)\n            lookup = collections.defaultdict(list)\n            lookup[curr].append(L-1)\n            result = 0\n            for i in xrange(L, len(S)):\n                curr = ((D*curr) % M + ord(S[i])-ord('a') -\n                        ((ord(S[i-L])-ord('a'))*p) % M) % M\n                if curr in lookup:\n                    for j in lookup[curr]:\n                        if S[j-L+1:j+1] == S[i-L+1:i+1]:\n                            if result == 0:\n                                result = i\n                            return result-L+1\n                lookup[curr].append(i)\n            return result\n\n        left, right = 0, len(S)-1\n        while left <= right:\n            mid = left + (right-left)//2\n            if not check(S, mid):\n                right = mid-1\n            else:\n                left = mid+1\n        return right\n        \n",
+      "sourcePath": "Python/longest-repeating-substring.py"
+    }
+  },
+  "seo": {
+    "title": "Longest Repeating Substring Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Longest Repeating Substring (LeetCode #1062). Pattern: rabin karp algorithm. Time O(nlogn), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Longest Repeating Substring",
+      "Longest Repeating Substring solution",
+      "Longest Repeating Substring leetcode",
+      "binary-search",
+      "rabin-karp-algorithm",
+      "medium"
+    ],
+    "canonicalPath": "/problems/longest-repeating-substring"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Longest Repeating Substring?",
+      "answer": "The reference solutions aim for O(nlogn) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Longest Repeating Substring use?",
+      "answer": "It primarily maps to rabin karp algorithm, within the broader topic of binary search."
+    },
+    {
+      "question": "Is Longest Repeating Substring good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/longest-repeating-substring/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the rabin karp algorithm approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Longest Repeating Substring (#1062) — Medium. Pattern: rabin karp algorithm. Complexity: O(nlogn) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Longest Repeating Substring: show input structure (binary search), highlight the moving parts of the rabin karp algorithm approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,164 @@
+{
+  "id": "399",
+  "number": 399,
+  "slug": "evaluate-division",
+  "title": "Evaluate Division",
+  "difficulty": "Medium",
+  "topics": [
+    "graph"
+  ],
+  "patterns": [
+    "floyd-warshall-algorithm",
+    "queue-bfs",
+    "union-find"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(e + q)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/evaluate-division/",
+  "notes": [
+    "Floyd-Warshall Algorithm",
+    "BFS",
+    "Union Find"
+  ],
+  "relatedSlugs": [
+    "properties-graph",
+    "find-all-people-with-secret",
+    "regions-cut-by-slashes",
+    "satisfiability-of-equality-equations",
+    "the-earliest-moment-when-everyone-become-friends",
+    "find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance",
+    "course-schedule-iv",
+    "path-with-minimum-effort"
+  ],
+  "prevSlug": "random-pick-index",
+  "nextSlug": "nth-digit",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Evaluate Division?\n\n**Evaluate Division** (LeetCode #399) is a **Medium** problem that primarily trains **graph**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **floyd warshall algorithm, queue bfs, and union find**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Floyd-Warshall Algorithm, BFS, Union Find.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/evaluate-division/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Evaluate Division\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **floyd warshall algorithm, queue bfs, and union find**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(e + q)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(e + q)** time and **O(n)** space.\n\n### Pattern focus: floyd warshall algorithm, queue bfs, and union find\n\nUse the pattern as a checklist:\n\n- **floyd warshall algorithm** — confirm the invariant holds after each step\n- **queue bfs** — confirm the invariant holds after each step\n- **union find** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(e + q)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Evaluate Division\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for floyd warshall algorithm, queue bfs, and union find — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **floyd warshall algorithm, queue bfs, and union find**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **graph**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Evaluate Division** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **graph**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "evaluate-division.cpp",
+      "code": "// Time:  O((e + q) * α(n)) ~= O(e + q), using either one of \"path compression\" and \"union by rank\" results in amortized O(logn)\n//                                     , using  both results in α(n) ~= O(1)\n// Space: O(n)\n\nclass Solution {\npublic:\n    vector<double> calcEquation(vector<vector<string>>& equations, vector<double>& values, vector<vector<string>>& queries) {\n        UnionFind union_find;\n        for (int i = 0; i < equations.size(); ++i) {\n            union_find.union_set(equations[i][0], equations[i][1], values[i]);\n        }\n        \n        vector<double> result;\n        for (const auto& q : queries) {\n            result.emplace_back(union_find.query_set(q[0], q[1]));\n        }\n        return result;\n    }\n\nprivate:\n    class UnionFind {\n    public:\n        UnionFind() {\n        }\n                \n        pair<string, double> find_set(const string& x) {\n            if (!set_.count(x)) {\n                set_[x] = pair(x, 1.0);\n            }\n            const auto& [xp, xr] = set_[x];\n            if (x != xp) {\n                const auto& [pp, pr] = find_set(xp);  // Path compression.\n                set_[x] = pair(pp, xr * pr);\n            }\n            return set_[x];\n        }\n\n        bool union_set(const string& x, const string& y, double r) {\n            const auto& [xp, xr] = find_set(x);\n            const auto& [yp, yr] = find_set(y);\n            if (xp == yp) {\n                return false;\n            }\n            if (rank_[xp] < rank_[yp]) {  // Union by rank.\n                set_[xp] = pair(yp, r * yr / xr);\n            } else if (rank_[xp] > rank_[yp]) {\n                set_[yp] = pair(xp, 1.0 / r * xr / yr);\n            } else {\n                set_[yp] = pair(xp, 1.0 / r * xr / yr);\n                ++rank_[xp];\n            }\n            return true;\n        }\n\n        double query_set(const string& x, const string& y) {\n            if (!set_.count(x) || !set_.count(y)) {\n                return -1.0;\n            }\n            const auto& [xp, xr] = find_set(x);\n            const auto& [yp, yr] = find_set(y);\n            return (xp == yp) ? xr / yr : -1.0;\n        }\n\n    private:\n        unordered_map<string, pair<string, double>> set_;\n        unordered_map<string, int> rank_;\n    };\n    \n    class UnionFindPathCompressionOnly {\n    public:\n        UnionFindPathCompressionOnly() {\n        }\n                \n        pair<string, double> find_set(const string& x) {\n            if (!set_.count(x)) {\n                set_[x] = pair(x, 1.0);\n            }\n            const auto& [xp, xr] = set_[x];\n            if (x != xp) {\n                const auto& [pp, pr] = find_set(xp);  // Path compression.\n                set_[x] = pair(pp, xr * pr);\n            }\n            return set_[x];\n        }\n\n        bool union_set(const string& x, const string& y, double r) {\n            const auto& [xp, xr] = find_set(x);\n            const auto& [yp, yr] = find_set(y);\n            if (xp == yp) {\n                return false;\n            }\n            set_[xp] = pair(yp, r * yr / xr); \n            return true;\n        }\n\n        double query_set(const string& x, const string& y) {\n            if (!set_.count(x) || !set_.count(y)) {\n                return -1.0;\n            }\n            const auto& [xp, xr] = find_set(x);\n            const auto& [yp, yr] = find_set(y);\n            return (xp == yp) ? xr / yr : -1.0;\n        }\n\n    private:\n        unordered_map<string, pair<string, double>> set_;\n    };\n};\n\n// Time:  O(e + q * n), at most O(n^3 + q)\n// Space: O(n^2)\n// bfs solution\nclass Solution2 {\npublic:\n    vector<double> calcEquation(vector<vector<string>>& equations, vector<double>& values, vector<vector<string>>& queries) {\n        unordered_map<string, unordered_map<string, double>> adj;\n        for (int i = 0; i < equations.size(); ++i) {\n            const auto& a = equations[i][0], &b = equations[i][1];\n            adj[a][b] = values[i];\n            adj[b][a] = 1.0 / values[i];\n        }\n        vector<double> result;\n        unordered_map<string, unordered_map<string, double>> lookup;\n        for (const auto& q : queries) {\n            const auto& a = q[0], &b = q[1];\n            result.emplace_back(bfs(adj, a, b, &lookup));\n        }\n        return result;\n    }\n\nprivate:\n    double bfs(const unordered_map<string, unordered_map<string, double>>& adj,\n            const string& a, const string& b,\n            unordered_map<string, unordered_map<string, double>> *lookup) {\n        if (!adj.count(a) || !adj.count(b)) {\n            return -1.0;\n        }\n        if (lookup->count(a) && (*lookup)[a].count(b)) {\n            return (*lookup)[a][b];\n        }\n        unordered_set<string> visited = {a};\n        queue<pair<string, double>> q({{a, 1.0}});\n        while (!q.empty()) {\n            const auto [u, val] = q.front(); q.pop();\n            if (u == b) {\n                (*lookup)[a][b] = val;\n                return val;\n            }\n            if (!adj.count(u)) {\n                continue;\n            }\n            for (const auto& [v, k] : adj.at(u)) {\n                if (visited.count(v)) {\n                    continue;\n                }\n                visited.emplace(v);\n                q.emplace(v, val * k);\n            }\n        }\n        (*lookup)[a][b] = -1.0;\n        return -1.0;\n    }   \n};\n\n// Time:  O(n^3 + q)\n// Space: O(n^2)\n// variant of floyd–warshall algorithm solution\nclass Solution3 {\npublic:\n    vector<double> calcEquation(vector<vector<string>>& equations, vector<double>& values, vector<vector<string>>& queries) {\n        unordered_map<string, unordered_map<string, double>> adj;\n        for (int i = 0; i < equations.size(); ++i) {\n            const auto& a = equations[i][0], &b = equations[i][1];\n            adj[a][a] = adj[b][b] = 1.0;\n            adj[a][b] = values[i];\n            adj[b][a] = 1.0 / values[i];\n        }\n        for (const auto& [k, _] : adj) {\n            for (const auto& [i, _] : adj[k]) {\n                for (const auto& [j, _] : adj[k]) {\n                    adj[i][j] = adj[i][k] * adj[k][j];\n                }\n            }\n        }\n        vector<double> result;\n        for (const auto& q : queries) {\n            const auto& a = q[0], &b = q[1];\n            result.emplace_back(adj.count(a) && adj[a].count(b) ? adj[a][b] : -1.0);\n        }\n        return result;\n    }\n};\n\n// Time:  O(e + q * n), at most O(n^3 + q)\n// Space: O(e)\nclass Solution4 {\npublic:\n    vector<double> calcEquation(vector<pair<string, string>> equations,\n        vector<double>& values, vector<pair<string, string>> query) {\n\n        unordered_map<string, unordered_map<string, double>> lookup;\n        for (int i = 0; i < values.size(); ++i) {\n            lookup[equations[i].first].emplace(equations[i].second, values[i]);\n            if (values[i] != 0) {\n                lookup[equations[i].second].emplace(equations[i].first, 1 / values[i]);\n            }\n        }\n\n        vector<double> result;\n        for (const auto& i : query) {\n            unordered_set<string> visited;\n            const auto tmp = check(i.first, i.second, lookup, &visited);\n            if (tmp.first) {\n                result.emplace_back(tmp.second);\n            } else {\n                result.emplace_back(-1);\n            }\n        }\n        return result;\n    }\n\nprivate:\n    pair<bool, double> check(string up, string down, \n            unordered_map<string, unordered_map<string, double>> &lookup,\n            unordered_set<string> *visited) {\n        if (lookup[up].find(down) != lookup[up].end()) {\n            return {true, lookup[up][down]};\n        }\n        for (const auto& q : lookup[up]) {\n            if (!visited->count(q.first)) {\n                visited->emplace(q.first);\n                const auto tmp = check(q.first, down, lookup, visited);\n                if (tmp.first) {\n                    return {true, q.second * tmp.second};\n                }\n            }\n        }\n        return {false, 0};\n    }\n};\n",
+      "sourcePath": "C++/evaluate-division.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "evaluate-division.py",
+      "code": "# Time:  O((e + q) * α(n)) ~= O(e + q), using either one of \"path compression\" and \"union by rank\" results in amortized O(logn)\n#                                     , using  both results in α(n) ~= O(1)\n# Space: O(n)\n\nimport collections\nimport itertools\n\n\nclass UnionFind(object):\n    def __init__(self):\n        self.set = {}\n        self.rank = collections.Counter()\n\n    def find_set(self, x):\n        xp, xr = self.set.setdefault(x, (x, 1.0))\n        if x != xp:\n            pp, pr = self.find_set(xp)  # path compression.\n            self.set[x] = (pp, xr*pr)  # x/pp = xr*pr\n        return self.set[x]\n\n    def union_set(self, x, y, r):\n        (xp, xr), (yp, yr) =  map(self.find_set, (x, y))\n        if xp == yp:\n            return False\n        if self.rank[xp] < self.rank[yp]:  # union by rank\n            # to make x/yp = r*yr and merge xp into yp\n            # => since x/xp = xr, we can merge with xp/yp = r*yr/xr \n            self.set[xp] = (yp, r*yr/xr)\n        elif self.rank[xp] > self.rank[yp]:\n            # to make y/xp = 1/r*xr and merge xp into yp\n            # => since y/yp = yr, we can merge with yp/xp = 1/r*xr/yr \n            self.set[yp] = (xp, 1.0/r*xr/yr)\n        else:\n            # to make y/xp = 1/r*xr and merge xp into yp\n            # => since y/yp = yr, we can merge with yp/xp = 1/r*xr/yr \n            self.set[yp] = (xp, 1.0/r*xr/yr)\n            self.rank[xp] += 1 \n        return True\n\n    def query_set(self, x, y):\n        if x not in self.set or y not in self.set:\n            return -1.0\n        (xp, xr), (yp, yr) = map(self.find_set, (x, y))\n        return xr/yr if xp == yp else -1.0\n\n\nclass UnionFindPathCompressionOnly(object):\n    def __init__(self):\n        self.set = {}\n\n    def find_set(self, x):\n        xp, xr = self.set.setdefault(x, (x, 1.0))\n        if x != xp:\n            pp, pr = self.find_set(xp)  # path compression.\n            self.set[x] = (pp, xr*pr)  # x/pp = xr*pr\n        return self.set[x]\n\n    def union_set(self, x, y, r):\n        (xp, xr), (yp, yr) =  map(self.find_set, (x, y))\n        if xp == yp:\n            return False\n        # to make x/yp = r*yr and merge xp into yp\n        # => since x/xp = xr, we can merge with xp/yp = r*yr/xr \n        self.set[xp] = (yp, r*yr/xr)\n        return True\n\n    def query_set(self, x, y):\n        if x not in self.set or y not in self.set:\n            return -1.0\n        (xp, xr), (yp, yr) = map(self.find_set, (x, y))\n        return xr/yr if xp == yp else -1.0\n\n\nclass Solution(object):\n    def calcEquation(self, equations, values, queries):\n        \"\"\"\n        :type equations: List[List[str]]\n        :type values: List[float]\n        :type queries: List[List[str]]\n        :rtype: List[float]\n        \"\"\"\n        union_find = UnionFind()\n        for (a, b), k in itertools.izip(equations, values):\n            union_find.union_set(a, b, k)\n        return [union_find.query_set(a, b) for a, b in queries]\n\n\n# Time:  O(e + q * n), at most O(n^3 + q)\n# Space: O(n^2)\n# bfs solution\nimport collections\nimport itertools\n\n\nclass Solution2(object):\n    def calcEquation(self, equations, values, queries):\n        \"\"\"\n        :type equations: List[List[str]]\n        :type values: List[float]\n        :type queries: List[List[str]]\n        :rtype: List[float]\n        \"\"\"\n        adj = collections.defaultdict(dict)\n        for (a, b), k in itertools.izip(equations, values):\n            adj[a][b] = k\n            adj[b][a] = 1.0/k\n\n        def bfs(adj, a, b, lookup):\n            if a not in adj or b not in adj:\n                return -1.0\n            if (a, b) in lookup:\n                return lookup[a, b]\n            visited = {a}\n            q = collections.deque([(a, 1.0)])\n            while q:\n                u, val = q.popleft()\n                if u == b:\n                    lookup[a, b] = val\n                    return val\n                for v, k in adj[u].iteritems():\n                    if v in visited:\n                        continue                    \n                    visited.add(v)\n                    q.append((v, val*k))\n            lookup[a, b] = -1.0\n            return -1.0\n\n        lookup = {}\n        return [bfs(adj, a, b, lookup) for a, b in queries]\n\n\n# Time:  O(n^3 + q)\n# Space: O(n^2)\nimport collections\nimport itertools\n\n\n# variant of floyd–warshall algorithm solution\nclass Solution3(object):\n    def calcEquation(self, equations, values, queries):\n        \"\"\"\n        :type equations: List[List[str]]\n        :type values: List[float]\n        :type queries: List[List[str]]\n        :rtype: List[float]\n        \"\"\"\n        adj = collections.defaultdict(dict)\n        for (a, b), k in itertools.izip(equations, values):\n            adj[a][a] = adj[b][b] = 1.0\n            adj[a][b] = k\n            adj[b][a] = 1.0/k\n        for k in adj:\n            for i in adj[k]:\n                for j in adj[k]:\n                    adj[i][j] = adj[i][k]*adj[k][j]\n        return [adj[a].get(b, -1.0) for a, b in queries]\n\n    \n# Time:  O(e + q * n), at most O(n^3 + q)\n# Space: O(e)\nimport collections\n\n\nclass Solution4(object):\n    def calcEquation(self, equations, values, query):\n        \"\"\"\n        :type equations: List[List[str]]\n        :type values: List[float]\n        :type query: List[List[str]]\n        :rtype: List[float]\n        \"\"\"\n        def check(up, down, lookup, visited):\n            if up in lookup and down in lookup[up]:\n                return (True, lookup[up][down])\n            for k, v in lookup[up].iteritems():\n                if k not in visited:\n                    visited.add(k)\n                    tmp = check(k, down, lookup, visited)\n                    if tmp[0]:\n                        return (True, v * tmp[1])\n            return (False, 0)\n\n        lookup = collections.defaultdict(dict)\n        for i, e in enumerate(equations):\n            lookup[e[0]][e[1]] = values[i]\n            if values[i]:\n                lookup[e[1]][e[0]] = 1.0 / values[i]\n\n        result = []\n        for q in query:\n            visited = set()\n            tmp = check(q[0], q[1], lookup, visited)\n            result.append(tmp[1] if tmp[0] else -1)\n        return result\n",
+      "sourcePath": "Python/evaluate-division.py"
+    }
+  },
+  "seo": {
+    "title": "Evaluate Division Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Evaluate Division (LeetCode #399). Pattern: floyd warshall algorithm. Time O(e + q), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Evaluate Division",
+      "Evaluate Division solution",
+      "Evaluate Division leetcode",
+      "graph",
+      "floyd-warshall-algorithm",
+      "queue-bfs",
+      "union-find",
+      "medium"
+    ],
+    "canonicalPath": "/problems/evaluate-division"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Evaluate Division?",
+      "answer": "The reference solutions aim for O(e + q) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Evaluate Division use?",
+      "answer": "It primarily maps to floyd warshall algorithm, queue bfs, and union find, within the broader topic of graph."
+    },
+    {
+      "question": "Is Evaluate Division good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/evaluate-division/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the floyd warshall algorithm, queue bfs, and union find approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Evaluate Division (#399) — Medium. Pattern: floyd warshall algorithm, queue bfs, and union find. Complexity: O(e + q) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Evaluate Division: show input structure (graph), highlight the moving parts of the floyd warshall algorithm, queue bfs, and union find approach, and annotate each step with the maintained invariant and complexity."
+}

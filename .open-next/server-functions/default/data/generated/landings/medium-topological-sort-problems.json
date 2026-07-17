@@ -1,0 +1,38 @@
+{
+  "slug": "medium-topological-sort-problems",
+  "path": "/explore/medium-topological-sort-problems",
+  "h1": "Medium Topological Sort Problems",
+  "intro": "3 medium problems that drill the Topological Sort pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "sequence-reconstruction",
+    "path-sum-iv",
+    "apply-substitutions"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice medium Topological Sort problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/topological-sort",
+      "label": "Topological Sort pattern"
+    },
+    {
+      "href": "/difficulty/medium",
+      "label": "All Medium problems"
+    }
+  ],
+  "seo": {
+    "title": "Medium Topological Sort Problems | AlgoForge",
+    "description": "Practice medium Topological Sort LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "medium Topological Sort",
+      "Topological Sort problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/medium-topological-sort-problems"
+  },
+  "kind": "difficulty-pattern"
+}

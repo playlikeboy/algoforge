@@ -1,0 +1,161 @@
+{
+  "id": "343",
+  "number": 343,
+  "slug": "integer-break",
+  "title": "Integer Break",
+  "difficulty": "Medium",
+  "topics": [
+    "math"
+  ],
+  "patterns": [
+    "dynamic-programming"
+  ],
+  "companies": [
+    "amazon"
+  ],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(logn)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/integer-break/",
+  "notes": [
+    "Tricky",
+    "DP"
+  ],
+  "relatedSlugs": [
+    "4-keys-keyboard",
+    "minimum-knight-moves",
+    "egg-drop-with-2-eggs-and-n-floors",
+    "most-expensive-item-that-can-not-be-bought",
+    "the-number-of-ways-to-make-the-sum",
+    "number-of-subsequences-with-odd-sum",
+    "find-the-number-of-k-even-arrays",
+    "divisor-game"
+  ],
+  "prevSlug": "power-of-four",
+  "nextSlug": "reverse-string",
+  "estimatedMinutes": 45,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Integer Break?\n\n**Integer Break** (LeetCode #343) is a **Medium** problem that primarily trains **math**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Tricky, DP.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/integer-break/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Integer Break\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(logn)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(logn)** time and **O(1)** space.\n\n### Pattern focus: dynamic programming\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(logn)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Integer Break\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **math**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Integer Break** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **math**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "integer-break.cpp",
+      "code": "// Time:  O(logn), pow is O(logn).\n// Space: O(1)\n\nclass Solution {\npublic:\n    int integerBreak(int n) {\n        if (n < 4) {\n            return n - 1;\n        }\n\n        // Proof.\n        // 1. Let n = a1 + a2 + ... + ak, product = a1 * a2 * ... * ak\n        //     - For each ai >= 4, we can always maximize the product by:\n        //       ai <= 2 * (ai - 2)\n        //     - For each aj >= 5, we can always maximize the product by:\n        //       aj <= 3 * (aj - 3)\n        // \n        //    Conclusion 1:\n        //     - For n >= 4, the max of the product must be in the form of\n        //       3^a * 2^b, s.t. 3a + 2b = n\n        //\n        // 2. To maximize the product = 3^a * 2^b s.t. 3a + 2b = n\n        //     - For each b >= 3, we can always maximize the product by:\n        //       3^a * 2^b <= 3^(a+2) * 2^(b-3) s.t. 3(a+2) + 2(b-3) = n\n        //\n        //    Conclusion 2:\n        //     - For n >= 4, the max of the product must be in the form of\n        //       3^Q * 2^R, 0 <= R < 3 s.t. 3Q + 2R = n\n        //       i.e.\n        //         if n = 3Q + 0,   the max of the product = 3^Q * 2^0\n        //         if n = 3Q + 2,   the max of the product = 3^Q * 2^1\n        //         if n = 3Q + 2*2, the max of the product = 3^Q * 2^2\n\n        int res = 0;\n        if (n % 3 == 0) {         // n = 3Q + 0, the max is 3^Q * 2^0\n            res = pow(3, n / 3);\n        } else if (n % 3 == 2) {  // n = 3Q + 2, the max is 3^Q * 2^1\n            res = pow(3, n / 3) * 2;\n        } else {                  // n = 3Q + 4, the max is 3^Q * 2^2\n            res = pow(3, n / 3 - 1) * 4;\n        }\n        return res;\n    }\n};\n\n// Time:  O(n)\n// Space: O(1)\n// DP solution.\nclass Solution2 {\npublic:\n    int integerBreak(int n) {\n        if (n < 4) {\n            return n - 1;\n        }\n\n        // integerBreak(n) = max(integerBreak(n - 2) * 2, integerBreak(n - 3) * 3)\n        vector<int> res{0, 1, 2, 3};\n        for (int i = 4; i <= n; ++i) {\n            res[i % 4] = max(res[(i - 2) % 4] * 2, res[(i - 3) % 4] * 3);\n        }\n        return res[n % 4];\n    }\n};\n",
+      "sourcePath": "C++/integer-break.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "integer-break.py",
+      "code": "# Time:  O(logn), pow is O(logn).\n# Space: O(1)\n\nclass Solution(object):\n    def integerBreak(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        if n < 4:\n            return n - 1\n\n        #  Proof.\n        #  1. Let n = a1 + a2 + ... + ak, product = a1 * a2 * ... * ak\n        #      - For each ai >= 4, we can always maximize the product by:\n        #        ai <= 2 * (ai - 2)\n        #      - For each aj >= 5, we can always maximize the product by:\n        #        aj <= 3 * (aj - 3)\n        #\n        #     Conclusion 1:\n        #      - For n >= 4, the max of the product must be in the form of\n        #        3^a * 2^b, s.t. 3a + 2b = n\n        #\n        #  2. To maximize the product = 3^a * 2^b s.t. 3a + 2b = n\n        #      - For each b >= 3, we can always maximize the product by:\n        #        3^a * 2^b <= 3^(a+2) * 2^(b-3) s.t. 3(a+2) + 2(b-3) = n\n        #\n        #     Conclusion 2:\n        #      - For n >= 4, the max of the product must be in the form of\n        #        3^Q * 2^R, 0 <= R < 3 s.t. 3Q + 2R = n\n        #        i.e.\n        #          if n = 3Q + 0,   the max of the product = 3^Q * 2^0\n        #          if n = 3Q + 2,   the max of the product = 3^Q * 2^1\n        #          if n = 3Q + 2*2, the max of the product = 3^Q * 2^2\n\n        res = 0\n        if n % 3 == 0:            #  n = 3Q + 0, the max is 3^Q * 2^0\n            res = 3 ** (n // 3)\n        elif n % 3 == 2:          #  n = 3Q + 2, the max is 3^Q * 2^1\n            res = 3 ** (n // 3) * 2\n        else:                     #  n = 3Q + 4, the max is 3^Q * 2^2\n            res = 3 ** (n // 3 - 1) * 4\n        return res\n\n\n# Time:  O(n)\n# Space: O(1)\n# DP solution.\nclass Solution2(object):\n    def integerBreak(self, n):\n        \"\"\"\n        :type n: int\n        :rtype: int\n        \"\"\"\n        if n < 4:\n            return n - 1\n\n        # integerBreak(n) = max(integerBreak(n - 2) * 2, integerBreak(n - 3) * 3)\n        res = [0, 1, 2, 3]\n        for i in xrange(4, n + 1):\n            res[i % 4] = max(res[(i - 2) % 4] * 2, res[(i - 3) % 4] * 3)\n        return res[n % 4]\n\n",
+      "sourcePath": "Python/integer-break.py"
+    }
+  },
+  "seo": {
+    "title": "Integer Break Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Integer Break (LeetCode #343). Pattern: dynamic programming. Time O(logn), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Integer Break",
+      "Integer Break solution",
+      "Integer Break leetcode",
+      "math",
+      "dynamic-programming",
+      "medium"
+    ],
+    "canonicalPath": "/problems/integer-break"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Integer Break?",
+      "answer": "The reference solutions aim for O(logn) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Integer Break use?",
+      "answer": "It primarily maps to dynamic programming, within the broader topic of math."
+    },
+    {
+      "question": "Is Integer Break good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/integer-break/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Integer Break (#343) — Medium. Pattern: dynamic programming. Complexity: O(logn) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Integer Break: show input structure (math), highlight the moving parts of the dynamic programming approach, and annotate each step with the maintained invariant and complexity."
+}

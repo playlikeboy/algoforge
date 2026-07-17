@@ -1,0 +1,23 @@
+{
+  "type": "pattern",
+  "slug": "cartesian-tree",
+  "name": "Cartesian Tree",
+  "description": "Master the Cartesian Tree coding pattern with curated problems.",
+  "problemCount": 2,
+  "problemSlugs": [
+    "maximum-binary-tree",
+    "maximum-binary-tree-ii"
+  ],
+  "relatedTopics": [],
+  "seo": {
+    "title": "Cartesian Tree Pattern — Problems & Guide | AlgoForge",
+    "description": "Learn the Cartesian Tree pattern with 2 practice problems, interview tips, and visual intuition.",
+    "keywords": [
+      "Cartesian Tree",
+      "Cartesian Tree pattern",
+      "Cartesian Tree leetcode",
+      "coding patterns"
+    ],
+    "canonicalPath": "/patterns/cartesian-tree"
+  }
+}

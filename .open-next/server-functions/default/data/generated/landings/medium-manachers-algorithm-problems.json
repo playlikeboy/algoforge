@@ -1,0 +1,38 @@
+{
+  "slug": "medium-manachers-algorithm-problems",
+  "path": "/explore/medium-manachers-algorithm-problems",
+  "h1": "Medium Manachers Algorithm Problems",
+  "intro": "3 medium problems that drill the Manachers Algorithm pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "longest-palindromic-substring",
+    "palindromic-substrings",
+    "longest-palindrome-after-substring-concatenation-i"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice medium Manachers Algorithm problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/manachers-algorithm",
+      "label": "Manachers Algorithm pattern"
+    },
+    {
+      "href": "/difficulty/medium",
+      "label": "All Medium problems"
+    }
+  ],
+  "seo": {
+    "title": "Medium Manachers Algorithm Problems | AlgoForge",
+    "description": "Practice medium Manachers Algorithm LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "medium Manachers Algorithm",
+      "Manachers Algorithm problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/medium-manachers-algorithm-problems"
+  },
+  "kind": "difficulty-pattern"
+}

@@ -1,0 +1,73 @@
+{
+  "slug": "easy-bit-manipulation-problems",
+  "path": "/explore/easy-bit-manipulation-problems",
+  "h1": "Easy Bit Manipulation Problems",
+  "intro": "38 easy problems that drill the Bit Manipulation pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "single-number",
+    "reverse-bits",
+    "number-of-1-bits",
+    "power-of-two",
+    "power-of-four",
+    "sum-of-two-integers",
+    "find-the-difference",
+    "binary-watch",
+    "hamming-distance",
+    "number-complement",
+    "set-mismatch",
+    "binary-number-with-alternating-bits",
+    "prime-number-of-set-bits-in-binary-representation",
+    "binary-gap",
+    "number-of-steps-to-reduce-a-number-to-zero",
+    "sort-integers-by-the-number-of-1-bits",
+    "decode-xored-array",
+    "minimum-bit-flips-to-convert-number",
+    "smallest-even-multiple",
+    "number-of-even-and-odd-bits",
+    "check-if-the-number-is-fascinating",
+    "sum-of-values-at-indices-with-k-set-bits",
+    "find-the-k-or-of-an-array",
+    "maximum-strong-pair-xor-i",
+    "find-missing-and-repeated-values",
+    "check-if-bitwise-or-has-trailing-zeros",
+    "count-numbers-with-unique-digits-ii",
+    "count-triplets-with-even-xor-set-bits-i",
+    "number-of-bit-changes-to-make-two-integers-equal",
+    "the-two-sneaky-numbers-of-digitville",
+    "find-the-k-th-character-in-string-game-i",
+    "construct-the-minimum-bitwise-array-i",
+    "smallest-number-with-all-set-bits",
+    "minimum-number-of-flips-to-reverse-binary-string",
+    "sort-integers-by-binary-reflection",
+    "count-monobit-integers",
+    "exactly-one-consecutive-set-bits-pair",
+    "sum-of-compatible-numbers-in-range-i"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice easy Bit Manipulation problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/bit-manipulation",
+      "label": "Bit Manipulation pattern"
+    },
+    {
+      "href": "/difficulty/easy",
+      "label": "All Easy problems"
+    }
+  ],
+  "seo": {
+    "title": "Easy Bit Manipulation Problems | AlgoForge",
+    "description": "Practice easy Bit Manipulation LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "easy Bit Manipulation",
+      "Bit Manipulation problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/easy-bit-manipulation-problems"
+  },
+  "kind": "difficulty-pattern"
+}

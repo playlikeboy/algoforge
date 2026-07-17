@@ -1,0 +1,20 @@
+{
+  "type": "company",
+  "slug": "affirmd",
+  "name": "Affirmd",
+  "description": "Coding interview preparation for Affirmd: high-frequency patterns and problem sets.",
+  "problemCount": 1,
+  "problemSlugs": [
+    "insert-delete-getrandom-o1"
+  ],
+  "seo": {
+    "title": "Affirmd Coding Interview Questions | AlgoForge",
+    "description": "Prepare for Affirmd interviews with 1 problems, patterns, and roadmaps.",
+    "keywords": [
+      "Affirmd interview questions",
+      "Affirmd leetcode",
+      "Affirmd oa"
+    ],
+    "canonicalPath": "/companies/affirmd"
+  }
+}

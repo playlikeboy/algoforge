@@ -1,0 +1,164 @@
+{
+  "id": "2271",
+  "number": 2271,
+  "slug": "maximum-white-tiles-covered-by-a-carpet",
+  "title": "Maximum White Tiles Covered by a Carpet",
+  "difficulty": "Medium",
+  "topics": [
+    "array"
+  ],
+  "patterns": [
+    "sliding-window",
+    "prefix-sum",
+    "binary-search"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogn)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-white-tiles-covered-by-a-carpet/",
+  "notes": [
+    "Sliding Window",
+    "Prefix Sum",
+    "Binary Search"
+  ],
+  "relatedSlugs": [
+    "minimum-absolute-difference-queries",
+    "longest-balanced-subarray-i",
+    "longest-balanced-subarray-ii",
+    "minimum-operations-to-equalize-subarrays",
+    "binary-searchable-numbers-in-an-unsorted-array",
+    "widest-pair-of-indices-with-equal-range-sum",
+    "sum-of-beauty-in-the-array",
+    "grid-game"
+  ],
+  "prevSlug": "number-of-ways-to-split-array",
+  "nextSlug": "substring-with-largest-variance",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Maximum White Tiles Covered by a Carpet?\n\n**Maximum White Tiles Covered by a Carpet** (LeetCode #2271) is a **Medium** problem that primarily trains **array**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sliding window, prefix sum, and binary search**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Sliding Window, Prefix Sum, Binary Search.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/maximum-white-tiles-covered-by-a-carpet/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Maximum White Tiles Covered by a Carpet\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sliding window, prefix sum, and binary search**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogn)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogn)** time and **O(1)** space.\n\n### Pattern focus: sliding window, prefix sum, and binary search\n\nUse the pattern as a checklist:\n\n- **sliding window** — confirm the invariant holds after each step\n- **prefix sum** — confirm the invariant holds after each step\n- **binary search** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogn)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Maximum White Tiles Covered by a Carpet\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sliding window, prefix sum, and binary search — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sliding window, prefix sum, and binary search**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **array**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Maximum White Tiles Covered by a Carpet** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **array**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "maximum-white-tiles-covered-by-a-carpet.cpp",
+      "code": "// Time:  O(nlogn)\n// Space: O(1)\n\n// sliding window, optimized from solution3\nclass Solution {\npublic:\n    int maximumWhiteTiles(vector<vector<int>>& tiles, int carpetLen) {\n        sort(begin(tiles), end(tiles));\n        int result = 0;\n        for (int left = 0, right = 0, gap = 0; left < size(tiles); ++left) {\n            if (left - 1 >= 0) {\n                gap -= tiles[left][0] - tiles[left - 1][1] - 1;\n            }\n            const int r = tiles[left][0] + carpetLen - 1;\n            while (right + 1 < size(tiles) && r + 1 >= tiles[right + 1][0]) {\n                ++right;\n                gap += tiles[right][0] - tiles[right - 1][1] - 1;\n            }\n            result = max(result, min(tiles[right][1] - tiles[left][0] + 1, carpetLen) - gap);\n        }\n        return result;\n    }\n};\n\n// Time:  O(nlogn)\n// Space: O(1)\n// sliding window, optimized from solution4\nclass Solution2 {\npublic:\n    int maximumWhiteTiles(vector<vector<int>>& tiles, int carpetLen) {\n        sort(begin(tiles), end(tiles));\n        int result = 0;\n        for (int right = 0, left = 0, gap = 0; right < size(tiles); ++right) {\n            if (right - 1 >= 0) {\n                gap += tiles[right][0] - tiles[right - 1][1] - 1;\n            }\n            const int l = tiles[right][1] - carpetLen + 1;\n            while (!(tiles[left][1] + 1 >= l)) {\n                ++left;\n                gap -= tiles[left][0] - tiles[left - 1][1] - 1;\n            }\n            result = max(result, min(tiles[right][1] - tiles[left][0] + 1, carpetLen) - gap);\n        }\n        return result;\n    }\n};\n\n// Time:  O(nlogn)\n// Space: O(n)\n// prefix sum, binary search\nclass Solution3 {\npublic:\n    int maximumWhiteTiles(vector<vector<int>>& tiles, int carpetLen) {\n        sort(begin(tiles), end(tiles));\n        vector<int> prefix(size(tiles) + 1);\n        for (int i = 0; i < size(tiles); ++i) {\n            prefix[i + 1] = prefix[i] + (tiles[i][1] - tiles[i][0] + 1);\n        }\n        int result = 0;\n        for (int left = 0; left < size(tiles); ++left) {\n            const int r = tiles[left][0] + carpetLen - 1;\n            const int right = distance(cbegin(tiles), prev(upper_bound(cbegin(tiles), cend(tiles), vector<int>(1, r + 1))));\n            const int extra = max(tiles[right][1] - r, 0);\n            result = max(result, (prefix[right + 1] - prefix[left]) - extra);\n        }\n        return result;\n    }\n};\n\n// Time:  O(nlogn)\n// Space: O(n)\n// prefix sum, binary search\nclass Solution4 {\npublic:\n    int maximumWhiteTiles(vector<vector<int>>& tiles, int carpetLen) {\n        sort(begin(tiles), end(tiles));\n        vector<int> prefix(size(tiles) + 1);\n        for (int i = 0; i < size(tiles); ++i) {\n            prefix[i + 1] = prefix[i] + (tiles[i][1] - tiles[i][0] + 1);\n        }\n        int result = 0;\n        for (int right = 0; right < size(tiles); ++right) {\n            const int l = tiles[right][1] - carpetLen + 1;\n            int left = distance(cbegin(tiles), upper_bound(cbegin(tiles), cend(tiles), vector<int>(1, l)));\n            if (left - 1 >= 0 && tiles[left - 1][1] + 1 >= l) {\n                --left;\n            }\n            const int extra = max(l - tiles[left][0], 0);\n            result = max(result, (prefix[right + 1] - prefix[left]) - extra);\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/maximum-white-tiles-covered-by-a-carpet.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "maximum-white-tiles-covered-by-a-carpet.py",
+      "code": "# Time:  O(nlogn)\n# Space: O(1)\n\n# sliding window, optimized from solution3\nclass Solution(object):\n    def maximumWhiteTiles(self, tiles, carpetLen):\n        \"\"\"\n        :type tiles: List[List[int]]\n        :type carpetLen: int\n        :rtype: int\n        \"\"\"\n        tiles.sort()\n        result = right = gap = 0\n        for left, (l, _) in enumerate(tiles):\n            if left-1 >= 0:\n                gap -= tiles[left][0]-tiles[left-1][1]-1\n            r = l+carpetLen-1\n            while right+1 < len(tiles) and r+1 >= tiles[right+1][0]:\n                right += 1\n                gap += tiles[right][0]-tiles[right-1][1]-1\n            result = max(result, min(tiles[right][1]-tiles[left][0]+1, carpetLen)-gap)\n        return result\n\n\n# Time:  O(nlogn)\n# Space: O(1)\n# sliding window, optimized from solution4\nclass Solution2(object):\n    def maximumWhiteTiles(self, tiles, carpetLen):\n        \"\"\"\n        :type tiles: List[List[int]]\n        :type carpetLen: int\n        :rtype: int\n        \"\"\"\n        tiles.sort()\n        result = left = gap = 0\n        for right in xrange(len(tiles)):\n            if right-1 >= 0:\n                gap += tiles[right][0]-tiles[right-1][1]-1\n            l = tiles[right][1]-carpetLen+1\n            while not (tiles[left][1]+1 >= l):\n                left += 1\n                gap -= tiles[left][0]-tiles[left-1][1]-1\n            result = max(result, min(tiles[right][1]-tiles[left][0]+1, carpetLen)-gap)\n        return result\n\n\n# Time:  O(nlogn)\n# Space: O(n)\nimport bisect\n\n\n# prefix sum, binary search\nclass Solution3(object):\n    def maximumWhiteTiles(self, tiles, carpetLen):\n        \"\"\"\n        :type tiles: List[List[int]]\n        :type carpetLen: int\n        :rtype: int\n        \"\"\"\n        tiles.sort()\n        prefix = [0]*(len(tiles)+1)\n        for i, (l, r) in enumerate(tiles):\n            prefix[i+1] = prefix[i]+(r-l+1)\n        result = 0\n        for left, (l, _) in enumerate(tiles):\n            r = l+carpetLen-1\n            right = bisect.bisect_right(tiles, [r+1])-1\n            extra = max(tiles[right][1]-r, 0)\n            result = max(result, (prefix[right+1]-prefix[left])-extra)\n        return result\n\n\n# Time:  O(nlogn)\n# Space: O(n)\nimport bisect\n\n\n# prefix sum, binary search\nclass Solution4(object):\n    def maximumWhiteTiles(self, tiles, carpetLen):\n        \"\"\"\n        :type tiles: List[List[int]]\n        :type carpetLen: int\n        :rtype: int\n        \"\"\"\n        tiles.sort()\n        prefix = [0]*(len(tiles)+1)\n        for i, (l, r) in enumerate(tiles):\n            prefix[i+1] = prefix[i]+(r-l+1)\n        result = 0\n        for right, (_, r) in enumerate(tiles):\n            l = r-carpetLen+1\n            left = bisect.bisect_right(tiles, [l])\n            if left-1 >= 0 and tiles[left-1][1]+1 >= l:\n                left -= 1\n            extra = max(l-tiles[left][0], 0)\n            result = max(result, (prefix[right+1]-prefix[left])-extra)\n        return result\n",
+      "sourcePath": "Python/maximum-white-tiles-covered-by-a-carpet.py"
+    }
+  },
+  "seo": {
+    "title": "Maximum White Tiles Covered by a Carpet Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Maximum White Tiles Covered by a Carpet (LeetCode #2271). Pattern: sliding window. Time O(nlogn), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Maximum White Tiles Covered by a Carpet",
+      "Maximum White Tiles Covered by a Carpet solution",
+      "Maximum White Tiles Covered by a Carpet leetcode",
+      "array",
+      "sliding-window",
+      "prefix-sum",
+      "binary-search",
+      "medium"
+    ],
+    "canonicalPath": "/problems/maximum-white-tiles-covered-by-a-carpet"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Maximum White Tiles Covered by a Carpet?",
+      "answer": "The reference solutions aim for O(nlogn) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Maximum White Tiles Covered by a Carpet use?",
+      "answer": "It primarily maps to sliding window, prefix sum, and binary search, within the broader topic of array."
+    },
+    {
+      "question": "Is Maximum White Tiles Covered by a Carpet good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/maximum-white-tiles-covered-by-a-carpet/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sliding window, prefix sum, and binary search approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Maximum White Tiles Covered by a Carpet (#2271) — Medium. Pattern: sliding window, prefix sum, and binary search. Complexity: O(nlogn) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Maximum White Tiles Covered by a Carpet: show input structure (array), highlight the moving parts of the sliding window, prefix sum, and binary search approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,28 @@
+{
+  "type": "pattern",
+  "slug": "merge-sort",
+  "name": "Merge Sort",
+  "description": "Master the Merge Sort coding pattern with curated problems.",
+  "problemCount": 7,
+  "problemSlugs": [
+    "count-of-smaller-numbers-after-self",
+    "sort-an-array",
+    "pancake-sorting",
+    "create-sorted-array-through-instructions",
+    "number-of-pairs-satisfying-inequality",
+    "beautiful-pairs",
+    "count-nodes-that-are-great-enough"
+  ],
+  "relatedTopics": [],
+  "seo": {
+    "title": "Merge Sort Pattern — Problems & Guide | AlgoForge",
+    "description": "Learn the Merge Sort pattern with 7 practice problems, interview tips, and visual intuition.",
+    "keywords": [
+      "Merge Sort",
+      "Merge Sort pattern",
+      "Merge Sort leetcode",
+      "coding patterns"
+    ],
+    "canonicalPath": "/patterns/merge-sort"
+  }
+}

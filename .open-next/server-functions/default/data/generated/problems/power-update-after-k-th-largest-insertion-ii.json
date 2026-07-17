@@ -1,0 +1,168 @@
+{
+  "id": "3930",
+  "number": 3930,
+  "slug": "power-update-after-k-th-largest-insertion-ii",
+  "title": "Power Update After K-th Largest Insertion II",
+  "difficulty": "Hard",
+  "topics": [
+    "binary-search-tree"
+  ],
+  "patterns": [
+    "sorted-list",
+    "sort",
+    "fenwick-tree"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O((n + q) * log(n * q) + q * logr)",
+  "spaceComplexity": "O(n + q)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/power-update-after-k-th-largest-insertion-ii/",
+  "notes": [
+    "Sorted List",
+    "Ordered Set",
+    "Sort",
+    "Coordinate Compression",
+    "BIT",
+    "Fenwick Tree",
+    "Fast Exponentiation"
+  ],
+  "relatedSlugs": [
+    "block-placement-queries",
+    "number-of-pairs-satisfying-inequality",
+    "maximum-balanced-subsequence-sum",
+    "distribute-elements-into-two-arrays-ii",
+    "maximum-profitable-triplets-with-increasing-prices-ii",
+    "maximum-profitable-triplets-with-increasing-prices-i",
+    "minimum-absolute-difference-between-elements-with-constraint",
+    "maximum-increasing-triplet-value"
+  ],
+  "prevSlug": "minimum-partition-score-ii",
+  "nextSlug": "check-adjacent-digit-differences",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Power Update After K-th Largest Insertion II?\n\n**Power Update After K-th Largest Insertion II** (LeetCode #3930) is a **Hard** problem that primarily trains **binary search tree**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sorted list, sort, and fenwick tree**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Sorted List, Ordered Set, Sort, Coordinate Compression.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/power-update-after-k-th-largest-insertion-ii/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Power Update After K-th Largest Insertion II\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sorted list, sort, and fenwick tree**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O((n + q) * log(n * q) + q * logr)) and **space** (O(n + q)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O((n + q) * log(n * q) + q * logr)** time and **O(n + q)** space.\n\n### Pattern focus: sorted list, sort, and fenwick tree\n\nUse the pattern as a checklist:\n\n- **sorted list** — confirm the invariant holds after each step\n- **sort** — confirm the invariant holds after each step\n- **fenwick tree** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O((n + q) * log(n * q) + q * logr)** |\n| Space | **O(n + q)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Power Update After K-th Largest Insertion II\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sorted list, sort, and fenwick tree — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sorted list, sort, and fenwick tree**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **binary search tree**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Power Update After K-th Largest Insertion II** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **binary search tree**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "power-update-after-k-th-largest-insertion-ii.cpp",
+      "code": "// Time:  O((n + q) * log(n * q) + q * logr)\n// Space: O(n + q)\n\n#include <ext/pb_ds/assoc_container.hpp>\n#include <ext/pb_ds/tree_policy.hpp>\nusing namespace __gnu_pbds;\n\n// ordered set, fast exponentiation\nclass Solution {\npublic:\n    vector<int> powerUpdate(vector<int>& nums, int p, vector<vector<int>>& queries) {\n        static const uint32_t MOD = 1e9 + 7;\n\n        const auto& powmod = [&](uint32_t a, uint32_t b, uint32_t mod) {\n            a %= mod;\n            uint32_t result = 1;\n            while (b) {\n                if (b & 1) {\n                    result = (static_cast<uint64_t>(result) * a) % mod;\n                }\n                a = (static_cast<uint64_t>(a) * a) % mod;\n                b >>= 1;\n            }\n            return result;\n        };\n\n        using ordered_set = tree<pair<int, int>, null_type, less<pair<int, int>>, rb_tree_tag, tree_order_statistics_node_update>;\n        ordered_set os;\n        int i = 0;\n        for (; i < size(nums); ++i) {\n            os.insert({nums[i], i});\n        }\n        vector<int> result;\n        result.reserve(size(queries));\n        for (const auto& q : queries) {\n            os.insert({q[0], i++});\n            p = powmod(p, os.find_by_order(size(os) - q[1])->first, MOD);\n            result.emplace_back(p);\n        }\n        return result;\n    }\n};\n\n// Time:  O((n + q) * log(n * q) + q * logr)\n// Space: O(n + q)\n// sort, coordinate compression, fenwick tree, fast exponentiation\nclass Solution2 {\npublic:\n    vector<int> powerUpdate(vector<int>& nums, int p, vector<vector<int>>& queries) {\n        static const uint32_t MOD = 1e9 + 7;\n\n        const auto& powmod = [&](uint32_t a, uint32_t b, uint32_t mod) {\n            a %= mod;\n            uint32_t result = 1;\n            while (b) {\n                if (b & 1) {\n                    result = (static_cast<uint64_t>(result) * a) % mod;\n                }\n                a = (static_cast<uint64_t>(a) * a) % mod;\n                b >>= 1;\n            }\n            return result;\n        };\n\n        vector<int> sorted_vals(nums);\n        for (const auto& q : queries) {\n            sorted_vals.emplace_back(q[0]);\n        }\n        ranges::sort(sorted_vals);\n        sorted_vals.erase(unique(begin(sorted_vals), end(sorted_vals)), end(sorted_vals));\n        unordered_map<int, int> val_to_idx;\n        for (int i = 0; i < size(sorted_vals); ++i) {\n            val_to_idx[sorted_vals[i]] = i;\n        }\n        BIT bit(size(val_to_idx));\n        for (const auto& x : nums) {\n            bit.add(val_to_idx[x], +1);\n        }\n        vector<int> result;\n        result.reserve(size(queries));\n        int total = size(nums);\n        for (const auto& q : queries) {\n            bit.add(val_to_idx[q[0]], +1);\n            const auto& i = bit.kth_element(++total - q[1] + 1);\n            p = powmod(p, sorted_vals[i], MOD);\n            result.emplace_back(p);\n        }\n        return result;\n    }\n\nprivate:\n    class BIT {\n    public:\n        BIT(int n) : bit_(n + 1) {  // 0-indexed\n        }\n        \n        void add(int i, int val) {\n            ++i;\n            for (; i < size(bit_); i += lower_bit(i)) {\n                bit_[i] += val;\n            }\n        }\n\n        int query(int i) const {\n            ++i;\n            int total = 0;\n            for (; i > 0; i -= lower_bit(i)) {\n                total += bit_[i];\n            }\n            return total;\n        }\n        \n        int kth_element(int k) const {\n            int total = 0;\n            int pos = 0;\n            for (int i = floor_log2_x(size(bit_) - 1); i >= 0; --i) {\n                if (pos + (1 << i) < size(bit_) && !(total + bit_[pos + (1 << i)] >= k)) {\n                    total += bit_[pos + (1 << i)];\n                    pos += (1 << i);\n                }\n            }\n            return (pos + 1) - 1;\n        }\n    \n    private:\n        int lower_bit(int i) const {\n            return i & -i;\n        }\n        \n        int floor_log2_x(int x) const {\n            return bit_width(static_cast<uint32_t>(x)) - 1;\n        };\n        \n        vector<int> bit_;\n    };\n};\n",
+      "sourcePath": "C++/power-update-after-k-th-largest-insertion-ii.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "power-update-after-k-th-largest-insertion-ii.py",
+      "code": "# Time:  O((n + q) * log(n * q) + q * logr)\n# Space: O(n + q)\n\nfrom sortedcontainers import SortedList\n\n\n# sorted list, fast exponentiation\nclass Solution(object):\n    def powerUpdate(self, nums, p, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type p: int\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        MOD = 10**9+7\n        sl = SortedList(nums)\n        result = []\n        for x, k in queries:\n            sl.add(x)\n            p = pow(p, sl[-k], MOD)\n            result.append(p)\n        return result\n\n\n# Time:  O((n + q) * log(n * q) + q * logr)\n# Space: O(n + q)\n# sort, coordinate compression, fenwick tree, fast exponentiation\nclass BIT(object):  # 0-indexed.\n    def __init__(self, n):\n        self.__bit = [0]*(n+1)  # Extra one for dummy node.\n\n    def add(self, i, val):\n        i += 1  # Extra one for dummy node.\n        while i < len(self.__bit):\n            self.__bit[i] += val\n            i += (i & -i)\n\n    def query(self, i):\n        i += 1  # Extra one for dummy node.\n        ret = 0\n        while i > 0:\n            ret += self.__bit[i]\n            i -= (i & -i)\n        return ret\n   \n    def kth_element(self, k):\n        floor_log2_n = (len(self.__bit)-1).bit_length()-1\n        pow_i = 2**floor_log2_n\n        total = pos = 0  # 1-indexed\n        for _ in reversed(xrange(floor_log2_n+1)):  # O(logN)\n            if pos+pow_i < len(self.__bit) and not total+self.__bit[pos+pow_i] >= k:\n                total += self.__bit[pos+pow_i]\n                pos += pow_i\n            pow_i >>= 1\n        return (pos+1)-1\n\n\nclass Solution2(object):\n    def powerUpdate(self, nums, p, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type p: int\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        MOD = 10**9+7\n        sorted_vals = sorted(set(nums)|set(x[0] for x in queries))\n        val_to_idx = {x:i for i, x in enumerate(sorted_vals)}\n        bit = BIT(len(val_to_idx))\n        for x in nums:\n            bit.add(val_to_idx[x], +1)\n        result = []\n        total = len(nums)\n        for x, k in queries:\n            bit.add(val_to_idx[x], +1)\n            total += 1\n            i = bit.kth_element(total-k+1)\n            p = pow(p, sorted_vals[i], MOD)\n            result.append(p)\n        return result\n",
+      "sourcePath": "Python/power-update-after-k-th-largest-insertion-ii.py"
+    }
+  },
+  "seo": {
+    "title": "Power Update After K-th Largest Insertion II Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Power Update After K-th Largest Insertion II (LeetCode #3930). Pattern: sorted list. Time O((n + q) * log(n * q) + q * logr), space O(n + q). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Power Update After K-th Largest Insertion II",
+      "Power Update After K-th Largest Insertion II solution",
+      "Power Update After K-th Largest Insertion II leetcode",
+      "binary-search-tree",
+      "sorted-list",
+      "sort",
+      "fenwick-tree",
+      "hard"
+    ],
+    "canonicalPath": "/problems/power-update-after-k-th-largest-insertion-ii"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Power Update After K-th Largest Insertion II?",
+      "answer": "The reference solutions aim for O((n + q) * log(n * q) + q * logr) time and O(n + q) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Power Update After K-th Largest Insertion II use?",
+      "answer": "It primarily maps to sorted list, sort, and fenwick tree, within the broader topic of binary search tree."
+    },
+    {
+      "question": "Is Power Update After K-th Largest Insertion II good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/power-update-after-k-th-largest-insertion-ii/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sorted list, sort, and fenwick tree approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Power Update After K-th Largest Insertion II (#3930) — Hard. Pattern: sorted list, sort, and fenwick tree. Complexity: O((n + q) * log(n * q) + q * logr) time / O(n + q) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Power Update After K-th Largest Insertion II: show input structure (binary search tree), highlight the moving parts of the sorted list, sort, and fenwick tree approach, and annotate each step with the maintained invariant and complexity."
+}

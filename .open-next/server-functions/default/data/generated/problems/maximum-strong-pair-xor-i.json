@@ -1,0 +1,174 @@
+{
+  "id": "2932",
+  "number": 2932,
+  "slug": "maximum-strong-pair-xor-i",
+  "title": "Maximum Strong Pair XOR I",
+  "difficulty": "Easy",
+  "topics": [
+    "bit-manipulation"
+  ],
+  "patterns": [
+    "bit-manipulation",
+    "greedy",
+    "trie",
+    "dynamic-programming",
+    "sort",
+    "two-pointers"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogr)",
+  "spaceComplexity": "O(t)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-strong-pair-xor-i/",
+  "notes": [
+    "Bit Manipulation",
+    "Greedy",
+    "Trie",
+    "DP",
+    "Sort",
+    "Two Pointers",
+    "Brute Force"
+  ],
+  "relatedSlugs": [
+    "maximum-strong-pair-xor-ii",
+    "sort-integers-by-binary-reflection",
+    "maximum-xor-of-two-numbers-in-an-array",
+    "maximum-xor-with-an-element-from-array",
+    "maximum-xor-after-operations",
+    "minimize-xor",
+    "minimum-operations-to-make-binary-palindrome",
+    "subarrays-with-xor-at-least-k"
+  ],
+  "prevSlug": "maximum-spending-after-buying-items",
+  "nextSlug": "high-access-employees",
+  "estimatedMinutes": 30,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Maximum Strong Pair XOR I?\n\n**Maximum Strong Pair XOR I** (LeetCode #2932) is a **Easy** problem that primarily trains **bit manipulation**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **bit manipulation, greedy, trie, dynamic programming, sort, and two pointers**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt builds core muscle memory you will reuse on harder variants.\n Official solution notes mention: Bit Manipulation, Greedy, Trie, DP.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/maximum-strong-pair-xor-i/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Maximum Strong Pair XOR I\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **bit manipulation, greedy, trie, dynamic programming, sort, and two pointers**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogr)) and **space** (O(t)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogr)** time and **O(t)** space.\n\n### Pattern focus: bit manipulation, greedy, trie, dynamic programming, sort, and two pointers\n\nUse the pattern as a checklist:\n\n- **bit manipulation** — confirm the invariant holds after each step\n- **greedy** — confirm the invariant holds after each step\n- **trie** — confirm the invariant holds after each step\n- **dynamic programming** — confirm the invariant holds after each step\n- **sort** — confirm the invariant holds after each step\n- **two pointers** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogr)** |\n| Space | **O(t)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Maximum Strong Pair XOR I\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for bit manipulation, greedy, trie, dynamic programming, sort, and two pointers — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **bit manipulation, greedy, trie, dynamic programming, sort, and two pointers**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **bit manipulation**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Maximum Strong Pair XOR I** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **bit manipulation**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "maximum-strong-pair-xor-i.cpp",
+      "code": "// Time:  O(nlogn + nlogr) = O(nlogr), r = max(nums)\n// Space: O(t)\n\n// bit manipulation, greedy, trie, sort, two pointers\nclass Solution {\nprivate:\n    class Trie {\n    public:\n        Trie(int bit_length)\n         : bit_length_(bit_length)\n         , nodes_() {\n             new_node();\n         }\n\n        void update(int num, int d) {\n            int curr = 0;\n            for (int i = bit_length_ - 1; i >= 0; --i) {\n                int x = num >> i;\n                if (nodes_[curr][x & 1] == -1) {\n                    nodes_[curr][x & 1] = new_node();\n                }\n                curr = nodes_[curr][x & 1];\n                cnts_[curr] += d;\n            }\n        }\n\n        int query(int num) {\n            int result = 0, curr = 0;\n            for (int i = bit_length_ - 1; i >= 0; --i) {\n                result <<= 1;\n                const int x = num >> i;\n                if (nodes_[curr][1 ^ (x & 1)] != -1 && cnts_[nodes_[curr][1 ^ (x & 1)]]) {\n                    result |= 1;\n                    curr = nodes_[curr][1 ^ (x & 1)];\n                } else {\n                    curr = nodes_[curr][x & 1];\n                }\n            }\n            return result;\n        }\n\n    private:\n        int new_node() {\n            nodes_.push_back(array<int, 2>{-1, -1});\n            cnts_.emplace_back(0);\n            return size(nodes_) - 1;\n        }\n\n        const int bit_length_;\n        vector<array<int, 2>> nodes_;\n        vector<int> cnts_;\n    };\n\npublic:\n    int maximumStrongPairXor(vector<int>& nums) {\n        sort(begin(nums), end(nums));\n        Trie trie(bit_length(nums.back()));\n        int result = 0;\n        for (int i = 0, j = 0; i < size(nums); ++i) {\n            trie.update(nums[i], +1);\n            while (!(nums[i] <= 2 * nums[j])) {\n                trie.update(nums[j++], -1);\n            }\n            result = max(result, trie.query(nums[i]));\n        }\n        return result;\n    }\n\nprivate:\n    int bit_length(int x) {\n        return (x ? std::__lg(x) : -1) + 1;\n    }\n};\n\n// Time:  O(nlogr), r = max(nums)\n// Space: O(t)\n// bit manipulation, greedy, trie, dp\nclass Solution2 {\nprivate:\n    class Trie {\n    public:\n        Trie(int bit_length)\n         : bit_length_(bit_length)\n         , nodes_() {\n             new_node();\n         }\n\n        void insert(int num) {\n            int curr = 0;\n            for (int i = bit_length_ - 1; i >= 0; --i) {\n                int x = num >> i;\n                if (nodes_[curr][x & 1] == -1) {\n                    nodes_[curr][x & 1] = new_node();\n                }\n                curr = nodes_[curr][x & 1];\n                mins_[curr] = min(mins_[curr], num);\n                maxs_[curr] = max(maxs_[curr], num);\n            }\n        }\n\n        int query(int num) {\n            int result = 0, curr = 0;\n            for (int i = bit_length_ - 1; i >= 0; --i) {\n                result <<= 1;\n                const int x = num >> i;\n                const int y = (result | 1) ^ x;\n                assert(x != y);\n                if (nodes_[curr][y & 1] != -1 && \n                    ((x > y && num <= 2 * maxs_[nodes_[curr][y & 1]]) ||\n                     (x < y && mins_[nodes_[curr][y & 1]] <= 2 * num))) {\n                    result |= 1;\n                    curr = nodes_[curr][y & 1];\n                } else {\n                    curr = nodes_[curr][(y & 1) ^ 1];\n                }\n            }\n            return result;\n        }\n\n    private:\n        int new_node() {\n            nodes_.push_back(array<int, 2>{-1, -1});\n            mins_.emplace_back(numeric_limits<int>::max());\n            maxs_.emplace_back(numeric_limits<int>::min());\n            return size(nodes_) - 1;\n        }\n\n        const int bit_length_;\n        vector<array<int, 2>> nodes_;\n        vector<int> mins_;\n        vector<int> maxs_;\n    };\n\npublic:\n    int maximumStrongPairXor(vector<int>& nums) {\n        Trie trie(bit_length(*max_element(cbegin(nums), cend(nums))));\n        int result = 0;\n        for (const auto& num : nums) {\n            trie.insert(num);\n            result = max(result, trie.query(num));\n        }\n        return result;\n    }\n\nprivate:\n    int bit_length(int x) {\n        return (x ? std::__lg(x) : -1) + 1;\n    }\n};\n\n// Time:  O(nlogr), r = max(nums)\n// Space: O(n)\n// bit manipulation, greedy, dp\nclass Solution3 {\npublic:\n    int maximumStrongPairXor(vector<int>& nums) {\n        int result = 0;\n        for (int i = bit_length(*max_element(cbegin(nums), cend(nums))) - 1; i >= 0; --i) {\n            unordered_map<int, int> prefix_min, prefix_max;\n            for (const auto& x : nums) {\n                const int y = x >> i;\n                if (!prefix_min.count(y)) {\n                    prefix_min[y] = prefix_max[y] = x;\n                }\n                prefix_min[y] = min(prefix_min[y], x);\n                prefix_max[y] = max(prefix_max[y], x);\n            }\n            result <<= 1;\n            for (const auto& [x, _] : prefix_min) {\n                const int y = (result | 1) ^ x;\n                assert(x != y);\n                if (prefix_max.count(y) && prefix_min[max(x, y)] <= 2 * prefix_max[min(x, y)]) {\n                    result |= 1;\n                    break;\n                }\n            }\n        }\n        return result;\n    }\n\nprivate:\n    int bit_length(int x) {\n        return (x ? std::__lg(x) : -1) + 1;\n    }\n};\n\n// Time:  O(nlogr), r = max(nums)\n// Space: O(n)\n// bit manipulation, brute force\nclass Solution4 {\npublic:\n    int maximumStrongPairXor(vector<int>& nums) {\n        int result = 0;\n        for (int i = 0; i < size(nums); ++i) {\n            for (int j = i; j < size(nums); ++j) {\n                if (abs(nums[i] - nums[j]) <= min(nums[i], nums[j])) {\n                    result = max(result, nums[i] ^ nums[j]);\n                }\n            }\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/maximum-strong-pair-xor-i.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "maximum-strong-pair-xor-i.py",
+      "code": "# Time:  O(nlogn + nlogr) = O(nlogr), r = max(nums)\n# Space: O(t)\n\n# bit manipulation, greedy, trie, sort, two pointers\nclass Solution(object):\n    def maximumStrongPairXor(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        class Trie(object):\n            def __init__(self, bit_length):\n                self.__nodes = []\n                self.__cnts = []\n                self.__new_node()\n                self.__bit_length = bit_length\n            \n            def __new_node(self):\n                self.__nodes.append([-1]*2)\n                self.__cnts.append(0)\n                return len(self.__nodes)-1\n\n            def update(self, num, d):\n                curr = 0\n                for i in reversed(xrange(self.__bit_length)):\n                    x = num>>i\n                    if self.__nodes[curr][x&1] == -1:\n                        self.__nodes[curr][x&1] = self.__new_node()\n                    curr = self.__nodes[curr][x&1]\n                    self.__cnts[curr] += d\n                        \n            def query(self, num):\n                result = curr = 0\n                for i in reversed(xrange(self.__bit_length)):\n                    result <<= 1\n                    x = num>>i\n                    if self.__nodes[curr][1^(x&1)] != -1 and self.__cnts[self.__nodes[curr][1^(x&1)]]:\n                        curr = self.__nodes[curr][1^(x&1)]\n                        result |= 1\n                    else:\n                        curr = self.__nodes[curr][x&1]\n                return result\n    \n        nums.sort()\n        trie = Trie(nums[-1].bit_length())\n        result = j = 0\n        for i, num in enumerate(nums):\n            trie.update(num, +1)\n            while not (nums[i] <= 2*nums[j]) :\n                trie.update(nums[j], -1)\n                j += 1\n            result = max(result, trie.query(num))\n        return result\n\n\n# Time:  O(nlogr), r = max(nums)\n# Space: O(t)\n# bit manipulation, greedy, trie, dp\nclass Solution2(object):\n    def maximumStrongPairXor(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        class Trie(object):\n            def __init__(self, bit_length):\n                self.__nodes = []\n                self.__mins = []\n                self.__maxs = []\n                self.__new_node()\n                self.__bit_length = bit_length\n            \n            def __new_node(self):\n                self.__nodes.append([-1]*2)\n                self.__mins.append(float(\"inf\"))\n                self.__maxs.append(float(\"-inf\"))\n                return len(self.__nodes)-1\n\n            def insert(self, num):\n                curr = 0\n                for i in reversed(xrange(self.__bit_length)):\n                    x = num>>i\n                    if self.__nodes[curr][x&1] == -1:\n                        self.__nodes[curr][x&1] = self.__new_node()\n                    curr = self.__nodes[curr][x&1]\n                    self.__mins[curr] = min(self.__mins[curr], num)\n                    self.__maxs[curr] = max(self.__maxs[curr], num)\n                        \n            def query(self, num):\n                result = curr = 0\n                for i in reversed(xrange(self.__bit_length)):\n                    result <<= 1\n                    x = num>>i\n                    y = (result|1)^x\n                    assert(x != y) \n                    if (self.__nodes[curr][y&1] != -1 and\n                        ((x > y and num <= 2*self.__maxs[self.__nodes[curr][y&1]]) or\n                         (x < y and self.__mins[self.__nodes[curr][y&1]] <= 2*num))):\n                        result |= 1\n                        curr = self.__nodes[curr][y&1]\n                    else:\n                        curr = self.__nodes[curr][1^(y&1)]\n                return result\n    \n        trie = Trie(max(nums).bit_length())\n        result = 0\n        for num in nums:\n            trie.insert(num)\n            result = max(result, trie.query(num))\n        return result\n\n\n# Time:  O(nlogr), r = max(nums)\n# Space: O(n)\n# bit manipulation, greedy, dp\nclass Solution3(object):\n    def maximumStrongPairXor(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        result = 0\n        for i in reversed(xrange(max(nums).bit_length())):\n            prefix_min, prefix_max = {}, {}\n            for x in nums:\n                y = x>>i\n                if y not in prefix_min:\n                    prefix_min[y] = prefix_max[y] = x\n                prefix_min[y] = min(prefix_min[y], x)\n                prefix_max[y] = max(prefix_max[y], x)\n            result <<= 1\n            for x in prefix_min.iterkeys():\n                y = (result|1)^x\n                assert(x != y)\n                if y in prefix_max and prefix_min[max(x, y)] <= 2*prefix_max[min(x, y)]:\n                    result |= 1\n                    break\n        return result\n\n\n# Time:  O(n^2)\n# Space: O(1)\n# bit manipulation, brute force\nclass Solution4(object):\n    def maximumStrongPairXor(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        return max(nums[i]^nums[j] for i in xrange(len(nums)) for j in xrange(i, len(nums)) if abs(nums[i]-nums[j]) <= min(nums[i], nums[j]))\n",
+      "sourcePath": "Python/maximum-strong-pair-xor-i.py"
+    }
+  },
+  "seo": {
+    "title": "Maximum Strong Pair XOR I Solution — Easy | AlgoForge",
+    "description": "Original Easy explanation for Maximum Strong Pair XOR I (LeetCode #2932). Pattern: bit manipulation. Time O(nlogr), space O(t). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Maximum Strong Pair XOR I",
+      "Maximum Strong Pair XOR I solution",
+      "Maximum Strong Pair XOR I leetcode",
+      "bit-manipulation",
+      "bit-manipulation",
+      "greedy",
+      "trie",
+      "dynamic-programming",
+      "sort",
+      "two-pointers",
+      "easy"
+    ],
+    "canonicalPath": "/problems/maximum-strong-pair-xor-i"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Maximum Strong Pair XOR I?",
+      "answer": "The reference solutions aim for O(nlogr) time and O(t) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Maximum Strong Pair XOR I use?",
+      "answer": "It primarily maps to bit manipulation, greedy, trie, dynamic programming, sort, and two pointers, within the broader topic of bit manipulation."
+    },
+    {
+      "question": "Is Maximum Strong Pair XOR I good for interviews?",
+      "answer": "Yes — as a Easy problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/maximum-strong-pair-xor-i/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the bit manipulation, greedy, trie, dynamic programming, sort, and two pointers approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Maximum Strong Pair XOR I (#2932) — Easy. Pattern: bit manipulation, greedy, trie, dynamic programming, sort, and two pointers. Complexity: O(nlogr) time / O(t) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Maximum Strong Pair XOR I: show input structure (bit manipulation), highlight the moving parts of the bit manipulation, greedy, trie, dynamic programming, sort, and two pointers approach, and annotate each step with the maintained invariant and complexity."
+}

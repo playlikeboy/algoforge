@@ -1,0 +1,40 @@
+{
+  "slug": "easy-tree-problems",
+  "path": "/explore/easy-tree-problems",
+  "h1": "Easy Tree Problems",
+  "intro": "5 easy problems that drill the Tree pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "find-mode-in-binary-search-tree",
+    "maximum-depth-of-n-ary-tree",
+    "n-ary-tree-preorder-traversal",
+    "search-in-a-binary-search-tree",
+    "root-equals-sum-of-children"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice easy Tree problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/tree",
+      "label": "Tree pattern"
+    },
+    {
+      "href": "/difficulty/easy",
+      "label": "All Easy problems"
+    }
+  ],
+  "seo": {
+    "title": "Easy Tree Problems | AlgoForge",
+    "description": "Practice easy Tree LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "easy Tree",
+      "Tree problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/easy-tree-problems"
+  },
+  "kind": "difficulty-pattern"
+}

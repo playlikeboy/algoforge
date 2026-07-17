@@ -1,0 +1,158 @@
+{
+  "id": "686",
+  "number": 686,
+  "slug": "repeated-string-match",
+  "title": "Repeated String Match",
+  "difficulty": "Easy",
+  "topics": [
+    "string"
+  ],
+  "patterns": [
+    "rabin-karp-algorithm"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n + m)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/repeated-string-match/",
+  "notes": [
+    "Rabin-Karp Algorithm"
+  ],
+  "relatedSlugs": [
+    "longest-chunked-palindrome-decomposition",
+    "strings-differ-by-one-character",
+    "find-substring-with-given-hash-value",
+    "unique-substrings-with-equal-digit-frequency",
+    "rotate-string",
+    "longest-happy-prefix",
+    "longest-repeating-substring",
+    "zigzag-conversion"
+  ],
+  "prevSlug": "redundant-connection-ii",
+  "nextSlug": "longest-univalue-path",
+  "estimatedMinutes": 20,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Repeated String Match?\n\n**Repeated String Match** (LeetCode #686) is a **Easy** problem that primarily trains **string**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **rabin karp algorithm**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt builds core muscle memory you will reuse on harder variants.\n Official solution notes mention: Rabin-Karp Algorithm.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/repeated-string-match/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Repeated String Match\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **rabin karp algorithm**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n + m)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n + m)** time and **O(1)** space.\n\n### Pattern focus: rabin karp algorithm\n\nUse the pattern as a checklist:\n\n- **rabin karp algorithm** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n + m)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Repeated String Match\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for rabin karp algorithm — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **rabin karp algorithm**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **string**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Repeated String Match** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **string**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "repeated-string-match.cpp",
+      "code": "// Time:  O(n + m)\n// Space: O(1)\n\n// Rabin-Karp Algorithm (rolling hash)\nclass Solution {\npublic:\n    int repeatedStringMatch(string A, string B) {\n        static const uint64_t M = 1000000007;\n        static const uint64_t p = 113; \n        static const uint64_t p_inv = pow(p, M - 2, M);\n\n        const auto q = (B.length() + A.length() - 1) / A.length();\n    \n        uint64_t b_hash = 0, power = 1;\n        for (int i = 0; i < B.length(); ++i) {\n            b_hash += power * B[i];\n            b_hash %= M;\n            power = (power * p) % M;\n        }\n\n        uint64_t a_hash = 0; power = 1;\n        for (int i = 0; i < B.length(); ++i) {\n            a_hash += power * A[i % A.length()];\n            a_hash %= M;\n            power = (power * p) % M;\n        }\n        if (a_hash == b_hash && check(0, A, B)) {\n            return q;\n        }\n        \n        power = (power * p_inv) % M;\n        for (int i = B.length(); i < (q + 1) * A.length(); ++i) {\n            a_hash -= A[(i - B.length()) % A.length()];\n            a_hash *= p_inv;\n            a_hash += power * A[i % A.length()];\n            a_hash %= M;\n            if (a_hash == b_hash && check(i - B.length() + 1, A, B)) {\n                return i < q * A.length() ? q : q + 1;\n            }\n        }\n        return -1;\n    }\n\nprivate:\n    bool check(int index, const string& A, const string& B) {\n        for (int i = 0; i < B.length(); ++i) {\n            if (A[(i + index) % A.length()] != B[i]) {\n                return false;\n            }\n        }\n        return true;\n    }\n\n    uint64_t pow(uint64_t a,uint64_t b, uint64_t m) {\n        a %= m;\n        uint64_t result = 1;\n        while (b) {\n            if (b & 1) {\n                result = (result * a) % m;\n            }\n            a = (a * a) % m;\n            b >>= 1;\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/repeated-string-match.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "repeated-string-match.py",
+      "code": "# Time:  O(n + m)\n# Space: O(1)\n\nclass Solution(object):\n    def repeatedStringMatch(self, A, B):\n        \"\"\"\n        :type A: str\n        :type B: str\n        :rtype: int\n        \"\"\"\n        def check(index):\n            return all(A[(i+index) % len(A)] == c\n                       for i, c in enumerate(B))\n\n        M, p = 10**9+7, 113\n        p_inv = pow(p, M-2, M)\n        q = (len(B)+len(A)-1) // len(A)\n\n        b_hash, power = 0, 1\n        for c in B:\n            b_hash += power * ord(c)\n            b_hash %= M\n            power = (power*p) % M\n\n        a_hash, power = 0, 1\n        for i in xrange(len(B)):\n            a_hash += power * ord(A[i%len(A)])\n            a_hash %= M\n            power = (power*p) % M\n\n        if a_hash == b_hash and check(0): return q\n\n        power = (power*p_inv) % M\n        for i in xrange(len(B), (q+1)*len(A)):\n            a_hash = (a_hash-ord(A[(i-len(B))%len(A)])) * p_inv\n            a_hash += power * ord(A[i%len(A)])\n            a_hash %= M\n            if a_hash == b_hash and check(i-len(B)+1):\n                return q if i < q*len(A) else q+1\n\n        return -1\n\n",
+      "sourcePath": "Python/repeated-string-match.py"
+    }
+  },
+  "seo": {
+    "title": "Repeated String Match Solution — Easy | AlgoForge",
+    "description": "Original Easy explanation for Repeated String Match (LeetCode #686). Pattern: rabin karp algorithm. Time O(n + m), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Repeated String Match",
+      "Repeated String Match solution",
+      "Repeated String Match leetcode",
+      "string",
+      "rabin-karp-algorithm",
+      "easy"
+    ],
+    "canonicalPath": "/problems/repeated-string-match"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Repeated String Match?",
+      "answer": "The reference solutions aim for O(n + m) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Repeated String Match use?",
+      "answer": "It primarily maps to rabin karp algorithm, within the broader topic of string."
+    },
+    {
+      "question": "Is Repeated String Match good for interviews?",
+      "answer": "Yes — as a Easy problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/repeated-string-match/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the rabin karp algorithm approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Repeated String Match (#686) — Easy. Pattern: rabin karp algorithm. Complexity: O(n + m) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Repeated String Match: show input structure (string), highlight the moving parts of the rabin karp algorithm approach, and annotate each step with the maintained invariant and complexity."
+}

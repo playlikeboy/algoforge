@@ -1,0 +1,161 @@
+{
+  "id": "3966",
+  "number": 3966,
+  "slug": "count-good-integers-in-a-range",
+  "title": "Count Good Integers in a Range",
+  "difficulty": "Hard",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dynamic-programming",
+    "prefix-sum"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(10 * logr)",
+  "spaceComplexity": "O(10)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/count-good-integers-in-a-range/",
+  "notes": [
+    "DP",
+    "Prefix Sum"
+  ],
+  "relatedSlugs": [
+    "count-increasing-quadruplets",
+    "maximum-score-from-grid-operations",
+    "minimum-cost-to-divide-array-into-subarrays",
+    "merge-operations-for-minimum-travel-time",
+    "minimum-cost-path-with-teleportations",
+    "longest-alternating-subarray-after-removing-at-most-one-element",
+    "minimum-cost-to-partition-a-binary-string",
+    "number-of-zigzag-arrays-iii"
+  ],
+  "prevSlug": "finish-time-of-tasks-i",
+  "nextSlug": "finish-time-of-tasks-ii",
+  "estimatedMinutes": 60,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Count Good Integers in a Range?\n\n**Count Good Integers in a Range** (LeetCode #3966) is a **Hard** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming and prefix sum**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: DP, Prefix Sum.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/count-good-integers-in-a-range/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Count Good Integers in a Range\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming and prefix sum**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(10 * logr)) and **space** (O(10)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(10 * logr)** time and **O(10)** space.\n\n### Pattern focus: dynamic programming and prefix sum\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n- **prefix sum** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(10 * logr)** |\n| Space | **O(10)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Count Good Integers in a Range\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming and prefix sum — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming and prefix sum**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Count Good Integers in a Range** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "count-good-integers-in-a-range.cpp",
+      "code": "// Time:  O(10 * logr)\n// Space: O(10)\n\n// dp, prefix sum\nclass Solution {\npublic:\n    long long goodIntegers(long long l, long long r, int k) {\n        const auto& count = [&](int64_t n) -> int64_t {\n            const auto& to_digits = [](int64_t x) {\n                vector<int> digits;\n                for (; x; x /= 10) {\n                    digits.emplace_back(x % 10);\n                }\n                reverse(begin(digits), end(digits));\n                if (empty(digits)) {\n                    digits.emplace_back(0);\n                }\n                return digits;\n            };\n\n            if (n < 0) {\n                return 0;\n            }\n            const auto& digits = to_digits(n);\n            int64_t result = 1;\n            int bound = size(digits);\n            for (int i = 1; i < size(digits); ++i) {\n                if (abs(digits[i] - digits[i - 1]) > k) {\n                    bound = i;\n                    break;\n                }\n            }\n            if (bound == size(digits)) {\n                ++result;\n            }\n            vector<int64_t> prefix(10 + 1);\n            for (int i = size(digits) - 1; i >= 0; --i) {\n                vector<int64_t> dp(10, 1);\n                if (i != size(digits) - 1) {\n                    for (int d = 0; d < size(dp); ++d) {\n                        dp[d] = prefix[min(d + k, 9) + 1] - prefix[max(d - k, 0)];\n                    }\n                }\n                for (int j = 0; j < size(dp); ++j) {\n                    prefix[j + 1] = prefix[j] + dp[j];\n                }\n                result += prefix[(i == 0 ? digits[0] - 1 : 9) + 1] - prefix[1];\n                if (1 <= i && i <= bound) {\n                    result += max(prefix[min(digits[i - 1] + k, digits[i] - 1) + 1] - prefix[max(digits[i - 1] - k, 0)], static_cast<int64_t>(0));\n                }\n            }\n            return result;\n        };\n\n        return count(r) - count(l - 1);\n    }\n};\n",
+      "sourcePath": "C++/count-good-integers-in-a-range.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "count-good-integers-in-a-range.py",
+      "code": "# Time:  O(10 * logr)\n# Space: O(10)\n\n# dp, prefix sum\nclass Solution(object):\n    def goodIntegers(self, l, r, k):\n        \"\"\"\n        :type l: int\n        :type r: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        def count(n):\n            if n < 0:\n                return 0\n            digits = map(int, str(n))\n            result = 1\n            bound = next((i for i in xrange(1, len(digits)) if abs(digits[i]-digits[i-1]) > k), len(digits))\n            if bound == len(digits):\n                result += 1\n            for i in reversed(xrange(len(digits))):\n                dp = [prefix[min(d+k, 9)+1]-prefix[max(d-k, 0)] for d in xrange(10)] if i != len(digits)-1 else [1]*10\n                prefix = [0]*(len(dp)+1)\n                for j in xrange(len(dp)):\n                    prefix[j+1] = prefix[j]+dp[j]\n                result += prefix[(digits[0]-1 if i == 0 else 9)+1]-prefix[1]\n                if 1 <= i <= bound:\n                    result += max(prefix[min(digits[i-1]+k, digits[i]-1)+1]-prefix[max(digits[i-1]-k, 0)], 0)\n            return result\n\n        return count(r)-count(l-1)\n",
+      "sourcePath": "Python/count-good-integers-in-a-range.py"
+    }
+  },
+  "seo": {
+    "title": "Count Good Integers in a Range Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Count Good Integers in a Range (LeetCode #3966). Pattern: dynamic programming. Time O(10 * logr), space O(10). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Count Good Integers in a Range",
+      "Count Good Integers in a Range solution",
+      "Count Good Integers in a Range leetcode",
+      "dynamic-programming",
+      "dynamic-programming",
+      "prefix-sum",
+      "hard"
+    ],
+    "canonicalPath": "/problems/count-good-integers-in-a-range"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Count Good Integers in a Range?",
+      "answer": "The reference solutions aim for O(10 * logr) time and O(10) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Count Good Integers in a Range use?",
+      "answer": "It primarily maps to dynamic programming and prefix sum, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Count Good Integers in a Range good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/count-good-integers-in-a-range/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming and prefix sum approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Count Good Integers in a Range (#3966) — Hard. Pattern: dynamic programming and prefix sum. Complexity: O(10 * logr) time / O(10) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Count Good Integers in a Range: show input structure (dynamic programming), highlight the moving parts of the dynamic programming and prefix sum approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "medium-counting-sort-problems",
+  "path": "/explore/medium-counting-sort-problems",
+  "h1": "Medium Counting Sort Problems",
+  "intro": "15 medium problems that drill the Counting Sort pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "h-index",
+    "maximum-product-of-word-lengths",
+    "reduce-array-size-to-the-half",
+    "least-number-of-unique-integers-after-k-removals",
+    "maximal-network-rank",
+    "smallest-value-of-the-rearranged-number",
+    "maximum-total-importance-of-roads",
+    "sort-vowels-in-a-string",
+    "replace-question-marks-in-string-to-minimize-its-value",
+    "minimum-deletions-to-make-string-k-special",
+    "maximum-number-of-potholes-that-can-be-fixed",
+    "better-compression-of-string",
+    "minimum-moves-to-get-a-peaceful-board",
+    "smallest-palindromic-rearrangement-i",
+    "maximum-total-sum-with-threshold-constraints"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice medium Counting Sort problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/counting-sort",
+      "label": "Counting Sort pattern"
+    },
+    {
+      "href": "/difficulty/medium",
+      "label": "All Medium problems"
+    }
+  ],
+  "seo": {
+    "title": "Medium Counting Sort Problems | AlgoForge",
+    "description": "Practice medium Counting Sort LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "medium Counting Sort",
+      "Counting Sort problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/medium-counting-sort-problems"
+  },
+  "kind": "difficulty-pattern"
+}

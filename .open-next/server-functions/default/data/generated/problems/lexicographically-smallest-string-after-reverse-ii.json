@@ -1,0 +1,162 @@
+{
+  "id": "3735",
+  "number": 3735,
+  "slug": "lexicographically-smallest-string-after-reverse-ii",
+  "title": "Lexicographically Smallest String After Reverse II",
+  "difficulty": "Hard",
+  "topics": [
+    "binary-search"
+  ],
+  "patterns": [
+    "binary-search",
+    "rabin-karp-algorithm"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogn)",
+  "spaceComplexity": "O(n)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/lexicographically-smallest-string-after-reverse-ii/",
+  "notes": [
+    "Binary Search",
+    "Rabin-Karp Algorithm",
+    "Rolling Hash"
+  ],
+  "relatedSlugs": [
+    "smallest-unique-subarray",
+    "lexicographically-smallest-string-after-reverse",
+    "equalize-strings-by-adding-or-removing-characters-at-ends",
+    "median-of-two-sorted-arrays",
+    "find-minimum-in-rotated-sorted-array-ii",
+    "smallest-rectangle-enclosing-black-pixels",
+    "russian-doll-envelopes",
+    "max-sum-of-sub-matrix-no-larger-than-k"
+  ],
+  "prevSlug": "lexicographically-smallest-palindromic-permutation-greater-than-target",
+  "nextSlug": "minimum-moves-to-equal-array-elements-iii",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Lexicographically Smallest String After Reverse II?\n\n**Lexicographically Smallest String After Reverse II** (LeetCode #3735) is a **Hard** problem that primarily trains **binary search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **binary search and rabin karp algorithm**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Binary Search, Rabin-Karp Algorithm, Rolling Hash.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/lexicographically-smallest-string-after-reverse-ii/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Lexicographically Smallest String After Reverse II\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **binary search and rabin karp algorithm**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogn)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogn)** time and **O(n)** space.\n\n### Pattern focus: binary search and rabin karp algorithm\n\nUse the pattern as a checklist:\n\n- **binary search** — confirm the invariant holds after each step\n- **rabin karp algorithm** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogn)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Lexicographically Smallest String After Reverse II\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for binary search and rabin karp algorithm — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **binary search and rabin karp algorithm**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **binary search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Lexicographically Smallest String After Reverse II** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **binary search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "lexicographically-smallest-string-after-reverse-ii.cpp",
+      "code": "// Time:  O(nlogn)\n// Space: O(n)\n\n// rolling hash, binary search\nclass Solution {\npublic:\n    string lexSmallest(string s) {\n        static const int64_t MOD = 1e9 + 7;\n        static const int64_t B = 29;\n        const int n = size(s);\n\n        const auto& binary_search = [](auto left, auto right, const auto& check) {\n            while (left <= right) {\n                const auto mid = left + (right - left) / 2;\n                if (check(mid)) {\n                    right = mid - 1;\n                } else {\n                    left = mid + 1;\n                }\n            }\n            return left;\n        };\n\n        vector<int64_t> prefix(n + 1);\n        for (int i = 0; i + 1 < size(prefix); ++i) {\n            prefix[i + 1] = (prefix[i] * B + s[i]) % MOD;\n        }\n        vector<int64_t> suffix(n + 1);\n        for (int i = size(suffix) - 2; i >= 0; --i) {\n            suffix[i] = (suffix[i + 1] * B + s[i]) % MOD;\n        }\n        vector<int64_t> base(n + 1, 1);\n        for (int i = 0; i + 1 < size(base); ++i) {\n            base[i + 1] = (base[i] * B) % MOD;\n        }\n\n        const auto& get_prefix_hash = [&](int l, int r) {\n            if (l > r) {\n                return static_cast<int64_t>(0);\n            }\n            return (prefix[r + 1] - prefix[l] * base[r - l + 1] % MOD + MOD) % MOD;\n        };\n\n        const auto& get_suffix_hash = [&](int l, int r) {\n            if (l > r) {\n                return static_cast<int64_t>(0);\n            }\n            return (suffix[l] - suffix[r + 1] * base[r - l + 1] % MOD + MOD) % MOD;\n        };\n\n        const auto& get_total_hash = [&](int k, int t, int l) {\n            if (!t) {\n                return l <= k\n                    ? get_suffix_hash(k - l, k - 1)\n                    : ((get_suffix_hash(0, k - 1) * base[l - k]) % MOD + get_prefix_hash(k, l - 1)) % MOD;\n            }\n            const auto& nk = n - k;\n            return l <= nk\n                ? get_prefix_hash(0, l - 1)\n                : ((get_prefix_hash(0, nk - 1) * base[l - nk]) % MOD + get_suffix_hash(n - (l - nk), n - 1)) % MOD;\n        };\n\n        const auto& get_char = [&](int k, int t, int idx) {\n            if (!t) {\n                return idx < k\n                    ? s[(k - 1) - idx]\n                    : s[idx];\n            }\n            return idx < n - k\n                ? s[idx]\n                : s[(n - 1) - (idx - (n - k))];\n        };\n    \n        int best_k = 1, best_i = 0;\n        auto is_less = [&](int k, int i) {\n            const auto& idx = binary_search(0, n - 1, [&](int x) {\n                return get_total_hash(k, i, x + 1) != get_total_hash(best_k, best_i, x + 1);\n            });\n            return idx != n && get_char(k, i, idx) < get_char(best_k, best_i, idx);\n        };\n        const auto& mn = ranges::min(s);\n        for (int k = 1; k <= n; ++k) {\n            if (s[k - 1] != mn) {\n                continue;\n            }\n            if (is_less(k, 0)) {\n                best_k = k;\n                best_i = 0;\n            }\n        }\n        for (int k = 1; k <= n; ++k) {\n            if (!(s[size(s) - k] >= s.back())) {\n                continue;\n            }\n            if (is_less(k, 1)) {\n                best_k = k;\n                best_i = 1;\n            }\n        }\n        string result(s);\n        if (!best_i) {\n            reverse(begin(result), begin(result) + best_k);\n        } else {\n            reverse(begin(result) + (size(result) - best_k), end(result));\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/lexicographically-smallest-string-after-reverse-ii.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "lexicographically-smallest-string-after-reverse-ii.py",
+      "code": "# Time:  O(nlogn)\n# Space: O(n)\n\n# rolling hash, binary search\nclass Solution(object):\n    def lexSmallest(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        MOD = 10**9+7\n        B = 29\n        def binary_search(left, right, check):\n            while left <= right:\n                mid = left+(right-left)//2\n                if check(mid):\n                    right = mid-1\n                else:\n                    left = mid+1\n            return left\n\n        def get_prefix_hash(l, r):\n            return (prefix[r+1]-prefix[l]*base[r-l+1])%MOD if l <= r else 0\n\n        def get_suffix_hash(l, r):\n            return (suffix[l]-suffix[r+1]*base[r-l+1])%MOD if l <= r else 0\n        \n        def get_total_hash(k, t, l):\n            if not t:\n                return get_suffix_hash(k-l, k-1) if l <= k else ((get_suffix_hash(0, k-1))*base[l-k]+get_prefix_hash(k, l-1))%MOD\n            nk = len(s)-k\n            return get_prefix_hash(0, l-1) if l <= nk else ((get_prefix_hash(0, nk-1))*base[l-nk]+get_suffix_hash(len(s)-(l-nk), len(s)-1))%MOD\n\n        def get_char(k, t, idx):\n            if not t:\n                return s[(k-1)-idx] if idx < k else s[idx]\n            return s[idx] if idx < len(s)-k else s[(len(s)-1)-(idx-(len(s)-k))]\n\n        def is_less(k, i):\n            idx = binary_search(0, len(s)-1, lambda x: get_total_hash(k, i, x+1) != get_total_hash(best_k, best_i, x+1))\n            return idx != len(s) and get_char(k, i, idx) < get_char(best_k, best_i, idx)\n\n        prefix = [0]*(len(s)+1)\n        for i in xrange(len(prefix)-1):\n            prefix[i+1] = (prefix[i]*B+ord(s[i]))%MOD\n        suffix = [0]*(len(s)+1)\n        for i in reversed(xrange(len(suffix)-1)):\n            suffix[i] = (suffix[i+1]*B+ord(s[i]))%MOD\n        base = [1]*(len(s)+1)\n        for i in xrange(len(base)-1):\n            base[i+1] = (base[i]*B)%MOD\n        best_k, best_i = 1, 0\n        mn = min(s)\n        for k in xrange(1, len(s)+1):\n            if s[k-1] != mn:\n                continue\n            if is_less(k, 0):\n                best_k, best_i = k, 0\n        for k in xrange(1, len(s)+1):\n            if not s[-k] >= s[-1]:\n                continue\n            if is_less(k, 1):\n                best_k, best_i = k, 1\n        return s[:best_k][::-1]+s[best_k:] if not best_i else s[:-best_k]+s[-best_k:][::-1]\n",
+      "sourcePath": "Python/lexicographically-smallest-string-after-reverse-ii.py"
+    }
+  },
+  "seo": {
+    "title": "Lexicographically Smallest String After Reverse II Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Lexicographically Smallest String After Reverse II (LeetCode #3735). Pattern: binary search. Time O(nlogn), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Lexicographically Smallest String After Reverse II",
+      "Lexicographically Smallest String After Reverse II solution",
+      "Lexicographically Smallest String After Reverse II leetcode",
+      "binary-search",
+      "binary-search",
+      "rabin-karp-algorithm",
+      "hard"
+    ],
+    "canonicalPath": "/problems/lexicographically-smallest-string-after-reverse-ii"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Lexicographically Smallest String After Reverse II?",
+      "answer": "The reference solutions aim for O(nlogn) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Lexicographically Smallest String After Reverse II use?",
+      "answer": "It primarily maps to binary search and rabin karp algorithm, within the broader topic of binary search."
+    },
+    {
+      "question": "Is Lexicographically Smallest String After Reverse II good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/lexicographically-smallest-string-after-reverse-ii/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the binary search and rabin karp algorithm approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Lexicographically Smallest String After Reverse II (#3735) — Hard. Pattern: binary search and rabin karp algorithm. Complexity: O(nlogn) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Lexicographically Smallest String After Reverse II: show input structure (binary search), highlight the moving parts of the binary search and rabin karp algorithm approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "easy-dfs-backtracking-problems",
+  "path": "/explore/easy-dfs-backtracking-problems",
+  "h1": "Easy DFS / Backtracking Problems",
+  "intro": "15 easy problems that drill the DFS / Backtracking pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "path-sum",
+    "binary-tree-paths",
+    "nested-list-weight-sum",
+    "maximum-depth-of-n-ary-tree",
+    "employee-importance",
+    "max-area-of-island",
+    "flood-fill",
+    "letter-case-permutation",
+    "increasing-order-search-tree",
+    "univalued-binary-tree",
+    "cousins-in-binary-tree",
+    "maximum-average-subtree",
+    "find-all-the-lonely-nodes",
+    "finding-3-digit-even-numbers",
+    "evaluate-boolean-binary-tree"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice easy DFS / Backtracking problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/dfs-backtracking",
+      "label": "DFS / Backtracking pattern"
+    },
+    {
+      "href": "/difficulty/easy",
+      "label": "All Easy problems"
+    }
+  ],
+  "seo": {
+    "title": "Easy DFS / Backtracking Problems | AlgoForge",
+    "description": "Practice easy DFS / Backtracking LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "easy DFS / Backtracking",
+      "DFS / Backtracking problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/easy-dfs-backtracking-problems"
+  },
+  "kind": "difficulty-pattern"
+}

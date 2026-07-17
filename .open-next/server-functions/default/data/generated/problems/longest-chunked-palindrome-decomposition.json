@@ -1,0 +1,158 @@
+{
+  "id": "1147",
+  "number": 1147,
+  "slug": "longest-chunked-palindrome-decomposition",
+  "title": "Longest Chunked Palindrome Decomposition",
+  "difficulty": "Hard",
+  "topics": [
+    "string"
+  ],
+  "patterns": [
+    "rabin-karp-algorithm"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/longest-chunked-palindrome-decomposition/",
+  "notes": [
+    "Rabin-Karp Algorithm"
+  ],
+  "relatedSlugs": [
+    "repeated-string-match",
+    "strings-differ-by-one-character",
+    "find-substring-with-given-hash-value",
+    "unique-substrings-with-equal-digit-frequency",
+    "longest-happy-prefix",
+    "rotate-string",
+    "longest-repeating-substring",
+    "text-justification"
+  ],
+  "prevSlug": "snapshot-array",
+  "nextSlug": "article-views-i",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Longest Chunked Palindrome Decomposition?\n\n**Longest Chunked Palindrome Decomposition** (LeetCode #1147) is a **Hard** problem that primarily trains **string**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **rabin karp algorithm**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Rabin-Karp Algorithm.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/longest-chunked-palindrome-decomposition/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Longest Chunked Palindrome Decomposition\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **rabin karp algorithm**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(1)** space.\n\n### Pattern focus: rabin karp algorithm\n\nUse the pattern as a checklist:\n\n- **rabin karp algorithm** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Longest Chunked Palindrome Decomposition\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for rabin karp algorithm — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **rabin karp algorithm**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **string**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Longest Chunked Palindrome Decomposition** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **string**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "longest-chunked-palindrome-decomposition.cpp",
+      "code": "// Time:  O(n)\n// Space: O(1)\n\n// Rabin-Karp Algorithm\nclass Solution {\npublic:\n    int longestDecomposition(string text) {  \n        static const uint64_t MOD = 1e9 + 7;\n        static const uint64_t D = 26;\n        int result = 0;\n        int left = 0, right = 0, l = 0;\n        uint64_t pow_D = 1;\n        for (int i = 0; i < text.length(); ++i) {\n            left = (D * left + (text[i] - 'a')) % MOD;\n            right = (pow_D * (text[text.length() - 1 - i] - 'a') + right) % MOD;\n            ++l;\n            pow_D = (pow_D * D) % MOD;\n            if (left == right &&\n                compare(text, l, i - l + 1, text.length() - 1 - i)) {\n                ++result;\n                left = 0, right = 0, l = 0, pow_D = 1;\n            }\n        }\n        return result;\n    }\n\nprivate:\n    bool compare(const string& text, size_t l, int s1, int s2) {\n        for (int i = 0; i < l; ++i) {\n            if (text[s1 + i] != text[s2 + i]) {\n                return false;\n            }\n        }\n        return true;\n    }\n};\n",
+      "sourcePath": "C++/longest-chunked-palindrome-decomposition.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "longest-chunked-palindrome-decomposition.py",
+      "code": "# Time:  O(n)\n# Space: O(1)\n\n# Rabin-Karp Algorithm\nclass Solution(object):\n    def longestDecomposition(self, text):\n        \"\"\"\n        :type text: str\n        :rtype: int\n        \"\"\"\n        def compare(text, l, s1, s2):\n            for i in xrange(l):\n                if text[s1+i] != text[s2+i]:\n                    return False\n            return True\n\n        MOD = 10**9+7\n        D = 26\n        result = 0\n        left, right, l, pow_D = 0, 0, 0, 1\n        for i in xrange(len(text)):\n            left = (D*left + (ord(text[i])-ord('a'))) % MOD\n            right = (pow_D*(ord(text[-1-i])-ord('a')) + right) % MOD\n            l += 1\n            pow_D = (pow_D*D) % MOD \n            if left == right and compare(text, l, i-l+1, len(text)-1-i):\n                result += 1\n                left, right, l, pow_D = 0, 0, 0, 1\n        return result\n",
+      "sourcePath": "Python/longest-chunked-palindrome-decomposition.py"
+    }
+  },
+  "seo": {
+    "title": "Longest Chunked Palindrome Decomposition Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Longest Chunked Palindrome Decomposition (LeetCode #1147). Pattern: rabin karp algorithm. Time O(n), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Longest Chunked Palindrome Decomposition",
+      "Longest Chunked Palindrome Decomposition solution",
+      "Longest Chunked Palindrome Decomposition leetcode",
+      "string",
+      "rabin-karp-algorithm",
+      "hard"
+    ],
+    "canonicalPath": "/problems/longest-chunked-palindrome-decomposition"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Longest Chunked Palindrome Decomposition?",
+      "answer": "The reference solutions aim for O(n) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Longest Chunked Palindrome Decomposition use?",
+      "answer": "It primarily maps to rabin karp algorithm, within the broader topic of string."
+    },
+    {
+      "question": "Is Longest Chunked Palindrome Decomposition good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/longest-chunked-palindrome-decomposition/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the rabin karp algorithm approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Longest Chunked Palindrome Decomposition (#1147) — Hard. Pattern: rabin karp algorithm. Complexity: O(n) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Longest Chunked Palindrome Decomposition: show input structure (string), highlight the moving parts of the rabin karp algorithm approach, and annotate each step with the maintained invariant and complexity."
+}

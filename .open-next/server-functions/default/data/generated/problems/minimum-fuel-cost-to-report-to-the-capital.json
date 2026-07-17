@@ -1,0 +1,161 @@
+{
+  "id": "2477",
+  "number": 2477,
+  "slug": "minimum-fuel-cost-to-report-to-the-capital",
+  "title": "Minimum Fuel Cost to Report to the Capital",
+  "difficulty": "Medium",
+  "topics": [
+    "depth-first-search"
+  ],
+  "patterns": [
+    "tree",
+    "dfs-backtracking"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(h)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/",
+  "notes": [
+    "Tree",
+    "DFS"
+  ],
+  "relatedSlugs": [
+    "count-nodes-equal-to-average-of-subtree",
+    "most-profitable-path-in-a-tree",
+    "minimum-score-after-removals-on-a-tree",
+    "height-of-binary-tree-after-subtree-removal-queries",
+    "count-number-of-possible-root-nodes",
+    "count-paths-that-can-form-a-palindrome-in-a-tree",
+    "number-of-nodes-with-value-one",
+    "height-of-special-binary-tree"
+  ],
+  "prevSlug": "closest-nodes-queries-in-a-binary-search-tree",
+  "nextSlug": "number-of-beautiful-partitions",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Minimum Fuel Cost to Report to the Capital?\n\n**Minimum Fuel Cost to Report to the Capital** (LeetCode #2477) is a **Medium** problem that primarily trains **depth first search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **tree and dfs backtracking**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Tree, DFS.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Minimum Fuel Cost to Report to the Capital\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **tree and dfs backtracking**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(h)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(h)** space.\n\n### Pattern focus: tree and dfs backtracking\n\nUse the pattern as a checklist:\n\n- **tree** — confirm the invariant holds after each step\n- **dfs backtracking** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(h)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Minimum Fuel Cost to Report to the Capital\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for tree and dfs backtracking — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **tree and dfs backtracking**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **depth first search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Minimum Fuel Cost to Report to the Capital** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **depth first search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "minimum-fuel-cost-to-report-to-the-capital.cpp",
+      "code": "// Time:  O(n)\n// Space: O(h)\n\n// iterative dfs\nclass Solution {\npublic:\n    long long minimumFuelCost(vector<vector<int>>& roads, int seats) {\n        const auto& ceil_divide = [](const auto& a, const auto& b) {\n            return (a + b - 1) / b;\n        };\n        vector<vector<int>> adj(size(roads) + 1);\n        for (const auto& r : roads) {\n            adj[r[0]].emplace_back(r[1]);\n            adj[r[1]].emplace_back(r[0]);\n        }\n        const auto& iter_dfs = [&]() {\n            int64_t result = 0;\n            using RET = int;\n            RET ret{1};\n            vector<tuple<int, int, int, int, shared_ptr<RET>, RET *>> stk = {{1, 0, -1, 0, nullptr, &ret}};\n            while (!empty(stk)) {\n                const auto [step, u, p, d, new_ret, ret] = stk.back(); stk.pop_back();\n                if (step == 1) {\n                    stk.emplace_back(3, u, p, d, new_ret, ret);\n                    for (const auto& v : adj[u]) {\n                        if (v == p) {\n                            continue;\n                        }\n                        const auto& new_ret = make_shared<RET>(1);\n                        stk.emplace_back(2, v, u, d + 1, new_ret, ret);\n                        stk.emplace_back(1, v, u, d + 1, nullptr, new_ret.get());\n                    }\n                } else if (step == 2) {\n                    *ret += *new_ret;\n                } else if (step == 3) {\n                    if (d) {\n                        result += ceil_divide(*ret, seats);\n                    }\n                }\n            }\n            return result;\n        };\n        return iter_dfs();\n    }\n};\n\n// Time:  O(n)\n// Space: O(h)\n// dfs\nclass Solution2 {\npublic:\n    long long minimumFuelCost(vector<vector<int>>& roads, int seats) {\n        const auto& ceil_divide = [](const auto& a, const auto& b) {\n            return (a + b - 1) / b;\n        };\n        vector<vector<int>> adj(size(roads) + 1);\n        for (const auto& r : roads) {\n            adj[r[0]].emplace_back(r[1]);\n            adj[r[1]].emplace_back(r[0]);\n        }\n        int64_t result = 0;\n        const function<int(int, int, int)> dfs = [&](int u, int p, int d) {\n            int cnt = 1;\n            for (const auto& v : adj[u]) {\n                if (v == p) {\n                    continue;\n                }\n                cnt += dfs(v, u, d + 1);\n            }\n            if (d) {\n                result += ceil_divide(cnt, seats);\n            }\n            return cnt;\n        };\n        dfs(0, -1, 0);\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/minimum-fuel-cost-to-report-to-the-capital.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "minimum-fuel-cost-to-report-to-the-capital.py",
+      "code": "# Time:  O(n)\n# Space: O(h)\n\n# iterative dfs\nclass Solution(object):\n    def minimumFuelCost(self, roads, seats):\n        \"\"\"\n        :type roads: List[List[int]]\n        :type seats: int\n        :rtype: int\n        \"\"\"\n        def ceil_divide(a, b):\n            return (a+b-1)//b\n    \n        def iter_dfs():\n            result = 0\n            stk = [(1, (0, -1, 0, [1]))]\n            while stk:\n                step, args = stk.pop()\n                if step == 1:\n                    u, p, d, ret = args\n                    stk.append((3, (d, ret)))\n                    for v in adj[u]:\n                        if v == p:\n                            continue\n                        new_ret = [1]\n                        stk.append((2, (new_ret, ret)))\n                        stk.append((1, (v, u, d+1, new_ret)))\n                elif step == 2:\n                    new_ret, ret = args\n                    ret[0] += new_ret[0]\n                elif step == 3:\n                    d, ret = args\n                    if d:\n                        result += ceil_divide(ret[0], seats)\n            return result\n    \n        adj = [[] for _ in xrange(len(roads)+1)]\n        for u, v in roads:\n            adj[u].append(v)\n            adj[v].append(u)\n        return iter_dfs()\n\n\n# Time:  O(n)\n# Space: O(h)\n# dfs\nclass Solution(object):\n    def minimumFuelCost(self, roads, seats):\n        \"\"\"\n        :type roads: List[List[int]]\n        :type seats: int\n        :rtype: int\n        \"\"\"\n        def ceil_divide(a, b):\n            return (a+b-1)//b\n    \n        def dfs(u, p, d):\n            cnt = 1+sum(dfs(v, u, d+1) for v in adj[u] if v != p)\n            if d:\n                result[0] += ceil_divide(cnt, seats)\n            return cnt\n    \n        adj = [[] for _ in xrange(len(roads)+1)]\n        for u, v in roads:\n            adj[u].append(v)\n            adj[v].append(u)\n        result = [0]\n        dfs(0, -1, 0)\n        return result[0]\n",
+      "sourcePath": "Python/minimum-fuel-cost-to-report-to-the-capital.py"
+    }
+  },
+  "seo": {
+    "title": "Minimum Fuel Cost to Report to the Capital Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Minimum Fuel Cost to Report to the Capital (LeetCode #2477). Pattern: tree. Time O(n), space O(h). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Minimum Fuel Cost to Report to the Capital",
+      "Minimum Fuel Cost to Report to the Capital solution",
+      "Minimum Fuel Cost to Report to the Capital leetcode",
+      "depth-first-search",
+      "tree",
+      "dfs-backtracking",
+      "medium"
+    ],
+    "canonicalPath": "/problems/minimum-fuel-cost-to-report-to-the-capital"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Minimum Fuel Cost to Report to the Capital?",
+      "answer": "The reference solutions aim for O(n) time and O(h) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Minimum Fuel Cost to Report to the Capital use?",
+      "answer": "It primarily maps to tree and dfs backtracking, within the broader topic of depth first search."
+    },
+    {
+      "question": "Is Minimum Fuel Cost to Report to the Capital good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the tree and dfs backtracking approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Minimum Fuel Cost to Report to the Capital (#2477) — Medium. Pattern: tree and dfs backtracking. Complexity: O(n) time / O(h) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Minimum Fuel Cost to Report to the Capital: show input structure (depth first search), highlight the moving parts of the tree and dfs backtracking approach, and annotate each step with the maintained invariant and complexity."
+}

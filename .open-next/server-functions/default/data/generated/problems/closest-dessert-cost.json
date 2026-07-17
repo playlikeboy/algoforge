@@ -1,0 +1,156 @@
+{
+  "id": "1774",
+  "number": 1774,
+  "slug": "closest-dessert-cost",
+  "title": "Closest Dessert Cost",
+  "difficulty": "Medium",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dynamic-programming"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(m * t)",
+  "spaceComplexity": "O(t)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/closest-dessert-cost/",
+  "notes": [],
+  "relatedSlugs": [
+    "unique-paths",
+    "unique-paths-ii",
+    "minimum-path-sum",
+    "decode-ways",
+    "unique-binary-search-trees",
+    "triangle",
+    "word-break",
+    "maximum-product-subarray"
+  ],
+  "prevSlug": "count-items-matching-a-rule",
+  "nextSlug": "equal-sum-arrays-with-minimum-number-of-operations",
+  "estimatedMinutes": 45,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Closest Dessert Cost?\n\n**Closest Dessert Cost** (LeetCode #1774) is a **Medium** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/closest-dessert-cost/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Closest Dessert Cost\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(m * t)) and **space** (O(t)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(m * t)** time and **O(t)** space.\n\n### Pattern focus: dynamic programming\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(m * t)** |\n| Space | **O(t)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Closest Dessert Cost\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Closest Dessert Cost** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "closest-dessert-cost.cpp",
+      "code": "// Time:  O(m * max(max_base, target + max_topping / 2)) ~= O(m * t)\n// Space: O(max(max_base, target + max_topping / 2)) ~= O(t)\n\nclass Solution {\npublic:\n    int closestCost(vector<int>& baseCosts, vector<int>& toppingCosts, int target) {\n        static const int MAX_COUNT = 2;\n\n        const auto max_base = *max_element(cbegin(baseCosts), cend(baseCosts));\n        const auto max_topping = *max_element(cbegin(toppingCosts), cend(toppingCosts));\n        vector<bool> dp(max(max_base, target + max_topping / 2) + 1);\n        for (const auto& b : baseCosts) {\n            dp[b] = true;\n        }\n        for (const auto& t : toppingCosts) {\n            for (int count = 0; count < MAX_COUNT; ++count) {\n                for (int i = size(dp) - 1 - t; i >= 1; --i) {\n                    if (dp[i]) {\n                        dp[i + t] = true;\n                    }\n                }\n            }\n        }\n        int result = numeric_limits<int>::max();\n        for (int i = 1; i <= size(dp) - 1; ++i) {\n            if (!dp[i]) {\n                continue;\n            }\n            if (abs(i - target) < abs(result - target)) {\n                result = i;\n            }\n            if (i >= target) {\n                break;\n            }\n        }\n        return result;\n    }\n};\n\n// Time:  O(n * 3^m)\n// Space: O(m * t)\nclass Solution2 {\npublic:\n    int closestCost(vector<int>& baseCosts, vector<int>& toppingCosts, int target) {\n        unordered_map<int, unordered_set<int>> lookup;\n        int result = numeric_limits<int>::max();\n        for (const auto& b : baseCosts) {\n            backtracking(toppingCosts, 0, b, target, &lookup, &result);\n        }\n        return result;\n    }\n\nprivate:\n    void backtracking(const vector<int>& toppingCosts,\n                      int i, int cost, int target,\n                      unordered_map<int, unordered_set<int>> *lookup,\n                      int *result) {\n\n        static const int max_top = 2;\n        if (lookup->count(i) && (*lookup)[i].count(cost)) {\n            return;\n        }\n        (*lookup)[i].emplace(cost);\n        if (cost >= target || i == size(toppingCosts)) {\n            if (pair(abs(cost - target), cost) < pair(abs(*result - target), *result)) {\n                *result = cost;\n            }\n            return;\n        }\n        for (int j = 0; j <= max_top; ++j) {\n            backtracking(toppingCosts, i + 1, cost + j * toppingCosts[i], target, lookup, result);\n        }\n    }\n};\n\n// Time:  O(3^m*log(3^m)) + O(n*log(3^m)) = O(m*(3^m + n))\n// Space: O(3^m)\nclass Solution3 {\npublic:\n    int closestCost(vector<int>& baseCosts, vector<int>& toppingCosts, int target) {\n        static const int MAX_COUNT = 2;\n\n        unordered_set<int> combs_set = {0};\n        for (const auto& t : toppingCosts) {\n            unordered_set<int> new_combs_set;\n            for (const auto& c : combs_set) {\n                for (int i = 0; i <= MAX_COUNT; ++i) {\n                    new_combs_set.emplace(c + i * t);\n                }\n            }\n            combs_set = move(new_combs_set);\n        }\n        vector<int> combs(cbegin(combs_set), cend(combs_set));\n        sort(begin(combs), end(combs));\n        int result = numeric_limits<int>::max();\n        for (const auto& b : baseCosts) {\n            const auto& cit = lower_bound(cbegin(combs), cend(combs), target - b);\n            if (cit != cend(combs)) {\n                if (pair(abs(b + *cit - target), b + *cit) < pair(abs(result - target), result)) {\n                    result = b + *cit;\n                }\n            }\n            if (cit != cbegin(combs)) {\n                if (pair(abs(b + *prev(cit) - target), b + *prev(cit)) < pair(abs(result - target), result)) {\n                    result = b + *prev(cit);\n                }\n            }\n        }\n        return result;\n    }\n};\n\n// Time:  O(n * 3^m)\n// Space: O(3^m)\nclass Solution4 {\npublic:\n    int closestCost(vector<int>& baseCosts, vector<int>& toppingCosts, int target) {\n        static const int MAX_COUNT = 2;\n\n        unordered_set<int> combs_set = {0};\n        for (const auto& t : toppingCosts) {\n            unordered_set<int> new_combs_set;\n            for (const auto& c : combs_set) {\n                for (int i = 0; i <= MAX_COUNT; ++i) {\n                    new_combs_set.emplace(c + i * t);\n                }\n            }\n            combs_set = move(new_combs_set);\n        }\n        int result = numeric_limits<int>::max();\n        for (const auto& b : baseCosts) {\n            for (const auto& c : combs_set) {\n                if (pair(abs(b + c - target), b + c) < pair(abs(result - target), result)) {\n                    result = b + c;\n                }\n            }\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/closest-dessert-cost.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "closest-dessert-cost.py",
+      "code": "# Time:  O(m * max(max_base, target + max_topping / 2)) ~= O(m * t)\n# Space: O(max(max_base, target + max_topping / 2)) ~= O(t)\n\nclass Solution(object):\n    def closestCost(self, baseCosts, toppingCosts, target):\n        \"\"\"\n        :type baseCosts: List[int]\n        :type toppingCosts: List[int]\n        :type target: int\n        :rtype: int\n        \"\"\"\n        max_count = 2\n        max_base, max_topping = max(baseCosts), max(toppingCosts)\n        dp = [False]*(max(max_base, target+max_topping//2)+1)\n        for b in baseCosts:\n            dp[b] = True\n        for t in toppingCosts:\n            for _ in xrange(max_count):\n                for i in reversed(xrange(len(dp)-t)):\n                    if dp[i]:\n                        dp[i+t] = True\n        result = float(\"inf\")\n        for i in xrange(1, len(dp)):\n            if not dp[i]:\n                continue\n            if abs(i-target) < abs(result-target):\n                result = i\n            if i >= target:\n                break\n        return result\n            \n\n# Time:  O(n * 3^m)\n# Space: O(m * t)\nclass Solution2(object):\n    def closestCost(self, baseCosts, toppingCosts, target):\n        \"\"\"\n        :type baseCosts: List[int]\n        :type toppingCosts: List[int]\n        :type target: int\n        :rtype: int\n        \"\"\"\n        max_count = 2\n        def backtracking(toppingCosts, i, cost, target, lookup, result):\n            if (i, cost) in lookup:\n                return\n            lookup.add((i, cost))\n            if cost >= target or i == len(toppingCosts):\n                if (abs(cost-target), cost) < (abs(result[0]-target), result[0]):\n                    result[0] = cost\n                return\n            for j in xrange(max_count+1):\n                backtracking(toppingCosts, i+1, cost+j*toppingCosts[i], target, lookup, result)\n\n        result = [float(\"inf\")]\n        lookup = set()\n        for b in baseCosts:\n            backtracking(toppingCosts, 0, b, target, lookup, result)\n        return result[0]\n\n\n# Time:  O(3^m*log(3^m)) + O(n*log(3^m)) = O(m*(3^m + n))\n# Space: O(3^m)\nimport bisect\n\n\nclass Solution3(object):\n    def closestCost(self, baseCosts, toppingCosts, target):\n        \"\"\"\n        :type baseCosts: List[int]\n        :type toppingCosts: List[int]\n        :type target: int\n        :rtype: int\n        \"\"\"\n        max_count = 2\n        combs = set([0])\n        for t in toppingCosts:\n            combs = set([c+i*t for c in combs for i in xrange(max_count+1)])\n        result, combs = float(\"inf\"), sorted(combs)\n        for b in baseCosts:\n            idx = bisect.bisect_left(combs, target-b)\n            if idx < len(combs):\n                result = min(result, b+combs[idx], key=lambda x: (abs(x-target), x))\n            if idx > 0:\n                result = min(result, b+combs[idx-1], key=lambda x: (abs(x-target), x))        \n        return result\n\n\n# Time:  O(n * 3^m)\n# Space: O(3^m)\nclass Solution4(object):\n    def closestCost(self, baseCosts, toppingCosts, target):\n        \"\"\"\n        :type baseCosts: List[int]\n        :type toppingCosts: List[int]\n        :type target: int\n        :rtype: int\n        \"\"\"\n        max_count = 2\n        combs = set([0])\n        for t in toppingCosts:\n            combs = set([c+i*t for c in combs for i in xrange(max_count+1)])\n        result = float(\"inf\")\n        for b in baseCosts:\n            for c in combs:\n                result = min(result, b+c, key=lambda x: (abs(x-target), x))      \n        return result\n",
+      "sourcePath": "Python/closest-dessert-cost.py"
+    }
+  },
+  "seo": {
+    "title": "Closest Dessert Cost Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Closest Dessert Cost (LeetCode #1774). Pattern: dynamic programming. Time O(m * t), space O(t). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Closest Dessert Cost",
+      "Closest Dessert Cost solution",
+      "Closest Dessert Cost leetcode",
+      "dynamic-programming",
+      "dynamic-programming",
+      "medium"
+    ],
+    "canonicalPath": "/problems/closest-dessert-cost"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Closest Dessert Cost?",
+      "answer": "The reference solutions aim for O(m * t) time and O(t) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Closest Dessert Cost use?",
+      "answer": "It primarily maps to dynamic programming, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Closest Dessert Cost good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/closest-dessert-cost/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Closest Dessert Cost (#1774) — Medium. Pattern: dynamic programming. Complexity: O(m * t) time / O(t) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Closest Dessert Cost: show input structure (dynamic programming), highlight the moving parts of the dynamic programming approach, and annotate each step with the maintained invariant and complexity."
+}

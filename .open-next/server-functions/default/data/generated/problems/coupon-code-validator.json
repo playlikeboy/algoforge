@@ -1,0 +1,161 @@
+{
+  "id": "3606",
+  "number": 3606,
+  "slug": "coupon-code-validator",
+  "title": "Coupon Code Validator",
+  "difficulty": "Easy",
+  "topics": [
+    "string"
+  ],
+  "patterns": [
+    "hash-map",
+    "sort"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(l * nlogn)",
+  "spaceComplexity": "O(n * l)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/coupon-code-validator/",
+  "notes": [
+    "Hash Table",
+    "Sort"
+  ],
+  "relatedSlugs": [
+    "increasing-decreasing-string",
+    "find-resultant-array-after-removing-anagrams",
+    "longest-uncommon-subsequence-ii",
+    "longest-word-in-dictionary-through-deleting",
+    "minimum-cost-to-make-array-equalindromic",
+    "unique-email-groups",
+    "password-strength",
+    "check-if-an-array-is-consecutive"
+  ],
+  "prevSlug": "minimum-stability-factor-of-array",
+  "nextSlug": "power-grid-maintenance",
+  "estimatedMinutes": 20,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Coupon Code Validator?\n\n**Coupon Code Validator** (LeetCode #3606) is a **Easy** problem that primarily trains **string**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **hash map and sort**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt builds core muscle memory you will reuse on harder variants.\n Official solution notes mention: Hash Table, Sort.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/coupon-code-validator/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Coupon Code Validator\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **hash map and sort**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(l * nlogn)) and **space** (O(n * l)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(l * nlogn)** time and **O(n * l)** space.\n\n### Pattern focus: hash map and sort\n\nUse the pattern as a checklist:\n\n- **hash map** — confirm the invariant holds after each step\n- **sort** — confirm the invariant holds after each step\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(l * nlogn)** |\n| Space | **O(n * l)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Coupon Code Validator\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for hash map and sort — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal hash map and sort solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `coupon-code-validator`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **hash map and sort**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **string**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Coupon Code Validator** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **string**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "coupon-code-validator.cpp",
+      "code": "// Time:  O(l * nlogn)\n// Space: O(n * l)\n\n// hash table, sort\nclass Solution {\npublic:\n    vector<string> validateCoupons(vector<string>& code, vector<string>& businessLine, vector<bool>& isActive) {\n        static const unordered_map<string, int> LOOKUP = {{\"electronics\", 0}, {\"grocery\", 1}, {\"pharmacy\", 2}, {\"restaurant\", 3}};\n\n        vector<pair<int, string>> sorted_codes;\n        for (int i = 0; i < size(code); ++i) {\n            if (isActive[i] && !empty(code[i]) && LOOKUP.count(businessLine[i]) && all_of(cbegin(code[i]), cend(code[i]), [](const auto& x) {\n                return isalnum(x) || x == '_';\n            })) {\n                sorted_codes.emplace_back(LOOKUP.at(businessLine[i]), code[i]);\n            }\n        }\n        sort(begin(sorted_codes), end(sorted_codes));\n        vector<string> result;\n        result.reserve(size(sorted_codes));\n        for (const auto& [_, c] : sorted_codes) {\n            result.emplace_back(c);\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/coupon-code-validator.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "coupon-code-validator.py",
+      "code": "# Time:  O(l * nlogn)\n# Space: O(n * l)\n\nimport itertools\n\n\n# hash table, sort\nclass Solution(object):\n    def validateCoupons(self, code, businessLine, isActive):\n        \"\"\"\n        :type code: List[str]\n        :type businessLine: List[str]\n        :type isActive: List[bool]\n        :rtype: List[str]\n        \"\"\"\n        LOOKUP = {\"electronics\":0, \"grocery\":1, \"pharmacy\":2, \"restaurant\":3}\n        sorted_codes = []\n        for c, b, a in itertools.izip(code, businessLine, isActive):\n            if a and c and b in LOOKUP and all(x.isalnum() or x == '_' for x in c):\n                sorted_codes.append((LOOKUP[b], c))\n        sorted_codes.sort()\n        return [c for _, c in sorted_codes]\n",
+      "sourcePath": "Python/coupon-code-validator.py"
+    }
+  },
+  "seo": {
+    "title": "Coupon Code Validator Solution — Easy | AlgoForge",
+    "description": "Original Easy explanation for Coupon Code Validator (LeetCode #3606). Pattern: hash map. Time O(l * nlogn), space O(n * l). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Coupon Code Validator",
+      "Coupon Code Validator solution",
+      "Coupon Code Validator leetcode",
+      "string",
+      "hash-map",
+      "sort",
+      "easy"
+    ],
+    "canonicalPath": "/problems/coupon-code-validator"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Coupon Code Validator?",
+      "answer": "The reference solutions aim for O(l * nlogn) time and O(n * l) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Coupon Code Validator use?",
+      "answer": "It primarily maps to hash map and sort, within the broader topic of string."
+    },
+    {
+      "question": "Is Coupon Code Validator good for interviews?",
+      "answer": "Yes — as a Easy problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/coupon-code-validator/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the hash map and sort approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Coupon Code Validator (#3606) — Easy. Pattern: hash map and sort. Complexity: O(l * nlogn) time / O(n * l) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Coupon Code Validator: show input structure (string), highlight the moving parts of the hash map and sort approach, and annotate each step with the maintained invariant and complexity."
+}

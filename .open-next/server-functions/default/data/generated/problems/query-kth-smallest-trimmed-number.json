@@ -1,0 +1,162 @@
+{
+  "id": "2343",
+  "number": 2343,
+  "slug": "query-kth-smallest-trimmed-number",
+  "title": "Query Kth Smallest Trimmed Number",
+  "difficulty": "Medium",
+  "topics": [
+    "sort"
+  ],
+  "patterns": [
+    "sort",
+    "radix-sort"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(q + n * t)",
+  "spaceComplexity": "O(t + n + q)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/query-kth-smallest-trimmed-number/",
+  "notes": [
+    "Sort",
+    "Quick Select",
+    "Radix Sort"
+  ],
+  "relatedSlugs": [
+    "sort-the-jumbled-numbers",
+    "maximum-star-sum-of-a-graph",
+    "sort-the-students-by-their-kth-score",
+    "sum-in-a-matrix",
+    "find-the-value-of-the-partition",
+    "make-lexicographically-smallest-array-by-swapping-elements",
+    "find-if-array-can-be-sorted",
+    "find-the-number-of-ways-to-place-people-i"
+  ],
+  "prevSlug": "max-sum-of-a-pair-with-equal-sum-of-digits",
+  "nextSlug": "minimum-deletions-to-make-array-divisible",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Query Kth Smallest Trimmed Number?\n\n**Query Kth Smallest Trimmed Number** (LeetCode #2343) is a **Medium** problem that primarily trains **sort**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sort and radix sort**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Sort, Quick Select, Radix Sort.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/query-kth-smallest-trimmed-number/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Query Kth Smallest Trimmed Number\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sort and radix sort**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(q + n * t)) and **space** (O(t + n + q)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(q + n * t)** time and **O(t + n + q)** space.\n\n### Pattern focus: sort and radix sort\n\nUse the pattern as a checklist:\n\n- **sort** — confirm the invariant holds after each step\n- **radix sort** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(q + n * t)** |\n| Space | **O(t + n + q)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Query Kth Smallest Trimmed Number\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sort and radix sort — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sort and radix sort**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **sort**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Query Kth Smallest Trimmed Number** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **sort**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "query-kth-smallest-trimmed-number.cpp",
+      "code": "// Time:  O(q + n * t)\n// Space: O(t + n + q)\n\n// radix sort\nclass Solution {\npublic:\n    vector<int> smallestTrimmedNumbers(vector<string>& nums, vector<vector<int>>& queries) {\n        int max_t = 0;\n        for (int i = 0; i < size(queries); ++i) {\n            max_t = max(max_t, queries[i][1]);\n        }\n        vector<vector<pair<int, int>>> lookup(max_t + 1);\n        for (int i = 0; i < size(queries); ++i) {\n            lookup[queries[i][1]].emplace_back(queries[i][0], i);\n        }\n        vector<int> idxs(size(nums));\n        iota(begin(idxs), end(idxs), 0);\n        vector<int> result(size(queries));\n        for (int l = 1; l <= max_t; ++l) {\n            vector<int> cnt(10);\n            for (int i = 0; i < size(idxs); ++i) {\n                const int d = nums[idxs[i]][size(nums[idxs[i]]) - l]- '0';\n                ++cnt[d];\n            }\n            for (int d = 0; d < 9; ++d) {\n                cnt[d + 1] += cnt[d];\n            }\n            vector<int> new_idxs(size(nums));\n            for (int i = size(idxs) - 1; i >= 0; --i) {\n                const int d = nums[idxs[i]][size(nums[idxs[i]]) - l] - '0';\n                --cnt[d];\n                new_idxs[cnt[d]] = idxs[i];\n            }\n            idxs = move(new_idxs);\n            for (const auto& [k, i] : lookup[l]) {\n                result[i] = idxs[k - 1];\n            }\n        }\n        return result;\n    }\n};\n\n// Time:  O(q * n * t) on average\n// Space: O(n + q)\n// quick select\nclass Solution2 {\npublic:\n    vector<int> smallestTrimmedNumbers(vector<string>& nums, vector<vector<int>>& queries) {\n        vector<int> idxs(size(nums));\n        iota(begin(idxs), end(idxs), 0);\n        vector<int> result;\n        for (const auto& q : queries) {\n            nth_element(begin(idxs), begin(idxs) + (q[0] - 1), end(idxs),\n                        [&](const auto& a, const auto& b) {\n                            const int cmp = nums[a].compare(size(nums[a]) - q[1], string::npos,\n                                                            nums[b], size(nums[b]) - q[1], string::npos);\n                            return cmp ? cmp < 0 : a < b;\n                        }\n            );\n            result.emplace_back(idxs[q[0] - 1]);\n        }\n        return result;\n    }\n};\n\n// Time:  O(q + nlogn * t)\n// Space: O(t + n + q)\n// sort\nclass Solution3 {\npublic:\n    vector<int> smallestTrimmedNumbers(vector<string>& nums, vector<vector<int>>& queries) {\n        int max_t = 0;\n        for (int i = 0; i < size(queries); ++i) {\n            max_t = max(max_t, queries[i][1]);\n        }\n        vector<vector<pair<int, int>>> lookup(max_t + 1);\n        for (int i = 0; i < size(queries); ++i) {\n            lookup[queries[i][1]].emplace_back(queries[i][0], i);\n        }\n        vector<int> idxs(size(nums));\n        iota(begin(idxs), end(idxs), 0);\n        vector<int> result(size(queries));\n        for (int t = 1; t <= max_t; ++t) {\n            if (empty(lookup[t])) {\n                continue;\n            }\n            sort(begin(idxs), end(idxs),\n                       [&](const auto& a, const auto& b) {\n                           const int cmp = nums[a].compare(size(nums[a]) - t, string::npos,\n                                                           nums[b], size(nums[b]) - t, string::npos);\n                           return cmp ? cmp < 0 : a < b;\n                       }\n            );\n            for (const auto& [k, i] : lookup[t]) {\n                result[i] = idxs[k - 1];\n            }\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/query-kth-smallest-trimmed-number.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "query-kth-smallest-trimmed-number.py",
+      "code": "# Time:  O(q + n * t)\n# Space: O(t + n + q)\n\n# radix sort\nclass Solution(object):\n    def smallestTrimmedNumbers(self, nums, queries):\n        \"\"\"\n        :type nums: List[str]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        max_t = max(t for _, t in queries)\n        lookup = [[] for _ in xrange(max_t+1)]\n        for i, (k, t) in enumerate(queries):\n            lookup[t].append((k, i))\n        result = [0]*len(queries)\n        idxs = range(len(nums))\n        for l in xrange(1, max_t+1):\n            cnt = [0]*10\n            for i in idxs:\n                d = int(nums[i][-l])\n                cnt[d] += 1\n            for d in xrange(9):\n                cnt[d+1] += cnt[d]\n            new_idxs = [0]*len(nums)\n            for i in reversed(idxs):\n                d = int(nums[i][-l])\n                cnt[d] -= 1\n                new_idxs[cnt[d]] = i\n            idxs = new_idxs\n            for k, i in lookup[l]:\n                result[i] = idxs[k-1]\n        return result\n\n            \n# Time:  O(q * n * t) on average\n# Space: O(n + q)\nimport random\n\n\n# quick select\nclass Solution2(object):\n    def smallestTrimmedNumbers(self, nums, queries):\n        \"\"\"\n        :type nums: List[str]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        def nth_element(nums, n, compare=lambda a, b: a < b):\n            def tri_partition(nums, left, right, target, compare):\n                mid = left\n                while mid <= right:\n                    if nums[mid] == target:\n                        mid += 1\n                    elif compare(nums[mid], target):\n                        nums[left], nums[mid] = nums[mid], nums[left]\n                        left += 1\n                        mid += 1\n                    else:\n                        nums[mid], nums[right] = nums[right], nums[mid]\n                        right -= 1\n                return left, right\n\n            left, right = 0, len(nums)-1\n            while left <= right:\n                pivot_idx = random.randint(left, right)\n                pivot_left, pivot_right = tri_partition(nums, left, right, nums[pivot_idx], compare)\n                if pivot_left <= n <= pivot_right:\n                    return\n                elif pivot_left > n:\n                    right = pivot_left-1\n                else:  # pivot_right < n.\n                    left = pivot_right+1\n\n        def compare(a, b):\n            for i in xrange(len(nums[a])-t, len(nums[a])):\n                if nums[a][i] < nums[b][i]:\n                    return True\n                if nums[a][i] > nums[b][i]:\n                    return False\n            return cmp(a, b) < 0\n\n        result = []\n        idxs = range(len(nums))\n        for k, t in queries:\n            nth_element(idxs, k-1, compare=compare)\n            result.append(idxs[k-1])\n        return result\n\n\n# Time:  O(q + nlogn * t)\n# Space: O(t + n + q)\n# sort\nclass Solution3(object):\n    def smallestTrimmedNumbers(self, nums, queries):\n        \"\"\"\n        :type nums: List[str]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        def compare(a, b):\n            for i in xrange(len(nums[a])-t, len(nums[a])):\n                if nums[a][i] < nums[b][i]:\n                    return -1\n                if nums[a][i] > nums[b][i]:\n                    return 1\n            return cmp(a, b)\n\n        max_t = max(t for _, t in queries)\n        lookup = [[] for _ in xrange(max_t+1)]\n        for i, (k, t) in enumerate(queries):\n            lookup[t].append((k, i))\n        result = [0]*len(queries)\n        idxs = range(len(nums))\n        for t in xrange(1, max_t+1):\n            if not lookup[t]:\n                continue\n            idxs.sort(cmp=compare)\n            for k, i in lookup[t]:\n                result[i] = idxs[k-1]\n        return result\n",
+      "sourcePath": "Python/query-kth-smallest-trimmed-number.py"
+    }
+  },
+  "seo": {
+    "title": "Query Kth Smallest Trimmed Number Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Query Kth Smallest Trimmed Number (LeetCode #2343). Pattern: sort. Time O(q + n * t), space O(t + n + q). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Query Kth Smallest Trimmed Number",
+      "Query Kth Smallest Trimmed Number solution",
+      "Query Kth Smallest Trimmed Number leetcode",
+      "sort",
+      "sort",
+      "radix-sort",
+      "medium"
+    ],
+    "canonicalPath": "/problems/query-kth-smallest-trimmed-number"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Query Kth Smallest Trimmed Number?",
+      "answer": "The reference solutions aim for O(q + n * t) time and O(t + n + q) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Query Kth Smallest Trimmed Number use?",
+      "answer": "It primarily maps to sort and radix sort, within the broader topic of sort."
+    },
+    {
+      "question": "Is Query Kth Smallest Trimmed Number good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/query-kth-smallest-trimmed-number/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sort and radix sort approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Query Kth Smallest Trimmed Number (#2343) — Medium. Pattern: sort and radix sort. Complexity: O(q + n * t) time / O(t + n + q) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Query Kth Smallest Trimmed Number: show input structure (sort), highlight the moving parts of the sort and radix sort approach, and annotate each step with the maintained invariant and complexity."
+}

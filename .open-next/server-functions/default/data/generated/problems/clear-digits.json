@@ -1,0 +1,161 @@
+{
+  "id": "3174",
+  "number": 3174,
+  "slug": "clear-digits",
+  "title": "Clear Digits",
+  "difficulty": "Easy",
+  "topics": [
+    "stack"
+  ],
+  "patterns": [
+    "stack",
+    "two-pointers"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/clear-digits/",
+  "notes": [
+    "Stack",
+    "Two Pointers"
+  ],
+  "relatedSlugs": [
+    "valid-parentheses",
+    "symmetric-tree",
+    "min-stack",
+    "implement-queue-using-stacks",
+    "next-greater-element-i",
+    "baseball-game",
+    "leaf-similar-trees",
+    "remove-outermost-parentheses"
+  ],
+  "prevSlug": "bitwise-or-of-adjacent-elements",
+  "nextSlug": "find-the-first-player-to-win-k-games-in-a-row",
+  "estimatedMinutes": 20,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Clear Digits?\n\n**Clear Digits** (LeetCode #3174) is a **Easy** problem that primarily trains **stack**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **stack and two pointers**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt builds core muscle memory you will reuse on harder variants.\n Official solution notes mention: Stack, Two Pointers.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/clear-digits/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Clear Digits\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **stack and two pointers**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(1)** space.\n\n### Pattern focus: stack and two pointers\n\nUse the pattern as a checklist:\n\n- **stack** — confirm the invariant holds after each step\n- **two pointers** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Clear Digits\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for stack and two pointers — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **stack and two pointers**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **stack**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Clear Digits** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **stack**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "clear-digits.cpp",
+      "code": "// Time:  O(n)\n// Space: O(1)\n\n// two pointers\nclass Solution {\npublic:\n    string clearDigits(string s) {\n        int j = 0;\n        for (int i = 0; i < size(s); ++i) {\n            if (isdigit(s[i])) {\n                --j;\n                continue;\n            }\n            s[j++] = s[i];\n        }\n        s.resize(j);\n        return s;\n    }\n};\n\n// Time:  O(n)\n// Space: O(1)\n// stack\nclass Solution2 {\npublic:\n    string clearDigits(string s) {\n        string result;\n        for (const auto& x : s) {\n            if (isdigit(x)) {\n                result.pop_back();\n                continue;\n            }\n            result.push_back(x);\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/clear-digits.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "clear-digits.py",
+      "code": "# Time:  O(n)\n# Space: O(1)\n\n# two pointers\nclass Solution(object):\n    def clearDigits(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        s = list(s)\n        j = 0\n        for i, x in enumerate(s):\n            if x.isdigit():\n                j -= 1\n                continue\n            s[j] = x\n            j += 1\n        while len(s) > j:\n            s.pop()\n        return \"\".join(s)\n\n\n# Time:  O(n)\n# Space: O(1)\n# stack\nclass Solution2(object):\n    def clearDigits(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        result = []\n        for x in s:\n            if x.isdigit():\n                result.pop()\n                continue\n            result.append(x)\n        return \"\".join(result)\n",
+      "sourcePath": "Python/clear-digits.py"
+    }
+  },
+  "seo": {
+    "title": "Clear Digits Solution — Easy | AlgoForge",
+    "description": "Original Easy explanation for Clear Digits (LeetCode #3174). Pattern: stack. Time O(n), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Clear Digits",
+      "Clear Digits solution",
+      "Clear Digits leetcode",
+      "stack",
+      "stack",
+      "two-pointers",
+      "easy"
+    ],
+    "canonicalPath": "/problems/clear-digits"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Clear Digits?",
+      "answer": "The reference solutions aim for O(n) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Clear Digits use?",
+      "answer": "It primarily maps to stack and two pointers, within the broader topic of stack."
+    },
+    {
+      "question": "Is Clear Digits good for interviews?",
+      "answer": "Yes — as a Easy problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/clear-digits/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the stack and two pointers approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Clear Digits (#3174) — Easy. Pattern: stack and two pointers. Complexity: O(n) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Clear Digits: show input structure (stack), highlight the moving parts of the stack and two pointers approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,85 @@
+{
+  "slug": "hard-binary-search-problems",
+  "path": "/explore/hard-binary-search-problems",
+  "h1": "Hard Binary Search Problems",
+  "intro": "83 hard problems that drill the Binary Search pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "median-of-two-sorted-arrays",
+    "find-minimum-in-rotated-sorted-array-ii",
+    "find-the-duplicate-number",
+    "smallest-rectangle-enclosing-black-pixels",
+    "russian-doll-envelopes",
+    "max-sum-of-sub-matrix-no-larger-than-k",
+    "split-array-largest-sum",
+    "kth-smallest-number-in-multiplication-table",
+    "random-pick-with-blacklist",
+    "find-k-th-smallest-pair-distance",
+    "minimize-max-distance-to-gas-station",
+    "k-th-smallest-prime-fraction",
+    "preimage-size-of-factorial-zeroes-function",
+    "nth-magical-number",
+    "find-in-mountain-array",
+    "online-majority-element-in-subarray",
+    "divide-chocolate",
+    "number-of-ships-in-a-rectangle",
+    "find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows",
+    "minimum-operations-to-make-a-subsequence",
+    "find-minimum-time-to-finish-all-jobs",
+    "maximum-number-of-events-that-can-be-attended-ii",
+    "closest-room",
+    "minimum-space-wasted-from-packaging",
+    "longest-common-subpath",
+    "minimum-time-for-k-virus-variants-to-spread",
+    "find-the-longest-valid-obstacle-course-at-each-position",
+    "kth-smallest-product-of-two-sorted-arrays",
+    "maximum-number-of-tasks-you-can-assign",
+    "minimum-operations-to-make-the-array-k-increasing",
+    "maximum-running-time-of-n-computers",
+    "maximum-total-beauty-of-the-gardens",
+    "number-of-flowers-in-full-bloom",
+    "booking-concert-tickets-in-groups",
+    "number-of-pairs-satisfying-inequality",
+    "minimum-cost-to-make-array-equal",
+    "closest-nodes-queries-in-a-binary-search-tree",
+    "maximum-number-of-points-from-grid-queries",
+    "maximize-the-minimum-powered-city",
+    "minimum-time-to-eat-all-grains",
+    "minimum-operations-to-make-numbers-non-positive",
+    "maximum-sum-queries",
+    "maximum-number-of-groups-with-increasing-length",
+    "minimum-relative-loss-after-buying-chocolates",
+    "maximum-profitable-triplets-with-increasing-prices-ii",
+    "maximum-balanced-subsequence-sum",
+    "find-building-where-alice-and-bob-can-meet",
+    "maximum-gcd-sum-of-a-subarray",
+    "find-maximum-non-decreasing-array-length",
+    "apply-operations-to-maximize-frequency-score"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice hard Binary Search problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/binary-search",
+      "label": "Binary Search pattern"
+    },
+    {
+      "href": "/difficulty/hard",
+      "label": "All Hard problems"
+    }
+  ],
+  "seo": {
+    "title": "Hard Binary Search Problems | AlgoForge",
+    "description": "Practice hard Binary Search LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "hard Binary Search",
+      "Binary Search problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/hard-binary-search-problems"
+  },
+  "kind": "difficulty-pattern"
+}

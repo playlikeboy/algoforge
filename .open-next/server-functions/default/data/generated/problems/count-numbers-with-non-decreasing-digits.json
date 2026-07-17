@@ -1,0 +1,157 @@
+{
+  "id": "3519",
+  "number": 3519,
+  "slug": "count-numbers-with-non-decreasing-digits",
+  "title": "Count Numbers with Non-Decreasing Digits",
+  "difficulty": "Hard",
+  "topics": [
+    "math"
+  ],
+  "patterns": [],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n^2)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/count-numbers-with-non-decreasing-digits/",
+  "notes": [
+    "Math",
+    "Stars and Bars",
+    "Combinatorics"
+  ],
+  "relatedSlugs": [
+    "valid-number",
+    "number-of-digit-one",
+    "strobogrammatic-number-iii",
+    "self-crossing",
+    "perfect-rectangle",
+    "largest-palindrome-product",
+    "smallest-good-base",
+    "super-washing-machines"
+  ],
+  "prevSlug": "smallest-palindromic-rearrangement-ii",
+  "nextSlug": "minimum-threshold-for-inversion-pairs-count",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Count Numbers with Non-Decreasing Digits?\n\n**Count Numbers with Non-Decreasing Digits** (LeetCode #3519) is a **Hard** problem that primarily trains **math**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Math, Stars and Bars, Combinatorics.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/count-numbers-with-non-decreasing-digits/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Count Numbers with Non-Decreasing Digits\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n^2)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n^2)** time and **O(n)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n^2)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Count Numbers with Non-Decreasing Digits\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **math**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Count Numbers with Non-Decreasing Digits** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **math**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "count-numbers-with-non-decreasing-digits.cpp",
+      "code": "// Time:  O(n^2), n = len(r)\n// Space: O(n)\n\n// math, stars and bars, combinatorics\nclass Solution {\npublic:\n    int countNumbers(string l, string r, int b) {\n        const auto& decrease = [](auto& digits){\n            for (int i = size(digits) - 1; i >= 0; --i) {\n                if (digits[i]) {\n                    --digits[i];\n                    break;\n                }\n                digits[i] = 9;\n            }\n        };\n\n        const auto& divide = [](const auto& digits, int base) {\n            vector<uint8_t> result;\n            result.reserve(size(digits));\n            int r = 0;\n            for (const auto& d : digits) {\n                int q = (r * 10 + d) / base;\n                r = (r * 10 + d) % base;\n                if (!empty(result) || q) {\n                    result.emplace_back(q);\n                }\n            }\n            return pair(result, r);\n        };\n\n        const auto& to_digits = [](const auto& s) {\n            vector<uint8_t> result(size(s));\n            for (int i = 0; i < size(s); ++i) {\n                result[i] = s[i] - '0';\n            }\n            return result;\n        };\n\n        const auto& to_base = [&](auto digits, int base) {\n            vector<uint8_t> result;\n            while (!empty(digits)) {\n                auto [q, r] = divide(digits, base);\n                result.emplace_back(r);\n                digits = move(q);\n            }\n            reverse(begin(result), end(result));\n            return result;\n        };\n\n        const auto& count = [&](const auto& digits) {\n            const auto& digits_base = to_base(digits, b);\n            int result = 0;\n            int i = 0;\n            for (; i < size(digits_base); ++i) {\n                if (i - 1 >= 0 && digits_base[i - 1] > digits_base[i]) {\n                    break;\n                }\n                for (int j = i - 1 >= 0 ? digits_base[i - 1] : 0; j < digits_base[i]; ++j) {\n                    result = addmod(result, nHr((b - 1) - j + 1, size(digits_base) - (i + 1)));\n                }\n            }\n            if (i == size(digits_base)) {\n                result = addmod(result, 1);\n            }\n            return result;\n        };\n\n        auto digits_l = to_digits(l);\n        decrease(digits_l);\n        auto digits_r = to_digits(r);\n        return submod(count(digits_r), count(digits_l));\n    }\n\nprivate:\n    int nHr(int n, int k) {\n        return nCr(n + k - 1, k);\n    }\n\n    int nCr(int n, int k) {\n        while (size(inv_) <= n) {  // lazy initialization\n            fact_.emplace_back(mulmod(fact_.back(), size(inv_)));\n            inv_.emplace_back(mulmod(inv_[MOD % size(inv_)], MOD - MOD / size(inv_)));  // https://cp-algorithms.com/algebra/module-inverse.html\n            inv_fact_.emplace_back(mulmod(inv_fact_.back(), inv_.back()));\n        }\n        return mulmod(mulmod(fact_[n], inv_fact_[n - k]), inv_fact_[k]);\n    }\n\n    uint32_t addmod(uint32_t a, uint32_t b) {  // avoid overflow\n        a %= MOD, b %= MOD;\n        if (MOD - a <= b) {\n            b -= MOD;  // relied on unsigned integer overflow in order to give the expected results\n        }\n        return a + b;\n    }\n\n    uint32_t submod(uint32_t a, uint32_t b) {\n        return addmod(a, (MOD - b) % MOD);\n    }\n\n    // reference: https://stackoverflow.com/questions/12168348/ways-to-do-modulo-multiplication-with-primitive-types\n    uint32_t mulmod(uint32_t a, uint32_t b)  {  // avoid overflow\n        a %= MOD, b %= MOD;\n        uint32_t result = 0;\n        if (a < b) {\n            swap(a, b);\n        }\n        while (b > 0)  {\n            if (b % 2 == 1) {\n                result = addmod(result, a);\n            }\n            a = addmod(a, a);\n            b /= 2;\n        }\n        return result;\n    }\n\n    static const uint32_t MOD = 1e9 + 7;\n    vector<int> fact_ = {1, 1};\n    vector<int> inv_ = {1, 1};\n    vector<int> inv_fact_ = {1, 1};\n};\n",
+      "sourcePath": "C++/count-numbers-with-non-decreasing-digits.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "count-numbers-with-non-decreasing-digits.py",
+      "code": "# Time:  O(n^2), n = len(r)\n# Space: O(n)\n\n# math, stars and bars, combinatorics\nclass Solution(object):\n    def countNumbers(self, l, r, b):\n        \"\"\"\n        :type l: str\n        :type r: str\n        :type b: int\n        :rtype: int\n        \"\"\"\n        MOD = 10**9+7\n        fact, inv, inv_fact = [[1]*2 for _ in xrange(3)]\n        def nCr(n, k):\n            while len(inv) <= n:  # lazy initialization\n                fact.append(fact[-1]*len(inv) % MOD)\n                inv.append(inv[MOD%len(inv)]*(MOD-MOD//len(inv)) % MOD)  # https://cp-algorithms.com/algebra/module-inverse.html\n                inv_fact.append(inv_fact[-1]*inv[-1] % MOD)\n            return (fact[n]*inv_fact[n-k] % MOD) * inv_fact[k] % MOD\n\n        def nHr(n, k):\n            return nCr(n+k-1, k)\n\n        def count(x):\n            digits_base = []\n            while x:\n                x, r = divmod(x, b)\n                digits_base.append(r)\n            digits_base.reverse()\n            if not digits_base:\n                digits_base.append(0)\n            result = 0\n            for i in xrange(len(digits_base)):\n                if i-1 >= 0 and digits_base[i-1] > digits_base[i]:\n                    break\n                for j in xrange(digits_base[i-1] if i-1 >= 0 else 0, digits_base[i]):\n                    result = (result + nHr((b-1)-j+1, len(digits_base)-(i+1))) % MOD\n            else:\n                result = (result+1)%MOD\n            return result\n\n        return (count(int(r)) - count(int(l)-1)) % MOD\n\n\n# Time:  O(n^2), n = len(r)\n# Space: O(n)\n# math, stars and bars, combinatorics\nclass Solution2(object):\n    def countNumbers(self, l, r, b):\n        \"\"\"\n        :type l: str\n        :type r: str\n        :type b: int\n        :rtype: int\n        \"\"\"\n        MOD = 10**9+7\n        fact, inv, inv_fact = [[1]*2 for _ in xrange(3)]\n        def nCr(n, k):\n            while len(inv) <= n:  # lazy initialization\n                fact.append(fact[-1]*len(inv) % MOD)\n                inv.append(inv[MOD%len(inv)]*(MOD-MOD//len(inv)) % MOD)  # https://cp-algorithms.com/algebra/module-inverse.html\n                inv_fact.append(inv_fact[-1]*inv[-1] % MOD)\n            return (fact[n]*inv_fact[n-k] % MOD) * inv_fact[k] % MOD\n\n        def nHr(n, k):\n            return nCr(n+k-1, k)\n\n        def decrease(digits):\n            for i in reversed(xrange(len(digits))):\n                if digits[i]:\n                    digits[i] -= 1\n                    break\n                digits[i] = 9\n\n        def divide(digits, base):\n            result = []\n            r = 0\n            for d in digits:\n                q, r = divmod(r*10+d, base)\n                if result or q:\n                    result.append(q)\n            return result, r\n\n        def to_base(digits, base):\n            result = []\n            while digits:\n                digits, r = divide(digits, base)\n                result.append(r)\n            result.reverse()\n            return result\n\n        def count(digits):\n            digits_base = to_base(digits, b)\n            result = 0\n            for i in xrange(len(digits_base)):\n                if i-1 >= 0 and digits_base[i-1] > digits_base[i]:\n                    break\n                for j in xrange(digits_base[i-1] if i-1 >= 0 else 0, digits_base[i]):\n                    result = (result + nHr((b-1)-j+1, len(digits_base)-(i+1))) % MOD\n            else:\n                result = (result+1)%MOD\n            return result\n\n        digits_l = map(int, l)\n        decrease(digits_l)\n        digits_r = map(int, r)\n        return (count(digits_r) - count(digits_l)) % MOD\n",
+      "sourcePath": "Python/count-numbers-with-non-decreasing-digits.py"
+    }
+  },
+  "seo": {
+    "title": "Count Numbers with Non-Decreasing Digits Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Count Numbers with Non-Decreasing Digits (LeetCode #3519). Pattern: algorithms. Time O(n^2), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Count Numbers with Non-Decreasing Digits",
+      "Count Numbers with Non-Decreasing Digits solution",
+      "Count Numbers with Non-Decreasing Digits leetcode",
+      "math",
+      "hard"
+    ],
+    "canonicalPath": "/problems/count-numbers-with-non-decreasing-digits"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Count Numbers with Non-Decreasing Digits?",
+      "answer": "The reference solutions aim for O(n^2) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Count Numbers with Non-Decreasing Digits use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of math."
+    },
+    {
+      "question": "Is Count Numbers with Non-Decreasing Digits good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/count-numbers-with-non-decreasing-digits/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Count Numbers with Non-Decreasing Digits (#3519) — Hard. Pattern: general problem-solving. Complexity: O(n^2) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Count Numbers with Non-Decreasing Digits: show input structure (math), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

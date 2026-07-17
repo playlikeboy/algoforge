@@ -1,0 +1,158 @@
+{
+  "id": "2499",
+  "number": 2499,
+  "slug": "minimum-total-cost-to-make-arrays-unequal",
+  "title": "Minimum Total Cost to Make Arrays Unequal",
+  "difficulty": "Hard",
+  "topics": [
+    "greedy"
+  ],
+  "patterns": [
+    "greedy"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-total-cost-to-make-arrays-unequal/",
+  "notes": [
+    "Greedy"
+  ],
+  "relatedSlugs": [
+    "trapping-rain-water",
+    "jump-game-ii",
+    "candy",
+    "patching-array",
+    "course-schedule-iii",
+    "set-intersection-size-at-least-two",
+    "employee-free-time",
+    "smallest-rotation-with-highest-score"
+  ],
+  "prevSlug": "frog-jump-ii",
+  "nextSlug": "delete-greatest-value-in-each-row",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Minimum Total Cost to Make Arrays Unequal?\n\n**Minimum Total Cost to Make Arrays Unequal** (LeetCode #2499) is a **Hard** problem that primarily trains **greedy**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **greedy**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Greedy.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/minimum-total-cost-to-make-arrays-unequal/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Minimum Total Cost to Make Arrays Unequal\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **greedy**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(n)** space.\n\n### Pattern focus: greedy\n\nUse the pattern as a checklist:\n\n- **greedy** — confirm the invariant holds after each step\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Minimum Total Cost to Make Arrays Unequal\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for greedy — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal greedy solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `minimum-total-cost-to-make-arrays-unequal`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **greedy**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **greedy**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Minimum Total Cost to Make Arrays Unequal** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **greedy**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "minimum-total-cost-to-make-arrays-unequal.cpp",
+      "code": "// Time:  O(n)\n// Space: O(n)\n\n// greedy\nclass Solution {\npublic:\n    long long minimumTotalCost(vector<int>& nums1, vector<int>& nums2) {\n        unordered_map<int, int> cnt;\n        int64_t result = 0;\n        for (int i = 0; i < size(nums1); ++i) {\n            if (nums1[i] != nums2[i]) {\n                continue;\n            }\n            ++cnt[nums1[i]];\n            result += i;\n        }\n        if (empty(cnt)) {\n            return 0;\n        }\n        const int majority = max_element(cbegin(cnt), cend(cnt),\n                                         [](const auto& a, const auto& b) {\n                                                return a.second < b.second;\n                                         })->first;\n        int remain = cnt[majority] - (accumulate(cbegin(cnt), cend(cnt), 0,\n                                                 [](const auto& total, const auto& x) {\n                                                     return total + x.second;\n                                                 }) - cnt[majority]);\n        if (remain <= 0) {\n            return result;\n        }\n        for (int i = 0; i < size(nums1); ++i) {\n            if (nums1[i] == nums2[i] || nums1[i] == majority || nums2[i] == majority) {\n                continue;\n            }\n            result += i;\n            if (--remain == 0) {\n                return result;\n            }\n        }\n        return -1;\n    }\n};\n",
+      "sourcePath": "C++/minimum-total-cost-to-make-arrays-unequal.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "minimum-total-cost-to-make-arrays-unequal.py",
+      "code": "# Time:  O(n)\n# Space: O(n)\n\nimport collections\nimport itertools\n\n\n# greedy\nclass Solution(object):\n    def minimumTotalCost(self, nums1, nums2):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :rtype: int\n        \"\"\"\n        cnt = collections.Counter()\n        result = 0\n        for i, (x, y) in enumerate(itertools.izip(nums1, nums2)):\n            if x != y:\n                continue\n            cnt[x] += 1\n            result += i\n        if not cnt:\n            return 0\n        majority = max(cnt.iterkeys(), key=lambda x: cnt[x])\n        remain = cnt[majority]-(sum(cnt.itervalues())-cnt[majority])\n        if remain <= 0:\n            return result\n        for i, (x, y) in enumerate(itertools.izip(nums1, nums2)):\n            if x == y or majority in (x, y):\n                continue\n            result += i\n            remain -= 1\n            if not remain:\n                return result\n        return -1\n",
+      "sourcePath": "Python/minimum-total-cost-to-make-arrays-unequal.py"
+    }
+  },
+  "seo": {
+    "title": "Minimum Total Cost to Make Arrays Unequal Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Minimum Total Cost to Make Arrays Unequal (LeetCode #2499). Pattern: greedy. Time O(n), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Minimum Total Cost to Make Arrays Unequal",
+      "Minimum Total Cost to Make Arrays Unequal solution",
+      "Minimum Total Cost to Make Arrays Unequal leetcode",
+      "greedy",
+      "greedy",
+      "hard"
+    ],
+    "canonicalPath": "/problems/minimum-total-cost-to-make-arrays-unequal"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Minimum Total Cost to Make Arrays Unequal?",
+      "answer": "The reference solutions aim for O(n) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Minimum Total Cost to Make Arrays Unequal use?",
+      "answer": "It primarily maps to greedy, within the broader topic of greedy."
+    },
+    {
+      "question": "Is Minimum Total Cost to Make Arrays Unequal good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/minimum-total-cost-to-make-arrays-unequal/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the greedy approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Minimum Total Cost to Make Arrays Unequal (#2499) — Hard. Pattern: greedy. Complexity: O(n) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Minimum Total Cost to Make Arrays Unequal: show input structure (greedy), highlight the moving parts of the greedy approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,158 @@
+{
+  "id": "666",
+  "number": 666,
+  "slug": "path-sum-iv",
+  "title": "Path Sum IV",
+  "difficulty": "Medium",
+  "topics": [
+    "breadth-first-search"
+  ],
+  "patterns": [
+    "topological-sort"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(w)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/path-sum-iv/",
+  "notes": [
+    "Topological Sort"
+  ],
+  "relatedSlugs": [
+    "sequence-reconstruction",
+    "cat-and-mouse",
+    "sort-items-by-groups-respecting-dependencies",
+    "cat-and-mouse-ii",
+    "alien-dictionary",
+    "binary-tree-zigzag-level-order-traversal",
+    "word-ladder",
+    "surrounded-regions"
+  ],
+  "prevSlug": "non-decreasing-array",
+  "nextSlug": "beautiful-arrangement-ii",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Path Sum IV?\n\n**Path Sum IV** (LeetCode #666) is a **Medium** problem that primarily trains **breadth first search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **topological sort**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Topological Sort.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/path-sum-iv/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Path Sum IV\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **topological sort**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(w)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(w)** space.\n\n### Pattern focus: topological sort\n\nUse the pattern as a checklist:\n\n- **topological sort** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(w)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Path Sum IV\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for topological sort — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **topological sort**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **breadth first search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Path Sum IV** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **breadth first search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "path-sum-iv.cpp",
+      "code": "// Time:  O(n)\n// Space: O(p), p is the number of paths\n\nclass Solution {\npublic:\n    int pathSum(vector<int>& nums) {\n        if (nums.empty()) {\n            return 0;\n        }\n        int result = 0;\n        queue<node> q;\n        node dummy(10);\n        auto parent_ptr = &dummy;\n        for (const auto& num : nums) {\n            node child(num);\n            while (!parent_ptr->isParent(child)) {\n                result += parent_ptr->leaf ? parent_ptr->val : 0;\n                parent_ptr = &q.front();\n                q.pop();\n            }\n            parent_ptr->leaf = false;\n            child.val += parent_ptr->val;\n            q.emplace(move(child));\n        }\n        while (!q.empty()) {\n            result += q.front().val;\n            q.pop();\n        }\n        return result;\n    }\n\nprivate:\n    struct node {\n        int level, i, val;\n        bool leaf;\n        node(int n) : level(n / 100 - 1), i((n % 100) / 10 - 1), val(n % 10), leaf(true) {};\n        inline bool isParent(const node& other) {\n            return level == other.level - 1 && i == other.i / 2;\n        };\n    };\n};\n",
+      "sourcePath": "C++/path-sum-iv.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "path-sum-iv.py",
+      "code": "# Time:  O(n)\n# Space: O(p), p is the number of paths\n\nimport collections\n\n\nclass Solution(object):\n    def pathSum(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        class Node(object):\n            def __init__(self, num):\n                self.level = num/100 - 1\n                self.i = (num%100)/10 - 1\n                self.val = num%10\n                self.leaf = True\n\n            def isParent(self, other):\n                return self.level == other.level-1 and \\\n                       self.i == other.i/2\n\n        if not nums:\n            return 0\n        result = 0\n        q = collections.deque()\n        dummy = Node(10)\n        parent = dummy\n        for num in nums:\n            child = Node(num)\n            while not parent.isParent(child):\n                result += parent.val if parent.leaf else 0\n                parent = q.popleft()\n            parent.leaf = False\n            child.val += parent.val\n            q.append(child)\n        while q:\n            result += q.pop().val\n        return result\n\n",
+      "sourcePath": "Python/path-sum-iv.py"
+    }
+  },
+  "seo": {
+    "title": "Path Sum IV Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Path Sum IV (LeetCode #666). Pattern: topological sort. Time O(n), space O(w). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Path Sum IV",
+      "Path Sum IV solution",
+      "Path Sum IV leetcode",
+      "breadth-first-search",
+      "topological-sort",
+      "medium"
+    ],
+    "canonicalPath": "/problems/path-sum-iv"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Path Sum IV?",
+      "answer": "The reference solutions aim for O(n) time and O(w) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Path Sum IV use?",
+      "answer": "It primarily maps to topological sort, within the broader topic of breadth first search."
+    },
+    {
+      "question": "Is Path Sum IV good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/path-sum-iv/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the topological sort approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Path Sum IV (#666) — Medium. Pattern: topological sort. Complexity: O(n) time / O(w) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Path Sum IV: show input structure (breadth first search), highlight the moving parts of the topological sort approach, and annotate each step with the maintained invariant and complexity."
+}

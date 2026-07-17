@@ -1,0 +1,161 @@
+{
+  "id": "1385",
+  "number": 1385,
+  "slug": "find-the-distance-value-between-two-arrays",
+  "title": "Find the Distance Value Between Two Arrays",
+  "difficulty": "Easy",
+  "topics": [
+    "binary-search"
+  ],
+  "patterns": [
+    "binary-search",
+    "two-pointers"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O((n + m) * logm)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/find-the-distance-value-between-two-arrays/",
+  "notes": [
+    "Binary Search",
+    "Two Pointers"
+  ],
+  "relatedSlugs": [
+    "find-longest-self-contained-substring",
+    "find-the-median-of-the-uniqueness-array",
+    "first-bad-version",
+    "guess-number-higher-or-lower",
+    "heaters",
+    "binary-search",
+    "find-smallest-letter-greater-than-target",
+    "peak-index-in-a-mountain-array"
+  ],
+  "prevSlug": "total-sales-amount-by-year",
+  "nextSlug": "cinema-seat-allocation",
+  "estimatedMinutes": 20,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Find the Distance Value Between Two Arrays?\n\n**Find the Distance Value Between Two Arrays** (LeetCode #1385) is a **Easy** problem that primarily trains **binary search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **binary search and two pointers**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt builds core muscle memory you will reuse on harder variants.\n Official solution notes mention: Binary Search, Two Pointers.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/find-the-distance-value-between-two-arrays/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Find the Distance Value Between Two Arrays\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **binary search and two pointers**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O((n + m) * logm)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O((n + m) * logm)** time and **O(1)** space.\n\n### Pattern focus: binary search and two pointers\n\nUse the pattern as a checklist:\n\n- **binary search** — confirm the invariant holds after each step\n- **two pointers** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O((n + m) * logm)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Find the Distance Value Between Two Arrays\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for binary search and two pointers — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **binary search and two pointers**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **binary search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Find the Distance Value Between Two Arrays** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **binary search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "find-the-distance-value-between-two-arrays.cpp",
+      "code": "// Time:  O((n + m) * logm)\n// Space: O(1)\n\nclass Solution {\npublic:\n    int findTheDistanceValue(vector<int>& arr1, vector<int>& arr2, int d) {\n        sort(begin(arr2), end(arr2));\n        int result = 0;\n        for (const auto& x : arr1) {\n            auto j = distance(cbegin(arr2), lower_bound(cbegin(arr2), cend(arr2), x));\n            const auto& left = (j - 1 >= 0) ? arr2[j - 1] : numeric_limits<int>::min();\n            const auto& right = (j < arr2.size()) ? arr2[j] : numeric_limits<int>::max();\n            result += left + d < x && x < right - d; \n        }\n        return result;\n    }\n};\n\n// Time:  O(nlogn + mlogm)\n// Space: O(1)\nclass Solution2 {\npublic:\n    int findTheDistanceValue(vector<int>& arr1, vector<int>& arr2, int d) {\n        sort(begin(arr1), end(arr1)), sort(begin(arr2), end(arr2));\n        int result = 0, i = 0;\n        for (int j = 0; i < arr1.size() && j < arr2.size();) {\n            if (arr1[i] - arr2[j] > d) {\n                ++j;\n                continue;\n            }\n            result += arr2[j] - arr1[i] > d;\n            ++i;\n        }\n        return result + arr1.size() - i;\n    }\n};\n",
+      "sourcePath": "C++/find-the-distance-value-between-two-arrays.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "find-the-distance-value-between-two-arrays.py",
+      "code": "# Time:  O((n + m) * logm)\n# Space: O(1)\n\nimport bisect\n\n\nclass Solution(object):\n    def findTheDistanceValue(self, arr1, arr2, d):\n        \"\"\"\n        :type arr1: List[int]\n        :type arr2: List[int]\n        :type d: int\n        :rtype: int\n        \"\"\"\n        arr2.sort()\n        result, i, j = 0, 0, 0\n        for x in arr1:\n            j = bisect.bisect_left(arr2, x)\n            left = arr2[j-1] if j-1 >= 0 else float(\"-inf\")\n            right = arr2[j] if j < len(arr2) else float(\"inf\")\n            result += left+d < x < right-d\n        return result\n\n\n# Time:  O(nlogn + mlogm)\n# Space: O(1)\nclass Solution2(object):\n    def findTheDistanceValue(self, arr1, arr2, d):\n        \"\"\"\n        :type arr1: List[int]\n        :type arr2: List[int]\n        :type d: int\n        :rtype: int\n        \"\"\"\n        arr1.sort(), arr2.sort()\n        result, i, j = 0, 0, 0\n        while i < len(arr1) and j < len(arr2):\n            if arr1[i]-arr2[j] > d:\n                j += 1\n                continue\n            result += arr2[j]-arr1[i] > d\n            i += 1\n        return result+len(arr1)-i\n",
+      "sourcePath": "Python/find-the-distance-value-between-two-arrays.py"
+    }
+  },
+  "seo": {
+    "title": "Find the Distance Value Between Two Arrays Solution — Easy | AlgoForge",
+    "description": "Original Easy explanation for Find the Distance Value Between Two Arrays (LeetCode #1385). Pattern: binary search. Time O((n + m) * logm), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Find the Distance Value Between Two Arrays",
+      "Find the Distance Value Between Two Arrays solution",
+      "Find the Distance Value Between Two Arrays leetcode",
+      "binary-search",
+      "binary-search",
+      "two-pointers",
+      "easy"
+    ],
+    "canonicalPath": "/problems/find-the-distance-value-between-two-arrays"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Find the Distance Value Between Two Arrays?",
+      "answer": "The reference solutions aim for O((n + m) * logm) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Find the Distance Value Between Two Arrays use?",
+      "answer": "It primarily maps to binary search and two pointers, within the broader topic of binary search."
+    },
+    {
+      "question": "Is Find the Distance Value Between Two Arrays good for interviews?",
+      "answer": "Yes — as a Easy problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/find-the-distance-value-between-two-arrays/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the binary search and two pointers approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Find the Distance Value Between Two Arrays (#1385) — Easy. Pattern: binary search and two pointers. Complexity: O((n + m) * logm) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Find the Distance Value Between Two Arrays: show input structure (binary search), highlight the moving parts of the binary search and two pointers approach, and annotate each step with the maintained invariant and complexity."
+}

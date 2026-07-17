@@ -1,0 +1,48 @@
+{
+  "slug": "easy-sliding-window-problems",
+  "path": "/explore/easy-sliding-window-problems",
+  "h1": "Easy Sliding Window Problems",
+  "intro": "13 easy problems that drill the Sliding Window pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "diet-plan-performance",
+    "minimum-difference-between-highest-and-lowest-of-k-scores",
+    "count-vowel-substrings-of-a-string",
+    "find-the-k-beauty-of-a-number",
+    "minimum-recolors-to-get-k-consecutive-black-blocks",
+    "maximum-length-substring-with-two-occurrences",
+    "alternating-groups-i",
+    "count-substrings-that-satisfy-k-constraint-i",
+    "final-array-state-after-k-multiplication-operations-i",
+    "find-x-sum-of-all-k-long-subarrays-i",
+    "minimum-positive-sum-subarray",
+    "trionic-array-ii",
+    "minimum-distance-between-three-equal-elements-i"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice easy Sliding Window problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/sliding-window",
+      "label": "Sliding Window pattern"
+    },
+    {
+      "href": "/difficulty/easy",
+      "label": "All Easy problems"
+    }
+  ],
+  "seo": {
+    "title": "Easy Sliding Window Problems | AlgoForge",
+    "description": "Practice easy Sliding Window LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "easy Sliding Window",
+      "Sliding Window problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/easy-sliding-window-problems"
+  },
+  "kind": "difficulty-pattern"
+}

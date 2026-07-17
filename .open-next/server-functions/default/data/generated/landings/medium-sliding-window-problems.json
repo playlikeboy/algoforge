@@ -1,0 +1,85 @@
+{
+  "slug": "medium-sliding-window-problems",
+  "path": "/explore/medium-sliding-window-problems",
+  "h1": "Medium Sliding Window Problems",
+  "intro": "81 medium problems that drill the Sliding Window pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "minimum-size-subarray-sum",
+    "longest-repeating-character-replacement",
+    "fruit-into-baskets",
+    "binary-subarrays-with-sum",
+    "max-consecutive-ones-iii",
+    "minimum-swaps-to-group-all-1s-together",
+    "swap-for-longest-repeated-character-substring",
+    "invalid-transactions",
+    "get-equal-substrings-within-budget",
+    "replace-the-substring-for-balanced-string",
+    "count-number-of-nice-subarrays",
+    "maximum-number-of-occurrences-of-a-substring",
+    "number-of-substrings-containing-all-three-characters",
+    "maximum-points-you-can-obtain-from-cards",
+    "maximum-number-of-vowels-in-a-substring-of-given-length",
+    "longest-subarray-of-1s-after-deleting-one-element",
+    "range-sum-of-sorted-subarray-sums",
+    "alert-using-same-key-card-three-or-more-times-in-a-one-hour-period",
+    "maximum-erasure-value",
+    "jump-game-vi",
+    "frequency-of-the-most-frequent-element",
+    "distinct-numbers-in-each-subarray",
+    "minimum-number-of-flips-to-make-the-binary-string-alternating",
+    "maximum-number-of-people-that-can-be-caught-in-tag",
+    "maximize-the-confusion-of-an-exam",
+    "number-of-equal-count-substrings",
+    "k-radius-subarray-averages",
+    "number-of-unique-flavors-after-sharing-k-candies",
+    "minimum-swaps-to-group-all-1s-together-ii",
+    "maximum-white-tiles-covered-by-a-carpet",
+    "longest-nice-subarray",
+    "take-k-of-each-character-from-left-and-right",
+    "count-the-number-of-good-subarrays",
+    "maximize-win-from-two-segments",
+    "count-substrings-without-repeating-character",
+    "continuous-subarrays",
+    "apply-operations-to-make-all-array-elements-equal-to-zero",
+    "maximum-beauty-of-an-array-after-applying-operation",
+    "count-complete-subarrays-in-an-array",
+    "find-the-longest-equal-subarray",
+    "maximum-sum-of-almost-unique-subarray",
+    "minimum-size-subarray-in-infinite-array",
+    "shortest-and-lexicographically-smallest-beautiful-string",
+    "high-access-employees",
+    "count-complete-substrings",
+    "length-of-longest-subarray-with-at-most-k-frequency",
+    "count-subarrays-where-max-element-appears-at-least-k-times",
+    "maximum-total-damage-with-spell-casting",
+    "alternating-groups-ii",
+    "count-the-number-of-substrings-with-dominant-ones"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice medium Sliding Window problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/sliding-window",
+      "label": "Sliding Window pattern"
+    },
+    {
+      "href": "/difficulty/medium",
+      "label": "All Medium problems"
+    }
+  ],
+  "seo": {
+    "title": "Medium Sliding Window Problems | AlgoForge",
+    "description": "Practice medium Sliding Window LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "medium Sliding Window",
+      "Sliding Window problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/medium-sliding-window-problems"
+  },
+  "kind": "difficulty-pattern"
+}

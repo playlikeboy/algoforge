@@ -1,0 +1,62 @@
+{
+  "slug": "amazon-hash-table-questions",
+  "path": "/explore/amazon-hash-table-questions",
+  "h1": "Best Hash Table Questions for Amazon",
+  "intro": "A curated set of 19 Hash Table problems frequently useful for Amazon interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "two-sum",
+    "longest-substring-without-repeating-characters",
+    "valid-sudoku",
+    "group-anagrams",
+    "minimum-window-substring",
+    "happy-number",
+    "count-primes",
+    "isomorphic-strings",
+    "contains-duplicate",
+    "contains-duplicate-ii",
+    "bulls-and-cows",
+    "longest-substring-with-at-most-k-distinct-characters",
+    "first-unique-character-in-a-string",
+    "find-all-anagrams-in-a-string",
+    "subarray-sum-equals-k",
+    "array-partition-i",
+    "find-duplicate-file-in-system",
+    "prison-cells-after-n-days",
+    "find-words-that-can-be-formed-by-characters"
+  ],
+  "faqs": [
+    {
+      "question": "How many Hash Table problems should I do for Amazon?",
+      "answer": "Quality over quantity: master patterns with 15 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Hash Table topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/amazon",
+      "label": "Amazon interview hub"
+    },
+    {
+      "href": "/topics/hash-table",
+      "label": "Hash Table problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Hash Table Questions for Amazon | AlgoForge",
+    "description": "Top Hash Table coding interview questions for Amazon. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Amazon Hash Table questions",
+      "Hash Table interview",
+      "Amazon leetcode"
+    ],
+    "canonicalPath": "/explore/amazon-hash-table-questions"
+  },
+  "kind": "company-topic"
+}

@@ -1,0 +1,164 @@
+{
+  "id": "3685",
+  "number": 3685,
+  "slug": "subsequence-sum-after-capping-elements",
+  "title": "Subsequence Sum After Capping Elements",
+  "difficulty": "Medium",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "sort",
+    "dynamic-programming",
+    "bit-manipulation"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogn + n * k)",
+  "spaceComplexity": "O(k)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/subsequence-sum-after-capping-elements/",
+  "notes": [
+    "Sort",
+    "DP",
+    "Bitmasks"
+  ],
+  "relatedSlugs": [
+    "maximum-length-of-a-concatenated-string-with-unique-characters",
+    "remove-all-ones-with-row-and-column-flips-ii",
+    "count-the-number-of-square-free-subsets",
+    "number-of-self-divisible-permutations",
+    "maximum-total-reward-using-operations-i",
+    "once-twice",
+    "maximum-product-of-two-integers-with-no-common-bits",
+    "minimum-time-to-kill-all-monsters"
+  ],
+  "prevSlug": "maximize-sum-of-at-most-k-distinct-elements",
+  "nextSlug": "number-of-stable-subsequences",
+  "estimatedMinutes": 45,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Subsequence Sum After Capping Elements?\n\n**Subsequence Sum After Capping Elements** (LeetCode #3685) is a **Medium** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sort, dynamic programming, and bit manipulation**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Sort, DP, Bitmasks.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/subsequence-sum-after-capping-elements/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Subsequence Sum After Capping Elements\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sort, dynamic programming, and bit manipulation**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogn + n * k)) and **space** (O(k)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogn + n * k)** time and **O(k)** space.\n\n### Pattern focus: sort, dynamic programming, and bit manipulation\n\nUse the pattern as a checklist:\n\n- **sort** — confirm the invariant holds after each step\n- **dynamic programming** — confirm the invariant holds after each step\n- **bit manipulation** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogn + n * k)** |\n| Space | **O(k)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Subsequence Sum After Capping Elements\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sort, dynamic programming, and bit manipulation — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sort, dynamic programming, and bit manipulation**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Subsequence Sum After Capping Elements** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "subsequence-sum-after-capping-elements.cpp",
+      "code": "// Time:  O(nlogn + n * k + klogn) = O(nlogn + n * k)\n// Space: O(k)\n\n// sort, dp, bitmasks\nclass Solution {\npublic:\n    vector<bool> subsequenceSumAfterCapping(vector<int>& nums, int k) {\n        static const int MAX_K = 4000;\n        sort(begin(nums), end(nums));\n        vector<bool> result(size(nums));\n        bitset<MAX_K + 1> dp;\n        dp[0] = 1;\n        for (int x = 1, i = 0; x <= size(nums); ++x){\n            while (i < size(nums) && nums[i] < x) {\n                dp |= (dp << nums[i]);\n                ++i;\n            }\n            for (int j = max(k % x, k - (static_cast<int>(size(nums)) - i) * x); j <= k; j += x)\n                if (dp[j]) {\n                    result[x - 1] = true;\n                }\n        }\n        return result;\n    }\n};\n\n// Time:  O(nlogn + n * k + klogn) = O(nlogn + n * k)\n// Space: O(k)\n// sort, dp\nclass Solution2 {\npublic:\n    vector<bool> subsequenceSumAfterCapping(vector<int>& nums, int k) {\n        static const int MAX_K = 4000;\n        sort(begin(nums), end(nums));\n        vector<bool> result(size(nums));\n        vector<bool> dp(k + 1);\n        dp[0] = true;\n        for (int x = 1, i = 0; x <= size(nums); ++x){\n            while (i < size(nums) && nums[i] < x) {\n                for (int j = k; j - nums[i] >= 0; --j) {\n                    dp[j] = dp[j] || dp[j - nums[i]];\n                }\n                ++i;\n            }\n            for (int j = max(k % x, k - (static_cast<int>(size(nums)) - i) * x); j <= k; j += x)\n                if (dp[j]) {\n                    result[x - 1] = true;\n                }\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/subsequence-sum-after-capping-elements.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "subsequence-sum-after-capping-elements.py",
+      "code": "# Time:  O(nlogn + n * k + klogn) = O(nlogn + n * k)\n# Space: O(k)\n\n# sort, dp, bitmasks\nclass Solution(object):\n    def subsequenceSumAfterCapping(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: List[bool]\n        \"\"\"\n        result = [False]*len(nums)\n        nums.sort()\n        mask = (1<<(k+1))-1\n        dp = 1\n        i = 0\n        for x in xrange(1, len(nums)+1):\n            while i < len(nums) and nums[i] < x:\n                dp |= (dp<<nums[i])&mask\n                i += 1\n            for j in xrange(max(k%x, k-(len(nums)-i)*x), k+1, x):\n                if dp&(1<<j):\n                    result[x-1] = True\n                    break\n        return result\n\n\n# Time:  O(nlogn + n * k + klogn) = O(nlogn + n * k)\n# Space: O(k)\n# sort, dp\nclass Solution2(object):\n    def subsequenceSumAfterCapping(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: List[bool]\n        \"\"\"\n        result = [False]*len(nums)\n        nums.sort()\n        dp = [False]*(k+1)\n        dp[0] = True\n        i = 0\n        for x in xrange(1, len(nums)+1):\n            while i < len(nums) and nums[i] < x:\n                for j in reversed(xrange(nums[i], k+1)):\n                    dp[j] = dp[j] or dp[j-nums[i]]\n                i += 1\n            for j in xrange(max(k%x, k-(len(nums)-i)*x), k+1, x):\n                if dp[j]:\n                    result[x-1] = True\n                    break\n        return result\n",
+      "sourcePath": "Python/subsequence-sum-after-capping-elements.py"
+    }
+  },
+  "seo": {
+    "title": "Subsequence Sum After Capping Elements Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Subsequence Sum After Capping Elements (LeetCode #3685). Pattern: sort. Time O(nlogn + n * k), space O(k). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Subsequence Sum After Capping Elements",
+      "Subsequence Sum After Capping Elements solution",
+      "Subsequence Sum After Capping Elements leetcode",
+      "dynamic-programming",
+      "sort",
+      "dynamic-programming",
+      "bit-manipulation",
+      "medium"
+    ],
+    "canonicalPath": "/problems/subsequence-sum-after-capping-elements"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Subsequence Sum After Capping Elements?",
+      "answer": "The reference solutions aim for O(nlogn + n * k) time and O(k) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Subsequence Sum After Capping Elements use?",
+      "answer": "It primarily maps to sort, dynamic programming, and bit manipulation, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Subsequence Sum After Capping Elements good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/subsequence-sum-after-capping-elements/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sort, dynamic programming, and bit manipulation approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Subsequence Sum After Capping Elements (#3685) — Medium. Pattern: sort, dynamic programming, and bit manipulation. Complexity: O(nlogn + n * k) time / O(k) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Subsequence Sum After Capping Elements: show input structure (dynamic programming), highlight the moving parts of the sort, dynamic programming, and bit manipulation approach, and annotate each step with the maintained invariant and complexity."
+}

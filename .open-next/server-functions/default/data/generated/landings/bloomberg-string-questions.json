@@ -1,0 +1,46 @@
+{
+  "slug": "bloomberg-string-questions",
+  "path": "/explore/bloomberg-string-questions",
+  "h1": "Best String Questions for Bloomberg",
+  "intro": "A curated set of 3 String problems frequently useful for Bloomberg interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "string-to-integer-atoi",
+    "reverse-words-in-a-string",
+    "valid-anagram"
+  ],
+  "faqs": [
+    {
+      "question": "How many String problems should I do for Bloomberg?",
+      "answer": "Quality over quantity: master patterns with 3 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the String topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/bloomberg",
+      "label": "Bloomberg interview hub"
+    },
+    {
+      "href": "/topics/string",
+      "label": "String problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best String Questions for Bloomberg | AlgoForge",
+    "description": "Top String coding interview questions for Bloomberg. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Bloomberg String questions",
+      "String interview",
+      "Bloomberg leetcode"
+    ],
+    "canonicalPath": "/explore/bloomberg-string-questions"
+  },
+  "kind": "company-topic"
+}

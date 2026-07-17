@@ -1,0 +1,53 @@
+{
+  "slug": "medium-graph-algorithms-problems",
+  "path": "/explore/medium-graph-algorithms-problems",
+  "h1": "Medium Graph Algorithms Problems",
+  "intro": "18 medium problems that drill the Graph Algorithms pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "reconstruct-itinerary",
+    "minimum-number-of-vertices-to-reach-all-nodes",
+    "restore-the-array-from-adjacent-pairs",
+    "number-of-restricted-paths-from-first-to-last-node",
+    "find-center-of-star-graph",
+    "maximum-number-of-accepted-invitations",
+    "find-if-path-exists-in-graph",
+    "number-of-ways-to-arrive-at-destination",
+    "paths-in-maze-that-lead-to-same-room",
+    "minimum-cost-to-reach-city-with-discounts",
+    "valid-arrangement-of-pairs",
+    "minimum-weighted-subgraph-with-the-required-paths",
+    "distance-to-a-cycle-in-undirected-graph",
+    "maximum-score-of-a-node-sequence",
+    "modify-graph-edge-weights",
+    "find-the-closest-marked-node",
+    "minimum-time-to-visit-disappearing-nodes",
+    "find-edges-in-shortest-paths"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice medium Graph Algorithms problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/graph-algorithms",
+      "label": "Graph Algorithms pattern"
+    },
+    {
+      "href": "/difficulty/medium",
+      "label": "All Medium problems"
+    }
+  ],
+  "seo": {
+    "title": "Medium Graph Algorithms Problems | AlgoForge",
+    "description": "Practice medium Graph Algorithms LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "medium Graph Algorithms",
+      "Graph Algorithms problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/medium-graph-algorithms-problems"
+  },
+  "kind": "difficulty-pattern"
+}

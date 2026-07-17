@@ -1,0 +1,42 @@
+{
+  "slug": "easy-trie-problems",
+  "path": "/explore/easy-trie-problems",
+  "h1": "Easy Trie Problems",
+  "intro": "7 easy problems that drill the Trie pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "longest-word-in-dictionary",
+    "index-pairs-of-a-string",
+    "string-matching-in-an-array",
+    "number-of-strings-that-appear-as-substrings-in-word",
+    "maximum-strong-pair-xor-i",
+    "count-prefix-and-suffix-pairs-i",
+    "phone-number-prefix"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice easy Trie problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/trie",
+      "label": "Trie pattern"
+    },
+    {
+      "href": "/difficulty/easy",
+      "label": "All Easy problems"
+    }
+  ],
+  "seo": {
+    "title": "Easy Trie Problems | AlgoForge",
+    "description": "Practice easy Trie LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "easy Trie",
+      "Trie problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/easy-trie-problems"
+  },
+  "kind": "difficulty-pattern"
+}

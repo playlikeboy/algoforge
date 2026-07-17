@@ -1,0 +1,49 @@
+{
+  "slug": "medium-tree-problems",
+  "path": "/explore/medium-tree-problems",
+  "h1": "Medium Tree Problems",
+  "intro": "14 medium problems that drill the Tree pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "most-frequent-subtree-sum",
+    "find-bottom-left-tree-value",
+    "logical-or-of-two-binary-grids-represented-as-quad-trees",
+    "n-ary-tree-postorder-traversal",
+    "insert-into-a-binary-search-tree",
+    "validate-binary-tree-nodes",
+    "count-nodes-equal-to-average-of-subtree",
+    "number-of-nodes-with-value-one",
+    "most-profitable-path-in-a-tree",
+    "minimum-fuel-cost-to-report-to-the-capital",
+    "make-costs-of-paths-equal-in-a-binary-tree",
+    "height-of-special-binary-tree",
+    "number-of-ways-to-assign-edge-weights-i",
+    "number-of-ways-to-assign-edge-weights-ii"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice medium Tree problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/tree",
+      "label": "Tree pattern"
+    },
+    {
+      "href": "/difficulty/medium",
+      "label": "All Medium problems"
+    }
+  ],
+  "seo": {
+    "title": "Medium Tree Problems | AlgoForge",
+    "description": "Practice medium Tree LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "medium Tree",
+      "Tree problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/medium-tree-problems"
+  },
+  "kind": "difficulty-pattern"
+}

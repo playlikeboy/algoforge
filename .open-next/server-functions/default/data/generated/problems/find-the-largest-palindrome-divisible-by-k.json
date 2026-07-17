@@ -1,0 +1,160 @@
+{
+  "id": "3260",
+  "number": 3260,
+  "slug": "find-the-largest-palindrome-divisible-by-k",
+  "title": "Find the Largest Palindrome Divisible by K",
+  "difficulty": "Hard",
+  "topics": [
+    "constructive-algorithms"
+  ],
+  "patterns": [
+    "constructive-algorithms"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/find-the-largest-palindrome-divisible-by-k/",
+  "notes": [
+    "String",
+    "Constructive Algorithms",
+    "Math"
+  ],
+  "relatedSlugs": [
+    "shortest-impossible-sequence-of-rolls",
+    "color-the-triangle-red",
+    "count-houses-in-a-circular-street-ii",
+    "minimum-cost-to-equalize-array",
+    "create-grid-with-exactly-k-paths-ii",
+    "maximize-the-topmost-element-after-k-moves",
+    "minimum-amount-of-time-to-fill-cups",
+    "maximum-number-of-groups-entering-a-competition"
+  ],
+  "prevSlug": "maximum-energy-boost-from-two-drinks",
+  "nextSlug": "count-substrings-that-satisfy-k-constraint-ii",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Find the Largest Palindrome Divisible by K?\n\n**Find the Largest Palindrome Divisible by K** (LeetCode #3260) is a **Hard** problem that primarily trains **constructive algorithms**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **constructive algorithms**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: String, Constructive Algorithms, Math.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/find-the-largest-palindrome-divisible-by-k/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Find the Largest Palindrome Divisible by K\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **constructive algorithms**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(1)** space.\n\n### Pattern focus: constructive algorithms\n\nUse the pattern as a checklist:\n\n- **constructive algorithms** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Find the Largest Palindrome Divisible by K\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for constructive algorithms — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **constructive algorithms**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **constructive algorithms**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Find the Largest Palindrome Divisible by K** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **constructive algorithms**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "find-the-largest-palindrome-divisible-by-k.cpp",
+      "code": "// Time:  O(n)\n// Space: O(1)\n\n// constructive algorithms, math\nclass Solution {\npublic:\n    string largestPalindrome(int n, int k) {\n        const auto& powmod = [](uint32_t a, uint32_t b, uint32_t mod) {\n            a %= mod;\n            uint64_t result = 1;\n            while (b) {\n                if (b & 1) {\n                    result = result * a % mod;\n                }\n                a = uint64_t(a) * a % mod;\n                b >>= 1;\n            }\n            return result;\n        };\n\n        const auto& inv = [&](int x, int p) {\n            return powmod(x, p - 2, p);\n        };\n\n        const auto& f = [&](int l) {\n            static const int p = 7;\n            string result(l, '9');\n            if (l == 0) {\n                return result;\n            }\n            int curr = 0;\n            for (const auto& x : result) {\n                curr = (curr * 10 + (x - '0')) % p;\n            }\n            // l%2 == 0: (curr+(i-9)*11*pow(10, l//2-1, p))%p = 0\n            // l%2 == 1: (curr+(i-9)*pow(10, l//2, p))%p = 0\n            int i = 9 - (curr * inv(l % 2 == 0 ? 11 : 1, p) * inv(powmod(10, l / 2 - (l % 2 == 0 ? 1 : 0), p), p)) % p;\n            if (i <= 2) {\n                i += p;\n            }\n            result[l / 2] = result[l / 2 - (l % 2 == 0 ? 1 : 0)] = '0' + i;\n            return result;\n        };\n\n        if (k == 1 || k == 3 || k == 9) {\n            return string(n, '9');\n        }\n        if (k == 2 || k == 4 || k == 8) {\n            k = min(k, 6);\n            if (n <= k) {\n                return string(n, '8');\n            }\n            const int l = k / 2;\n            return string(l, '8') + string(n - k, '9') + string(l, '8');\n        }\n        if (k == 5) {\n            if (n <= 2) {\n                return string(n, '5');\n            }\n            return string(1, '5') + string(n - 2, '9') + string(1, '5');\n        }\n        if (k == 6) {\n            if (n <= 2) {\n                return string(n, '6');\n            }\n            if (n % 2) {\n                const int l = n / 2 - 1;\n                return string(1, '8') + string(l, '9') + string(1, '8') + string(l, '9') + string(1, '8');\n            }\n            const int l = n / 2 - 2;\n            return string(1, '8') + string(l, '9') + string(2, '7') + string(l, '9') + string(1, '8');\n        }\n        const int l = n / 12, r = n % 12;\n        return string(l * 6, '9') + f(r) + string(l * 6, '9');  // 999999%7 = 0\n    }\n};\n",
+      "sourcePath": "C++/find-the-largest-palindrome-divisible-by-k.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "find-the-largest-palindrome-divisible-by-k.py",
+      "code": "# Time:  O(n)\n# Space: O(1)\n\n# constructive algorithms, math\nclass Solution(object):\n    def largestPalindrome(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: str\n        \"\"\"\n        def inv(x, p):\n            return pow(x, p-2, p)\n\n        def f(l):\n            p = 7\n            result = ['9']*l\n            if l:                \n                curr = reduce(lambda accu, x: (accu*10+(ord(x)-ord('0')))%p, result, 0)\n                # l%2 == 0: (curr+(i-9)*11*pow(10, l//2-1, p))%p = 0\n                # l%2 == 1: (curr+(i-9)*pow(10, l//2, p))%p = 0\n                i = 9-(curr*inv(11 if l%2 == 0 else 1, p)*inv(pow(10, l//2-int(l%2 == 0), p), p))%p\n                if i <= 2:\n                    i += p\n                result[l//2] = result[l//2-int(l%2 == 0)] = str(i)\n            return \"\".join(result)\n\n        if k in (1, 3, 9):\n            return '9'*n\n        if k in (2, 4, 8):\n            k = min(k, 6)\n            if n <= k:\n                return '8'*n\n            l = k//2\n            return '8'*l+'9'*(n-k)+'8'*l\n        if k == 5:\n            if n <= 2:\n                return '5'*n\n            return '5'+'9'*(n-2)+'5'\n        if k == 6:\n            if n <= 2:\n                return '6'*n\n            if n%2:\n                l = n//2-1\n                return '8'+'9'*l+'8'+'9'*l+'8'\n            l = n//2-2\n            return '8'+'9'*l+\"77\"+'9'*l+'8'\n        l, r = divmod(n, 12)\n        return \"999999\"*l+f(r)+\"999999\"*l  # 999999%7 = 0\n",
+      "sourcePath": "Python/find-the-largest-palindrome-divisible-by-k.py"
+    }
+  },
+  "seo": {
+    "title": "Find the Largest Palindrome Divisible by K Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Find the Largest Palindrome Divisible by K (LeetCode #3260). Pattern: constructive algorithms. Time O(n), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Find the Largest Palindrome Divisible by K",
+      "Find the Largest Palindrome Divisible by K solution",
+      "Find the Largest Palindrome Divisible by K leetcode",
+      "constructive-algorithms",
+      "constructive-algorithms",
+      "hard"
+    ],
+    "canonicalPath": "/problems/find-the-largest-palindrome-divisible-by-k"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Find the Largest Palindrome Divisible by K?",
+      "answer": "The reference solutions aim for O(n) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Find the Largest Palindrome Divisible by K use?",
+      "answer": "It primarily maps to constructive algorithms, within the broader topic of constructive algorithms."
+    },
+    {
+      "question": "Is Find the Largest Palindrome Divisible by K good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/find-the-largest-palindrome-divisible-by-k/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the constructive algorithms approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Find the Largest Palindrome Divisible by K (#3260) — Hard. Pattern: constructive algorithms. Complexity: O(n) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Find the Largest Palindrome Divisible by K: show input structure (constructive algorithms), highlight the moving parts of the constructive algorithms approach, and annotate each step with the maintained invariant and complexity."
+}

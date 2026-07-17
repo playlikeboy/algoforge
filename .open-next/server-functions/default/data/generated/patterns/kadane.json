@@ -1,0 +1,33 @@
+{
+  "type": "pattern",
+  "slug": "kadane",
+  "name": "Kadane's Algorithm",
+  "description": "Maximum subarray via running local optima.",
+  "problemCount": 9,
+  "problemSlugs": [
+    "maximum-alternating-subarray-sum",
+    "substring-with-largest-variance",
+    "maximum-score-of-spliced-array",
+    "find-the-substring-with-maximum-cost",
+    "maximum-strength-of-k-disjoint-subarrays",
+    "maximize-subarray-sum-after-removing-all-occurrences-of-one-element",
+    "maximum-path-intersection-sum-in-a-grid",
+    "maximum-subarray-sum-after-multiplier",
+    "divisible-game"
+  ],
+  "relatedTopics": [
+    "array",
+    "dynamic-programming"
+  ],
+  "seo": {
+    "title": "Kadane's Algorithm Pattern — Problems & Guide | AlgoForge",
+    "description": "Learn the Kadane's Algorithm pattern with 9 practice problems, interview tips, and visual intuition.",
+    "keywords": [
+      "Kadane's Algorithm",
+      "Kadane's Algorithm pattern",
+      "Kadane's Algorithm leetcode",
+      "coding patterns"
+    ],
+    "canonicalPath": "/patterns/kadane"
+  }
+}

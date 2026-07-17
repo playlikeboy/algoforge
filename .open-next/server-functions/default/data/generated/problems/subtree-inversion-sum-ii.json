@@ -1,0 +1,161 @@
+{
+  "id": "3949",
+  "number": 3949,
+  "slug": "subtree-inversion-sum-ii",
+  "title": "Subtree Inversion Sum II",
+  "difficulty": "Hard",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dfs-backtracking",
+    "tree-dp"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n * k)",
+  "spaceComplexity": "O(n + h * k)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/subtree-inversion-sum-ii/",
+  "notes": [
+    "DFS",
+    "Tree DP"
+  ],
+  "relatedSlugs": [
+    "difference-between-maximum-and-minimum-price-sum",
+    "minimize-the-total-price-of-the-trips",
+    "minimum-edge-reversals-so-every-node-is-reachable",
+    "maximum-points-after-collecting-coins-from-all-nodes",
+    "subtree-inversion-sum",
+    "maximum-profit-from-trading-stocks-with-discounts",
+    "finish-time-of-tasks-ii",
+    "maximum-score-after-applying-operations-on-a-tree"
+  ],
+  "prevSlug": "lexicographically-maximum-mex-array",
+  "nextSlug": "exactly-one-consecutive-set-bits-pair",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Subtree Inversion Sum II?\n\n**Subtree Inversion Sum II** (LeetCode #3949) is a **Hard** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dfs backtracking and tree dp**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: DFS, Tree DP.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/subtree-inversion-sum-ii/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Subtree Inversion Sum II\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dfs backtracking and tree dp**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n * k)) and **space** (O(n + h * k)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n * k)** time and **O(n + h * k)** space.\n\n### Pattern focus: dfs backtracking and tree dp\n\nUse the pattern as a checklist:\n\n- **dfs backtracking** — confirm the invariant holds after each step\n- **tree dp** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n * k)** |\n| Space | **O(n + h * k)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Subtree Inversion Sum II\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dfs backtracking and tree dp — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dfs backtracking and tree dp**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Subtree Inversion Sum II** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "subtree-inversion-sum-ii.cpp",
+      "code": "// Time:  O(n * k)\n// Space: O(n + h * k)\n\n// iterative dfs, tree dp\nclass Solution {\npublic:\n    int subtreeInversionSum(vector<vector<int>>& edges, vector<int>& nums, int k) {\n        vector<vector<int>> adj(size(nums));\n        const auto& iter_dfs = [&]() {\n            using RET = vector<vector<int64_t>>;\n            RET result{};\n            vector<tuple<int, int, int, int, shared_ptr<RET>, RET *>> stk = {{1, 0, -1, -1, nullptr, &result}};\n            while (!empty(stk)) {\n                const auto [step, u, p, i, new_ret, ret] = stk.back(); stk.pop_back();\n                if (step == 1) {\n                    ret->assign(2, vector<int64_t>(k, nums[u]));\n                    stk.emplace_back(4, -1, -1, -1, nullptr, ret);\n                    stk.emplace_back(2, u, p, 0, nullptr, ret);\n                } else if (step == 2) {\n                    if (i == size(adj[u])) {\n                        continue;\n                    }\n                    const auto& v = adj[u][i];\n                    stk.emplace_back(2, u, p, i + 1, nullptr, ret);\n                    if (v == p) {\n                        continue;\n                    }\n                    const auto& new_ret = make_shared<RET>();\n                    stk.emplace_back(3, -1, -1, -1, new_ret, ret);\n                    stk.emplace_back(1, v, u, -1, nullptr, new_ret.get());\n                } else if (step == 3) {\n                    auto& new_dp1 = (*new_ret)[0], &new_dp2 = (*new_ret)[1];\n                    auto& dp1 = (*ret)[0], &dp2 = (*ret)[1];\n                    for (int i = 0; i < k / 2; ++i) {\n                        dp1[i] = max(dp1[i] + new_dp1[(k - 2) - i], dp1[(k - 2) - i] + new_dp1[i]);\n                        dp2[i] = min(dp2[i] + new_dp2[(k - 2) - i], dp2[(k - 2) - i] + new_dp2[i]);\n                    }\n                    for (int i = k / 2; i < k; ++i) {\n                        dp1[i] += new_dp1[i];\n                        dp2[i] += new_dp2[i];\n                    }\n                    for (int i = k - 2; i >= 0; --i) {\n                        dp1[i] = max(dp1[i], dp1[i + 1]);\n                        dp2[i] = min(dp2[i], dp2[i + 1]);\n                    }\n                } else if (step == 4) {\n                    auto& dp1 = (*ret)[0], &dp2 = (*ret)[1];\n                    const auto mx = max(dp1[0], -dp2[k - 1]);\n                    const auto mn = min(dp2[0], -dp1[k - 1]);\n                    dp1.insert(begin(dp1), mx); dp1.pop_back();\n                    dp2.insert(begin(dp2), mn); dp2.pop_back();\n                }\n            }\n            return result[0][0];\n        };\n        \n        for (auto& e : edges) {\n            adj[e[0]].emplace_back(e[1]);\n            adj[e[1]].emplace_back(e[0]);\n        }\n        return iter_dfs();\n    }\n};\n\n// Time:  O(n * k)\n// Space: O(n + h * k)\n// dfs, tree dp\nclass Solution2 {\npublic:\n    int subtreeInversionSum(vector<vector<int>>& edges, vector<int>& nums, int k) {\n        vector<vector<int>> adj(size(nums));\n        const auto dfs = [&](this auto&& dfs, int u, int p) -> pair<vector<int64_t>, vector<int64_t>> {\n            vector<int64_t> dp1(k, nums[u]), dp2(k, nums[u]);\n            for (const auto& v : adj[u]) {\n                if (v == p) {\n                    continue;\n                }\n                const auto& [new_dp1, new_dp2] = dfs(v, u);\n                for (int i = 0; i < k / 2; ++i) {\n                    dp1[i] = max(dp1[i] + new_dp1[(k - 2) - i], dp1[(k - 2) - i] + new_dp1[i]);\n                    dp2[i] = min(dp2[i] + new_dp2[(k - 2) - i], dp2[(k - 2) - i] + new_dp2[i]);\n                }\n                for (int i = k / 2; i < k; ++i) {\n                    dp1[i] += new_dp1[i];\n                    dp2[i] += new_dp2[i];\n                }\n                for (int i = k - 2; i >= 0; --i) {\n                    dp1[i] = max(dp1[i], dp1[i + 1]);\n                    dp2[i] = min(dp2[i], dp2[i + 1]);\n                }\n            }\n            const auto mx = max(dp1[0], -dp2[k - 1]);\n            const auto mn = min(dp2[0], -dp1[k - 1]);\n            dp1.insert(begin(dp1), mx); dp1.pop_back();\n            dp2.insert(begin(dp2), mn); dp2.pop_back();\n            return pair(dp1, dp2);\n        };\n        \n        for (auto& e : edges) {\n            adj[e[0]].emplace_back(e[1]);\n            adj[e[1]].emplace_back(e[0]);\n        }\n        const auto& [dp1, _] = dfs(0, -1);\n        return dp1[0];\n    }\n};\n",
+      "sourcePath": "C++/subtree-inversion-sum-ii.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "subtree-inversion-sum-ii.py",
+      "code": "# Time:  O(n * k)\n# Space: O(n + h * k)\n\n# iterative dfs, tree dp\nclass Solution(object):\n    def subtreeInversionSum(self, edges, nums, k):\n        \"\"\"\n        :type edges: List[List[int]]\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        def iter_dfs():\n            result = []\n            stk = [(1, (0, -1, result))]\n            while stk:\n                step, args = stk.pop()\n                if step == 1:\n                    u, p, ret = args\n                    ret[:] = [[nums[u]]*k, [nums[u]]*k]\n                    stk.append((4, (u, p, ret)))\n                    stk.append((2, (u, p, 0, ret)))\n                elif step == 2:\n                    u, p, i, ret = args\n                    if i == len(adj[u]):\n                        continue\n                    v = adj[u][i]\n                    stk.append((2, (u, p, i+1, ret)))\n                    if v == p:\n                        continue\n                    new_ret = []\n                    stk.append((3, (new_ret, ret)))\n                    stk.append((1, (v, u, new_ret)))\n                elif step == 3:\n                    new_ret, ret = args\n                    new_dp1, new_dp2 = new_ret\n                    dp1, dp2 = ret\n                    for i in xrange(k//2):\n                        dp1[i] = max(dp1[i]+new_dp1[(k-2)-i], dp1[(k-2)-i]+new_dp1[i])\n                        dp2[i] = min(dp2[i]+new_dp2[(k-2)-i], dp2[(k-2)-i]+new_dp2[i])\n                    for i in xrange(k//2, k):\n                        dp1[i] += new_dp1[i]\n                        dp2[i] += new_dp2[i]\n                    for i in reversed(xrange(k-1)):\n                        dp1[i] = max(dp1[i], dp1[i+1])\n                        dp2[i] = min(dp2[i], dp2[i+1])\n                elif step == 4:\n                    u, p, ret = args\n                    dp1, dp2 = ret\n                    dp1.insert(0, max(dp1[0], -dp2[-1]))\n                    dp2.insert(0, min(dp2[0], -dp1[-1]))\n                    dp1.pop()\n                    dp2.pop()\n            return result[0][0]\n\n        adj = [[] for _ in xrange(len(nums))]\n        for u, v in edges:\n            adj[u].append(v)\n            adj[v].append(u)\n        return iter_dfs()\n\n\n# Time:  O(n * k)\n# Space: O(n + h * k)\n# dfs, tree dp\nclass Solution2(object):\n    def subtreeInversionSum(self, edges, nums, k):\n        \"\"\"\n        :type edges: List[List[int]]\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        def dfs(u, p):\n            dp1, dp2 = [nums[u]]*k, [nums[u]]*k\n            for v in adj[u]:\n                if v == p:\n                    continue\n                new_dp1, new_dp2 = dfs(v, u)\n                for i in xrange(k//2):\n                    dp1[i] = max(dp1[i]+new_dp1[(k-2)-i], dp1[(k-2)-i]+new_dp1[i])\n                    dp2[i] = min(dp2[i]+new_dp2[(k-2)-i], dp2[(k-2)-i]+new_dp2[i])\n                for i in xrange(k//2, k):\n                    dp1[i] += new_dp1[i]\n                    dp2[i] += new_dp2[i]\n                for i in reversed(xrange(k-1)):\n                    dp1[i] = max(dp1[i], dp1[i+1])\n                    dp2[i] = min(dp2[i], dp2[i+1])\n            dp1.insert(0, max(dp1[0], -dp2[-1]))\n            dp2.insert(0, min(dp2[0], -dp1[-1]))\n            dp1.pop()\n            dp2.pop()\n            return dp1, dp2\n\n        adj = [[] for _ in xrange(len(nums))]\n        for u, v in edges:\n            adj[u].append(v)\n            adj[v].append(u)\n        dp1, _ = dfs(0, -1)\n        return dp1[0]\n",
+      "sourcePath": "Python/subtree-inversion-sum-ii.py"
+    }
+  },
+  "seo": {
+    "title": "Subtree Inversion Sum II Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Subtree Inversion Sum II (LeetCode #3949). Pattern: dfs backtracking. Time O(n * k), space O(n + h * k). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Subtree Inversion Sum II",
+      "Subtree Inversion Sum II solution",
+      "Subtree Inversion Sum II leetcode",
+      "dynamic-programming",
+      "dfs-backtracking",
+      "tree-dp",
+      "hard"
+    ],
+    "canonicalPath": "/problems/subtree-inversion-sum-ii"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Subtree Inversion Sum II?",
+      "answer": "The reference solutions aim for O(n * k) time and O(n + h * k) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Subtree Inversion Sum II use?",
+      "answer": "It primarily maps to dfs backtracking and tree dp, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Subtree Inversion Sum II good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/subtree-inversion-sum-ii/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dfs backtracking and tree dp approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Subtree Inversion Sum II (#3949) — Hard. Pattern: dfs backtracking and tree dp. Complexity: O(n * k) time / O(n + h * k) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Subtree Inversion Sum II: show input structure (dynamic programming), highlight the moving parts of the dfs backtracking and tree dp approach, and annotate each step with the maintained invariant and complexity."
+}

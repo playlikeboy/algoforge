@@ -1,0 +1,40 @@
+{
+  "slug": "easy-sorted-list-problems",
+  "path": "/explore/easy-sorted-list-problems",
+  "h1": "Easy Sorted List Problems",
+  "intro": "5 easy problems that drill the Sorted List pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "subarrays-distinct-element-sum-of-squares-i",
+    "subarrays-distinct-element-sum-of-squares-ii",
+    "find-x-sum-of-all-k-long-subarrays-i",
+    "minimum-positive-sum-subarray",
+    "minimum-pair-removal-to-sort-array-i"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice easy Sorted List problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/sorted-list",
+      "label": "Sorted List pattern"
+    },
+    {
+      "href": "/difficulty/easy",
+      "label": "All Easy problems"
+    }
+  ],
+  "seo": {
+    "title": "Easy Sorted List Problems | AlgoForge",
+    "description": "Practice easy Sorted List LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "easy Sorted List",
+      "Sorted List problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/easy-sorted-list-problems"
+  },
+  "kind": "difficulty-pattern"
+}
