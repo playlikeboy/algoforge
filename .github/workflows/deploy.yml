@@ -1,0 +1,25 @@
+name: Build
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - name: Fetch and generate data
+        run: npm run pipeline
+      - name: Build Next.js
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SITE_URL: https://algoforge.dev
+      # Deploy step: wire Cloudflare Pages token when ready
+      # - run: npx wrangler pages deploy

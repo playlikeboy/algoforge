@@ -1,0 +1,158 @@
+{
+  "id": "1028",
+  "number": 1028,
+  "slug": "recover-a-tree-from-preorder-traversal",
+  "title": "Recover a Tree From Preorder Traversal",
+  "difficulty": "Hard",
+  "topics": [
+    "tree"
+  ],
+  "patterns": [
+    "dfs-backtracking"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(h)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/",
+  "notes": [
+    "DFS"
+  ],
+  "relatedSlugs": [
+    "serialize-and-deserialize-binary-tree",
+    "distinct-gate-paths-to-lca",
+    "find-duplicate-subtrees",
+    "maximum-width-of-binary-tree",
+    "binary-tree-pruning",
+    "smallest-subtree-with-all-the-deepest-nodes",
+    "increasing-order-search-tree",
+    "range-sum-of-bst"
+  ],
+  "prevSlug": "longest-arithmetic-sequence",
+  "nextSlug": "two-city-scheduling",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Recover a Tree From Preorder Traversal?\n\n**Recover a Tree From Preorder Traversal** (LeetCode #1028) is a **Hard** problem that primarily trains **tree**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dfs backtracking**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: DFS.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Recover a Tree From Preorder Traversal\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dfs backtracking**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(h)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(h)** space.\n\n### Pattern focus: dfs backtracking\n\nUse the pattern as a checklist:\n\n- **dfs backtracking** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(h)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Recover a Tree From Preorder Traversal\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dfs backtracking — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dfs backtracking**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **tree**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Recover a Tree From Preorder Traversal** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **tree**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "recover-a-tree-from-preorder-traversal.cpp",
+      "code": "// Time:  O(n)\n// Space: O(h)\n\n/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n * };\n */\n\n// iterative stack solution\nclass Solution {\npublic:\n    TreeNode* recoverFromPreorder(string S) {\n        int i = 0;\n        vector<TreeNode *> stack;\n        while (i < S.length()) {\n            int j = S.find_first_not_of(\"-\", i);\n            int level = j - i;\n            i = j;\n            while (stack.size() > level) {\n                stack.pop_back();\n            }\n            j = S.find_first_of(\"-\", i);\n            auto node = new TreeNode(stoi(S.substr(i, j - i)));\n            i = j;\n            if (!stack.empty()) {\n                if (!stack.back()->left) {\n                    stack.back()->left = node;\n                } else{\n                    stack.back()->right = node;\n                }\n            }\n            stack.emplace_back(node);\n        }\n        return stack.front();\n    }\n};\n\n// Time:  O(n)\n// Space: O(h)\n// recursive solution\nclass Solution2 {\npublic:\n    TreeNode* recoverFromPreorder(string S) {\n        int i = 0;\n        return recoverFromPreorderHelper(S, 0, &i);\n    }\n\nprivate:\n    TreeNode* recoverFromPreorderHelper(const string& S, int level, int *i) {\n        int j = S.find_first_not_of(\"-\", *i);\n        if (level != j - *i) {\n            return nullptr;\n        }\n        *i = j;\n        j = S.find_first_of(\"-\", *i);\n        auto node = new TreeNode(stoi(S.substr(*i, j - *i)));\n        *i = j;\n        node->left = recoverFromPreorderHelper(S, level + 1, i);\n        node->right = recoverFromPreorderHelper(S, level + 1, i);\n        return node;\n    }\n};\n",
+      "sourcePath": "C++/recover-a-tree-from-preorder-traversal.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "recover-a-tree-from-preorder-traversal.py",
+      "code": "# Time:  O(n)\n# Space: O(h)\n\n# Definition for a binary tree node.\nclass TreeNode(object):\n    def __init__(self, x):\n        self.val = x\n        self.left = None\n        self.right = None\n\n\n# iterative stack solution\nclass Solution(object):\n    def recoverFromPreorder(self, S):\n        \"\"\"\n        :type S: str\n        :rtype: TreeNode\n        \"\"\"\n        i = 0\n        stack = []\n        while i < len(S):\n            level = 0\n            while i < len(S) and S[i] == '-':\n                level += 1\n                i += 1\n            while len(stack) > level:\n                stack.pop()\n            val = []\n            while i < len(S) and S[i] != '-':\n                val.append(S[i])\n                i += 1\n            node = TreeNode(int(\"\".join(val)))\n            if stack:\n                if stack[-1].left is None:\n                    stack[-1].left = node\n                else:\n                    stack[-1].right = node\n            stack.append(node)\n        return stack[0]\n\n\n# Time:  O(n)\n# Space: O(h)\n# recursive solution\nclass Solution2(object):\n    def recoverFromPreorder(self, S):\n        \"\"\"\n        :type S: str\n        :rtype: TreeNode\n        \"\"\"\n        def recoverFromPreorderHelper(S, level, i):\n            j = i[0]\n            while j < len(S) and S[j] == '-':\n                j += 1 \n            if level != j - i[0]:\n                return None\n            i[0] = j\n            while j < len(S) and S[j] != '-':\n                j += 1\n            node = TreeNode(int(S[i[0]:j]))\n            i[0] = j\n            node.left = recoverFromPreorderHelper(S, level+1, i)\n            node.right = recoverFromPreorderHelper(S, level+1, i)\n            return node\n\n        return recoverFromPreorderHelper(S, 0, [0])\n",
+      "sourcePath": "Python/recover-a-tree-from-preorder-traversal.py"
+    }
+  },
+  "seo": {
+    "title": "Recover a Tree From Preorder Traversal Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Recover a Tree From Preorder Traversal (LeetCode #1028). Pattern: dfs backtracking. Time O(n), space O(h). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Recover a Tree From Preorder Traversal",
+      "Recover a Tree From Preorder Traversal solution",
+      "Recover a Tree From Preorder Traversal leetcode",
+      "tree",
+      "dfs-backtracking",
+      "hard"
+    ],
+    "canonicalPath": "/problems/recover-a-tree-from-preorder-traversal"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Recover a Tree From Preorder Traversal?",
+      "answer": "The reference solutions aim for O(n) time and O(h) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Recover a Tree From Preorder Traversal use?",
+      "answer": "It primarily maps to dfs backtracking, within the broader topic of tree."
+    },
+    {
+      "question": "Is Recover a Tree From Preorder Traversal good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dfs backtracking approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Recover a Tree From Preorder Traversal (#1028) — Hard. Pattern: dfs backtracking. Complexity: O(n) time / O(h) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Recover a Tree From Preorder Traversal: show input structure (tree), highlight the moving parts of the dfs backtracking approach, and annotate each step with the maintained invariant and complexity."
+}

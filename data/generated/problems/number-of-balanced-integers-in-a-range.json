@@ -1,0 +1,159 @@
+{
+  "id": "3791",
+  "number": 3791,
+  "slug": "number-of-balanced-integers-in-a-range",
+  "title": "Number of Balanced Integers in a Range",
+  "difficulty": "Hard",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dynamic-programming"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O((logn)^2)",
+  "spaceComplexity": "O(logn)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/number-of-balanced-integers-in-a-range/",
+  "notes": [
+    "DP",
+    "Memoization"
+  ],
+  "relatedSlugs": [
+    "regular-expression-matching",
+    "edit-distance",
+    "scramble-string",
+    "interleaving-string",
+    "distinct-subsequences",
+    "best-time-to-buy-and-sell-stock-iii",
+    "palindrome-partitioning-ii",
+    "dungeon-game"
+  ],
+  "prevSlug": "smallest-all-ones-multiple",
+  "nextSlug": "sum-of-increasing-product-blocks",
+  "estimatedMinutes": 60,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Number of Balanced Integers in a Range?\n\n**Number of Balanced Integers in a Range** (LeetCode #3791) is a **Hard** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: DP, Memoization.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/number-of-balanced-integers-in-a-range/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Number of Balanced Integers in a Range\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O((logn)^2)) and **space** (O(logn)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O((logn)^2)** time and **O(logn)** space.\n\n### Pattern focus: dynamic programming\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O((logn)^2)** |\n| Space | **O(logn)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Number of Balanced Integers in a Range\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Number of Balanced Integers in a Range** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "number-of-balanced-integers-in-a-range.cpp",
+      "code": "// Time:  O((logn)^2)\n// Space: O(logn)\n\n// dp\nclass Solution {\npublic:\n    long long countBalanced(long long low, long long high) {\n        const auto& count = [&](int64_t n) {\n            vector<int> digits;\n            for (; n; n /= 10) {\n                digits.emplace_back(n % 10);\n            }\n            ranges::reverse(digits);\n            const auto& shift = size(digits) / 2 * 9;\n            vector<vector<int64_t>> dp(size(digits) * 9 + 1, vector<int64_t>(2));\n            dp[shift][1] = 1;\n            for (int i = 0; i < size(digits); ++i) {\n                vector<vector<int64_t>> new_dp(size(digits) * 9 + 1, vector<int64_t>(2));\n                for (int curr = 0; curr < size(dp); ++curr) {\n                    for (int tight = 0; tight <= 1; ++tight) {\n                        if (dp[curr][tight] == 0) {\n                            continue;\n                        }                        \n                        for (int d = 0, bound = tight ? digits[i] : 9; d <= bound; ++d) {\n                            new_dp[(i & 1) ? curr - d : curr + d][tight && d == bound] += dp[curr][tight];\n                        }\n                    }\n                }\n                dp = move(new_dp);\n            }\n            \n            return dp[shift][0];\n        };\n        \n        return count(high + 1) - count(low);\n    }\n};\n\n// Time:  O((logn)^2)\n// Space: O((logn)^2)\n// memoization\nclass Solution2 {\npublic:\n    long long countBalanced(long long low, long long high) {\n        const auto& count = [&](int64_t n) {\n            vector<int> digits;\n            for (; n; n /= 10) {\n                digits.emplace_back(n % 10);\n            }\n            ranges::reverse(digits);\n            vector<vector<int64_t>> memo(size(digits), vector<int64_t>(size(digits) * 9 + 1, -1));\n            const int shift = size(digits) / 2 * 9;\n            const auto memoization = [&](this auto&& memoization, int i, int curr, bool tight) -> int64_t {\n                if (i == size(digits)) {\n                    return curr == shift;\n                }\n                if (!tight && memo[i][curr] != -1) {\n                    return memo[i][curr];\n                }\n                const auto& bound = tight ? digits[i] : 9;\n                int64_t result = 0;\n                for (int d = 0; d <= bound; ++d) {\n                    result += memoization(i + 1, (i & 1) ? curr - d : curr + d, tight && d == bound);\n                }\n                if (!tight) {\n                    memo[i][curr] = result;\n                }\n                return result;\n            };\n            \n            return memoization(0, shift, true);\n        };\n\n        return count(high) - count(low - 1);\n    }\n};\n\n// Time:  O((logn)^2)\n// Space: O((logn)^2)\n// memoization\nclass Solution3 {\npublic:\n    long long countBalanced(long long low, long long high) {\n        const auto& count = [&](int64_t n) {\n            vector<int> digits;\n            for (; n; n /= 10) {\n                digits.emplace_back(n % 10);\n            }\n            ranges::reverse(digits);\n            vector<vector<vector<int64_t>>> memo(size(digits), vector<vector<int64_t>>(size(digits) * 9 + 1, vector<int64_t>(2, -1)));\n            const int shift = size(digits) / 2 * 9;\n            const auto memoization = [&](this auto&& memoization, int i, int curr, bool tight) -> int64_t {\n                if (i == size(digits)) {\n                    return curr == shift;\n                }\n                if (memo[i][curr][tight] == -1) {\n                    const auto& bound = tight ? digits[i] : 9;\n                    int64_t result = 0;\n                    for (int d = 0; d <= bound; ++d) {\n                        result += memoization(i + 1, (i & 1) ? curr - d : curr + d, tight && d == bound);\n                    }\n                    memo[i][curr][tight] = result;\n                }\n                return memo[i][curr][tight];\n            };\n            \n            return memoization(0, shift, true);\n        };\n\n        return count(high) - count(low - 1);\n    }\n};\n",
+      "sourcePath": "C++/number-of-balanced-integers-in-a-range.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "number-of-balanced-integers-in-a-range.py",
+      "code": "# Time:  O((logn)^2)\n# Space: O(logn)\n\n# dp\nclass Solution(object):\n    def countBalanced(self, low, high):\n        \"\"\"\n        :type low: int\n        :type high: int\n        :rtype: int\n        \"\"\"\n        def count(n):\n            digits = []\n            while n:\n                n, r = divmod(n, 10)\n                digits.append(r)\n            digits.reverse()\n            dp = [[0]*2 for _ in xrange(len(digits)*9+1)]\n            dp[0][1] = 1\n            for i in xrange(len(digits)):\n                new_dp = [[0]*2 for _ in xrange(len(digits)*9+1)]\n                for curr in xrange(len(dp)):\n                    curr -= len(digits)//2*9\n                    for tight in xrange(2):\n                        if not dp[curr][tight]:\n                            continue\n                        bound = digits[i] if tight else 9\n                        for d in xrange(bound+1):\n                            new_dp[curr-d if i&1 else curr+d][tight and d == bound] += dp[curr][tight]\n                dp = new_dp\n            return dp[0][0]\n        \n        return count(high+1)-count(low)\n\n\n# Time:  O((logn)^2)\n# Space: O((logn)^2)\n# memoization\nclass Solution2(object):\n    def countBalanced(self, low, high):\n        \"\"\"\n        :type low: int\n        :type high: int\n        :rtype: int\n        \"\"\"\n        def count(n):\n            digits = []\n            while n:\n                n, r = divmod(n, 10)\n                digits.append(r)\n            digits.reverse()\n            memo = [[-1]*(len(digits)*9+1) for _ in xrange(len(digits))]\n            def memoization(i, curr, tight):\n                if i == len(digits):\n                    return curr == 0\n                if not tight and memo[i][curr] != -1:\n                    return memo[i][curr]\n                bound = digits[i] if tight else 9\n                result = 0\n                for d in xrange(bound+1):\n                    result += memoization(i+1, curr-d if i&1 else curr+d, tight and d == bound)\n                if not tight:\n                    memo[i][curr] = result\n                return result\n            \n            return memoization(0, 0, True)\n        \n        return count(high)-count(low-1)\n\n\n# Time:  O((logn)^2)\n# Space: O((logn)^2)\n# memoization\nclass Solution3(object):\n    def countBalanced(self, low, high):\n        \"\"\"\n        :type low: int\n        :type high: int\n        :rtype: int\n        \"\"\"\n        def count(n):\n            digits = []\n            while n:\n                n, r = divmod(n, 10)\n                digits.append(r)\n            digits.reverse()\n            memo = [[[-1]*2 for _ in xrange(len(digits)*9+1)] for _ in xrange(len(digits))]\n            def memoization(i, curr, tight):\n                if i == len(digits):\n                    return int(curr == 0)\n                if memo[i][curr][tight] == -1:\n                    bound = digits[i] if tight else 9\n                    result = 0\n                    for d in xrange(bound+1):\n                        result += memoization(i+1, curr-d if i&1 else curr+d, tight and d == bound)\n                    memo[i][curr][tight] = result\n                return memo[i][curr][tight]\n            \n            return memoization(0, 0, True)\n        \n        return count(high)-count(low-1)\n",
+      "sourcePath": "Python/number-of-balanced-integers-in-a-range.py"
+    }
+  },
+  "seo": {
+    "title": "Number of Balanced Integers in a Range Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Number of Balanced Integers in a Range (LeetCode #3791). Pattern: dynamic programming. Time O((logn)^2), space O(logn). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Number of Balanced Integers in a Range",
+      "Number of Balanced Integers in a Range solution",
+      "Number of Balanced Integers in a Range leetcode",
+      "dynamic-programming",
+      "dynamic-programming",
+      "hard"
+    ],
+    "canonicalPath": "/problems/number-of-balanced-integers-in-a-range"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Number of Balanced Integers in a Range?",
+      "answer": "The reference solutions aim for O((logn)^2) time and O(logn) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Number of Balanced Integers in a Range use?",
+      "answer": "It primarily maps to dynamic programming, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Number of Balanced Integers in a Range good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/number-of-balanced-integers-in-a-range/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Number of Balanced Integers in a Range (#3791) — Hard. Pattern: dynamic programming. Complexity: O((logn)^2) time / O(logn) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Number of Balanced Integers in a Range: show input structure (dynamic programming), highlight the moving parts of the dynamic programming approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,46 @@
+{
+  "type": "company",
+  "slug": "uber",
+  "name": "Uber",
+  "description": "Graphs, geo/interval thinking, and practical coding speed.",
+  "problemCount": 27,
+  "problemSlugs": [
+    "valid-sudoku",
+    "sudoku-solver",
+    "trapping-rain-water",
+    "group-anagrams",
+    "text-justification",
+    "minimum-window-substring",
+    "subsets",
+    "word-search",
+    "decode-ways",
+    "best-time-to-buy-and-sell-stock",
+    "valid-palindrome",
+    "copy-list-with-random-pointer",
+    "word-break",
+    "word-break-ii",
+    "lru-cache",
+    "min-stack",
+    "excel-sheet-column-number",
+    "course-schedule",
+    "implement-trie-prefix-tree",
+    "valid-anagram",
+    "word-pattern",
+    "coin-change",
+    "house-robber-iii",
+    "top-k-frequent-elements",
+    "insert-delete-getrandom-o1",
+    "delete-node-in-a-bst",
+    "encode-and-decode-tinyurl"
+  ],
+  "seo": {
+    "title": "Uber Coding Interview Questions | AlgoForge",
+    "description": "Prepare for Uber interviews with 27 problems, patterns, and roadmaps.",
+    "keywords": [
+      "Uber interview questions",
+      "Uber leetcode",
+      "Uber oa"
+    ],
+    "canonicalPath": "/companies/uber"
+  }
+}

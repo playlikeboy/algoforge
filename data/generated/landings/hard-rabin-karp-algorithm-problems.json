@@ -1,0 +1,44 @@
+{
+  "slug": "hard-rabin-karp-algorithm-problems",
+  "path": "/explore/hard-rabin-karp-algorithm-problems",
+  "h1": "Hard Rabin Karp Algorithm Problems",
+  "intro": "9 hard problems that drill the Rabin Karp Algorithm pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "longest-duplicate-substring",
+    "longest-chunked-palindrome-decomposition",
+    "distinct-echo-substrings",
+    "longest-happy-prefix",
+    "longest-common-subpath",
+    "maximum-deletions-on-a-string",
+    "minimum-number-of-valid-strings-to-form-target-ii",
+    "lexicographically-smallest-string-after-reverse-ii",
+    "smallest-unique-subarray"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice hard Rabin Karp Algorithm problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/rabin-karp-algorithm",
+      "label": "Rabin Karp Algorithm pattern"
+    },
+    {
+      "href": "/difficulty/hard",
+      "label": "All Hard problems"
+    }
+  ],
+  "seo": {
+    "title": "Hard Rabin Karp Algorithm Problems | AlgoForge",
+    "description": "Practice hard Rabin Karp Algorithm LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "hard Rabin Karp Algorithm",
+      "Rabin Karp Algorithm problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/hard-rabin-karp-algorithm-problems"
+  },
+  "kind": "difficulty-pattern"
+}

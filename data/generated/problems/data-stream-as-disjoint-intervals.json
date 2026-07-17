@@ -1,0 +1,158 @@
+{
+  "id": "352",
+  "number": 352,
+  "slug": "data-stream-as-disjoint-intervals",
+  "title": "Data Stream as Disjoint Intervals",
+  "difficulty": "Hard",
+  "topics": [
+    "binary-search-tree"
+  ],
+  "patterns": [
+    "tree-traversal"
+  ],
+  "companies": [
+    "google"
+  ],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(logn)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/data-stream-as-disjoint-intervals/",
+  "notes": [],
+  "relatedSlugs": [
+    "range-xor-queries-with-subarray-reversals",
+    "contains-duplicate-iii",
+    "kth-smallest-element-in-a-bst",
+    "lowest-common-ancestor-of-a-binary-search-tree",
+    "closest-binary-search-tree-value",
+    "inorder-successor-in-bst",
+    "serialize-and-deserialize-bst",
+    "delete-node-in-a-bst"
+  ],
+  "prevSlug": "android-unlock-patterns",
+  "nextSlug": "design-snake-game",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Data Stream as Disjoint Intervals?\n\n**Data Stream as Disjoint Intervals** (LeetCode #352) is a **Hard** problem that primarily trains **binary search tree**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **tree traversal**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/data-stream-as-disjoint-intervals/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Data Stream as Disjoint Intervals\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **tree traversal**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(logn)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(logn)** time and **O(n)** space.\n\n### Pattern focus: tree traversal\n\nUse the pattern as a checklist:\n\n- **tree traversal** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(logn)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Data Stream as Disjoint Intervals\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for tree traversal — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **tree traversal**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **binary search tree**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Data Stream as Disjoint Intervals** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **binary search tree**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "data-stream-as-disjoint-intervals.cpp",
+      "code": "// Time:  addNum: O(logn), getIntervals: O(n), n is the number of disjoint intervals.\n// Space: O(n)\n\n/**\n * Definition for an interval.\n * struct Interval {\n *     int start;\n *     int end;\n *     Interval() : start(0), end(0) {}\n *     Interval(int s, int e) : start(s), end(e) {}\n * };\n */\n// Using set.\nclass SummaryRanges {\npublic:\n    /** Initialize your data structure here. */\n    SummaryRanges() {\n        \n    }\n    \n    void addNum(int val) {\n        auto it = intervals_.upper_bound(Interval(val, val));\n        int start = val, end = val;\n        if (it != intervals_.begin() && prev(it)->end + 1 >= val) {\n            --it;\n        }\n        while (it != intervals_.end() && end + 1 >= it->start) {\n            start = min(start, it->start);\n            end = max(end, it->end);\n            it = intervals_.erase(it);\n        }\n        intervals_.insert(it, Interval(start, end));\n    }\n\n    vector<Interval> getIntervals() {\n        return {intervals_.cbegin(), intervals_.cend()};\n    }\n\nprivate:\n    struct Compare {\n        bool operator() (const Interval& a, const Interval& b) {\n            return a.start < b.start;\n        }\n    };\n    set<Interval, Compare> intervals_;\n};\n\n\n// Using map.\nclass SummaryRanges {\npublic:\n    /** Initialize your data structure here. */\n    SummaryRanges() {\n        \n    }\n    \n    void addNum(int val) {\n        auto it = intervals_.upper_bound(val);\n        int start = val, end = val;\n        if (it != intervals_.begin() && prev(it)->second + 1 >= val) {\n            --it;\n        }\n        while (it != intervals_.end() && end + 1 >= it->first) {\n            start = min(start, it->first);\n            end = max(end, it->second);\n            it = intervals_.erase(it);\n        }\n        intervals_[start] = end;\n    }\n\n    vector<Interval> getIntervals() {\n        vector<Interval> result;\n        for (const auto& kvp : intervals_) {\n            result.emplace_back(kvp.first, kvp.second);\n        }\n        return result;\n    }\n\nprivate:\n    map<int, int> intervals_;\n};\n\n\n// Time:  addNum: O(n), getIntervals: O(n), n is the number of disjoint intervals.\n// Space: O(n)\nclass SummaryRanges2 {\npublic:\npublic:\n    /** Initialize your data structure here. */\n    SummaryRanges2() {\n        \n    }\n    \n    void addNum(int val) {\n        auto it = upper_bound(intervals_.begin(), intervals_.end(), Interval(val, val), Compare());\n        int start = val, end = val;\n        if (it != intervals_.begin() && prev(it)->end + 1 >= val) {\n            --it;\n        }\n        while (it != intervals_.end() && end + 1 >= it->start) {\n            start = min(start, it->start);\n            end = max(end, it->end);\n            it = intervals_.erase(it);\n        }\n        intervals_.insert(it, Interval(start, end));\n    }\n\n    vector<Interval> getIntervals() {\n        return intervals_;\n    }\n\nprivate:\n    struct Compare {\n        bool operator() (const Interval& a, const Interval& b) {\n            return a.start < b.start;\n        }\n    };\n    vector<Interval> intervals_;\n};\n\n\n// Time:  addNum: O(logs), getIntervals: O(s), s is the data stream's size.\n// Space: O(s)\nclass SummaryRanges3 {\npublic:\n    /** Initialize your data structure here. */\n    SummaryRanges3() {\n        \n    }\n    \n    void addNum(int val) {\n        nums_.emplace(val);\n    }\n    \n    vector<Interval> getIntervals() {\n        vector<Interval> result;\n        if (nums_.empty()) {\n            return result;\n        }\n        auto start = *nums_.begin(), end = *nums_.begin();\n        for (auto it = next(nums_.begin()); it != nums_.end(); ++it) {\n            if (it != nums_.end() && *it == end + 1) {\n                end = *it;\n            } else  {\n                result.emplace_back(start, end);\n                if (it != nums_.end()) {\n                    start = end = *it;\n                }\n            }\n        }\n        result.emplace_back(start, end);\n        return result;\n    }\n\nprivate:\n    set<int> nums_;\n};\n\n/**\n * Your SummaryRanges object will be instantiated and called as such:\n * SummaryRanges obj = new SummaryRanges();\n * obj.addNum(val);\n * vector<Interval> param_2 = obj.getIntervals();\n */\n \n",
+      "sourcePath": "C++/data-stream-as-disjoint-intervals.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "data-stream-as-disjoint-intervals.py",
+      "code": "# Time:  addNum: O(n), getIntervals: O(n), n is the number of disjoint intervals.\n# Space: O(n)\n\nclass Interval(object):\n    def __init__(self, s=0, e=0):\n        self.start = s\n        self.end = e\n\n\nclass SummaryRanges(object):\n\n    def __init__(self):\n        \"\"\"\n        Initialize your data structure here.\n        \"\"\"\n        self.__intervals = []\n\n    def addNum(self, val):\n        \"\"\"\n        :type val: int\n        :rtype: void\n        \"\"\"\n        def upper_bound(nums, target):\n            left, right = 0, len(nums) - 1\n            while left <= right:\n                mid = left + (right - left) / 2\n                if nums[mid].start > target:\n                    right = mid - 1\n                else:\n                    left = mid + 1\n            return left\n\n        i = upper_bound(self.__intervals, val)\n        start, end = val, val\n        if i != 0 and self.__intervals[i-1].end + 1 >= val:\n            i -= 1\n        while i != len(self.__intervals) and \\\n              end + 1 >= self.__intervals[i].start:\n            start = min(start, self.__intervals[i].start)\n            end = max(end, self.__intervals[i].end)\n            del self.__intervals[i]\n        self.__intervals.insert(i, Interval(start, end))\n\n    def getIntervals(self):\n        \"\"\"\n        :rtype: List[Interval]\n        \"\"\"\n        return self.__intervals\n\n\n\n",
+      "sourcePath": "Python/data-stream-as-disjoint-intervals.py"
+    }
+  },
+  "seo": {
+    "title": "Data Stream as Disjoint Intervals Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Data Stream as Disjoint Intervals (LeetCode #352). Pattern: tree traversal. Time O(logn), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Data Stream as Disjoint Intervals",
+      "Data Stream as Disjoint Intervals solution",
+      "Data Stream as Disjoint Intervals leetcode",
+      "binary-search-tree",
+      "tree-traversal",
+      "hard"
+    ],
+    "canonicalPath": "/problems/data-stream-as-disjoint-intervals"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Data Stream as Disjoint Intervals?",
+      "answer": "The reference solutions aim for O(logn) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Data Stream as Disjoint Intervals use?",
+      "answer": "It primarily maps to tree traversal, within the broader topic of binary search tree."
+    },
+    {
+      "question": "Is Data Stream as Disjoint Intervals good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/data-stream-as-disjoint-intervals/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the tree traversal approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Data Stream as Disjoint Intervals (#352) — Hard. Pattern: tree traversal. Complexity: O(logn) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Data Stream as Disjoint Intervals: show input structure (binary search tree), highlight the moving parts of the tree traversal approach, and annotate each step with the maintained invariant and complexity."
+}

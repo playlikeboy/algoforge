@@ -1,0 +1,48 @@
+{
+  "slug": "easy-linked-list-pointers-problems",
+  "path": "/explore/easy-linked-list-pointers-problems",
+  "h1": "Easy Linked List Pointers Problems",
+  "intro": "13 easy problems that drill the Linked List Pointers pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "merge-two-sorted-lists",
+    "swap-nodes-in-pairs",
+    "remove-duplicates-from-sorted-list",
+    "intersection-of-two-linked-lists",
+    "remove-linked-list-elements",
+    "reverse-linked-list",
+    "palindrome-linked-list",
+    "delete-node-in-a-linked-list",
+    "count-substrings-with-only-one-distinct-letter",
+    "convert-binary-number-in-a-linked-list-to-integer",
+    "delete-n-nodes-after-m-nodes-of-a-linked-list",
+    "winner-of-the-linked-list-game",
+    "convert-doubly-linked-list-to-array-i"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice easy Linked List Pointers problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/linked-list-pointers",
+      "label": "Linked List Pointers pattern"
+    },
+    {
+      "href": "/difficulty/easy",
+      "label": "All Easy problems"
+    }
+  ],
+  "seo": {
+    "title": "Easy Linked List Pointers Problems | AlgoForge",
+    "description": "Practice easy Linked List Pointers LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "easy Linked List Pointers",
+      "Linked List Pointers problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/easy-linked-list-pointers-problems"
+  },
+  "kind": "difficulty-pattern"
+}

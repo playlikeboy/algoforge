@@ -1,0 +1,158 @@
+{
+  "id": "3093",
+  "number": 3093,
+  "slug": "longest-common-suffix-queries",
+  "title": "Longest Common Suffix Queries",
+  "difficulty": "Hard",
+  "topics": [
+    "string"
+  ],
+  "patterns": [
+    "trie"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O((n + q) * l)",
+  "spaceComplexity": "O(t)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/longest-common-suffix-queries/",
+  "notes": [
+    "Trie"
+  ],
+  "relatedSlugs": [
+    "sum-of-prefix-scores-of-strings",
+    "count-prefix-and-suffix-pairs-ii",
+    "replace-words",
+    "longest-word-in-dictionary",
+    "short-encoding-of-words",
+    "remove-sub-folders-from-the-filesystem",
+    "html-entity-parser",
+    "number-of-distinct-substrings-in-a-string"
+  ],
+  "prevSlug": "most-frequent-ids",
+  "nextSlug": "guess-the-number-using-bitwise-questions-ii",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Longest Common Suffix Queries?\n\n**Longest Common Suffix Queries** (LeetCode #3093) is a **Hard** problem that primarily trains **string**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **trie**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Trie.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/longest-common-suffix-queries/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Longest Common Suffix Queries\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **trie**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O((n + q) * l)) and **space** (O(t)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O((n + q) * l)** time and **O(t)** space.\n\n### Pattern focus: trie\n\nUse the pattern as a checklist:\n\n- **trie** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O((n + q) * l)** |\n| Space | **O(t)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Longest Common Suffix Queries\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for trie — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **trie**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **string**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Longest Common Suffix Queries** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **string**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "longest-common-suffix-queries.cpp",
+      "code": "// Time:  O((n + q) * l)\n// Space: O(t)\n\n// trie\nclass Solution {\nprivate:\n    class Trie {\n    public:\n        Trie() {\n             new_node();\n         }\n\n        void add(int i, const string& w) {\n            int curr = 0;\n            mns_[curr] = min(mns_[curr], {size(w), i});\n            for (int j = size(w) - 1; j >= 0; --j) {\n                const int x = w[j] - 'a';\n                if (nodes_[curr][x] == -1) {\n                    nodes_[curr][x] = new_node();\n                }\n                curr = nodes_[curr][x];\n                mns_[curr] = min(mns_[curr], {size(w), i});\n            }\n        }\n\n        int query(const string& w) {\n            int curr = 0;\n            for (int j = size(w) - 1; j >= 0; --j) {\n                const int x = w[j] - 'a';\n                if (nodes_[curr][x] == -1) {\n                    break;\n                }\n                curr = nodes_[curr][x];\n            }\n            return mns_[curr].second;\n        }\n\n    private:\n        int new_node() {\n            static const int INF = numeric_limits<int>::max();\n\n            nodes_.emplace_back(26, -1);\n            mns_.emplace_back(INF, INF);\n            return size(nodes_) - 1;\n        }\n\n        vector<vector<int>> nodes_;\n        vector<pair<int, int>> mns_;\n    };\n\npublic:\n    vector<int> stringIndices(vector<string>& wordsContainer, vector<string>& wordsQuery) {\n        Trie trie;\n        for (int i = 0; i < size(wordsContainer); ++i) {\n            trie.add(i, wordsContainer[i]);\n        }\n        vector<int> result(size(wordsQuery));\n        for (int i = 0; i < size(wordsQuery); ++i) {\n            result[i] = trie.query(wordsQuery[i]);\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/longest-common-suffix-queries.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "longest-common-suffix-queries.py",
+      "code": "# Time:  O((n + q) * l)\n# Space: O(t)\n\n# trie\nclass Solution(object):\n    def stringIndices(self, wordsContainer, wordsQuery):\n        \"\"\"\n        :type wordsContainer: List[str]\n        :type wordsQuery: List[str]\n        :rtype: List[int]\n        \"\"\"\n        INF = float(\"INF\")\n        class Trie(object):\n            def __init__(self):\n                self.__nodes = []\n                self.__mns = []\n                self.__new_node()\n            \n            def __new_node(self):\n                self.__nodes.append([-1]*26)\n                self.__mns.append((INF, INF))\n                return len(self.__nodes)-1\n\n            def add(self, i, w):\n                curr = 0\n                self.__mns[curr] = min(self.__mns[curr], (len(w), i))\n                for c in reversed(w):\n                    x = ord(c)-ord('a')\n                    if self.__nodes[curr][x] == -1:\n                        self.__nodes[curr][x] = self.__new_node()\n                    curr = self.__nodes[curr][x]\n                    self.__mns[curr] = min(self.__mns[curr], (len(w), i))\n            \n            def query(self, w):\n                curr = 0\n                for c in reversed(w):\n                    x = ord(c)-ord('a')\n                    if self.__nodes[curr][x] == -1:\n                        break\n                    curr = self.__nodes[curr][x]\n                return self.__mns[curr][1]\n    \n        trie = Trie()\n        for i, w in enumerate(wordsContainer): \n            trie.add(i, w)\n        return [trie.query(w) for w in wordsQuery]\n",
+      "sourcePath": "Python/longest-common-suffix-queries.py"
+    }
+  },
+  "seo": {
+    "title": "Longest Common Suffix Queries Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Longest Common Suffix Queries (LeetCode #3093). Pattern: trie. Time O((n + q) * l), space O(t). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Longest Common Suffix Queries",
+      "Longest Common Suffix Queries solution",
+      "Longest Common Suffix Queries leetcode",
+      "string",
+      "trie",
+      "hard"
+    ],
+    "canonicalPath": "/problems/longest-common-suffix-queries"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Longest Common Suffix Queries?",
+      "answer": "The reference solutions aim for O((n + q) * l) time and O(t) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Longest Common Suffix Queries use?",
+      "answer": "It primarily maps to trie, within the broader topic of string."
+    },
+    {
+      "question": "Is Longest Common Suffix Queries good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/longest-common-suffix-queries/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the trie approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Longest Common Suffix Queries (#3093) — Hard. Pattern: trie. Complexity: O((n + q) * l) time / O(t) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Longest Common Suffix Queries: show input structure (string), highlight the moving parts of the trie approach, and annotate each step with the maintained invariant and complexity."
+}

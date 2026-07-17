@@ -1,0 +1,55 @@
+{
+  "slug": "hard-fenwick-tree-problems",
+  "path": "/explore/hard-fenwick-tree-problems",
+  "h1": "Hard Fenwick Tree Problems",
+  "intro": "20 hard problems that drill the Fenwick Tree pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "count-of-smaller-numbers-after-self",
+    "minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits",
+    "create-sorted-array-through-instructions",
+    "count-good-triplets-in-an-array",
+    "minimum-number-of-moves-to-make-palindrome",
+    "number-of-pairs-satisfying-inequality",
+    "make-array-empty",
+    "maximum-profitable-triplets-with-increasing-prices-ii",
+    "maximum-balanced-subsequence-sum",
+    "block-placement-queries",
+    "peaks-in-array",
+    "alternating-groups-iii",
+    "maximum-area-rectangle-with-point-constraints-ii",
+    "shortest-path-in-a-weighted-tree",
+    "number-of-integers-with-popcount-depth-equal-to-k-ii",
+    "sum-of-beautiful-subsequences",
+    "minimum-inversion-count-in-subarrays-of-fixed-length",
+    "minimum-deletions-to-make-alternating-substring",
+    "palindromic-path-queries-in-a-tree",
+    "power-update-after-k-th-largest-insertion-ii"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice hard Fenwick Tree problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/fenwick-tree",
+      "label": "Fenwick Tree pattern"
+    },
+    {
+      "href": "/difficulty/hard",
+      "label": "All Hard problems"
+    }
+  ],
+  "seo": {
+    "title": "Hard Fenwick Tree Problems | AlgoForge",
+    "description": "Practice hard Fenwick Tree LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "hard Fenwick Tree",
+      "Fenwick Tree problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/hard-fenwick-tree-problems"
+  },
+  "kind": "difficulty-pattern"
+}

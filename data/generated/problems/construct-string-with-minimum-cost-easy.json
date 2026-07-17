@@ -1,0 +1,161 @@
+{
+  "id": "3253",
+  "number": 3253,
+  "slug": "construct-string-with-minimum-cost-easy",
+  "title": "Construct String with Minimum Cost (Easy)",
+  "difficulty": "Medium",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dynamic-programming",
+    "trie"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n * w * l)",
+  "spaceComplexity": "O(l)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/construct-string-with-minimum-cost-easy/",
+  "notes": [
+    "DP",
+    "Trie"
+  ],
+  "relatedSlugs": [
+    "extra-characters-in-a-string",
+    "count-pairs-with-xor-in-a-range",
+    "construct-string-with-minimum-cost",
+    "unique-paths",
+    "unique-paths-ii",
+    "minimum-path-sum",
+    "decode-ways",
+    "unique-binary-search-trees"
+  ],
+  "prevSlug": "premier-league-table-ranking-ii",
+  "nextSlug": "find-the-power-of-k-size-subarrays-i",
+  "estimatedMinutes": 45,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Construct String with Minimum Cost (Easy)?\n\n**Construct String with Minimum Cost (Easy)** (LeetCode #3253) is a **Medium** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming and trie**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: DP, Trie.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/construct-string-with-minimum-cost-easy/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Construct String with Minimum Cost (Easy)\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming and trie**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n * w * l)) and **space** (O(l)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n * w * l)** time and **O(l)** space.\n\n### Pattern focus: dynamic programming and trie\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n- **trie** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n * w * l)** |\n| Space | **O(l)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Construct String with Minimum Cost (Easy)\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming and trie — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming and trie**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Construct String with Minimum Cost (Easy)** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "construct-string-with-minimum-cost-easy.cpp",
+      "code": "// Time:  O(n * w * l)\n// Space: O(l)\n\nstatic const int INF = numeric_limits<int>::max();\n\n// dp\nclass Solution {\npublic:\n    int minimumCost(string target, vector<string>& words, vector<int>& costs) {\n        int l = 0;\n        for (const auto& w : words) {\n            l = max(l, static_cast<int>(size(w)));\n        }\n        vector<int> dp(l + 1, INF);\n        dp[0] = 0;\n        for (int i = 0; i < size(target); ++i) {\n            if (dp[i % size(dp)] == INF) {\n                continue;\n            }\n            for (int j = 0; j < size(words); ++j) {\n                if (target.substr(i, size(words[j])) == words[j]) {\n                    dp[(i + size(words[j])) % size(dp)] = min(dp[(i + size(words[j])) % size(dp)], dp[i % size(dp)] + costs[j]);\n                }\n            }\n            dp[i % size(dp)] = INF;\n        }\n        return dp[size(target) % size(dp)] != INF ? dp[size(target) % size(dp)] : -1;\n    }\n};\n\n// Time:  O(n^2 + w * l)\n// Space: O(t)\n// trie, dp\nclass Solution2 {\nprivate:\n    class Trie {\n    public:\n        Trie() {\n             new_node();\n         }\n\n        void add(const string& w, int c) {\n            int curr = 0;\n            for (auto x : w) {\n                x -= 'a';\n                if (nodes_[curr][x] == -1) {\n                    nodes_[curr][x] = new_node();\n                }\n                curr = nodes_[curr][x];\n            }\n            mns_[curr] = min(mns_[curr], c);\n        }\n\n        vector<pair<int, int>> query(int i, const string& t, vector<int>& dp) {\n            vector<pair<int, int>> result;\n            int curr = 0;\n            for (int j = i; j < size(t); ++j) {\n                const int x = t[j] - 'a';\n                if (nodes_[curr][x] == -1) {\n                    break;\n                }\n                curr = nodes_[curr][x];\n                if (mns_[curr] != INF) {\n                    dp[j + 1] = min(dp[j + 1], dp[i] + mns_[curr]);\n                }\n            }\n            return result;\n        }\n\n    private:\n        int new_node() {\n            nodes_.emplace_back(26, -1);\n            mns_.emplace_back(INF);\n            return size(nodes_) - 1;\n        }\n\n        vector<vector<int>> nodes_;\n        vector<int> mns_;\n    };\n\npublic:\n    int minimumCost(string target, vector<string>& words, vector<int>& costs) {\n        Trie trie;\n        for (int i = 0; i < size(words); ++i) {\n            trie.add(words[i], costs[i]);\n        }\n        vector<int> dp(size(target) + 1, INF);\n        dp[0] = 0;\n        for (int i = 0; i < size(target); ++i) {\n            if (dp[i] == INF) {\n                continue;\n            }\n            trie.query(i, target, dp);\n        }\n        return dp.back() != INF ? dp.back() : -1;\n    }\n};\n\n\n// Time:  O(n^2 + w * l)\n// Space: O(t)\n// trie, dp\nclass Solution3 {\nprivate:\n    struct TrieNode {\n        int cost = INF;\n        unordered_map<char, TrieNode *> children;\n        \n        TrieNode() {}\n        \n        void add(const string& w, int c) {\n            auto* curr = this;\n            for (const auto& x : w) {\n                if (!curr->children[x]) {\n                    curr->children[x] = new TrieNode;\n                }\n                curr = curr->children[x];\n            }\n            curr->cost = min(curr->cost, c);\n        }\n\n        void query(int i, const string& t, vector<int>& dp) {\n            auto* curr = this;\n            for (int j = i; j < size(t); ++j) {\n                const int x = t[j];\n                if (!curr->children.count(x)) {\n                    break;\n                }\n                curr = curr->children[x];\n                if (curr->cost != INF) {\n                    dp[j + 1] = min(dp[j + 1], dp[i] + curr->cost);\n                }\n            }\n        }\n        \n        ~TrieNode() {\n            for (auto& kv : children) {\n                if (kv.second) {\n                    delete kv.second;\n                }\n            }\n        }\n    };\n\npublic:\n    int minimumCost(string target, vector<string>& words, vector<int>& costs) {\n        TrieNode trie;\n        for (int i = 0; i < size(words); ++i) {\n            trie.add(words[i], costs[i]);\n        }\n        vector<int> dp(size(target) + 1, INF);\n        dp[0] = 0;\n        for (int i = 0; i < size(target); ++i) {\n            if (dp[i] == INF) {\n                continue;\n            }\n            trie.query(i, target, dp);\n        }\n        return dp.back() != INF ? dp.back() : -1;\n    }\n};\n",
+      "sourcePath": "C++/construct-string-with-minimum-cost-easy.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "construct-string-with-minimum-cost-easy.py",
+      "code": "# Time:  O(n * w * l)\n# Space: O(l)\n\nimport itertools\n\n\n# dp\nclass Solution(object):\n    def minimumCost(self, target, words, costs):\n        \"\"\"\n        :type target: str\n        :type words: List[str]\n        :type costs: List[int]\n        :rtype: int\n        \"\"\"\n        INF = float(\"inf\")\n        l = max(len(w) for w in words)\n        dp = [INF]*(l+1)\n        dp[0] = 0\n        for i in xrange(len(target)):\n            if dp[i%len(dp)] == INF:\n                continue\n            for w, c in itertools.izip(words, costs):\n                if target[i:i+len(w)] == w:\n                    dp[(i+len(w))%len(dp)] = min(dp[(i+len(w))%len(dp)], dp[i%len(dp)]+c)\n            dp[i%len(dp)] = INF\n        return dp[len(target)%len(dp)] if dp[len(target)%len(dp)] != INF else -1\n\n\n# Time:  O(n^2 + w * l)\n# Space: O(t)\nimport itertools\n\n\n# trie, dp\nclass Solution2(object):\n    def minimumCost(self, target, words, costs):\n        \"\"\"\n        :type target: str\n        :type words: List[str]\n        :type costs: List[int]\n        :rtype: int\n        \"\"\"\n        INF = float(\"inf\")\n        def query(i):\n            curr = trie\n            for j in xrange(i, len(target)):\n                x = target[j]\n                if x not in curr:\n                    break\n                curr = curr[x]\n                if \"_end\" in curr:\n                    dp[j+1] = min(dp[j+1], dp[i]+curr[\"_end\"])\n\n        _trie = lambda: collections.defaultdict(_trie)\n        trie = _trie()\n        for w, c in itertools.izip(words, costs):\n            node = reduce(dict.__getitem__, w, trie)\n            if \"_end\" not in node:\n                node[\"_end\"] = INF\n            node[\"_end\"] = min(node[\"_end\"], c)\n        dp = [INF]*(len(target)+1)\n        dp[0] = 0\n        for i in xrange(len(target)):\n            if dp[i] == INF:\n                continue\n            query(i)\n        return dp[-1] if dp[-1] != INF else -1\n\n\n# Time:  O(n^2 + w * l)\n# Space: O(t)\nimport itertools\n\n\n# trie, dp\nclass Solution3(object):\n    def minimumCost(self, target, words, costs):\n        \"\"\"\n        :type target: str\n        :type words: List[str]\n        :type costs: List[int]\n        :rtype: int\n        \"\"\"\n        INF = float(\"inf\")\n        class Trie(object):\n            def __init__(self):\n                self.__nodes = []\n                self.__mns = []\n                self.__new_node()\n            \n            def __new_node(self):\n                self.__nodes.append([-1]*26)\n                self.__mns.append(INF)\n                return len(self.__nodes)-1\n\n            def add(self, w, c):\n                curr = 0\n                for x in w:\n                    x = ord(x)-ord('a')\n                    if self.__nodes[curr][x] == -1:\n                        self.__nodes[curr][x] = self.__new_node()\n                    curr = self.__nodes[curr][x]\n                self.__mns[curr] = min(self.__mns[curr], c)\n            \n            def query(self, i):\n                curr = 0\n                for j in xrange(i, len(target)):\n                    x = ord(target[j])-ord('a')\n                    if self.__nodes[curr][x] == -1:\n                        break\n                    curr = self.__nodes[curr][x]\n                    if self.__mns[curr] != INF:\n                        dp[j+1] = min(dp[j+1], dp[i]+self.__mns[curr])\n    \n        trie = Trie()\n        for w, c in itertools.izip(words, costs):\n            trie.add(w, c)\n        dp = [INF]*(len(target)+1)\n        dp[0] = 0\n        for i in xrange(len(target)):\n            if dp[i] == INF:\n                continue\n            trie.query(i)\n        return dp[-1] if dp[-1] != INF else -1\n",
+      "sourcePath": "Python/construct-string-with-minimum-cost-easy.py"
+    }
+  },
+  "seo": {
+    "title": "Construct String with Minimum Cost (Easy) Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Construct String with Minimum Cost (Easy) (LeetCode #3253). Pattern: dynamic programming. Time O(n * w * l), space O(l). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Construct String with Minimum Cost (Easy)",
+      "Construct String with Minimum Cost (Easy) solution",
+      "Construct String with Minimum Cost (Easy) leetcode",
+      "dynamic-programming",
+      "dynamic-programming",
+      "trie",
+      "medium"
+    ],
+    "canonicalPath": "/problems/construct-string-with-minimum-cost-easy"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Construct String with Minimum Cost (Easy)?",
+      "answer": "The reference solutions aim for O(n * w * l) time and O(l) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Construct String with Minimum Cost (Easy) use?",
+      "answer": "It primarily maps to dynamic programming and trie, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Construct String with Minimum Cost (Easy) good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/construct-string-with-minimum-cost-easy/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming and trie approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Construct String with Minimum Cost (Easy) (#3253) — Medium. Pattern: dynamic programming and trie. Complexity: O(n * w * l) time / O(l) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Construct String with Minimum Cost (Easy): show input structure (dynamic programming), highlight the moving parts of the dynamic programming and trie approach, and annotate each step with the maintained invariant and complexity."
+}

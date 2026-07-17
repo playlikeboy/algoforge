@@ -1,0 +1,161 @@
+{
+  "id": "1803",
+  "number": 1803,
+  "slug": "count-pairs-with-xor-in-a-range",
+  "title": "Count Pairs With XOR in a Range",
+  "difficulty": "Hard",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dynamic-programming",
+    "trie"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/count-pairs-with-xor-in-a-range/",
+  "notes": [
+    "DP",
+    "Trie"
+  ],
+  "relatedSlugs": [
+    "construct-string-with-minimum-cost",
+    "extra-characters-in-a-string",
+    "construct-string-with-minimum-cost-easy",
+    "regular-expression-matching",
+    "edit-distance",
+    "scramble-string",
+    "interleaving-string",
+    "distinct-subsequences"
+  ],
+  "prevSlug": "maximum-value-at-a-given-index-in-a-bounded-array",
+  "nextSlug": "implement-trie-ii-prefix-tree",
+  "estimatedMinutes": 60,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Count Pairs With XOR in a Range?\n\n**Count Pairs With XOR in a Range** (LeetCode #1803) is a **Hard** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming and trie**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: DP, Trie.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/count-pairs-with-xor-in-a-range/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Count Pairs With XOR in a Range\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming and trie**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(n)** space.\n\n### Pattern focus: dynamic programming and trie\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n- **trie** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Count Pairs With XOR in a Range\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming and trie — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming and trie**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Count Pairs With XOR in a Range** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "count-pairs-with-xor-in-a-range.cpp",
+      "code": "// Time:  O(n)\n// Space: O(n)\n\n// dp solution\nclass Solution {\npublic:\n    int countPairs(vector<int>& nums, int low, int high) {\n        return count(nums, high + 1) - count(nums, low);\n    }\n\nprivate:\n    int count(const vector<int>& nums, int x) {\n        unordered_map<int, int> dp;\n        for (const auto& x : nums) {\n            ++dp[x];\n        }\n        int result = 0;\n        for (; x; x >>= 1) {\n            unordered_map<int, int> new_dp;\n            for (auto const& [k, v] : dp) {\n                new_dp[k >> 1] += v;\n                if ((x & 1) == 0) {\n                    continue;\n                }\n                if (dp.count((x ^ 1) ^ k)) {\n                    result += v * dp[(x ^ 1) ^ k];  // current limit is xxxxx1*****, count xor pair with xxxxx0***** pattern\n                }\n            }\n            dp = move(new_dp);\n        }\n        return result / 2;\n    }\n};\n\n// Time:  O(n)\n// Space: O(n)\n// trie solution\nclass Solution2 {\npublic:\n    int countPairs(vector<int>& nums, int low, int high) {\n        int result = 0;\n        Trie trie;\n        for (const auto& x : nums) {\n            result += trie.query(x, high + 1) - trie.query(x, low);\n            trie.insert(x);\n        }\n        return result;\n    }\n\nprivate:\n    class Trie {\n    public:\n        Trie() : nodes(1) {}\n\n        void insert(int num) {\n            int idx = 0;\n            for (int i = 31; i >= 0; --i) {\n                int curr = (num >> i) & 1;\n                if (!nodes[idx][curr]) {\n                    nodes.emplace_back();\n                    nodes[idx][curr] = size(nodes) - 1;\n                }\n                idx = nodes[idx][curr];\n                ++nodes[idx][2];\n            }\n        }\n\n        int query(int num, int limit) {\n            int result = 0, idx = 0;\n            for (int i = 31; i >= 0; --i) {\n                int curr = (num >> i) & 1;\n                int bit = (limit >> i) & 1;\n                if (bit) {\n                    if (nodes[idx][curr]) {\n                        result += nodes[nodes[idx][0 ^ curr]][2];  // current limit is xxxxx1*****, count xor pair with xxxxx0***** pattern\n                    }\n                }\n                if (!nodes[idx][bit ^ curr]) {\n                    break;\n                }\n                idx = nodes[idx][bit ^ curr];\n            }\n            return result;\n        }\n\n    private:\n        vector<array<int, 3>> nodes;\n    };\n};\n",
+      "sourcePath": "C++/count-pairs-with-xor-in-a-range.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "count-pairs-with-xor-in-a-range.py",
+      "code": "# Time:  O(n)\n# Space: O(n)\n\nimport collections\n\n\n# dp solution\nclass Solution(object):\n    def countPairs(self, nums, low, high):\n        \"\"\"\n        :type nums: List[int]\n        :type low: int\n        :type high: int\n        :rtype: int\n        \"\"\"\n        def count(nums, x):\n            result = 0\n            dp = collections.Counter(nums)\n            while x:\n                if x&1:\n                    result += sum(dp[(x^1)^k]*dp[k] for k in dp.iterkeys())//2  # current limit is xxxxx1*****, count xor pair with xxxxx0***** pattern\n                dp = collections.Counter({k>>1: dp[k]+dp[k^1] for k in dp.iterkeys()})\n                x >>= 1\n            return result\n    \n        return count(nums, high+1)-count(nums, low)\n\n\n# Time:  O(n)\n# Space: O(n)\n# trie solution\nclass Trie(object):\n    def __init__(self):\n        self.__root = {}\n        \n    def insert(self, num):\n        node = self.__root\n        for i in reversed(xrange(32)):\n            curr = (num>>i) & 1\n            if curr not in node:\n                node[curr] = {\"_count\":0}\n            node = node[curr]\n            node[\"_count\"] += 1\n                \n    def query(self, num, limit):\n        node, result = self.__root, 0\n        for i in reversed(xrange(32)):\n            curr = (num>>i) & 1\n            bit = (limit>>i) & 1\n            if bit:\n                if curr in node:\n                    result += node[0^curr][\"_count\"]  # current limit is xxxxx1*****, count xor pair with xxxxx0***** pattern\n            if bit^curr not in node:\n                break\n            node = node[bit^curr]\n        return result\n\n\nclass Solution2(object):\n    def countPairs(self, nums, low, high):\n        \"\"\"\n        :type nums: List[int]\n        :type low: int\n        :type high: int\n        :rtype: int\n        \"\"\"\n        result = 0\n        trie = Trie()\n        for x in nums:\n            result += trie.query(x, high+1)-trie.query(x, low)\n            trie.insert(x)\n        return result\n",
+      "sourcePath": "Python/count-pairs-with-xor-in-a-range.py"
+    }
+  },
+  "seo": {
+    "title": "Count Pairs With XOR in a Range Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Count Pairs With XOR in a Range (LeetCode #1803). Pattern: dynamic programming. Time O(n), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Count Pairs With XOR in a Range",
+      "Count Pairs With XOR in a Range solution",
+      "Count Pairs With XOR in a Range leetcode",
+      "dynamic-programming",
+      "dynamic-programming",
+      "trie",
+      "hard"
+    ],
+    "canonicalPath": "/problems/count-pairs-with-xor-in-a-range"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Count Pairs With XOR in a Range?",
+      "answer": "The reference solutions aim for O(n) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Count Pairs With XOR in a Range use?",
+      "answer": "It primarily maps to dynamic programming and trie, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Count Pairs With XOR in a Range good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/count-pairs-with-xor-in-a-range/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming and trie approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Count Pairs With XOR in a Range (#1803) — Hard. Pattern: dynamic programming and trie. Complexity: O(n) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Count Pairs With XOR in a Range: show input structure (dynamic programming), highlight the moving parts of the dynamic programming and trie approach, and annotate each step with the maintained invariant and complexity."
+}

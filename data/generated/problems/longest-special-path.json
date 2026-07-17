@@ -1,0 +1,167 @@
+{
+  "id": "3425",
+  "number": 3425,
+  "slug": "longest-special-path",
+  "title": "Longest Special Path",
+  "difficulty": "Hard",
+  "topics": [
+    "two-pointers"
+  ],
+  "patterns": [
+    "dfs-backtracking",
+    "two-pointers",
+    "sliding-window",
+    "prefix-sum"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n + e)",
+  "spaceComplexity": "O(n + e)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/longest-special-path/",
+  "notes": [
+    "DFS",
+    "Two Pointers",
+    "Sliding Window",
+    "Prefix Sum"
+  ],
+  "relatedSlugs": [
+    "longest-special-path-ii",
+    "maximum-difference-between-even-and-odd-frequency-ii",
+    "valid-subarrays-with-matching-sum-digits-ii",
+    "valid-subarrays-with-matching-sum-digits-i",
+    "count-substrings-that-satisfy-k-constraint-ii",
+    "minimum-size-subarray-in-infinite-array",
+    "minimize-connected-groups-by-inserting-interval",
+    "subarrays-with-k-different-integers"
+  ],
+  "prevSlug": "minimum-cost-to-make-arrays-identical",
+  "nextSlug": "manhattan-distances-of-all-arrangements-of-pieces",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Longest Special Path?\n\n**Longest Special Path** (LeetCode #3425) is a **Hard** problem that primarily trains **two pointers**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dfs backtracking, two pointers, sliding window, and prefix sum**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: DFS, Two Pointers, Sliding Window, Prefix Sum.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/longest-special-path/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Longest Special Path\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dfs backtracking, two pointers, sliding window, and prefix sum**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n + e)) and **space** (O(n + e)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n + e)** time and **O(n + e)** space.\n\n### Pattern focus: dfs backtracking, two pointers, sliding window, and prefix sum\n\nUse the pattern as a checklist:\n\n- **dfs backtracking** — confirm the invariant holds after each step\n- **two pointers** — confirm the invariant holds after each step\n- **sliding window** — confirm the invariant holds after each step\n- **prefix sum** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n + e)** |\n| Space | **O(n + e)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Longest Special Path\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dfs backtracking, two pointers, sliding window, and prefix sum — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dfs backtracking, two pointers, sliding window, and prefix sum**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **two pointers**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Longest Special Path** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **two pointers**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "longest-special-path.cpp",
+      "code": "// Time:  O(n + e)\n// Space: O(n + e)\n\n// iterative dfs, two pointers, sliding window, prefix sum\nclass Solution {\npublic:\n    vector<int> longestSpecialPath(vector<vector<int>>& edges, vector<int>& nums) {\n        vector<vector<pair<int, int>>> adj(size(nums));\n        for (const auto& e : edges) {\n            adj[e[0]].emplace_back(e[1], e[2]);\n            adj[e[1]].emplace_back(e[0], e[2]);\n        }\n        const auto& iter_dfs = [&]() {\n            vector<int> result(2, numeric_limits<int>::max());\n            unordered_map<int, int> lookup;\n            vector<int> prefix = {0};\n            vector<tuple<int, int, int, int, int, int, int>> stk = {{1, 0, -1, 0, -1, -1, -1}};\n            while (!empty(stk)) {\n                auto [step, u, p, d, left, i, prev_d] = stk.back(); stk.pop_back();\n                if (step == 1) {\n                    int prev_d;\n                    tie(prev_d, lookup[nums[u] - 1]) = pair(lookup.count(nums[u] - 1) ? lookup[nums[u] - 1] : -1, d);\n                    left = max(left, prev_d);\n                    result = min(result, vector<int>{-(prefix[(d - 1) + 1] - prefix[left + 1]), d - left});\n                    stk.emplace_back(4, u, -1, -1, -1, -1, prev_d);\n                    stk.emplace_back(2, u, p, d, left, 0, -1);\n                } else if (step == 2) {\n                    if (i == size(adj[u])) {\n                        continue;\n                    }\n                    stk.emplace_back(2, u, p, d, left, i + 1, -1);\n                    auto [v, l] = adj[u][i];\n                    if (v == p) {\n                        continue;\n                    }\n                    prefix.emplace_back(prefix.back() + l);\n                    stk.emplace_back(3, -1, -1, -1, -1, -1, -1);\n                    stk.emplace_back(1, v, u, d+1, left, -1, -1);\n                } else if (step == 3) {\n                    prefix.pop_back();\n                } else if (step == 4) {\n                    lookup[nums[u] - 1] = prev_d;\n                }\n            }\n            return vector<int>{-result[0], result[1]};\n        };\n    \n        return iter_dfs();\n    }\n};\n\n// Time:  O(n + e)\n// Space: O(n + e)\n// dfs, two pointers, sliding window, prefix sum\nclass Solution2 {\npublic:\n    vector<int> longestSpecialPath(vector<vector<int>>& edges, vector<int>& nums) {\n        vector<vector<pair<int, int>>> adj(size(nums));\n        for (const auto& e : edges) {\n            adj[e[0]].emplace_back(e[1], e[2]);\n            adj[e[1]].emplace_back(e[0], e[2]);\n        }\n        unordered_map<int, int> lookup;\n        vector<int> prefix = {0};\n        vector<int> result(2, numeric_limits<int>::max());\n        const function<void (int, int, int, int)> dfs = [&](int u, int p, int d, int left) {\n            int prev_d;\n            tie(prev_d, lookup[nums[u] - 1]) = pair(lookup.count(nums[u] - 1) ? lookup[nums[u] - 1] : -1, d);\n            left = max(left, prev_d);\n            result = min(result, vector<int>{-(prefix[(d - 1) + 1] - prefix[left + 1]), d - left});\n            for (const auto& [v, l] : adj[u]) {\n                if (v == p) {\n                    continue;\n                }\n                prefix.emplace_back(prefix.back() + l);\n                dfs(v, u, d + 1, left);\n                prefix.pop_back();\n            }\n            lookup[nums[u] - 1] = prev_d;\n        };\n    \n        dfs(0, -1, 0, -1);\n        return {-result[0], result[1]};\n    }\n};\n",
+      "sourcePath": "C++/longest-special-path.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "longest-special-path.py",
+      "code": "# Time:  O(n + e)\n# Space: O(n + e)\n\nimport collections\n\n\n# iterative dfs, two pointers, sliding window, prefix sum\nclass Solution(object):\n    def longestSpecialPath(self, edges, nums):\n        \"\"\"\n        :type edges: List[List[int]]\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        def iter_dfs():\n            result = [float(\"inf\")]*2\n            lookup = collections.defaultdict(lambda: -1)\n            prefix = [0]\n            stk = [(1, (0, -1, 0, -1))]\n            while stk:\n                step, args = stk.pop()\n                if step == 1:\n                    u, p, d, left = args\n                    prev_d, lookup[nums[u]-1] = lookup[nums[u]-1], d\n                    left = max(left, prev_d)\n                    result = min(result, [-(prefix[(d-1)+1]-prefix[left+1]), d-left])\n                    stk.append((4, (u, prev_d)))\n                    stk.append((2, (u, p, d, left, 0)))\n                elif step == 2:\n                    u, p, d, left, i = args\n                    if i == len(adj[u]):\n                        continue\n                    stk.append((2, (u, p, d, left, i+1)))\n                    v, l = adj[u][i]\n                    if v == p:\n                        continue\n                    prefix.append(prefix[-1]+l)\n                    stk.append((3, None))\n                    stk.append((1, (v, u, d+1, left)))\n                elif step == 3:\n                    prefix.pop()\n                elif step == 4:\n                    u, prev_d = args\n                    lookup[nums[u]-1] = prev_d\n            return [-result[0], result[1]]\n    \n        adj = [[] for _ in xrange(len(nums))]\n        for u, v, l in edges:\n            adj[u].append((v, l))\n            adj[v].append((u, l))        \n        return iter_dfs()\n\n\n# Time:  O(n + e)\n# Space: O(n + e)\nimport collections\n\n\n# dfs, two pointers, sliding window, prefix sum\nclass Solution2(object):\n    def longestSpecialPath(self, edges, nums):\n        \"\"\"\n        :type edges: List[List[int]]\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        def dfs(u, p, d, left):\n            prev_d, lookup[nums[u]-1] = lookup[nums[u]-1], d\n            left = max(left, prev_d)\n            result[0] = min(result[0], [-(prefix[(d-1)+1]-prefix[left+1]), d-left])\n            for v, l in adj[u]:\n                if v == p:\n                    continue\n                prefix.append(prefix[-1]+l)\n                dfs(v, u, d+1, left)\n                prefix.pop()\n            lookup[nums[u]-1] = prev_d\n    \n        adj = [[] for _ in xrange(len(nums))]\n        for u, v, l in edges:\n            adj[u].append((v, l))\n            adj[v].append((u, l))\n        lookup = collections.defaultdict(lambda: -1)\n        prefix = [0]\n        result = [[float(\"inf\"), float(\"inf\")]]\n        dfs(0, -1, 0, -1)\n        return [-result[0][0], result[0][1]]\n",
+      "sourcePath": "Python/longest-special-path.py"
+    }
+  },
+  "seo": {
+    "title": "Longest Special Path Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Longest Special Path (LeetCode #3425). Pattern: dfs backtracking. Time O(n + e), space O(n + e). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Longest Special Path",
+      "Longest Special Path solution",
+      "Longest Special Path leetcode",
+      "two-pointers",
+      "dfs-backtracking",
+      "two-pointers",
+      "sliding-window",
+      "prefix-sum",
+      "hard"
+    ],
+    "canonicalPath": "/problems/longest-special-path"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Longest Special Path?",
+      "answer": "The reference solutions aim for O(n + e) time and O(n + e) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Longest Special Path use?",
+      "answer": "It primarily maps to dfs backtracking, two pointers, sliding window, and prefix sum, within the broader topic of two pointers."
+    },
+    {
+      "question": "Is Longest Special Path good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/longest-special-path/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dfs backtracking, two pointers, sliding window, and prefix sum approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Longest Special Path (#3425) — Hard. Pattern: dfs backtracking, two pointers, sliding window, and prefix sum. Complexity: O(n + e) time / O(n + e) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Longest Special Path: show input structure (two pointers), highlight the moving parts of the dfs backtracking, two pointers, sliding window, and prefix sum approach, and annotate each step with the maintained invariant and complexity."
+}

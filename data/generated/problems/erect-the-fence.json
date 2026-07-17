@@ -1,0 +1,156 @@
+{
+  "id": "587",
+  "number": 587,
+  "slug": "erect-the-fence",
+  "title": "Erect the Fence",
+  "difficulty": "Hard",
+  "topics": [
+    "geometry"
+  ],
+  "patterns": [],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogn)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/erect-the-fence/",
+  "notes": [
+    "Convex Hull",
+    "Monotone Chain"
+  ],
+  "relatedSlugs": [
+    "maximum-number-of-darts-inside-of-a-circular-dartboard",
+    "best-position-for-a-service-centre",
+    "maximum-number-of-visible-points",
+    "erect-the-fence-ii",
+    "minimum-time-for-k-virus-variants-to-spread",
+    "separate-squares-ii",
+    "surface-area-of-3d-shapes",
+    "detonate-the-maximum-bombs"
+  ],
+  "prevSlug": "customer-placing-the-largest-number-of-orders",
+  "nextSlug": "design-in-memory-file-system",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Erect the Fence?\n\n**Erect the Fence** (LeetCode #587) is a **Hard** problem that primarily trains **geometry**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Convex Hull, Monotone Chain.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/erect-the-fence/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Erect the Fence\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogn)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogn)** time and **O(n)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogn)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Erect the Fence\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **geometry**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Erect the Fence** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **geometry**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "erect-the-fence.cpp",
+      "code": "// Time:  O(nlogn)\n// Space: O(n)\n\n// Monotone Chain Algorithm\n// Template: https://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain#C++\nclass Solution {\npublic:\n    vector<vector<int>> outerTrees(vector<vector<int>>& P) {\n        // 3D cross product of OA and OB vectors, (i.e z-component of their \"2D\" cross product, but remember that it is not defined in \"2D\").\n        // Returns a positive value, if OAB makes a counter-clockwise turn,\n        // negative for clockwise turn, and zero if the points are collinear.\n        const auto& cross = [](const vector<int>& O, const vector<int>& A, const vector<int>& B) {\n            return (A[0] - O[0]) * (B[1] - O[1]) - (A[1] - O[1]) * (B[0] - O[0]);\n        };\n\n        // Returns a list of points on the convex hull in counter-clockwise order.\n        // Note: the last point in the returned list is the same as the first one.\n        size_t n = P.size(), k = 0;\n        if (n <= 3) {\n            return P;\n        }\n        vector<vector<int>> H(2*n);\n\n        // Sort points lexicographically\n        sort(P.begin(), P.end());\n\n        // Build lower hull\n        for (size_t i = 0; i < n; ++i) {\n            while (k >= 2 && cross(H[k-2], H[k-1], P[i]) < 0) k--; // modified\n            H[k++] = P[i];\n        }\n\n        // Build upper hull\n        for (size_t i = n-1, t = k+1; i > 0; --i) {\n            while (k >= t && cross(H[k-2], H[k-1], P[i-1]) < 0) k--; // modified\n            H[k++] = P[i-1];\n        }\n\n        H.resize(--k);        \n        if (H[1] == H[k - 1]) {  // modified\n            H.resize(k / 2 + 1);\n        }\n        return H;\n    }\n};\n",
+      "sourcePath": "C++/erect-the-fence.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "erect-the-fence.py",
+      "code": "# Time:  O(nlogn)\n# Space: O(n)\n\n# Monotone Chain Algorithm\n# Template: https://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain#Python\nclass Solution(object):\n    def outerTrees(self, points):\n        \"\"\"\n        :type points: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        # Sort the points lexicographically (tuples are compared lexicographically).\n        # Remove duplicates to detect the case we have just one unique point.\n        points = sorted(set(tuple(x) for x in points))\n\n        # Boring case: no points or a single point, possibly repeated multiple times.\n        if len(points) <= 1:\n            return points\n\n        # 2D cross product of OA and OB vectors, i.e. z-component of their 3D cross product.\n        # Returns a positive value, if OAB makes a counter-clockwise turn,\n        # negative for clockwise turn, and zero if the points are collinear.\n        def cross(o, a, b):\n            return (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0])\n\n        # Build lower hull \n        lower = []\n        for p in points:\n            while len(lower) >= 2 and cross(lower[-2], lower[-1], p) < 0:  # modified\n                lower.pop()\n            lower.append(p)\n\n        # Build upper hull\n        upper = []\n        for p in reversed(points):\n            while len(upper) >= 2 and cross(upper[-2], upper[-1], p) < 0:  # modified\n                upper.pop()\n            upper.append(p)\n\n        # Concatenation of the lower and upper hulls gives the convex hull.\n        # Last point of each list is omitted because it is repeated at the beginning of the other list. \n        result = lower[:-1] + upper[:-1]\n        return result if result[1] != result[-1] else result[:len(result)//2+1]  # modified\n",
+      "sourcePath": "Python/erect-the-fence.py"
+    }
+  },
+  "seo": {
+    "title": "Erect the Fence Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Erect the Fence (LeetCode #587). Pattern: algorithms. Time O(nlogn), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Erect the Fence",
+      "Erect the Fence solution",
+      "Erect the Fence leetcode",
+      "geometry",
+      "hard"
+    ],
+    "canonicalPath": "/problems/erect-the-fence"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Erect the Fence?",
+      "answer": "The reference solutions aim for O(nlogn) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Erect the Fence use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of geometry."
+    },
+    {
+      "question": "Is Erect the Fence good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/erect-the-fence/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Erect the Fence (#587) — Hard. Pattern: general problem-solving. Complexity: O(nlogn) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Erect the Fence: show input structure (geometry), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

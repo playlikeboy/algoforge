@@ -1,0 +1,158 @@
+{
+  "id": "3573",
+  "number": 3573,
+  "slug": "best-time-to-buy-and-sell-stock-v",
+  "title": "Best Time to Buy and Sell Stock V",
+  "difficulty": "Medium",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dynamic-programming"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n * k)",
+  "spaceComplexity": "O(k)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-v/",
+  "notes": [
+    "DP"
+  ],
+  "relatedSlugs": [
+    "unique-paths",
+    "unique-paths-ii",
+    "minimum-path-sum",
+    "decode-ways",
+    "unique-binary-search-trees",
+    "triangle",
+    "word-break",
+    "maximum-product-subarray"
+  ],
+  "prevSlug": "maximize-ysum-by-picking-a-triplet-of-distinct-xvalues",
+  "nextSlug": "maximize-subarray-gcd-score",
+  "estimatedMinutes": 45,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Best Time to Buy and Sell Stock V?\n\n**Best Time to Buy and Sell Stock V** (LeetCode #3573) is a **Medium** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: DP.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-v/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Best Time to Buy and Sell Stock V\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n * k)) and **space** (O(k)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n * k)** time and **O(k)** space.\n\n### Pattern focus: dynamic programming\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n * k)** |\n| Space | **O(k)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Best Time to Buy and Sell Stock V\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Best Time to Buy and Sell Stock V** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "best-time-to-buy-and-sell-stock-v.cpp",
+      "code": "// Time:  O(n * k)\n// Space: O(k)\n\n// dp\nclass Solution {\npublic:\n    long long maximumProfit(vector<int>& prices, int k) {\n        static const int64_t NEG_INF = numeric_limits<int64_t>::min();\n\n        vector<int64_t> dp(size(prices) + 1);\n        int64_t result = 0;\n        for (int i = 0; i < k; ++i) {\n            vector<int64_t> new_dp(size(prices) + 1, NEG_INF);\n            int64_t x = NEG_INF, y = NEG_INF;\n            for (int j = i; j < size(prices); ++j) {\n                x = max(x, dp[j] - prices[j]);\n                y = max(y, dp[j] + prices[j]);\n                new_dp[j + 1] = max({new_dp[j], x + prices[j], y - prices[j]});\n            }\n            dp = move(new_dp);\n            result = max(result, dp.back());\n        }\n        return result;\n    }\n};\n\n// Time:  O(n * k)\n// Space: O(k)\n// dp\nclass Solution2 {\npublic:\n    long long maximumProfit(vector<int>& prices, int k) {\n        static const int64_t NEG_INF = numeric_limits<int64_t>::min();\n\n        vector<int64_t> bought(k, NEG_INF);\n        vector<int64_t> sold(k, NEG_INF);\n        vector<int64_t> result(k + 1);\n        for (const auto& x : prices) {\n            for (int i = k - 1; i >= 0; --i) {\n                if (bought[i] != NEG_INF) {\n                    result[i + 1] = max(result[i + 1], bought[i] + x);\n                }\n                if (sold[i] != NEG_INF) {\n                    result[i + 1] = max(result[i + 1], sold[i] - x);\n                }\n                if (result[i] != NEG_INF) {\n                    bought[i] = max(bought[i], result[i] - x);\n                    sold[i] = max(sold[i], result[i] + x);\n                }\n            }\n        }\n        return result.back();\n    }\n};\n\n// Time:  O(n * k)\n// Space: O(k)\n// dp\nclass Solution3 {\npublic:\n    long long maximumProfit(vector<int>& prices, int k) {\n        static const int64_t NEG_INF = numeric_limits<int64_t>::min();\n\n        vector<int64_t> bought(k, NEG_INF);\n        vector<int64_t> sold(k, NEG_INF);\n        vector<int64_t> result(k + 1, NEG_INF);\n        result[0] = 0;\n        for (const auto& x : prices) {\n            for (int i = k - 1; i >= 0; --i) {\n                if (bought[i] != NEG_INF) {\n                    result[i + 1] = max(result[i + 1], bought[i] + x);\n                }\n                if (sold[i] != NEG_INF) {\n                    result[i + 1] = max(result[i + 1], sold[i] - x);\n                }\n                if (result[i] != NEG_INF) {\n                    bought[i] = max(bought[i], result[i] - x);\n                    sold[i] = max(sold[i], result[i] + x);\n                }\n            }\n        }\n        return ranges::max(result);\n    }\n};\n",
+      "sourcePath": "C++/best-time-to-buy-and-sell-stock-v.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "best-time-to-buy-and-sell-stock-v.py",
+      "code": "# Time:  O(n * k)\n# Space: O(k)\n\n# dp\nclass Solution(object):\n    def maximumProfit(self, prices, k):\n        \"\"\"\n        :type prices: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        dp = [0]*(len(prices)+1)\n        result = 0\n        for i in xrange(k):\n            x, y = float(\"-inf\"), float(\"-inf\")\n            new_dp = [float(\"-inf\")]*(len(prices)+1)\n            for j in xrange(i, len(prices)):\n                x, y = max(x, dp[j]-prices[j]), max(y, dp[j]+prices[j])\n                new_dp[j+1] = max(new_dp[j], x+prices[j], y-prices[j])\n            dp = new_dp\n            result = max(result, dp[-1])\n        return result\n\n\n# Time:  O(n * k)\n# Space: O(k)\n# dp\nclass Solution(object):\n    def maximumProfit(self, prices, k):\n        \"\"\"\n        :type prices: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        bought = [float(\"-inf\")]*k\n        sold = [float(\"-inf\")]*k\n        result = [0]*(k+1)\n        for x in prices:\n            for i in reversed(xrange(k)):\n                result[i+1] = max(result[i+1], bought[i]+x, sold[i]-x)\n                bought[i] = max(bought[i], result[i]-x)\n                sold[i] = max(sold[i], result[i]+x)\n        return result[-1]\n\n\n# Time:  O(n * k)\n# Space: O(k)\n# dp\nclass Solution3(object):\n    def maximumProfit(self, prices, k):\n        \"\"\"\n        :type prices: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        bought = [float(\"-inf\")]*k\n        sold = [float(\"-inf\")]*k\n        result = [float(\"-inf\")]*(k+1)\n        result[0] = 0\n        for x in prices:\n            for i in reversed(xrange(k)):\n                result[i+1] = max(result[i+1], bought[i]+x, sold[i]-x)\n                bought[i] = max(bought[i], result[i]-x)\n                sold[i] = max(sold[i], result[i]+x)\n        return max(result)\n",
+      "sourcePath": "Python/best-time-to-buy-and-sell-stock-v.py"
+    }
+  },
+  "seo": {
+    "title": "Best Time to Buy and Sell Stock V Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Best Time to Buy and Sell Stock V (LeetCode #3573). Pattern: dynamic programming. Time O(n * k), space O(k). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Best Time to Buy and Sell Stock V",
+      "Best Time to Buy and Sell Stock V solution",
+      "Best Time to Buy and Sell Stock V leetcode",
+      "dynamic-programming",
+      "dynamic-programming",
+      "medium"
+    ],
+    "canonicalPath": "/problems/best-time-to-buy-and-sell-stock-v"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Best Time to Buy and Sell Stock V?",
+      "answer": "The reference solutions aim for O(n * k) time and O(k) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Best Time to Buy and Sell Stock V use?",
+      "answer": "It primarily maps to dynamic programming, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Best Time to Buy and Sell Stock V good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-v/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Best Time to Buy and Sell Stock V (#3573) — Medium. Pattern: dynamic programming. Complexity: O(n * k) time / O(k) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Best Time to Buy and Sell Stock V: show input structure (dynamic programming), highlight the moving parts of the dynamic programming approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "microsoft-two-pointers-questions",
+  "path": "/explore/microsoft-two-pointers-questions",
+  "h1": "Best Two Pointers Questions for Microsoft",
+  "intro": "A curated set of 7 Two Pointers problems frequently useful for Microsoft interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "3sum",
+    "remove-nth-node-from-end-of-list",
+    "partition-list",
+    "linked-list-cycle",
+    "linked-list-cycle-ii",
+    "find-the-duplicate-number",
+    "reverse-string"
+  ],
+  "faqs": [
+    {
+      "question": "How many Two Pointers problems should I do for Microsoft?",
+      "answer": "Quality over quantity: master patterns with 7 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Two Pointers topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/microsoft",
+      "label": "Microsoft interview hub"
+    },
+    {
+      "href": "/topics/two-pointers",
+      "label": "Two Pointers problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Two Pointers Questions for Microsoft | AlgoForge",
+    "description": "Top Two Pointers coding interview questions for Microsoft. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Microsoft Two Pointers questions",
+      "Two Pointers interview",
+      "Microsoft leetcode"
+    ],
+    "canonicalPath": "/explore/microsoft-two-pointers-questions"
+  },
+  "kind": "company-topic"
+}

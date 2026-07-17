@@ -1,0 +1,159 @@
+{
+  "id": "2827",
+  "number": 2827,
+  "slug": "number-of-beautiful-integers-in-the-range",
+  "title": "Number of Beautiful Integers in the Range",
+  "difficulty": "Hard",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dynamic-programming"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n^2 * k)",
+  "spaceComplexity": "O(n * k)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/number-of-beautiful-integers-in-the-range/",
+  "notes": [
+    "DP",
+    "Memoization"
+  ],
+  "relatedSlugs": [
+    "regular-expression-matching",
+    "edit-distance",
+    "scramble-string",
+    "interleaving-string",
+    "distinct-subsequences",
+    "best-time-to-buy-and-sell-stock-iii",
+    "palindrome-partitioning-ii",
+    "dungeon-game"
+  ],
+  "prevSlug": "sorting-three-groups",
+  "nextSlug": "check-if-a-string-is-an-acronym-of-words",
+  "estimatedMinutes": 60,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Number of Beautiful Integers in the Range?\n\n**Number of Beautiful Integers in the Range** (LeetCode #2827) is a **Hard** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: DP, Memoization.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/number-of-beautiful-integers-in-the-range/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Number of Beautiful Integers in the Range\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n^2 * k)) and **space** (O(n * k)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n^2 * k)** time and **O(n * k)** space.\n\n### Pattern focus: dynamic programming\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n^2 * k)** |\n| Space | **O(n * k)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Number of Beautiful Integers in the Range\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Number of Beautiful Integers in the Range** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "number-of-beautiful-integers-in-the-range.cpp",
+      "code": "// Time:  O(n^2 * k), n = len(str(high))\n// Space: O(n^2 * k)\n\n// memoization (faster but more space)\nclass Solution {\npublic:\n    int numberOfBeautifulIntegers(int low, int high, int k) {\n        enum {TIGHT, UNTIGHT, UNBOUND};\n\n        const auto& to_digits = [](int x) {\n            vector<int> result;\n            for (; x; x /= 10) {\n                result.emplace_back(x % 10);\n            }\n            reverse(begin(result), end(result));\n            return !empty(result) ? result : vector<int>{0};\n        };\n\n        const auto& f = [&](int x) {\n            const auto& digits = to_digits(x);\n            vector<vector<vector<vector<int>>>> lookup(size(digits), vector<vector<vector<int>>>(3, vector<vector<int>>(2 * size(digits) + 1, vector<int>(k, -1))));\n            function<int (int, int, int, int)> memoization = [&](int i, int state, int diff, int total) {\n                if (i == size(digits)) {\n                    return static_cast<int>(state != UNBOUND && diff == size(digits) && total == 0);\n                }\n                if (lookup[i][state][diff][total] == -1) {\n                    int result = static_cast<int>(i != 0 && diff == size(digits) && total == 0);  // count if the beautiful integer x s.t. len(str(x)) < len(digits)\n                    for (int d = (i == 0) ? 1 : 0; d <= 9; ++d) {\n                        int new_state = state;\n                        if (state == TIGHT && d != digits[i]) {\n                            new_state = d < digits[i] ? UNTIGHT : UNBOUND;\n                        }\n                        const int new_diff = diff + (d % 2 == 0 ? 1 : -1);\n                        const int new_total = (total * 10 + d) % k;\n                        result += memoization(i + 1, new_state, new_diff, new_total);\n                    }\n                    lookup[i][state][diff][total] = result;\n                }\n                return lookup[i][state][diff][total];\n            };\n    \n            return memoization(0, TIGHT, size(digits), 0);\n        };\n\n        return f(high) - f(low - 1);\n    }\n};\n\n// Time:  O(n^2 * k), n = len(str(high))\n// Space: O(n * k)\n// dp (slower but less space)\nclass Solution2 {\npublic:\n    int numberOfBeautifulIntegers(int low, int high, int k) {\n        enum {TIGHT, UNTIGHT, UNBOUND};\n\n        const auto& to_digits = [](int x) {\n            vector<int> result;\n            for (; x; x /= 10) {\n                result.emplace_back(x % 10);\n            }\n            reverse(begin(result), end(result));\n            return !empty(result) ? result : vector<int>{0};\n        };\n\n        const auto& f = [&](int x) {\n            const auto& digits = to_digits(x);\n            vector<vector<vector<int64_t>>> dp(3, vector<vector<int64_t>>(2 * size(digits) + 1, vector<int64_t>(k)));\n            for (int tight = 0; tight < 2; ++tight) {\n                for (const auto& state : {TIGHT, UNTIGHT}) {\n                    dp[state][size(digits)][0] = 1;;\n                }\n            }\n            for (int i = size(digits) - 1; i >= 0; --i) {\n                vector<vector<vector<int64_t>>> new_dp(3, vector<vector<int64_t>>(2 * size(digits) + 1, vector<int64_t>(k)));\n                for (const auto& state : {TIGHT, UNTIGHT, UNBOUND}) {\n                    new_dp[state][size(digits)][0] = static_cast<int>(i != 0);  // count if the beautiful integer x s.t. len(str(x)) < len(digits)\n                    for (int d = (i == 0) ? 1 : 0; d <= 9; ++d) {\n                        int new_state = state;\n                        if (state == TIGHT && d != digits[i]) {\n                            new_state = d < digits[i] ? UNTIGHT : UNBOUND;\n                        }\n                        for (int diff = 0; diff < 2 * size(digits) + 1; ++diff) {\n                            const int new_diff = diff + (d % 2 == 0 ? 1 : -1);\n                            if (!(0 <= new_diff && new_diff < 2 * size(digits) + 1)) {\n                                continue;\n                            }\n                            for (int total = 0; total < k; ++total) {\n                                const int new_total = (total * 10 + d) % k;\n                                new_dp[state][diff][total] += dp[new_state][new_diff][new_total];\n                            }\n                        }\n                    }\n                }\n                dp = move(new_dp);\n            }\n            return dp[TIGHT][size(digits)][0];\n        };\n\n        return f(high) - f(low - 1);\n    }\n};\n\n// Time:  O(n^2 * k), n = len(str(high))\n// Space: O(n^2 * k)\n// memoization (faster but more space)\nclass Solution3 {\npublic:\n    int numberOfBeautifulIntegers(int low, int high, int k) {\n        const auto& to_digits = [](int x) {\n            vector<int> result;\n            for (; x; x /= 10) {\n                result.emplace_back(x % 10);\n            }\n            reverse(begin(result), end(result));\n            return !empty(result) ? result : vector<int>{0};\n        };\n\n        const auto& f = [&](int x) {\n            const auto& digits = to_digits(x);\n            vector<vector<vector<vector<vector<int>>>>> lookup(size(digits), vector<vector<vector<vector<int>>>>(2, vector<vector<vector<int>>>(2, vector<vector<int>>(2 * size(digits) + 1, vector<int>(k, -1)))));\n            function<int (int, int, int, int, int)> memoization = [&](int i, int zero, int tight, int diff, int total) {\n                if (i == size(digits)) {\n                    return static_cast<int>(zero == 0 && diff == size(digits) && total == 0);\n                }\n                if (lookup[i][zero][tight][diff][total] == -1) {\n                    int result = 0;\n                    for (int d = 0; d <= (tight ? digits[i] : 9); ++d) {\n                        const int new_zero = static_cast<int>(zero && d == 0);\n                        const int new_tight = static_cast<int>(tight && d == digits[i]);\n                        const int new_diff = diff + (new_zero == 0 ? (d % 2 == 0 ? 1 : -1): 0);\n                        const int new_total = (total * 10 + d) % k;\n                        result += memoization(i + 1, new_zero, new_tight, new_diff, new_total);\n                    }\n                    lookup[i][zero][tight][diff][total] = result;\n                }\n                return lookup[i][zero][tight][diff][total];\n            };\n    \n            return memoization(0, 1, 1, size(digits), 0);\n        };\n\n        return f(high) - f(low - 1);\n    }\n};\n\n// Time:  O(n^2 * k), n = len(str(high))\n// Space: O(n * k)\n// dp (slower but less space)\nclass Solution4 {\npublic:\n    int numberOfBeautifulIntegers(int low, int high, int k) {\n        const auto& to_digits = [](int x) {\n            vector<int> result;\n            for (; x; x /= 10) {\n                result.emplace_back(x % 10);\n            }\n            reverse(begin(result), end(result));\n            return !empty(result) ? result : vector<int>{0};\n        };\n\n        const auto& f = [&](int x) {\n            const auto& digits = to_digits(x);\n            vector<vector<vector<vector<int64_t>>>> dp(2, vector<vector<vector<int64_t>>>(2, vector<vector<int64_t>>(2 * size(digits) + 1, vector<int64_t>(k))));\n            for (int tight = 0; tight < 2; ++tight) {\n                dp[0][tight][size(digits)][0] = 1;\n            }\n            for (int i = size(digits) - 1; i >= 0; --i) {\n                vector<vector<vector<vector<int64_t>>>> new_dp(2, vector<vector<vector<int64_t>>>(2, vector<vector<int64_t>>(2 * size(digits) + 1, vector<int64_t>(k))));\n                for (int zero = 0; zero < 2; ++zero) {\n                    for (int tight = 0; tight < 2; ++tight) {\n                        for (int d = 0; d <= (tight ? digits[i] : 9); ++d) {\n                            const int new_zero = static_cast<int>(zero && d == 0);\n                            const int new_tight = static_cast<int>(tight && d == digits[i]);\n                            for (int diff = 0; diff < 2 * size(digits) + 1; ++diff) {\n                                const int new_diff = diff + (new_zero == 0 ? (d % 2 == 0 ? 1 : -1): 0);\n                                if (!(0 <= new_diff && new_diff < 2 * size(digits) + 1)) {\n                                    continue;\n                                }\n                                for (int total = 0; total < k; ++total) {\n                                    const int new_total = (total * 10 + d) % k;\n                                    new_dp[zero][tight][diff][total] += dp[new_zero][new_tight][new_diff][new_total];\n                                }\n                            }\n                        }\n                    }\n                }\n                dp = move(new_dp);\n            }\n            return dp[1][1][size(digits)][0];\n        };\n\n        return f(high) - f(low - 1);\n    }\n};\n",
+      "sourcePath": "C++/number-of-beautiful-integers-in-the-range.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "number-of-beautiful-integers-in-the-range.py",
+      "code": "# Time:  O(n^2 * k), n = len(str(high))\n# Space: O(n^2 * k)\n\n# memoization (faster but more space)\nclass Solution(object):\n    def numberOfBeautifulIntegers(self, low, high, k):\n        \"\"\"\n        :type low: int\n        :type high: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        TIGHT, UNTIGHT, UNBOUND = range(3)\n        def f(x):\n            digits = map(int, str(x))\n            lookup = [[[[-1]*k for _ in xrange(2*len(digits)+1)] for _ in xrange(3)] for _ in xrange(len(digits))]\n            def memoization(i, state, diff, total):\n                if i == len(digits):\n                    return int(state != UNBOUND and diff == total == 0)\n                if lookup[i][state][diff][total] == -1:\n                    result = int(i != 0 and diff == total == 0)  # count if the beautiful integer x s.t. len(str(x)) < len(digits)\n                    for d in xrange(1 if i == 0 else 0, 10):\n                        new_state = state\n                        if state == TIGHT and d != digits[i]:\n                            new_state = UNTIGHT if d < digits[i] else UNBOUND\n                        new_diff = diff+(1 if d%2 == 0 else -1)\n                        new_total = (total*10+d)%k\n                        result += memoization(i+1, new_state, new_diff, new_total)\n                    lookup[i][state][diff][total] = result\n                return lookup[i][state][diff][total]\n    \n            return memoization(0, TIGHT, 0, 0)\n\n        return f(high)-f(low-1)\n\n\n# Time:  O(n^2 * k), n = len(str(high))\n# Space: O(n * k)\n# dp (slower but less space)\nclass Solution2(object):\n    def numberOfBeautifulIntegers(self, low, high, k):\n        \"\"\"\n        :type low: int\n        :type high: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        TIGHT, UNTIGHT, UNBOUND = range(3)\n        def f(x):\n            digits = map(int, str(x))\n            dp = [[[0]*k for _ in xrange(2*len(digits)+1)] for _ in xrange(3)]\n            for tight in xrange(2):\n                for state in (TIGHT, UNTIGHT):\n                    dp[state][0][0] = 1\n            for i in reversed(xrange(len(digits))):\n                new_dp = [[[0]*k for _ in xrange(2*len(digits)+1)] for _ in xrange(3)]\n                for state in (TIGHT, UNTIGHT, UNBOUND):\n                    new_dp[state][0][0] = int(i != 0)  # count if the beautiful integer x s.t. len(str(x)) < len(digits)\n                    for d in xrange(1 if i == 0 else 0, 10):\n                        new_state = state\n                        if state == TIGHT and d != digits[i]:\n                            new_state = UNTIGHT if d < digits[i] else UNBOUND\n                        for diff in xrange(-len(digits), len(digits)+1):\n                            new_diff = diff+(1 if d%2 == 0 else -1)\n                            for total in xrange(k):\n                                new_total = (total*10+d)%k\n                                new_dp[state][diff][total] += dp[new_state][new_diff][new_total]\n                dp = new_dp\n            return dp[TIGHT][0][0]\n\n        return f(high)-f(low-1)\n\n\n# Time:  O(n^2 * k), n = len(str(high))\n# Space: O(n^2 * k)\n# memoization (faster but more space)\nclass Solution3(object):\n    def numberOfBeautifulIntegers(self, low, high, k):\n        \"\"\"\n        :type low: int\n        :type high: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        def f(x):\n            digits = map(int, str(x))\n            lookup = [[[[[-1]*k for _ in xrange(2*len(digits)+1)] for _ in xrange(2)] for _ in xrange(2)] for _ in xrange(len(digits))]\n            def memoization(i, zero, tight, diff, total):\n                if i == len(digits):\n                    return int(zero == diff == total == 0)\n                if lookup[i][zero][tight][diff][total] == -1:\n                    result = 0\n                    for d in xrange((digits[i] if tight else 9)+1):\n                        new_zero = int(zero and d == 0)\n                        new_tight = int(tight and d == digits[i])\n                        new_diff = diff+((1 if d%2 == 0 else -1) if new_zero == 0 else 0)\n                        new_total = (total*10+d)%k\n                        result += memoization(i+1, new_zero, new_tight, new_diff, new_total)\n                    lookup[i][zero][tight][diff][total] = result\n                return lookup[i][zero][tight][diff][total]\n    \n            return memoization(0, 1, 1, 0, 0)\n\n        return f(high)-f(low-1)\n\n\n# Time:  O(n^2 * k), n = len(str(high))\n# Space: O(n * k)\n# dp (slower but less space)\nclass Solution4(object):\n    def numberOfBeautifulIntegers(self, low, high, k):\n        \"\"\"\n        :type low: int\n        :type high: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        def f(x):\n            digits = map(int, str(x))\n            dp = [[[[0]*k for _ in xrange(2*len(digits)+1)] for _ in xrange(2)] for _ in xrange(2)]\n            for tight in xrange(2):\n                dp[0][tight][0][0] = 1\n            for i in reversed(xrange(len(digits))):\n                new_dp = [[[[0]*k for _ in xrange(2*len(digits)+1)] for _ in xrange(2)] for _ in xrange(2)]\n                for zero in xrange(2):\n                    for tight in xrange(2):\n                        for d in xrange((digits[i] if tight else 9)+1):\n                            new_zero = int(zero and d == 0)\n                            new_tight = int(tight and d == digits[i])\n                            for diff in xrange(-len(digits), len(digits)+1):\n                                new_diff = diff+((1 if d%2 == 0 else -1) if new_zero == 0 else 0)\n                                for total in xrange(k):\n                                    new_total = (total*10+d)%k\n                                    new_dp[zero][tight][diff][total] += dp[new_zero][new_tight][new_diff][new_total]\n                dp = new_dp\n            return dp[1][1][0][0]\n\n        return f(high)-f(low-1)\n",
+      "sourcePath": "Python/number-of-beautiful-integers-in-the-range.py"
+    }
+  },
+  "seo": {
+    "title": "Number of Beautiful Integers in the Range Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Number of Beautiful Integers in the Range (LeetCode #2827). Pattern: dynamic programming. Time O(n^2 * k), space O(n * k). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Number of Beautiful Integers in the Range",
+      "Number of Beautiful Integers in the Range solution",
+      "Number of Beautiful Integers in the Range leetcode",
+      "dynamic-programming",
+      "dynamic-programming",
+      "hard"
+    ],
+    "canonicalPath": "/problems/number-of-beautiful-integers-in-the-range"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Number of Beautiful Integers in the Range?",
+      "answer": "The reference solutions aim for O(n^2 * k) time and O(n * k) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Number of Beautiful Integers in the Range use?",
+      "answer": "It primarily maps to dynamic programming, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Number of Beautiful Integers in the Range good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/number-of-beautiful-integers-in-the-range/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Number of Beautiful Integers in the Range (#2827) — Hard. Pattern: dynamic programming. Complexity: O(n^2 * k) time / O(n * k) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Number of Beautiful Integers in the Range: show input structure (dynamic programming), highlight the moving parts of the dynamic programming approach, and annotate each step with the maintained invariant and complexity."
+}

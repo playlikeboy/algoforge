@@ -1,0 +1,153 @@
+{
+  "id": "631",
+  "number": 631,
+  "slug": "design-excel-sum-formula",
+  "title": "Design Excel Sum Formula",
+  "difficulty": "Hard",
+  "topics": [
+    "design"
+  ],
+  "patterns": [],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "set: O((r * c)^2) get: O(1) sum: O((r * c)^2)",
+  "spaceComplexity": "O(r * c)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/design-excel-sum-formula/",
+  "notes": [],
+  "relatedSlugs": [
+    "lru-cache",
+    "insert-delete-getrandom-o1",
+    "insert-delete-getrandom-o1-duplicates-allowed",
+    "all-oone-data-structure",
+    "lfu-cache",
+    "robot-room-cleaner",
+    "design-in-memory-file-system",
+    "design-search-autocomplete-system"
+  ],
+  "prevSlug": "course-schedule-iii",
+  "nextSlug": "smallest-range",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Design Excel Sum Formula?\n\n**Design Excel Sum Formula** (LeetCode #631) is a **Hard** problem that primarily trains **design**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/design-excel-sum-formula/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Design Excel Sum Formula\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (set: O((r * c)^2) get: O(1) sum: O((r * c)^2)) and **space** (O(r * c)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **set: O((r * c)^2) get: O(1) sum: O((r * c)^2)** time and **O(r * c)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **set: O((r * c)^2) get: O(1) sum: O((r * c)^2)** |\n| Space | **O(r * c)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Design Excel Sum Formula\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **design**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Design Excel Sum Formula** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **design**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "design-excel-sum-formula.cpp",
+      "code": "// Time:  set: O((r * c)^2)\n//        get: O(1)\n//        sum: O((r * c)^2)\n// Space: O(r * c)\n\nclass Excel {\npublic:\n    Excel(int H, char W) : Exl_(H + 1, vector<int>(W - 'A' + 1)) {\n    }\n    \n    // Time:  O((r * c)^2)\n    void set(int r, char c, int v) {\n        auto col = c - 'A';\n        reset_dependency(r, col);\n        update_others(r, col, v);\n    }\n    \n    // Time:  O(1)\n    int get(int r, char c) {\n        return Exl_[r][c - 'A'];\n    }\n\n    // Time:  O((r * c)^2)\n    int sum(int r, char c, vector<string> strs) {\n        auto col = c - 'A';\n        reset_dependency(r, col);\n        auto result = calc_and_update_dependency(r, col, strs);\n        update_others(r, col, result);\n        return result;\n    }\n\nprivate:\n    // Time:  O(r * c)\n    void reset_dependency(int r, int col) {\n        auto key = r * 26 + col;\n        if (bward_.count(key)) {\n            for (const auto& k : bward_[key]) {\n                fward_[k].erase(key);\n            }\n            bward_.erase(key);\n        }\n    }\n\n    // Time:  O(r * c * l), l is the length of strs\n    int calc_and_update_dependency(int r, int col, const vector<string>& strs) {\n        auto result = 0;\n        for (const auto& s : strs) {\n            int p = s.find(':'), left, right, top, bottom;\n            left = s[0] - 'A';\n            right = s[p + 1] - 'A';\n            top = (p == string::npos) ? stoi(s.substr(1)) : stoi(s.substr(1, p - 1));\n            bottom = stoi(s.substr(p + 2));\n            for (int i = top; i <= bottom; ++i) {\n                for (int j = left; j <= right; ++j) {\n                    result += Exl_[i][j];\n                    ++fward_[i * 26 + j][r * 26 + col];\n                    bward_[r * 26 + col].emplace(i * 26 + j);\n                }\n            }\n        }\n        return result;\n    }\n\n    // Time:  O((r * c)^2)\n    void update_others(int r, int col, int v) {\n        auto prev = Exl_[r][col];\n        Exl_[r][col] = v;\n        queue<pair<int, int>> q;\n        q.emplace(make_pair(r * 26 + col, v - prev));\n        while (!q.empty()) {\n            int key, diff;\n            tie(key, diff) = q.front(), q.pop();\n            if (fward_.count(key)) {\n                for (auto it = fward_[key].begin(); it != fward_[key].end(); ++it) {\n                    int k, count;\n                    tie(k, count) = *it;\n                    q.emplace(make_pair(k, diff * count));\n                    Exl_[k / 26][k % 26] += diff * count;\n                }\n            }\n        }\n    }\n    \n    unordered_map<int, unordered_map<int, int>> fward_;\n    unordered_map<int, unordered_set<int>> bward_;\n    vector<vector<int>> Exl_;\n};\n\n/**\n * Your Excel object will be instantiated and called as such:\n * Excel obj = new Excel(H, W);\n * obj.set(r,c,v);\n * int param_2 = obj.get(r,c);\n * int param_3 = obj.sum(r,c,strs);\n */\n",
+      "sourcePath": "C++/design-excel-sum-formula.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "design-excel-sum-formula.py",
+      "code": "# Time:  set: O((r * c)^2)\n#        get: O(1)\n#        sum: O((r * c)^2)\n# Space: O(r * c)\n\nimport collections\n\n\nclass Excel(object):\n\n    def __init__(self, H, W):\n        \"\"\"\n        :type H: int\n        :type W: str\n        \"\"\"\n        self.__exl = [[0 for _ in xrange(ord(W)-ord('A')+1)] \\\n                      for _ in xrange(H+1)]\n        self.__fward = collections.defaultdict(lambda : collections.defaultdict(int))\n        self.__bward = collections.defaultdict(set)\n\n\n    def set(self, r, c, v):\n        \"\"\"\n        :type r: int\n        :type c: str\n        :type v: int\n        :rtype: void\n        \"\"\"\n        self.__reset_dependency(r, c)\n        self.__update_others(r, c, v)\n\n\n    def get(self, r, c):\n        \"\"\"\n        :type r: int\n        :type c: str\n        :rtype: int\n        \"\"\"\n        return self.__exl[r][ord(c) - ord('A')]\n\n\n    def sum(self, r, c, strs):\n        \"\"\"\n        :type r: int\n        :type c: str\n        :type strs: List[str]\n        :rtype: int\n        \"\"\"\n        self.__reset_dependency(r, c)\n        result = self.__calc_and_update_dependency(r, c, strs)\n        self.__update_others(r, c, result)\n        return result\n\n\n    def __reset_dependency(self, r, c):\n        key = (r, c)\n        if key in self.__bward.keys():\n            for k in self.__bward[key]:\n                self.__fward[k].pop(key, None)\n            self.__bward[key] = set()\n\n\n    def __calc_and_update_dependency(self, r, c, strs):\n        result = 0\n        for s in strs:\n            s, e = s.split(':')[0], s.split(':')[1] if ':' in s else s\n            left, right, top, bottom = ord(s[0])-ord('A'), ord(e[0])-ord('A'), int(s[1:]), int(e[1:])\n            for i in xrange(top, bottom+1):\n                for j in xrange(left, right+1):\n                    result += self.__exl[i][j]\n                    self.__fward[(i, chr(ord('A')+j))][(r, c)] += 1\n                    self.__bward[(r, c)].add((i, chr(ord('A')+j)))\n        return result\n\n\n    def __update_others(self, r, c, v):\n        prev = self.__exl[r][ord(c)-ord('A')]\n        self.__exl[r][ord(c)-ord('A')] = v\n        q = collections.deque()\n        q.append(((r, c), v-prev))\n        while q:\n            key, diff = q.popleft()\n            if key in self.__fward:\n                for k, count in self.__fward[key].iteritems():\n                    q.append((k, diff*count))\n                    self.__exl[k[0]][ord(k[1])-ord('A')] += diff*count\n\n\n\n",
+      "sourcePath": "Python/design-excel-sum-formula.py"
+    }
+  },
+  "seo": {
+    "title": "Design Excel Sum Formula Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Design Excel Sum Formula (LeetCode #631). Pattern: algorithms. Time set: O((r * c)^2) get: O(1) sum: O((r * c)^2), space O(r * c). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Design Excel Sum Formula",
+      "Design Excel Sum Formula solution",
+      "Design Excel Sum Formula leetcode",
+      "design",
+      "hard"
+    ],
+    "canonicalPath": "/problems/design-excel-sum-formula"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Design Excel Sum Formula?",
+      "answer": "The reference solutions aim for set: O((r * c)^2) get: O(1) sum: O((r * c)^2) time and O(r * c) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Design Excel Sum Formula use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of design."
+    },
+    {
+      "question": "Is Design Excel Sum Formula good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/design-excel-sum-formula/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Design Excel Sum Formula (#631) — Hard. Pattern: general problem-solving. Complexity: set: O((r * c)^2) get: O(1) sum: O((r * c)^2) time / O(r * c) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Design Excel Sum Formula: show input structure (design), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

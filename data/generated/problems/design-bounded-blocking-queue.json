@@ -1,0 +1,153 @@
+{
+  "id": "1188",
+  "number": 1188,
+  "slug": "design-bounded-blocking-queue",
+  "title": "Design Bounded Blocking Queue",
+  "difficulty": "Medium",
+  "topics": [
+    "concurrency"
+  ],
+  "patterns": [],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/design-bounded-blocking-queue/",
+  "notes": [],
+  "relatedSlugs": [
+    "print-foobar-alternately",
+    "print-zero-even-odd",
+    "fizz-buzz-multithreaded",
+    "the-dining-philosophers",
+    "web-crawler-multithreaded",
+    "print-in-order",
+    "building-h2o",
+    "traffic-light-controlled-intersection"
+  ],
+  "prevSlug": "make-array-strictly-increasing",
+  "nextSlug": "maximum-number-of-balloons",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Design Bounded Blocking Queue?\n\n**Design Bounded Blocking Queue** (LeetCode #1188) is a **Medium** problem that primarily trains **concurrency**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/design-bounded-blocking-queue/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Design Bounded Blocking Queue\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(1)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Design Bounded Blocking Queue\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **concurrency**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Design Bounded Blocking Queue** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **concurrency**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "design-bounded-blocking-queue.cpp",
+      "code": "// Time:  O(n)\n// Space: O(1)\n\nclass BoundedBlockingQueue {\npublic:    \n    BoundedBlockingQueue(int capacity)\n      : cap_(capacity) {\n        \n    }\n    \n    void enqueue(int element) {\n        {\n            unique_lock<mutex> l(m_);\n            cv_.wait(l, [this]() { return q_.size() != cap_; }) ;\n            q_.emplace(element);\n        }\n        cv_.notify_all();\n    }\n    \n    int dequeue() {\n        int element;\n        {\n            unique_lock<mutex> l(m_);\n            cv_.wait(l, [this]() { return !q_.empty(); }) ;\n            element = q_.front(); q_.pop();\n        }\n        cv_.notify_all();\n        return element;\n    }\n    \n    int size() {\n        unique_lock<mutex> l(m_);\n        return q_.size();\n    }\n\nprivate:\n    mutex m_;\n    condition_variable cv_;\n    queue<int> q_;\n    int cap_;\n};\n",
+      "sourcePath": "C++/design-bounded-blocking-queue.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "design-bounded-blocking-queue.py",
+      "code": "# Time:  O(n)\n# Space: O(1)\n\nimport threading\nimport collections\n\n\nclass BoundedBlockingQueue(object):\n    def __init__(self, capacity):\n        \"\"\"\n        :type capacity: int\n        \"\"\"\n        self.__cv = threading.Condition()\n        self.__q = collections.deque()\n        self.__cap = capacity\n\n    def enqueue(self, element):\n        \"\"\"\n        :type element: int\n        :rtype: void\n        \"\"\"\n        with self.__cv:\n            while len(self.__q) == self.__cap:\n                self.__cv.wait()\n            self.__q.append(element)\n            self.__cv.notifyAll()\n\n    def dequeue(self):\n        \"\"\"\n        :rtype: int\n        \"\"\"\n        with self.__cv:\n            while not self.__q:\n                self.__cv.wait()\n            self.__cv.notifyAll()\n            return self.__q.popleft()\n\n    def size(self):\n        \"\"\"\n        :rtype: int\n        \"\"\"\n        with self.__cv:\n            return len(self.__q)\n",
+      "sourcePath": "Python/design-bounded-blocking-queue.py"
+    }
+  },
+  "seo": {
+    "title": "Design Bounded Blocking Queue Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Design Bounded Blocking Queue (LeetCode #1188). Pattern: algorithms. Time O(n), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Design Bounded Blocking Queue",
+      "Design Bounded Blocking Queue solution",
+      "Design Bounded Blocking Queue leetcode",
+      "concurrency",
+      "medium"
+    ],
+    "canonicalPath": "/problems/design-bounded-blocking-queue"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Design Bounded Blocking Queue?",
+      "answer": "The reference solutions aim for O(n) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Design Bounded Blocking Queue use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of concurrency."
+    },
+    {
+      "question": "Is Design Bounded Blocking Queue good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/design-bounded-blocking-queue/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Design Bounded Blocking Queue (#1188) — Medium. Pattern: general problem-solving. Complexity: O(n) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Design Bounded Blocking Queue: show input structure (concurrency), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

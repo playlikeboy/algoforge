@@ -1,0 +1,161 @@
+{
+  "id": "2538",
+  "number": 2538,
+  "slug": "difference-between-maximum-and-minimum-price-sum",
+  "title": "Difference Between Maximum and Minimum Price Sum",
+  "difficulty": "Hard",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dfs-backtracking",
+    "tree-dp"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/difference-between-maximum-and-minimum-price-sum/",
+  "notes": [
+    "DFS",
+    "Tree DP"
+  ],
+  "relatedSlugs": [
+    "minimize-the-total-price-of-the-trips",
+    "minimum-edge-reversals-so-every-node-is-reachable",
+    "maximum-points-after-collecting-coins-from-all-nodes",
+    "subtree-inversion-sum",
+    "maximum-profit-from-trading-stocks-with-discounts",
+    "subtree-inversion-sum-ii",
+    "finish-time-of-tasks-ii",
+    "maximum-score-after-applying-operations-on-a-tree"
+  ],
+  "prevSlug": "count-the-number-of-good-subarrays",
+  "nextSlug": "count-the-number-of-good-subsequences",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Difference Between Maximum and Minimum Price Sum?\n\n**Difference Between Maximum and Minimum Price Sum** (LeetCode #2538) is a **Hard** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dfs backtracking and tree dp**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: DFS, Tree DP.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/difference-between-maximum-and-minimum-price-sum/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Difference Between Maximum and Minimum Price Sum\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dfs backtracking and tree dp**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(n)** space.\n\n### Pattern focus: dfs backtracking and tree dp\n\nUse the pattern as a checklist:\n\n- **dfs backtracking** — confirm the invariant holds after each step\n- **tree dp** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Difference Between Maximum and Minimum Price Sum\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dfs backtracking and tree dp — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dfs backtracking and tree dp**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Difference Between Maximum and Minimum Price Sum** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "difference-between-maximum-and-minimum-price-sum.cpp",
+      "code": "// Time:  O(n)\n// Space: O(n)\n\n// iterative dfs, tree dp\nclass Solution {\npublic:\n    long long maxOutput(int n, vector<vector<int>>& edges, vector<int>& price) {\n        vector<vector<int>> adj(n);\n        for (const auto& e : edges) {\n            adj[e[0]].emplace_back(e[1]);\n            adj[e[1]].emplace_back(e[0]);\n        }\n        const auto& iter_dfs = [&]() {\n            int64_t result = 0;\n            using RET = vector<int64_t>;\n            RET ret = {price[0], 0};\n            vector<tuple<int, int, int, int, shared_ptr<RET>, RET *>> stk = {{1, 0, -1, -1, nullptr, &ret}};\n            while (!empty(stk)) {\n                const auto [step, u, p, i, new_ret, ret] = stk.back(); stk.pop_back();\n                if (step == 1) {\n                    stk.emplace_back(2, u, p, 0, nullptr, ret);\n                } else if (step == 2) {\n                    if (i == size(adj[u])) {\n                        continue;\n                    }\n                    stk.emplace_back(2, u, p, i + 1, nullptr, ret);\n                    const int v = adj[u][i];\n                    if (v == p) {\n                        continue;\n                    }\n                    const auto& new_ret = make_shared<RET>(vector<int64_t>{price[v], 0});  // [max_sum, max_sum_without_last_node]\n                    stk.emplace_back(3, u, -1, -1, new_ret, ret);\n                    stk.emplace_back(1, v, u, -1, nullptr, new_ret.get());\n                } else if (step == 3) {\n                    result = max({result, (*ret)[0] + (*new_ret)[1], (*ret)[1] + (*new_ret)[0]});\n                    (*ret)[0] = max((*ret)[0], (*new_ret)[0] + price[u]);\n                    (*ret)[1] = max((*ret)[1], (*new_ret)[1] + price[u]);\n                }\n            }\n            return result;\n        };\n    \n        return iter_dfs();\n    }\n};\n\n// Time:  O(n)\n// Space: O(n)\n// dfs, tree dp\nclass Solution2 {\npublic:\n    long long maxOutput(int n, vector<vector<int>>& edges, vector<int>& price) {\n        vector<vector<int>> adj(n);\n        for (const auto& e : edges) {\n            adj[e[0]].emplace_back(e[1]);\n            adj[e[1]].emplace_back(e[0]);\n        }\n        int64_t result = 0;\n        const function<vector<int64_t>(int, int)> dfs = [&](int u, int p) {\n            vector<int64_t> dp = {price[u], 0};  // [max_sum, max_sum_without_last_node]\n            for (const auto& v : adj[u]) {\n                if (v == p) {\n                    continue;\n                }\n                const auto& new_dp = dfs(v, u);\n                result = max({result, dp[0] + new_dp[1], dp[1] + new_dp[0]});\n                dp[0] = max(dp[0], new_dp[0] + price[u]);\n                dp[1] = max(dp[1], new_dp[1] + price[u]);\n            }\n            return dp;\n        };\n\n        dfs(0, -1);\n        return result;\n    }\n};\n\n// Time:  O(n)\n// Space: O(n)\n// iterative dfs, tree dp\nclass Solution3 {\npublic:\n    long long maxOutput(int n, vector<vector<int>>& edges, vector<int>& price) {\n        vector<vector<int>> adj(n);\n        for (const auto& e : edges) {\n            adj[e[0]].emplace_back(e[1]);\n            adj[e[1]].emplace_back(e[0]);\n        }\n        \n        const auto& iter_dfs = [&]() {\n            vector<int64_t> dp(n);\n            vector<tuple<int, int, int>> stk = {{1, 0, -1}};\n            while (!empty(stk)) {\n                const auto [step, u, p] = stk.back(); stk.pop_back();\n                if (step == 1) {\n                    stk.emplace_back(2, u, p);\n                    for (const auto& v : adj[u]) {\n                        if (v == p) {\n                            continue;\n                        }\n                        stk.emplace_back(1, v, u);\n                    }\n                } else if (step == 2) {\n                    dp[u] = price[u];\n                    for (const auto& v : adj[u]) {\n                        if (v == p) {\n                            continue;\n                        }\n                        dp[u] = max(dp[u], dp[v] + price[u]);\n                    }\n                }\n            }\n            return dp;\n        };\n\n        const auto& dp = iter_dfs();\n        const auto& iter_dfs2 = [&]() {\n            int64_t result = 0;\n            vector<tuple<int, int, int64_t>> stk = {{0, -1, 0}};\n            while (!empty(stk)) {\n                const auto [u, p, curr] = stk.back(); stk.pop_back();\n                result = max({result, curr, dp[u] - price[u]});\n                vector<vector<int64_t>> top2 = {{curr, p}, {0, -1}};\n                for (const auto& v : adj[u]) {\n                    if (v == p) {\n                        continue;\n                    }\n                    vector<int64_t> curr = {dp[v], v};\n                    for (int i = 0; i < size(top2); ++i) {\n                        if (curr > top2[i]) {\n                            swap(top2[i], curr);\n                        }\n                    }\n                }\n                for (const auto& v : adj[u]) {\n                    if (v == p) {\n                        continue;\n                    }\n                    stk.emplace_back(v, u, ((top2[0][1] != v) ? top2[0][0] : top2[1][0]) + price[u]);\n                }\n            }\n            return result;\n        };\n\n        return iter_dfs2();\n    }\n};\n\n// Time:  O(n)\n// Space: O(n)\n// dfs, tree dp\nclass Solution4_RE { // stack overflow due to deep recursion\npublic:\n    long long maxOutput(int n, vector<vector<int>>& edges, vector<int>& price) {\n        vector<vector<int>> adj(n);\n        for (const auto& e : edges) {\n            adj[e[0]].emplace_back(e[1]);\n            adj[e[1]].emplace_back(e[0]);\n        }\n        vector<int64_t> dp(n);\n        const function<int64_t(int, int)> dfs = [&](int u, int p) {\n            dp[u] = price[u];\n            for (const auto& v : adj[u]) {\n                if (v == p) {\n                    continue;\n                }\n                dp[u] = max(dp[u], dfs(v, u) + price[u]);\n            }\n            return dp[u];\n        };\n\n        int64_t result = 0;\n        const function<void(int, int, int64_t)> dfs2 = [&](int u, int p, int64_t curr) {\n            result = max({result, curr, dp[u] - price[u]});\n            vector<vector<int64_t>> top2 = {{curr, p}, {0, -1}};\n            for (const auto& v : adj[u]) {\n                if (v == p) {\n                    continue;\n                }\n                vector<int64_t> curr = {dp[v], v};\n                for (int i = 0; i < size(top2); ++i) {\n                    if (curr > top2[i]) {\n                        swap(top2[i], curr);\n                    }\n                }\n            }\n            for (const auto& v : adj[u]) {\n                if (v == p) {\n                    continue;\n                }\n                dfs2(v, u, ((top2[0][1] != v) ? top2[0][0] : top2[1][0]) + price[u]);\n            }\n        };\n\n        dfs(0, -1);\n        dfs2(0, -1, 0);\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/difference-between-maximum-and-minimum-price-sum.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "difference-between-maximum-and-minimum-price-sum.py",
+      "code": "# Time:  O(n)\n# Space: O(n)\n\n# iterative dfs, tree dp\nclass Solution(object):\n    def maxOutput(self, n, edges, price):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type price: List[int]\n        :rtype: int\n        \"\"\"\n        def iter_dfs():\n            result = 0\n            stk = [(1, (0, -1, [price[0], 0]))]\n            while stk:\n                step, args = stk.pop()\n                if step == 1:\n                    u, p, ret = args\n                    stk.append((2, (u, p, ret, 0)))\n                elif step == 2:\n                    u, p, ret, i = args\n                    if i == len(adj[u]):\n                        continue\n                    stk.append((2, (u, p, ret, i+1)))\n                    v = adj[u][i]\n                    if v == p:\n                        continue\n                    new_ret = [price[v], 0]  # [max_path_sum, max_path_sum_without_last_node]\n                    stk.append((3, (u, new_ret, ret)))\n                    stk.append((1, (v, u, new_ret)))\n                elif step == 3:\n                    u, new_ret, ret = args\n                    result = max(result, ret[0]+new_ret[1], ret[1]+new_ret[0])\n                    ret[0] = max(ret[0], new_ret[0]+price[u])\n                    ret[1] = max(ret[1], new_ret[1]+price[u])\n            return result\n        \n        adj = [[] for _ in xrange(n)]\n        for u, v in edges:\n            adj[u].append(v)\n            adj[v].append(u)\n        return iter_dfs()\n\n\n# Time:  O(n)\n# Space: O(n)\n# dfs, tree dp\nclass Solution2(object):\n    def maxOutput(self, n, edges, price):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type price: List[int]\n        :rtype: int\n        \"\"\"\n        def dfs(u, p):\n            dp = [price[u], 0]  # [max_path_sum, max_path_sum_without_last_node]\n            for v in adj[u]:\n                if v == p:\n                    continue\n                new_dp = dfs(v, u)\n                result[0] = max(result[0], dp[0]+new_dp[1], dp[1]+new_dp[0])\n                dp[0] = max(dp[0], new_dp[0]+price[u])\n                dp[1] = max(dp[1], new_dp[1]+price[u])\n            return dp\n        \n        result = [0]\n        adj = [[] for _ in xrange(n)]\n        for u, v in edges:\n            adj[u].append(v)\n            adj[v].append(u)\n        dfs(0, -1)\n        return result[0]\n\n\n# Time:  O(n)\n# Space: O(n)\n# iterative dfs, tree dp\nclass Solution3(object):\n    def maxOutput(self, n, edges, price):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type price: List[int]\n        :rtype: int\n        \"\"\"\n        def iter_dfs():\n            dp = [0]*n  # max_sum\n            stk = [(1, 0, -1)]\n            while stk:\n                step, u, p = stk.pop()\n                if step == 1:\n                    stk.append((2, u, p))\n                    for v in adj[u]:\n                        if v == p:\n                            continue\n                        stk.append((1, v, u))\n                elif step == 2:\n                    dp[u] = price[u]\n                    for v in adj[u]:\n                        if v == p:\n                            continue\n                        dp[u] = max(dp[u], dp[v]+price[u])\n            return dp\n        \n        def iter_dfs2():\n            result = 0\n            stk = [(0, -1, 0)]\n            while stk:\n                u, p, curr = stk.pop()\n                result = max(result, curr, dp[u]-price[u])\n                top2 = [[curr, p], [0, -1]]\n                for v in adj[u]:\n                    if v == p:\n                        continue\n                    curr = [dp[v], v]\n                    for i in xrange(len(top2)):\n                        if curr > top2[i]:\n                            top2[i], curr = curr, top2[i]\n                for v in adj[u]:\n                    if v == p:\n                        continue\n                    stk.append((v, u, (top2[0][0] if top2[0][1] != v else top2[1][0])+price[u]))\n            return result\n    \n        adj = [[] for _ in xrange(n)]\n        for u, v in edges:\n            adj[u].append(v)\n            adj[v].append(u)\n        dp = iter_dfs()\n        return iter_dfs2()\n\n\n# Time:  O(n)\n# Space: O(n)\n# dfs, tree dp\nclass Solution4(object):\n    def maxOutput(self, n, edges, price):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type price: List[int]\n        :rtype: int\n        \"\"\"\n        def dfs(u, p):\n            dp[u] = price[u]\n            for v in adj[u]:\n                if v == p:\n                    continue\n                dp[u] = max(dp[u], dfs(v, u)+price[u])\n            return dp[u]\n        \n        def dfs2(u, p, curr):\n            result[0] = max(result[0], curr, dp[u]-price[u])\n            top2 = [[curr, p], [0, -1]]\n            for v in adj[u]:\n                if v == p:\n                    continue\n                curr = [dp[v], v]\n                for i in xrange(len(top2)):\n                    if curr > top2[i]:\n                        top2[i], curr = curr, top2[i]\n            for v in adj[u]:\n                if v == p:\n                    continue\n                dfs2(v, u, (top2[0][0] if top2[0][1] != v else top2[1][0])+price[u])\n    \n        result = [0]\n        dp = [0]*n  # max_sum\n        adj = [[] for _ in xrange(n)]\n        for u, v in edges:\n            adj[u].append(v)\n            adj[v].append(u)\n        dfs(0, -1)\n        dfs2(0, -1, 0)\n        return result[0]\n",
+      "sourcePath": "Python/difference-between-maximum-and-minimum-price-sum.py"
+    }
+  },
+  "seo": {
+    "title": "Difference Between Maximum and Minimum Price Sum Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Difference Between Maximum and Minimum Price Sum (LeetCode #2538). Pattern: dfs backtracking. Time O(n), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Difference Between Maximum and Minimum Price Sum",
+      "Difference Between Maximum and Minimum Price Sum solution",
+      "Difference Between Maximum and Minimum Price Sum leetcode",
+      "dynamic-programming",
+      "dfs-backtracking",
+      "tree-dp",
+      "hard"
+    ],
+    "canonicalPath": "/problems/difference-between-maximum-and-minimum-price-sum"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Difference Between Maximum and Minimum Price Sum?",
+      "answer": "The reference solutions aim for O(n) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Difference Between Maximum and Minimum Price Sum use?",
+      "answer": "It primarily maps to dfs backtracking and tree dp, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Difference Between Maximum and Minimum Price Sum good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/difference-between-maximum-and-minimum-price-sum/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dfs backtracking and tree dp approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Difference Between Maximum and Minimum Price Sum (#2538) — Hard. Pattern: dfs backtracking and tree dp. Complexity: O(n) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Difference Between Maximum and Minimum Price Sum: show input structure (dynamic programming), highlight the moving parts of the dfs backtracking and tree dp approach, and annotate each step with the maintained invariant and complexity."
+}

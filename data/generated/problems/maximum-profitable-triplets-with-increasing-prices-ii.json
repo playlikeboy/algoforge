@@ -1,0 +1,175 @@
+{
+  "id": "2921",
+  "number": 2921,
+  "slug": "maximum-profitable-triplets-with-increasing-prices-ii",
+  "title": "Maximum Profitable Triplets With Increasing Prices II",
+  "difficulty": "Hard",
+  "topics": [
+    "binary-search-tree"
+  ],
+  "patterns": [
+    "prefix-sum",
+    "sorted-list",
+    "binary-search",
+    "stack",
+    "fenwick-tree",
+    "segment-tree"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogn)",
+  "spaceComplexity": "O(n)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-profitable-triplets-with-increasing-prices-ii/",
+  "notes": [
+    "Prefix Sum",
+    "Sorted List",
+    "BST",
+    "Binary Search",
+    "Mono Stack",
+    "BIT",
+    "Fenwick Tree",
+    "Segment Tree"
+  ],
+  "relatedSlugs": [
+    "maximum-profitable-triplets-with-increasing-prices-i",
+    "maximum-balanced-subsequence-sum",
+    "block-placement-queries",
+    "number-of-pairs-satisfying-inequality",
+    "power-update-after-k-th-largest-insertion-ii",
+    "minimum-absolute-difference-between-elements-with-constraint",
+    "maximum-increasing-triplet-value",
+    "distribute-elements-into-two-arrays-ii"
+  ],
+  "prevSlug": "maximum-points-after-collecting-coins-from-all-nodes",
+  "nextSlug": "market-analysis-iii",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Maximum Profitable Triplets With Increasing Prices II?\n\n**Maximum Profitable Triplets With Increasing Prices II** (LeetCode #2921) is a **Hard** problem that primarily trains **binary search tree**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **prefix sum, sorted list, binary search, stack, fenwick tree, and segment tree**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Prefix Sum, Sorted List, BST, Binary Search.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/maximum-profitable-triplets-with-increasing-prices-ii/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Maximum Profitable Triplets With Increasing Prices II\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **prefix sum, sorted list, binary search, stack, fenwick tree, and segment tree**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogn)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogn)** time and **O(n)** space.\n\n### Pattern focus: prefix sum, sorted list, binary search, stack, fenwick tree, and segment tree\n\nUse the pattern as a checklist:\n\n- **prefix sum** — confirm the invariant holds after each step\n- **sorted list** — confirm the invariant holds after each step\n- **binary search** — confirm the invariant holds after each step\n- **stack** — confirm the invariant holds after each step\n- **fenwick tree** — confirm the invariant holds after each step\n- **segment tree** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogn)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Maximum Profitable Triplets With Increasing Prices II\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for prefix sum, sorted list, binary search, stack, fenwick tree, and segment tree — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **prefix sum, sorted list, binary search, stack, fenwick tree, and segment tree**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **binary search tree**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Maximum Profitable Triplets With Increasing Prices II** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **binary search tree**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "maximum-profitable-triplets-with-increasing-prices-ii.cpp",
+      "code": "// Time:  O(nlogn)\n// Space: O(n)\n\n// prefix sum, bst, binary search, mono stack\nclass Solution {\npublic:\n    int maxProfit(vector<int>& prices, vector<int>& profits) {\n        static const int NEG_INF = numeric_limits<int>::min();\n\n        const auto& query = [](const auto& bst, const auto& k) {\n            const auto it = bst.lower_bound(pair(k, 0));\n            return it != begin(bst) ? prev(it)->second : NEG_INF;\n        };\n\n        const auto& update = [](auto& bst, const auto& k, const auto& v) {\n            const auto it = bst.lower_bound(pair(k, 0));\n            if (it != end(bst) && it->first == k) {\n                if (!(it->second < v)) {\n                    return;\n                }\n                bst.erase(it);\n            } else if (!(it == begin(bst) || prev(it)->second < v)) {\n                return;\n            }\n            const auto [jt, _] = bst.emplace(k, v);\n            while (next(jt) != end(bst) && next(jt)->second <= jt->second) {\n                bst.erase(next(jt));\n            }\n        };\n\n        int result = NEG_INF;\n        set<pair<int, int>> bst1, bst2;\n        for (int i = 0; i < size(prices); ++i) {\n            const int mx2 = query(bst2, prices[i]);\n            if (mx2 != NEG_INF) {\n                result = max(result, mx2 + profits[i]);\n            }\n            update(bst1, prices[i], profits[i]);\n            const int mx1 = query(bst1, prices[i]);\n            if (mx1 != NEG_INF) {\n                update(bst2, prices[i], mx1 + profits[i]);\n            }\n        }\n        return result != NEG_INF ? result : -1;\n    }\n};\n\n// Time:  O(nlogn)\n// Space: O(n)\n// prefix sum, bst, binary search, mono stack\nclass Solution2 {\npublic:\n    int maxProfit(vector<int>& prices, vector<int>& profits) {\n        static const int NEG_INF = numeric_limits<int>::min();\n\n        vector<int> right(size(prices), NEG_INF);\n        set<pair<int, int>> bst;\n        for (int i = size(prices) - 1; i >= 0; --i) {\n            const auto it = bst.lower_bound(pair(-prices[i], 0));\n            if (it != begin(bst)) {\n                right[i] = prev(it)->second;\n            }\n            if (!(it == begin(bst) || prev(it)->second < profits[i])) {\n                continue;\n            }\n            const auto [jt, _] = bst.emplace(-prices[i], profits[i]);\n            while (next(jt) != end(bst) && next(jt)->second <= jt->second) {\n                bst.erase(next(jt));\n            }\n        }\n        int result = NEG_INF;\n        bst.clear();\n        for (int i = 0; i < size(prices); ++i) {\n            const auto it = bst.lower_bound(pair(prices[i], 0));\n            if (it != begin(bst)) {\n                if (prev(it)->second != NEG_INF && right[i] != NEG_INF) {\n                    result = max(result, prev(it)->second + profits[i] + right[i]);\n                }\n            }\n            if (!(it == begin(bst) || prev(it)->second < profits[i])) {\n                continue;\n            }\n            const auto [jt, _] = bst.emplace(prices[i], profits[i]);\n            while (next(jt) != end(bst) && next(jt)->second <= jt->second) {\n                bst.erase(next(jt));\n            }\n        }\n        return result != NEG_INF ? result : -1;\n    }\n};\n\n// Time:  O(nlogn)\n// Space: O(n)\n// prefix sum, bit, fenwick tree\nclass Solution3 {\npublic:\n    int maxProfit(vector<int>& prices, vector<int>& profits) {\n        static const int NEG_INF = numeric_limits<int>::min();\n\n        unordered_set<int> prices_set(cbegin(prices), cend(prices));\n        vector<int> sorted_prices(cbegin(prices_set), cend(prices_set));\n        sort(begin(sorted_prices), end(sorted_prices));\n        unordered_map<int, int> price_to_idx;\n        for (int i = 0; i < size(sorted_prices); ++i) {\n            price_to_idx[sorted_prices[i]] = i;\n        }\n        int result = NEG_INF;\n        const auto& fn = [](int a, int b) {\n            return max(a, b);\n        };\n        BIT bit1(size(price_to_idx), NEG_INF, fn), bit2(size(price_to_idx), NEG_INF, fn);\n        for (int i = 0; i < size(prices); ++i) {\n            const int mx2 = bit2.query(price_to_idx[prices[i]] - 1);\n            if (mx2 != NEG_INF) {\n                result = max(result, mx2 + profits[i]);\n            }\n            bit1.update(price_to_idx[prices[i]], profits[i]);\n            const int mx1 = bit1.query(price_to_idx[prices[i]] - 1);\n            if (mx1 != NEG_INF) {\n                bit2.update(price_to_idx[prices[i]], mx1 + profits[i]);\n            }\n        }\n        return result != NEG_INF ? result : -1;\n    }\n\nprivate:\n    class BIT {\n    public:\n        BIT(int n, int val, const function<int (int, int)> fn)\n          : bit_(n + 1, val),\n            fn_(fn) {  // 0-indexed\n        }\n        \n        void update(int i, int val) {\n            ++i;\n            for (; i < size(bit_); i += lower_bit(i)) {\n                bit_[i] = fn_(bit_[i], val);\n            }\n        }\n\n        int query(int i) const {\n            ++i;\n            int total = bit_[0];\n            for (; i > 0; i -= lower_bit(i)) {\n                total = fn_(total, bit_[i]);\n            }\n            return total;\n        }\n    \n    private:\n        int lower_bit(int i) const {\n            return i & -i;\n        }\n        \n        vector<int> bit_;\n        const function<int (int, int)> fn_;\n    };\n};\n\n// Time:  O(nlogn)\n// Space: O(n)\n// prefix sum, segment tree\nclass Solution4 {\npublic:\n    int maxProfit(vector<int>& prices, vector<int>& profits) {\n        static const int NEG_INF = numeric_limits<int>::min();\n\n        unordered_set<int> prices_set(cbegin(prices), cend(prices));\n        vector<int> sorted_prices(cbegin(prices_set), cend(prices_set));\n        sort(begin(sorted_prices), end(sorted_prices));\n        unordered_map<int, int> price_to_idx;\n        for (int i = 0; i < size(sorted_prices); ++i) {\n            price_to_idx[sorted_prices[i]] = i;\n        }\n        int result = NEG_INF;\n        SegmentTree st1(size(price_to_idx)), st2(size(price_to_idx));\n        for (int i = 0; i < size(prices); ++i) {\n            const int mx2 = st2.query(0, price_to_idx[prices[i]] - 1);\n            if (mx2 != NEG_INF) {\n                result = max(result, mx2 + profits[i]);\n            }\n            st1.update(price_to_idx[prices[i]], profits[i]);\n            const int mx1 = st1.query(0, price_to_idx[prices[i]] - 1);\n            if (mx1 != NEG_INF) {\n                st2.update(price_to_idx[prices[i]], mx1 + profits[i]);\n            }\n        }\n        return result != NEG_INF ? result : -1;\n    }\n\nprivate:\n    class SegmentTree {\n    private:\n        const int NEG_INF = numeric_limits<int>::min();\n      \n    public:\n        explicit SegmentTree(int N)\n          : tree(N > 1 ? 1 << (__lg(N - 1) + 2) : 2, NEG_INF),\n            base(N > 1 ? 1 << (__lg(N - 1) + 1) : 1) {\n\n        }\n\n        void update(int i, int h) {\n            int x = base + i;\n            tree[x] = max(tree[x], h);\n            while (x > 1) {\n                x /= 2;\n                tree[x] = max(tree[x * 2], tree[x * 2 + 1]);\n            }\n        }\n\n        int query(int L, int R) {\n            int result = NEG_INF;\n            if (L > R) {\n                return result;\n            }\n            L += base;\n            R += base;\n            for (; L <= R; L /= 2, R /= 2) {\n                if (L & 1) {\n                    result = max(result, tree[L]);\n                    ++L;\n                }\n                if ((R & 1) == 0) {\n                    result = max(tree[R], result);\n                    --R;\n                }\n            }\n            return result;\n        }\n\n        vector<int> tree;\n        int base;\n    };\n};\n\n// Time:  O(nlogn)\n// Space: O(n)\n// prefix sum, segment tree\nclass Solution5 {\npublic:\n    int maxProfit(vector<int>& prices, vector<int>& profits) {\n        static const int NEG_INF = numeric_limits<int>::min();\n\n        unordered_set<int> prices_set(cbegin(prices), cend(prices));\n        vector<int> sorted_prices(cbegin(prices_set), cend(prices_set));\n        sort(begin(sorted_prices), end(sorted_prices));\n        unordered_map<int, int> price_to_idx;\n        for (int i = 0; i < size(sorted_prices); ++i) {\n            price_to_idx[sorted_prices[i]] = i;\n        }\n        vector<int> right(size(prices), NEG_INF);\n        SegmentTree st2(size(price_to_idx));\n        for (int i = size(prices) - 1; i >= 0; --i) {\n            right[i] = st2.query(price_to_idx[prices[i]] + 1, size(price_to_idx) - 1);\n            st2.update(price_to_idx[prices[i]], profits[i]);\n        }\n        int result = NEG_INF;\n        vector<int> left(size(prices), NEG_INF);\n        SegmentTree st1(size(price_to_idx));\n        for (int i = 0; i < size(prices); ++i) {\n            const int left = st1.query(0, price_to_idx[prices[i]] - 1);\n            if (left != NEG_INF && right[i] != NEG_INF) {\n                result = max(result, left + profits[i] + right[i]);\n            }\n            st1.update(price_to_idx[prices[i]], profits[i]);\n        }\n        return result != NEG_INF ? result : -1;\n    }\n\nprivate:\n    class SegmentTree {\n    private:\n        const int NEG_INF = numeric_limits<int>::min();\n      \n    public:\n        explicit SegmentTree(int N)\n          : tree(N > 1 ? 1 << (__lg(N - 1) + 2) : 2, NEG_INF),\n            base(N > 1 ? 1 << (__lg(N - 1) + 1) : 1) {\n\n        }\n\n        void update(int i, int h) {\n            int x = base + i;\n            tree[x] = max(tree[x], h);\n            while (x > 1) {\n                x /= 2;\n                tree[x] = max(tree[x * 2], tree[x * 2 + 1]);\n            }\n        }\n\n        int query(int L, int R) {\n            int result = NEG_INF;\n            if (L > R) {\n                return result;\n            }\n            L += base;\n            R += base;\n            for (; L <= R; L /= 2, R /= 2) {\n                if (L & 1) {\n                    result = max(result, tree[L]);\n                    ++L;\n                }\n                if ((R & 1) == 0) {\n                    result = max(tree[R], result);\n                    --R;\n                }\n            }\n            return result;\n        }\n\n        vector<int> tree;\n        int base;\n    };\n};\n",
+      "sourcePath": "C++/maximum-profitable-triplets-with-increasing-prices-ii.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "maximum-profitable-triplets-with-increasing-prices-ii.py",
+      "code": "# Time:  O(nlogn)\n# Space: O(n)\n\nimport itertools\nfrom sortedcontainers import SortedList\n\n\n# prefix sum, sorted list, binary search, mono stack\nclass Solution(object):\n    def maxProfit(self, prices, profits):\n        \"\"\"\n        :type prices: List[int]\n        :type profits: List[int]\n        :rtype: int\n        \"\"\"\n        NEG_INF = float(\"-inf\")\n        def query(sl, k):\n            j = sl.bisect_left((k,))\n            return sl[j-1][1] if j-1 >= 0 else NEG_INF\n    \n        def update(sl, k, v):\n            j = sl.bisect_left((k,))\n            if j < len(sl) and sl[j][0] == k:\n                if not (sl[j][1] < v):\n                    return\n                del sl[j]\n            elif not (j-1 < 0 or sl[j-1][1] < v):\n                return\n            sl.add((k, v))\n            while j+1 < len(sl) and sl[j+1][1] <= sl[j][1]:\n                del sl[j+1]\n\n        result = NEG_INF\n        sl1, sl2 = SortedList(), SortedList()\n        for price, profit in itertools.izip(prices, profits):\n            result = max(result, query(sl2, price)+profit)\n            update(sl1, price, profit)\n            update(sl2, price, query(sl1, price)+profit)\n        return result if result != NEG_INF else -1\n\n\n# Time:  O(nlogn)\n# Space: O(n)\nfrom sortedcontainers import SortedList\n\n\n# prefix sum, sorted list, binary search, mono stack\nclass Solution2(object):\n    def maxProfit(self, prices, profits):\n        \"\"\"\n        :type prices: List[int]\n        :type profits: List[int]\n        :rtype: int\n        \"\"\"\n        NEG_INF = float(\"-inf\")\n\n        right = [NEG_INF]*len(prices)\n        sl = SortedList()\n        for i in reversed(xrange(len(prices))):\n            j = sl.bisect_left((-prices[i],))\n            if j-1 >= 0:\n                right[i] = sl[j-1][1]\n            if not (j-1 < 0 or sl[j-1][1] < profits[i]):\n                continue\n            sl.add((-prices[i], profits[i]))\n            j = sl.bisect_left((-prices[i], profits[i]))\n            while j+1 < len(sl) and sl[j+1][1] <= sl[j][1]:\n                del sl[j+1]\n        result = NEG_INF\n        sl = SortedList()\n        for i in xrange(len(prices)):\n            j = sl.bisect_left((prices[i],))\n            if j-1 >= 0:\n                result = max(result, sl[j-1][1]+profits[i]+right[i])\n            if not (j-1 < 0 or sl[j-1][1] < profits[i]):\n                continue\n            sl.add((prices[i], profits[i]))\n            j = sl.bisect_left((prices[i], profits[i]))\n            while j+1 < len(sl) and sl[j+1][1] <= sl[j][1]:\n                del sl[j+1]\n        return result if result != NEG_INF else -1\n\n\n# Time:  O(nlogn)\n# Space: O(n)\nimport itertools\n\n\n# prefix sum, bit, fenwick tree\nclass Solution3(object):\n    def maxProfit(self, prices, profits):\n        \"\"\"\n        :type prices: List[int]\n        :type profits: List[int]\n        :rtype: int\n        \"\"\"\n        NEG_INF = float(\"-inf\")\n        class BIT(object):  # 0-indexed.\n            def __init__(self, n, default=0, fn=lambda x, y: x+y):\n                self.__bit = [NEG_INF]*(n+1)  # Extra one for dummy node.\n                self.__default = default\n                self.__fn = fn\n\n            def update(self, i, val):\n                i += 1  # Extra one for dummy node.\n                while i < len(self.__bit):\n                    self.__bit[i] = self.__fn(self.__bit[i], val)\n                    i += (i & -i)\n\n            def query(self, i):\n                i += 1  # Extra one for dummy node.\n                ret = self.__default\n                while i > 0:\n                    ret = self.__fn(ret, self.__bit[i])\n                    i -= (i & -i)\n                return ret\n\n        price_to_idx = {x:i for i, x in enumerate(sorted(set(prices)))}\n        result = NEG_INF\n        bit1, bit2 = BIT(len(price_to_idx), default=NEG_INF, fn=max), BIT(len(price_to_idx), default=NEG_INF, fn=max)\n        for price, profit in itertools.izip(prices, profits):\n            result = max(result, bit2.query(price_to_idx[price]-1)+profit)\n            bit1.update(price_to_idx[price], profit)\n            bit2.update(price_to_idx[price], bit1.query(price_to_idx[price]-1)+profit)\n        return result if result != NEG_INF else -1\n\n\n# Time:  O(nlogn)\n# Space: O(n)\nimport itertools\n\n\n# prefix sum, segment tree\nclass Solution4(object):\n    def maxProfit(self, prices, profits):\n        \"\"\"\n        :type prices: List[int]\n        :type profits: List[int]\n        :rtype: int\n        \"\"\"\n        NEG_INF = float(\"-inf\")\n        # Range Maximum Query\n        class SegmentTree(object):\n            def __init__(self, N,\n                         build_fn=lambda _: None,\n                         query_fn=lambda x, y: max(x, y),\n                         update_fn=lambda x, y: max(x, y)):\n                self.tree = [None]*(2*2**((N-1).bit_length()))\n                self.base = len(self.tree)//2\n                self.query_fn = query_fn\n                self.update_fn = update_fn\n                for i in xrange(self.base, self.base+N):\n                    self.tree[i] = build_fn(i-self.base)\n                for i in reversed(xrange(1, self.base)):\n                    self.tree[i] = query_fn(self.tree[2*i], self.tree[2*i+1])\n\n            def update(self, i, h):\n                x = self.base+i\n                self.tree[x] = self.update_fn(self.tree[x], h)\n                while x > 1:\n                    x //= 2\n                    self.tree[x] = self.query_fn(self.tree[x*2], self.tree[x*2+1])\n\n            def query(self, L, R):\n                if L > R:\n                    return None\n                L += self.base\n                R += self.base\n                left = right = None\n                while L <= R:\n                    if L & 1:\n                        left = self.query_fn(left, self.tree[L])\n                        L += 1\n                    if R & 1 == 0:\n                        right = self.query_fn(self.tree[R], right)\n                        R -= 1\n                    L //= 2\n                    R //= 2\n                return self.query_fn(left, right)\n\n        price_to_idx = {x:i for i, x in enumerate(sorted(set(prices)))}\n        result = NEG_INF\n        st1, st2 = SegmentTree(len(price_to_idx)), SegmentTree(len(price_to_idx))\n        for price, profit in itertools.izip(prices, profits):\n            mx2 = st2.query(0, price_to_idx[price]-1)\n            if mx2 is not None:\n                result = max(result, mx2+profit)\n            st1.update(price_to_idx[price], profit)\n            mx1 = st1.query(0, price_to_idx[price]-1)\n            if mx1 is not None:\n                st2.update(price_to_idx[price], mx1+profit)\n        return result if result != NEG_INF else -1\n\n\n# Time:  O(nlogn)\n# Space: O(n)\n# prefix sum, segment tree\nclass Solution5(object):\n    def maxProfit(self, prices, profits):\n        \"\"\"\n        :type prices: List[int]\n        :type profits: List[int]\n        :rtype: int\n        \"\"\"\n        NEG_INF = float(\"-inf\")\n        # Range Maximum Query\n        class SegmentTree(object):\n            def __init__(self, N,\n                         build_fn=lambda _: None,\n                         query_fn=lambda x, y: max(x, y),\n                         update_fn=lambda x, y: max(x, y)):\n                self.tree = [None]*(2*2**((N-1).bit_length()))\n                self.base = len(self.tree)//2\n                self.query_fn = query_fn\n                self.update_fn = update_fn\n                for i in xrange(self.base, self.base+N):\n                    self.tree[i] = build_fn(i-self.base)\n                for i in reversed(xrange(1, self.base)):\n                    self.tree[i] = query_fn(self.tree[2*i], self.tree[2*i+1])\n\n            def update(self, i, h):\n                x = self.base+i\n                self.tree[x] = self.update_fn(self.tree[x], h)\n                while x > 1:\n                    x //= 2\n                    self.tree[x] = self.query_fn(self.tree[x*2], self.tree[x*2+1])\n\n            def query(self, L, R):\n                if L > R:\n                    return None\n                L += self.base\n                R += self.base\n                left = right = None\n                while L <= R:\n                    if L & 1:\n                        left = self.query_fn(left, self.tree[L])\n                        L += 1\n                    if R & 1 == 0:\n                        right = self.query_fn(self.tree[R], right)\n                        R -= 1\n                    L //= 2\n                    R //= 2\n                return self.query_fn(left, right)\n\n        price_to_idx = {x:i for i, x in enumerate(sorted(set(prices)))}\n        right = [NEG_INF]*len(prices)\n        st = SegmentTree(len(price_to_idx))\n        for i in reversed(xrange(len(prices))):\n            right[i] = st.query(price_to_idx[prices[i]]+1, len(price_to_idx)-1)\n            st.update(price_to_idx[prices[i]], profits[i])\n        result = NEG_INF\n        st = SegmentTree(len(price_to_idx))\n        for i in xrange(len(prices)):\n            left = st.query(0, price_to_idx[prices[i]]-1)\n            if left is not None and right[i] is not None:\n                result = max(result, left+profits[i]+right[i])\n            st.update(price_to_idx[prices[i]], profits[i])\n        return result if result != NEG_INF else -1\n",
+      "sourcePath": "Python/maximum-profitable-triplets-with-increasing-prices-ii.py"
+    }
+  },
+  "seo": {
+    "title": "Maximum Profitable Triplets With Increasing Prices II Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Maximum Profitable Triplets With Increasing Prices II (LeetCode #2921). Pattern: prefix sum. Time O(nlogn), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Maximum Profitable Triplets With Increasing Prices II",
+      "Maximum Profitable Triplets With Increasing Prices II solution",
+      "Maximum Profitable Triplets With Increasing Prices II leetcode",
+      "binary-search-tree",
+      "prefix-sum",
+      "sorted-list",
+      "binary-search",
+      "stack",
+      "fenwick-tree",
+      "segment-tree",
+      "hard"
+    ],
+    "canonicalPath": "/problems/maximum-profitable-triplets-with-increasing-prices-ii"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Maximum Profitable Triplets With Increasing Prices II?",
+      "answer": "The reference solutions aim for O(nlogn) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Maximum Profitable Triplets With Increasing Prices II use?",
+      "answer": "It primarily maps to prefix sum, sorted list, binary search, stack, fenwick tree, and segment tree, within the broader topic of binary search tree."
+    },
+    {
+      "question": "Is Maximum Profitable Triplets With Increasing Prices II good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/maximum-profitable-triplets-with-increasing-prices-ii/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the prefix sum, sorted list, binary search, stack, fenwick tree, and segment tree approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Maximum Profitable Triplets With Increasing Prices II (#2921) — Hard. Pattern: prefix sum, sorted list, binary search, stack, fenwick tree, and segment tree. Complexity: O(nlogn) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Maximum Profitable Triplets With Increasing Prices II: show input structure (binary search tree), highlight the moving parts of the prefix sum, sorted list, binary search, stack, fenwick tree, and segment tree approach, and annotate each step with the maintained invariant and complexity."
+}

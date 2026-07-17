@@ -1,0 +1,49 @@
+{
+  "slug": "bloomberg-stack-questions",
+  "path": "/explore/bloomberg-stack-questions",
+  "h1": "Best Stack Questions for Bloomberg",
+  "intro": "A curated set of 6 Stack problems frequently useful for Bloomberg interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "valid-parentheses",
+    "symmetric-tree",
+    "min-stack",
+    "implement-queue-using-stacks",
+    "decode-string",
+    "next-greater-element-i"
+  ],
+  "faqs": [
+    {
+      "question": "How many Stack problems should I do for Bloomberg?",
+      "answer": "Quality over quantity: master patterns with 6 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Stack topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/bloomberg",
+      "label": "Bloomberg interview hub"
+    },
+    {
+      "href": "/topics/stack",
+      "label": "Stack problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Stack Questions for Bloomberg | AlgoForge",
+    "description": "Top Stack coding interview questions for Bloomberg. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Bloomberg Stack questions",
+      "Stack interview",
+      "Bloomberg leetcode"
+    ],
+    "canonicalPath": "/explore/bloomberg-stack-questions"
+  },
+  "kind": "company-topic"
+}

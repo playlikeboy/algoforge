@@ -1,0 +1,160 @@
+{
+  "id": "373",
+  "number": 373,
+  "slug": "find-k-pairs-with-smallest-sums",
+  "title": "Find K Pairs with Smallest Sums",
+  "difficulty": "Medium",
+  "topics": [
+    "binary-heap"
+  ],
+  "patterns": [
+    "heap"
+  ],
+  "companies": [
+    "amazon",
+    "google",
+    "microsoft"
+  ],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(k * log(min(n, m, k)))",
+  "spaceComplexity": "O(min(n, m, k))",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/find-k-pairs-with-smallest-sums/",
+  "notes": [],
+  "relatedSlugs": [
+    "ugly-number-ii",
+    "super-ugly-number",
+    "kth-smallest-element-in-a-sorted-matrix",
+    "hand-of-straights",
+    "exam-room",
+    "campus-bikes",
+    "furthest-building-you-can-reach",
+    "maximum-average-pass-ratio"
+  ],
+  "prevSlug": "super-pow",
+  "nextSlug": "guess-number-higher-or-lower",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Find K Pairs with Smallest Sums?\n\n**Find K Pairs with Smallest Sums** (LeetCode #373) is a **Medium** problem that primarily trains **binary heap**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **heap**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Find K Pairs with Smallest Sums\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **heap**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(k * log(min(n, m, k)))) and **space** (O(min(n, m, k))) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(k * log(min(n, m, k)))** time and **O(min(n, m, k))** space.\n\n### Pattern focus: heap\n\nUse the pattern as a checklist:\n\n- **heap** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(k * log(min(n, m, k)))** |\n| Space | **O(min(n, m, k))** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Find K Pairs with Smallest Sums\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for heap — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **heap**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **binary heap**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Find K Pairs with Smallest Sums** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **binary heap**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "find-k-pairs-with-smallest-sums.cpp",
+      "code": "// Time:  O(k * log(min(n, m, k))), where n is the size of num1, and m is the size of num2.\n// Space: O(min(n, m, k))\n\nclass Solution {\npublic:\n    vector<pair<int, int>> kSmallestPairs(vector<int>& nums1, vector<int>& nums2, int k) {\n        vector<pair<int, int>> pairs;\n        if (nums1.size() > nums2.size()) {\n            vector<pair<int, int>> tmp = kSmallestPairs(nums2, nums1, k);\n            for (const auto& pair : tmp) {\n                pairs.emplace_back(pair.second, pair.first);\n            }\n            return pairs;\n        }\n\n        using P = pair<int, pair<int, int>>;\n        priority_queue<P, vector<P>, greater<P>> q;\n        auto push = [&nums1, &nums2, &q](int i, int j) {\n            if (i < nums1.size() && j < nums2.size()) {\n                q.emplace(nums1[i] + nums2[j], make_pair(i, j));\n            }\n        };\n\n        push(0, 0);\n        while (!q.empty() && pairs.size() < k) {\n            auto tmp = q.top(); q.pop();\n            int i, j;\n            tie(i, j) = tmp.second;\n            pairs.emplace_back(nums1[i], nums2[j]);\n            push(i, j + 1);\n            if (j == 0) {\n                push(i + 1, 0);  // at most queue min(m, n) space.\n            }\n        }\n        return pairs; \n    }\n};\n",
+      "sourcePath": "C++/find-k-pairs-with-smallest-sums.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "find-k-pairs-with-smallest-sums.py",
+      "code": "# Time:  O(k * log(min(n, m, k))), where n is the size of num1, and m is the size of num2.\n# Space: O(min(n, m, k))\n\nfrom heapq import heappush, heappop\n\nclass Solution(object):\n    def kSmallestPairs(self, nums1, nums2, k):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :type k: int\n        :rtype: List[List[int]]\n        \"\"\"\n        pairs = []\n        if len(nums1) > len(nums2):\n            tmp = self.kSmallestPairs(nums2, nums1, k)\n            for pair in tmp:\n                pairs.append([pair[1], pair[0]])\n            return pairs\n\n        min_heap = []\n        def push(i, j):\n            if i < len(nums1) and j < len(nums2):\n                heappush(min_heap, [nums1[i] + nums2[j], i, j])\n\n        push(0, 0)\n        while min_heap and len(pairs) < k:\n            _, i, j = heappop(min_heap)\n            pairs.append([nums1[i], nums2[j]])\n            push(i, j + 1)\n            if j == 0:\n                push(i + 1, 0)  # at most queue min(n, m) space\n        return pairs\n\n\n# time: O(mn * log k)\n# space: O(k)\nfrom heapq import nsmallest\nfrom itertools import product\n\n\nclass Solution2(object):\n    def kSmallestPairs(self, nums1, nums2, k):\n        \"\"\"\n        :type nums1: List[int]\n        :type nums2: List[int]\n        :type k: int\n        :rtype: List[List[int]]\n        \"\"\"\n        return nsmallest(k, product(nums1, nums2), key=sum)\n",
+      "sourcePath": "Python/find-k-pairs-with-smallest-sums.py"
+    }
+  },
+  "seo": {
+    "title": "Find K Pairs with Smallest Sums Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Find K Pairs with Smallest Sums (LeetCode #373). Pattern: heap. Time O(k * log(min(n, m, k))), space O(min(n, m, k)). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Find K Pairs with Smallest Sums",
+      "Find K Pairs with Smallest Sums solution",
+      "Find K Pairs with Smallest Sums leetcode",
+      "binary-heap",
+      "heap",
+      "medium"
+    ],
+    "canonicalPath": "/problems/find-k-pairs-with-smallest-sums"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Find K Pairs with Smallest Sums?",
+      "answer": "The reference solutions aim for O(k * log(min(n, m, k))) time and O(min(n, m, k)) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Find K Pairs with Smallest Sums use?",
+      "answer": "It primarily maps to heap, within the broader topic of binary heap."
+    },
+    {
+      "question": "Is Find K Pairs with Smallest Sums good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/find-k-pairs-with-smallest-sums/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the heap approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Find K Pairs with Smallest Sums (#373) — Medium. Pattern: heap. Complexity: O(k * log(min(n, m, k))) time / O(min(n, m, k)) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Find K Pairs with Smallest Sums: show input structure (binary heap), highlight the moving parts of the heap approach, and annotate each step with the maintained invariant and complexity."
+}

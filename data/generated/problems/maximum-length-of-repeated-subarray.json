@@ -1,0 +1,162 @@
+{
+  "id": "718",
+  "number": 718,
+  "slug": "maximum-length-of-repeated-subarray",
+  "title": "Maximum Length of Repeated Subarray",
+  "difficulty": "Medium",
+  "topics": [
+    "backtracking"
+  ],
+  "patterns": [
+    "dynamic-programming",
+    "binary-search"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(m * n)",
+  "spaceComplexity": "O(min(m, n))",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-length-of-repeated-subarray/",
+  "notes": [
+    "DP",
+    "Hash",
+    "Binary Search"
+  ],
+  "relatedSlugs": [
+    "flip-game-ii",
+    "partition-to-k-equal-sum-subsets",
+    "minimum-number-of-removals-to-make-mountain-array",
+    "zero-array-transformation-iv",
+    "find-minimum-time-to-finish-all-jobs",
+    "maximum-score-of-non-overlapping-intervals",
+    "maximize-subarray-gcd-score",
+    "letter-combinations-of-a-phone-number"
+  ],
+  "prevSlug": "1-bit-and-2-bit-characters",
+  "nextSlug": "find-k-th-smallest-pair-distance",
+  "estimatedMinutes": 45,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Maximum Length of Repeated Subarray?\n\n**Maximum Length of Repeated Subarray** (LeetCode #718) is a **Medium** problem that primarily trains **backtracking**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming and binary search**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: DP, Hash, Binary Search.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Maximum Length of Repeated Subarray\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming and binary search**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(m * n)) and **space** (O(min(m, n))) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(m * n)** time and **O(min(m, n))** space.\n\n### Pattern focus: dynamic programming and binary search\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n- **binary search** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(m * n)** |\n| Space | **O(min(m, n))** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Maximum Length of Repeated Subarray\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming and binary search — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming and binary search**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **backtracking**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Maximum Length of Repeated Subarray** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **backtracking**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "maximum-length-of-repeated-subarray.cpp",
+      "code": "// Time:  O(m * n)\n// Space: O(min(m, n))\n\n// dp solution (99 ms)\nclass Solution {\npublic:\n    int findLength(vector<int>& A, vector<int>& B) {\n        if (A.size() < B.size()) { \n            return findLength(B, A);\n        }\n        int result = 0;\n        vector<vector<int>> dp(2, vector<int>(B.size() + 1));\n        for (int i = 0; i < A.size(); ++i) {\n            for (int j = 0; j < B.size(); ++j) {\n                if (A[i] == B[j]) {\n                    dp[(i + 1) % 2][j + 1] = dp[i % 2][j] + 1;\n                    result = max(result, dp[(i + 1) % 2][j + 1]);\n                } else {\n                    dp[(i + 1) % 2][j + 1] = 0;\n                }\n            }\n        }\n        return result;\n    }\n};\n\n\n// Time:  O(m * n * log(min(m, n)))\n// Space: O(min(m, n))\n// Binary search + rolling hash solution (36 ms)\nclass Solution2 {\npublic:\n    int findLength(vector<int>& A, vector<int>& B) {\n        if (A.size() > B.size()) {\n            return findLength(B, A);\n        }\n        int left = 0, right = min(A.size(), B.size()) + 1;\n        while (left < right) {\n            const auto mid = left + (right-left) / 2;\n            if (!check(mid, A, B)) {  // find the min idx such that check(idx) == false\n                right = mid;\n            } else {\n                left = mid + 1;\n            }\n        }\n        return left - 1;\n    }\n    \nprivate:\n    bool check(const int guess, const vector<int>& A, const vector<int>& B) {\n        unordered_map<uint64_t, vector<int>> hashes;\n        int i = 0;\n        for (const auto& hash_a : rolling_hashes(A, guess)) {\n            hashes[hash_a].emplace_back(i++);\n        }\n        int j = 0;\n        for (const auto& hash_b : rolling_hashes(B, guess)) {\n            for (const auto& i : hashes[hash_b]) {\n                if (equal(A.begin() + i, A.begin() + i + guess, B.begin() + j)) {\n                    return true;\n                }\n            }\n            ++j;\n        }\n        return false;\n    }\n            \n    vector<uint64_t> rolling_hashes(const vector<int>& source, const int length) {\n        static const uint64_t M = 1000000007;\n        static const uint64_t p = 113; \n        static const uint64_t p_inv = pow(p, M - 2, M);\n        vector<uint64_t> result(source.size() - length + 1);\n        uint64_t hash = 0, power = 1;\n        if (length == 0) {\n            return result;\n        }\n        for (int i = 0; i < source.size(); ++i) {\n            hash = (hash + source[i] * power) % M;\n            if (i < length - 1) {\n                power = (power * p) % M;\n            } else {\n                result[i - (length - 1)] = hash;\n                hash = (hash - source[i - (length - 1)]) * p_inv % M;\n            }\n        }\n        return result;\n    }\n    \n    uint64_t pow(uint64_t a,uint64_t b, uint64_t m) {\n        a %= m;\n        uint64_t result = 1;\n        while (b) {\n            if (b & 1) {\n                result = (result * a) % m;\n            }\n            a = (a * a) % m;\n            b >>= 1;\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/maximum-length-of-repeated-subarray.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "maximum-length-of-repeated-subarray.py",
+      "code": "# Time:  O(m * n)\n# Space: O(min(m, n))\n\nimport collections\n\n\nclass Solution(object):\n    def findLength(self, A, B):\n        \"\"\"\n        :type A: List[int]\n        :type B: List[int]\n        :rtype: int\n        \"\"\"\n        if len(A) < len(B): return self.findLength(B, A)\n        result = 0\n        dp = [[0] * (len(B)+1) for _ in xrange(2)]\n        for i in xrange(len(A)):\n            for j in xrange(len(B)):\n                if A[i] == B[j]:\n                    dp[(i+1)%2][j+1] = dp[i%2][j]+1\n                else:\n                    dp[(i+1)%2][j+1] = 0\n            result = max(result, max(dp[(i+1)%2]))\n        return result\n\n\n# Time:  O(m * n * log(min(m, n)))\n# Space: O(min(m, n))\n# Binary search + rolling hash solution (226 ms)\nclass Solution2(object):\n    def findLength(self, A, B):\n        \"\"\"\n        :type A: List[int]\n        :type B: List[int]\n        :rtype: int\n        \"\"\"\n        if len(A) > len(B): return self.findLength(B, A)\n        M, p = 10**9+7, 113\n        p_inv = pow(p, M-2, M)\n        def check(guess):\n            def rolling_hashes(source, length):\n                if length == 0:\n                    yield 0, 0\n                    return\n\n                val, power = 0, 1\n                for i, x in enumerate(source):\n                    val = (val + x*power) % M\n                    if i < length - 1:\n                        power = (power*p) % M\n                    else:\n                        yield val, i-(length-1)\n                        val = (val-source[i-(length-1)])*p_inv % M\n\n            hashes = collections.defaultdict(list)\n            for hash_val, i in rolling_hashes(A, guess):\n                hashes[hash_val].append(i)\n            for hash_val, j in rolling_hashes(B, guess):\n                if any(A[i:i+guess] == B[j:j+guess] for i in hashes[hash_val]):\n                    return True\n            return False\n\n        left, right = 0, min(len(A), len(B)) + 1\n        while left < right:\n            mid = left + (right-left)/2\n            if not check(mid):  # find the min idx such that check(idx) == false\n                right = mid\n            else:\n                left = mid+1\n        return left-1\n\n\n# Time:  O(m * n * min(m, n) * log(min(m, n)))\n# Space: O(min(m^2, n^2))\n# Binary search (122 ms)\nclass Solution3(object):\n    def findLength(self, A, B):\n        \"\"\"\n        :type A: List[int]\n        :type B: List[int]\n        :rtype: int\n        \"\"\"\n        if len(A) > len(B): return self.findLength(B, A)\n\n        def check(length):\n            lookup = set(A[i:i+length] \\\n                       for i in xrange(len(A)-length+1))\n            return any(B[j:j+length] in lookup \\\n                       for j in xrange(len(B)-length+1))\n\n        A = ''.join(map(chr, A))\n        B = ''.join(map(chr, B))\n        left, right = 0, min(len(A), len(B)) + 1\n        while left < right:\n            mid = left + (right-left)/2\n            if not check(mid):  # find the min idx such that check(idx) == false\n                right = mid\n            else:\n                left = mid+1\n        return left-1\n\n",
+      "sourcePath": "Python/maximum-length-of-repeated-subarray.py"
+    }
+  },
+  "seo": {
+    "title": "Maximum Length of Repeated Subarray Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Maximum Length of Repeated Subarray (LeetCode #718). Pattern: dynamic programming. Time O(m * n), space O(min(m, n)). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Maximum Length of Repeated Subarray",
+      "Maximum Length of Repeated Subarray solution",
+      "Maximum Length of Repeated Subarray leetcode",
+      "backtracking",
+      "dynamic-programming",
+      "binary-search",
+      "medium"
+    ],
+    "canonicalPath": "/problems/maximum-length-of-repeated-subarray"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Maximum Length of Repeated Subarray?",
+      "answer": "The reference solutions aim for O(m * n) time and O(min(m, n)) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Maximum Length of Repeated Subarray use?",
+      "answer": "It primarily maps to dynamic programming and binary search, within the broader topic of backtracking."
+    },
+    {
+      "question": "Is Maximum Length of Repeated Subarray good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/maximum-length-of-repeated-subarray/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming and binary search approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Maximum Length of Repeated Subarray (#718) — Medium. Pattern: dynamic programming and binary search. Complexity: O(m * n) time / O(min(m, n)) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Maximum Length of Repeated Subarray: show input structure (backtracking), highlight the moving parts of the dynamic programming and binary search approach, and annotate each step with the maintained invariant and complexity."
+}

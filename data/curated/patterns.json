@@ -1,0 +1,22 @@
+[
+  { "slug": "two-pointers", "name": "Two Pointers", "description": "Use two indices moving through a sequence to find pairs, remove elements, or partition.", "relatedTopics": ["array", "string", "two-pointers"] },
+  { "slug": "sliding-window", "name": "Sliding Window", "description": "Maintain a dynamic subarray/substring window with add/remove invariants.", "relatedTopics": ["array", "string", "hash-table"] },
+  { "slug": "binary-search", "name": "Binary Search", "description": "Halve the search space on sorted data or monotonic answer functions.", "relatedTopics": ["binary-search", "array"] },
+  { "slug": "prefix-sum", "name": "Prefix Sum", "description": "Precompute cumulative sums for O(1) range queries.", "relatedTopics": ["array", "math"] },
+  { "slug": "hash-map", "name": "Hash Map", "description": "Trade space for speed with key-value lookups and frequency counting.", "relatedTopics": ["hash-table"] },
+  { "slug": "stack", "name": "Stack / Monotonic Stack", "description": "Track candidates with LIFO order or monotonic properties.", "relatedTopics": ["stack"] },
+  { "slug": "queue-bfs", "name": "Queue / BFS", "description": "Explore level by level for shortest paths and multi-source floods.", "relatedTopics": ["queue", "breadth-first-search", "graph"] },
+  { "slug": "dfs-backtracking", "name": "DFS / Backtracking", "description": "Recursive exploration with undo for search spaces.", "relatedTopics": ["depth-first-search", "backtracking", "tree", "graph"] },
+  { "slug": "dynamic-programming", "name": "Dynamic Programming", "description": "Define states and transitions; memoize or tabulate.", "relatedTopics": ["dynamic-programming"] },
+  { "slug": "greedy", "name": "Greedy", "description": "Sort + choose locally best option with proof of correctness.", "relatedTopics": ["greedy", "sort"] },
+  { "slug": "union-find", "name": "Union Find", "description": "Disjoint sets for connectivity and component merging.", "relatedTopics": ["graph"] },
+  { "slug": "trie", "name": "Trie", "description": "Prefix trees for dictionary and string prefix queries.", "relatedTopics": ["string", "tree"] },
+  { "slug": "heap", "name": "Heap / Priority Queue", "description": "Always extract min/max in logarithmic time.", "relatedTopics": ["binary-heap"] },
+  { "slug": "bit-manipulation", "name": "Bit Manipulation", "description": "Use bits as compact sets or arithmetic shortcuts.", "relatedTopics": ["bit-manipulation"] },
+  { "slug": "linked-list-pointers", "name": "Linked List Pointers", "description": "Dummy heads, fast/slow pointers, and in-place rewiring.", "relatedTopics": ["linked-list"] },
+  { "slug": "tree-traversal", "name": "Tree Traversal", "description": "Preorder, inorder, postorder, and level-order walks.", "relatedTopics": ["tree", "binary-search-tree"] },
+  { "slug": "graph-algorithms", "name": "Graph Algorithms", "description": "DFS/BFS, topological sort, Dijkstra, and MST ideas.", "relatedTopics": ["graph"] },
+  { "slug": "intervals", "name": "Intervals", "description": "Sort and merge, sweep line, and meeting-room style logic.", "relatedTopics": ["array", "sort"] },
+  { "slug": "kadane", "name": "Kadane's Algorithm", "description": "Maximum subarray via running local optima.", "relatedTopics": ["array", "dynamic-programming"] },
+  { "slug": "topological-sort", "name": "Topological Sort", "description": "Order nodes in a DAG for course-schedule style problems.", "relatedTopics": ["graph"] }
+]

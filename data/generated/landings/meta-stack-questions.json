@@ -1,0 +1,48 @@
+{
+  "slug": "meta-stack-questions",
+  "path": "/explore/meta-stack-questions",
+  "h1": "Best Stack Questions for Meta",
+  "intro": "A curated set of 5 Stack problems frequently useful for Meta interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "valid-parentheses",
+    "simplify-path",
+    "basic-calculator",
+    "basic-calculator-ii",
+    "flatten-nested-list-iterator"
+  ],
+  "faqs": [
+    {
+      "question": "How many Stack problems should I do for Meta?",
+      "answer": "Quality over quantity: master patterns with 5 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Stack topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/meta",
+      "label": "Meta interview hub"
+    },
+    {
+      "href": "/topics/stack",
+      "label": "Stack problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Stack Questions for Meta | AlgoForge",
+    "description": "Top Stack coding interview questions for Meta. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Meta Stack questions",
+      "Stack interview",
+      "Meta leetcode"
+    ],
+    "canonicalPath": "/explore/meta-stack-questions"
+  },
+  "kind": "company-topic"
+}

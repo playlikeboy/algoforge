@@ -1,0 +1,47 @@
+{
+  "slug": "microsoft-stack-questions",
+  "path": "/explore/microsoft-stack-questions",
+  "h1": "Best Stack Questions for Microsoft",
+  "intro": "A curated set of 4 Stack problems frequently useful for Microsoft interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "valid-parentheses",
+    "symmetric-tree",
+    "basic-calculator-ii",
+    "implement-queue-using-stacks"
+  ],
+  "faqs": [
+    {
+      "question": "How many Stack problems should I do for Microsoft?",
+      "answer": "Quality over quantity: master patterns with 4 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Stack topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/microsoft",
+      "label": "Microsoft interview hub"
+    },
+    {
+      "href": "/topics/stack",
+      "label": "Stack problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Stack Questions for Microsoft | AlgoForge",
+    "description": "Top Stack coding interview questions for Microsoft. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Microsoft Stack questions",
+      "Stack interview",
+      "Microsoft leetcode"
+    ],
+    "canonicalPath": "/explore/microsoft-stack-questions"
+  },
+  "kind": "company-topic"
+}

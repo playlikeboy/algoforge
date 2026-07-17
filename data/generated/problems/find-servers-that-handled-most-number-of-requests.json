@@ -1,0 +1,158 @@
+{
+  "id": "1606",
+  "number": 1606,
+  "slug": "find-servers-that-handled-most-number-of-requests",
+  "title": "Find Servers That Handled Most Number of Requests",
+  "difficulty": "Hard",
+  "topics": [
+    "binary-heap"
+  ],
+  "patterns": [
+    "sorted-list"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogk)",
+  "spaceComplexity": "O(k)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/find-servers-that-handled-most-number-of-requests/",
+  "notes": [
+    "Sorted List"
+  ],
+  "relatedSlugs": [
+    "count-the-number-of-k-big-indices",
+    "most-frequent-ids",
+    "finding-mk-average",
+    "sequentially-ordinal-rank-tracker",
+    "count-integers-in-intervals",
+    "distribute-elements-into-two-arrays-ii",
+    "design-an-array-statistics-tracker",
+    "minimum-pair-removal-to-sort-array-ii"
+  ],
+  "prevSlug": "find-valid-matrix-given-row-and-column-sums",
+  "nextSlug": "sellers-with-no-sales",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Find Servers That Handled Most Number of Requests?\n\n**Find Servers That Handled Most Number of Requests** (LeetCode #1606) is a **Hard** problem that primarily trains **binary heap**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sorted list**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Sorted List.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/find-servers-that-handled-most-number-of-requests/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Find Servers That Handled Most Number of Requests\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sorted list**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogk)) and **space** (O(k)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogk)** time and **O(k)** space.\n\n### Pattern focus: sorted list\n\nUse the pattern as a checklist:\n\n- **sorted list** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogk)** |\n| Space | **O(k)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Find Servers That Handled Most Number of Requests\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sorted list — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sorted list**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **binary heap**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Find Servers That Handled Most Number of Requests** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **binary heap**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "find-servers-that-handled-most-number-of-requests.cpp",
+      "code": "// Time:  O(nlogk)\n// Space: O(k)\n\nclass Solution {\npublic:\n    vector<int> busiestServers(int k, vector<int>& arrival, vector<int>& load) {\n        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> min_heap_of_endtimes;\n        priority_queue<int, vector<int>, greater<int>> min_heap_of_nodes_after_curr;\n        priority_queue<int, vector<int>, greater<int>> min_heap_of_nodes_before_curr;\n        for (int i = 0; i < k; ++i) {\n            min_heap_of_nodes_before_curr.emplace(i);\n        }\n        vector<int> count(k);\n        for (int i = 0; i < size(arrival); ++i) {\n            if (i % k == 0) {\n                min_heap_of_nodes_after_curr = move(min_heap_of_nodes_before_curr);\n            }\n            while (!empty(min_heap_of_endtimes) && min_heap_of_endtimes.top().first <= arrival[i]) {\n                const auto [_, free] = min_heap_of_endtimes.top(); min_heap_of_endtimes.pop();\n                if (free < i % k) {\n                    min_heap_of_nodes_before_curr.emplace(free);\n                } else {\n                    min_heap_of_nodes_after_curr.emplace(free);\n                }\n            }\n            auto& min_heap_of_candidates = !empty(min_heap_of_nodes_after_curr) ? min_heap_of_nodes_after_curr : min_heap_of_nodes_before_curr;\n            if (empty(min_heap_of_candidates)) {\n                continue;\n            }\n            const auto node = min_heap_of_candidates.top(); min_heap_of_candidates.pop();\n            ++count[node];\n            min_heap_of_endtimes.emplace(arrival[i] + load[i], node);\n        }\n        int max_count = *max_element(cbegin(count), cend(count));\n        vector<int> result;\n        for (int i = 0; i < k; ++i) {\n            if (count[i] == max_count) {\n                result.emplace_back(i);\n            }\n        }\n        return result;\n    }\n};\n\n// Time:  O(nlogk)\n// Space: O(k)\nclass Solution2 {\npublic:\n    vector<int> busiestServers(int k, vector<int>& arrival, vector<int>& load) {\n        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> min_heap_of_endtimes;\n        set<int> availables;\n        for (int i = 0; i < k; ++i) {\n            availables.emplace(i);\n        }\n        vector<int> count(k);\n        for (int i = 0; i < size(arrival); ++i) {\n            while (!empty(min_heap_of_endtimes) && min_heap_of_endtimes.top().first <= arrival[i]) {\n                const auto [_, free] = min_heap_of_endtimes.top(); min_heap_of_endtimes.pop();\n                availables.emplace(free);\n            }\n            if (empty(availables)) {\n                continue;\n            }\n            auto it = availables.lower_bound(i % k);\n            if (it == end(availables)) {\n                it = begin(availables);\n            }\n            ++count[*it];\n            min_heap_of_endtimes.emplace(arrival[i] + load[i], *it);\n            availables.erase(it);\n        }\n        int max_count = *max_element(cbegin(count), cend(count));\n        vector<int> result;\n        for (int i = 0; i < k; ++i) {\n            if (count[i] == max_count) {\n                result.emplace_back(i);\n            }\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/find-servers-that-handled-most-number-of-requests.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "find-servers-that-handled-most-number-of-requests.py",
+      "code": "# Time:  O(nlogk)\n# Space: O(k)\n\nimport itertools\nimport heapq\n\n\nclass Solution(object):\n    def busiestServers(self, k, arrival, load):\n        \"\"\"\n        :type k: int\n        :type arrival: List[int]\n        :type load: List[int]\n        :rtype: List[int]\n        \"\"\"\n        count = [0]*k\n        min_heap_of_endtimes = []\n        min_heap_of_nodes_after_curr = []\n        min_heap_of_nodes_before_curr = range(k)\n        for i, (t, l) in enumerate(itertools.izip(arrival, load)):\n            if i % k == 0:\n                min_heap_of_nodes_before_curr, min_heap_of_nodes_after_curr = [], min_heap_of_nodes_before_curr\n            while min_heap_of_endtimes and min_heap_of_endtimes[0][0] <= t:\n                _, free = heapq.heappop(min_heap_of_endtimes)\n                if free < i % k:\n                    heapq.heappush(min_heap_of_nodes_before_curr, free)\n                else:\n                    heapq.heappush(min_heap_of_nodes_after_curr, free)\n            min_heap_of_candidates = min_heap_of_nodes_after_curr if min_heap_of_nodes_after_curr else min_heap_of_nodes_before_curr\n            if not min_heap_of_candidates:\n                continue\n            node = heapq.heappop(min_heap_of_candidates)\n            count[node] += 1\n            heapq.heappush(min_heap_of_endtimes, (t+l, node))\n        max_count = max(count)\n        return [i for i in xrange(k) if count[i] == max_count]\n\n\n# Time:  O(nlogk)\n# Space: O(k)\nimport sortedcontainers  # required to do pip install\nimport itertools\nimport heapq\n\n\n# reference: http://www.grantjenks.com/docs/sortedcontainers/sortedlist.html\nclass Solution2(object):\n    def busiestServers(self, k, arrival, load):\n        \"\"\"\n        :type k: int\n        :type arrival: List[int]\n        :type load: List[int]\n        :rtype: List[int]\n        \"\"\"\n        count = [0]*k \n        min_heap_of_endtimes = []\n        availables = sortedcontainers.SortedList(xrange(k))  # O(klogk)\n        for i, (t, l) in enumerate(itertools.izip(arrival, load)):\n            while min_heap_of_endtimes and min_heap_of_endtimes[0][0] <= t:\n                _, free = heapq.heappop(min_heap_of_endtimes)  # O(logk)\n                availables.add(free)  # O(logk)\n            if not availables: \n                continue\n            idx = availables.bisect_left(i % k) % len(availables)  # O(logk)\n            node = availables.pop(idx)  # O(logk)\n            count[node] += 1\n            heapq.heappush(min_heap_of_endtimes, (t+l, node))  # O(logk)\n        max_count = max(count)\n        return [i for i in xrange(k) if count[i] == max_count]\n",
+      "sourcePath": "Python/find-servers-that-handled-most-number-of-requests.py"
+    }
+  },
+  "seo": {
+    "title": "Find Servers That Handled Most Number of Requests Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Find Servers That Handled Most Number of Requests (LeetCode #1606). Pattern: sorted list. Time O(nlogk), space O(k). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Find Servers That Handled Most Number of Requests",
+      "Find Servers That Handled Most Number of Requests solution",
+      "Find Servers That Handled Most Number of Requests leetcode",
+      "binary-heap",
+      "sorted-list",
+      "hard"
+    ],
+    "canonicalPath": "/problems/find-servers-that-handled-most-number-of-requests"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Find Servers That Handled Most Number of Requests?",
+      "answer": "The reference solutions aim for O(nlogk) time and O(k) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Find Servers That Handled Most Number of Requests use?",
+      "answer": "It primarily maps to sorted list, within the broader topic of binary heap."
+    },
+    {
+      "question": "Is Find Servers That Handled Most Number of Requests good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/find-servers-that-handled-most-number-of-requests/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sorted list approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Find Servers That Handled Most Number of Requests (#1606) — Hard. Pattern: sorted list. Complexity: O(nlogk) time / O(k) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Find Servers That Handled Most Number of Requests: show input structure (binary heap), highlight the moving parts of the sorted list approach, and annotate each step with the maintained invariant and complexity."
+}

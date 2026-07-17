@@ -1,0 +1,47 @@
+{
+  "slug": "hard-tree-problems",
+  "path": "/explore/hard-tree-problems",
+  "h1": "Hard Tree Problems",
+  "intro": "12 hard problems that drill the Tree pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "count-ways-to-build-rooms-in-an-ant-colony",
+    "closest-node-to-path-in-tree",
+    "minimum-score-after-removals-on-a-tree",
+    "height-of-binary-tree-after-subtree-removal-queries",
+    "cycle-length-queries-in-a-tree",
+    "count-number-of-possible-root-nodes",
+    "collect-coins-in-a-tree",
+    "count-paths-that-can-form-a-palindrome-in-a-tree",
+    "minimum-edge-weight-equilibrium-queries-in-a-tree",
+    "minimum-weighted-subgraph-with-the-required-paths-ii",
+    "find-weighted-median-node-in-tree",
+    "sum-of-perfect-square-ancestors"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice hard Tree problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/tree",
+      "label": "Tree pattern"
+    },
+    {
+      "href": "/difficulty/hard",
+      "label": "All Hard problems"
+    }
+  ],
+  "seo": {
+    "title": "Hard Tree Problems | AlgoForge",
+    "description": "Practice hard Tree LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "hard Tree",
+      "Tree problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/hard-tree-problems"
+  },
+  "kind": "difficulty-pattern"
+}

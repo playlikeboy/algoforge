@@ -1,0 +1,57 @@
+{
+  "slug": "medium-sorted-list-problems",
+  "path": "/explore/medium-sorted-list-problems",
+  "h1": "Medium Sorted List Problems",
+  "intro": "22 medium problems that drill the Sorted List pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "design-most-recently-used-queue",
+    "stock-price-fluctuation",
+    "design-a-number-container-system",
+    "design-a-food-rating-system",
+    "design-memory-allocator",
+    "design-a-todo-list",
+    "sliding-subarray-beauty",
+    "minimum-absolute-difference-between-elements-with-constraint",
+    "maximum-profitable-triplets-with-increasing-prices-i",
+    "minimum-number-of-coins-for-fruits",
+    "maximum-increasing-triplet-value",
+    "most-frequent-ids",
+    "design-a-3d-binary-matrix-with-efficient-layer-tracking",
+    "design-task-manager",
+    "minimum-operations-to-make-subarray-elements-equal",
+    "implement-router",
+    "minimum-threshold-for-inversion-pairs-count",
+    "minimum-absolute-difference-in-sliding-submatrix",
+    "maximize-count-of-distinct-primes-after-split",
+    "sum-of-weighted-modes-in-subarrays",
+    "design-auction-system",
+    "design-event-manager"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice medium Sorted List problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/sorted-list",
+      "label": "Sorted List pattern"
+    },
+    {
+      "href": "/difficulty/medium",
+      "label": "All Medium problems"
+    }
+  ],
+  "seo": {
+    "title": "Medium Sorted List Problems | AlgoForge",
+    "description": "Practice medium Sorted List LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "medium Sorted List",
+      "Sorted List problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/medium-sorted-list-problems"
+  },
+  "kind": "difficulty-pattern"
+}

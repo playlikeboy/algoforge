@@ -1,0 +1,22 @@
+{
+  "type": "pattern",
+  "slug": "2d-fenwick-tree",
+  "name": "2d Fenwick Tree",
+  "description": "Master the 2d Fenwick Tree coding pattern with curated problems.",
+  "problemCount": 1,
+  "problemSlugs": [
+    "range-sum-query-2d-mutable"
+  ],
+  "relatedTopics": [],
+  "seo": {
+    "title": "2d Fenwick Tree Pattern — Problems & Guide | AlgoForge",
+    "description": "Learn the 2d Fenwick Tree pattern with 1 practice problems, interview tips, and visual intuition.",
+    "keywords": [
+      "2d Fenwick Tree",
+      "2d Fenwick Tree pattern",
+      "2d Fenwick Tree leetcode",
+      "coding patterns"
+    ],
+    "canonicalPath": "/patterns/2d-fenwick-tree"
+  }
+}

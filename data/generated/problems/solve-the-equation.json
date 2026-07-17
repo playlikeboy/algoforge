@@ -1,0 +1,153 @@
+{
+  "id": "640",
+  "number": 640,
+  "slug": "solve-the-equation",
+  "title": "Solve the Equation",
+  "difficulty": "Medium",
+  "topics": [
+    "math"
+  ],
+  "patterns": [],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/solve-the-equation/",
+  "notes": [],
+  "relatedSlugs": [
+    "integer-to-roman",
+    "divide-two-integers",
+    "powx-n",
+    "permutation-sequence",
+    "gray-code",
+    "fraction-to-recurring-decimal",
+    "bulb-switcher",
+    "counting-bits"
+  ],
+  "prevSlug": "decode-ways-ii",
+  "nextSlug": "design-circular-deque",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Solve the Equation?\n\n**Solve the Equation** (LeetCode #640) is a **Medium** problem that primarily trains **math**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/solve-the-equation/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Solve the Equation\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(n)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Solve the Equation\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal general problem-solving solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `solve-the-equation`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **math**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Solve the Equation** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **math**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "solve-the-equation.cpp",
+      "code": "// Time:  O(n)\n// Space: O(n)\n\nclass Solution {\npublic:\n    string solveEquation(string equation) {\n        auto a = 0, b = 0;\n        auto side = 1;\n        int submatches[] = { 1, 2, 3, 4 };\n        auto e = regex(\"(=)|([-+]?)(\\\\d*)(x?)\");\n        for (regex_token_iterator<string::iterator> it(equation.begin(), equation.end(), e, submatches), end;\n             it != end;) {\n            auto eq = (it++)->str();\n            auto sign = (it++)->str();\n            auto num = (it++)->str();\n            auto isx = (it++)->str();\n            if (!eq.empty()) {\n                side = -1;\n            } else if (!isx.empty()) {\n                a += side * stoi(sign + \"1\") * stoi(num.empty() ? \"1\" : num);\n            } else if (!num.empty()) {\n                b -= side * stoi(sign + num);\n            }\n        }\n        return a != 0 ? \"x=\" + to_string(b / a) : b != 0 ? \"No solution\" : \"Infinite solutions\";\n    }\n};\n\n// Time:  O(n)\n// Space: O(n)\nclass Solution2 {\npublic:\n    string solveEquation(string equation) {\n        equation = regex_replace(equation, regex(\"(^|[+=-])x\"), \"$011x\");\n\n        auto pos = equation.find('=');\n        auto l = coef(equation.substr(0, pos));\n        auto r = coef(equation.substr(pos + 1));\n\n        auto a = l.first - r.first;\n        auto b = r.second - l.second;\n\n        return a != 0 ? \"x=\" + to_string(b / a) : b != 0 ? \"No solution\" : \"Infinite solutions\";\n    }\n\nprivate:\n    pair<int, int> coef(string s) {\n        auto a = 0, b = 0;\n        auto e = regex(\"(^|[+-])\\\\d+x?\");\n        for (regex_token_iterator<string::iterator> it(s.begin(), s.end(), e), end;\n             it != end; ++it) {\n            (it->str().back() == 'x' ? a : b) += stoi(*it);\n        }\n        return {a, b};\n    } \n};\n",
+      "sourcePath": "C++/solve-the-equation.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "solve-the-equation.py",
+      "code": "# Time:  O(n)\n# Space: O(n)\n\nimport re\n\n\nclass Solution(object):\n    def solveEquation(self, equation):\n        \"\"\"\n        :type equation: str\n        :rtype: str\n        \"\"\"\n        a, b, side = 0, 0, 1\n        for eq, sign, num, isx in re.findall('(=)|([-+]?)(\\d*)(x?)', equation):\n            if eq:\n                side = -1\n            elif isx:\n                a += side * int(sign + '1') * int(num or 1)\n            elif num:\n                b -= side * int(sign + num)\n        return 'x=%d' % (b / a) if a else 'No solution' if b else 'Infinite solutions'\n\n",
+      "sourcePath": "Python/solve-the-equation.py"
+    }
+  },
+  "seo": {
+    "title": "Solve the Equation Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Solve the Equation (LeetCode #640). Pattern: algorithms. Time O(n), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Solve the Equation",
+      "Solve the Equation solution",
+      "Solve the Equation leetcode",
+      "math",
+      "medium"
+    ],
+    "canonicalPath": "/problems/solve-the-equation"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Solve the Equation?",
+      "answer": "The reference solutions aim for O(n) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Solve the Equation use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of math."
+    },
+    {
+      "question": "Is Solve the Equation good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/solve-the-equation/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Solve the Equation (#640) — Medium. Pattern: general problem-solving. Complexity: O(n) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Solve the Equation: show input structure (math), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

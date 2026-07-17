@@ -1,0 +1,161 @@
+{
+  "id": "3967",
+  "number": 3967,
+  "slug": "finish-time-of-tasks-ii",
+  "title": "Finish Time of Tasks II",
+  "difficulty": "Hard",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dfs-backtracking",
+    "tree-dp"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/finish-time-of-tasks-ii/",
+  "notes": [
+    "DFS",
+    "Tree DP"
+  ],
+  "relatedSlugs": [
+    "difference-between-maximum-and-minimum-price-sum",
+    "minimize-the-total-price-of-the-trips",
+    "minimum-edge-reversals-so-every-node-is-reachable",
+    "maximum-points-after-collecting-coins-from-all-nodes",
+    "subtree-inversion-sum",
+    "maximum-profit-from-trading-stocks-with-discounts",
+    "subtree-inversion-sum-ii",
+    "maximum-score-after-applying-operations-on-a-tree"
+  ],
+  "prevSlug": "count-good-integers-in-a-range",
+  "nextSlug": "maximum-manhattan-distance-after-all-moves",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Finish Time of Tasks II?\n\n**Finish Time of Tasks II** (LeetCode #3967) is a **Hard** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dfs backtracking and tree dp**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: DFS, Tree DP.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/finish-time-of-tasks-ii/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Finish Time of Tasks II\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dfs backtracking and tree dp**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(n)** space.\n\n### Pattern focus: dfs backtracking and tree dp\n\nUse the pattern as a checklist:\n\n- **dfs backtracking** — confirm the invariant holds after each step\n- **tree dp** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Finish Time of Tasks II\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dfs backtracking and tree dp — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dfs backtracking and tree dp**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Finish Time of Tasks II** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "finish-time-of-tasks-ii.cpp",
+      "code": "// Time:  O(n)\n// Space: O(n)\n\n// iterative dfs, tree dp\nclass Solution {\npublic:\n    long long finishTime(int n, vector<vector<int>>& edges, vector<int>& baseTime) {\n        static const auto& NEG_INF = numeric_limits<int64_t>::min();\n        static const auto& POS_INF = numeric_limits<int64_t>::max();\n\n        vector<vector<int>> adj(n);\n        vector<int64_t> dp(n);\n        const auto iter_dfs = [&]() {\n            vector<tuple<int, int, int>> stk = {{1, 0, -1}};\n            while (!empty(stk)) {\n                const auto [step, u, p] = stk.back(); stk.pop_back();\n                if (step == 1) {\n                    stk.emplace_back(2, u, p);\n                    for (const auto& v : adj[u]) {\n                        if (v == p) {\n                            continue;\n                        }\n                        stk.emplace_back(1, v, u);\n                    }\n                } else if (step == 2) {\n                    auto mx = NEG_INF, mn = POS_INF;\n                    for (const auto& v : adj[u]) {\n                        if (v == p) {\n                            continue;\n                        }\n                        mx = max(mx, dp[v]);\n                        mn = min(mn, dp[v]);\n                    }\n                    dp[u] = (mx != NEG_INF ? (2 * mx - mn) : 0) + baseTime[u];\n                }\n            }\n        };\n\n        const auto iter_dfs2 = [&]() -> int64_t {\n            const auto top2 = [](int64_t a, int64_t b, int64_t x, auto cmp) -> pair<int64_t, int64_t> {\n                if (cmp(x, a)) {\n                    b = a;\n                    a = x;\n                } else if (cmp(x, b)) {\n                    b = x;\n                }\n                return {a, b};\n            };\n\n            auto result = POS_INF;\n            vector<tuple<int, int, int64_t>> stk = {{0, -1, NEG_INF}};\n            while (!empty(stk)) {\n                const auto [u, p, t] = stk.back(); stk.pop_back();\n                auto mx1 = NEG_INF, mx2 = NEG_INF, mn1 = POS_INF, mn2 = POS_INF;\n                for (const auto& v : adj[u]) {\n                    const auto& x = (v != p) ? dp[v] : t;\n                    tie(mx1, mx2) = top2(mx1, mx2, x, [](int64_t a, int64_t b) { return a > b; });\n                    tie(mn1, mn2) = top2(mn1, mn2, x, [](int64_t a, int64_t b) { return a < b; });\n                }\n                result = min(result, (mx1 != NEG_INF ? (2 * mx1 - mn1) : 0) + baseTime[u]);\n                for (const auto& v : adj[u]) {\n                    if (v == p) {\n                        continue;\n                    }\n                    const auto& mx = (dp[v] != mx1) ? mx1 : mx2;\n                    const auto& mn = (dp[v] != mn1) ? mn1 : mn2;\n                    stk.emplace_back(v, u, (mx != NEG_INF ? (2 * mx - mn) : 0) + baseTime[u]);\n                }\n            }\n            return result;\n        };\n\n        for (const auto& e : edges) {\n            adj[e[0]].emplace_back(e[1]);\n            adj[e[1]].emplace_back(e[0]);\n        }\n        iter_dfs();\n        return iter_dfs2();\n    }\n};\n\n// Time:  O(n)\n// Space: O(n)\n// dfs, tree dp\nclass Solution2 {\npublic:\n    long long finishTime(int n, vector<vector<int>>& edges, vector<int>& baseTime) {\n        static const auto& NEG_INF = numeric_limits<int64_t>::min();\n        static const auto& POS_INF = numeric_limits<int64_t>::max();\n\n        vector<vector<int>> adj(n);\n        vector<int64_t> dp(n);\n        const auto dfs = [&](this auto&& dfs, int u, int p) -> void {\n            auto mx = NEG_INF, mn = POS_INF;\n            for (const auto& v : adj[u]) {\n                if (v == p) {\n                    continue;\n                }\n                dfs(v, u);\n                mx = max(mx, dp[v]);\n                mn = min(mn, dp[v]);\n            }\n            dp[u] = (mx != NEG_INF ? (2 * mx - mn) : 0) + baseTime[u];\n        };\n\n        auto result = POS_INF;\n        const auto dfs2 = [&](this auto&& dfs2, int u, int p, int64_t t) -> void {\n            const auto top2 = [](int64_t a, int64_t b, int64_t x, auto cmp) -> pair<int64_t, int64_t> {\n                if (cmp(x, a)) {\n                    b = a;\n                    a = x;\n                } else if (cmp(x, b)) {\n                    b = x;\n                }\n                return {a, b};\n            };\n\n            auto mx1 = NEG_INF, mx2 = NEG_INF, mn1 = POS_INF, mn2 = POS_INF;\n            for (const auto& v : adj[u]) {\n                const auto& x = (v != p) ? dp[v] : t;\n                tie(mx1, mx2) = top2(mx1, mx2, x, [](int64_t a, int64_t b) { return a > b; });\n                tie(mn1, mn2) = top2(mn1, mn2, x, [](int64_t a, int64_t b) { return a < b; });\n            }\n            result = min(result, (mx1 != NEG_INF ? (2 * mx1 - mn1) : 0) + baseTime[u]);\n            for (const auto& v : adj[u]) {\n                if (v == p) {\n                    continue;\n                }\n                const auto& mx = (dp[v] != mx1) ? mx1 : mx2;\n                const auto& mn = (dp[v] != mn1) ? mn1 : mn2;\n                dfs2(v, u, (mx != NEG_INF ? (2 * mx - mn) : 0) + baseTime[u]);\n            }\n        };\n\n        for (const auto& e : edges) {\n            adj[e[0]].emplace_back(e[1]);\n            adj[e[1]].emplace_back(e[0]);\n        }\n        dfs(0, -1);\n        dfs2(0, -1, NEG_INF);\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/finish-time-of-tasks-ii.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "finish-time-of-tasks-ii.py",
+      "code": "# Time:  O(n)\n# Space: O(n)\n\n# iterative dfs, tree dp\nclass Solution(object):\n    def finishTime(self, n, edges, baseTime):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type baseTime: List[int]\n        :rtype: int\n        \"\"\"\n        POS_INF, NEG_INF = float(\"inf\"), float(\"-inf\")\n        def iter_dfs():\n            dp = [0]*n\n            stk = [(1, 0, -1)]\n            while stk:\n                step, u, p = stk.pop()\n                if step == 1:\n                    stk.append((2, u, p))\n                    for v in reversed(adj[u]):\n                        if v == p:\n                            continue\n                        stk.append((1, v, u))\n                elif step == 2:\n                    mx, mn = NEG_INF, POS_INF\n                    for v in adj[u]:\n                        if v == p:\n                            continue\n                        mx, mn = max(mx, dp[v]), min(mn, dp[v])\n                    dp[u] = ((2*mx-mn) if mx is not NEG_INF else 0)+baseTime[u]\n            return dp\n        \n        def iter_dfs2():\n            def top2(a, b, x, cmp):\n                if cmp(x, a):\n                    a, b = x, a\n                elif cmp(x, b):\n                    b = x\n                return a, b\n    \n            result = POS_INF\n            stk = [(0, -1, NEG_INF)]\n            while stk:\n                u, p, t = stk.pop()\n                mx1, mx2, mn1, mn2 = NEG_INF, NEG_INF, POS_INF, POS_INF\n                for v in adj[u]:\n                    x = dp[v] if v != p else t\n                    mx1, mx2 = top2(mx1, mx2, x, lambda x, y: x > y)\n                    mn1, mn2 = top2(mn1, mn2, x, lambda x, y: x < y)\n                result = min(result, ((2*mx1-mn1) if mx1 is not NEG_INF else 0)+baseTime[u])\n                for v in reversed(adj[u]):\n                    if v == p:\n                        continue\n                    mx = mx1 if dp[v] != mx1 else mx2\n                    mn = mn1 if dp[v] != mn1 else mn2\n                    stk.append((v, u, ((2*mx-mn) if mx is not NEG_INF else 0)+baseTime[u]))\n            return result\n    \n        adj = [[] for _ in xrange(n)]\n        for u, v in edges:\n            adj[u].append(v)\n            adj[v].append(u)\n        dp = iter_dfs()\n        return iter_dfs2()\n\n\n# Time:  O(n)\n# Space: O(n)\n# dfs, tree dp\nclass Solution2(object):\n    def finishTime(self, n, edges, baseTime):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type baseTime: List[int]\n        :rtype: int\n        \"\"\"\n        POS_INF, NEG_INF = float(\"inf\"), float(\"-inf\")\n        def dfs(u, p):\n            mx, mn = NEG_INF, POS_INF\n            for v in adj[u]:\n                if v == p:\n                    continue\n                dfs(v, u)\n                mx, mn = max(mx, dp[v]), min(mn, dp[v])\n            dp[u] = ((2*mx-mn) if mx is not NEG_INF else 0)+baseTime[u]\n        \n        def dfs2(u, p, t):\n            def top2(a, b, x, cmp):\n                if cmp(x, a):\n                    a, b = x, a\n                elif cmp(x, b):\n                    b = x\n                return a, b\n\n            mx1, mx2, mn1, mn2 = NEG_INF, NEG_INF, POS_INF, POS_INF\n            for v in adj[u]:\n                x = dp[v] if v != p else t\n                mx1, mx2 = top2(mx1, mx2, x, lambda x, y: x > y)\n                mn1, mn2 = top2(mn1, mn2, x, lambda x, y: x < y)\n            result[0] = min(result[0], ((2*mx1-mn1) if mx1 is not NEG_INF else 0)+baseTime[u])\n            for v in adj[u]:\n                if v == p:\n                    continue\n                mx = mx1 if dp[v] != mx1 else mx2\n                mn = mn1 if dp[v] != mn1 else mn2\n                dfs2(v, u, ((2*mx-mn) if mx is not NEG_INF else 0)+baseTime[u])\n    \n        adj = [[] for _ in xrange(n)]\n        for u, v in edges:\n            adj[u].append(v)\n            adj[v].append(u)\n        dp = [0]*n\n        dfs(0, -1)\n        result = [POS_INF]\n        dfs2(0, -1, NEG_INF)\n        return result[0]\n",
+      "sourcePath": "Python/finish-time-of-tasks-ii.py"
+    }
+  },
+  "seo": {
+    "title": "Finish Time of Tasks II Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Finish Time of Tasks II (LeetCode #3967). Pattern: dfs backtracking. Time O(n), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Finish Time of Tasks II",
+      "Finish Time of Tasks II solution",
+      "Finish Time of Tasks II leetcode",
+      "dynamic-programming",
+      "dfs-backtracking",
+      "tree-dp",
+      "hard"
+    ],
+    "canonicalPath": "/problems/finish-time-of-tasks-ii"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Finish Time of Tasks II?",
+      "answer": "The reference solutions aim for O(n) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Finish Time of Tasks II use?",
+      "answer": "It primarily maps to dfs backtracking and tree dp, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Finish Time of Tasks II good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/finish-time-of-tasks-ii/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dfs backtracking and tree dp approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Finish Time of Tasks II (#3967) — Hard. Pattern: dfs backtracking and tree dp. Complexity: O(n) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Finish Time of Tasks II: show input structure (dynamic programming), highlight the moving parts of the dfs backtracking and tree dp approach, and annotate each step with the maintained invariant and complexity."
+}

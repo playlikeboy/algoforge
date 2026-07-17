@@ -1,0 +1,160 @@
+{
+  "id": "1982",
+  "number": 1982,
+  "slug": "find-array-given-subset-sums",
+  "title": "Find Array Given Subset Sums",
+  "difficulty": "Hard",
+  "topics": [
+    "math"
+  ],
+  "patterns": [
+    "dynamic-programming"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n * 2^n)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/find-array-given-subset-sums/",
+  "notes": [
+    "Math",
+    "DP",
+    "OrderedDict"
+  ],
+  "relatedSlugs": [
+    "handshakes-that-dont-cross",
+    "count-the-number-of-ideal-arrays",
+    "find-the-number-of-possible-ways-for-an-event",
+    "count-substrings-divisible-by-last-digit",
+    "find-nth-smallest-integer-with-k-one-bits",
+    "integer-break",
+    "4-keys-keyboard",
+    "divisor-game"
+  ],
+  "prevSlug": "minimize-the-difference-between-target-and-chosen-elements",
+  "nextSlug": "widest-pair-of-indices-with-equal-range-sum",
+  "estimatedMinutes": 60,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Find Array Given Subset Sums?\n\n**Find Array Given Subset Sums** (LeetCode #1982) is a **Hard** problem that primarily trains **math**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Math, DP, OrderedDict.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/find-array-given-subset-sums/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Find Array Given Subset Sums\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n * 2^n)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n * 2^n)** time and **O(1)** space.\n\n### Pattern focus: dynamic programming\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n * 2^n)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Find Array Given Subset Sums\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **math**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Find Array Given Subset Sums** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **math**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "find-array-given-subset-sums.cpp",
+      "code": "// Time:  O(n * 2^n), len(sums) = 2^n\n// Space: O(1)\n\n// [proof]\n// - let d = sorted_sums[0]-sorted_sums[1] and d != -d (d = 0 is trival), where one of +d/-d is the smallest positive or largest negative number of the original solution of [S1, ..., S(2^n)]\n// - given Sp-d = 0 for some p in [1, 2^n] and Sq-(-d) = 0 for some q in [1, 2^n]\n//   assume d is a number of the original solution of [S1, ..., S(2^n)] (the proof where -d is a number of the original solution is vice versa)\n//   let Sq = x1+...+xi where 1 <= i <= n-1\n//   let [d]+[x1, ..., xi]+[x(i+1), ..., x(n-1)] be the original solution\n//   => new_sums([S1, ..., S(2^n)], d)\n//      = subset_sums([x1, ..., xi]+[x(i+1), ..., x(n-1)])\n//   if we choose -d as a number of a solution of [S1, ..., S(2^n)]\n//   => new_sums([S1, ..., S(2^n)], -d)\n//      = new_sums([S1, ..., S(2^n)], -(x1+...+xi))\n//      = subset_sums([(-x1), ..., (-xi)]+[x(i+1), ..., x(n-1)])\n//      => [-d]+[(-x1), ..., (-xi)]+[x(i+1), ..., x(n-1)] is also a solution\n//\n// [conclusion]\n// - if new_sums with +d/-d (including d = 0) both contain zero, we can choose either one\n// - if only one of new_sums with +d/-d contains zero, we can only choose the one with zero since subset_sums must contain zero\n\n// optimized from solution4 (not using unordered_map), runtime: 188 ms\nclass Solution {\npublic:\n    vector<int> recoverArray(int n, vector<int>& sums) {\n        sort(begin(sums), end(sums));  // Time: O(2^n * log(2^n)) = O(n * 2^n)\n        int shift = 0, l = size(sums);\n        vector<int> result;\n        for (; n--; l /= 2) {  // log(2^n) times, each time costs O(2^(n-len(result))), Total Time: O(2^n)\n            const int new_shift = sums[0] - sums[1];\n            assert(new_shift <= 0);\n            bool has_zero = false;\n            for (int i = 0, j = 0, k = 0; i < l; ++i) {\n                if (k < j && sums[k] == sums[i]) {  // skip shifted one\n                    ++k;\n                } else {\n                    if (shift == sums[i] - new_shift) {\n                        has_zero = true;\n                    }\n                    sums[j++] = sums[i] - new_shift;\n                }\n            }\n            if (has_zero) {  // contain 0, choose this side\n                result.emplace_back(new_shift);\n            } else {  // contain no 0, choose another side and shift 0 offset\n                result.emplace_back(-new_shift);\n                shift -= new_shift;\n            }\n        }\n        return result;\n    }\n};\n\n// Time:  O(2^n + n * r), len(sums) = 2^n\n//                      , r = max(sums)-min(sums)\n// Space: O(2^n + r)\n// optimized from solution4 (not using unordered_map), runtime: 148 ms\nclass Solution2 {\npublic:\n    vector<int> recoverArray(int n, vector<int>& sums) {\n        const int min_sum = *min_element(cbegin(sums), cend(sums));\n        const int max_sum = *max_element(cbegin(sums), cend(sums));\n        vector<int> dp(max_sum - min_sum + 1);\n        for (const auto& sum : sums) {\n            ++dp[sum - min_sum];\n        }\n        vector<int> sorted_sums;\n        for (int x = min_sum; x <= max_sum; ++x) {\n            if (dp[x - min_sum]) {\n                sorted_sums.emplace_back(x);\n            }\n        }\n        int shift = 0;\n        vector<int> result;\n        while (n--) { // log(2^n) times, each time costs O(2^(n-len(result)))+O(r), Total Time: O(2^n + n * r)\n            vector<int> new_dp(max_sum - min_sum + 1);\n            vector<int> new_sorted_sums;\n            const int new_shift = (dp[sorted_sums[0] - min_sum] == 1) ? sorted_sums[0] - sorted_sums[1] : 0;\n            assert(new_shift <= 0);\n            for (const auto& x : sorted_sums) {\n                if (!dp[x - min_sum]) {\n                    continue;\n                }\n                dp[(x - new_shift) - min_sum] -= new_shift ? dp[x - min_sum] : dp[x - min_sum] / 2;\n                new_dp[(x - new_shift) - min_sum] = dp[x - min_sum];\n                new_sorted_sums.emplace_back(x - new_shift);\n            }\n            dp = move(new_dp);\n            sorted_sums = move(new_sorted_sums);\n            if (dp[shift - min_sum]) {  // contain 0, choose this side\n                result.emplace_back(new_shift);\n            } else {  // contain no 0, choose another side and shift 0 offset\n                result.emplace_back(-new_shift);\n                shift -= new_shift;\n            }\n        }\n        return result;\n    }\n};\n\n// Time:  O(n * 2^n), len(sums) = 2^n\n// Space: O(2^n)\n// optimized from solution4, runtime: 344 ms\nclass Solution3 {\npublic:\n    vector<int> recoverArray(int n, vector<int>& sums) {\n        unordered_map<int, int> dp;\n        for (const auto& sum : sums) {\n            ++dp[sum];\n        }\n        vector<int> sorted_sums;\n        for (const auto& [k, _] : dp) {\n            sorted_sums.emplace_back(k);\n        }\n        sort(begin(sorted_sums), end(sorted_sums));  // Time: O(2^n * log(2^n)) = O(n * 2^n)\n        int shift = 0;\n        uint32_t total = 0;\n        for (const auto& [k, v] : dp) {\n            total |= v;\n        }\n        const uint32_t basis = total & -total;  // find rightmost bit 1\n        if (basis > 1) {\n            for (auto& [_, v] : dp) {\n                v /= basis;\n            }\n        }\n        vector<int> result(bit_length(basis) - 1);\n        n -= bit_length(basis) - 1;\n        while (n--) {  // log(2^n) times, each time costs O(2^(n-len(result))), Total Time: O(2^n)\n            unordered_map<int, int> new_dp;\n            vector<int> new_sorted_sums;\n            const int new_shift = (dp[sorted_sums[0]] == 1) ? sorted_sums[0] - sorted_sums[1] : 0;\n            assert(new_shift <= 0);\n            for (const auto& x : sorted_sums) {\n                if (!dp[x]) {\n                    continue;\n                }\n                dp[x - new_shift] -= new_shift ? dp[x] : dp[x] / 2;\n                new_dp[x - new_shift] = dp[x];\n                new_sorted_sums.emplace_back(x - new_shift);\n            }\n            dp = move(new_dp);\n            sorted_sums = move(new_sorted_sums);\n            if (dp.count(shift)) {  // contain 0, choose this side\n                result.emplace_back(new_shift);\n            } else {  // contain no 0, choose another side and shift 0 offset\n                result.emplace_back(-new_shift);\n                shift -= new_shift;\n            }\n        }\n        return result;\n    }\n\nprivate:\n    int bit_length(int x) {\n        return x != 0 ? 32 - __builtin_clz(x) : 1;\n    }\n};\n\n// Time:  O(n * 2^n), len(sums) = 2^n\n// Space: O(2^n)\n// runtime: 344 ms\nclass Solution4 {\npublic:\n    vector<int> recoverArray(int n, vector<int>& sums) {\n        unordered_map<int, int> dp;\n        for (const auto& sum : sums) {\n            ++dp[sum];\n        }\n        vector<int> sorted_sums;\n        for (const auto& [k, _] : dp) {\n            sorted_sums.emplace_back(k);\n        }\n        sort(begin(sorted_sums), end(sorted_sums));  // Time: O(2^n * log(2^n)) = O(n * 2^n)\n        int shift = 0;\n        vector<int> result;\n        while (n--) {  // log(2^n) times, each time costs O(2^(n-len(result))), Total Time: O(2^n)\n            unordered_map<int, int> new_dp;\n            vector<int> new_sorted_sums;\n            const int new_shift = (dp[sorted_sums[0]] == 1) ? sorted_sums[0] - sorted_sums[1] : 0;\n            assert(new_shift <= 0);\n            for (const auto& x : sorted_sums) {\n                if (!dp[x]) {\n                    continue;\n                }\n                dp[x - new_shift] -= new_shift ? dp[x] : dp[x] / 2;\n                new_dp[x - new_shift] = dp[x];\n                new_sorted_sums.emplace_back(x - new_shift);\n            }\n            dp = move(new_dp);\n            sorted_sums = move(new_sorted_sums);\n            if (dp.count(shift)) {  // contain 0, choose this side\n                result.emplace_back(new_shift);\n            } else {  // contain no 0, choose another side and shift 0 offset\n                result.emplace_back(-new_shift);\n                shift -= new_shift;\n            }\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/find-array-given-subset-sums.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "find-array-given-subset-sums.py",
+      "code": "# Time:  O(n * 2^n), len(sums) = 2^n\n# Space: O(1)\n\n# [proof]\n# - let d = sorted_sums[0]-sorted_sums[1] and d != -d (d = 0 is trival), where one of +d/-d is the smallest positive or largest negative number of the original solution of [S1, ..., S(2^n)]\n# - given Sp-d = 0 for some p in [1, 2^n] and Sq-(-d) = 0 for some q in [1, 2^n]\n#   assume d is a number of the original solution of [S1, ..., S(2^n)] (the proof where -d is a number of the original solution is vice versa)\n#   let Sq = x1+...+xi where 1 <= i <= n-1\n#   let [d]+[x1, ..., xi]+[x(i+1), ..., x(n-1)] be the original solution\n#   => new_sums([S1, ..., S(2^n)], d)\n#      = subset_sums([x1, ..., xi]+[x(i+1), ..., x(n-1)])\n#   if we choose -d as a number of a solution of [S1, ..., S(2^n)]\n#   => new_sums([S1, ..., S(2^n)], -d)\n#      = new_sums([S1, ..., S(2^n)], -(x1+...+xi))\n#      = subset_sums([(-x1), ..., (-xi)]+[x(i+1), ..., x(n-1)])\n#      => [-d]+[(-x1), ..., (-xi)]+[x(i+1), ..., x(n-1)] is also a solution\n#\n# [conclusion]\n# - if new_sums with +d/-d (including d = 0) both contain zero, we can choose either one\n# - if only one of new_sums with +d/-d contains zero, we can only choose the one with zero since subset_sums must contain zero\n\n# optimized from solution4 (not using dict), runtime: 1040 ms\nclass Solution(object):\n    def recoverArray(self, n, sums):\n        \"\"\"\n        :type n: int\n        :type sums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        sums.sort()  # Time: O(2^n * log(2^n)) = O(n * 2^n)\n        shift, l = 0, len(sums)\n        result = []\n        for _ in xrange(n):  # log(2^n) times, each time costs O(2^(n-len(result))), Total Time: O(2^n)\n            new_shift = sums[0]-sums[1]\n            assert(new_shift <= 0)\n            has_zero, j, k = False, 0, 0\n            for i in xrange(l):\n                if k < j and sums[k] == sums[i]:  # skip shifted one\n                    k += 1\n                else:\n                    if shift == sums[i]-new_shift:\n                        has_zero = True\n                    sums[j] = sums[i]-new_shift\n                    j += 1\n            if has_zero:  # contain 0, choose this side\n                result.append(new_shift)\n            else:  # contain no 0, choose another side and shift 0 offset\n                result.append(-new_shift)\n                shift -= new_shift\n            l //= 2\n        return result\n\n\n# Time:  O(2^n + n * r), len(sums) = 2^n\n#                      , r = max(sums)-min(sums)\n# Space: O(2^n + r)\nimport collections\n\n\n# optimized from solution4 (not using dict), runtime: 968 ms\nclass Solution2(object):\n    def recoverArray(self, n, sums):\n        \"\"\"\n        :type n: int\n        :type sums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        min_sum, max_sum = min(sums), max(sums)\n        dp = [0]*(max_sum-min_sum+1)\n        for x in sums:\n            dp[x-min_sum] += 1\n        sorted_sums = [x for x in xrange(min_sum, max_sum+1) if dp[x-min_sum]]  # Time: O(r)\n        shift = 0\n        result = []\n        for _ in xrange(n):  # log(2^n) times, each time costs O(2^(n-len(result)))+O(r), Total Time: O(2^n + n * r)\n            new_dp = [0]*(max_sum-min_sum+1)\n            new_sorted_sums = []\n            new_shift = sorted_sums[0]-sorted_sums[1] if dp[sorted_sums[0]-min_sum] == 1 else 0\n            assert(new_shift <= 0)\n            for x in sorted_sums:\n                if not dp[x-min_sum]:\n                    continue\n                dp[(x-new_shift)-min_sum] -= dp[x-min_sum] if new_shift else dp[x-min_sum]//2\n                new_dp[(x-new_shift)-min_sum] = dp[x-min_sum]\n                new_sorted_sums.append(x-new_shift)\n            dp = new_dp\n            sorted_sums = new_sorted_sums\n            if dp[shift-min_sum]:  # contain 0, choose this side\n                result.append(new_shift)\n            else:  # contain no 0, choose another side and shift 0 offset\n                result.append(-new_shift)\n                shift -= new_shift\n        return result\n\n\n# Time:  O(n * 2^n), len(sums) = 2^n\n# Space: O(2^n)\nimport collections\nimport operator\n\n\n# optimized from solution4, runtime: 1044 ms\nclass Solution3(object):\n    def recoverArray(self, n, sums):\n        \"\"\"\n        :type n: int\n        :type sums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        dp = {k: v for k, v in collections.Counter(sums).iteritems()}\n        total = reduce(operator.ior, dp.itervalues(), 0)\n        basis = total&-total  # find rightmost bit 1\n        if basis > 1:\n            for k in dp.iterkeys():\n                dp[k] //= basis\n        sorted_sums = sorted(dp.iterkeys())  # Time: O(2^n * log(2^n)) = O(n * 2^n)\n        shift = 0\n        result = [0]*(basis.bit_length()-1)\n        for _ in xrange(n-len(result)):  # log(2^n) times, each time costs O(2^(n-len(result))), Total Time: O(2^n)\n            new_dp = {}\n            new_sorted_sums = []\n            new_shift = sorted_sums[0]-sorted_sums[1]\n            assert(new_shift < 0)\n            for x in sorted_sums:\n                if not dp[x]:\n                    continue\n                dp[x-new_shift] -= dp[x]\n                new_dp[x-new_shift] = dp[x]\n                new_sorted_sums.append(x-new_shift)\n            dp = new_dp\n            sorted_sums = new_sorted_sums\n            if shift in dp:  # contain 0, choose this side\n                result.append(new_shift)\n            else:  # contain no 0, choose another side and shift 0 offset\n                result.append(-new_shift)\n                shift -= new_shift\n        return result\n\n\n# Time:  O(n * 2^n), len(sums) = 2^n\n# Space: O(2^n)\nimport collections\n\n\n# optimized from solution4 (not using OrderedDict), runtime: 1024 ms\nclass Solution4(object):\n    def recoverArray(self, n, sums):\n        \"\"\"\n        :type n: int\n        :type sums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        dp = {k: v for k, v in collections.Counter(sums).iteritems()}\n        sorted_sums = sorted(dp.iterkeys())  # Time: O(2^n * log(2^n)) = O(n * 2^n)\n        shift = 0\n        result = []\n        for _ in xrange(n):  # log(2^n) times, each time costs O(2^(n-len(result))), Total Time: O(2^n)\n            new_dp = {}\n            new_sorted_sums = []\n            new_shift = sorted_sums[0]-sorted_sums[1] if dp[sorted_sums[0]] == 1 else 0\n            assert(new_shift <= 0)\n            for x in sorted_sums:\n                if not dp[x]:\n                    continue\n                dp[x-new_shift] -= dp[x] if new_shift else dp[x]//2\n                new_dp[x-new_shift] = dp[x]\n                new_sorted_sums.append(x-new_shift)\n            dp = new_dp\n            sorted_sums = new_sorted_sums\n            if shift in dp:  # contain 0, choose this side\n                result.append(new_shift)\n            else:  # contain no 0, choose another side and shift 0 offset\n                result.append(-new_shift)\n                shift -= new_shift\n        return result\n\n\n# Time:  O(n * 2^n), len(sums) = 2^n\n# Space: O(2^n)\nimport collections\n\n\n# runtime: 1720 ms\nclass Solution5(object):\n    def recoverArray(self, n, sums):\n        \"\"\"\n        :type n: int\n        :type sums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        dp = OrderedDict(sorted(collections.Counter(sums).iteritems()))  # Time: O(2^n * log(2^n)) = O(n * 2^n)\n        shift = 0\n        result = []\n        for _ in xrange(n):  # log(2^n) times, each time costs O(2^(n-len(result))), Total Time: O(2^n)\n            new_dp = OrderedDict()\n            it = iter(dp)\n            min_sum = next(it)\n            new_shift = min_sum-next(it) if dp[min_sum] == 1 else 0\n            assert(new_shift <= 0)\n            for x in dp.iterkeys():\n                if not dp[x]:\n                    continue\n                dp[x-new_shift] -= dp[x] if new_shift else dp[x]//2\n                new_dp[x-new_shift] = dp[x]\n            dp = new_dp\n            if shift in dp:  # contain 0, choose this side\n                result.append(new_shift)\n            else:  # contain no 0, choose another side and shift 0 offset\n                result.append(-new_shift)\n                shift -= new_shift\n        return result\n",
+      "sourcePath": "Python/find-array-given-subset-sums.py"
+    }
+  },
+  "seo": {
+    "title": "Find Array Given Subset Sums Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Find Array Given Subset Sums (LeetCode #1982). Pattern: dynamic programming. Time O(n * 2^n), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Find Array Given Subset Sums",
+      "Find Array Given Subset Sums solution",
+      "Find Array Given Subset Sums leetcode",
+      "math",
+      "dynamic-programming",
+      "hard"
+    ],
+    "canonicalPath": "/problems/find-array-given-subset-sums"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Find Array Given Subset Sums?",
+      "answer": "The reference solutions aim for O(n * 2^n) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Find Array Given Subset Sums use?",
+      "answer": "It primarily maps to dynamic programming, within the broader topic of math."
+    },
+    {
+      "question": "Is Find Array Given Subset Sums good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/find-array-given-subset-sums/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Find Array Given Subset Sums (#1982) — Hard. Pattern: dynamic programming. Complexity: O(n * 2^n) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Find Array Given Subset Sums: show input structure (math), highlight the moving parts of the dynamic programming approach, and annotate each step with the maintained invariant and complexity."
+}

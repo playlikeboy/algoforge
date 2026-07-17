@@ -1,0 +1,162 @@
+{
+  "id": "692",
+  "number": 692,
+  "slug": "top-k-frequent-words",
+  "title": "Top K Frequent Words",
+  "difficulty": "Medium",
+  "topics": [
+    "sort"
+  ],
+  "patterns": [
+    "heap",
+    "bucket-sort"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n + klogk) on average",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/top-k-frequent-words/",
+  "notes": [
+    "Quick Select",
+    "Heap",
+    "Bucket Sort"
+  ],
+  "relatedSlugs": [
+    "top-k-frequent-elements",
+    "meeting-scheduler",
+    "the-number-of-the-smallest-unoccupied-chair",
+    "k-closest-points-to-origin",
+    "maximum-product-after-k-increments",
+    "minimum-interval-to-include-each-query",
+    "replace-question-marks-in-string-to-minimize-its-value",
+    "amount-of-new-area-painted-each-day"
+  ],
+  "prevSlug": "stickers-to-spell-word",
+  "nextSlug": "binary-number-with-alternating-bits",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Top K Frequent Words?\n\n**Top K Frequent Words** (LeetCode #692) is a **Medium** problem that primarily trains **sort**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **heap and bucket sort**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Quick Select, Heap, Bucket Sort.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/top-k-frequent-words/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Top K Frequent Words\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **heap and bucket sort**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n + klogk) on average) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n + klogk) on average** time and **O(n)** space.\n\n### Pattern focus: heap and bucket sort\n\nUse the pattern as a checklist:\n\n- **heap** — confirm the invariant holds after each step\n- **bucket sort** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n + klogk) on average** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Top K Frequent Words\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for heap and bucket sort — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **heap and bucket sort**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **sort**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Top K Frequent Words** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **sort**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "top-k-frequent-words.cpp",
+      "code": "// Time:  O(n + klogk) on average\n// Space: O(n)\n\n// Quick Select Solution\nclass Solution {\npublic:\n    vector<string> topKFrequent(vector<string>& words, int k) {\n        unordered_map<string, int> counts;\n        for (const auto& word : words) {\n            ++counts[word];\n        }\n        vector<pair<int, string>> p;\n        for (const auto& kvp : counts) {\n            p.emplace_back(-kvp.second, kvp.first);\n        }\n        nth_element(p.begin(), p.begin() + k - 1, p.end());  // O(n) time on average.\n        sort(p.begin(), p.begin() + k);  // O(klogk) time.\n        vector<string> result;\n        for (int i = 0; i < k; ++i) {\n            result.emplace_back(p[i].second);\n        }\n        return result;\n    }\n};\n\n\n// Time:  O(nlogk)\n// Space: O(n)\n// Heap Solution\nclass Solution2 {\npublic:\n    vector<string> topKFrequent(vector<string>& words, int k) {\n        unordered_map<string, int> counts;\n        for (const auto& word : words) {\n            ++counts[word];\n        }\n        priority_queue<pair<int, string>> heap;\n        for (const auto& kvp : counts) {\n            heap.emplace(-kvp.second, kvp.first);\n            if (heap.size() == k + 1) {\n                heap.pop();\n            }\n        }\n        vector<string> result;\n        while (!heap.empty()) {\n            result.emplace_back(heap.top().second);\n            heap.pop();\n        }\n        reverse(result.begin(), result.end());\n        return result;\n    }\n};\n\n\n// Time:  O(n + klogk) ~ O(n + nlogn)\n// Space: O(n)\n// Bucket Sort Solution\nclass Solution3 {\npublic:\n    vector<string> topKFrequent(vector<string>& words, int k) {\n        unordered_map<string, int> counts;\n        for (const auto& word : words) {\n            ++counts[word];\n        }\n        vector<vector<string>> buckets(words.size() + 1);\n        for (const auto& kvp : counts) {\n            buckets[kvp.second].emplace_back(kvp.first);\n        }\n\n        vector<pair<int, string>> p;\n        for (int i = buckets.size() - 1; i >= 0; --i) {\n            for (const auto& word : buckets[i]) {\n                p.emplace_back(-i, word);\n            }\n            if (p.size() >= k) {\n                break;\n            }\n        }\n        sort(p.begin(), p.end());\n        vector<string> result;\n        for (int i = 0; i < k; ++i) {\n            result.emplace_back(p[i].second);\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/top-k-frequent-words.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "top-k-frequent-words.py",
+      "code": "# Time:  O(n + klogk) on average\n# Space: O(n)\n\nimport collections\nimport heapq\nfrom random import randint\n\n\nclass Solution(object):\n    def topKFrequent(self, words, k):\n        \"\"\"\n        :type words: List[str]\n        :type k: int\n        :rtype: List[str]\n        \"\"\"\n        counts = collections.Counter(words)\n        p = []\n        for key, val in counts.iteritems():\n            p.append((-val, key))\n        self.kthElement(p, k-1)\n\n        result = []\n        sorted_p = sorted(p[:k])\n        for i in xrange(k):\n            result.append(sorted_p[i][1])\n        return result\n\n    def kthElement(self, nums, k):  # O(n) on average\n        def PartitionAroundPivot(left, right, pivot_idx, nums):\n            pivot_value = nums[pivot_idx]\n            new_pivot_idx = left\n            nums[pivot_idx], nums[right] = nums[right], nums[pivot_idx]\n            for i in xrange(left, right):\n                if nums[i] < pivot_value:\n                    nums[i], nums[new_pivot_idx] = nums[new_pivot_idx], nums[i]\n                    new_pivot_idx += 1\n\n            nums[right], nums[new_pivot_idx] = nums[new_pivot_idx], nums[right]\n            return new_pivot_idx\n\n        left, right = 0, len(nums) - 1\n        while left <= right:\n            pivot_idx = randint(left, right)\n            new_pivot_idx = PartitionAroundPivot(left, right, pivot_idx, nums)\n            if new_pivot_idx == k:\n                return\n            elif new_pivot_idx > k:\n                right = new_pivot_idx - 1\n            else:  # new_pivot_idx < k.\n                left = new_pivot_idx + 1\n\n\n# Time:  O(nlogk)\n# Space: O(n)\n# Heap Solution\nclass Solution2(object):\n    def topKFrequent(self, words, k):\n        \"\"\"\n        :type words: List[str]\n        :type k: int\n        :rtype: List[str]\n        \"\"\"\n        class MinHeapObj(object):\n            def __init__(self,val):\n                self.val = val\n            def __lt__(self,other):\n                return self.val[1] > other.val[1] if self.val[0] == other.val[0] else \\\n                       self.val < other.val\n            def __eq__(self,other):\n                return self.val == other.val\n            def __str__(self):\n                return str(self.val)\n\n        counts = collections.Counter(words)\n        min_heap = []\n        for word, count in counts.iteritems():\n            heapq.heappush(min_heap, MinHeapObj((count, word)))\n            if len(min_heap) == k+1:\n                heapq.heappop(min_heap)\n        result = []\n        while min_heap:\n            result.append(heapq.heappop(min_heap).val[1])\n        return result[::-1]\n\n\n# Time:  O(n + klogk) ~ O(n + nlogn)\n# Space: O(n)\n# Bucket Sort Solution\nclass Solution3(object):\n    def topKFrequent(self, words, k):\n        \"\"\"\n        :type words: List[str]\n        :type k: int\n        :rtype: List[str]\n        \"\"\"\n        counts = collections.Counter(words)\n        buckets = [[] for _ in xrange(len(words)+1)]\n        for word, count in counts.iteritems():\n            buckets[count].append(word)\n        pairs = []\n        for i in reversed(xrange(len(words))):\n            for word in buckets[i]:\n                pairs.append((-i, word))\n            if len(pairs) >= k:\n                break\n        pairs.sort()\n        return [pair[1] for pair in pairs[:k]]\n\n\n# time: O(nlogn)\n# space: O(n)\n\nfrom collections import Counter\n\n\nclass Solution4(object):\n    def topKFrequent(self, words, k):\n        \"\"\"\n        :type words: List[str]\n        :type k: int\n        :rtype: List[str]\n        \"\"\"\n        counter = Counter(words)\n        candidates = counter.keys()\n        candidates.sort(key=lambda w: (-counter[w], w))\n        return candidates[:k]\n",
+      "sourcePath": "Python/top-k-frequent-words.py"
+    }
+  },
+  "seo": {
+    "title": "Top K Frequent Words Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Top K Frequent Words (LeetCode #692). Pattern: heap. Time O(n + klogk) on average, space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Top K Frequent Words",
+      "Top K Frequent Words solution",
+      "Top K Frequent Words leetcode",
+      "sort",
+      "heap",
+      "bucket-sort",
+      "medium"
+    ],
+    "canonicalPath": "/problems/top-k-frequent-words"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Top K Frequent Words?",
+      "answer": "The reference solutions aim for O(n + klogk) on average time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Top K Frequent Words use?",
+      "answer": "It primarily maps to heap and bucket sort, within the broader topic of sort."
+    },
+    {
+      "question": "Is Top K Frequent Words good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/top-k-frequent-words/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the heap and bucket sort approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Top K Frequent Words (#692) — Medium. Pattern: heap and bucket sort. Complexity: O(n + klogk) on average time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Top K Frequent Words: show input structure (sort), highlight the moving parts of the heap and bucket sort approach, and annotate each step with the maintained invariant and complexity."
+}

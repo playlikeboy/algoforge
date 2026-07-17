@@ -1,0 +1,158 @@
+{
+  "id": "3357",
+  "number": 3357,
+  "slug": "minimize-the-maximum-adjacent-element-difference",
+  "title": "Minimize the Maximum Adjacent Element Difference",
+  "difficulty": "Hard",
+  "topics": [
+    "binary-search"
+  ],
+  "patterns": [
+    "binary-search"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogr)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/minimize-the-maximum-adjacent-element-difference/",
+  "notes": [
+    "Binary Search"
+  ],
+  "relatedSlugs": [
+    "median-of-two-sorted-arrays",
+    "find-minimum-in-rotated-sorted-array-ii",
+    "smallest-rectangle-enclosing-black-pixels",
+    "russian-doll-envelopes",
+    "max-sum-of-sub-matrix-no-larger-than-k",
+    "split-array-largest-sum",
+    "kth-smallest-number-in-multiplication-table",
+    "random-pick-with-blacklist"
+  ],
+  "prevSlug": "zero-array-transformation-ii",
+  "nextSlug": "books-with-null-ratings",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Minimize the Maximum Adjacent Element Difference?\n\n**Minimize the Maximum Adjacent Element Difference** (LeetCode #3357) is a **Hard** problem that primarily trains **binary search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **binary search**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Binary Search.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/minimize-the-maximum-adjacent-element-difference/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Minimize the Maximum Adjacent Element Difference\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **binary search**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogr)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogr)** time and **O(1)** space.\n\n### Pattern focus: binary search\n\nUse the pattern as a checklist:\n\n- **binary search** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogr)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Minimize the Maximum Adjacent Element Difference\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for binary search — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **binary search**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **binary search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Minimize the Maximum Adjacent Element Difference** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **binary search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "minimize-the-maximum-adjacent-element-difference.cpp",
+      "code": "// Time:  O(nlogr)\n// Space: O(1)\n\n// binary search\nclass Solution {\npublic:\n    int minDifference(vector<int>& nums) {\n        const auto& binary_search = [](auto left, auto right, const auto& check) {\n            while (left <= right) {\n                const auto& mid = left + (right - left) / 2;\n                if (check(mid)) {\n                    right = mid - 1;\n                } else {\n                    left = mid + 1;\n                }\n            }\n            return left;\n        };\n\n        int max_diff = 0, left = numeric_limits<int>::max(), right = 0;\n        for (int i = 0; i < size(nums); ++i) {\n            if (nums[i] != -1) {\n                if (i + 1 < size(nums) && nums[i + 1] != -1) {\n                    max_diff = max(max_diff, abs(nums[i] - nums[i + 1]));\n                }\n                continue;\n            }\n            if (i - 1 < size(nums) && nums[i - 1] != -1) {\n                left = min(left, nums[i - 1]);\n                right = max(right, nums[i - 1]);\n            }\n            if (i + 1 < size(nums) && nums[i + 1] != -1) {\n                left = min(left, nums[i + 1]);\n                right = max(right, nums[i + 1]);\n            }\n        }\n\n        const auto& check = [&](int d) {\n            for (int i = 0, prev = 0, x = left + d, y = right - d, cnt = 0; i < size(nums); ++i) {\n                if (nums[i] == -1) {\n                    ++cnt;\n                    continue;\n                }\n                if (prev && cnt) {\n                    const auto& diff = min(max(abs(prev - x), abs(nums[i] - x)), max(abs(prev - y), abs(nums[i] - y)));\n                    if (diff > d && (cnt == 1 || y - x > d)) {\n                        return false;\n                    }\n                }\n                prev = nums[i];\n                cnt = 0;\n            }\n            return true;\n        };\n\n        return binary_search(max_diff, (right - left) / 2, check);\n    }\n};\n",
+      "sourcePath": "C++/minimize-the-maximum-adjacent-element-difference.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "minimize-the-maximum-adjacent-element-difference.py",
+      "code": "# Time:  O(nlogr)\n# Space: O(1)\n\n# binary search\nclass Solution(object):\n    def minDifference(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        def binary_search(left, right, check):\n            while left <= right:\n                mid = left+(right-left)//2\n                if check(mid):\n                    right = mid-1\n                else:\n                    left = mid+1\n            return left\n\n        def check(d):\n            prev = cnt = 0\n            for i in xrange(len(nums)):\n                if nums[i] == -1:\n                    cnt += 1\n                    continue\n                if prev and cnt and min(max(abs(prev-x), abs(nums[i]-x)) for x in (left+d, right-d)) > d and (cnt == 1 or (right-d)-(left+d) > d):\n                    return False\n                prev = nums[i]\n                cnt = 0\n            return True\n\n        max_diff, left, right = 0, float(\"inf\"), 0\n        for i in xrange(len(nums)):  \n            if nums[i] != -1:\n                if i+1 < len(nums) and nums[i+1] != -1:\n                    max_diff = max(max_diff, abs(nums[i]-nums[i+1]))  \n                continue          \n            if i-1 < len(nums) and nums[i-1] != -1:\n                left = min(left, nums[i-1])\n                right = max(right, nums[i-1])\n            if i+1 < len(nums) and nums[i+1] != -1:\n                left = min(left, nums[i+1])\n                right = max(right, nums[i+1])\n        return binary_search(max_diff, (right-left)//2, check)\n",
+      "sourcePath": "Python/minimize-the-maximum-adjacent-element-difference.py"
+    }
+  },
+  "seo": {
+    "title": "Minimize the Maximum Adjacent Element Difference Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Minimize the Maximum Adjacent Element Difference (LeetCode #3357). Pattern: binary search. Time O(nlogr), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Minimize the Maximum Adjacent Element Difference",
+      "Minimize the Maximum Adjacent Element Difference solution",
+      "Minimize the Maximum Adjacent Element Difference leetcode",
+      "binary-search",
+      "binary-search",
+      "hard"
+    ],
+    "canonicalPath": "/problems/minimize-the-maximum-adjacent-element-difference"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Minimize the Maximum Adjacent Element Difference?",
+      "answer": "The reference solutions aim for O(nlogr) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Minimize the Maximum Adjacent Element Difference use?",
+      "answer": "It primarily maps to binary search, within the broader topic of binary search."
+    },
+    {
+      "question": "Is Minimize the Maximum Adjacent Element Difference good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/minimize-the-maximum-adjacent-element-difference/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the binary search approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Minimize the Maximum Adjacent Element Difference (#3357) — Hard. Pattern: binary search. Complexity: O(nlogr) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Minimize the Maximum Adjacent Element Difference: show input structure (binary search), highlight the moving parts of the binary search approach, and annotate each step with the maintained invariant and complexity."
+}

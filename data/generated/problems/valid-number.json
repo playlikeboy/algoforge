@@ -1,0 +1,155 @@
+{
+  "id": "65",
+  "number": 65,
+  "slug": "valid-number",
+  "title": "Valid Number",
+  "difficulty": "Hard",
+  "topics": [
+    "math"
+  ],
+  "patterns": [],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/valid-number/",
+  "notes": [
+    "Automata"
+  ],
+  "relatedSlugs": [
+    "number-of-digit-one",
+    "strobogrammatic-number-iii",
+    "self-crossing",
+    "perfect-rectangle",
+    "largest-palindrome-product",
+    "smallest-good-base",
+    "super-washing-machines",
+    "remove-9"
+  ],
+  "prevSlug": "minimum-path-sum",
+  "nextSlug": "plus-one",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Valid Number?\n\n**Valid Number** (LeetCode #65) is a **Hard** problem that primarily trains **math**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Automata.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/valid-number/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Valid Number\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(1)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Valid Number\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **math**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Valid Number** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **math**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "valid-number.cpp",
+      "code": "// Time:  O(n)\n// Space: O(1)\n\n// automata: http://images.cnitblog.com/i/627993/201405/012016243309923.png\nclass Solution {\npublic:\n    bool isNumber(string s) {\n        enum InputType {\n            INVALID,    // 0\n            SPACE,      // 1\n            SIGN,       // 2\n            DIGIT,      // 3\n            DOT,        // 4\n            EXPONENT,   // 5\n            NUM_INPUTS  // 6\n        };\n        int transitionTable[][NUM_INPUTS] = {\n            -1,  0,  3,  1,  2, -1,     // next states for state 0\n            -1,  8, -1,  1,  4,  5,     // next states for state 1\n            -1, -1, -1,  4, -1, -1,     // next states for state 2\n            -1, -1, -1,  1,  2, -1,     // next states for state 3\n            -1,  8, -1,  4, -1,  5,     // next states for state 4\n            -1, -1,  6,  7, -1, -1,     // next states for state 5\n            -1, -1, -1,  7, -1, -1,     // next states for state 6\n            -1,  8, -1,  7, -1, -1,     // next states for state 7\n            -1,  8, -1, -1, -1, -1,     // next states for state 8\n        };\n\n        int state = 0;\n        for (const auto& c: s) {\n            InputType inputType = INVALID;\n            if (isspace(c)) {\n                inputType = SPACE;\n            } else if (c == '+' || c == '-') {\n                inputType = SIGN;\n            } else if (isdigit(c)) {\n                inputType = DIGIT;\n            } else if (c == '.') {\n                inputType = DOT;\n            } else if (c == 'e' || c == 'E') {\n                inputType = EXPONENT;\n            }\n            // Get next state from current state and input symbol\n            state = transitionTable[state][inputType];\n\n            // Invalid input\n            if (state == -1) {\n                return false;\n            }\n        }\n        // If the current state belongs to one of the accepting (final) states,\n        // then the number is valid\n        return state == 1 || state == 4 || state == 7 || state == 8;\n    }\n};\n\n#include <regex>\nclass Solution_TLE {\npublic:\n    bool isNumber(string s) {\n        regex e(\"^\\\\s*[\\\\+-]?((\\\\d+(\\\\.\\\\d*)?)|\\\\.\\\\d+)([eE][\\\\+-]?\\\\d+)?\\\\s*$\");\n        return regex_match(s, e);\n    }\n};\n",
+      "sourcePath": "C++/valid-number.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "valid-number.py",
+      "code": "# Time:  O(n)\n# Space: O(1)\n\nclass InputType(object):\n    INVALID    = 0\n    SPACE      = 1\n    SIGN       = 2\n    DIGIT      = 3\n    DOT        = 4\n    EXPONENT   = 5\n\n\n# regular expression: \"^\\s*[\\+-]?((\\d+(\\.\\d*)?)|\\.\\d+)([eE][\\+-]?\\d+)?\\s*$\"\n# automata: http://images.cnitblog.com/i/627993/201405/012016243309923.png\nclass Solution(object):\n    def isNumber(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        transition_table = [[-1,  0,  3,  1,  2, -1],     # next states for state 0\n                            [-1,  8, -1,  1,  4,  5],     # next states for state 1\n                            [-1, -1, -1,  4, -1, -1],     # next states for state 2\n                            [-1, -1, -1,  1,  2, -1],     # next states for state 3\n                            [-1,  8, -1,  4, -1,  5],     # next states for state 4\n                            [-1, -1,  6,  7, -1, -1],     # next states for state 5\n                            [-1, -1, -1,  7, -1, -1],     # next states for state 6\n                            [-1,  8, -1,  7, -1, -1],     # next states for state 7\n                            [-1,  8, -1, -1, -1, -1]]     # next states for state 8\n\n        state = 0\n        for char in s:\n            inputType = InputType.INVALID\n            if char.isspace():\n                inputType = InputType.SPACE\n            elif char == '+' or char == '-':\n                inputType = InputType.SIGN\n            elif char.isdigit():\n                inputType = InputType.DIGIT\n            elif char == '.':\n                inputType = InputType.DOT\n            elif char == 'e' or char == 'E':\n                inputType = InputType.EXPONENT\n\n            state = transition_table[state][inputType]\n\n            if state == -1:\n                return False\n\n        return state == 1 or state == 4 or state == 7 or state == 8\n\n\nclass Solution2(object):\n    def isNumber(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: bool\n        \"\"\"\n        import re\n        return bool(re.match(\"^\\s*[\\+-]?((\\d+(\\.\\d*)?)|\\.\\d+)([eE][\\+-]?\\d+)?\\s*$\", s))\n\n\n",
+      "sourcePath": "Python/valid-number.py"
+    }
+  },
+  "seo": {
+    "title": "Valid Number Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Valid Number (LeetCode #65). Pattern: algorithms. Time O(n), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Valid Number",
+      "Valid Number solution",
+      "Valid Number leetcode",
+      "math",
+      "hard"
+    ],
+    "canonicalPath": "/problems/valid-number"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Valid Number?",
+      "answer": "The reference solutions aim for O(n) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Valid Number use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of math."
+    },
+    {
+      "question": "Is Valid Number good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/valid-number/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Valid Number (#65) — Hard. Pattern: general problem-solving. Complexity: O(n) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Valid Number: show input structure (math), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

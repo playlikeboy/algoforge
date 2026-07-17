@@ -1,0 +1,159 @@
+{
+  "id": "1728",
+  "number": 1728,
+  "slug": "cat-and-mouse-ii",
+  "title": "Cat and Mouse II",
+  "difficulty": "Hard",
+  "topics": [
+    "breadth-first-search"
+  ],
+  "patterns": [
+    "topological-sort"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O((m * n)^2 * (m + n))",
+  "spaceComplexity": "O((m * n)^2)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/cat-and-mouse-ii/",
+  "notes": [
+    "MiniMax",
+    "Topological Sort"
+  ],
+  "relatedSlugs": [
+    "cat-and-mouse",
+    "sort-items-by-groups-respecting-dependencies",
+    "sequence-reconstruction",
+    "path-sum-iv",
+    "alien-dictionary",
+    "populating-next-right-pointers-in-each-node-ii",
+    "shortest-distance-from-all-buildings",
+    "the-maze-iii"
+  ],
+  "prevSlug": "largest-submatrix-with-rearrangements",
+  "nextSlug": "find-followers-count",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Cat and Mouse II?\n\n**Cat and Mouse II** (LeetCode #1728) is a **Hard** problem that primarily trains **breadth first search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **topological sort**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: MiniMax, Topological Sort.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/cat-and-mouse-ii/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Cat and Mouse II\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **topological sort**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O((m * n)^2 * (m + n))) and **space** (O((m * n)^2)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O((m * n)^2 * (m + n))** time and **O((m * n)^2)** space.\n\n### Pattern focus: topological sort\n\nUse the pattern as a checklist:\n\n- **topological sort** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O((m * n)^2 * (m + n))** |\n| Space | **O((m * n)^2)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Cat and Mouse II\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for topological sort — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **topological sort**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **breadth first search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Cat and Mouse II** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **breadth first search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "cat-and-mouse-ii.cpp",
+      "code": "// Time:  O((m * n)^2 * (m + n))\n// Space: O((m * n)^2)\n\nclass Solution {\nprivate:\n    enum Result {DRAW, MOUSE, CAT};\n\npublic:\n    bool canMouseWin(vector<string>& grid, int catJump, int mouseJump) {\n        static const vector<pair<int, int>> directions{{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n        \n        const int R = size(grid), C = size(grid[0]);\n        const int N = R * C;\n        unordered_set<int> WALLS;\n        int FOOD = -1, MOUSE_START = -1, CAT_START = -1;\n        for (int r = 0; r < R; ++r) {\n            for (int c = 0; c < C; ++c) {\n                if (grid[r][c] == 'M') {\n                    MOUSE_START = r * C + c;\n                } else if (grid[r][c] == 'C') {\n                    CAT_START = r * C + c;\n                } else if (grid[r][c] == 'F') {\n                    FOOD = r * C + c;\n                } else if (grid[r][c] == '#') {\n                    WALLS.emplace(r * C + c);\n                }\n            }\n        }\n\n        vector<vector<vector<int>>> graph(N, vector<vector<int>>(2));\n        vector<int> jump = {mouseJump, catJump};\n        for (int r = 0; r < R; ++r) {\n            for (int c = 0; c < C; ++c) {\n                if (grid[r][c] == '#') {\n                    continue;\n                }\n                int pos = r * C + c;\n                for (const auto& t : {MOUSE, CAT}) {\n                    for (const auto& [dr, dc] : directions) {\n                        for (int d = 0; d <= jump[t - 1]; ++d) {\n                            int nr = r + dr * d, nc = c + dc * d;\n                            if (!(0 <= nr && nr < R && 0 <= nc && nc < C && grid[nr][nc] != '#')) {\n                                break;\n                            }\n                            graph[pos][t - 1].emplace_back(nr * C + nc);\n                        }\n                    }\n                }\n            }\n        }\n\n        vector<vector<vector<int>>> degree(N, vector<vector<int>>(N, vector<int>(2)));\n        for (int m = 0; m < size(graph); ++m) {\n            for (int c = 0; c < size(graph); ++c) {\n                degree[m][c][MOUSE - 1] = size(graph[m][MOUSE - 1]);\n                degree[m][c][CAT - 1] = size(graph[c][CAT - 1]);\n            }\n        }\n\n        vector<vector<vector<int>>> color(N, vector<vector<int>>(N, vector<int>(2)));\n        queue<tuple<int, int, int, int>> q;\n        for (int i = 0; i < size(graph); ++i) {\n            if (WALLS.count(i) || i == FOOD) {\n                continue;\n            }\n            color[FOOD][i][CAT - 1] = MOUSE;\n            q.emplace(FOOD, i, CAT, MOUSE);\n            color[i][FOOD][MOUSE - 1] = CAT;\n            q.emplace(i, FOOD, MOUSE, CAT);\n            for (const auto& t : {MOUSE, CAT}) {\n                color[i][i][t - 1] = CAT;\n                q.emplace(i, i, t, CAT);\n            }\n        }\n        while (!empty(q)) {\n            const auto [i, j, t, c] = q.front(); q.pop();\n            for (const auto& [ni, nj, nt] : parents(graph, i, j, t)) {\n                if (color[ni][nj][nt - 1] != DRAW) {\n                    continue;\n                }\n                if (nt == c) {\n                    color[ni][nj][nt - 1] = c;\n                    q.emplace(ni, nj, nt, c);\n                    continue;\n                }\n                --degree[ni][nj][nt - 1];\n                if (!degree[ni][nj][nt - 1]) {\n                    color[ni][nj][nt - 1]= c;\n                    q.emplace(ni, nj, nt, c);\n                }\n            }\n        }\n        return color[MOUSE_START][CAT_START][MOUSE - 1] == MOUSE;\n    }\n\nprivate:\n    vector<tuple<int, int, int>> parents(const vector<vector<vector<int>>>& graph,\n                                         int m, int c, int t) {\n        vector<tuple<int, int, int>> result;\n        if (t == CAT) {\n            for (const auto& nm : graph[m][(MOUSE ^ CAT ^ t) - 1]) {\n                result.emplace_back(nm, c, MOUSE ^ CAT ^ t);\n            }\n        } else {\n            for (const auto& nc : graph[c][(MOUSE ^ CAT ^ t) - 1]) {\n                result.emplace_back(m, nc, MOUSE ^ CAT ^ t);\n            }\n        }\n        return result;\n    }\n};\n\n// Time:  O((m * n)^2 * (m + n))\n// Space: O((m * n)^2)\nclass Solution2 {\nprivate:\n    enum Result {DRAW, MOUSE, CAT};\n\npublic:\n    bool canMouseWin(vector<string>& grid, int catJump, int mouseJump) {\n        static const vector<pair<int, int>> directions{{0, 1}, {1, 0}, {0, -1}, {-1, 0}};\n        \n        const int R = size(grid), C = size(grid[0]);\n        const int N = R * C;\n        unordered_set<int> WALLS;\n        int FOOD = -1, MOUSE_START = -1, CAT_START = -1;\n        for (int r = 0; r < R; ++r) {\n            for (int c = 0; c < C; ++c) {\n                if (grid[r][c] == 'M') {\n                    MOUSE_START = r * C + c;\n                } else if (grid[r][c] == 'C') {\n                    CAT_START = r * C + c;\n                } else if (grid[r][c] == 'F') {\n                    FOOD = r * C + c;\n                } else if (grid[r][c] == '#') {\n                    WALLS.emplace(r * C + c);\n                }\n            }\n        }\n\n        vector<vector<vector<int>>> graph(N, vector<vector<int>>(2));\n        vector<int> jump = {mouseJump, catJump};\n        for (int r = 0; r < R; ++r) {\n            for (int c = 0; c < C; ++c) {\n                if (grid[r][c] == '#') {\n                    continue;\n                }\n                int pos = r * C + c;\n                for (const auto& t : {MOUSE, CAT}) {\n                    for (const auto& [dr, dc] : directions) {\n                        for (int d = 0; d <= jump[t - 1]; ++d) {\n                            int nr = r + dr * d, nc = c + dc * d;\n                            if (!(0 <= nr && nr < R && 0 <= nc && nc < C && grid[nr][nc] != '#')) {\n                                break;\n                            }\n                            graph[pos][t - 1].emplace_back(nr * C + nc);\n                        }\n                    }\n                }\n            }\n        }\n\n        vector<vector<vector<int>>> degree(N, vector<vector<int>>(N, vector<int>(2)));\n        for (int m = 0; m < size(graph); ++m) {\n            for (int c = 0; c < size(graph); ++c) {\n                // degree[m][c][MOUSE - 1] = size(graph[m][MOUSE - 1]);\n                degree[m][c][CAT - 1] = size(graph[c][CAT - 1]);\n            }\n        }\n\n        vector<vector<vector<int>>> color(N, vector<vector<int>>(N, vector<int>(2)));\n        queue<tuple<int, int, int>> q1;\n        // queue<tuple<int, int, int>> q2;\n        for (int i = 0; i < size(graph); ++i) {\n            if (WALLS.count(i) || i == FOOD) {\n                continue;\n            }\n            color[FOOD][i][CAT - 1] = MOUSE;\n            q1.emplace(FOOD, i, CAT);\n            color[i][FOOD][MOUSE - 1] = CAT;\n            // q2.emplace(i, FOOD, MOUSE);\n            for (const auto& t : {MOUSE, CAT}) {\n                color[i][i][t - 1] = CAT;\n                // q2.emplace(i, i, t);\n            }\n        }\n        while (!empty(q1)) {\n            const auto [i, j, t] = q1.front(); q1.pop();\n            for (const auto& [ni, nj, nt] : parents(graph, i, j, t)) {\n                if (color[ni][nj][nt - 1] != DRAW) {\n                    continue;\n                }\n                if (t == CAT) {\n                    color[ni][nj][nt - 1] = MOUSE;\n                    q1.emplace(ni, nj, nt);\n                    continue;\n                }\n                --degree[ni][nj][nt - 1];\n                if (!degree[ni][nj][nt - 1]) {\n                    color[ni][nj][nt - 1] = MOUSE;\n                    q1.emplace(ni, nj, nt);\n                }\n            }\n        }\n        // while (!empty(q2)) {\n        //     const auto [i, j, t] = q2.front(); q2.pop();\n        //     for (const auto& [ni, nj, nt] : parents(graph, i, j, t)) {\n        //         if (color[ni][nj][nt - 1] != DRAW) {\n        //             continue;\n        //         }\n        //         if (t == MOUSE) {\n        //             color[ni][nj][nt - 1] = CAT;\n        //             q2.emplace(ni, nj, nt);\n        //             continue;\n        //         }\n        //         --degree[ni][nj][nt - 1];\n        //         if (!degree[ni][nj][nt - 1]) {\n        //             color[ni][nj][nt - 1] = CAT;\n        //             q2.emplace(ni, nj, nt);\n        //         }\n        //     }\n        // }\n        return color[MOUSE_START][CAT_START][MOUSE - 1] == MOUSE;\n    }\n\nprivate:\n    vector<tuple<int, int, int>> parents(const vector<vector<vector<int>>>& graph,\n                                         int m, int c, int t) {\n        vector<tuple<int, int, int>> result;\n        if (t == CAT) {\n            for (const auto& nm : graph[m][(MOUSE ^ CAT ^ t) - 1]) {\n                result.emplace_back(nm, c, MOUSE ^ CAT ^ t);\n            }\n        } else {\n            for (const auto& nc : graph[c][(MOUSE ^ CAT ^ t) - 1]) {\n                result.emplace_back(m, nc, MOUSE ^ CAT ^ t);\n            }\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/cat-and-mouse-ii.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "cat-and-mouse-ii.py",
+      "code": "# Time:  O((m * n)^2 * (m + n))\n# Space: O((m * n)^2)\n\nimport collections\n\n\nclass Solution(object):\n    def canMouseWin(self, grid, catJump, mouseJump):\n        \"\"\"\n        :type grid: List[str]\n        :type catJump: int\n        :type mouseJump: int\n        :rtype: bool\n        \"\"\"\n        directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]\n        DRAW, MOUSE, CAT = range(3)\n        def parents(m, c, t):\n            if t == CAT:\n                for nm in graph[m, MOUSE^CAT^t]:\n                    yield nm, c, MOUSE^CAT^t\n            else:\n                for nc in graph[c, MOUSE^CAT^t]:\n                    yield m, nc, MOUSE^CAT^t\n\n        R, C = len(grid), len(grid[0])\n        N = R*C\n        WALLS = set()\n        FOOD, MOUSE_START, CAT_START = [-1]*3\n        for r in xrange(R):\n            for c in xrange(C):\n                if grid[r][c] == 'M':\n                    MOUSE_START = r*C + c\n                elif grid[r][c] == 'C':\n                    CAT_START = r*C + c\n                elif grid[r][c] == 'F':\n                    FOOD = r*C + c\n                elif grid[r][c] == '#':\n                    WALLS.add(r*C + c)\n\n        graph = collections.defaultdict(set)\n        jump = {MOUSE:mouseJump, CAT:catJump}\n        for r in xrange(R):\n            for c in xrange(C):\n                if grid[r][c] == '#':\n                    continue\n                pos = r*C + c\n                for t in [MOUSE, CAT]:\n                    for dr, dc in directions:\n                        for d in xrange(jump[t]+1):\n                            nr, nc = r+dr*d, c+dc*d\n                            if not (0 <= nr < R and 0 <= nc < C and grid[nr][nc] != '#'):\n                                break\n                            graph[pos, t].add(nr*C + nc)\n\n        degree = {}\n        for m in xrange(N):\n            for c in xrange(N):\n                degree[m, c, MOUSE] = len(graph[m, MOUSE])\n                degree[m, c, CAT] = len(graph[c, CAT])\n        color = collections.defaultdict(int)\n        q = collections.deque()\n        for i in xrange(N):\n            if i in WALLS or i == FOOD:\n                continue\n            color[FOOD, i, CAT] = MOUSE\n            q.append((FOOD, i, CAT, MOUSE))\n            color[i, FOOD, MOUSE] = CAT\n            q.append((i, FOOD, MOUSE, CAT))\n            for t in [MOUSE, CAT]:\n                color[i, i, t] = CAT\n                q.append((i, i, t, CAT))\n        while q:\n            i, j, t, c = q.popleft()\n            for ni, nj, nt in parents(i, j, t):\n                if color[ni, nj, nt] != DRAW:\n                    continue\n                if nt == c:\n                    color[ni, nj, nt] = c\n                    q.append((ni, nj, nt, c))\n                    continue\n                degree[ni, nj, nt] -= 1\n                if not degree[ni, nj, nt]:\n                    color[ni, nj, nt] = c\n                    q.append((ni, nj, nt, c))\n        return color[MOUSE_START, CAT_START, MOUSE] == MOUSE\n\n\n# Time:  O((m * n)^2 * (m + n))\n# Space: O((m * n)^2)\nimport collections\n\n\nclass Solution2(object):\n    def canMouseWin(self, grid, catJump, mouseJump):\n        \"\"\"\n        :type grid: List[str]\n        :type catJump: int\n        :type mouseJump: int\n        :rtype: bool\n        \"\"\"\n        directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]\n        DRAW, MOUSE, CAT = range(3)\n        def parents(m, c, t):\n            if t == CAT:\n                for nm in graph[m, MOUSE^CAT^t]:\n                    yield nm, c, MOUSE^CAT^t\n            else:\n                for nc in graph[c, MOUSE^CAT^t]:\n                    yield m, nc, MOUSE^CAT^t\n\n        R, C = len(grid), len(grid[0])\n        N = R*C\n        WALLS = set()\n        FOOD, MOUSE_START, CAT_START = [-1]*3\n        for r in xrange(R):\n            for c in xrange(C):\n                if grid[r][c] == 'M':\n                    MOUSE_START = r*C + c\n                elif grid[r][c] == 'C':\n                    CAT_START = r*C + c\n                elif grid[r][c] == 'F':\n                    FOOD = r*C + c\n                elif grid[r][c] == '#':\n                    WALLS.add(r*C + c)\n        graph = collections.defaultdict(set)\n        jump = {MOUSE:mouseJump, CAT:catJump}\n        for r in xrange(R):\n            for c in xrange(C):\n                if grid[r][c] == '#':\n                    continue\n                pos = r*C + c\n                for t in [MOUSE, CAT]:\n                    for dr, dc in directions:\n                        for d in xrange(jump[t]+1):\n                            nr, nc = r+dr*d, c+dc*d\n                            if not (0 <= nr < R and 0 <= nc < C and grid[nr][nc] != '#'):\n                                break\n                            graph[pos, t].add(nr*C + nc)\n\n        degree = {}\n        for m in xrange(N):\n            for c in xrange(N):\n                # degree[m, c, MOUSE] = len(graph[m, MOUSE])\n                degree[m, c, CAT] = len(graph[c, CAT])\n        color = collections.defaultdict(int)\n        q1 = collections.deque()\n        # q2 = collections.deque()\n        for i in xrange(N):\n            if i in WALLS or i == FOOD:\n                continue\n            color[FOOD, i, CAT] = MOUSE\n            q1.append((FOOD, i, CAT))\n            color[i, FOOD, MOUSE] = CAT\n            # q2.append((i, FOOD, MOUSE))\n            for t in [MOUSE, CAT]:\n                color[i, i, t] = CAT\n                # q2.append((i, i, t))\n        while q1:\n            i, j, t = q1.popleft()\n            for ni, nj, nt in parents(i, j, t):\n                if color[ni, nj, nt] != DRAW:\n                    continue\n                if t == CAT:\n                    color[ni, nj, nt] = MOUSE\n                    q1.append((ni, nj, nt))\n                    continue\n                degree[ni, nj, nt] -= 1\n                if not degree[ni, nj, nt]:\n                    color[ni, nj, nt] = MOUSE\n                    q1.append((ni, nj, nt))\n        # while q2:\n        #     i, j, t = q2.popleft()\n        #     for ni, nj, nt in parents(i, j, t):\n        #         if color[ni, nj, nt] != DRAW:\n        #             continue\n        #         if t == MOUSE:\n        #             color[ni, nj, nt] = CAT\n        #             q2.append((ni, nj, nt))\n        #             continue\n        #         degree[ni, nj, nt] -= 1\n        #         if not degree[ni, nj, nt]:\n        #             color[ni, nj, nt] = CAT\n        #             q2.append((ni, nj, nt))\n        return color[MOUSE_START, CAT_START, MOUSE] == MOUSE\n",
+      "sourcePath": "Python/cat-and-mouse-ii.py"
+    }
+  },
+  "seo": {
+    "title": "Cat and Mouse II Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Cat and Mouse II (LeetCode #1728). Pattern: topological sort. Time O((m * n)^2 * (m + n)), space O((m * n)^2). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Cat and Mouse II",
+      "Cat and Mouse II solution",
+      "Cat and Mouse II leetcode",
+      "breadth-first-search",
+      "topological-sort",
+      "hard"
+    ],
+    "canonicalPath": "/problems/cat-and-mouse-ii"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Cat and Mouse II?",
+      "answer": "The reference solutions aim for O((m * n)^2 * (m + n)) time and O((m * n)^2) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Cat and Mouse II use?",
+      "answer": "It primarily maps to topological sort, within the broader topic of breadth first search."
+    },
+    {
+      "question": "Is Cat and Mouse II good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/cat-and-mouse-ii/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the topological sort approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Cat and Mouse II (#1728) — Hard. Pattern: topological sort. Complexity: O((m * n)^2 * (m + n)) time / O((m * n)^2) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Cat and Mouse II: show input structure (breadth first search), highlight the moving parts of the topological sort approach, and annotate each step with the maintained invariant and complexity."
+}

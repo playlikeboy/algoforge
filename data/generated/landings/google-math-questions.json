@@ -1,0 +1,64 @@
+{
+  "slug": "google-math-questions",
+  "path": "/explore/google-math-questions",
+  "h1": "Best Math Questions for Google",
+  "intro": "A curated set of 21 Math problems frequently useful for Google interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "powx-n",
+    "fraction-to-recurring-decimal",
+    "bulb-switcher",
+    "power-of-three",
+    "self-crossing",
+    "linked-list-random-node",
+    "lexicographical-numbers",
+    "elimination-game",
+    "perfect-rectangle",
+    "arranging-coins",
+    "poor-pigs",
+    "smallest-good-base",
+    "4-keys-keyboard",
+    "remove-9",
+    "mirror-reflection",
+    "sum-of-subsequence-widths",
+    "numbers-at-most-n-given-digit-set",
+    "super-palindromes",
+    "sum-of-subarray-minimums",
+    "smallest-range-i",
+    "smallest-range-ii"
+  ],
+  "faqs": [
+    {
+      "question": "How many Math problems should I do for Google?",
+      "answer": "Quality over quantity: master patterns with 15 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Math topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/google",
+      "label": "Google interview hub"
+    },
+    {
+      "href": "/topics/math",
+      "label": "Math problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Math Questions for Google | AlgoForge",
+    "description": "Top Math coding interview questions for Google. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Google Math questions",
+      "Math interview",
+      "Google leetcode"
+    ],
+    "canonicalPath": "/explore/google-math-questions"
+  },
+  "kind": "company-topic"
+}

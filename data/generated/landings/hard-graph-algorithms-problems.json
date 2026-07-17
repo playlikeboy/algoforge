@@ -1,0 +1,42 @@
+{
+  "slug": "hard-graph-algorithms-problems",
+  "path": "/explore/hard-graph-algorithms-problems",
+  "h1": "Hard Graph Algorithms Problems",
+  "intro": "7 hard problems that drill the Graph Algorithms pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "couples-holding-hands",
+    "maximum-students-taking-exam",
+    "number-of-ways-to-reconstruct-a-tree",
+    "checking-existence-of-edge-length-limited-paths-ii",
+    "minimum-degree-of-a-connected-trio-in-a-graph",
+    "minimum-operations-to-remove-adjacent-ones-in-matrix",
+    "maximum-employees-to-be-invited-to-a-meeting"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice hard Graph Algorithms problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/graph-algorithms",
+      "label": "Graph Algorithms pattern"
+    },
+    {
+      "href": "/difficulty/hard",
+      "label": "All Hard problems"
+    }
+  ],
+  "seo": {
+    "title": "Hard Graph Algorithms Problems | AlgoForge",
+    "description": "Practice hard Graph Algorithms LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "hard Graph Algorithms",
+      "Graph Algorithms problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/hard-graph-algorithms-problems"
+  },
+  "kind": "difficulty-pattern"
+}

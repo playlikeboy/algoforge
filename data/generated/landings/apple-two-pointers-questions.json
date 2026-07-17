@@ -1,0 +1,47 @@
+{
+  "slug": "apple-two-pointers-questions",
+  "path": "/explore/apple-two-pointers-questions",
+  "h1": "Best Two Pointers Questions for Apple",
+  "intro": "A curated set of 4 Two Pointers problems frequently useful for Apple interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "linked-list-cycle",
+    "two-sum-ii-input-array-is-sorted",
+    "move-zeroes",
+    "reverse-string"
+  ],
+  "faqs": [
+    {
+      "question": "How many Two Pointers problems should I do for Apple?",
+      "answer": "Quality over quantity: master patterns with 4 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Two Pointers topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/apple",
+      "label": "Apple interview hub"
+    },
+    {
+      "href": "/topics/two-pointers",
+      "label": "Two Pointers problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Two Pointers Questions for Apple | AlgoForge",
+    "description": "Top Two Pointers coding interview questions for Apple. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Apple Two Pointers questions",
+      "Two Pointers interview",
+      "Apple leetcode"
+    ],
+    "canonicalPath": "/explore/apple-two-pointers-questions"
+  },
+  "kind": "company-topic"
+}

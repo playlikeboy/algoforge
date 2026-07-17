@@ -1,0 +1,155 @@
+{
+  "id": "3855",
+  "number": 3855,
+  "slug": "sum-of-k-digit-numbers-in-a-range",
+  "title": "Sum of K-Digit Numbers in a Range",
+  "difficulty": "Hard",
+  "topics": [
+    "math"
+  ],
+  "patterns": [],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(logr)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/sum-of-k-digit-numbers-in-a-range/",
+  "notes": [
+    "Math"
+  ],
+  "relatedSlugs": [
+    "valid-number",
+    "number-of-digit-one",
+    "strobogrammatic-number-iii",
+    "self-crossing",
+    "perfect-rectangle",
+    "largest-palindrome-product",
+    "smallest-good-base",
+    "super-washing-machines"
+  ],
+  "prevSlug": "minimum-operations-to-make-array-parity-alternating",
+  "nextSlug": "trim-trailing-vowels",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Sum of K-Digit Numbers in a Range?\n\n**Sum of K-Digit Numbers in a Range** (LeetCode #3855) is a **Hard** problem that primarily trains **math**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Math.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/sum-of-k-digit-numbers-in-a-range/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Sum of K-Digit Numbers in a Range\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(logr)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(logr)** time and **O(1)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(logr)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Sum of K-Digit Numbers in a Range\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **math**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Sum of K-Digit Numbers in a Range** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **math**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "sum-of-k-digit-numbers-in-a-range.cpp",
+      "code": "// Time:  O(logr), r = MOD\n// Space: O(1)\n\n// math\nclass Solution {\npublic:\n    int sumOfNumbers(int l, int r, int k) {\n        static const uint32_t MOD = 1e9 + 7;\n\n        const auto& addmod = [](uint32_t a, uint32_t b, uint32_t mod) {  // avoid overflow\n            // a %= mod, b %= mod;  // assumed a, b have been mod\n            if (mod - a <= b) {\n                b -= mod;  // relied on unsigned integer overflow in order to give the expected results\n            }\n            return a + b;\n        };\n\n        const auto& submod = [&](uint32_t a, uint32_t b, uint32_t mod) {\n            // a %= mod, b %= mod;  // assumed a, b have been mod\n            return addmod(a, mod - b, mod);\n        };\n\n        const auto& mulmod = [&](uint32_t a, uint32_t b, uint32_t mod)  {  // avoid overflow\n            // a %= mod, b %= mod;  // assumed a, b have been mod\n            uint32_t result = 0;\n            if (a < b) {\n                swap(a, b);\n            }\n            while (b > 0)  { \n                if (b % 2 == 1) {\n                    result = addmod(result, a, mod);\n                }\n                a = addmod(a, a, mod);\n                b /= 2; \n            } \n            return result; \n        };\n\n        const auto& powmod = [&](uint32_t a, uint32_t b, uint32_t mod) {\n            a %= mod;\n            uint32_t result = 1;\n            while (b) {\n                if (b & 1) {\n                    result = mulmod(result, a, mod);\n                }\n                a = mulmod(a, a, mod);\n                b >>= 1;\n            }\n            return result;\n        };\n\n        const auto& invmod = [&](uint32_t x, uint32_t mod) {\n            return powmod(x, mod - 2, mod);\n        };\n\n        return mulmod(mulmod((r + l) * (r - l + 1) / 2, powmod(r - l + 1, k - 1, MOD), MOD),\n                      mulmod(submod(powmod(10, k, MOD), 1, MOD), invmod(10 - 1, MOD), MOD), MOD);\n    }\n};\n",
+      "sourcePath": "C++/sum-of-k-digit-numbers-in-a-range.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "sum-of-k-digit-numbers-in-a-range.py",
+      "code": "# Time:  O(logr)\n# Space: O(1)\n\n# math\nclass Solution(object):\n    def sumOfNumbers(self, l, r, k):\n        \"\"\"\n        :type l: int\n        :type r: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        def invmod(x, MOD):\n            return pow(x, MOD-2, MOD)\n    \n        MOD = 10**9+7\n        return (((((r+l)*(r-l+1)//2)*pow(r-l+1, k-1, MOD))%MOD)*((((pow(10, k, MOD)-1)%MOD)*invmod(10-1, MOD))%MOD))%MOD\n",
+      "sourcePath": "Python/sum-of-k-digit-numbers-in-a-range.py"
+    }
+  },
+  "seo": {
+    "title": "Sum of K-Digit Numbers in a Range Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Sum of K-Digit Numbers in a Range (LeetCode #3855). Pattern: algorithms. Time O(logr), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Sum of K-Digit Numbers in a Range",
+      "Sum of K-Digit Numbers in a Range solution",
+      "Sum of K-Digit Numbers in a Range leetcode",
+      "math",
+      "hard"
+    ],
+    "canonicalPath": "/problems/sum-of-k-digit-numbers-in-a-range"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Sum of K-Digit Numbers in a Range?",
+      "answer": "The reference solutions aim for O(logr) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Sum of K-Digit Numbers in a Range use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of math."
+    },
+    {
+      "question": "Is Sum of K-Digit Numbers in a Range good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/sum-of-k-digit-numbers-in-a-range/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Sum of K-Digit Numbers in a Range (#3855) — Hard. Pattern: general problem-solving. Complexity: O(logr) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Sum of K-Digit Numbers in a Range: show input structure (math), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

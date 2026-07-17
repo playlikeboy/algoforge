@@ -1,0 +1,156 @@
+{
+  "id": "2120",
+  "number": 2120,
+  "slug": "execution-of-all-suffix-instructions-staying-in-a-grid",
+  "title": "Execution of All Suffix Instructions Staying in a Grid",
+  "difficulty": "Medium",
+  "topics": [
+    "hash-table"
+  ],
+  "patterns": [
+    "hash-map"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(m)",
+  "spaceComplexity": "O(m)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/execution-of-all-suffix-instructions-staying-in-a-grid/",
+  "notes": [],
+  "relatedSlugs": [
+    "longest-substring-without-repeating-characters",
+    "group-anagrams",
+    "repeated-dna-sequences",
+    "shortest-word-distance-ii",
+    "maximum-size-subarray-sum-equals-k",
+    "4sum-ii",
+    "matchsticks-to-square",
+    "continuous-subarray-sum"
+  ],
+  "prevSlug": "a-number-after-a-double-reversal",
+  "nextSlug": "intervals-between-identical-elements",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Execution of All Suffix Instructions Staying in a Grid?\n\n**Execution of All Suffix Instructions Staying in a Grid** (LeetCode #2120) is a **Medium** problem that primarily trains **hash table**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **hash map**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/execution-of-all-suffix-instructions-staying-in-a-grid/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Execution of All Suffix Instructions Staying in a Grid\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **hash map**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(m)) and **space** (O(m)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(m)** time and **O(m)** space.\n\n### Pattern focus: hash map\n\nUse the pattern as a checklist:\n\n- **hash map** — confirm the invariant holds after each step\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(m)** |\n| Space | **O(m)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Execution of All Suffix Instructions Staying in a Grid\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for hash map — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal hash map solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `execution-of-all-suffix-instructions-staying-in-a-grid`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **hash map**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **hash table**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Execution of All Suffix Instructions Staying in a Grid** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **hash table**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "execution-of-all-suffix-instructions-staying-in-a-grid.cpp",
+      "code": "// Time:  O(m)\n// Space: O(m)\n\nclass Solution {\npublic:\n    vector<int> executeInstructions(int n, vector<int>& startPos, string s) {\n        static const unordered_map<char, pair<int, int>> directions = {\n            {'U', {-1, 0}}, {'R', {0, 1}}, {'D', {1, 0}}, {'L', {0, -1}}\n        };\n\n        int x0 = startPos[0], y0 = startPos[1];\n        int x = 0, y = 0;\n        vector<int> result(size(s));\n        iota(rbegin(result), rend(result), 1);\n        unordered_map<int, vector<int>> lookup_x, lookup_y;\n        lookup_x[x0 - x].emplace_back(0);\n        lookup_y[y0 - y].emplace_back(0);\n        for (int i = 0; i < size(s); ++i) {\n            const auto& [dx, dy] = directions.at(s[i]);\n            x += dx, y += dy;\n            for (const auto& k : {n - x, -x - 1}) {\n                if (!lookup_x.count(k)) {\n                    continue;\n                }\n                for (const auto& j : lookup_x[k]) {\n                    result[j] = min(result[j], i - j);\n                }\n                lookup_x.erase(k);\n            }\n            for (const auto& k : {n - y, -y - 1}) {\n                if (!lookup_y.count(k)) {\n                    continue;\n                }\n                for (const auto& j : lookup_y[k]) {\n                    result[j] = min(result[j], i - j);\n                }\n                lookup_y.erase(k);\n            }\n            lookup_x[x0 - x].emplace_back(i + 1);\n            lookup_y[y0 - y].emplace_back(i + 1);\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/execution-of-all-suffix-instructions-staying-in-a-grid.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "execution-of-all-suffix-instructions-staying-in-a-grid.py",
+      "code": "# Time:  O(m)\n# Space: O(m)\n\nimport collections\n\n\nclass Solution(object):\n    def executeInstructions(self, n, startPos, s):\n        \"\"\"\n        :type n: int\n        :type startPos: List[int]\n        :type s: str\n        :rtype: List[int]\n        \"\"\"\n        directions = {'U':(-1, 0), 'R':(0, 1), 'D':(1, 0), 'L':(0, -1)}\n        (x0, y0), (x, y) = startPos, (0, 0)\n        result = range(len(s), 0, -1)\n        lookup_x = collections.defaultdict(list)\n        lookup_y = collections.defaultdict(list)\n        lookup_x[x0-x].append(0)\n        lookup_y[y0-y].append(0)\n        for i, d in enumerate(s):\n            dx, dy = directions[d]\n            x, y = x+dx, y+dy\n            for k in n-x, -x-1:\n                if k not in lookup_x:\n                    continue\n                for j in lookup_x[k]:\n                    result[j] = min(result[j], i-j)\n                lookup_x[k] = []\n            for k in n-y, -y-1:\n                if k not in lookup_y:\n                    continue\n                for j in lookup_y[k]:\n                    result[j] = min(result[j], i-j)\n                lookup_y[k] = []\n            lookup_x[x0-x].append(i+1)\n            lookup_y[y0-y].append(i+1)\n        return result\n",
+      "sourcePath": "Python/execution-of-all-suffix-instructions-staying-in-a-grid.py"
+    }
+  },
+  "seo": {
+    "title": "Execution of All Suffix Instructions Staying in a Grid Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Execution of All Suffix Instructions Staying in a Grid (LeetCode #2120). Pattern: hash map. Time O(m), space O(m). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Execution of All Suffix Instructions Staying in a Grid",
+      "Execution of All Suffix Instructions Staying in a Grid solution",
+      "Execution of All Suffix Instructions Staying in a Grid leetcode",
+      "hash-table",
+      "hash-map",
+      "medium"
+    ],
+    "canonicalPath": "/problems/execution-of-all-suffix-instructions-staying-in-a-grid"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Execution of All Suffix Instructions Staying in a Grid?",
+      "answer": "The reference solutions aim for O(m) time and O(m) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Execution of All Suffix Instructions Staying in a Grid use?",
+      "answer": "It primarily maps to hash map, within the broader topic of hash table."
+    },
+    {
+      "question": "Is Execution of All Suffix Instructions Staying in a Grid good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/execution-of-all-suffix-instructions-staying-in-a-grid/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the hash map approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Execution of All Suffix Instructions Staying in a Grid (#2120) — Medium. Pattern: hash map. Complexity: O(m) time / O(m) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Execution of All Suffix Instructions Staying in a Grid: show input structure (hash table), highlight the moving parts of the hash map approach, and annotate each step with the maintained invariant and complexity."
+}

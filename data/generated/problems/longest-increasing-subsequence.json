@@ -1,0 +1,172 @@
+{
+  "id": "300",
+  "number": 300,
+  "slug": "longest-increasing-subsequence",
+  "title": "Longest Increasing Subsequence",
+  "difficulty": "Medium",
+  "topics": [
+    "binary-search"
+  ],
+  "patterns": [
+    "binary-search",
+    "fenwick-tree",
+    "segment-tree",
+    "dynamic-programming"
+  ],
+  "companies": [
+    "amazon",
+    "microsoft",
+    "google"
+  ],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogn)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/longest-increasing-subsequence/",
+  "notes": [
+    "Binary Search",
+    "BIT",
+    "Fenwick Tree",
+    "Segment Tree",
+    "DP"
+  ],
+  "relatedSlugs": [
+    "find-the-longest-valid-obstacle-course-at-each-position",
+    "minimum-number-of-removals-to-make-mountain-array",
+    "fruits-into-baskets-iii",
+    "minimum-operations-to-make-a-subsequence",
+    "fruits-into-baskets-ii",
+    "equalize-strings-by-adding-or-removing-characters-at-ends",
+    "find-building-where-alice-and-bob-can-meet",
+    "search-in-rotated-sorted-array"
+  ],
+  "prevSlug": "bulls-and-cows",
+  "nextSlug": "remove-invalid-parentheses",
+  "estimatedMinutes": 45,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Longest Increasing Subsequence?\n\n**Longest Increasing Subsequence** (LeetCode #300) is a **Medium** problem that primarily trains **binary search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **binary search, fenwick tree, segment tree, and dynamic programming**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Binary Search, BIT, Fenwick Tree, Segment Tree.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/longest-increasing-subsequence/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Longest Increasing Subsequence\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **binary search, fenwick tree, segment tree, and dynamic programming**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogn)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogn)** time and **O(n)** space.\n\n### Pattern focus: binary search, fenwick tree, segment tree, and dynamic programming\n\nUse the pattern as a checklist:\n\n- **binary search** — confirm the invariant holds after each step\n- **fenwick tree** — confirm the invariant holds after each step\n- **segment tree** — confirm the invariant holds after each step\n- **dynamic programming** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogn)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Longest Increasing Subsequence\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for binary search, fenwick tree, segment tree, and dynamic programming — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **binary search, fenwick tree, segment tree, and dynamic programming**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **binary search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Longest Increasing Subsequence** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **binary search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "longest-increasing-subsequence.cpp",
+      "code": "// Time:  O(nlogn)\n// Space: O(n)\n\n// Binary search solution with STL.\nclass Solution {\npublic:\n    int lengthOfLIS(vector<int>& nums) {\n        vector<int> LIS;\n\n        for (const auto& num : nums) {\n            insert(&LIS, num);\n        }\n\n        return LIS.size();\n    }\n\nprivate:\n    void insert(vector<int> *LIS, const int target) {\n        // Find the first index \"left\" which satisfies LIS[left] >= target\n        auto it = lower_bound(LIS->begin(), LIS->end(), target);\n\n        // If not found, append the target.\n        if (it == LIS->end()) {\n            LIS->emplace_back(target);\n        } else {\n            *it = target;\n        }\n    }\n};\n\n// Binary search solution.\nclass Solution2 {\npublic:\n    int lengthOfLIS(vector<int>& nums) {\n        vector<int> LIS;\n\n        for (const auto& num : nums) {\n            insert(&LIS, num);\n        }\n\n        return LIS.size();\n    }\n\nprivate:\n    void insert(vector<int> *LIS, const int target) {\n        int left = 0, right = LIS->size() - 1;\n        auto comp = [](int x, int target) { return x >= target; };\n\n        // Find the first index \"left\" which satisfies LIS[left] >= target\n        while (left <= right) {\n            int mid = left + (right - left) / 2;\n            if (comp((*LIS)[mid], target)) {\n                right = mid - 1;\n            } else {\n                left = mid + 1;\n            }\n        }\n\n        // If not found, append the target.\n        if (left == LIS->size()) {\n            LIS->emplace_back(target);\n        } else {\n            (*LIS)[left] = target;\n        }\n    }\n};\n\n// Time:  O(nlogn)\n// Space: O(n)\n// bit, fenwick tree\nclass Solution3 {\npublic:\n    int lengthOfLIS(vector<int>& nums) {\n        set<int> sorted_nums(cbegin(nums), cend(nums));\n        unordered_map<int, int> val_to_idx;\n        for (const auto& num : sorted_nums) {\n            val_to_idx[num] = size(val_to_idx);\n        }\n        const auto& fn = [](const auto& a, const auto& b) {\n            return max(a, b);\n        };\n\n        BIT<int> bit(size(val_to_idx), 0, fn);\n        for (const auto& x : nums) {\n            bit.update(val_to_idx[x], bit.query(val_to_idx[x] - 1) + 1);\n        }\n        return bit.query(size(val_to_idx) - 1);\n    }\n\nprivate:\n    template<typename T>\n    class BIT {\n    public:\n        BIT(int n, T val, const function<T (T, T)> fn)\n          : bit_(n + 1, val),\n            fn_(fn) {  // 0-indexed\n        }\n        \n        void update(int i, T val) {\n            ++i;\n            for (; i < size(bit_); i += lower_bit(i)) {\n                bit_[i] = fn_(bit_[i], val);\n            }\n        }\n\n        T query(int i) const {\n            ++i;\n            auto total = bit_[0];\n            for (; i > 0; i -= lower_bit(i)) {\n                total = fn_(total, bit_[i]);\n            }\n            return total;\n        }\n    \n    private:\n        int lower_bit(int i) const {\n            return i & -i;\n        }\n        \n        vector<T> bit_;\n        const function<T (T, T)> fn_;\n    };\n};\n\n// Time:  O(nlogn)\n// Space: O(n)\n// optimized from Solution5\nclass Solution4 {\npublic:\n    int lengthOfLIS(vector<int>& nums) {\n        set<int> sorted_nums(cbegin(nums), cend(nums));\n        unordered_map<int, int> val_to_idx;\n        for (const auto& x : sorted_nums) {\n            val_to_idx[x] = size(val_to_idx);\n        }\n        SegmentTree st(size(val_to_idx));\n        for (const auto& x : nums) {\n            st.update(val_to_idx[x], val_to_idx[x],\n                      (val_to_idx[x] >= 1) ? st.query(0, val_to_idx[x] - 1) + 1 : 1);\n        }\n        return (size(val_to_idx) >= 1) ? st.query(0, size(val_to_idx) - 1) : 0;\n    }\n\nprivate:\n    class SegmentTree {\n    public:\n        SegmentTree(int N)\n            : N_(N),\n              tree_(2 * N),\n              lazy_(N)\n        {\n            H_ = 1;\n            while ((1 << H_) < N) {\n                ++H_;\n            }\n        }\n\n        void update(int L, int R, int h) {\n            L += N_; R += N_;\n            int L0 = L, R0 = R;\n            while (L <= R) {\n                if ((L & 1) == 1) {\n                    apply(L++, h);\n                }\n                if ((R & 1) == 0) {\n                    apply(R--, h);\n                }\n                L >>= 1; R >>= 1;\n            }\n            pull(L0); pull(R0);\n        }\n\n        int query(int L, int R) {\n            L += N_; R += N_;\n            auto result = 0;\n            push(L); push(R);\n            while (L <= R) {\n                if ((L & 1) == 1) {\n                    result = max(result, tree_[L++]);\n                }\n                if ((R & 1) == 0) {\n                    result = max(result, tree_[R--]);\n                }\n                L >>= 1; R >>= 1;\n            }\n            return result;\n        }\n\n    private:\n        int N_, H_;\n        vector<int> tree_, lazy_;\n\n        void apply(int x, int val) {\n            tree_[x] = max(tree_[x], val);\n            if (x < N_) {\n                lazy_[x] = max(lazy_[x], val);\n            }\n        }\n\n        void pull(int x) {\n            while (x > 1) {\n                x >>= 1;\n                tree_[x] = max(tree_[x * 2], tree_[x * 2 + 1]);\n                tree_[x] = max(tree_[x], lazy_[x]);\n            }\n        }\n\n        void push(int x) {\n            for (int h = H_; h > 0; --h) {\n                int y = x >> h;\n                if (lazy_[y] > 0) {\n                    apply(y * 2, lazy_[y]);\n                    apply(y * 2 + 1, lazy_[y]);\n                    lazy_[y] = 0;\n                }\n            }\n        }\n    };\n};\n\n// Time:  O(n^2)\n// Space: O(n)\n// Traditional DP solution.\nclass Solution5 {\npublic:\n    int lengthOfLIS(vector<int>& nums) {\n        const int n = nums.size();\n        vector<int> dp(n, 1);  // dp[i]: the length of LIS ends with nums[i]\n        int res = 0;\n        for (int i = 0; i < n; ++i) {\n            for (int j = 0; j < i; ++j) {\n                if (nums[j] < nums[i]) {\n                    dp[i] = max(dp[i], dp[j] + 1);\n                }\n            }\n            res = max(res, dp[i]);\n        }\n        return res;\n    }\n};\n",
+      "sourcePath": "C++/longest-increasing-subsequence.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "longest-increasing-subsequence.py",
+      "code": "# Time:  O(nlogn)\n# Space: O(n)\n\nimport bisect\n\n\nclass Solution(object):\n    def lengthOfLIS(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        LIS = []\n        def insert(target):\n            left = bisect.bisect_left(LIS, target)\n            # If not found, append the target.\n            if left == len(LIS):\n                LIS.append(target)\n            else:\n                LIS[left] = target\n    \n        for num in nums:\n            insert(num)\n        return len(LIS)\n\n\n# Time:  O(nlogn)\n# Space: O(n)\nclass Solution2(object):\n    def lengthOfLIS(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        LIS = []\n        def insert(target):\n            left, right = 0, len(LIS) - 1\n            # Find the first index \"left\" which satisfies LIS[left] >= target\n            while left <= right:\n                mid = left + (right - left) // 2\n                if LIS[mid] >= target:\n                    right = mid - 1\n                else:\n                    left = mid + 1\n            # If not found, append the target.\n            if left == len(LIS):\n                LIS.append(target)\n            else:\n                LIS[left] = target\n\n        for num in nums:\n            insert(num)\n\n        return len(LIS)\n\n\n# Time:  O(nlogn)\n# Space: O(n)\n# bit, fenwick tree\nclass Solution3(object):\n    def lengthOfLIS(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        class BIT(object):  # 0-indexed.\n            def __init__(self, n, default=0, fn=lambda x, y: x+y):\n                self.__bit = [default]*(n+1)  # Extra one for dummy node.\n                self.__default = default\n                self.__fn = fn\n\n            def update(self, i, val):\n                i += 1  # Extra one for dummy node.\n                while i < len(self.__bit):\n                    self.__bit[i] = self.__fn(self.__bit[i], val)\n                    i += (i & -i)\n\n            def query(self, i):\n                i += 1  # Extra one for dummy node.\n                ret = self.__default\n                while i > 0:\n                    ret = self.__fn(ret, self.__bit[i])\n                    i -= (i & -i)\n                return ret\n    \n        lookup = {x:i for i, x in enumerate(sorted(set(nums)))}\n        bit = BIT(len(lookup), fn=max)\n        for x in nums:\n            bit.update(lookup[x], bit.query(lookup[x]-1)+1)\n        return bit.query(len(lookup)-1)\n\n\n# Range Maximum Query\nclass SegmentTree(object):  # 0-based index\n    def __init__(self, N,\n                 build_fn=lambda x, y: [y]*(2*x),\n                 query_fn=lambda x, y: y if x is None else max(x, y),  # (lambda x, y: y if x is None else min(x, y))\n                 update_fn=lambda x, y: y,\n                 default_val=0):\n        self.N = N\n        self.H = (N-1).bit_length()\n        self.query_fn = query_fn\n        self.update_fn = update_fn\n        self.default_val = default_val\n        self.tree = build_fn(N, default_val)\n        self.lazy = [None]*N\n\n    def __apply(self, x, val):\n        self.tree[x] = self.update_fn(self.tree[x], val)\n        if x < self.N:\n            self.lazy[x] = self.update_fn(self.lazy[x], val)\n\n    def update(self, L, R, h):  # Time: O(logN), Space: O(N)\n        def pull(x):\n            while x > 1:\n                x //= 2\n                self.tree[x] = self.query_fn(self.tree[x*2], self.tree[x*2+1])\n                if self.lazy[x] is not None:\n                    self.tree[x] = self.update_fn(self.tree[x], self.lazy[x])\n\n        L += self.N\n        R += self.N\n        L0, R0 = L, R\n        while L <= R:\n            if L & 1:  # is right child\n                self.__apply(L, h) \n                L += 1\n            if R & 1 == 0:  # is left child\n                self.__apply(R, h)\n                R -= 1\n            L //= 2\n            R //= 2\n        pull(L0)\n        pull(R0)\n\n    def query(self, L, R):  # Time: O(logN), Space: O(N)\n        def push(x):\n            n = 2**self.H\n            while n != 1:\n                y = x // n\n                if self.lazy[y] is not None:\n                    self.__apply(y*2, self.lazy[y])\n                    self.__apply(y*2 + 1, self.lazy[y])\n                    self.lazy[y] = None\n                n //= 2\n\n        result = None\n        if L > R:\n            return result\n\n        L += self.N\n        R += self.N\n        push(L)\n        push(R)\n        while L <= R:\n            if L & 1:  # is right child\n                result = self.query_fn(result, self.tree[L])\n                L += 1\n            if R & 1 == 0:  # is left child\n                result = self.query_fn(result, self.tree[R])\n                R -= 1\n            L //= 2\n            R //= 2\n        return result\n    \n    def __str__(self):\n        showList = []\n        for i in xrange(self.N):\n            showList.append(self.query(i, i))\n        return \",\".join(map(str, showList))\n\n\n# Time:  O(nlogn)\n# Space: O(n)\n# optimized from Solution5\nclass Solution4(object):\n    def lengthOfLIS(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        val_to_idx = {num:i for i, num in enumerate(sorted(set(nums)))}\n        st = SegmentTree(len(val_to_idx))\n        for x in nums:\n            st.update(val_to_idx[x], val_to_idx[x], st.query(0, val_to_idx[x]-1)+1 if val_to_idx[x] >= 1 else 1)\n        return st.query(0, len(val_to_idx)-1) if len(val_to_idx) >= 1 else 0\n\n\n# Time:  O(n^2)\n# Space: O(n)\n# Traditional DP solution.\nclass Solution5(object):\n    def lengthOfLIS(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: int\n        \"\"\"\n        dp = []  # dp[i]: the length of LIS ends with nums[i]\n        for i in xrange(len(nums)):\n            dp.append(1)\n            for j in xrange(i):\n                if nums[j] < nums[i]:\n                    dp[i] = max(dp[i], dp[j] + 1)\n        return max(dp) if dp else 0\n\n",
+      "sourcePath": "Python/longest-increasing-subsequence.py"
+    }
+  },
+  "seo": {
+    "title": "Longest Increasing Subsequence Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Longest Increasing Subsequence (LeetCode #300). Pattern: binary search. Time O(nlogn), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Longest Increasing Subsequence",
+      "Longest Increasing Subsequence solution",
+      "Longest Increasing Subsequence leetcode",
+      "binary-search",
+      "binary-search",
+      "fenwick-tree",
+      "segment-tree",
+      "dynamic-programming",
+      "medium"
+    ],
+    "canonicalPath": "/problems/longest-increasing-subsequence"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Longest Increasing Subsequence?",
+      "answer": "The reference solutions aim for O(nlogn) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Longest Increasing Subsequence use?",
+      "answer": "It primarily maps to binary search, fenwick tree, segment tree, and dynamic programming, within the broader topic of binary search."
+    },
+    {
+      "question": "Is Longest Increasing Subsequence good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/longest-increasing-subsequence/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the binary search, fenwick tree, segment tree, and dynamic programming approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Longest Increasing Subsequence (#300) — Medium. Pattern: binary search, fenwick tree, segment tree, and dynamic programming. Complexity: O(nlogn) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Longest Increasing Subsequence: show input structure (binary search), highlight the moving parts of the binary search, fenwick tree, segment tree, and dynamic programming approach, and annotate each step with the maintained invariant and complexity."
+}

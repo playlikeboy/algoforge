@@ -1,0 +1,85 @@
+{
+  "slug": "medium-queue-bfs-problems",
+  "path": "/explore/medium-queue-bfs-problems",
+  "h1": "Medium Queue / BFS Problems",
+  "intro": "104 medium problems that drill the Queue / BFS pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "binary-tree-zigzag-level-order-traversal",
+    "word-ladder",
+    "surrounded-regions",
+    "clone-graph",
+    "number-of-islands",
+    "course-schedule",
+    "course-schedule-ii",
+    "graph-valid-tree",
+    "zigzag-iterator",
+    "walls-and-gates",
+    "minimum-height-trees",
+    "binary-tree-vertical-order-traversal",
+    "evaluate-division",
+    "minimum-genetic-mutation",
+    "the-maze",
+    "the-maze-ii",
+    "find-bottom-left-tree-value",
+    "kill-process",
+    "closest-leaf-in-a-binary-tree",
+    "network-delay-time",
+    "open-the-lock",
+    "cheapest-flights-within-k-stops",
+    "bus-routes",
+    "reachable-nodes-in-subdivided-graph",
+    "possible-bipartition",
+    "shortest-bridge",
+    "check-completeness-of-a-binary-tree",
+    "numbers-with-same-consecutive-differences",
+    "coloring-a-border",
+    "shortest-path-in-binary-matrix",
+    "shortest-path-with-alternating-colors",
+    "parallel-courses",
+    "as-far-from-land-as-possible",
+    "tree-diameter",
+    "sequential-digits",
+    "deepest-leaves-sum",
+    "jump-game-iii",
+    "get-watched-videos-by-your-friends",
+    "diagonal-traverse-ii",
+    "check-if-a-string-is-a-valid-sequence-from-root-to-leaves-path-in-a-binary-tree",
+    "path-with-maximum-probability",
+    "find-nearest-right-node-in-binary-tree",
+    "even-odd-tree",
+    "lexicographically-smallest-string-after-applying-operations",
+    "path-with-minimum-effort",
+    "minimum-jumps-to-reach-home",
+    "correct-a-binary-tree",
+    "shortest-path-to-get-food",
+    "map-of-highest-peak",
+    "shortest-path-in-a-hidden-grid"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice medium Queue / BFS problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/queue-bfs",
+      "label": "Queue / BFS pattern"
+    },
+    {
+      "href": "/difficulty/medium",
+      "label": "All Medium problems"
+    }
+  ],
+  "seo": {
+    "title": "Medium Queue / BFS Problems | AlgoForge",
+    "description": "Practice medium Queue / BFS LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "medium Queue / BFS",
+      "Queue / BFS problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/medium-queue-bfs-problems"
+  },
+  "kind": "difficulty-pattern"
+}

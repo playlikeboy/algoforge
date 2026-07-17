@@ -1,0 +1,67 @@
+{
+  "slug": "hard-union-find-problems",
+  "path": "/explore/hard-union-find-problems",
+  "h1": "Hard Union Find Problems",
+  "intro": "32 hard problems that drill the Union Find pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "number-of-islands-ii",
+    "redundant-connection-ii",
+    "swim-in-rising-water",
+    "bricks-falling-when-hit",
+    "similar-string-groups",
+    "minimize-malware-spread",
+    "minimize-malware-spread-ii",
+    "largest-component-size-by-common-factor",
+    "optimize-water-distribution-in-a-village",
+    "detect-cycles-in-2d-grid",
+    "remove-max-number-of-edges-to-keep-graph-fully-traversable",
+    "graph-connectivity-with-threshold",
+    "rank-transform-of-a-matrix",
+    "checking-existence-of-edge-length-limited-paths",
+    "last-day-where-you-can-still-cross",
+    "gcd-sort-of-an-array",
+    "process-restricted-friend-requests",
+    "find-all-people-with-secret",
+    "groups-of-strings",
+    "check-for-contradictions-in-equations",
+    "maximum-segment-sum-after-removals",
+    "number-of-good-paths",
+    "minimum-reverse-operations",
+    "minimum-number-of-visited-cells-in-a-grid",
+    "count-valid-paths-in-a-tree",
+    "minimum-cost-walk-in-weighted-graph",
+    "check-if-the-rectangle-corner-is-reachable",
+    "count-connected-components-in-lcm-graph",
+    "maximize-spanning-tree-stability-with-upgrades",
+    "maximum-partition-factor",
+    "maximum-points-activated-with-one-addition",
+    "incremental-even-weighted-cycle-queries"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice hard Union Find problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/union-find",
+      "label": "Union Find pattern"
+    },
+    {
+      "href": "/difficulty/hard",
+      "label": "All Hard problems"
+    }
+  ],
+  "seo": {
+    "title": "Hard Union Find Problems | AlgoForge",
+    "description": "Practice hard Union Find LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "hard Union Find",
+      "Union Find problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/hard-union-find-problems"
+  },
+  "kind": "difficulty-pattern"
+}

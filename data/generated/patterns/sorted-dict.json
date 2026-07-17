@@ -1,0 +1,22 @@
+{
+  "type": "pattern",
+  "slug": "sorted-dict",
+  "name": "Sorted Dict",
+  "description": "Master the Sorted Dict coding pattern with curated problems.",
+  "problemCount": 1,
+  "problemSlugs": [
+    "depth-of-bst-given-insertion-order"
+  ],
+  "relatedTopics": [],
+  "seo": {
+    "title": "Sorted Dict Pattern — Problems & Guide | AlgoForge",
+    "description": "Learn the Sorted Dict pattern with 1 practice problems, interview tips, and visual intuition.",
+    "keywords": [
+      "Sorted Dict",
+      "Sorted Dict pattern",
+      "Sorted Dict leetcode",
+      "coding patterns"
+    ],
+    "canonicalPath": "/patterns/sorted-dict"
+  }
+}

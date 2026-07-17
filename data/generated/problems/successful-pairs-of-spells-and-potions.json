@@ -1,0 +1,158 @@
+{
+  "id": "2300",
+  "number": 2300,
+  "slug": "successful-pairs-of-spells-and-potions",
+  "title": "Successful Pairs of Spells and Potions",
+  "difficulty": "Medium",
+  "topics": [
+    "binary-search"
+  ],
+  "patterns": [
+    "binary-search"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(mlogm + nlogm)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/successful-pairs-of-spells-and-potions/",
+  "notes": [
+    "Binary Search"
+  ],
+  "relatedSlugs": [
+    "search-in-rotated-sorted-array",
+    "find-first-and-last-position-of-element-in-sorted-array",
+    "search-insert-position",
+    "sqrtx",
+    "search-a-2d-matrix",
+    "search-in-rotated-sorted-array-ii",
+    "find-minimum-in-rotated-sorted-array",
+    "find-peak-element"
+  ],
+  "prevSlug": "strong-password-checker-ii",
+  "nextSlug": "match-substring-after-replacement",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Successful Pairs of Spells and Potions?\n\n**Successful Pairs of Spells and Potions** (LeetCode #2300) is a **Medium** problem that primarily trains **binary search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **binary search**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Binary Search.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/successful-pairs-of-spells-and-potions/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Successful Pairs of Spells and Potions\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **binary search**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(mlogm + nlogm)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(mlogm + nlogm)** time and **O(1)** space.\n\n### Pattern focus: binary search\n\nUse the pattern as a checklist:\n\n- **binary search** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(mlogm + nlogm)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Successful Pairs of Spells and Potions\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for binary search — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **binary search**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **binary search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Successful Pairs of Spells and Potions** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **binary search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "successful-pairs-of-spells-and-potions.cpp",
+      "code": "// Time:  O(mlogm + nlogm)\n// Space: O(1)\n\n// binary search\nclass Solution {\npublic:\n    vector<int> successfulPairs(vector<int>& spells, vector<int>& potions, long long success) {\n        sort(begin(potions), end(potions));\n        vector<int> result;\n        for (const auto& s: spells) {\n            result.emplace_back(size(potions) - distance(cbegin(potions), lower_bound(cbegin(potions), cend(potions), ceil_divide(success, s))));\n        }\n        return result;\n    }\n\nprivate:\n    int64_t ceil_divide(int64_t a, int64_t b) {\n        return (a + b - 1) / b;\n    }\n};\n",
+      "sourcePath": "C++/successful-pairs-of-spells-and-potions.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "successful-pairs-of-spells-and-potions.py",
+      "code": "# Time:  O(mlogm + nlogm)\n# Space: O(1)\n\n# binary search\nclass Solution(object):\n    def successfulPairs(self, spells, potions, success):\n        \"\"\"\n        :type spells: List[int]\n        :type potions: List[int]\n        :type success: int\n        :rtype: List[int]\n        \"\"\"\n        def ceil_divide(a, b):\n            return (a+(b-1))//b\n            \n        potions.sort()\n        return [len(potions)-bisect.bisect_left(potions, ceil_divide(success, s)) for s in spells]\n",
+      "sourcePath": "Python/successful-pairs-of-spells-and-potions.py"
+    }
+  },
+  "seo": {
+    "title": "Successful Pairs of Spells and Potions Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Successful Pairs of Spells and Potions (LeetCode #2300). Pattern: binary search. Time O(mlogm + nlogm), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Successful Pairs of Spells and Potions",
+      "Successful Pairs of Spells and Potions solution",
+      "Successful Pairs of Spells and Potions leetcode",
+      "binary-search",
+      "binary-search",
+      "medium"
+    ],
+    "canonicalPath": "/problems/successful-pairs-of-spells-and-potions"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Successful Pairs of Spells and Potions?",
+      "answer": "The reference solutions aim for O(mlogm + nlogm) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Successful Pairs of Spells and Potions use?",
+      "answer": "It primarily maps to binary search, within the broader topic of binary search."
+    },
+    {
+      "question": "Is Successful Pairs of Spells and Potions good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/successful-pairs-of-spells-and-potions/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the binary search approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Successful Pairs of Spells and Potions (#2300) — Medium. Pattern: binary search. Complexity: O(mlogm + nlogm) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Successful Pairs of Spells and Potions: show input structure (binary search), highlight the moving parts of the binary search approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,52 @@
+{
+  "type": "pattern",
+  "slug": "tree",
+  "name": "Tree",
+  "description": "Master the Tree coding pattern with curated problems.",
+  "problemCount": 31,
+  "problemSlugs": [
+    "find-mode-in-binary-search-tree",
+    "most-frequent-subtree-sum",
+    "find-bottom-left-tree-value",
+    "logical-or-of-two-binary-grids-represented-as-quad-trees",
+    "maximum-depth-of-n-ary-tree",
+    "n-ary-tree-preorder-traversal",
+    "n-ary-tree-postorder-traversal",
+    "search-in-a-binary-search-tree",
+    "insert-into-a-binary-search-tree",
+    "validate-binary-tree-nodes",
+    "count-ways-to-build-rooms-in-an-ant-colony",
+    "root-equals-sum-of-children",
+    "count-nodes-equal-to-average-of-subtree",
+    "closest-node-to-path-in-tree",
+    "minimum-score-after-removals-on-a-tree",
+    "number-of-nodes-with-value-one",
+    "height-of-binary-tree-after-subtree-removal-queries",
+    "most-profitable-path-in-a-tree",
+    "minimum-fuel-cost-to-report-to-the-capital",
+    "cycle-length-queries-in-a-tree",
+    "count-number-of-possible-root-nodes",
+    "collect-coins-in-a-tree",
+    "make-costs-of-paths-equal-in-a-binary-tree",
+    "height-of-special-binary-tree",
+    "count-paths-that-can-form-a-palindrome-in-a-tree",
+    "minimum-edge-weight-equilibrium-queries-in-a-tree",
+    "minimum-weighted-subgraph-with-the-required-paths-ii",
+    "number-of-ways-to-assign-edge-weights-i",
+    "number-of-ways-to-assign-edge-weights-ii",
+    "find-weighted-median-node-in-tree",
+    "sum-of-perfect-square-ancestors"
+  ],
+  "relatedTopics": [],
+  "seo": {
+    "title": "Tree Pattern — Problems & Guide | AlgoForge",
+    "description": "Learn the Tree pattern with 31 practice problems, interview tips, and visual intuition.",
+    "keywords": [
+      "Tree",
+      "Tree pattern",
+      "Tree leetcode",
+      "coding patterns"
+    ],
+    "canonicalPath": "/patterns/tree"
+  }
+}

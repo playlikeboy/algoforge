@@ -1,0 +1,12 @@
+[
+  { "slug": "google", "name": "Google", "description": "Graph, systems thinking, and clean complexity analysis are heavily tested." },
+  { "slug": "meta", "name": "Meta", "description": "Product-focused coding rounds with arrays, graphs, and design hybrids." },
+  { "slug": "amazon", "name": "Amazon", "description": "Leadership principles plus OA-style arrays, trees, and greedy problems." },
+  { "slug": "apple", "name": "Apple", "description": "Solid fundamentals across trees, recursion, and low-level clarity." },
+  { "slug": "microsoft", "name": "Microsoft", "description": "Classic DSA with trees, DP, and string processing." },
+  { "slug": "netflix", "name": "Netflix", "description": "High bar on system design plus strong algorithmic coding." },
+  { "slug": "uber", "name": "Uber", "description": "Graphs, geo/interval thinking, and practical coding speed." },
+  { "slug": "linkedin", "name": "LinkedIn", "description": "Graphs, two pointers, and production-minded solutions." },
+  { "slug": "bloomberg", "name": "Bloomberg", "description": "C++/systems flavor with arrays, strings, and OOP design." },
+  { "slug": "adobe", "name": "Adobe", "description": "Classic interview set spanning DP, trees, and bit tricks." }
+]

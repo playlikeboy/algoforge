@@ -1,0 +1,36 @@
+{
+  "slug": "binary-search",
+  "name": "Binary Search Roadmap",
+  "description": "Classic search, rotated arrays, and answer-space binary search.",
+  "steps": [
+    {
+      "title": "Basics",
+      "description": "Binary Search and boundary patterns",
+      "problemSlugs": [
+        "binary-search",
+        "first-bad-version"
+      ],
+      "patternSlugs": [
+        "binary-search"
+      ]
+    },
+    {
+      "title": "Rotated & peaks",
+      "description": "Rotated sorted array family",
+      "problemSlugs": [
+        "search-in-rotated-sorted-array",
+        "find-minimum-in-rotated-sorted-array",
+        "find-peak-element"
+      ]
+    }
+  ],
+  "seo": {
+    "title": "Binary Search Roadmap | AlgoForge",
+    "description": "Learn binary search for coding interviews with curated problems.",
+    "keywords": [
+      "binary search roadmap",
+      "binary search leetcode"
+    ],
+    "canonicalPath": "/roadmaps/binary-search"
+  }
+}

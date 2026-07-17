@@ -1,0 +1,156 @@
+{
+  "id": "629",
+  "number": 629,
+  "slug": "k-inverse-pairs-array",
+  "title": "K Inverse Pairs Array",
+  "difficulty": "Hard",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dynamic-programming"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n * k)",
+  "spaceComplexity": "O(k)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/k-inverse-pairs-array/",
+  "notes": [],
+  "relatedSlugs": [
+    "regular-expression-matching",
+    "edit-distance",
+    "scramble-string",
+    "interleaving-string",
+    "distinct-subsequences",
+    "best-time-to-buy-and-sell-stock-iii",
+    "palindrome-partitioning-ii",
+    "dungeon-game"
+  ],
+  "prevSlug": "maximum-product-of-three-numbers",
+  "nextSlug": "course-schedule-iii",
+  "estimatedMinutes": 60,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is K Inverse Pairs Array?\n\n**K Inverse Pairs Array** (LeetCode #629) is a **Hard** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/k-inverse-pairs-array/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for K Inverse Pairs Array\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n * k)) and **space** (O(k)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n * k)** time and **O(k)** space.\n\n### Pattern focus: dynamic programming\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n * k)** |\n| Space | **O(k)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on K Inverse Pairs Array\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **K Inverse Pairs Array** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "k-inverse-pairs-array.cpp",
+      "code": "// Time:  O(n * k)\n// Space: O(k)\n\n// knapsack dp, combinatorics, sliding window, two pointers\nclass Solution {\npublic:\n    int kInversePairs(int n, int k) {\n        static const int MOD = 1e9 + 7;\n\n        const auto& addmod = [&](const auto& a, const auto& b) {\n            return (a + b) % MOD;\n        };\n        const auto& submod = [&](const auto& a, const auto& b) {\n            return ((a - b) % MOD + MOD) % MOD;\n        };\n\n        vector<int> dp = {1};\n        for (int i = 0; i < n; ++i) {\n            vector<int> new_dp(min(static_cast<int>(size(dp)) + ((i + 1) - 1), k + 1));\n            for (int j = 0; j < size(new_dp); ++j) {\n                new_dp[j] = j < size(dp) ? dp[j] : 0;\n                if (j - 1 >= 0) {\n                    new_dp[j] = addmod(new_dp[j], new_dp[j - 1]);\n                }\n                if (j - (i + 1) >= 0) {\n                    new_dp[j] = submod(new_dp[j], dp[j - (i + 1)]);\n                }\n            }\n            dp = move(new_dp);\n        }\n        return k < size(dp) ? dp[k] : 0;\n    }\n};\n\n// Time:  O(n * k)\n// Space: O(k)\n// knapsack dp, combinatorics, sliding window, two pointers\nclass Solution2 {\npublic:\n    int kInversePairs(int n, int k) {\n        static const int MOD = 1e9 + 7;\n\n        const auto& addmod = [&](const auto& a, const auto& b) {\n            return (a + b) % MOD;\n        };\n        const auto& submod = [&](const auto& a, const auto& b) {\n            return ((a - b) % MOD + MOD) % MOD;\n        };\n\n        vector<int> dp(k + 1);\n        dp[0] = 1;\n        for (int i = 0; i < n; ++i) {\n            vector<int> new_dp(size(dp));\n            for (int j = 0; j < size(dp); ++j) {\n                new_dp[j] = dp[j];\n                if (j - 1 >= 0) {\n                    new_dp[j] = addmod(new_dp[j], new_dp[j - 1]);\n                }\n                if (j - (i + 1) >= 0) {\n                    new_dp[j] = submod(new_dp[j], dp[j - (i + 1)]);\n                }\n            }\n            dp = move(new_dp);\n        }\n        return dp.back();\n    }\n};\n\n// Time:  O(n * k)\n// Space: O(k)\n// knapsack dp, combinatorics, sliding window, two pointers\nclass Solution3 {\npublic:\n    int kInversePairs(int n, int k) {\n        static const int MOD = 1e9 + 7;\n\n        const auto& addmod = [&](const auto& a, const auto& b) {\n            return (a + b) % MOD;\n        };\n        const auto& submod = [&](const auto& a, const auto& b) {\n            return ((a - b) % MOD + MOD) % MOD;\n        };\n\n        vector<int> dp(k + 1);\n        dp[0] = 1;\n        for (int i = 0; i < n; ++i) {\n            vector<int> new_dp(size(dp));\n            for (int j = 0, curr = 0; j < size(dp); ++j) {\n                curr = addmod(curr, dp[j]);\n                if (j - (i + 1) >= 0) {\n                    curr = submod(curr, dp[j - (i + 1)]);\n                }\n                new_dp[j] = curr;\n            }\n            dp = move(new_dp);\n        }\n        return dp.back();\n    }\n};\n",
+      "sourcePath": "C++/k-inverse-pairs-array.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "k-inverse-pairs-array.py",
+      "code": "# Time:  O(n * k)\n# Space: O(k)\n\n# knapsack dp, combinatorics, sliding window, two pointers\nclass Solution(object):\n    def kInversePairs(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        MOD = 10**9+7\n        dp = [1]\n        for i in xrange(n):\n            new_dp = [0]*min(len(dp)+((i+1)-1), k+1)\n            for j in xrange(len(new_dp)):\n                new_dp[j] = dp[j] if j < len(dp) else 0\n                if j-1 >= 0:\n                    new_dp[j] = (new_dp[j]+new_dp[j-1])%MOD\n                if j-(i+1) >= 0:\n                    new_dp[j] = (new_dp[j]-dp[j-(i+1)])%MOD\n            dp = new_dp\n        return dp[k] if k < len(dp) else 0\n\n\n# Time:  O(n * k)\n# Space: O(k)\n# knapsack dp, combinatorics, sliding window, two pointers\nclass Solution2(object):\n    def kInversePairs(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        MOD = 10**9+7\n        dp = [0]*(k+1)\n        dp[0] = 1\n        for i in xrange(n):\n            new_dp = [0]*len(dp)\n            for j in xrange(len(dp)):\n                new_dp[j] = dp[j]\n                if j-1 >= 0:\n                    new_dp[j] = (new_dp[j]+new_dp[j-1])%MOD\n                if j-(i+1) >= 0:\n                    new_dp[j] = (new_dp[j]-dp[j-(i+1)])%MOD\n            dp = new_dp\n        return dp[-1]\n\n\n# Time:  O(n * k)\n# Space: O(k)\n# knapsack dp, combinatorics, sliding window, two pointers\nclass Solution3(object):\n    def kInversePairs(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        MOD = 10**9+7\n        dp = [0]*(k+1)\n        dp[0] = 1\n        for i in xrange(n):\n            new_dp = [0]*len(dp)\n            curr = 0\n            for j in xrange(len(dp)):\n                curr = (curr+dp[j])%MOD\n                if j-(i+1) >= 0:\n                    curr = (curr-dp[j-(i+1)])%MOD\n                new_dp[j] = curr\n            dp = new_dp\n        return dp[-1]\n\n\n# Time:  O(n^2 * k)\n# Space: O(k)\n# knapsack dp, combinatorics\nclass Solution_TLE(object):\n    def kInversePairs(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        MOD = 10**9+7\n        dp = [0]*(k+1)\n        dp[0] = 1\n        for i in xrange(n):\n            dp = [reduce(lambda total, k: (total+dp[j-k])%MOD, xrange(min(i+1, j+1)), 0) for j in xrange(len(dp))]\n        return dp[-1]%MOD\n\n\nclass Solution_ConstructPermutation(object):\n    def kInversePairs(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        MOD = 10**9+7\n        dp = [[] for _ in xrange(k+1)]\n        dp[0].append([])\n        for i in xrange(n):\n            dp = [[[x+int(x >= i-k) for x in p]+[i-k] for k in xrange(min(i+1, j+1)) for p in dp[j-k]] for j in xrange(len(dp))]\n        assert(all(sum(int(p[j] > p[i]) for i in xrange(n) for j in xrange(i)) == len(dp)-1) for p in dp[-1])\n        return len(dp[-1])%MOD\n\n\nclass Solution_ConstructPermutation2(object):\n    def kInversePairs(self, n, k):\n        \"\"\"\n        :type n: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        MOD = 10**9+7\n        dp = [[] for _ in xrange(k+1)]\n        dp[0].append([])\n        for i in xrange(n):\n            dp = [[p[:len(p)-k]+[i]+p[len(p)-k:] for k in xrange(min(i+1, j+1)) for p in dp[j-k]] for j in xrange(len(dp))]\n        assert(all(sum(int(p[j] > p[i]) for i in xrange(n) for j in xrange(i)) == len(dp)-1) for p in dp[-1])\n        return len(dp[-1])%MOD\n",
+      "sourcePath": "Python/k-inverse-pairs-array.py"
+    }
+  },
+  "seo": {
+    "title": "K Inverse Pairs Array Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for K Inverse Pairs Array (LeetCode #629). Pattern: dynamic programming. Time O(n * k), space O(k). Multi-language solutions and interview tips.",
+    "keywords": [
+      "K Inverse Pairs Array",
+      "K Inverse Pairs Array solution",
+      "K Inverse Pairs Array leetcode",
+      "dynamic-programming",
+      "dynamic-programming",
+      "hard"
+    ],
+    "canonicalPath": "/problems/k-inverse-pairs-array"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of K Inverse Pairs Array?",
+      "answer": "The reference solutions aim for O(n * k) time and O(k) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does K Inverse Pairs Array use?",
+      "answer": "It primarily maps to dynamic programming, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is K Inverse Pairs Array good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/k-inverse-pairs-array/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "K Inverse Pairs Array (#629) — Hard. Pattern: dynamic programming. Complexity: O(n * k) time / O(k) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for K Inverse Pairs Array: show input structure (dynamic programming), highlight the moving parts of the dynamic programming approach, and annotate each step with the maintained invariant and complexity."
+}

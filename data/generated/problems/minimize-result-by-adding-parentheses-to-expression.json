@@ -1,0 +1,155 @@
+{
+  "id": "2232",
+  "number": 2232,
+  "slug": "minimize-result-by-adding-parentheses-to-expression",
+  "title": "Minimize Result by Adding Parentheses to Expression",
+  "difficulty": "Medium",
+  "topics": [
+    "string"
+  ],
+  "patterns": [],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n^2)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/minimize-result-by-adding-parentheses-to-expression/",
+  "notes": [
+    "Brute Force"
+  ],
+  "relatedSlugs": [
+    "longest-palindromic-substring",
+    "multiply-strings",
+    "reverse-words-in-a-string",
+    "one-edit-distance",
+    "reverse-words-in-a-string-ii",
+    "encode-and-decode-strings",
+    "additive-number",
+    "validate-ip-address"
+  ],
+  "prevSlug": "largest-number-after-digit-swaps-by-parity",
+  "nextSlug": "maximum-product-after-k-increments",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Minimize Result by Adding Parentheses to Expression?\n\n**Minimize Result by Adding Parentheses to Expression** (LeetCode #2232) is a **Medium** problem that primarily trains **string**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Brute Force.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/minimize-result-by-adding-parentheses-to-expression/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Minimize Result by Adding Parentheses to Expression\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n^2)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n^2)** time and **O(1)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n^2)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Minimize Result by Adding Parentheses to Expression\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **string**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Minimize Result by Adding Parentheses to Expression** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **string**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "minimize-result-by-adding-parentheses-to-expression.cpp",
+      "code": "// Time:  O(n^2)\n// Space: O(1)\n\n// brute force\nclass Solution {\npublic:\n    string minimizeResult(string expression) {\n        const auto& stoi = [](const auto& s, int i, int j) {\n            if (i == j) {\n                return 1;\n            }\n            int result = 0;\n            for (int k = i; k < j; ++k) {\n                result = result * 10 + (s[k] - '0');\n            }\n            return result;\n        };\n        const auto& pos = expression.find('+');\n        int left = stoi(expression, 0, pos), right = stoi(expression, pos + 1, size(expression));\n        int min_val = numeric_limits<int>::max();\n        pair<int, int> best;\n        const int base2_init = pow(10, size(expression) - (pos + 1) - 1);\n        for (int i = 0, base1 = pow(10, pos); i < pos; ++i, base1 /= 10) {\n            for (int j = pos + 1, base2 = base2_init; j < size(expression); ++j, base2 /= 10) {\n                const int a = left / base1, b = left % base1;\n                const int c = right / base2, d = right % base2;\n                const auto& val = max(a, 1) * (b + c) * max(d, 1);\n                if (val < min_val) {\n                    min_val = val;\n                    best = {i, j};\n                }\n            }\n        }\n        string result;\n        for (int i = 0; i < size(expression); ++i) {\n            if (i == best.first) {\n                result.push_back('(');\n            }\n            result.push_back(expression[i]);\n            if (i == best.second) {\n                result.push_back(')');\n            }\n        }\n        return result;\n    }\n};\n\n// Time:  O(n^2)\n// Space: O(n)\n// brute force\nclass Solution2 {\npublic:\n    string minimizeResult(string expression) {\n        const auto& pos = expression.find('+');\n        int left = stoi(expression.substr(0, pos)), right = stoi(expression.substr(pos + 1));  // Space: O(n)\n        int min_val = numeric_limits<int>::max();\n        pair<int, int> best;\n        const int base2_init = pow(10, size(expression) - (pos + 1) - 1);\n        for (int i = 0, base1 = pow(10, pos); i < pos; ++i, base1 /= 10) {\n            for (int j = pos + 1, base2 = base2_init; j < size(expression); ++j, base2 /= 10) {\n                const int a = left / base1, b = left % base1;\n                const int c = right / base2, d = right % base2;\n                const auto& val = max(a, 1) * (b + c) * max(d, 1);\n                if (val < min_val) {\n                    min_val = val;\n                    best = {i, j};\n                }\n            }\n        }\n        string result = expression.substr(0, best.first);  // Space: O(n)\n        result += \"(\";\n        result += expression.substr(best.first, best.second + 1 - best.first);  // Space: O(n)\n        result += \")\";\n        result += expression.substr(best.second + 1);  // Space: O(n)\n        return result;\n    }\n};\n\n// Time:  O(n^3)\n// Space: O(n)\n// brute force\nclass Solution3 {\npublic:\n    string minimizeResult(string expression) {\n        const auto& pos = expression.find('+');\n        int min_val = numeric_limits<int>::max();\n        pair<int, int> best;\n        for (int i = 0; i < pos; ++i) {\n            for (int j = pos + 1; j < size(expression); ++j) {\n                const auto& val = (i != 0 ? stoi(expression.substr(0, i)) : 1) *\n                                  (stoi(expression.substr(i, pos - i)) + stoi(expression.substr(pos + 1, j + 1 - (pos + 1)))) *\n                                  (j + 1 != size(expression) ? stoi(expression.substr(j + 1)) : 1);  // Space: O(n)\n                if (val < min_val) {\n                    min_val = val;\n                    best = {i, j};\n                }\n            }\n        }\n        string result = expression.substr(0, best.first);  // Space: O(n)\n        result += \"(\";\n        result += expression.substr(best.first, best.second + 1 - best.first);  // Space: O(n)\n        result += \")\";\n        result += expression.substr(best.second + 1);  // Space: O(n)\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/minimize-result-by-adding-parentheses-to-expression.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "minimize-result-by-adding-parentheses-to-expression.py",
+      "code": "# Time:  O(n^2)\n# Space: O(1)\n\nimport itertools\n\n\n# brute force\nclass Solution(object):\n    def minimizeResult(self, expression):\n        \"\"\"\n        :type expression: str\n        :rtype: str\n        \"\"\"\n        def stoi(s, i, j):\n            result = 0\n            for k in xrange(i, j):\n                result = result*10+(ord(s[k])-ord('0'))\n            return result\n\n        best = None\n        min_val = float(\"inf\")\n        pos = expression.index('+')\n        left, right = stoi(expression, 0, pos), stoi(expression, pos+1, len(expression))\n        base1, base2_init = 10**pos, 10**(len(expression)-(pos+1)-1)\n        for i in xrange(pos):\n            base2 = base2_init\n            for j in xrange(pos+1, len(expression)):\n                a, b = divmod(left, base1)\n                c, d = divmod(right, base2)\n                val = max(a, 1)*(b+c)*max(d, 1)\n                if val < min_val:\n                    min_val = val\n                    best = (i, j)\n                base2 //= 10\n            base1 //= 10\n        return \"\".join(itertools.chain((expression[i] for i in xrange(best[0])),\n                                       '(', (expression[i] for i in xrange(best[0], best[1]+1)), ')',\n                                       (expression[i] for i in xrange(best[1]+1, len(expression)))))\n\n\n# Time:  O(n^2)\n# Space: O(n)\n# brute force\nclass Solution2(object):\n    def minimizeResult(self, expression):\n        \"\"\"\n        :type expression: str\n        :rtype: str\n        \"\"\"\n        best = None\n        min_val = float(\"inf\")\n        pos = expression.index('+')\n        left, right = int(expression[0:pos]), int(expression[pos+1:])  # Space: O(n)\n        base1, base2_init = 10**pos, 10**(len(expression)-(pos+1)-1)\n        for i in xrange(pos):\n            base2 = base2_init\n            for j in xrange(pos+1, len(expression)):\n                a, b = divmod(left, base1)\n                c, d = divmod(right, base2)\n                val = max(a, 1)*(b+c)*max(d, 1)\n                if val < min_val:\n                    min_val = val\n                    best = (i, j)\n                base2 //= 10\n            base1 //= 10\n        return \"\".join([expression[:best[0]], '(', expression[best[0]:best[1]+1], ')', expression[best[1]+1:]])  # Space: O(n)\n\n    \n# Time:  O(n^3)\n# Space: O(n)\n# brute force\nclass Solution3(object):\n    def minimizeResult(self, expression):\n        \"\"\"\n        :type expression: str\n        :rtype: str\n        \"\"\"\n        best = None\n        min_val = float(\"inf\")\n        pos = expression.index('+')\n        for i in xrange(pos):\n            for j in xrange(pos+1, len(expression)):\n                val = (int(expression[:i] or \"1\")*\n                       (int(expression[i:pos])+int(expression[pos+1:j+1]))*\n                       int(expression[j+1:] or \"1\"))  # Space: O(n)\n                if val < min_val:\n                    min_val = val\n                    best = (i, j)\n        return \"\".join([expression[:best[0]], '(', expression[best[0]:best[1]+1], ')', expression[best[1]+1:]])  # Space: O(n)\n",
+      "sourcePath": "Python/minimize-result-by-adding-parentheses-to-expression.py"
+    }
+  },
+  "seo": {
+    "title": "Minimize Result by Adding Parentheses to Expression Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Minimize Result by Adding Parentheses to Expression (LeetCode #2232). Pattern: algorithms. Time O(n^2), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Minimize Result by Adding Parentheses to Expression",
+      "Minimize Result by Adding Parentheses to Expression solution",
+      "Minimize Result by Adding Parentheses to Expression leetcode",
+      "string",
+      "medium"
+    ],
+    "canonicalPath": "/problems/minimize-result-by-adding-parentheses-to-expression"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Minimize Result by Adding Parentheses to Expression?",
+      "answer": "The reference solutions aim for O(n^2) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Minimize Result by Adding Parentheses to Expression use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of string."
+    },
+    {
+      "question": "Is Minimize Result by Adding Parentheses to Expression good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/minimize-result-by-adding-parentheses-to-expression/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Minimize Result by Adding Parentheses to Expression (#2232) — Medium. Pattern: general problem-solving. Complexity: O(n^2) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Minimize Result by Adding Parentheses to Expression: show input structure (string), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

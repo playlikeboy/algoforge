@@ -1,0 +1,162 @@
+{
+  "id": "3481",
+  "number": 3481,
+  "slug": "apply-substitutions",
+  "title": "Apply Substitutions",
+  "difficulty": "Medium",
+  "topics": [
+    "graph"
+  ],
+  "patterns": [
+    "graph",
+    "topological-sort"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(r * 2^r)",
+  "spaceComplexity": "O(r * 2^r)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/apply-substitutions/",
+  "notes": [
+    "Graph",
+    "Topological Sort",
+    "Memoization"
+  ],
+  "relatedSlugs": [
+    "build-a-matrix-with-conditions",
+    "frequencies-of-shortest-supersequences",
+    "add-edges-to-make-degrees-of-all-nodes-even",
+    "minimum-runes-to-add-to-cast-spell",
+    "minimum-time-to-break-locks-ii",
+    "minimum-cost-of-a-path-with-special-roads",
+    "find-champion-ii",
+    "count-almost-equal-pairs-i"
+  ],
+  "prevSlug": "maximize-subarrays-after-removing-one-conflicting-pair",
+  "nextSlug": "analyze-organization-hierarchy",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Apply Substitutions?\n\n**Apply Substitutions** (LeetCode #3481) is a **Medium** problem that primarily trains **graph**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **graph and topological sort**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Graph, Topological Sort, Memoization.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/apply-substitutions/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Apply Substitutions\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **graph and topological sort**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(r * 2^r)) and **space** (O(r * 2^r)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(r * 2^r)** time and **O(r * 2^r)** space.\n\n### Pattern focus: graph and topological sort\n\nUse the pattern as a checklist:\n\n- **graph** — confirm the invariant holds after each step\n- **topological sort** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(r * 2^r)** |\n| Space | **O(r * 2^r)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Apply Substitutions\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for graph and topological sort — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **graph and topological sort**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **graph**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Apply Substitutions** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **graph**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "apply-substitutions.cpp",
+      "code": "// Time:  O(r * 2^r)\n// Space: O(r * 2^r)\n\n// topological sort\nclass Solution {\npublic:\n    string applySubstitutions(vector<vector<string>>& replacements, string text) {\n        unordered_map<string, string> lookup;\n        const auto& find_adj = [&](const auto& s) {\n            unordered_set<string> result;\n            for (int i = 0; i < size(s); ++i) {\n                if (s[i] != '%') {\n                    continue;\n                }\n                int j = i + 1;\n                for (; j < size(s); ++j) {\n                    if (s[j] == '%') {\n                        break;\n                    }\n                }\n                result.emplace(s.substr(i + 1, j - (i + 1)));\n                i = j;\n            }\n            return result;\n        };\n\n        const auto& replace = [&](const auto& s) {\n            string result;\n            for (int i = 0; i < size(s); ++i) {\n                if (s[i] != '%') {\n                    result.push_back(s[i]);\n                    continue;\n                }\n                int j = i + 1;\n                for (; j < size(s); ++j) {\n                    if (s[j] == '%') {\n                        break;\n                    }\n                }\n                result += lookup[s.substr(i + 1, j - (i + 1))];\n                i = j;\n            }\n            return result;\n        };\n\n        const auto& topological_sort = [&]() {\n            unordered_map<string, unordered_set<string>> adj;\n            unordered_map<string, int> in_degree;\n            for (const auto& x : replacements) {\n                for (const auto& v : find_adj(x[1])) {\n                    adj[v].emplace(x[0]);\n                    ++in_degree[x[0]];\n                }\n            }\n            vector<string> q;\n            for (const auto& x : replacements) {\n                if (!in_degree.count(x[0])) {\n                    q.emplace_back(x[0]);\n                }\n            }\n            while (!empty(q)) {\n                vector<string> new_q;\n                for (const auto& u : q) {\n                    lookup[u] = replace(lookup[u]);\n                    for (const auto& v : adj[u]) {\n                        --in_degree[v];\n                        if (in_degree[v]) {\n                            continue;\n                        }\n                        new_q.emplace_back(v);\n                    }\n                }\n                q = move(new_q);\n            }\n        };\n    \n        for (const auto& x : replacements) {\n            lookup[x[0]] = x[1];\n        }\n        topological_sort();\n        return replace(text);\n    }\n};\n\n// Time:  O(r * 2^r)\n// Space: O(r * 2^r)\n// memoization\nclass Solution2 {\npublic:\n    string applySubstitutions(vector<vector<string>>& replacements, string text) {\n        unordered_map<string, string> lookup, memo;\n        const function<string (const string&)> replace = [&](const auto& s) {\n            if (!memo.count(s)) {\n                string result;\n                for (int i = 0; i < size(s); ++i) {\n                    if (s[i] != '%') {\n                        result.push_back(s[i]);\n                        continue;\n                    }\n                    int j = i + 1;\n                    for (; j < size(s); ++j) {\n                        if (s[j] == '%') {\n                            break;\n                        }\n                    }\n                    result += replace(lookup[s.substr(i + 1, j - (i + 1))]);\n                    i = j;\n                }\n                memo[s] = result;\n            }\n            return memo[s];\n        };\n\n        for (const auto& x : replacements) {\n            lookup[x[0]] = x[1];\n        }\n        return replace(text);\n    }\n};\n",
+      "sourcePath": "C++/apply-substitutions.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "apply-substitutions.py",
+      "code": "# Time:  O(r * 2^r)\n# Space: O(r * 2^r)\n\nimport collections\n\n\n# topological sort\nclass Solution(object):\n    def applySubstitutions(self, replacements, text):\n        \"\"\"\n        :type replacements: List[List[str]]\n        :type text: str\n        :rtype: str\n        \"\"\"\n        def find_adj(s):\n            result = set()\n            i = 0\n            while i < len(s):\n                if s[i] != '%':\n                    i += 1\n                    continue\n                j = next(j for j in xrange(i+1, len(s)) if s[j] == '%')\n                result.add(s[i+1:j])\n                i = j+1\n            return result\n        \n        def replace(s):\n            result = []\n            i = 0\n            while i < len(s):\n                if s[i] != '%':\n                    result.append(s[i])\n                    i += 1\n                    continue\n                j = next(j for j in xrange(i+1, len(s)) if s[j] == '%')\n                result.append(lookup[s[i+1:j]])\n                i = j+1\n            return \"\".join(result)\n        \n        def topological_sort():\n            adj = collections.defaultdict(set)\n            in_degree = collections.defaultdict(int)\n            for u, s in replacements:\n                for v in find_adj(s):\n                    adj[v].add(u)\n                    in_degree[u] += 1\n            result = []\n            q = [u for u, _ in replacements if not in_degree[u]]\n            while q:\n                new_q = []\n                for u in q:\n                    lookup[u] = replace(lookup[u])\n                    for v in adj[u]:\n                        in_degree[v] -= 1\n                        if in_degree[v]:\n                            continue\n                        new_q.append(v)\n                q = new_q\n            return result\n\n        lookup = {k:v for k, v in replacements}\n        topological_sort()\n        return replace(text)\n\n\n# Time:  O(r * 2^r)\n# Space: O(r * 2^r)\n# memoization\nclass Solution2(object):\n    def applySubstitutions(self, replacements, text):\n        \"\"\"\n        :type replacements: List[List[str]]\n        :type text: str\n        :rtype: str\n        \"\"\"\n        lookup = {k:v for k, v in replacements}\n        memo = {}\n        def replace(s):\n            if s not in memo:\n                result = []\n                i = 0\n                while i < len(s):\n                    if s[i] != '%':\n                        result.append(s[i])\n                        i += 1\n                        continue\n                    j = next(j for j in xrange(i+1, len(s)) if s[j] == '%')\n                    result.append(replace(lookup[s[i+1:j]]))\n                    i = j+1\n                memo[s] = \"\".join(result)\n            return memo[s]\n\n        return replace(text)\n",
+      "sourcePath": "Python/apply-substitutions.py"
+    }
+  },
+  "seo": {
+    "title": "Apply Substitutions Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Apply Substitutions (LeetCode #3481). Pattern: graph. Time O(r * 2^r), space O(r * 2^r). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Apply Substitutions",
+      "Apply Substitutions solution",
+      "Apply Substitutions leetcode",
+      "graph",
+      "graph",
+      "topological-sort",
+      "medium"
+    ],
+    "canonicalPath": "/problems/apply-substitutions"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Apply Substitutions?",
+      "answer": "The reference solutions aim for O(r * 2^r) time and O(r * 2^r) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Apply Substitutions use?",
+      "answer": "It primarily maps to graph and topological sort, within the broader topic of graph."
+    },
+    {
+      "question": "Is Apply Substitutions good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/apply-substitutions/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the graph and topological sort approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Apply Substitutions (#3481) — Medium. Pattern: graph and topological sort. Complexity: O(r * 2^r) time / O(r * 2^r) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Apply Substitutions: show input structure (graph), highlight the moving parts of the graph and topological sort approach, and annotate each step with the maintained invariant and complexity."
+}

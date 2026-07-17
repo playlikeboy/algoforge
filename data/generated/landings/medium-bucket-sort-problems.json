@@ -1,0 +1,39 @@
+{
+  "slug": "medium-bucket-sort-problems",
+  "path": "/explore/medium-bucket-sort-problems",
+  "h1": "Medium Bucket Sort Problems",
+  "intro": "4 medium problems that drill the Bucket Sort pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "top-k-frequent-elements",
+    "top-k-frequent-words",
+    "count-number-of-rectangles-containing-each-point",
+    "find-the-safest-path-in-a-grid"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice medium Bucket Sort problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/bucket-sort",
+      "label": "Bucket Sort pattern"
+    },
+    {
+      "href": "/difficulty/medium",
+      "label": "All Medium problems"
+    }
+  ],
+  "seo": {
+    "title": "Medium Bucket Sort Problems | AlgoForge",
+    "description": "Practice medium Bucket Sort LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "medium Bucket Sort",
+      "Bucket Sort problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/medium-bucket-sort-problems"
+  },
+  "kind": "difficulty-pattern"
+}

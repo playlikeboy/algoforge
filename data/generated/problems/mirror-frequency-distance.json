@@ -1,0 +1,158 @@
+{
+  "id": "3889",
+  "number": 3889,
+  "slug": "mirror-frequency-distance",
+  "title": "Mirror Frequency Distance",
+  "difficulty": "Medium",
+  "topics": [
+    "hash-table"
+  ],
+  "patterns": [
+    "hash-map"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n + 36)",
+  "spaceComplexity": "O(36)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/mirror-frequency-distance/",
+  "notes": [
+    "Freq Table"
+  ],
+  "relatedSlugs": [
+    "longest-substring-without-repeating-characters",
+    "group-anagrams",
+    "repeated-dna-sequences",
+    "shortest-word-distance-ii",
+    "maximum-size-subarray-sum-equals-k",
+    "4sum-ii",
+    "matchsticks-to-square",
+    "continuous-subarray-sum"
+  ],
+  "prevSlug": "minimum-operations-to-make-all-grid-elements-equal",
+  "nextSlug": "integers-with-multiple-sum-of-two-cubes",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Mirror Frequency Distance?\n\n**Mirror Frequency Distance** (LeetCode #3889) is a **Medium** problem that primarily trains **hash table**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **hash map**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Freq Table.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/mirror-frequency-distance/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Mirror Frequency Distance\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **hash map**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n + 36)) and **space** (O(36)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n + 36)** time and **O(36)** space.\n\n### Pattern focus: hash map\n\nUse the pattern as a checklist:\n\n- **hash map** — confirm the invariant holds after each step\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n + 36)** |\n| Space | **O(36)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Mirror Frequency Distance\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for hash map — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal hash map solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `mirror-frequency-distance`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **hash map**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **hash table**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Mirror Frequency Distance** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **hash table**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "mirror-frequency-distance.cpp",
+      "code": "// Time:  O(n + 36)\n// Space: O(36)\n\n// freq table\nclass Solution {\npublic:\n    int mirrorFrequency(string s) {\n        vector<int> cnt1(10), cnt2(26);\n        for (const auto& x : s) {\n            if (isdigit(x)) {\n                ++cnt1[x - '0'];\n            } else {\n                ++cnt2[x - 'a'];\n            }\n        }\n        int result = 0;\n        for (int i = 0; 2 * i < size(cnt1); ++i) {\n            result += abs(cnt1[i] - cnt1[size(cnt1) - 1 - i]);\n        }\n        for (int i = 0; 2 * i < size(cnt2); ++i) {\n            result += abs(cnt2[i] - cnt2[size(cnt2) - 1 - i]);\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/mirror-frequency-distance.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "mirror-frequency-distance.py",
+      "code": "# Time:  O(n + 36)\n# Space: O(36)\n\n# freq table\nclass Solution(object):\n    def mirrorFrequency(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        \n        cnt1, cnt2 = [0]*10, [0]*26\n        for x in s:\n            if x.isdigit():\n                cnt1[ord(x)-ord('0')] += 1\n            else:\n                cnt2[ord(x)-ord('a')] += 1\n        return sum(abs(cnt1[i]-cnt1[~i]) for i in xrange(len(cnt1)//2))+sum(abs(cnt2[i]-cnt2[~i]) for i in xrange(len(cnt2)//2))\n",
+      "sourcePath": "Python/mirror-frequency-distance.py"
+    }
+  },
+  "seo": {
+    "title": "Mirror Frequency Distance Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Mirror Frequency Distance (LeetCode #3889). Pattern: hash map. Time O(n + 36), space O(36). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Mirror Frequency Distance",
+      "Mirror Frequency Distance solution",
+      "Mirror Frequency Distance leetcode",
+      "hash-table",
+      "hash-map",
+      "medium"
+    ],
+    "canonicalPath": "/problems/mirror-frequency-distance"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Mirror Frequency Distance?",
+      "answer": "The reference solutions aim for O(n + 36) time and O(36) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Mirror Frequency Distance use?",
+      "answer": "It primarily maps to hash map, within the broader topic of hash table."
+    },
+    {
+      "question": "Is Mirror Frequency Distance good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/mirror-frequency-distance/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the hash map approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Mirror Frequency Distance (#3889) — Medium. Pattern: hash map. Complexity: O(n + 36) time / O(36) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Mirror Frequency Distance: show input structure (hash table), highlight the moving parts of the hash map approach, and annotate each step with the maintained invariant and complexity."
+}

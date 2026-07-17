@@ -1,0 +1,165 @@
+{
+  "id": "307",
+  "number": 307,
+  "slug": "range-sum-query-mutable",
+  "title": "Range Sum Query - Mutable",
+  "difficulty": "Medium",
+  "topics": [
+    "tree"
+  ],
+  "patterns": [
+    "dfs-backtracking",
+    "segment-tree",
+    "fenwick-tree"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "ctor: O(n), update: O(logn), query: O(logn)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/range-sum-query-mutable/",
+  "notes": [
+    "DFS",
+    "Segment Tree",
+    "BIT",
+    "Fenwick Tree"
+  ],
+  "relatedSlugs": [
+    "shortest-path-in-a-weighted-tree",
+    "palindromic-path-queries-in-a-tree",
+    "find-duplicate-subtrees",
+    "maximum-width-of-binary-tree",
+    "binary-tree-pruning",
+    "smallest-subtree-with-all-the-deepest-nodes",
+    "range-sum-of-bst",
+    "flip-equivalent-binary-trees"
+  ],
+  "prevSlug": "additive-number",
+  "nextSlug": "range-sum-query-2d-mutable",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Range Sum Query - Mutable?\n\n**Range Sum Query - Mutable** (LeetCode #307) is a **Medium** problem that primarily trains **tree**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dfs backtracking, segment tree, and fenwick tree**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: DFS, Segment Tree, BIT, Fenwick Tree.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/range-sum-query-mutable/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Range Sum Query - Mutable\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dfs backtracking, segment tree, and fenwick tree**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (ctor: O(n), update: O(logn), query: O(logn)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **ctor: O(n), update: O(logn), query: O(logn)** time and **O(n)** space.\n\n### Pattern focus: dfs backtracking, segment tree, and fenwick tree\n\nUse the pattern as a checklist:\n\n- **dfs backtracking** — confirm the invariant holds after each step\n- **segment tree** — confirm the invariant holds after each step\n- **fenwick tree** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **ctor: O(n), update: O(logn), query: O(logn)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Range Sum Query - Mutable\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dfs backtracking, segment tree, and fenwick tree — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dfs backtracking, segment tree, and fenwick tree**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **tree**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Range Sum Query - Mutable** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **tree**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "range-sum-query-mutable.cpp",
+      "code": "// Time:  ctor:   O(n),\n//        update: O(logn),\n//        query:  O(logn)\n// Space: O(n)\n\n// Binary Indexed Tree (BIT) solution.\nclass NumArray {\npublic:\n    NumArray(vector<int> &nums) : nums_(nums) {\n        bit_ = vector<int>(nums_.size() + 1);\n        for (int i = 1; i < bit_.size(); ++i) {\n            bit_[i] = nums[i - 1] + bit_[i - 1];\n        }\n        for (int i = bit_.size() - 1; i >= 1; --i) {\n            int last_i = i - lower_bit(i);\n            bit_[i] -= bit_[last_i];\n        }\n    }\n\n    void update(int i, int val) {\n        if (val - nums_[i]) {\n            add(i, val - nums_[i]);\n            nums_[i] = val;\n        }\n    }\n\n    int sumRange(int i, int j) {\n        return sum(j) - sum(i - 1);\n    }\n\nprivate:\n    vector<int> &nums_;\n    vector<int> bit_;\n\n    int sum(int i) {\n        ++i;\n        int sum = 0;\n        for (; i > 0; i -= lower_bit(i)) {\n            sum += bit_[i];\n        }\n        return sum;\n    }\n\n    void add(int i, int val) {\n        ++i;\n        for (; i <= nums_.size(); i += lower_bit(i)) {\n            bit_[i] += val;\n        }\n    }\n\n    inline int lower_bit(int i) {\n        return i & -i;\n    }\n};\n\n// Time:  ctor:   O(n),\n//        update: O(logn),\n//        query:  O(logn)\n// Space: O(n)\n// Segment Tree solution.\nclass NumArray2 {\npublic:\n    NumArray(vector<int> &nums) : nums_(nums) {\n        root_ = buildHelper(nums, 0, nums.size() - 1);\n    }\n    \n    void update(int i, int val) {\n        if (nums_[i] != val) {\n            nums_[i] = val;\n            updateHelper(root_, i, val);\n        }\n    }\n\n    int sumRange(int i, int j) {\n        return sumRangeHelper(root_, i, j);\n    }\n\nprivate:\n    vector<int>& nums_;\n\n    class SegmentTreeNode {\n    public:\n        int start, end;\n        int sum;\n        SegmentTreeNode *left, *right;\n        SegmentTreeNode(int i, int j, int s) : \n            start(i), end(j), sum(s),\n            left(nullptr), right(nullptr) {\n        }\n    };\n\n    SegmentTreeNode *root_;\n\n    // Build segment tree.\n    SegmentTreeNode *buildHelper(const vector<int>& nums, int start, int end) {\n        if (start > end) {\n            return nullptr;\n        }\n\n        // The root's start and end is given by build method.\n        SegmentTreeNode *root = new SegmentTreeNode(start, end, 0);\n\n        // If start equals to end, there will be no children for this node.\n        if (start == end) {\n            root->sum = nums[start];\n            return root;\n        }\n\n        // Left child: start=numsleft, end=(numsleft + numsright) / 2.\n        root->left = buildHelper(nums, start, (start + end) / 2);\n\n        // Right child: start=(numsleft + numsright) / 2 + 1, end=numsright.\n        root->right = buildHelper(nums, (start + end) / 2 + 1, end);\n\n        // Update sum.\n        root->sum = (root->left != nullptr ? root->left->sum : 0) +\n                    (root->right != nullptr ? root->right->sum : 0);\n        return root;\n    }\n\n    void updateHelper(SegmentTreeNode *root, int i, int val) {\n        // Out of range.\n        if (root == nullptr || root->start > i || root->end < i) {\n            return;\n        }\n\n        // Change the node's value with [i] to the new given value.\n        if (root->start == i && root->end == i) {\n            root->sum = val;\n            return;\n        }\n\n        updateHelper(root->left, i, val);\n        updateHelper(root->right, i, val);\n\n        // Update sum.\n        root->sum =  (root->left != nullptr ? root->left->sum : 0) +\n                     (root->right != nullptr ? root->right->sum : 0);\n    }\n    \n    int sumRangeHelper(SegmentTreeNode *root, int start, int end) {\n        // Out of range.\n        if (root == nullptr || root->start > end || root->end < start) {\n            return 0;\n        }\n\n        // Current segment is totally within range [start, end]\n        if (root->start >= start && root->end <= end) {\n            return root->sum;\n        }\n\n        return sumRangeHelper(root->left, start, end) +\n               sumRangeHelper(root->right, start, end);\n    }\n};\n\n// Your NumArray object will be instantiated and called as such:\n// NumArray numArray(nums);\n// numArray.sumRange(0, 1);\n// numArray.update(1, 10);\n// numArray.sumRange(1, 2);\n",
+      "sourcePath": "C++/range-sum-query-mutable.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "range-sum-query-mutable.py",
+      "code": "# Time:  ctor:   O(n),\n#        update: O(logn),\n#        query:  O(logn)\n# Space: O(n)\n\nclass NumArray(object):\n    def __init__(self, nums):\n        \"\"\"\n        initialize your data structure here.\n        :type nums: List[int]\n        \"\"\"\n        if not nums:\n            return\n        self.__nums = nums\n        self.__bit = [0] * (len(self.__nums) + 1)\n        for i in xrange(1, len(self.__bit)):\n            self.__bit[i] = nums[i-1] + self.__bit[i-1]\n\n        for i in reversed(xrange(1, len(self.__bit))):\n            last_i = i - (i & -i)\n            self.__bit[i] -= self.__bit[last_i]\n\n    def update(self, i, val):\n        \"\"\"\n        :type i: int\n        :type val: int\n        :rtype: int\n        \"\"\"\n        if val - self.__nums[i]:\n            self.__add(i, val - self.__nums[i])\n            self.__nums[i] = val\n\n    def sumRange(self, i, j):\n        \"\"\"\n        sum of elements nums[i..j], inclusive.\n        :type i: int\n        :type j: int\n        :rtype: int\n        \"\"\"\n        return self.__sum(j) - self.__sum(i-1)\n\n    def __sum(self, i):\n        i += 1\n        ret = 0\n        while i > 0:\n            ret += self.__bit[i]\n            i -= (i & -i)\n        return ret\n\n    def __add(self, i, val):\n        i += 1\n        while i <= len(self.__nums):\n            self.__bit[i] += val\n            i += (i & -i)\n\n\n# Time:  ctor:   O(n),\n#        update: O(logn),\n#        query:  O(logn)\n# Space: O(n)\n# Segment Tree solution.\nclass NumArray2(object):\n    def __init__(self, nums,\n                 query_fn=lambda x, y: x+y,\n                 update_fn=lambda x, y: y,\n                 default_val=0):\n        \"\"\"\n        initialize your data structure here.\n        :type nums: List[int]\n        \"\"\"\n        N = len(nums)\n        self.__original_length = N\n        self.__tree_length = 2**(N.bit_length() + (N&(N-1) != 0))-1\n        self.__query_fn = query_fn\n        self.__update_fn = update_fn\n        self.__default_val = default_val\n        self.__tree = [default_val for _ in range(self.__tree_length)]\n        self.__lazy = [None for _ in range(self.__tree_length)]\n        self.__constructTree(nums, 0, self.__original_length-1, 0)\n\n    def update(self, i, val):\n        self.__updateTree(val, i, i, 0, self.__original_length-1, 0)\n\n    def sumRange(self, i, j):\n        return self.__queryRange(i, j, 0, self.__original_length-1, 0)\n\n    def __constructTree(self, nums, left, right, idx):\n        if left > right:\n             return\n        if left == right:\n            self.__tree[idx] = self.__update_fn(self.__tree[idx], nums[left])\n            return \n        mid = left + (right-left)//2\n        self.__constructTree(nums, left, mid, idx*2 + 1)\n        self.__constructTree(nums, mid+1, right, idx*2 + 2)\n        self.__tree[idx] = self.__query_fn(self.__tree[idx*2 + 1], self.__tree[idx*2 + 2])\n\n    def __apply(self, left, right, idx, val):\n        self.__tree[idx] = self.__update_fn(self.__tree[idx], val)\n        if left != right:\n            self.__lazy[idx*2 + 1] = self.__update_fn(self.__lazy[idx*2 + 1], val)\n            self.__lazy[idx*2 + 2] = self.__update_fn(self.__lazy[idx*2 + 2], val)\n\n    def __updateTree(self, val, range_left, range_right, left, right, idx):\n        if left > right:\n            return\n        if self.__lazy[idx] is not None:\n            self.__apply(left, right, idx, self.__lazy[idx])\n            self.__lazy[idx] = None\n        if range_left > right or range_right < left:\n            return\n        if range_left <= left and right <= range_right:\n            self.__apply(left, right, idx, val)\n            return\n        mid = left + (right-left)//2\n        self.__updateTree(val, range_left, range_right, left, mid, idx*2 + 1)\n        self.__updateTree(val, range_left, range_right, mid+1, right, idx*2 + 2)\n        self.__tree[idx] = self.__query_fn(self.__tree[idx*2 + 1],\n                                           self.__tree[idx*2 + 2])\n\n    def __queryRange(self, range_left, range_right, left, right, idx):\n        if left > right:\n            return self.__default_val\n        if self.__lazy[idx] is not None:\n            self.__apply(left, right, idx, self.__lazy[idx])\n            self.__lazy[idx] = None\n        if right < range_left or left > range_right:\n            return self.__default_val\n        if range_left <= left and right <= range_right:\n            return self.__tree[idx]\n        mid = left + (right-left)//2\n        return self.__query_fn(self.__queryRange(range_left, range_right, left, mid, idx*2 + 1), \n                               self.__queryRange(range_left, range_right, mid + 1, right, idx*2 + 2))\n",
+      "sourcePath": "Python/range-sum-query-mutable.py"
+    }
+  },
+  "seo": {
+    "title": "Range Sum Query - Mutable Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Range Sum Query - Mutable (LeetCode #307). Pattern: dfs backtracking. Time ctor: O(n), update: O(logn), query: O(logn), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Range Sum Query - Mutable",
+      "Range Sum Query - Mutable solution",
+      "Range Sum Query - Mutable leetcode",
+      "tree",
+      "dfs-backtracking",
+      "segment-tree",
+      "fenwick-tree",
+      "medium"
+    ],
+    "canonicalPath": "/problems/range-sum-query-mutable"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Range Sum Query - Mutable?",
+      "answer": "The reference solutions aim for ctor: O(n), update: O(logn), query: O(logn) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Range Sum Query - Mutable use?",
+      "answer": "It primarily maps to dfs backtracking, segment tree, and fenwick tree, within the broader topic of tree."
+    },
+    {
+      "question": "Is Range Sum Query - Mutable good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/range-sum-query-mutable/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dfs backtracking, segment tree, and fenwick tree approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Range Sum Query - Mutable (#307) — Medium. Pattern: dfs backtracking, segment tree, and fenwick tree. Complexity: ctor: O(n), update: O(logn), query: O(logn) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Range Sum Query - Mutable: show input structure (tree), highlight the moving parts of the dfs backtracking, segment tree, and fenwick tree approach, and annotate each step with the maintained invariant and complexity."
+}

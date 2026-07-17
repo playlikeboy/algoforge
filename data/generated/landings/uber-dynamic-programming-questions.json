@@ -1,0 +1,46 @@
+{
+  "slug": "uber-dynamic-programming-questions",
+  "path": "/explore/uber-dynamic-programming-questions",
+  "h1": "Best Dynamic Programming Questions for Uber",
+  "intro": "A curated set of 3 Dynamic Programming problems frequently useful for Uber interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "decode-ways",
+    "word-break",
+    "coin-change"
+  ],
+  "faqs": [
+    {
+      "question": "How many Dynamic Programming problems should I do for Uber?",
+      "answer": "Quality over quantity: master patterns with 3 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Dynamic Programming topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/uber",
+      "label": "Uber interview hub"
+    },
+    {
+      "href": "/topics/dynamic-programming",
+      "label": "Dynamic Programming problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Dynamic Programming Questions for Uber | AlgoForge",
+    "description": "Top Dynamic Programming coding interview questions for Uber. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Uber Dynamic Programming questions",
+      "Dynamic Programming interview",
+      "Uber leetcode"
+    ],
+    "canonicalPath": "/explore/uber-dynamic-programming-questions"
+  },
+  "kind": "company-topic"
+}

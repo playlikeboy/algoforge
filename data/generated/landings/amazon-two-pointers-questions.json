@@ -1,0 +1,58 @@
+{
+  "slug": "amazon-two-pointers-questions",
+  "path": "/explore/amazon-two-pointers-questions",
+  "h1": "Best Two Pointers Questions for Amazon",
+  "intro": "A curated set of 15 Two Pointers problems frequently useful for Amazon interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "3sum",
+    "remove-nth-node-from-end-of-list",
+    "partition-list",
+    "linked-list-cycle",
+    "linked-list-cycle-ii",
+    "reorder-list",
+    "two-sum-ii-input-array-is-sorted",
+    "minimum-size-subarray-sum",
+    "find-the-duplicate-number",
+    "reverse-string",
+    "intersection-of-two-arrays",
+    "intersection-of-two-arrays-ii",
+    "longest-repeating-character-replacement",
+    "shortest-subarray-with-sum-at-least-k",
+    "binary-subarrays-with-sum"
+  ],
+  "faqs": [
+    {
+      "question": "How many Two Pointers problems should I do for Amazon?",
+      "answer": "Quality over quantity: master patterns with 15 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Two Pointers topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/amazon",
+      "label": "Amazon interview hub"
+    },
+    {
+      "href": "/topics/two-pointers",
+      "label": "Two Pointers problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Two Pointers Questions for Amazon | AlgoForge",
+    "description": "Top Two Pointers coding interview questions for Amazon. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Amazon Two Pointers questions",
+      "Two Pointers interview",
+      "Amazon leetcode"
+    ],
+    "canonicalPath": "/explore/amazon-two-pointers-questions"
+  },
+  "kind": "company-topic"
+}

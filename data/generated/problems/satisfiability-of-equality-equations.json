@@ -1,0 +1,158 @@
+{
+  "id": "990",
+  "number": 990,
+  "slug": "satisfiability-of-equality-equations",
+  "title": "Satisfiability of Equality Equations",
+  "difficulty": "Medium",
+  "topics": [
+    "graph"
+  ],
+  "patterns": [
+    "union-find"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/satisfiability-of-equality-equations/",
+  "notes": [
+    "Union Find"
+  ],
+  "relatedSlugs": [
+    "regions-cut-by-slashes",
+    "the-earliest-moment-when-everyone-become-friends",
+    "minimize-malware-spread",
+    "minimize-malware-spread-ii",
+    "optimize-water-distribution-in-a-village",
+    "remove-max-number-of-edges-to-keep-graph-fully-traversable",
+    "graph-connectivity-with-threshold",
+    "checking-existence-of-edge-length-limited-paths"
+  ],
+  "prevSlug": "add-to-array-form-of-integer",
+  "nextSlug": "broken-calculator",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Satisfiability of Equality Equations?\n\n**Satisfiability of Equality Equations** (LeetCode #990) is a **Medium** problem that primarily trains **graph**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **union find**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Union Find.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/satisfiability-of-equality-equations/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Satisfiability of Equality Equations\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **union find**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(1)** space.\n\n### Pattern focus: union find\n\nUse the pattern as a checklist:\n\n- **union find** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Satisfiability of Equality Equations\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for union find — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **union find**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **graph**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Satisfiability of Equality Equations** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **graph**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "satisfiability-of-equality-equations.cpp",
+      "code": "// Time:  O(n)\n// Space: O(1)\n\nclass Solution {\npublic:\n    bool equationsPossible(vector<string>& equations) {\n        UnionFind union_find(26);\n        for (const auto& eqn : equations) {\n            int x = eqn[0] - 'a';\n            int y = eqn[3] - 'a';\n            if (eqn[1] == '=') {\n                union_find.union_set(x, y);\n            }\n        }\n        for (const auto& eqn : equations) {\n            int x = eqn[0] - 'a';\n            int y = eqn[3] - 'a';\n            if (eqn[1] == '!') {\n                if (union_find.find_set(x) == union_find.find_set(y)) {\n                    return false;\n                }\n            }\n        }\n        return true; \n    }\n    \n\nprivate:\n    class UnionFind {\n    public:\n        UnionFind(const int n) : set_(n) {\n            iota(set_.begin(), set_.end(), 0);\n        }\n\n        int find_set(const int x) {\n           if (set_[x] != x) {\n               set_[x] = find_set(set_[x]);  // Path compression.\n           }\n           return set_[x];\n        }\n\n        bool union_set(const int x, const int y) {\n            int x_root = find_set(x), y_root = find_set(y);\n            if (x_root == y_root) {\n                return false;\n            }\n            set_[min(x_root, y_root)] = max(x_root, y_root);\n            return true;\n        }\n\n    private:\n        vector<int> set_;\n    };\n};\n\n// Time:  O(n)\n// Space: O(1)\nclass Solution2 {\npublic:\n    bool equationsPossible(vector<string>& equations) {\n        vector<vector<int>> graph(26);\n        for (const auto& eqn : equations) {\n            int x = eqn[0] - 'a';\n            int y = eqn[3] - 'a';\n            if (eqn[1] == '!') {\n                if (x == y) {\n                    return false;\n                }\n            } else {\n                graph[x].emplace_back(y);\n                graph[y].emplace_back(x);\n            }\n        }\n\n        vector<int> color(26);\n        for (int i = 0, c = 0; i < color.size(); ++i) {\n            if (color[i]) {\n                continue;\n            }\n            ++c;\n            vector<int> stack = {c};\n            while (!stack.empty()) {\n                int node = stack.back(); stack.pop_back();\n                for (const auto& nei : graph[node]) {\n                    if (!color[nei]) {\n                        color[nei] = c;\n                        stack.emplace_back(nei);\n                    }\n                }\n            }\n        }\n\n        for (const auto& eqn : equations) {\n            if (eqn[1] != '!') {\n                continue;\n            }\n            int x = eqn[0] - 'a';\n            int y = eqn[3] - 'a';\n            if (color[x] && color[x] == color[y]) {\n                return false;\n            }\n        }\n        return true; \n    }\n};\n",
+      "sourcePath": "C++/satisfiability-of-equality-equations.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "satisfiability-of-equality-equations.py",
+      "code": "# Time:  O(n)\n# Space: O(1)\n\nclass UnionFind(object):\n    def __init__(self, n):\n        self.set = range(n)\n\n    def find_set(self, x):\n        if self.set[x] != x:\n            self.set[x] = self.find_set(self.set[x])  # path compression.\n        return self.set[x]\n\n    def union_set(self, x, y):\n        x_root, y_root = map(self.find_set, (x, y))\n        if x_root == y_root:\n            return False\n        self.set[min(x_root, y_root)] = max(x_root, y_root)\n        return True\n\n\nclass Solution(object):\n    def equationsPossible(self, equations):\n        \"\"\"\n        :type equations: List[str]\n        :rtype: bool\n        \"\"\"\n        union_find = UnionFind(26)\n        for eqn in equations:\n            x = ord(eqn[0]) - ord('a')\n            y = ord(eqn[3]) - ord('a')\n            if eqn[1] == '=':\n                union_find.union_set(x, y)\n        for eqn in equations:\n            x = ord(eqn[0]) - ord('a')\n            y = ord(eqn[3]) - ord('a')\n            if eqn[1] == '!':\n                if union_find.find_set(x) == union_find.find_set(y):\n                    return False\n        return True\n\n\n# Time:  O(n)\n# Space: O(1)\nclass Solution2(object):\n    def equationsPossible(self, equations):\n        \"\"\"\n        :type equations: List[str]\n        :rtype: bool\n        \"\"\"\n        graph = [[] for _ in xrange(26)]\n\n        for eqn in equations:\n            x = ord(eqn[0]) - ord('a')\n            y = ord(eqn[3]) - ord('a')\n            if eqn[1] == '!':\n                if x == y:\n                    return False\n            else:\n                graph[x].append(y)\n                graph[y].append(x)\n\n        color = [None]*26\n        c = 0\n        for i in xrange(26):\n            if color[i] is not None:\n                continue\n            c += 1\n            stack = [i]\n            while stack:\n                node = stack.pop()\n                for nei in graph[node]:\n                    if color[nei] is not None:\n                        continue\n                    color[nei] = c\n                    stack.append(nei)\n\n        for eqn in equations:\n            if eqn[1] != '!':\n                continue\n            x = ord(eqn[0]) - ord('a')\n            y = ord(eqn[3]) - ord('a')\n            if color[x] is not None and \\\n               color[x] == color[y]:\n                return False\n        return True\n",
+      "sourcePath": "Python/satisfiability-of-equality-equations.py"
+    }
+  },
+  "seo": {
+    "title": "Satisfiability of Equality Equations Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Satisfiability of Equality Equations (LeetCode #990). Pattern: union find. Time O(n), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Satisfiability of Equality Equations",
+      "Satisfiability of Equality Equations solution",
+      "Satisfiability of Equality Equations leetcode",
+      "graph",
+      "union-find",
+      "medium"
+    ],
+    "canonicalPath": "/problems/satisfiability-of-equality-equations"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Satisfiability of Equality Equations?",
+      "answer": "The reference solutions aim for O(n) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Satisfiability of Equality Equations use?",
+      "answer": "It primarily maps to union find, within the broader topic of graph."
+    },
+    {
+      "question": "Is Satisfiability of Equality Equations good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/satisfiability-of-equality-equations/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the union find approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Satisfiability of Equality Equations (#990) — Medium. Pattern: union find. Complexity: O(n) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Satisfiability of Equality Equations: show input structure (graph), highlight the moving parts of the union find approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,30 @@
+{
+  "type": "topic",
+  "slug": "geometry",
+  "name": "Geometry",
+  "description": "Points, lines, intervals, and geometric invariants.",
+  "problemCount": 10,
+  "problemSlugs": [
+    "erect-the-fence",
+    "surface-area-of-3d-shapes",
+    "maximum-number-of-darts-inside-of-a-circular-dartboard",
+    "best-position-for-a-service-centre",
+    "maximum-number-of-visible-points",
+    "erect-the-fence-ii",
+    "minimum-time-for-k-virus-variants-to-spread",
+    "detonate-the-maximum-bombs",
+    "separate-squares-i",
+    "separate-squares-ii"
+  ],
+  "seo": {
+    "title": "Geometry Interview Questions & Solutions | AlgoForge",
+    "description": "Study 10 Geometry problems for coding interviews. Roadmaps, patterns, and original explanations on AlgoForge.",
+    "keywords": [
+      "Geometry",
+      "Geometry leetcode",
+      "Geometry interview questions",
+      "dsa"
+    ],
+    "canonicalPath": "/topics/geometry"
+  }
+}

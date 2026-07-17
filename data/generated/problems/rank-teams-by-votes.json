@@ -1,0 +1,153 @@
+{
+  "id": "1366",
+  "number": 1366,
+  "slug": "rank-teams-by-votes",
+  "title": "Rank Teams by Votes",
+  "difficulty": "Medium",
+  "topics": [
+    "sort"
+  ],
+  "patterns": [],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(m * (n + mlogm))",
+  "spaceComplexity": "O(m^2)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/rank-teams-by-votes/",
+  "notes": [],
+  "relatedSlugs": [
+    "sort-colors",
+    "insertion-sort-list",
+    "sort-list",
+    "largest-number",
+    "meeting-rooms-ii",
+    "h-index",
+    "wiggle-sort",
+    "wiggle-sort-ii"
+  ],
+  "prevSlug": "how-many-numbers-are-smaller-than-the-current-number",
+  "nextSlug": "linked-list-in-binary-tree",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Rank Teams by Votes?\n\n**Rank Teams by Votes** (LeetCode #1366) is a **Medium** problem that primarily trains **sort**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/rank-teams-by-votes/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Rank Teams by Votes\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(m * (n + mlogm))) and **space** (O(m^2)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(m * (n + mlogm))** time and **O(m^2)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(m * (n + mlogm))** |\n| Space | **O(m^2)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Rank Teams by Votes\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal general problem-solving solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `rank-teams-by-votes`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **sort**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Rank Teams by Votes** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **sort**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "rank-teams-by-votes.cpp",
+      "code": "// Time:  O(m * (n + mlogm)), n is the number of votes\n//                          , m is the length of vote\n// Space: O(m^2)\n\nclass Solution {\npublic:\n    string rankTeams(vector<string>& votes) {\n        unordered_map<char, vector<int>> count;\n        for (const auto& v : votes[0]) {\n            count[v] = vector<int>(votes[0].size());\n            count[v].emplace_back(static_cast<int>(v));\n        }\n        for (const auto& vote : votes) {\n            for (int i = 0; i < vote.length(); ++i) {\n                --count[vote[i]][i];\n            }\n        }\n        sort(begin(votes[0]), end(votes[0]),\n             [&count](const auto& a, const auto& b) {\n                 return count[a] < count[b];\n             });\n        return votes[0];\n    }\n};\n",
+      "sourcePath": "C++/rank-teams-by-votes.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "rank-teams-by-votes.py",
+      "code": "# Time:  O(m * (n + mlogm)), n is the number of votes\n#                          , m is the length of vote\n# Space: O(m^2)\n\nclass Solution(object):\n    def rankTeams(self, votes):\n        \"\"\"\n        :type votes: List[str]\n        :rtype: str\n        \"\"\"\n        count = {v: [0]*len(votes[0]) + [v] for v in votes[0]}\n        for vote in votes:\n            for i, v in enumerate(vote):\n                count[v][i] -= 1\n        return \"\".join(sorted(votes[0], key=count.__getitem__))\n",
+      "sourcePath": "Python/rank-teams-by-votes.py"
+    }
+  },
+  "seo": {
+    "title": "Rank Teams by Votes Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Rank Teams by Votes (LeetCode #1366). Pattern: algorithms. Time O(m * (n + mlogm)), space O(m^2). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Rank Teams by Votes",
+      "Rank Teams by Votes solution",
+      "Rank Teams by Votes leetcode",
+      "sort",
+      "medium"
+    ],
+    "canonicalPath": "/problems/rank-teams-by-votes"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Rank Teams by Votes?",
+      "answer": "The reference solutions aim for O(m * (n + mlogm)) time and O(m^2) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Rank Teams by Votes use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of sort."
+    },
+    {
+      "question": "Is Rank Teams by Votes good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/rank-teams-by-votes/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Rank Teams by Votes (#1366) — Medium. Pattern: general problem-solving. Complexity: O(m * (n + mlogm)) time / O(m^2) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Rank Teams by Votes: show input structure (sort), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

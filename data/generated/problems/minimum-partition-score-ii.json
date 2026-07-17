@@ -1,0 +1,166 @@
+{
+  "id": "3929",
+  "number": 3929,
+  "slug": "minimum-partition-score-ii",
+  "title": "Minimum Partition Score II",
+  "difficulty": "Hard",
+  "topics": [
+    "binary-search"
+  ],
+  "patterns": [
+    "prefix-sum",
+    "dynamic-programming",
+    "wqs-binary-search"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogn + nlogr)",
+  "spaceComplexity": "O(n)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-partition-score-ii/",
+  "notes": [
+    "Prefix Sum",
+    "DP",
+    "Convex Hull Trick",
+    "WQS Binary Search",
+    "Alien Trick"
+  ],
+  "relatedSlugs": [
+    "minimum-partition-score",
+    "maximum-sum-of-m-non-overlapping-subarrays-i",
+    "maximum-sum-of-m-non-overlapping-subarrays-ii",
+    "minimum-cost-to-make-array-equal",
+    "k-th-smallest-remaining-even-integer-in-subarray-queries",
+    "find-the-longest-valid-obstacle-course-at-each-position",
+    "minimum-number-of-removals-to-make-mountain-array",
+    "maximum-number-of-integers-to-choose-from-a-range-ii"
+  ],
+  "prevSlug": "minimum-cost-to-buy-apples-ii",
+  "nextSlug": "power-update-after-k-th-largest-insertion-ii",
+  "estimatedMinutes": 60,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Minimum Partition Score II?\n\n**Minimum Partition Score II** (LeetCode #3929) is a **Hard** problem that primarily trains **binary search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **prefix sum, dynamic programming, and wqs binary search**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Prefix Sum, DP, Convex Hull Trick, WQS Binary Search.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/minimum-partition-score-ii/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Minimum Partition Score II\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **prefix sum, dynamic programming, and wqs binary search**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogn + nlogr)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogn + nlogr)** time and **O(n)** space.\n\n### Pattern focus: prefix sum, dynamic programming, and wqs binary search\n\nUse the pattern as a checklist:\n\n- **prefix sum** — confirm the invariant holds after each step\n- **dynamic programming** — confirm the invariant holds after each step\n- **wqs binary search** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogn + nlogr)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Minimum Partition Score II\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for prefix sum, dynamic programming, and wqs binary search — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **prefix sum, dynamic programming, and wqs binary search**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **binary search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Minimum Partition Score II** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **binary search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "minimum-partition-score-ii.cpp",
+      "code": "// Time:  O(n * log(n * r)) = O(nlogn + nlogr), r = max(nums)\n// Space: O(n)\n\n// prefix sum, dp, convex hull trick, wqs binary search, alien trick\nclass Solution {\npublic:\n    long long minPartitionScore(vector<int>& nums, int k) {\n        const auto& binary_search = [](auto left, auto right, const auto& check) {\n            while (left <= right) {\n                const auto& mid = left + (right - left) / 2;\n                if (check(mid)) {\n                    right = mid - 1;\n                } else {\n                    left = mid + 1;\n                }\n            }\n            return left;\n        };\n\n        const auto& check = [](const auto& l1, const auto& l2, const auto& l3) {\n            return (get<1>(l2) - get<1>(l1)) * (get<0>(l2) - get<0>(l3)) < (get<1>(l3) - get<1>(l2)) * (get<0>(l1) - get<0>(l2));\n        };\n\n        vector<int64_t> prefix(size(nums) + 1);\n        const auto& max_lambda = [&]() {\n            int64_t mx = 0;\n            const auto& total = prefix.back() * (prefix.back() + 1) / 2;\n            for (int i = 1; i < size(nums); ++i) {\n                const auto& c1 = prefix[i], &c2 = prefix.back() - prefix[i];\n                mx = max(mx, total - (c1 * (c1 + 1) / 2 + c2 * (c2 + 1) / 2));\n            }\n            return mx;\n        };\n\n        const auto& f = [&](auto l) {\n            int64_t dp = 0;\n            int cnt = 0;\n            deque<tuple<int64_t, int64_t, int>> hull = {{0, 0, 0}};\n            for (int i = 0; i < size(nums); ++i) {\n                const auto& x = prefix[i + 1];\n                while (size(hull) >= 2 && get<0>(hull[0]) * x + get<1>(hull[0]) > get<0>(hull[1]) * x + get<1>(hull[1])) {\n                    hull.pop_front();\n                }\n                dp = (get<0>(hull[0]) * x + get<1>(hull[0])) + (x * x + x) / 2 + l;\n                cnt = get<2>(hull[0]) + 1;\n                const auto& line = tuple(-x, dp + (x * x - x) / 2, cnt);\n                while (size(hull) >= 2 && !check(hull[hull.size() - 2], hull[hull.size() - 1], line)) {\n                    hull.pop_back();\n                }\n                hull.emplace_back(line);\n            }\n            return pair(dp, cnt);\n        };\n\n        for (int i = 0; i < size(nums); ++i) {\n            prefix[i + 1] = prefix[i] + nums[i];\n        }\n        const auto& mx = max_lambda();\n        assert(f(mx).second == 1);\n        const auto& l = binary_search(static_cast<int64_t>(0), mx, [&](const auto& l) {\n            return f(l).second <= k;\n        });\n        return f(l).first - k * l;\n    }\n};\n                  \n",
+      "sourcePath": "C++/minimum-partition-score-ii.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "minimum-partition-score-ii.py",
+      "code": "# Time:  O(n * log(n * r)) = O(nlogn + nlogr), r = max(nums)\n# Space: O(n)\n\nimport collections\n\n\n# prefix sum, dp, convex hull trick, wqs binary search, alien trick\nclass Solution(object):\n    def minPartitionScore(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        def binary_search(left, right, check):\n            while left <= right:\n                mid = left+(right-left)//2\n                if check(mid):\n                    right = mid-1\n                else:\n                    left = mid+1\n            return left\n\n        def check(l1, l2, l3):\n            return (l2[1]-l1[1])*(l2[0]-l3[0]) < (l3[1]-l2[1])*(l1[0]-l2[0])\n\n        def max_lambda():\n            mx, total = 0, prefix[-1]*(prefix[-1]+1)//2\n            for i in xrange(1, len(nums)):\n                c1, c2 = prefix[i], prefix[-1]-prefix[i]\n                mx = max(mx, total-(c1*(c1+1)//2+c2*(c2+1)//2))\n            return mx\n\n        def f(l):\n            dp = cnt = 0\n            hull = collections.deque([(0, 0, 0)])\n            for i in xrange(len(nums)):\n                x = prefix[i+1]\n                while len(hull) >= 2 and hull[0][0]*x+hull[0][1] > hull[1][0]*x+hull[1][1]:\n                    hull.popleft()\n                dp, cnt = (hull[0][0]*x+hull[0][1])+(x*x+x)//2+l, hull[0][2]+1\n                line = (-x, dp+(x*x-x)//2, cnt)\n                while len(hull) >= 2 and not check(hull[-2], hull[-1], line):\n                    hull.pop()\n                hull.append(line)\n            return dp, cnt\n\n        prefix = [0]*(len(nums)+1)\n        for i in xrange(len(nums)):\n            prefix[i+1] = prefix[i]+nums[i]\n        mx = max_lambda()\n        assert(f(mx)[1] == 1)\n        l = binary_search(0, mx, lambda x: f(x)[1] <= k)\n        return f(l)[0]-k*l\n",
+      "sourcePath": "Python/minimum-partition-score-ii.py"
+    }
+  },
+  "seo": {
+    "title": "Minimum Partition Score II Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Minimum Partition Score II (LeetCode #3929). Pattern: prefix sum. Time O(nlogn + nlogr), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Minimum Partition Score II",
+      "Minimum Partition Score II solution",
+      "Minimum Partition Score II leetcode",
+      "binary-search",
+      "prefix-sum",
+      "dynamic-programming",
+      "wqs-binary-search",
+      "hard"
+    ],
+    "canonicalPath": "/problems/minimum-partition-score-ii"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Minimum Partition Score II?",
+      "answer": "The reference solutions aim for O(nlogn + nlogr) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Minimum Partition Score II use?",
+      "answer": "It primarily maps to prefix sum, dynamic programming, and wqs binary search, within the broader topic of binary search."
+    },
+    {
+      "question": "Is Minimum Partition Score II good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/minimum-partition-score-ii/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the prefix sum, dynamic programming, and wqs binary search approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Minimum Partition Score II (#3929) — Hard. Pattern: prefix sum, dynamic programming, and wqs binary search. Complexity: O(nlogn + nlogr) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Minimum Partition Score II: show input structure (binary search), highlight the moving parts of the prefix sum, dynamic programming, and wqs binary search approach, and annotate each step with the maintained invariant and complexity."
+}

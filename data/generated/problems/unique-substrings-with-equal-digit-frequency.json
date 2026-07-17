@@ -1,0 +1,159 @@
+{
+  "id": "2168",
+  "number": 2168,
+  "slug": "unique-substrings-with-equal-digit-frequency",
+  "title": "Unique Substrings With Equal Digit Frequency",
+  "difficulty": "Medium",
+  "topics": [
+    "string"
+  ],
+  "patterns": [
+    "rabin-karp-algorithm"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n^2)",
+  "spaceComplexity": "O(n^2)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/unique-substrings-with-equal-digit-frequency/",
+  "notes": [
+    "Rabin-Karp Algorithm",
+    "Rolling Hash"
+  ],
+  "relatedSlugs": [
+    "strings-differ-by-one-character",
+    "find-substring-with-given-hash-value",
+    "repeated-string-match",
+    "longest-chunked-palindrome-decomposition",
+    "rotate-string",
+    "longest-happy-prefix",
+    "longest-repeating-substring",
+    "longest-palindromic-substring"
+  ],
+  "prevSlug": "minimum-time-to-remove-all-cars-containing-illegal-goods",
+  "nextSlug": "count-operations-to-obtain-zero",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Unique Substrings With Equal Digit Frequency?\n\n**Unique Substrings With Equal Digit Frequency** (LeetCode #2168) is a **Medium** problem that primarily trains **string**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **rabin karp algorithm**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Rabin-Karp Algorithm, Rolling Hash.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/unique-substrings-with-equal-digit-frequency/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Unique Substrings With Equal Digit Frequency\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **rabin karp algorithm**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n^2)) and **space** (O(n^2)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n^2)** time and **O(n^2)** space.\n\n### Pattern focus: rabin karp algorithm\n\nUse the pattern as a checklist:\n\n- **rabin karp algorithm** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n^2)** |\n| Space | **O(n^2)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Unique Substrings With Equal Digit Frequency\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for rabin karp algorithm — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **rabin karp algorithm**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **string**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Unique Substrings With Equal Digit Frequency** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **string**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "unique-substrings-with-equal-digit-frequency.cpp",
+      "code": "// Time:  O(n^2)\n// Space: O(n^2)\n\n// rolling hash\nclass Solution {\npublic:\n    int equalDigitFrequency(string s) {\n        static const int MOD = 1e9 + 7;\n        static const int D = 27;\n\n        unordered_set<int> lookup;\n        for (int i = 0; i < size(s); ++i) {\n            unordered_map<int, int> cnt;\n            int64_t h = 0;\n            int max_cnt = 0;\n            for (int j = i; j < size(s); ++j) {\n                const int d = s[j] - '0' + 1;\n                h = (h * D + d) % MOD;\n                ++cnt[d];\n                max_cnt = max(max_cnt, cnt[d]);\n                if (size(cnt) * max_cnt == j - i + 1) {\n                    lookup.emplace(h);\n                }\n            }\n        }\n        return size(lookup);\n    }\n};\n",
+      "sourcePath": "C++/unique-substrings-with-equal-digit-frequency.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "unique-substrings-with-equal-digit-frequency.py",
+      "code": "# Time:  O(n^2)\n# Space: O(n^2)\n\nimport collections\n\n\n# rolling hash\nclass Solution(object):\n    def equalDigitFrequency(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: int\n        \"\"\"\n        MOD = 10**9+7\n        D = 27\n        lookup = set()\n        for i in xrange(len(s)):\n            cnt = collections.Counter()\n            h = max_cnt = 0\n            for j in xrange(i, len(s)):\n                d = ord(s[j])-ord('0')+1\n                h = (h*D+d)%MOD\n                cnt[d] += 1\n                max_cnt = max(max_cnt, cnt[d])\n                if len(cnt)*max_cnt == j-i+1:\n                    lookup.add(h)\n        return len(lookup)\n",
+      "sourcePath": "Python/unique-substrings-with-equal-digit-frequency.py"
+    }
+  },
+  "seo": {
+    "title": "Unique Substrings With Equal Digit Frequency Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Unique Substrings With Equal Digit Frequency (LeetCode #2168). Pattern: rabin karp algorithm. Time O(n^2), space O(n^2). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Unique Substrings With Equal Digit Frequency",
+      "Unique Substrings With Equal Digit Frequency solution",
+      "Unique Substrings With Equal Digit Frequency leetcode",
+      "string",
+      "rabin-karp-algorithm",
+      "medium"
+    ],
+    "canonicalPath": "/problems/unique-substrings-with-equal-digit-frequency"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Unique Substrings With Equal Digit Frequency?",
+      "answer": "The reference solutions aim for O(n^2) time and O(n^2) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Unique Substrings With Equal Digit Frequency use?",
+      "answer": "It primarily maps to rabin karp algorithm, within the broader topic of string."
+    },
+    {
+      "question": "Is Unique Substrings With Equal Digit Frequency good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/unique-substrings-with-equal-digit-frequency/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the rabin karp algorithm approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Unique Substrings With Equal Digit Frequency (#2168) — Medium. Pattern: rabin karp algorithm. Complexity: O(n^2) time / O(n^2) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Unique Substrings With Equal Digit Frequency: show input structure (string), highlight the moving parts of the rabin karp algorithm approach, and annotate each step with the maintained invariant and complexity."
+}

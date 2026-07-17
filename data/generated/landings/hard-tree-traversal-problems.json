@@ -1,0 +1,41 @@
+{
+  "slug": "hard-tree-traversal-problems",
+  "path": "/explore/hard-tree-traversal-problems",
+  "h1": "Hard Tree Traversal Problems",
+  "intro": "6 hard problems that drill the Tree Traversal pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "recover-binary-search-tree",
+    "binary-tree-postorder-traversal",
+    "data-stream-as-disjoint-intervals",
+    "serialize-and-deserialize-n-ary-tree",
+    "encode-n-ary-tree-to-binary-tree",
+    "range-xor-queries-with-subarray-reversals"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice hard Tree Traversal problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/tree-traversal",
+      "label": "Tree Traversal pattern"
+    },
+    {
+      "href": "/difficulty/hard",
+      "label": "All Hard problems"
+    }
+  ],
+  "seo": {
+    "title": "Hard Tree Traversal Problems | AlgoForge",
+    "description": "Practice hard Tree Traversal LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "hard Tree Traversal",
+      "Tree Traversal problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/hard-tree-traversal-problems"
+  },
+  "kind": "difficulty-pattern"
+}

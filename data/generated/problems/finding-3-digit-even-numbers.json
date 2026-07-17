@@ -1,0 +1,156 @@
+{
+  "id": "2094",
+  "number": 2094,
+  "slug": "finding-3-digit-even-numbers",
+  "title": "Finding 3-Digit Even Numbers",
+  "difficulty": "Easy",
+  "topics": [
+    "backtracking"
+  ],
+  "patterns": [
+    "dfs-backtracking"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/finding-3-digit-even-numbers/",
+  "notes": [],
+  "relatedSlugs": [
+    "letter-case-permutation",
+    "letter-combinations-of-a-phone-number",
+    "generate-parentheses",
+    "sudoku-solver",
+    "combination-sum",
+    "combination-sum-ii",
+    "permutations",
+    "permutations-ii"
+  ],
+  "prevSlug": "minimum-cost-to-reach-city-with-discounts",
+  "nextSlug": "delete-the-middle-node-of-a-linked-list",
+  "estimatedMinutes": 20,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Finding 3-Digit Even Numbers?\n\n**Finding 3-Digit Even Numbers** (LeetCode #2094) is a **Easy** problem that primarily trains **backtracking**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dfs backtracking**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt builds core muscle memory you will reuse on harder variants.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/finding-3-digit-even-numbers/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Finding 3-Digit Even Numbers\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dfs backtracking**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(1)** space.\n\n### Pattern focus: dfs backtracking\n\nUse the pattern as a checklist:\n\n- **dfs backtracking** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Finding 3-Digit Even Numbers\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dfs backtracking — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dfs backtracking**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **backtracking**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Finding 3-Digit Even Numbers** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **backtracking**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "finding-3-digit-even-numbers.cpp",
+      "code": "// Time:  O(1) ~ O(n), n is 10^3\n// Space: O(1)\n\nclass Solution {\npublic:\n    vector<int> findEvenNumbers(vector<int>& digits) {\n        vector<int> cnt(10);\n        for (const auto& d : digits) {\n            ++cnt[d];\n        }\n        vector<int> result, curr;\n        backtracking(&curr, &cnt, &result);\n        return result;\n    }\n\nprivate:\n    void backtracking(vector<int> *curr, vector<int> *cnt, vector<int> *result) {\n        static const int k = 3;\n        if (size(*curr) == k) {\n            result->emplace_back(accumulate(cbegin(*curr), cend(*curr), 0,\n                                            [](const auto& total, const auto& x) {\n                                                return total * 10 + x;\n                                            }));\n            return;\n        }\n        for (int i = 0; i < size(*cnt); ++i) {\n            if ((*cnt)[i] == 0 ||\n                (empty(*curr) && (i == 0)) ||\n                (size(*curr) == k - 1 && i % 2 != 0)) {\n                continue;\n            }\n            --(*cnt)[i];\n            curr->emplace_back(i);\n            backtracking(curr, cnt, result);\n            curr->pop_back();\n            ++(*cnt)[i];\n        }\n    }\n};\n\n// Time:  O(n), n is 10^3\n// Space: O(1)\nclass Solution2 {\npublic:\n    vector<int> findEvenNumbers(vector<int>& digits) {\n        unordered_map<int, int> cnt;\n        for (const auto& d : digits) {\n            ++cnt[d];\n        }\n        vector<int> result;\n        for (int i = 1; i < 10; ++i) {\n            for (int j = 0; j < 10; ++j) {\n                for (int k = 0; k < 10; k += 2) {\n                    if (cnt[i] > 0 && cnt[j] > (i == j) && cnt[k] > (i == k) + (j == k)) {\n                        result.emplace_back(100 * i + 10 * j + k);\n                    }\n                }\n            }\n        }\n        return result;\n    }\n};\n\n// Time:  O(1) ~ O(n), n is 10^3\n// Space: O(1)\nclass Solution3 {\nprivate:\n    struct Node {\n        int digit, cnt, left, right;\n        Node(int digit, int cnt, int left, int right) : digit(digit), cnt(cnt), left(left), right(right) {}\n    };\n\npublic:\n    vector<int> findEvenNumbers(vector<int>& digits) {\n        unordered_map<int, int> cnt;\n        for (const auto& d : digits) {\n            ++cnt[d];\n        }\n        vector<pair<int, int>> digit_cnt;\n        for (const auto& [d, c] : cnt) {\n            digit_cnt.emplace_back(d, c);\n        }\n        sort(begin(digit_cnt), end(digit_cnt));\n        vector<Node> digit_cnt_list;\n        int i = 0;\n        digit_cnt_list.emplace_back(0, 0, i - 1, i + 1);\n        ++i;\n        for (const auto& [d, c] : digit_cnt) {\n            digit_cnt_list.emplace_back(d, c, i - 1, i + 1);\n            ++i;\n        }\n        vector<int> result, curr;\n        backtracking(&curr, &digit_cnt_list, &result);\n        return result;\n    }\n\nprivate:\n    void backtracking(vector<int> *curr, vector<Node> *digit_cnt_list, vector<int> *result) {\n        static const int k = 3;\n        if (size(*curr) == k) {\n            result->emplace_back(accumulate(cbegin(*curr), cend(*curr), 0,\n                                            [](const auto& total, const auto& x) {\n                                                return total * 10 + x;\n                                            }));\n            return;\n        }\n        for (int i = (*digit_cnt_list)[0].right; i != size(*digit_cnt_list); i = (*digit_cnt_list)[i].right) {\n            if ((empty(*curr) && (*digit_cnt_list)[i].digit == 0) ||\n                (size(*curr) == k - 1 && (*digit_cnt_list)[i].digit % 2 != 0)) {\n                continue;\n            }\n            --(*digit_cnt_list)[i].cnt;\n            curr->emplace_back((*digit_cnt_list)[i].digit);\n            if ((*digit_cnt_list)[i].cnt == 0) {\n                if ((*digit_cnt_list)[i].left >= 0) {\n                    (*digit_cnt_list)[(*digit_cnt_list)[i].left].right = (*digit_cnt_list)[i].right;\n                }\n                if ((*digit_cnt_list)[i].right < size(*digit_cnt_list)) {\n                    (*digit_cnt_list)[(*digit_cnt_list)[i].right].left = (*digit_cnt_list)[i].left;\n                }\n            }\n            backtracking(curr, digit_cnt_list, result);\n            curr->pop_back();\n            if ((*digit_cnt_list)[i].cnt == 0) {\n                if ((*digit_cnt_list)[i].left >= 0) {\n                    (*digit_cnt_list)[(*digit_cnt_list)[i].left].right = i;\n                }\n                if ((*digit_cnt_list)[i].right < size(*digit_cnt_list)) {\n                    (*digit_cnt_list)[(*digit_cnt_list)[i].right].left = i;\n                }\n            }\n            ++(*digit_cnt_list)[i].cnt;\n        }\n    }\n};\n\n// Time:  O(1) ~ O(nlogn), n is 10^3\n// Space: O(1)\nclass Solution4 {\npublic:\n    vector<int> findEvenNumbers(vector<int>& digits) {\n        unordered_map<int, int> cnt;\n        for (const auto& d : digits) {\n            ++cnt[d];\n        }\n        vector<pair<int, int>> digit_cnt;\n        for (const auto& [d, c] : cnt) {\n            digit_cnt.emplace_back(d, c);\n        }\n        vector<int> result, curr;\n        backtracking(&curr, &digit_cnt, &result);\n        sort(begin(result), end(result));\n        return result;\n    }\n\nprivate:\n    void backtracking(vector<int> *curr, vector<pair<int, int>> *digit_cnt, vector<int> *result) {\n        static const int k = 3;\n        if (size(*curr) == k) {\n            result->emplace_back(accumulate(cbegin(*curr), cend(*curr), 0,\n                                            [](const auto& total, const auto& x) {\n                                                return total * 10 + x;\n                                            }));\n            return;\n        }\n        for (int i = 0; i < size(*digit_cnt); ++i) {\n            if ((empty(*curr) && (*digit_cnt)[i].first == 0) ||\n                (size(*curr) == k - 1 && (*digit_cnt)[i].first % 2 != 0)) {\n                continue;\n            }\n            --(*digit_cnt)[i].second;\n            swap((*digit_cnt)[i], (*digit_cnt).back());\n            auto [digit, cnt] = (*digit_cnt).back();\n            curr->emplace_back(digit);\n            if (cnt == 0) {\n                digit_cnt->pop_back();\n            }\n            backtracking(curr, digit_cnt, result);\n            curr->pop_back();\n            if (cnt == 0) {\n                digit_cnt->emplace_back(digit, cnt);\n            }\n            swap((*digit_cnt)[i], (*digit_cnt).back());\n            ++(*digit_cnt)[i].second;\n        }\n    }\n};\n",
+      "sourcePath": "C++/finding-3-digit-even-numbers.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "finding-3-digit-even-numbers.py",
+      "code": "# Time:  O(1) ~ O(n), n is 10^3\n# Space: O(1)\n\nclass Solution(object):\n    def findEvenNumbers(self, digits):\n        \"\"\"\n        :type digits: List[int]\n        :rtype: List[int]\n        \"\"\"\n        k = 3\n        def backtracking(curr, cnt, result):\n            if len(curr) == k:\n                result.append(reduce(lambda x, y: x*10+y, curr))\n                return\n            for i, c in enumerate(cnt):\n                if c == 0 or (not curr and i == 0) or (len(curr) == k-1 and i%2 != 0):\n                    continue\n                cnt[i] -= 1\n                curr.append(i)\n                backtracking(curr, cnt, result)\n                curr.pop()\n                cnt[i] += 1\n\n        cnt = [0]*10\n        for d in digits:\n            cnt[d] += 1\n        result = []\n        backtracking([], cnt, result)\n        return result\n\n\n# Time:  O(n), n is 10^3\n# Space: O(1)\nimport collections\n\n\nclass Solution2(object):\n    def findEvenNumbers(self, digits):\n        \"\"\"\n        :type digits: List[int]\n        :rtype: List[int]\n        \"\"\"\n        result, cnt = [], collections.Counter(digits)\n        for i in xrange(1, 10):\n            for j in xrange(10):\n                for k in xrange(0, 10, 2):\n                    if cnt[i] > 0 and cnt[j] > (j == i) and cnt[k] > (k == i) + (k == j):\n                        result.append(i*100 + j*10 + k)\n        return result\n\n\n# Time:  O(1) ~ O(n), n is 10^3\n# Space: O(1)\nimport collections\n\n\nclass Node(object):\n    def __init__(self, val=None, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\n\nclass Solution3(object):\n    def findEvenNumbers(self, digits):\n        \"\"\"\n        :type digits: List[int]\n        :rtype: List[int]\n        \"\"\"\n        k = 3\n        def backtracking(curr, dummy, result):\n            if len(curr) == k:\n                result.append(reduce(lambda x, y: x*10+y, curr))\n                return\n            node = dummy.right\n            while node:\n                if (not curr and node.val[0] == 0) or (len(curr) == k-1 and node.val[0]%2 != 0):\n                    node = node.right\n                    continue\n                node.val[1] -= 1\n                if node.val[1] == 0:\n                    if node.left:\n                        node.left.right = node.right\n                    if node.right:\n                        node.right.left = node.left\n                curr.append(node.val[0])\n                backtracking(curr, dummy, result)\n                curr.pop()\n                if node.val[1] == 0:\n                    if node.left:\n                        node.left.right = node\n                    if node.right:\n                        node.right.left = node\n                node.val[1] += 1\n                node = node.right\n\n        prev = dummy = Node()\n        for digit, cnt in sorted(map(list, collections.Counter(digits).iteritems())):\n            prev.right = Node(val=[digit, cnt], left=prev)\n            prev = prev.right\n        result = []\n        backtracking([], dummy, result)\n        return result\n\n\n# Time:  O(1) ~ O(nlogn), n is 10^3\n# Space: O(1)\nimport collections\n\n\nclass Solution4(object):\n    def findEvenNumbers(self, digits):\n        \"\"\"\n        :type digits: List[int]\n        :rtype: List[int]\n        \"\"\"\n        k = 3\n        def backtracking(curr, digit_cnt, result):\n            if len(curr) == k:\n                result.append(reduce(lambda x, y: x*10+y, curr))\n                return\n            for i, (digit, cnt) in enumerate(digit_cnt):\n                if (not curr and digit == 0) or (len(curr) == k-1 and digit%2 != 0):\n                    continue\n                digit_cnt[i][1] -= 1\n                digit_cnt[i], digit_cnt[-1] = digit_cnt[-1], digit_cnt[i]\n                removed = []\n                if digit_cnt[-1][1] == 0:\n                    removed = digit_cnt.pop()\n                curr.append(digit)\n                backtracking(curr, digit_cnt, result)\n                curr.pop()\n                if removed:\n                    digit_cnt.append(removed)\n                digit_cnt[i], digit_cnt[-1] = digit_cnt[-1], digit_cnt[i]\n                digit_cnt[i][1] += 1\n\n        cnt = collections.Counter(digits)\n        digit_cnt = map(list, cnt.iteritems())\n        result = []\n        backtracking([], digit_cnt, result)\n        result.sort()\n        return result\n",
+      "sourcePath": "Python/finding-3-digit-even-numbers.py"
+    }
+  },
+  "seo": {
+    "title": "Finding 3-Digit Even Numbers Solution — Easy | AlgoForge",
+    "description": "Original Easy explanation for Finding 3-Digit Even Numbers (LeetCode #2094). Pattern: dfs backtracking. Time O(n), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Finding 3-Digit Even Numbers",
+      "Finding 3-Digit Even Numbers solution",
+      "Finding 3-Digit Even Numbers leetcode",
+      "backtracking",
+      "dfs-backtracking",
+      "easy"
+    ],
+    "canonicalPath": "/problems/finding-3-digit-even-numbers"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Finding 3-Digit Even Numbers?",
+      "answer": "The reference solutions aim for O(n) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Finding 3-Digit Even Numbers use?",
+      "answer": "It primarily maps to dfs backtracking, within the broader topic of backtracking."
+    },
+    {
+      "question": "Is Finding 3-Digit Even Numbers good for interviews?",
+      "answer": "Yes — as a Easy problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/finding-3-digit-even-numbers/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dfs backtracking approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Finding 3-Digit Even Numbers (#2094) — Easy. Pattern: dfs backtracking. Complexity: O(n) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Finding 3-Digit Even Numbers: show input structure (backtracking), highlight the moving parts of the dfs backtracking approach, and annotate each step with the maintained invariant and complexity."
+}

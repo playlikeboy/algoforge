@@ -1,0 +1,165 @@
+{
+  "id": "308",
+  "number": 308,
+  "slug": "range-sum-query-2d-mutable",
+  "title": "Range Sum Query 2D - Mutable",
+  "difficulty": "Hard",
+  "topics": [
+    "tree"
+  ],
+  "patterns": [
+    "dfs-backtracking",
+    "quad-tree",
+    "2d-fenwick-tree"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "ctor: O(m * n), update: O(logm * logn), query: O(logm * logn)",
+  "spaceComplexity": "O(m * n)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/range-sum-query-2d-mutable/",
+  "notes": [
+    "DFS",
+    "Quad Tree",
+    "2D BIT",
+    "2D Fenwick Tree"
+  ],
+  "relatedSlugs": [
+    "serialize-and-deserialize-binary-tree",
+    "recover-a-tree-from-preorder-traversal",
+    "distinct-gate-paths-to-lca",
+    "find-duplicate-subtrees",
+    "maximum-width-of-binary-tree",
+    "binary-tree-pruning",
+    "smallest-subtree-with-all-the-deepest-nodes",
+    "increasing-order-search-tree"
+  ],
+  "prevSlug": "range-sum-query-mutable",
+  "nextSlug": "best-time-to-buy-and-sell-stock-with-cooldown",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Range Sum Query 2D - Mutable?\n\n**Range Sum Query 2D - Mutable** (LeetCode #308) is a **Hard** problem that primarily trains **tree**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dfs backtracking, quad tree, and 2d fenwick tree**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: DFS, Quad Tree, 2D BIT, 2D Fenwick Tree.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/range-sum-query-2d-mutable/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Range Sum Query 2D - Mutable\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dfs backtracking, quad tree, and 2d fenwick tree**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (ctor: O(m * n), update: O(logm * logn), query: O(logm * logn)) and **space** (O(m * n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **ctor: O(m * n), update: O(logm * logn), query: O(logm * logn)** time and **O(m * n)** space.\n\n### Pattern focus: dfs backtracking, quad tree, and 2d fenwick tree\n\nUse the pattern as a checklist:\n\n- **dfs backtracking** — confirm the invariant holds after each step\n- **quad tree** — confirm the invariant holds after each step\n- **2d fenwick tree** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **ctor: O(m * n), update: O(logm * logn), query: O(logm * logn)** |\n| Space | **O(m * n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Range Sum Query 2D - Mutable\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dfs backtracking, quad tree, and 2d fenwick tree — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dfs backtracking, quad tree, and 2d fenwick tree**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **tree**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Range Sum Query 2D - Mutable** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **tree**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "range-sum-query-2d-mutable.cpp",
+      "code": "// Time:  ctor:   O(m * n)\n//        update: O(logm * logn)\n//        query:  O(logm * logn)\n// Space: O(m * n)\n\n// 2d - Binary Indexed Tree (BIT) solution.\nclass NumMatrix {\npublic:\n    NumMatrix(vector<vector<int>> &matrix) : matrix_(matrix) {\n        if (matrix_.empty()) {\n            return;\n        }\n        bit_ = vector<vector<int>>(matrix_.size() + 1,\n                                   vector<int>(matrix_[0].size() + 1));\n        for (int i = 1; i < bit_.size(); ++i) {\n            for (int j = 1; j < bit_[0].size(); ++j) {\n                bit_[i][j] = matrix[i - 1][j - 1] + bit_[i - 1][j] +\n                             bit_[i][j - 1] - bit_[i - 1][j - 1];\n            }\n        }\n        for (int i = bit_.size() - 1; i >= 1; --i) {\n            for (int j = bit_[0].size() - 1; j >= 1; --j) {\n                int last_i = i - lower_bit(i), last_j = j - lower_bit(j);\n                bit_[i][j] = bit_[i][j] - bit_[i][last_j] -\n                             bit_[last_i][j] + bit_[last_i][last_j];\n            }\n        }\n    }\n\n    void update(int row, int col, int val) {\n        if (val - matrix_[row][col]) {\n            add(row, col, val - matrix_[row][col]);\n            matrix_[row][col] = val;\n        }\n    }\n\n    int sumRegion(int row1, int col1, int row2, int col2) {\n        return sum(row2, col2) - sum(row2, col1 - 1) -\n               sum(row1 - 1, col2) + sum(row1 - 1, col1 - 1);\n    }\n\nprivate:\n    vector<vector<int>> &matrix_;\n    vector<vector<int>> bit_;\n\n    int sum(int row, int col) {\n        ++row, ++col;\n        int sum = 0;\n        for (int i = row; i > 0; i -= lower_bit(i)) {\n            for (int j = col; j > 0; j -= lower_bit(j)) {\n                sum += bit_[i][j];\n            }\n        }\n        return sum;\n    }\n\n    void add(int row, int col, int val) {\n        ++row, ++col;\n        for (int i = row; i <= matrix_.size(); i += lower_bit(i)) {\n            for (int j = col; j <= matrix_[0].size(); j += lower_bit(j)) {\n                bit_[i][j] += val;\n            }\n        }\n    }\n\n    inline int lower_bit(int i) {\n        return i & -i;\n    }\n};\n\n// Time:  ctor:   O(m * n),\n//        update: O(max(m, n)),\n//        query:  O(max(m, n))\n// Space: O(m * n)\n// Quad Tree solution.\n// see complexity analysis of quad tree: https://apps.topcoder.com/forums/?module=Thread&threadID=633075\nclass NumMatrix2 {\npublic:\n    NumMatrix2(vector<vector<int>> &matrix) : matrix_(matrix) {\n        if (!matrix.empty() && !matrix[0].empty()) {\n            const int m = matrix.size();\n            const int n =  matrix[0].size();\n            root_ = buildHelper(matrix,\n                                make_pair(0, 0),\n                                make_pair(m - 1, n - 1));\n        }\n    }\n\n    void update(int row, int col, int val) {\n        if (matrix_[row][col] != val) {\n            matrix_[row][col] = val;\n            updateHelper(root_, make_pair(row, col), val);\n        }\n    }\n\n    int sumRegion(int row1, int col1, int row2, int col2) {\n        return sumRangeHelper(root_, make_pair(row1, col1), make_pair(row2, col2));\n    }\n\nprivate:\n    vector<vector<int>>& matrix_;\n\n    class SegmentTreeNode {\n    public:\n        pair<int, int> start, end;\n        int sum;\n        vector<SegmentTreeNode *> neighbor;\n        SegmentTreeNode(const pair<int, int>& i, const pair<int, int>& j, int s) : \n            start(i), end(j), sum(s) {\n        }\n    };\n\n    SegmentTreeNode *root_;\n\n    // Build segment tree.\n    SegmentTreeNode *buildHelper(const vector<vector<int>>& matrix,\n                                 const pair<int, int>& start,\n                                 const pair<int, int>& end) {\n        if (start.first > end.first || start.second > end.second) {\n            return nullptr;\n        }\n\n        // The root's start and end is given by build method.\n        SegmentTreeNode *root = new SegmentTreeNode(start, end, 0);\n\n        // If start equals to end, there will be no children for this node.\n        if (start == end) {\n            root->sum = matrix[start.first][start.second];\n            return root;\n        }\n\n        int mid_x = (start.first + end.first) / 2;\n        int mid_y = (start.second + end.second) / 2;\n        root->neighbor.emplace_back(buildHelper(matrix, start, make_pair(mid_x, mid_y)));\n        root->neighbor.emplace_back(buildHelper(matrix, make_pair(start.first, mid_y + 1), make_pair(mid_x, end.second)));\n        root->neighbor.emplace_back(buildHelper(matrix, make_pair(mid_x + 1, start.second), make_pair(end.first, mid_y)));\n        root->neighbor.emplace_back(buildHelper(matrix, make_pair(mid_x + 1, mid_y + 1), end));\n        for (auto& node : root->neighbor) {\n            if (node) {\n                root->sum += node->sum;\n            }\n        }\n        return root;\n    }\n\n    void updateHelper(SegmentTreeNode *root, const pair<int, int>& i, int val) {\n        // Out of range.\n        if (root == nullptr ||\n            (root->start.first > i.first || root->start.second > i.second) ||\n            (root->end.first < i.first || root->end.second < i.second)) {\n            return;\n        }\n\n        // Change the node's value with [i] to the new given value.\n        if ((root->start.first == i.first && root->start.second == i.second) &&\n            (root->end.first == i.first && root->end.second == i.second)) {\n            root->sum = val;\n            return;\n        }\n        for (auto& node : root->neighbor) {\n            updateHelper(node, i, val);\n        }\n\n        root->sum = 0;\n        for (auto& node : root->neighbor) {\n            if (node) {\n                root->sum += node->sum;\n            }\n        }\n    }\n    \n    int sumRangeHelper(SegmentTreeNode *root, const pair<int, int>& start, const pair<int, int>& end) {\n        // Out of range.\n        if (root == nullptr ||\n            (root->start.first > end.first || root->start.second > end.second) ||\n            (root->end.first < start.first || root->end.second < start.second)) {\n            return 0;\n        }\n\n        // Current segment is totally within range [start, end]\n        if ((root->start.first >= start.first && root->start.second >= start.second) &&\n            (root->end.first <= end.first && root->end.second <= end.second)) {\n            return root->sum;\n        }\n        int sum = 0;\n        for (auto& node : root->neighbor) {\n            if (node) {\n                sum += sumRangeHelper(node, start, end);\n            }\n        }\n        return sum;\n    }\n};\n\n// Your NumMatrix object will be instantiated and called as such:\n// NumMatrix numMatrix(matrix);\n// numMatrix.sumRegion(0, 1, 2, 3);\n// numMatrix.update(1, 1, 10);\n// numMatrix.sumRegion(1, 2, 3, 4);\n",
+      "sourcePath": "C++/range-sum-query-2d-mutable.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "range-sum-query-2d-mutable.py",
+      "code": "# Time:  ctor:   O(m * n)\n#        update: O(logm * logn)\n#        query:  O(logm * logn)\n# Space: O(m * n)\n\nclass NumMatrix(object):\n    def __init__(self, matrix):\n        \"\"\"\n        initialize your data structure here.\n        :type matrix: List[List[int]]\n        \"\"\"\n        if not matrix:\n            return\n        self.__matrix = matrix\n        self.__bit = [[0] * (len(self.__matrix[0]) + 1) \\\n                      for _ in xrange(len(self.__matrix) + 1)]\n        for i in xrange(1, len(self.__bit)):\n            for j in xrange(1, len(self.__bit[0])):\n                self.__bit[i][j] = matrix[i-1][j-1] + self.__bit[i-1][j] + \\\n                                   self.__bit[i][j-1] - self.__bit[i-1][j-1]\n        for i in reversed(xrange(1, len(self.__bit))):\n            for j in reversed(xrange(1, len(self.__bit[0]))):\n                last_i, last_j = i - (i & -i), j - (j & -j)\n                self.__bit[i][j] = self.__bit[i][j] - self.__bit[i][last_j] - \\\n                                   self.__bit[last_i][j] + self.__bit[last_i][last_j]\n\n    def update(self, row, col, val):\n        \"\"\"\n        update the element at matrix[row,col] to val.\n        :type row: int\n        :type col: int\n        :type val: int\n        :rtype: void\n        \"\"\"\n        if val - self.__matrix[row][col]:\n            self.__add(row, col, val - self.__matrix[row][col])\n            self.__matrix[row][col] = val\n\n    def sumRegion(self, row1, col1, row2, col2):\n        \"\"\"\n        sum of elements matrix[(row1,col1)..(row2,col2)], inclusive.\n        :type row1: int\n        :type col1: int\n        :type row2: int\n        :type col2: int\n        :rtype: int\n        \"\"\"\n        return self.__sum(row2, col2) - self.__sum(row2, col1 - 1) - \\\n               self.__sum(row1 - 1, col2) + self.__sum(row1 - 1, col1 - 1)\n\n    def __sum(self, row, col):\n        row += 1\n        col += 1\n        ret = 0\n        i = row\n        while i > 0:\n            j = col\n            while j > 0:\n                ret += self.__bit[i][j]\n                j -= (j & -j)\n            i -= (i & -i)\n        return ret\n\n    def __add(self, row, col, val):\n        row += 1\n        col += 1\n        i = row\n        while i <= len(self.__matrix):\n            j = col\n            while j <= len(self.__matrix[0]):\n                self.__bit[i][j] += val\n                j += (j & -j)\n            i += (i & -i)\n\n\n\n",
+      "sourcePath": "Python/range-sum-query-2d-mutable.py"
+    }
+  },
+  "seo": {
+    "title": "Range Sum Query 2D - Mutable Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Range Sum Query 2D - Mutable (LeetCode #308). Pattern: dfs backtracking. Time ctor: O(m * n), update: O(logm * logn), query: O(logm * logn), space O(m * n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Range Sum Query 2D - Mutable",
+      "Range Sum Query 2D - Mutable solution",
+      "Range Sum Query 2D - Mutable leetcode",
+      "tree",
+      "dfs-backtracking",
+      "quad-tree",
+      "2d-fenwick-tree",
+      "hard"
+    ],
+    "canonicalPath": "/problems/range-sum-query-2d-mutable"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Range Sum Query 2D - Mutable?",
+      "answer": "The reference solutions aim for ctor: O(m * n), update: O(logm * logn), query: O(logm * logn) time and O(m * n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Range Sum Query 2D - Mutable use?",
+      "answer": "It primarily maps to dfs backtracking, quad tree, and 2d fenwick tree, within the broader topic of tree."
+    },
+    {
+      "question": "Is Range Sum Query 2D - Mutable good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/range-sum-query-2d-mutable/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dfs backtracking, quad tree, and 2d fenwick tree approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Range Sum Query 2D - Mutable (#308) — Hard. Pattern: dfs backtracking, quad tree, and 2d fenwick tree. Complexity: ctor: O(m * n), update: O(logm * logn), query: O(logm * logn) time / O(m * n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Range Sum Query 2D - Mutable: show input structure (tree), highlight the moving parts of the dfs backtracking, quad tree, and 2d fenwick tree approach, and annotate each step with the maintained invariant and complexity."
+}

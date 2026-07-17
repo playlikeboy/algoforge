@@ -1,0 +1,56 @@
+{
+  "slug": "google-hash-table-questions",
+  "path": "/explore/google-hash-table-questions",
+  "h1": "Best Hash Table Questions for Google",
+  "intro": "A curated set of 13 Hash Table problems frequently useful for Google interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "two-sum",
+    "minimum-window-substring",
+    "max-points-on-a-line",
+    "happy-number",
+    "bulls-and-cows",
+    "palindrome-pairs",
+    "longest-substring-with-at-most-k-distinct-characters",
+    "longest-absolute-file-path",
+    "find-all-anagrams-in-a-string",
+    "contiguous-array",
+    "subarray-sum-equals-k",
+    "find-anagram-mappings",
+    "card-flipping-game"
+  ],
+  "faqs": [
+    {
+      "question": "How many Hash Table problems should I do for Google?",
+      "answer": "Quality over quantity: master patterns with 13 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Hash Table topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/google",
+      "label": "Google interview hub"
+    },
+    {
+      "href": "/topics/hash-table",
+      "label": "Hash Table problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Hash Table Questions for Google | AlgoForge",
+    "description": "Top Hash Table coding interview questions for Google. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Google Hash Table questions",
+      "Hash Table interview",
+      "Google leetcode"
+    ],
+    "canonicalPath": "/explore/google-hash-table-questions"
+  },
+  "kind": "company-topic"
+}

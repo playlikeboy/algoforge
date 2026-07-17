@@ -1,0 +1,162 @@
+{
+  "id": "2943",
+  "number": 2943,
+  "slug": "maximize-area-of-square-hole-in-grid",
+  "title": "Maximize Area of Square Hole in Grid",
+  "difficulty": "Medium",
+  "topics": [
+    "hash-table"
+  ],
+  "patterns": [
+    "sort",
+    "hash-map"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(h + v)",
+  "spaceComplexity": "O(h + v)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/maximize-area-of-square-hole-in-grid/",
+  "notes": [
+    "Array",
+    "Sort",
+    "Hash Table"
+  ],
+  "relatedSlugs": [
+    "find-players-with-zero-or-one-losses",
+    "relocate-marbles",
+    "check-if-an-array-is-consecutive",
+    "longest-substring-without-repeating-characters",
+    "group-anagrams",
+    "repeated-dna-sequences",
+    "shortest-word-distance-ii",
+    "maximum-size-subarray-sum-equals-k"
+  ],
+  "prevSlug": "find-words-containing-character",
+  "nextSlug": "minimum-number-of-coins-for-fruits",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Maximize Area of Square Hole in Grid?\n\n**Maximize Area of Square Hole in Grid** (LeetCode #2943) is a **Medium** problem that primarily trains **hash table**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sort and hash map**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Array, Sort, Hash Table.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/maximize-area-of-square-hole-in-grid/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Maximize Area of Square Hole in Grid\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sort and hash map**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(h + v)) and **space** (O(h + v)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(h + v)** time and **O(h + v)** space.\n\n### Pattern focus: sort and hash map\n\nUse the pattern as a checklist:\n\n- **sort** — confirm the invariant holds after each step\n- **hash map** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(h + v)** |\n| Space | **O(h + v)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Maximize Area of Square Hole in Grid\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sort and hash map — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sort and hash map**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **hash table**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Maximize Area of Square Hole in Grid** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **hash table**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "maximize-area-of-square-hole-in-grid.cpp",
+      "code": "// Time:  O(h + v), h = len(hBars), v = len(vBars)\n// Space: O(h + v)\n\n// array, hash table\nclass Solution {\npublic:\n    int maximizeSquareHoleArea(int n, int m, vector<int>& hBars, vector<int>& vBars) {\n        const auto& max_gap = [&](const auto& arr) {\n            int result = 1;\n            unordered_set<int> lookup(cbegin(arr), cend(arr));\n            while (!empty(lookup)) {\n                const int x = *begin(lookup);\n                int left = x;\n                for (; lookup.count(left - 1); --left);\n                int right = x;\n                for (; lookup.count(right + 1); ++right);\n                for (int i = left; i <= right; ++i) {\n                    lookup.erase(i);\n                }\n                result = max(result, (right - left + 1) + 1);\n            }\n            return result;\n        };\n\n        const int l = min(max_gap(hBars), max_gap(vBars));\n        return l * l;\n    }\n};\n\n// Time:  O(hlogh + vlogv), h = len(hBars), v = len(vBars)\n// Space: O(1)\n// array, sort\nclass Solution2 {\npublic:\n    int maximizeSquareHoleArea(int n, int m, vector<int>& hBars, vector<int>& vBars) {\n        const auto& max_gap = [&](auto& arr) {\n            sort(begin(arr), end(arr));\n            int result = 1;\n            for (int i = 0, l = 1; i < size(arr); ++i) {\n                result = max(result, ++l);\n                if (i + 1 < size(arr) && arr[i + 1] != arr[i] + 1) {\n                    l = 1;\n                }\n            }\n            return result;\n        };\n\n        const int l = min(max_gap(hBars), max_gap(vBars));\n        return l * l;\n    }\n};\n",
+      "sourcePath": "C++/maximize-area-of-square-hole-in-grid.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "maximize-area-of-square-hole-in-grid.py",
+      "code": "# Time:  O(h + v), h = len(hBars), v = len(vBars)\n# Space: O(h + v)\n\n# array, hash table\nclass Solution(object):\n    def maximizeSquareHoleArea(self, n, m, hBars, vBars):\n        \"\"\"\n        :type n: int\n        :type m: int\n        :type hBars: List[int]\n        :type vBars: List[int]\n        :rtype: int\n        \"\"\"\n        def max_gap(arr):\n            result = l = 1\n            lookup = set(arr)\n            while lookup:\n                x = next(iter(lookup))\n                left = x\n                while left-1 in lookup:\n                    left -= 1\n                right = x\n                while right+1 in lookup:\n                    right += 1\n                for i in xrange(left, right+1):\n                    lookup.remove(i)\n                result = max(result, (right-left+1)+1)\n            return result\n\n        return min(max_gap(hBars), max_gap(vBars))**2\n\n\n# Time:  O(hlogh + vlogv), h = len(hBars), v = len(vBars)\n# Space: O(1)\n# array, sort\nclass Solution2(object):\n    def maximizeSquareHoleArea(self, n, m, hBars, vBars):\n        \"\"\"\n        :type n: int\n        :type m: int\n        :type hBars: List[int]\n        :type vBars: List[int]\n        :rtype: int\n        \"\"\"\n        def max_gap(arr):\n            arr.sort()\n            result = l = 1\n            for i in xrange(len(arr)):\n                l += 1\n                result = max(result, l)\n                if i+1 != len(arr) and arr[i+1] != arr[i]+1:\n                    l = 1\n            return result\n\n        return min(max_gap(hBars), max_gap(vBars))**2\n",
+      "sourcePath": "Python/maximize-area-of-square-hole-in-grid.py"
+    }
+  },
+  "seo": {
+    "title": "Maximize Area of Square Hole in Grid Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Maximize Area of Square Hole in Grid (LeetCode #2943). Pattern: sort. Time O(h + v), space O(h + v). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Maximize Area of Square Hole in Grid",
+      "Maximize Area of Square Hole in Grid solution",
+      "Maximize Area of Square Hole in Grid leetcode",
+      "hash-table",
+      "sort",
+      "hash-map",
+      "medium"
+    ],
+    "canonicalPath": "/problems/maximize-area-of-square-hole-in-grid"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Maximize Area of Square Hole in Grid?",
+      "answer": "The reference solutions aim for O(h + v) time and O(h + v) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Maximize Area of Square Hole in Grid use?",
+      "answer": "It primarily maps to sort and hash map, within the broader topic of hash table."
+    },
+    {
+      "question": "Is Maximize Area of Square Hole in Grid good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/maximize-area-of-square-hole-in-grid/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sort and hash map approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Maximize Area of Square Hole in Grid (#2943) — Medium. Pattern: sort and hash map. Complexity: O(h + v) time / O(h + v) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Maximize Area of Square Hole in Grid: show input structure (hash table), highlight the moving parts of the sort and hash map approach, and annotate each step with the maintained invariant and complexity."
+}

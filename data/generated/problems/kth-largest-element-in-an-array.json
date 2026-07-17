@@ -1,0 +1,163 @@
+{
+  "id": "215",
+  "number": 215,
+  "slug": "kth-largest-element-in-an-array",
+  "title": "Kth Largest Element in an Array",
+  "difficulty": "Medium",
+  "topics": [
+    "array"
+  ],
+  "patterns": [],
+  "companies": [
+    "amazon",
+    "meta",
+    "microsoft",
+    "apple",
+    "bloomberg",
+    "pocket-gems"
+  ],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n) on average",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+  "notes": [
+    "Quick Select",
+    "Tri Partition"
+  ],
+  "relatedSlugs": [
+    "next-permutation",
+    "rotate-image",
+    "spiral-matrix",
+    "spiral-matrix-ii",
+    "set-matrix-zeroes",
+    "remove-duplicates-from-sorted-array-ii",
+    "missing-ranges",
+    "summary-ranges"
+  ],
+  "prevSlug": "shortest-palindrome",
+  "nextSlug": "combination-sum-iii",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Kth Largest Element in an Array?\n\n**Kth Largest Element in an Array** (LeetCode #215) is a **Medium** problem that primarily trains **array**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Quick Select, Tri Partition.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/kth-largest-element-in-an-array/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Kth Largest Element in an Array\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n) on average) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n) on average** time and **O(1)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n) on average** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Kth Largest Element in an Array\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **array**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Kth Largest Element in an Array** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **array**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "kth-largest-element-in-an-array.cpp",
+      "code": "// Time:  O(n) on average, using Median of Medians could achieve O(n) (Intro Select)\n// Space: O(1)\n\n// optimized for duplicated nums\nclass Solution {\npublic:\n    int findKthLargest(vector<int>& nums, int k) {\n        nth_element(nums, k - 1);\n        return nums[k - 1];\n    }\n    \nprivate:\n    void nth_element(vector<int>& nums, int n) {\n        int left = 0, right = size(nums) - 1;\n        default_random_engine gen((random_device())());\n        while (left <= right) {\n            // Generates a random int in [left, right].\n            uniform_int_distribution<int> dis(left, right);\n            int pivot_idx = dis(gen);\n            const auto& [pivot_left, pivot_right] = TriPartition(left, right, nums[pivot_idx], &nums);\n            if (pivot_left <= n && n <= pivot_right) {\n                return;\n            } else if (pivot_left > n) {\n                right = pivot_left - 1;\n            } else {  // pivot_right < n.\n                left = pivot_right + 1;\n            }\n        }\n    }\n    \n    pair<int, int> TriPartition(int left, int right, int target, vector<int> *nums) {\n        for (int mid = left; mid <= right;) {\n            if ((*nums)[mid] == target) {\n                ++mid;\n            } else if ((*nums)[mid] > target) {\n                swap((*nums)[left++], (*nums)[mid]);\n                ++mid;\n            } else {\n                swap((*nums)[mid], (*nums)[right--]);\n            }\n        }\n        return {left, right};\n    }\n};\n\n// Time:  O(n) on average, using Median of Medians could achieve O(n) (Intro Select)\n// Space: O(1)\nclass Solution2 {\npublic:\n    int findKthLargest(vector<int>& nums, int k) {\n        int left = 0, right = nums.size() - 1;\n        default_random_engine gen((random_device())());\n        while (left <= right) {\n            // Generates a random int in [left, right].\n            uniform_int_distribution<int> dis(left, right);\n            int pivot_idx = dis(gen);\n            int new_pivot_idx = PartitionAroundPivot(left, right, pivot_idx, &nums);\n            if (new_pivot_idx == k - 1) {\n                break;\n            } else if (new_pivot_idx > k - 1) {\n                right = new_pivot_idx - 1;\n            } else {  // new_pivot_idx < k - 1.\n                left = new_pivot_idx + 1;\n            }\n        }\n        return nums[k - 1];\n    }\n    \n    int PartitionAroundPivot(int left, int right, int pivot_idx, vector<int>* nums) {\n        auto& nums_ref = *nums;\n        int pivot_value = nums_ref[pivot_idx];\n        int new_pivot_idx = left;\n        swap(nums_ref[pivot_idx], nums_ref[right]);\n        for (int i = left; i < right; ++i) {\n            if (nums_ref[i] > pivot_value) {\n                swap(nums_ref[i], nums_ref[new_pivot_idx++]);\n            }\n        }\n        swap(nums_ref[right], nums_ref[new_pivot_idx]);\n        return new_pivot_idx;\n    }\n};\n\n// Time:  O(n) ~ O(n^2)\n// Space: O(1)\nclass Solution3 {\npublic:\n    int findKthLargest(vector<int>& nums, int k) {\n        nth_element(nums.begin(), next(nums.begin(), k - 1), nums.end(), greater<int>());\n        return *next(nums.begin(), k - 1);\n    }\n};\n",
+      "sourcePath": "C++/kth-largest-element-in-an-array.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "kth-largest-element-in-an-array.py",
+      "code": "# Time:  O(n) on average, using Median of Medians could achieve O(n) (Intro Select)\n# Space: O(1)\n\nfrom random import randint\n\n\n# optimized for duplicated nums\nclass Solution(object):\n    def findKthLargest(self, nums, k):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        def nth_element(nums, n, compare=lambda a, b: a < b):\n            def tri_partition(nums, left, right, target, compare):\n                mid = left\n                while mid <= right:\n                    if nums[mid] == target:\n                        mid += 1\n                    elif compare(nums[mid], target):\n                        nums[left], nums[mid] = nums[mid], nums[left]\n                        left += 1\n                        mid += 1\n                    else:\n                        nums[mid], nums[right] = nums[right], nums[mid]\n                        right -= 1\n                return left, right\n\n            left, right = 0, len(nums)-1\n            while left <= right:\n                pivot_idx = randint(left, right)\n                pivot_left, pivot_right = tri_partition(nums, left, right, nums[pivot_idx], compare)\n                if pivot_left <= n <= pivot_right:\n                    return\n                elif pivot_left > n:\n                    right = pivot_left-1\n                else:  # pivot_right < n.\n                    left = pivot_right+1\n\n        nth_element(nums, k-1, compare=lambda a, b: a > b)\n        return nums[k-1]\n\n\n# Time:  O(n) on average, using Median of Medians could achieve O(n) (Intro Select)\n# Space: O(1)\nclass Solution2(object):\n    # @param {integer[]} nums\n    # @param {integer} k\n    # @return {integer}\n    def findKthLargest(self, nums, k):\n        left, right = 0, len(nums) - 1\n        while left <= right:\n            pivot_idx = randint(left, right)\n            new_pivot_idx = self.PartitionAroundPivot(left, right, pivot_idx, nums)\n            if new_pivot_idx == k - 1:\n                return nums[new_pivot_idx]\n            elif new_pivot_idx > k - 1:\n                right = new_pivot_idx - 1\n            else:  # new_pivot_idx < k - 1.\n                left = new_pivot_idx + 1\n\n    def PartitionAroundPivot(self, left, right, pivot_idx, nums):\n        pivot_value = nums[pivot_idx]\n        new_pivot_idx = left\n        nums[pivot_idx], nums[right] = nums[right], nums[pivot_idx]\n        for i in xrange(left, right):\n            if nums[i] > pivot_value:\n                nums[i], nums[new_pivot_idx] = nums[new_pivot_idx], nums[i]\n                new_pivot_idx += 1\n\n        nums[right], nums[new_pivot_idx] = nums[new_pivot_idx], nums[right]\n        return new_pivot_idx\n\n",
+      "sourcePath": "Python/kth-largest-element-in-an-array.py"
+    }
+  },
+  "seo": {
+    "title": "Kth Largest Element in an Array Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Kth Largest Element in an Array (LeetCode #215). Pattern: algorithms. Time O(n) on average, space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Kth Largest Element in an Array",
+      "Kth Largest Element in an Array solution",
+      "Kth Largest Element in an Array leetcode",
+      "array",
+      "medium"
+    ],
+    "canonicalPath": "/problems/kth-largest-element-in-an-array"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Kth Largest Element in an Array?",
+      "answer": "The reference solutions aim for O(n) on average time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Kth Largest Element in an Array use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of array."
+    },
+    {
+      "question": "Is Kth Largest Element in an Array good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/kth-largest-element-in-an-array/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Kth Largest Element in an Array (#215) — Medium. Pattern: general problem-solving. Complexity: O(n) on average time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Kth Largest Element in an Array: show input structure (array), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

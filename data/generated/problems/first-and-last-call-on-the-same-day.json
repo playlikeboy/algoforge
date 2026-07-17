@@ -1,0 +1,145 @@
+{
+  "id": "1972",
+  "number": 1972,
+  "slug": "first-and-last-call-on-the-same-day",
+  "title": "First and Last Call On the Same Day",
+  "difficulty": "Hard",
+  "topics": [
+    "sql"
+  ],
+  "patterns": [],
+  "companies": [],
+  "languages": [
+    "mysql"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/first-and-last-call-on-the-same-day/",
+  "notes": [],
+  "relatedSlugs": [
+    "department-top-three-salaries",
+    "trips-and-users",
+    "median-employee-salary",
+    "find-median-given-frequency-of-numbers",
+    "find-cumulative-salary-of-an-employee",
+    "human-traffic-of-stadium",
+    "average-salary-departments-vs-company",
+    "students-report-by-geography"
+  ],
+  "prevSlug": "find-if-path-exists-in-graph",
+  "nextSlug": "count-nodes-equal-to-sum-of-descendants",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is First and Last Call On the Same Day?\n\n**First and Last Call On the Same Day** (LeetCode #1972) is a **Hard** problem that primarily trains **sql**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/first-and-last-call-on-the-same-day/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for First and Last Call On the Same Day\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(n)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on First and Last Call On the Same Day\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal general problem-solving solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `first-and-last-call-on-the-same-day`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **sql**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **First and Last Call On the Same Day** in a second language (mysql).\n2. Drill 3–5 more problems tagged **sql**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "mysql": {
+      "language": "MySQL",
+      "languageSlug": "mysql",
+      "filename": "first-and-last-call-on-the-same-day.sql",
+      "code": "# Time:  O(n)\n# Space: O(n)\n\nWITH call_cte AS\n(\n    SELECT caller_id AS user_id, call_time, recipient_id\n    FROM Calls\n    UNION \n    SELECT recipient_id AS user_id, call_time, caller_id AS recipient_id\n    FROM Calls\n),\nfirst_last_cte AS (\n    SELECT \n        user_id, \n        DATE(call_time) AS day, \n        MIN(call_time)  AS min_time, \n        MAX(call_time)  AS max_time\n    FROM call_cte\n    GROUP BY 1, 2\n    ORDER BY NULL\n),\nfirst_cte AS (\n    SELECT a.user_id, DATE(call_time) AS call_date, recipient_id\n    FROM call_cte a\n    INNER JOIN first_last_cte b\n    ON a.user_id = b.user_id\n    AND a.call_time = b.min_time\n),\nlast_cte AS (\n    SELECT a.user_id, DATE(call_time) AS call_date, recipient_id\n    FROM call_cte a\n    INNER JOIN first_last_cte b\n    ON a.user_id = b.user_id\n    AND a.call_time = b.max_time\n)\n\nSELECT DISTINCT a.user_id\nFROM first_cte a\nINNER JOIN last_cte b\nON a.user_id = b.user_id\nAND a.call_date = b.call_date\nAND a.recipient_id = b.recipient_id;\n\n\n# Time:  O(nlogn)\n# Space: O(n)\nWITH call_cte AS\n(\n    SELECT caller_id AS user_id, call_time, recipient_id\n    FROM Calls\n    UNION \n    SELECT recipient_id AS user_id, call_time, caller_id AS recipient_id\n    FROM Calls\n),\ncall_ordering_cte AS\n(\n    SELECT  user_id, recipient_id, DATE(call_time) AS day,\n    RANK() OVER(PARTITION BY user_id, DATE(call_time) ORDER BY call_time ASC) AS first,\n    RANK() OVER(PARTITION BY user_id, DATE(call_time) ORDER BY call_time DESC) AS last\n    FROM call_cte\n)\n\nSELECT DISTINCT user_id\nFROM call_ordering_cte\nWHERE first = 1 OR last = 1\nGROUP BY user_id, day\nHAVING COUNT(DISTINCT recipient_id) = 1\nORDER BY NULL;\n",
+      "sourcePath": "MySQL/first-and-last-call-on-the-same-day.sql"
+    }
+  },
+  "seo": {
+    "title": "First and Last Call On the Same Day Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for First and Last Call On the Same Day (LeetCode #1972). Pattern: algorithms. Time O(n), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "First and Last Call On the Same Day",
+      "First and Last Call On the Same Day solution",
+      "First and Last Call On the Same Day leetcode",
+      "sql",
+      "hard"
+    ],
+    "canonicalPath": "/problems/first-and-last-call-on-the-same-day"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of First and Last Call On the Same Day?",
+      "answer": "The reference solutions aim for O(n) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does First and Last Call On the Same Day use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of sql."
+    },
+    {
+      "question": "Is First and Last Call On the Same Day good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/first-and-last-call-on-the-same-day/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "First and Last Call On the Same Day (#1972) — Hard. Pattern: general problem-solving. Complexity: O(n) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for First and Last Call On the Same Day: show input structure (sql), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

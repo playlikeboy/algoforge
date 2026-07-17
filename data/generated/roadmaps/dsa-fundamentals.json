@@ -1,0 +1,54 @@
+{
+  "slug": "dsa-fundamentals",
+  "name": "DSA Fundamentals Roadmap",
+  "description": "A beginner-to-job path: arrays → hashing → trees → graphs → DP.",
+  "steps": [
+    {
+      "title": "Arrays & hashing",
+      "description": "Two Sum, Contains Duplicate, Group Anagrams",
+      "problemSlugs": [
+        "two-sum",
+        "contains-duplicate",
+        "group-anagrams"
+      ]
+    },
+    {
+      "title": "Two pointers & windows",
+      "description": "3Sum, Container With Most Water, Longest Substring",
+      "problemSlugs": [
+        "3sum",
+        "container-with-most-water",
+        "longest-substring-without-repeating-characters"
+      ]
+    },
+    {
+      "title": "Trees & graphs",
+      "description": "Traversals, BST, islands, courses",
+      "problemSlugs": [
+        "invert-binary-tree",
+        "validate-binary-search-tree",
+        "number-of-islands",
+        "course-schedule"
+      ]
+    },
+    {
+      "title": "Dynamic programming",
+      "description": "Climbing Stairs through classic DP",
+      "problemSlugs": [
+        "climbing-stairs",
+        "house-robber",
+        "coin-change"
+      ]
+    }
+  ],
+  "seo": {
+    "title": "DSA Roadmap for Coding Interviews | AlgoForge",
+    "description": "A complete data structures and algorithms roadmap for interview prep.",
+    "keywords": [
+      "dsa roadmap",
+      "coding interview roadmap",
+      "leetcode roadmap"
+    ],
+    "canonicalPath": "/roadmaps/dsa-fundamentals"
+  }
+}

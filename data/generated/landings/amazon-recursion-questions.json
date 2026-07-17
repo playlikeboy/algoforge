@@ -1,0 +1,61 @@
+{
+  "slug": "amazon-recursion-questions",
+  "path": "/explore/amazon-recursion-questions",
+  "h1": "Best Recursion Questions for Amazon",
+  "intro": "A curated set of 18 Recursion problems frequently useful for Amazon interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "unique-binary-search-trees-ii",
+    "validate-binary-search-tree",
+    "same-tree",
+    "maximum-depth-of-binary-tree",
+    "construct-binary-tree-from-preorder-and-inorder-traversal",
+    "construct-binary-tree-from-inorder-and-postorder-traversal",
+    "convert-sorted-array-to-binary-search-tree",
+    "convert-sorted-list-to-binary-search-tree",
+    "balanced-binary-tree",
+    "minimum-depth-of-binary-tree",
+    "flatten-binary-tree-to-linked-list",
+    "populating-next-right-pointers-in-each-node",
+    "binary-tree-maximum-path-sum",
+    "sum-root-to-leaf-numbers",
+    "different-ways-to-add-parentheses",
+    "house-robber-iii",
+    "sum-of-left-leaves",
+    "path-sum-iii"
+  ],
+  "faqs": [
+    {
+      "question": "How many Recursion problems should I do for Amazon?",
+      "answer": "Quality over quantity: master patterns with 15 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Recursion topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/amazon",
+      "label": "Amazon interview hub"
+    },
+    {
+      "href": "/topics/recursion",
+      "label": "Recursion problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Recursion Questions for Amazon | AlgoForge",
+    "description": "Top Recursion coding interview questions for Amazon. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Amazon Recursion questions",
+      "Recursion interview",
+      "Amazon leetcode"
+    ],
+    "canonicalPath": "/explore/amazon-recursion-questions"
+  },
+  "kind": "company-topic"
+}

@@ -1,0 +1,164 @@
+{
+  "id": "1157",
+  "number": 1157,
+  "slug": "online-majority-element-in-subarray",
+  "title": "Online Majority Element In Subarray",
+  "difficulty": "Hard",
+  "topics": [
+    "math"
+  ],
+  "patterns": [
+    "binary-search",
+    "segment-tree",
+    "boyer-moore-majority-vote-algorithm"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "ctor: O(n) query: O(klogn)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/online-majority-element-in-subarray/",
+  "notes": [
+    "Binary Search",
+    "Segment Tree",
+    "Boyer–Moore Majority Vote Algorithm"
+  ],
+  "relatedSlugs": [
+    "arranging-coins",
+    "distribute-candies-to-people",
+    "check-if-a-number-is-majority-element-in-a-sorted-array",
+    "sum-of-mutated-array-closest-to-target",
+    "minimum-garden-perimeter-to-collect-enough-apples",
+    "closest-prime-numbers-in-range",
+    "largest-prime-from-consecutive-prime-sum",
+    "minimum-operations-to-transform-array-into-alternating-prime"
+  ],
+  "prevSlug": "swap-for-longest-repeated-character-substring",
+  "nextSlug": "market-analysis-i",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Online Majority Element In Subarray?\n\n**Online Majority Element In Subarray** (LeetCode #1157) is a **Hard** problem that primarily trains **math**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **binary search, segment tree, and boyer moore majority vote algorithm**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Binary Search, Segment Tree, Boyer–Moore Majority Vote Algorithm.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/online-majority-element-in-subarray/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Online Majority Element In Subarray\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **binary search, segment tree, and boyer moore majority vote algorithm**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (ctor: O(n) query: O(klogn)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **ctor: O(n) query: O(klogn)** time and **O(n)** space.\n\n### Pattern focus: binary search, segment tree, and boyer moore majority vote algorithm\n\nUse the pattern as a checklist:\n\n- **binary search** — confirm the invariant holds after each step\n- **segment tree** — confirm the invariant holds after each step\n- **boyer moore majority vote algorithm** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **ctor: O(n) query: O(klogn)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Online Majority Element In Subarray\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for binary search, segment tree, and boyer moore majority vote algorithm — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **binary search, segment tree, and boyer moore majority vote algorithm**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **math**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Online Majority Element In Subarray** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **math**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "online-majority-element-in-subarray.cpp",
+      "code": "// Time:  ctor:  O(n)\n//        query: O(klogn), k = log2(Q/ERROR_RATE)\n// Space: O(n)\n\nclass MajorityChecker {\npublic:\n    MajorityChecker(vector<int>& arr)\n      : arr_(arr)\n      , gen_((random_device())())\n    {\n        for (int i = 0; i < arr_.size(); ++i) {\n            inv_idx_[arr_[i]].emplace_back(i);\n        }\n    }\n    \n    int query(int left, int right, int threshold) {\n        for (int i = 0; i < K; ++i) {\n            const auto& m = arr_[uniform_int_distribution<int>{left, right}(gen_)];\n            if (count(inv_idx_, m, left, right) >= threshold) {\n                return m;\n            }\n        }\n        return -1;\n    }\n\nprivate:\n    int count(const unordered_map<int, vector<int>>& inv_idx, int m, int left, int right) {\n        const auto& l = lower_bound(inv_idx_[m].cbegin(), inv_idx_[m].cend(), left);\n        const auto& r = upper_bound(inv_idx_[m].cbegin(), inv_idx_[m].cend(), right);\n        return r - l;\n    }\n\n    static constexpr int Q = 10000;\n    static constexpr double ERROR_RATE = 0.001;\n    static constexpr int K = log(Q / ERROR_RATE) / log(2) + 1;\n    const vector<int>& arr_;\n    unordered_map<int, vector<int>> inv_idx_;\n    default_random_engine gen_;\n};\n\n// Time:  ctor:  O(n)\n//        query: O(sqrt(n) * logn)\n// Space: O(n)\nclass MajorityChecker2 {\npublic:\n    MajorityChecker2(vector<int>& arr)\n      : arr_(arr)\n      , bound_(round(sqrt(arr_.size())))\n    {\n        for (int i = 0; i < arr_.size(); ++i) {\n            inv_idx_[arr_[i]].emplace_back(i);\n        }\n        for (const auto& [i, group] : inv_idx_) {\n            if (group.size() >= bound_) {\n                majorities_.emplace_back(i);\n            }\n        }\n    }\n    \n    int query(int left, int right, int threshold) {\n        if (right - left + 1 < bound_) {\n            const auto& m = boyer_moore_majority_vote(arr_, left, right);\n            if (count(inv_idx_, m, left, right) >= threshold) {\n                return m;\n            }\n        } else {\n            for (const auto& m : majorities_) {\n                if (count(inv_idx_, m, left, right) >= threshold) {\n                    return m;\n                }\n            }\n        }\n        return -1;\n    }\n\nprivate:\n    int count(const unordered_map<int, vector<int>>& inv_idx, int m, int left, int right) {\n        const auto& l = lower_bound(inv_idx_[m].cbegin(), inv_idx_[m].cend(), left);\n        const auto& r = upper_bound(inv_idx_[m].cbegin(), inv_idx_[m].cend(), right);\n        return r - l;\n    }\n    \n    int boyer_moore_majority_vote(const vector<int>& nums, int left, int right) {\n        int m = nums[left], cnt = 1;\n        for (int i = left; i <= right; ++i) {\n            if (m == nums[i]) {\n                ++cnt;\n            } else {\n                --cnt;\n                if (cnt == 0) {\n                    m = nums[i];\n                    cnt = 1;\n                }\n            }\n        }\n        return m;\n    }\n\n    const vector<int>& arr_;\n    const int bound_;\n    unordered_map<int, vector<int>> inv_idx_;\n    vector<int> majorities_;\n};\n\n// Time:  ctor:  O(nlogn)\n//        query: O((logn)^2)\n// Space: O(n)\nclass MajorityChecker3 {\nprivate:\n    struct SegmentTreeRecu {\n    public:\n        SegmentTreeRecu(const vector<int>& nums,\n                    const function<int(int, int, int)>& count)\n          : original_length_(nums.size())\n          , count_(count)\n        {\n            int size = 1;\n            while (size <= original_length_) {\n                size *= 2;\n            }\n            if (original_length_ & (original_length_ - 1)) {\n                size *= 2;\n            }\n            tree_ = vector<int>(size - 1, -1);\n            constructTree(nums, 0, original_length_ - 1, 0);\n        }\n\n        pair<int, int> query(int i, int j) const {\n            return queryRange(i, j, 0, original_length_- 1, 0);\n        }\n\n    private:\n        void constructTree(const vector<int>& nums, int left, int right, int idx) {\n            if (left > right) {\n                 return;\n            }\n            if (left == right) {\n                tree_[idx] = nums[left];\n                return;\n            }\n            const auto& mid = left + (right - left) / 2;\n            constructTree(nums, left, mid, idx * 2 + 1);\n            constructTree(nums, mid+1, right, idx * 2 + 2);\n            if (tree_[idx * 2 + 1] != -1 &&\n                count_(tree_[idx * 2 + 1], left, right) * 2 > right - left + 1) {\n                tree_[idx] = tree_[idx * 2 + 1];\n            } else if (tree_[idx * 2 + 2] != -1 &&\n                       count_(tree_[idx * 2 + 2], left, right) * 2 > right - left + 1) {\n                tree_[idx] = tree_[idx * 2 + 2];\n            }\n        }\n    \n        pair<int, int> queryRange(int range_left, int range_right,\n                                  int left, int right, int idx) const {\n            if (left > right) {\n                return {-1, -1};\n            }\n            if (right < range_left || left > range_right) {\n                return {-1, -1};\n            }\n            if (range_left <= left && right <= range_right) {\n                if (tree_[idx] != -1) {\n                    const auto& c = count_(tree_[idx], range_left, range_right);\n                    if (c * 2 > range_right - range_left + 1) {\n                        return {tree_[idx], c};\n                    }\n                }\n            } else {\n                const auto& mid = left + (right - left) / 2;\n                auto result = queryRange(range_left, range_right, left, mid, idx * 2 + 1);\n                if (result.first != -1) {\n                    return result;\n                }\n                result = queryRange(range_left, range_right, mid + 1, right, idx * 2 + 2);\n                if (result.first != -1) {\n                    return result;\n                }\n            }\n            return {-1, -1};\n        }\n        \n    private:\n        const int original_length_;\n        const function<int(int, int, int)> count_;\n        vector<int> tree_;\n    };\n\n    int count(const unordered_map<int, vector<int>>& inv_idx, int m, int left, int right) {\n        const auto& l = lower_bound(inv_idx_[m].cbegin(), inv_idx_[m].cend(), left);\n        const auto& r = upper_bound(inv_idx_[m].cbegin(), inv_idx_[m].cend(), right);\n        return r - l;\n    }\n\npublic:\n    MajorityChecker3(vector<int>& arr)\n      : arr_(arr)\n    {\n        for (int i = 0; i < arr_.size(); ++i) {\n            inv_idx_[arr_[i]].push_back(i);\n        }\n        segment_tree_ = make_unique<SegmentTreeRecu>(arr,\n                            bind(&MajorityChecker3::count, this, cref(inv_idx_),\n                                 placeholders::_1,\n                                 placeholders::_2,\n                                 placeholders::_3));\n    }\n    \n    int query(int left, int right, int threshold) {\n        const auto& result = segment_tree_->query(left, right);\n        if (result.second >= threshold) {\n            return result.first;\n        }\n        return -1;\n    }\n\nprivate:\n    const vector<int>& arr_;\n    unordered_map<int, vector<int>> inv_idx_;\n    unique_ptr<SegmentTreeRecu> segment_tree_;\n};\n\n// Time:  ctor:  O(n)\n//        query: O(sqrt(n) * logn)\n// Space: O(n)\nclass MajorityChecker4 {\npublic:\n    MajorityChecker4(vector<int>& arr)\n      : arr_(arr)\n      , bucket_size_(round(sqrt(arr_.size())))\n    {\n        for (int i = 0; i < arr_.size(); ++i) {\n            inv_idx_[arr_[i]].emplace_back(i);\n        }\n        for (int left = 0; left < arr_.size(); left += bucket_size_) {\n            const auto right = min(left + bucket_size_ - 1, int(arr_.size()) - 1);\n            bucket_majorities_.emplace_back(boyer_moore_majority_vote(arr_, left, right));\n        }\n    }\n    \n    int query(int left, int right, int threshold) {\n        int l = left / bucket_size_;\n        int r = right / bucket_size_;\n        if (l == r) {\n            const auto& m = boyer_moore_majority_vote(arr_, left, right);\n            if (count(inv_idx_, m, left, right) >= threshold) {\n                return m;\n            }\n            return -1;\n        }\n        else {\n            int m = boyer_moore_majority_vote(arr_, left, (l + 1) * bucket_size_ - 1);\n            if (count(inv_idx_, m, left, right) >= threshold) {\n                return m;\n            }\n            m = boyer_moore_majority_vote(arr_, r * bucket_size_, right);\n            if (count(inv_idx_, m, left, right) >= threshold) {\n                return m;\n            }\n            for (int i = l + 1; i < r; ++i) {\n                if (count(inv_idx_, bucket_majorities_[i], left, right) >= threshold) {\n                    return bucket_majorities_[i];\n                }\n            }\n            return -1;\n        }\n    }\n\nprivate:\n    int count(const unordered_map<int, vector<int>>& inv_idx, int m, int left, int right) {\n        const auto& l = lower_bound(inv_idx_[m].cbegin(), inv_idx_[m].cend(), left);\n        const auto& r = upper_bound(inv_idx_[m].cbegin(), inv_idx_[m].cend(), right);\n        return r - l;\n    }\n    \n    int boyer_moore_majority_vote(const vector<int>& nums, int left, int right) {\n        int m = nums[left], cnt = 1;\n        for (int i = left; i <= right; ++i) {\n            if (m == nums[i]) {\n                ++cnt;\n            } else {\n                --cnt;\n                if (cnt == 0) {\n                    m = nums[i];\n                    cnt = 1;\n                }\n            }\n        }\n        return m;\n    }\n\n    const vector<int>& arr_;\n    const int bucket_size_;\n    unordered_map<int, vector<int>> inv_idx_;\n    vector<int> bucket_majorities_;\n};\n",
+      "sourcePath": "C++/online-majority-element-in-subarray.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "online-majority-element-in-subarray.py",
+      "code": "# Time:  ctor:  O(n)\n#        query: O(klogn), k = log2(Q/ERROR_RATE)\n# Space: O(n)\n\nimport collections\nimport random\nimport bisect\n\n\nclass MajorityChecker(object):\n\n    def __init__(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        \"\"\"\n        Q, ERROR_RATE = 10000, 0.001\n        self.__K = int(Q/ERROR_RATE).bit_length()  # floor(log2(Q/ERROR_RATE))+1 = 24\n        self.__arr = arr\n        self.__inv_idx = collections.defaultdict(list)\n        for i, x in enumerate(self.__arr):\n            self.__inv_idx[x].append(i)\n\n    def query(self, left, right, threshold):\n        \"\"\"\n        :type left: int\n        :type right: int\n        :type threshold: int\n        :rtype: int\n        \"\"\"\n        def count(inv_idx, m, left, right):\n            return bisect.bisect_right(inv_idx[m], right) - \\\n                   bisect.bisect_left(inv_idx[m], left)\n\n        for _ in xrange(self.__K):\n            m = self.__arr[random.randint(left, right)]\n            if count(self.__inv_idx, m, left, right) >= threshold:\n                return m\n        return -1\n\n\n# Time:  ctor:  O(n)\n#        query: O(sqrt(n)*logn)\n# Space: O(n)\nimport collections\nimport bisect\n\n\nclass MajorityChecker2(object):\n\n    def __init__(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        \"\"\"\n        self.__arr = arr\n        self.__inv_idx = collections.defaultdict(list)\n        for i, x in enumerate(self.__arr):\n            self.__inv_idx[x].append(i)\n        self.__bound = int(round((len(arr)**0.5)))\n        self.__majorities = [i for i, group in self.__inv_idx.iteritems() if len(group) >= self.__bound]\n\n    def query(self, left, right, threshold):\n        \"\"\"\n        :type left: int\n        :type right: int\n        :type threshold: int\n        :rtype: int\n        \"\"\"\n        def count(inv_idx, m, left, right):\n            return bisect.bisect_right(inv_idx[m], right) - \\\n                   bisect.bisect_left(inv_idx[m], left)\n\n        def boyer_moore_majority_vote(nums, left, right):\n            m, cnt = nums[left], 1\n            for i in xrange(left+1, right+1):\n                if m == nums[i]:\n                    cnt += 1\n                else:\n                    cnt -= 1\n                    if cnt == 0:\n                        m = nums[i]\n                        cnt = 1\n            return m\n\n        if right-left+1 < self.__bound:\n            m = boyer_moore_majority_vote(self.__arr, left, right)\n            if count(self.__inv_idx, m, left, right) >= threshold:\n                return m\n        else:\n            for m in self.__majorities:\n                if count(self.__inv_idx, m, left, right) >= threshold:\n                    return m\n        return -1\n\n\n# Time:  ctor:  O(nlogn)\n#        query: O((logn)^2)\n# Space: O(n)\nimport functools\n\n\nclass SegmentTreeRecu(object):  # 0-based index\n    def __init__(self, nums, count):\n        \"\"\"\n        initialize your data structure here.\n        :type nums: List[int]\n        \"\"\"\n        N = len(nums)\n        self.__original_length = N\n        self.__tree_length = 2**(N.bit_length() + (N&(N-1) != 0))-1\n        self.__tree = [-1 for _ in range(self.__tree_length)]\n        self.__count = count\n        self.__constructTree(nums, 0, self.__original_length-1, 0)\n\n    def query(self, i, j):\n        return self.__queryRange(i, j, 0, self.__original_length-1, 0)\n\n    def __constructTree(self, nums, left, right, idx):\n        if left > right:\n             return\n        if left == right:\n            self.__tree[idx] = nums[left]\n            return \n        mid = left + (right-left)//2\n        self.__constructTree(nums, left, mid, idx*2 + 1)\n        self.__constructTree(nums, mid+1, right, idx*2 + 2)\n        if self.__tree[idx*2 + 1] != -1 and \\\n           self.__count(self.__tree[idx*2 + 1], left, right)*2 > right-left+1:\n            self.__tree[idx] = self.__tree[idx*2 + 1] \n        elif self.__tree[idx*2 + 2] != -1 and \\\n             self.__count(self.__tree[idx*2 + 2], left, right)*2 > right-left+1:\n            self.__tree[idx] = self.__tree[idx*2 + 2] \n\n    def __queryRange(self, range_left, range_right, left, right, idx):\n        if left > right:\n            return (-1, -1)\n        if right < range_left or left > range_right:\n            return (-1, -1)\n        if range_left <= left and right <= range_right:\n            if self.__tree[idx] != -1:\n                c = self.__count(self.__tree[idx], range_left, range_right)\n                if c*2 > range_right-range_left+1:\n                    return (self.__tree[idx], c)\n        else:\n            mid = left + (right-left)//2\n            result = self.__queryRange(range_left, range_right, left, mid, idx*2 + 1)\n            if result[0] != -1:\n                return result\n            result = self.__queryRange(range_left, range_right, mid + 1, right, idx*2 + 2)\n            if result[0] != -1:\n                return result\n        return (-1, -1)\n\n\nclass MajorityChecker3(object):\n\n    def __init__(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        \"\"\"\n        def count(inv_idx, m, left, right):\n            return bisect.bisect_right(inv_idx[m], right) - \\\n                   bisect.bisect_left(inv_idx[m], left)\n\n        self.__arr = arr\n        self.__inv_idx = collections.defaultdict(list)\n        for i, x in enumerate(self.__arr):\n            self.__inv_idx[x].append(i)\n        self.__segment_tree = SegmentTreeRecu(arr, functools.partial(count, self.__inv_idx))\n\n    def query(self, left, right, threshold):\n        \"\"\"\n        :type left: int\n        :type right: int\n        :type threshold: int\n        :rtype: int\n        \"\"\"\n        result = self.__segment_tree.query(left, right)\n        if result[1] >= threshold:\n            return result[0]\n        return -1\n\n\n# Time:  ctor:  O(n)\n#        query: O(sqrt(n)*logn)\n# Space: O(n)\nimport collections\nimport bisect\n\n\nclass MajorityChecker4(object):\n\n    def __init__(self, arr):\n        \"\"\"\n        :type arr: List[int]\n        \"\"\"\n        self.__arr = arr\n        self.__inv_idx = collections.defaultdict(list)\n        for i, x in enumerate(self.__arr):\n            self.__inv_idx[x].append(i)\n        self.__bucket_size = int(round((len(arr)**0.5)))\n        self.__bucket_majorities = []\n        for left in xrange(0, len(self.__arr), self.__bucket_size):\n            right = min(left+self.__bucket_size-1, len(self.__arr)-1)\n            self.__bucket_majorities.append(self.__boyer_moore_majority_vote(self.__arr, left, right))\n\n    def query(self, left, right, threshold):\n        \"\"\"\n        :type left: int\n        :type right: int\n        :type threshold: int\n        :rtype: int\n        \"\"\"\n        def count(inv_idx, m, left, right):\n            return bisect.bisect_right(inv_idx[m], right) - \\\n                   bisect.bisect_left(inv_idx[m], left)\n\n        l, r = left//self.__bucket_size, right//self.__bucket_size\n        if l == r:\n            m = self.__boyer_moore_majority_vote(self.__arr, left, right)\n            if count(self.__inv_idx, m, left, right) >= threshold:\n                return m\n            return -1\n        else:\n            m = self.__boyer_moore_majority_vote(self.__arr, left, (l+1)*self.__bucket_size-1)\n            if count(self.__inv_idx, m, left, right) >= threshold:\n                return m\n            m = self.__boyer_moore_majority_vote(self.__arr, r*self.__bucket_size, right)\n            if count(self.__inv_idx, m, left, right) >= threshold:\n                return m\n            for i in xrange(l+1, r):\n                if count(self.__inv_idx, self.__bucket_majorities[i], left, right) >= threshold:\n                    return self.__bucket_majorities[i]\n            return -1\n    \n    def __boyer_moore_majority_vote(self, nums, left, right):\n            m, cnt = nums[left], 1\n            for i in xrange(left+1, right+1):\n                if m == nums[i]:\n                    cnt += 1\n                else:\n                    cnt -= 1\n                    if cnt == 0:\n                        m = nums[i]\n                        cnt = 1\n            return m\n",
+      "sourcePath": "Python/online-majority-element-in-subarray.py"
+    }
+  },
+  "seo": {
+    "title": "Online Majority Element In Subarray Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Online Majority Element In Subarray (LeetCode #1157). Pattern: binary search. Time ctor: O(n) query: O(klogn), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Online Majority Element In Subarray",
+      "Online Majority Element In Subarray solution",
+      "Online Majority Element In Subarray leetcode",
+      "math",
+      "binary-search",
+      "segment-tree",
+      "boyer-moore-majority-vote-algorithm",
+      "hard"
+    ],
+    "canonicalPath": "/problems/online-majority-element-in-subarray"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Online Majority Element In Subarray?",
+      "answer": "The reference solutions aim for ctor: O(n) query: O(klogn) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Online Majority Element In Subarray use?",
+      "answer": "It primarily maps to binary search, segment tree, and boyer moore majority vote algorithm, within the broader topic of math."
+    },
+    {
+      "question": "Is Online Majority Element In Subarray good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/online-majority-element-in-subarray/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the binary search, segment tree, and boyer moore majority vote algorithm approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Online Majority Element In Subarray (#1157) — Hard. Pattern: binary search, segment tree, and boyer moore majority vote algorithm. Complexity: ctor: O(n) query: O(klogn) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Online Majority Element In Subarray: show input structure (math), highlight the moving parts of the binary search, segment tree, and boyer moore majority vote algorithm approach, and annotate each step with the maintained invariant and complexity."
+}

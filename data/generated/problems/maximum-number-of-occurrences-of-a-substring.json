@@ -1,0 +1,161 @@
+{
+  "id": "1297",
+  "number": 1297,
+  "slug": "maximum-number-of-occurrences-of-a-substring",
+  "title": "Maximum Number of Occurrences of a Substring",
+  "difficulty": "Medium",
+  "topics": [
+    "two-pointers"
+  ],
+  "patterns": [
+    "sliding-window",
+    "rabin-karp-algorithm"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/",
+  "notes": [
+    "Sliding Window",
+    "Rabin-Karp Algorithm"
+  ],
+  "relatedSlugs": [
+    "distinct-echo-substrings",
+    "longest-repeating-character-replacement",
+    "fruit-into-baskets",
+    "binary-subarrays-with-sum",
+    "max-consecutive-ones-iii",
+    "minimum-swaps-to-group-all-1s-together",
+    "swap-for-longest-repeated-character-substring",
+    "invalid-transactions"
+  ],
+  "prevSlug": "divide-array-in-sets-of-k-consecutive-numbers",
+  "nextSlug": "maximum-candies-you-can-get-from-boxes",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Maximum Number of Occurrences of a Substring?\n\n**Maximum Number of Occurrences of a Substring** (LeetCode #1297) is a **Medium** problem that primarily trains **two pointers**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sliding window and rabin karp algorithm**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Sliding Window, Rabin-Karp Algorithm.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Maximum Number of Occurrences of a Substring\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sliding window and rabin karp algorithm**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(n)** space.\n\n### Pattern focus: sliding window and rabin karp algorithm\n\nUse the pattern as a checklist:\n\n- **sliding window** — confirm the invariant holds after each step\n- **rabin karp algorithm** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Maximum Number of Occurrences of a Substring\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sliding window and rabin karp algorithm — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sliding window and rabin karp algorithm**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **two pointers**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Maximum Number of Occurrences of a Substring** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **two pointers**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "maximum-number-of-occurrences-of-a-substring.cpp",
+      "code": "// Time:  O(n)\n// Space: O(n)\n\n// rolling hash (Rabin-Karp Algorithm)\nclass Solution {\npublic:\n    int maxFreq(string s, int maxLetters, int minSize, int maxSize) {\n        static const uint64_t M = 1000000007;\n        static const uint64_t p = 113; \n        uint64_t power = pow(p, minSize - 1, M), rolling_hash = 0;\n\n        int left = 0;\n        unordered_map<int, int> lookup;\n        unordered_map<char, int> count;\n        for (int right = 0; right < s.length(); ++right) {\n            ++count[s[right]];\n            if (right - left + 1 > minSize) {\n                --count[s[left]];\n                rolling_hash = (rolling_hash + M - (s[left] * power) % M) % M;\n                if (!count[s[left]]) {\n                    count.erase(s[left]);\n                }\n                ++left;\n            }\n            rolling_hash = ((rolling_hash * p) % M + s[right]) % M;\n            if (right - left + 1 == minSize && count.size() <= maxLetters) {\n                ++lookup[rolling_hash];\n            }\n        }\n        return lookup.empty()\n               ? 0 \n               : max_element(lookup.cbegin(), lookup.cend(), \n                             [](const auto& a, const auto& b) {\n                                 return a.second < b.second;\n                             })->second;\n    }\n\nprivate:\n    uint64_t pow(uint64_t a,uint64_t b, uint64_t m) {\n        a %= m;\n        uint64_t result = 1;\n        while (b) {\n            if (b & 1) {\n                result = (result * a) % m;\n            }\n            a = (a * a) % m;\n            b >>= 1;\n        }\n        return result;\n    }\n};\n\n// Time:  O(m * n), m = 26\n// Space: O(m * n)\nclass Solution2 {\npublic:\n    int maxFreq(string s, int maxLetters, int minSize, int maxSize) {\n        unordered_map<string, int> lookup;\n        for (int right = minSize - 1; right < s.length(); ++right) {\n            const auto& word = s.substr(right - minSize + 1, minSize);\n            if (lookup.count(word)) {\n                ++lookup[word];\n            } else if (unique_count(word) <= maxLetters) {\n                lookup[word] = 1;\n            }\n        }\n        return lookup.empty()\n               ? 0\n               : max_element(lookup.cbegin(), lookup.cend(), \n                             [](const auto& a, const auto& b) {\n                                 return a.second < b.second;\n                             })->second;\n    }\n\nprivate:\n    int unique_count(const string& word) {\n        unordered_set<char> lookup;\n        for (const auto& c : word) {\n            lookup.emplace(c);\n        }\n        return lookup.size();\n    }\n};\n",
+      "sourcePath": "C++/maximum-number-of-occurrences-of-a-substring.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "maximum-number-of-occurrences-of-a-substring.py",
+      "code": "# Time:  O(n)\n# Space: O(n)\n\nimport collections\n\n\n# rolling hash (Rabin-Karp Algorithm)\nclass Solution(object):\n    def maxFreq(self, s, maxLetters, minSize, maxSize):\n        \"\"\"\n        :type s: str\n        :type maxLetters: int\n        :type minSize: int\n        :type maxSize: int\n        :rtype: int\n        \"\"\"\n        M, p = 10**9+7, 113\n        power, rolling_hash = pow(p, minSize-1, M), 0\n\n        left = 0\n        lookup, count = collections.defaultdict(int), collections.defaultdict(int)\n        for right in xrange(len(s)):\n            count[s[right]] += 1\n            if right-left+1 > minSize:\n                count[s[left]] -= 1\n                rolling_hash = (rolling_hash - ord(s[left])*power) % M\n                if count[s[left]] == 0:\n                    count.pop(s[left])\n                left += 1\n            rolling_hash = (rolling_hash*p + ord(s[right])) % M\n            if right-left+1 == minSize and len(count) <= maxLetters:\n                lookup[rolling_hash] += 1\n        return max(lookup.values() or [0])\n\n\n# Time:  O(m * n), m = 26\n# Space: O(m * n)\nclass Solution2(object):\n    def maxFreq(self, s, maxLetters, minSize, maxSize):\n        \"\"\"\n        :type s: str\n        :type maxLetters: int\n        :type minSize: int\n        :type maxSize: int\n        :rtype: int\n        \"\"\"\n        lookup = {}\n        for right in xrange(minSize-1, len(s)):\n            word = s[right-minSize+1:right+1]\n            if word in lookup:\n                lookup[word] += 1\n            elif len(collections.Counter(word)) <= maxLetters:\n                lookup[word] = 1\n        return max(lookup.values() or [0])\n",
+      "sourcePath": "Python/maximum-number-of-occurrences-of-a-substring.py"
+    }
+  },
+  "seo": {
+    "title": "Maximum Number of Occurrences of a Substring Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Maximum Number of Occurrences of a Substring (LeetCode #1297). Pattern: sliding window. Time O(n), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Maximum Number of Occurrences of a Substring",
+      "Maximum Number of Occurrences of a Substring solution",
+      "Maximum Number of Occurrences of a Substring leetcode",
+      "two-pointers",
+      "sliding-window",
+      "rabin-karp-algorithm",
+      "medium"
+    ],
+    "canonicalPath": "/problems/maximum-number-of-occurrences-of-a-substring"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Maximum Number of Occurrences of a Substring?",
+      "answer": "The reference solutions aim for O(n) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Maximum Number of Occurrences of a Substring use?",
+      "answer": "It primarily maps to sliding window and rabin karp algorithm, within the broader topic of two pointers."
+    },
+    {
+      "question": "Is Maximum Number of Occurrences of a Substring good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sliding window and rabin karp algorithm approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Maximum Number of Occurrences of a Substring (#1297) — Medium. Pattern: sliding window and rabin karp algorithm. Complexity: O(n) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Maximum Number of Occurrences of a Substring: show input structure (two pointers), highlight the moving parts of the sliding window and rabin karp algorithm approach, and annotate each step with the maintained invariant and complexity."
+}

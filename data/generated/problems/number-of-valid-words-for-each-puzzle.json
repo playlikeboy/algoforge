@@ -1,0 +1,161 @@
+{
+  "id": "1178",
+  "number": 1178,
+  "slug": "number-of-valid-words-for-each-puzzle",
+  "title": "Number of Valid Words for Each Puzzle",
+  "difficulty": "Hard",
+  "topics": [
+    "string"
+  ],
+  "patterns": [
+    "trie",
+    "bit-manipulation"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n * l + m * L)",
+  "spaceComplexity": "O(L!)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/number-of-valid-words-for-each-puzzle/",
+  "notes": [
+    "Trie",
+    "Bit Manipulation"
+  ],
+  "relatedSlugs": [
+    "sum-of-prefix-scores-of-strings",
+    "count-prefix-and-suffix-pairs-ii",
+    "longest-common-suffix-queries",
+    "replace-words",
+    "longest-word-in-dictionary",
+    "short-encoding-of-words",
+    "remove-sub-folders-from-the-filesystem",
+    "html-entity-parser"
+  ],
+  "prevSlug": "can-make-palindrome-from-substring",
+  "nextSlug": "reformat-department-table",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Number of Valid Words for Each Puzzle?\n\n**Number of Valid Words for Each Puzzle** (LeetCode #1178) is a **Hard** problem that primarily trains **string**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **trie and bit manipulation**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Trie, Bit Manipulation.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/number-of-valid-words-for-each-puzzle/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Number of Valid Words for Each Puzzle\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **trie and bit manipulation**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n * l + m * L)) and **space** (O(L!)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n * l + m * L)** time and **O(L!)** space.\n\n### Pattern focus: trie and bit manipulation\n\nUse the pattern as a checklist:\n\n- **trie** — confirm the invariant holds after each step\n- **bit manipulation** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n * l + m * L)** |\n| Space | **O(L!)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Number of Valid Words for Each Puzzle\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for trie and bit manipulation — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **trie and bit manipulation**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **string**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Number of Valid Words for Each Puzzle** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **string**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "number-of-valid-words-for-each-puzzle.cpp",
+      "code": "// Time:  O(n*l + m*L), m is the number of puzzles, L is the length of puzzles\n//                    , n is the number of words, l is the max length of words\n// Space: O(L!)\n\nclass Solution {    \npublic:\n    vector<int> findNumOfValidWords(vector<string>& words, vector<string>& puzzles) {\n        static const int L = 7;\n        TrieNode trie;\n        for (const auto& word : words) {\n            vector<int> count(26);\n            for (const auto& c: word) {\n                count[c - 'a'] = 1;\n            }\n            const auto& total = accumulate(count.cbegin(), count.cend(), 0);\n            if (total > L) {\n                continue;\n            }\n            trie.insert(count);\n        }\n        vector<int> result;\n        for (auto puzzle: puzzles) {\n            const auto first = puzzle[0];\n            sort(puzzle.begin(), puzzle.end());\n            result.emplace_back(search(&trie, puzzle, 0, first, false));\n        }\n        return result;\n    }\n\nprivate:\n    struct TrieNode;\n\n    int search(TrieNode* node, const string& puzzle, int start, char first, bool met_first) {\n        int result = 0;\n        if (met_first) {\n            result += node->end_count;\n        }\n        for (int i = start; i < puzzle.length(); ++i) {\n            if (node->children[puzzle[i] - 'a'] == nullptr) {\n                continue;\n            }\n            result += search(node->children[puzzle[i] - 'a'], puzzle, i + 1,\n                             first, met_first || (puzzle[i] == first));\n        }\n        return result;\n    }\n\n    struct TrieNode {\n        int end_count;\n        vector<TrieNode *> children;\n        \n        TrieNode() : end_count{0}, children(26) {}\n        \n        void insert(const vector<int>& count) {\n            auto* p = this;\n            for (int i = 0; i < count.size(); ++i) {\n                if (!count[i]) {\n                    continue;\n                }\n                if (!p->children[i]) {\n                    p->children[i] = new TrieNode;\n                }\n                p = p->children[i];\n            }\n            ++p->end_count;\n        }\n        \n        ~TrieNode() {\n            for (auto& node : children) {\n                if (node) {\n                    delete node;\n                }\n            }\n        }\n    };\n};\n\n// Time:  O(m*2^(L-1) + n*(l+m)), m is the number of puzzles, L is the length of puzzles\n//                              , n is the number of words, l is the max length of words\n// Space: O(m*2^(L-1))\nclass Solution2 {\npublic:\n    vector<int> findNumOfValidWords(vector<string>& words, vector<string>& puzzles) {\n        static const int L = 7;\n        unordered_map<int, vector<int>> lookup;\n        for (int i = 0; i < puzzles.size(); ++i) {\n            vector<int> bits;\n            const auto& base = 1 << (puzzles[i][0] - 'a');\n            for (int j = 1; j < L; ++j) {\n                bits.emplace_back(puzzles[i][j] - 'a');\n            }\n            for (int k = 0; k < 1 << bits.size(); ++k) {\n                int bitset = base;\n                for (int j = 0; j < bits.size(); ++j) {\n                    if (k & (1 << j)) {\n                        bitset |= 1 << bits[j];\n                    }\n                }\n                lookup[bitset].emplace_back(i);\n            }\n        }\n        vector<int> result(puzzles.size());\n        for (const auto& word : words) {\n            int bitset = 0;\n            for (const auto& c : word) {\n                bitset |= 1 << (c - 'a');\n            }            \n            if (!lookup.count(bitset)) {\n                continue;\n            }\n            for (const auto& i : lookup[bitset]) {\n                ++result[i];\n            }\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/number-of-valid-words-for-each-puzzle.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "number-of-valid-words-for-each-puzzle.py",
+      "code": "# Time:  O(n*l + m*L), m is the number of puzzles, L is the length of puzzles\n#                    , n is the number of words, l is the max length of words\n# Space: O(L!)\n\nclass Solution(object):\n    def findNumOfValidWords(self, words, puzzles):\n        \"\"\"\n        :type words: List[str]\n        :type puzzles: List[str]\n        :rtype: List[int]\n        \"\"\"\n        L = 7\n        def search(node, puzzle, start, first, met_first):\n            result = 0\n            if \"_end\" in node and met_first:\n                result += node[\"_end\"]\n            for i in xrange(start, len(puzzle)):\n                if puzzle[i] not in node:\n                    continue\n                result += search(node[puzzle[i]], puzzle, i+1,\n                                 first, met_first or (puzzle[i] == first))\n            return result\n\n        _trie = lambda: collections.defaultdict(_trie)\n        trie = _trie()\n        for word in words:\n            count = set(word)\n            if len(count) > L:\n                continue\n            word = sorted(count)\n            end = reduce(dict.__getitem__, word, trie)\n            end[\"_end\"] = end[\"_end\"]+1 if \"_end\" in end else 1\n        result = []\n        for puzzle in puzzles:\n            first = puzzle[0]\n            result.append(search(trie, sorted(puzzle), 0, first, False))\n        return result\n\n\n# Time:  O(m*2^(L-1) + n*(l+m)), m is the number of puzzles, L is the length of puzzles\n#                              , n is the number of words, l is the max length of words\n# Space: O(m*2^(L-1))\nimport collections\n\n\nclass Solution2(object):\n    def findNumOfValidWords(self, words, puzzles):\n        \"\"\"\n        :type words: List[str]\n        :type puzzles: List[str]\n        :rtype: List[int]\n        \"\"\"\n        L = 7\n        lookup = collections.defaultdict(list)\n        for i in xrange(len(puzzles)):\n            bits = []\n            base = 1 << (ord(puzzles[i][0])-ord('a'))\n            for j in xrange(1, L):\n                bits.append(ord(puzzles[i][j])-ord('a'))\n            for k in xrange(2**len(bits)):\n                bitset = base\n                for j in xrange(len(bits)):\n                    if k & (1<<j):\n                        bitset |= 1<<bits[j]\n                lookup[bitset].append(i)\n        result = [0]*len(puzzles)\n        for word in words:\n            bitset = 0\n            for c in word:\n                bitset |= 1<<(ord(c)-ord('a'))\n            if bitset not in lookup:\n                continue\n            for i in lookup[bitset]:\n                result[i] += 1\n        return result\n",
+      "sourcePath": "Python/number-of-valid-words-for-each-puzzle.py"
+    }
+  },
+  "seo": {
+    "title": "Number of Valid Words for Each Puzzle Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Number of Valid Words for Each Puzzle (LeetCode #1178). Pattern: trie. Time O(n * l + m * L), space O(L!). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Number of Valid Words for Each Puzzle",
+      "Number of Valid Words for Each Puzzle solution",
+      "Number of Valid Words for Each Puzzle leetcode",
+      "string",
+      "trie",
+      "bit-manipulation",
+      "hard"
+    ],
+    "canonicalPath": "/problems/number-of-valid-words-for-each-puzzle"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Number of Valid Words for Each Puzzle?",
+      "answer": "The reference solutions aim for O(n * l + m * L) time and O(L!) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Number of Valid Words for Each Puzzle use?",
+      "answer": "It primarily maps to trie and bit manipulation, within the broader topic of string."
+    },
+    {
+      "question": "Is Number of Valid Words for Each Puzzle good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/number-of-valid-words-for-each-puzzle/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the trie and bit manipulation approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Number of Valid Words for Each Puzzle (#1178) — Hard. Pattern: trie and bit manipulation. Complexity: O(n * l + m * L) time / O(L!) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Number of Valid Words for Each Puzzle: show input structure (string), highlight the moving parts of the trie and bit manipulation approach, and annotate each step with the maintained invariant and complexity."
+}

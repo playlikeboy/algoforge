@@ -1,0 +1,47 @@
+{
+  "slug": "google-backtracking-questions",
+  "path": "/explore/google-backtracking-questions",
+  "h1": "Best Backtracking Questions for Google",
+  "intro": "A curated set of 4 Backtracking problems frequently useful for Google interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "generate-parentheses",
+    "palindrome-partitioning",
+    "word-break-ii",
+    "beautiful-arrangement"
+  ],
+  "faqs": [
+    {
+      "question": "How many Backtracking problems should I do for Google?",
+      "answer": "Quality over quantity: master patterns with 4 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Backtracking topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/google",
+      "label": "Google interview hub"
+    },
+    {
+      "href": "/topics/backtracking",
+      "label": "Backtracking problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Backtracking Questions for Google | AlgoForge",
+    "description": "Top Backtracking coding interview questions for Google. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Google Backtracking questions",
+      "Backtracking interview",
+      "Google leetcode"
+    ],
+    "canonicalPath": "/explore/google-backtracking-questions"
+  },
+  "kind": "company-topic"
+}

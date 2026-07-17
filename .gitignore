@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# data pipeline
+/data/raw/
+/data/content/ai-queue/
+# generated data is large; generate in CI — keep indexes optional
+# /data/generated/

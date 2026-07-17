@@ -1,0 +1,46 @@
+{
+  "slug": "yelp-string-questions",
+  "path": "/explore/yelp-string-questions",
+  "h1": "Best String Questions for Yelp",
+  "intro": "A curated set of 3 String problems frequently useful for Yelp interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "valid-anagram",
+    "string-compression",
+    "find-the-closest-palindrome"
+  ],
+  "faqs": [
+    {
+      "question": "How many String problems should I do for Yelp?",
+      "answer": "Quality over quantity: master patterns with 3 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the String topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/yelp",
+      "label": "Yelp interview hub"
+    },
+    {
+      "href": "/topics/string",
+      "label": "String problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best String Questions for Yelp | AlgoForge",
+    "description": "Top String coding interview questions for Yelp. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Yelp String questions",
+      "String interview",
+      "Yelp leetcode"
+    ],
+    "canonicalPath": "/explore/yelp-string-questions"
+  },
+  "kind": "company-topic"
+}

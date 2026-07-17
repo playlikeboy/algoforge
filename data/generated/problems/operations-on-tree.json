@@ -1,0 +1,153 @@
+{
+  "id": "1993",
+  "number": 1993,
+  "slug": "operations-on-tree",
+  "title": "Operations on Tree",
+  "difficulty": "Medium",
+  "topics": [
+    "design"
+  ],
+  "patterns": [],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "ctor: O(n) lock: O(1) unlock: O(1) upgrade: O(n)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/operations-on-tree/",
+  "notes": [],
+  "relatedSlugs": [
+    "binary-search-tree-iterator",
+    "peeking-iterator",
+    "design-tic-tac-toe",
+    "design-snake-game",
+    "design-twitter",
+    "design-hit-counter",
+    "design-phone-directory",
+    "encode-and-decode-tinyurl"
+  ],
+  "prevSlug": "find-all-groups-of-farmland",
+  "nextSlug": "the-number-of-good-subsets",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Operations on Tree?\n\n**Operations on Tree** (LeetCode #1993) is a **Medium** problem that primarily trains **design**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/operations-on-tree/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Operations on Tree\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (ctor: O(n) lock: O(1) unlock: O(1) upgrade: O(n)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **ctor: O(n) lock: O(1) unlock: O(1) upgrade: O(n)** time and **O(n)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **ctor: O(n) lock: O(1) unlock: O(1) upgrade: O(n)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Operations on Tree\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **design**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Operations on Tree** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **design**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "operations-on-tree.cpp",
+      "code": "// Time:  ctor:    O(n)\n//        lock:    O(1)\n//        unlock:  O(1)\n//        upgrade: O(n)\n// Space: O(n)\n\nclass LockingTree {\npublic:\n    LockingTree(vector<int>& parent)\n      : parent_(parent)\n      , children_(size(parent)) {\n        for (int i = 0; i < size(parent); ++i) {\n            if (parent[i] != -1) {\n                children_[parent_[i]].emplace_back(i);\n            }\n        }\n    }\n    \n    bool lock(int num, int user) {\n        if (locked_.count(num)) {\n            return false;\n        }\n        locked_[num] = user;\n        return true;\n    }\n    \n    bool unlock(int num, int user) {\n        if (!locked_.count(num) || locked_[num] != user) {\n            return false;\n        }\n        locked_.erase(num);\n        return true;\n    }\n    \n    bool upgrade(int num, int user) {\n        for (int node = num; node != -1; node = parent_[node]) {\n            if (locked_.count(node)) {\n                return false;\n            }\n        }\n        bool result = false;\n        vector<int> stk = {num};\n        while (!empty(stk)) {\n            auto node = stk.back(); stk.pop_back();\n            for (const auto& child : children_[node]) {\n                if (locked_.count(child)) {\n                    locked_.erase(child);\n                    result = true;\n                }\n                stk.emplace_back(child);\n            }\n        }\n        if (result) {\n            locked_[num] = user;\n        }\n        return result;\n    }\n\nprivate:\n    const vector<int>& parent_;\n    vector<vector<int>> children_;\n    unordered_map<int, int> locked_;\n};\n",
+      "sourcePath": "C++/operations-on-tree.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "operations-on-tree.py",
+      "code": "# Time:  ctor:    O(n)\n#        lock:    O(1)\n#        unlock:  O(1)\n#        upgrade: O(n)\n# Space: O(n)\n\nclass LockingTree(object):\n\n    def __init__(self, parent):\n        \"\"\"\n        :type parent: List[int]\n        \"\"\"\n        self.__parent = parent\n        self.__children = [[] for _ in xrange(len(parent))]\n        for i, x in enumerate(parent):\n            if x != -1:\n                self.__children[x].append(i)\n        self.__locked = {}\n\n    def lock(self, num, user):\n        \"\"\"\n        :type num: int\n        :type user: int\n        :rtype: bool\n        \"\"\"\n        if num in self.__locked:\n            return False\n        self.__locked[num] = user\n        return True\n\n    def unlock(self, num, user):\n        \"\"\"\n        :type num: int\n        :type user: int\n        :rtype: bool\n        \"\"\"\n        if self.__locked.get(num) != user:\n            return False\n        del self.__locked[num]\n        return True\n\n    def upgrade(self, num, user):\n        \"\"\"\n        :type num: int\n        :type user: int\n        :rtype: bool\n        \"\"\"\n        node = num\n        while node != -1:\n            if node in self.__locked:\n                return False\n            node = self.__parent[node]\n        result = False\n        stk = [num]\n        while stk:\n            node = stk.pop()\n            if node in self.__locked:\n                del self.__locked[node]\n                result = True\n            for child in self.__children[node]:\n                stk.append(child)\n        if result:\n            self.__locked[num] = user\n        return result\n",
+      "sourcePath": "Python/operations-on-tree.py"
+    }
+  },
+  "seo": {
+    "title": "Operations on Tree Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Operations on Tree (LeetCode #1993). Pattern: algorithms. Time ctor: O(n) lock: O(1) unlock: O(1) upgrade: O(n), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Operations on Tree",
+      "Operations on Tree solution",
+      "Operations on Tree leetcode",
+      "design",
+      "medium"
+    ],
+    "canonicalPath": "/problems/operations-on-tree"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Operations on Tree?",
+      "answer": "The reference solutions aim for ctor: O(n) lock: O(1) unlock: O(1) upgrade: O(n) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Operations on Tree use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of design."
+    },
+    {
+      "question": "Is Operations on Tree good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/operations-on-tree/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Operations on Tree (#1993) — Medium. Pattern: general problem-solving. Complexity: ctor: O(n) lock: O(1) unlock: O(1) upgrade: O(n) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Operations on Tree: show input structure (design), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "slug": "dynamic-programming",
+    "name": "Dynamic Programming Roadmap",
+    "description": "From 1D DP to grids, knapsacks, and LIS — a structured DP interview path.",
+    "steps": [
+      {
+        "title": "1D foundations",
+        "description": "Climbing Stairs, House Robber, Coin Change",
+        "problemSlugs": [
+          "climbing-stairs",
+          "house-robber",
+          "coin-change"
+        ],
+        "patternSlugs": [
+          "dynamic-programming"
+        ]
+      },
+      {
+        "title": "Sequences & strings",
+        "description": "LIS, LCS, Word Break, Decode Ways",
+        "problemSlugs": [
+          "longest-increasing-subsequence",
+          "longest-common-subsequence",
+          "word-break",
+          "decode-ways"
+        ]
+      },
+      {
+        "title": "Grids & paths",
+        "description": "Unique Paths, Maximal Square, Dungeon Game",
+        "problemSlugs": [
+          "unique-paths",
+          "maximal-square"
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Dynamic Programming Roadmap for Interviews | AlgoForge",
+      "description": "A complete DP interview roadmap with ordered problems, patterns, and original explanations.",
+      "keywords": [
+        "dynamic programming roadmap",
+        "dp interview",
+        "leetcode dp"
+      ],
+      "canonicalPath": "/roadmaps/dynamic-programming"
+    }
+  },
+  {
+    "slug": "graph",
+    "name": "Graph Algorithms Roadmap",
+    "description": "BFS, DFS, Union-Find, topological sort, and shortest paths for interviews.",
+    "steps": [
+      {
+        "title": "BFS & DFS",
+        "description": "Number of Islands, Clone Graph, Course Schedule",
+        "problemSlugs": [
+          "number-of-islands",
+          "clone-graph",
+          "course-schedule"
+        ],
+        "patternSlugs": [
+          "queue-bfs",
+          "dfs-backtracking"
+        ]
+      },
+      {
+        "title": "Union-Find & connectivity",
+        "description": "Redundant Connection style connectivity problems",
+        "patternSlugs": [
+          "union-find"
+        ],
+        "problemSlugs": [
+          "number-of-islands",
+          "number-of-islands-ii",
+          "number-of-connected-components-in-an-undirected-graph",
+          "evaluate-division",
+          "friend-circles",
+          "redundant-connection",
+          "redundant-connection-ii",
+          "accounts-merge"
+        ]
+      },
+      {
+        "title": "Advanced",
+        "description": "Word Ladder, Cheapest Flights, critical edges",
+        "problemSlugs": [
+          "word-ladder",
+          "cheapest-flights-within-k-stops"
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Graph Interview Roadmap | AlgoForge",
+      "description": "Master graph interview questions with a step-by-step AlgoForge roadmap.",
+      "keywords": [
+        "graph roadmap",
+        "graph interview questions",
+        "bfs dfs leetcode"
+      ],
+      "canonicalPath": "/roadmaps/graph"
+    }
+  },
+  {
+    "slug": "binary-search",
+    "name": "Binary Search Roadmap",
+    "description": "Classic search, rotated arrays, and answer-space binary search.",
+    "steps": [
+      {
+        "title": "Basics",
+        "description": "Binary Search and boundary patterns",
+        "problemSlugs": [
+          "binary-search",
+          "first-bad-version"
+        ],
+        "patternSlugs": [
+          "binary-search"
+        ]
+      },
+      {
+        "title": "Rotated & peaks",
+        "description": "Rotated sorted array family",
+        "problemSlugs": [
+          "search-in-rotated-sorted-array",
+          "find-minimum-in-rotated-sorted-array",
+          "find-peak-element"
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Binary Search Roadmap | AlgoForge",
+      "description": "Learn binary search for coding interviews with curated problems.",
+      "keywords": [
+        "binary search roadmap",
+        "binary search leetcode"
+      ],
+      "canonicalPath": "/roadmaps/binary-search"
+    }
+  },
+  {
+    "slug": "dsa-fundamentals",
+    "name": "DSA Fundamentals Roadmap",
+    "description": "A beginner-to-job path: arrays → hashing → trees → graphs → DP.",
+    "steps": [
+      {
+        "title": "Arrays & hashing",
+        "description": "Two Sum, Contains Duplicate, Group Anagrams",
+        "problemSlugs": [
+          "two-sum",
+          "contains-duplicate",
+          "group-anagrams"
+        ]
+      },
+      {
+        "title": "Two pointers & windows",
+        "description": "3Sum, Container With Most Water, Longest Substring",
+        "problemSlugs": [
+          "3sum",
+          "container-with-most-water",
+          "longest-substring-without-repeating-characters"
+        ]
+      },
+      {
+        "title": "Trees & graphs",
+        "description": "Traversals, BST, islands, courses",
+        "problemSlugs": [
+          "invert-binary-tree",
+          "validate-binary-search-tree",
+          "number-of-islands",
+          "course-schedule"
+        ]
+      },
+      {
+        "title": "Dynamic programming",
+        "description": "Climbing Stairs through classic DP",
+        "problemSlugs": [
+          "climbing-stairs",
+          "house-robber",
+          "coin-change"
+        ]
+      }
+    ],
+    "seo": {
+      "title": "DSA Roadmap for Coding Interviews | AlgoForge",
+      "description": "A complete data structures and algorithms roadmap for interview prep.",
+      "keywords": [
+        "dsa roadmap",
+        "coding interview roadmap",
+        "leetcode roadmap"
+      ],
+      "canonicalPath": "/roadmaps/dsa-fundamentals"
+    }
+  }
+]

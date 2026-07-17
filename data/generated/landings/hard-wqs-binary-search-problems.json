@@ -1,0 +1,39 @@
+{
+  "slug": "hard-wqs-binary-search-problems",
+  "path": "/explore/hard-wqs-binary-search-problems",
+  "h1": "Hard Wqs Binary Search Problems",
+  "intro": "4 hard problems that drill the Wqs Binary Search pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "minimum-partition-score",
+    "minimum-partition-score-ii",
+    "maximum-sum-of-m-non-overlapping-subarrays-i",
+    "maximum-sum-of-m-non-overlapping-subarrays-ii"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice hard Wqs Binary Search problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/wqs-binary-search",
+      "label": "Wqs Binary Search pattern"
+    },
+    {
+      "href": "/difficulty/hard",
+      "label": "All Hard problems"
+    }
+  ],
+  "seo": {
+    "title": "Hard Wqs Binary Search Problems | AlgoForge",
+    "description": "Practice hard Wqs Binary Search LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "hard Wqs Binary Search",
+      "Wqs Binary Search problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/hard-wqs-binary-search-problems"
+  },
+  "kind": "difficulty-pattern"
+}

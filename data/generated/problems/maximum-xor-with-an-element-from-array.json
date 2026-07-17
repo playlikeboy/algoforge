@@ -1,0 +1,161 @@
+{
+  "id": "1707",
+  "number": 1707,
+  "slug": "maximum-xor-with-an-element-from-array",
+  "title": "Maximum XOR With an Element From Array",
+  "difficulty": "Hard",
+  "topics": [
+    "bit-manipulation"
+  ],
+  "patterns": [
+    "greedy",
+    "trie"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogn + mlogm + nlogk + mlogk)",
+  "spaceComplexity": "O(nlogk)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-xor-with-an-element-from-array/",
+  "notes": [
+    "Greedy",
+    "Trie"
+  ],
+  "relatedSlugs": [
+    "maximum-xor-of-two-numbers-in-an-array",
+    "minimum-numbers-of-function-calls-to-make-target-array",
+    "maximum-strong-pair-xor-ii",
+    "maximum-xor-after-operations",
+    "minimize-xor",
+    "maximum-strong-pair-xor-i",
+    "subarrays-with-xor-at-least-k",
+    "minimum-unique-word-abbreviation"
+  ],
+  "prevSlug": "where-will-the-ball-fall",
+  "nextSlug": "largest-subarray-length-k",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Maximum XOR With an Element From Array?\n\n**Maximum XOR With an Element From Array** (LeetCode #1707) is a **Hard** problem that primarily trains **bit manipulation**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **greedy and trie**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Greedy, Trie.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/maximum-xor-with-an-element-from-array/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Maximum XOR With an Element From Array\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **greedy and trie**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogn + mlogm + nlogk + mlogk)) and **space** (O(nlogk)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogn + mlogm + nlogk + mlogk)** time and **O(nlogk)** space.\n\n### Pattern focus: greedy and trie\n\nUse the pattern as a checklist:\n\n- **greedy** — confirm the invariant holds after each step\n- **trie** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogn + mlogm + nlogk + mlogk)** |\n| Space | **O(nlogk)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Maximum XOR With an Element From Array\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for greedy and trie — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **greedy and trie**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **bit manipulation**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Maximum XOR With an Element From Array** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **bit manipulation**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "maximum-xor-with-an-element-from-array.cpp",
+      "code": "// Time:  O(nlogn + mlogm + nlogk + mlogk), k is max(max(nums), max(xi))\n// Space: O(nlogk)\n\nclass Trie {\npublic:\n    Trie(int bit_length)\n     : bit_length_(bit_length)\n     , nodes_(1) {}\n    \n    void insert(int num) {\n        int idx = 0;\n        for (int i = bit_length_; i >= 0; --i) {\n            int curr = (num >> i) & 1;\n            if (!nodes_[idx][curr]) {\n                nodes_.emplace_back();\n                nodes_[idx][curr] = size(nodes_) - 1;\n            }\n            idx = nodes_[idx][curr];\n        }\n    }\n\n    int query(int num) {\n        if (size(nodes_) == 1) {\n            return -1;\n        }\n        int result = 0, idx = 0;\n        for (int i = bit_length_; i >= 0; --i) {\n            int curr = (num >> i) & 1;\n            if (nodes_[idx][1 ^ curr]) {\n                idx = nodes_[idx][1 ^ curr];\n                result |= 1 << i;\n            } else {\n                idx = nodes_[idx][curr];\n            }\n        }\n        return result;\n    }\n\nprivate:\n    const int bit_length_;\n    vector<array<int, 2>> nodes_;\n};\n\nclass Solution {\npublic:\n    vector<int> maximizeXor(vector<int>& nums, vector<vector<int>>& queries) {\n        sort(begin(nums), end(nums));\n        int max_val = max(nums.back(),\n                          (*max_element(cbegin(queries), cend(queries),\n                                        [](const auto& a, const auto& b) {\n                                            return a[0] < b[0];\n                                        }))[0]);\n        for (int i = 0; i < size(queries); ++i) {\n            queries[i].insert(begin(queries[i]), i);\n        }\n        sort(begin(queries), end(queries),\n             [](const auto& a, const auto& b) {\n                 return a[2] < b[2];\n             });\n        vector<int> result(size(queries));\n        Trie trie(bit_length(max_val));\n        int j = 0;\n        for (const auto& q : queries) {\n            int i = q[0], x = q[1], m = q[2];\n            for (; j < size(nums) && nums[j] <= m; ++j) {\n                trie.insert(nums[j]);\n            }\n            result[i] = trie.query(x);\n        }\n        return result;\n    }\n\nprivate:\n    int bit_length(int x) {\n        return x != 0 ? 32 - __builtin_clz(x) : 1;\n    }\n};\n",
+      "sourcePath": "C++/maximum-xor-with-an-element-from-array.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "maximum-xor-with-an-element-from-array.py",
+      "code": "# Time:  O(nlogn + mlogm + nlogk + mlogk), k is max(max(nums), max(xi))\n# Space: O(nlogk)\n\nclass Trie(object):\n    def __init__(self, bit_length):\n        self.__root = {}\n        self.__bit_length = bit_length\n        \n    def insert(self, num):\n        node = self.__root\n        for i in reversed(xrange(self.__bit_length)):\n            curr = (num>>i) & 1\n            if curr not in node:\n                node[curr] = {}\n            node = node[curr]\n                \n    def query(self, num):\n        if not self.__root: \n            return -1\n        node, result = self.__root, 0\n        for i in reversed(xrange(self.__bit_length)):\n            curr = (num>>i) & 1\n            if 1^curr in node:\n                node = node[1^curr]\n                result |= 1<<i\n            else:\n                node = node[curr]\n        return result\n\n\nclass Solution(object):\n    def maximizeXor(self, nums, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        nums.sort()\n        max_val = max(nums[-1], max(queries, key=lambda x: x[0])[0])\n        queries = sorted(enumerate(queries), key=lambda x: x[1][1])        \n        trie = Trie(max_val.bit_length())\n        result = [-1]*len(queries)\n        j = 0\n        for i, (x, m) in queries:\n            while j < len(nums) and nums[j] <= m:\n                trie.insert(nums[j])\n                j += 1\n            result[i] = trie.query(x)\n        return result\n",
+      "sourcePath": "Python/maximum-xor-with-an-element-from-array.py"
+    }
+  },
+  "seo": {
+    "title": "Maximum XOR With an Element From Array Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Maximum XOR With an Element From Array (LeetCode #1707). Pattern: greedy. Time O(nlogn + mlogm + nlogk + mlogk), space O(nlogk). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Maximum XOR With an Element From Array",
+      "Maximum XOR With an Element From Array solution",
+      "Maximum XOR With an Element From Array leetcode",
+      "bit-manipulation",
+      "greedy",
+      "trie",
+      "hard"
+    ],
+    "canonicalPath": "/problems/maximum-xor-with-an-element-from-array"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Maximum XOR With an Element From Array?",
+      "answer": "The reference solutions aim for O(nlogn + mlogm + nlogk + mlogk) time and O(nlogk) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Maximum XOR With an Element From Array use?",
+      "answer": "It primarily maps to greedy and trie, within the broader topic of bit manipulation."
+    },
+    {
+      "question": "Is Maximum XOR With an Element From Array good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/maximum-xor-with-an-element-from-array/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the greedy and trie approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Maximum XOR With an Element From Array (#1707) — Hard. Pattern: greedy and trie. Complexity: O(nlogn + mlogm + nlogk + mlogk) time / O(nlogk) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Maximum XOR With an Element From Array: show input structure (bit manipulation), highlight the moving parts of the greedy and trie approach, and annotate each step with the maintained invariant and complexity."
+}

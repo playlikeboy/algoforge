@@ -1,0 +1,22 @@
+{
+  "type": "pattern",
+  "slug": "prefix-sum-binary-search",
+  "name": "Prefix Sum Binary Search",
+  "description": "Master the Prefix Sum Binary Search coding pattern with curated problems.",
+  "problemCount": 1,
+  "problemSlugs": [
+    "maximum-score-of-a-good-subarray"
+  ],
+  "relatedTopics": [],
+  "seo": {
+    "title": "Prefix Sum Binary Search Pattern — Problems & Guide | AlgoForge",
+    "description": "Learn the Prefix Sum Binary Search pattern with 1 practice problems, interview tips, and visual intuition.",
+    "keywords": [
+      "Prefix Sum Binary Search",
+      "Prefix Sum Binary Search pattern",
+      "Prefix Sum Binary Search leetcode",
+      "coding patterns"
+    ],
+    "canonicalPath": "/patterns/prefix-sum-binary-search"
+  }
+}

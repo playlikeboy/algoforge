@@ -1,0 +1,24 @@
+{
+  "type": "company",
+  "slug": "pocket-gems",
+  "name": "Pocket Gems",
+  "description": "Coding interview preparation for Pocket Gems: high-frequency patterns and problem sets.",
+  "problemCount": 5,
+  "problemSlugs": [
+    "sort-colors",
+    "clone-graph",
+    "word-break",
+    "kth-largest-element-in-an-array",
+    "top-k-frequent-elements"
+  ],
+  "seo": {
+    "title": "Pocket Gems Coding Interview Questions | AlgoForge",
+    "description": "Prepare for Pocket Gems interviews with 5 problems, patterns, and roadmaps.",
+    "keywords": [
+      "Pocket Gems interview questions",
+      "Pocket Gems leetcode",
+      "Pocket Gems oa"
+    ],
+    "canonicalPath": "/companies/pocket-gems"
+  }
+}

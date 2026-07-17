@@ -1,0 +1,23 @@
+{
+  "type": "pattern",
+  "slug": "partial-sort",
+  "name": "Partial Sort",
+  "description": "Master the Partial Sort coding pattern with curated problems.",
+  "problemCount": 2,
+  "problemSlugs": [
+    "reward-top-k-students",
+    "maximum-elegance-of-a-k-length-subsequence"
+  ],
+  "relatedTopics": [],
+  "seo": {
+    "title": "Partial Sort Pattern — Problems & Guide | AlgoForge",
+    "description": "Learn the Partial Sort pattern with 2 practice problems, interview tips, and visual intuition.",
+    "keywords": [
+      "Partial Sort",
+      "Partial Sort pattern",
+      "Partial Sort leetcode",
+      "coding patterns"
+    ],
+    "canonicalPath": "/patterns/partial-sort"
+  }
+}

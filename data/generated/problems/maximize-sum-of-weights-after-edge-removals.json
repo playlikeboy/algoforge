@@ -1,0 +1,159 @@
+{
+  "id": "3367",
+  "number": 3367,
+  "slug": "maximize-sum-of-weights-after-edge-removals",
+  "title": "Maximize Sum of Weights after Edge Removals",
+  "difficulty": "Hard",
+  "topics": [
+    "depth-first-search"
+  ],
+  "patterns": [
+    "dfs-backtracking"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/maximize-sum-of-weights-after-edge-removals/",
+  "notes": [
+    "DFS",
+    "Quick Select"
+  ],
+  "relatedSlugs": [
+    "expression-add-operators",
+    "remove-invalid-parentheses",
+    "k-th-smallest-in-lexicographical-order",
+    "number-of-distinct-islands-ii",
+    "contain-virus",
+    "making-a-large-island",
+    "sum-of-distances-in-tree",
+    "tree-of-coprimes"
+  ],
+  "prevSlug": "minimum-array-sum",
+  "nextSlug": "first-letter-capitalization",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Maximize Sum of Weights after Edge Removals?\n\n**Maximize Sum of Weights after Edge Removals** (LeetCode #3367) is a **Hard** problem that primarily trains **depth first search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dfs backtracking**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: DFS, Quick Select.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/maximize-sum-of-weights-after-edge-removals/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Maximize Sum of Weights after Edge Removals\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dfs backtracking**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(n)** space.\n\n### Pattern focus: dfs backtracking\n\nUse the pattern as a checklist:\n\n- **dfs backtracking** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Maximize Sum of Weights after Edge Removals\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dfs backtracking — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dfs backtracking**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **depth first search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Maximize Sum of Weights after Edge Removals** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **depth first search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "maximize-sum-of-weights-after-edge-removals.cpp",
+      "code": "// Time:  O(n)\n// Space: O(n)\n\n// iterative dfs, quick select\nclass Solution {\npublic:\n    long long maximizeSumOfWeights(vector<vector<int>>& edges, int k) {\n        vector<vector<pair<int, int>>> adj(size(edges) + 1);\n        for (const auto& e : edges) {\n            adj[e[0]].emplace_back(e[1], e[2]);\n            adj[e[1]].emplace_back(e[0], e[2]);\n        }\n        const auto& iter_dfs = [&]() {\n            vector<pair<int64_t, int64_t>> cnt(size(adj));\n            vector<tuple<int, int, int>> stk = {{1, 0, -1}};\n            while (!empty(stk)) {\n                const auto [step, u, p] = stk.back(); stk.pop_back();\n                if (step == 1) {\n                    stk.emplace_back(2, u, p);\n                    for (const auto& [v, w] : adj[u]) {\n                        if (v == p) {\n                            continue;\n                        }\n                        stk.emplace_back(1, v, u);\n                    }\n                } else if (step == 2) {\n                    int64_t curr = 0;\n                    vector<int64_t> diff;\n                    for (const auto& [v, w] : adj[u]) {\n                        if (v == p) {\n                            continue;\n                        }\n                        curr += cnt[v].first;\n                        diff.emplace_back(max((cnt[v].second + w) - cnt[v].first, static_cast<int64_t>(0)));\n                    }\n                    if (k - 1 < size(diff)) {\n                        nth_element(begin(diff), begin(diff) + (k - 1), end(diff), greater<int>());\n                    }\n                    cnt[u] = pair(accumulate(cbegin(diff), cbegin(diff) + min(k, static_cast<int>(size(diff))), curr),\n                                  accumulate(cbegin(diff), cbegin(diff) + min(k - 1, static_cast<int>(size(diff))), curr));\n                }\n            }\n            return cnt[0].first;\n        };\n\n        return iter_dfs();\n    }\n};\n\n// Time:  O(n)\n// Space: O(n)\n// dfs, quick select\nclass Solution2 {\npublic:\n    long long maximizeSumOfWeights(vector<vector<int>>& edges, int k) {\n        vector<vector<pair<int, int>>> adj(size(edges) + 1);\n        for (const auto& e : edges) {\n            adj[e[0]].emplace_back(e[1], e[2]);\n            adj[e[1]].emplace_back(e[0], e[2]);\n        }\n        const function<pair<int64_t, int64_t>(int, int)> dfs = [&](int u, int p) {\n            int64_t result = 0;\n            vector<int64_t> diff;\n            for (const auto& [v, w] : adj[u]) {\n                if (v == p) {\n                    continue;\n                }\n                const auto& cnt = dfs(v, u);\n                result += cnt.first;\n                diff.emplace_back(max((cnt.second + w) - cnt.first, static_cast<int64_t>(0)));\n            }\n            if (k - 1 < size(diff)) {\n                nth_element(begin(diff), begin(diff) + (k - 1), end(diff), greater<int>());\n            }\n\n            return pair(accumulate(cbegin(diff), cbegin(diff) + min(k, static_cast<int>(size(diff))), result),\n                        accumulate(cbegin(diff), cbegin(diff) + min(k - 1, static_cast<int>(size(diff))), result));\n        };\n\n        return dfs(0, -1).first;\n    }\n};\n",
+      "sourcePath": "C++/maximize-sum-of-weights-after-edge-removals.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "maximize-sum-of-weights-after-edge-removals.py",
+      "code": "# Time:  O(n)\n# Space: O(n)\n\nimport random\n\n\n# iterative dfs, quick select\nclass Solution(object):\n    def maximizeSumOfWeights(self, edges, k):\n        \"\"\"\n        :type edges: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        def nth_element(nums, n, compare=lambda a, b: a < b):\n            def tri_partition(nums, left, right, target):\n                i = left\n                while i <= right:\n                    if compare(nums[i], target):\n                        nums[i], nums[left] = nums[left], nums[i]\n                        left += 1\n                        i += 1\n                    elif compare(target, nums[i]):\n                        nums[i], nums[right] = nums[right], nums[i]\n                        right -= 1\n                    else:\n                        i += 1\n                return left, right\n\n            left, right = 0, len(nums)-1\n            while left <= right:\n                pivot_idx = random.randint(left, right)\n                pivot_left, pivot_right = tri_partition(nums, left, right, nums[pivot_idx])\n                if pivot_left <= n <= pivot_right:\n                    return\n                elif pivot_left > n:\n                    right = pivot_left-1\n                else:  # pivot_right < n.\n                    left = pivot_right+1\n\n        def iter_dfs():\n            cnt = [[0]*2 for _ in xrange(len(adj))]\n            stk = [(1, 0, -1)]\n            while stk:\n                step, u, p = stk.pop()\n                if step == 1:\n                    stk.append((2, u, p))\n                    for v, w in reversed(adj[u]):\n                        if v == p:\n                            continue\n                        stk.append((1, v, u))\n                elif step == 2:\n                    curr = 0\n                    diff = []\n                    for v, w in adj[u]:\n                        if v == p:\n                            continue\n                        curr += cnt[v][0]\n                        diff.append(max((cnt[v][1]+w)-cnt[v][0], 0))\n                    if k-1 < len(diff):\n                        nth_element(diff, k-1, lambda a, b: a > b)\n                    cnt[u][0] = curr+sum(diff[i] for i in xrange(min(k, len(diff))))\n                    cnt[u][1] = curr+sum(diff[i] for i in xrange(min(k-1, len(diff))))\n            return cnt[0][0]\n    \n        adj = [[] for _ in xrange(len(edges)+1)]\n        for u, v, w in edges:\n            adj[u].append((v, w))\n            adj[v].append((u, w))\n        return iter_dfs()\n\n\n# Time:  O(n)\n# Space: O(n)\nimport random\n\n\n# dfs, quick select\nclass Solution2(object):\n    def maximizeSumOfWeights(self, edges, k):\n        \"\"\"\n        :type edges: List[List[int]]\n        :type k: int\n        :rtype: int\n        \"\"\"\n        def nth_element(nums, n, compare=lambda a, b: a < b):\n            def tri_partition(nums, left, right, target):\n                i = left\n                while i <= right:\n                    if compare(nums[i], target):\n                        nums[i], nums[left] = nums[left], nums[i]\n                        left += 1\n                        i += 1\n                    elif compare(target, nums[i]):\n                        nums[i], nums[right] = nums[right], nums[i]\n                        right -= 1\n                    else:\n                        i += 1\n                return left, right\n\n            left, right = 0, len(nums)-1\n            while left <= right:\n                pivot_idx = random.randint(left, right)\n                pivot_left, pivot_right = tri_partition(nums, left, right, nums[pivot_idx])\n                if pivot_left <= n <= pivot_right:\n                    return\n                elif pivot_left > n:\n                    right = pivot_left-1\n                else:  # pivot_right < n.\n                    left = pivot_right+1\n\n        def dfs(u, p):\n            result = 0\n            diff = []\n            for v, w in adj[u]:\n                if v == p:\n                    continue\n                cnt = dfs(v, u)\n                result += cnt[0]\n                diff.append(max((cnt[1]+w)-cnt[0], 0))\n            if k-1 < len(diff):\n                nth_element(diff, k-1, lambda a, b: a > b)\n            return (result+sum(diff[i] for i in xrange(min(k, len(diff)))), result+sum(diff[i] for i in xrange(min(k-1, len(diff)))))\n\n        adj = [[] for _ in xrange(len(edges)+1)]\n        for u, v, w in edges:\n            adj[u].append((v, w))\n            adj[v].append((u, w))\n        return dfs(0, -1)[0]\n",
+      "sourcePath": "Python/maximize-sum-of-weights-after-edge-removals.py"
+    }
+  },
+  "seo": {
+    "title": "Maximize Sum of Weights after Edge Removals Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Maximize Sum of Weights after Edge Removals (LeetCode #3367). Pattern: dfs backtracking. Time O(n), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Maximize Sum of Weights after Edge Removals",
+      "Maximize Sum of Weights after Edge Removals solution",
+      "Maximize Sum of Weights after Edge Removals leetcode",
+      "depth-first-search",
+      "dfs-backtracking",
+      "hard"
+    ],
+    "canonicalPath": "/problems/maximize-sum-of-weights-after-edge-removals"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Maximize Sum of Weights after Edge Removals?",
+      "answer": "The reference solutions aim for O(n) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Maximize Sum of Weights after Edge Removals use?",
+      "answer": "It primarily maps to dfs backtracking, within the broader topic of depth first search."
+    },
+    {
+      "question": "Is Maximize Sum of Weights after Edge Removals good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/maximize-sum-of-weights-after-edge-removals/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dfs backtracking approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Maximize Sum of Weights after Edge Removals (#3367) — Hard. Pattern: dfs backtracking. Complexity: O(n) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Maximize Sum of Weights after Edge Removals: show input structure (depth first search), highlight the moving parts of the dfs backtracking approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,156 @@
+{
+  "id": "636",
+  "number": 636,
+  "slug": "exclusive-time-of-functions",
+  "title": "Exclusive Time of Functions",
+  "difficulty": "Medium",
+  "topics": [
+    "stack"
+  ],
+  "patterns": [
+    "stack"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/exclusive-time-of-functions/",
+  "notes": [],
+  "relatedSlugs": [
+    "simplify-path",
+    "evaluate-reverse-polish-notation",
+    "basic-calculator-ii",
+    "verify-preorder-sequence-in-binary-search-tree",
+    "verify-preorder-serialization-of-a-binary-tree",
+    "flatten-nested-list-iterator",
+    "mini-parser",
+    "decode-string"
+  ],
+  "prevSlug": "design-log-storage-system",
+  "nextSlug": "average-of-levels-in-binary-tree",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Exclusive Time of Functions?\n\n**Exclusive Time of Functions** (LeetCode #636) is a **Medium** problem that primarily trains **stack**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **stack**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/exclusive-time-of-functions/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Exclusive Time of Functions\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **stack**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(n)** space.\n\n### Pattern focus: stack\n\nUse the pattern as a checklist:\n\n- **stack** — confirm the invariant holds after each step\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Exclusive Time of Functions\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for stack — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal stack solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `exclusive-time-of-functions`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **stack**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **stack**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Exclusive Time of Functions** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **stack**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "exclusive-time-of-functions.cpp",
+      "code": "// Time:  O(n)\n// Space: O(n)\n\nclass Solution {\npublic:\n    vector<int> exclusiveTime(int n, vector<string>& logs) {\n        vector<int> result(n);\n        stack<int> stk;\n        int prev = 0;\n        for (const auto& log : logs) {\n            vector<string> tokens = split(log, ':');\n            if (tokens[1] == \"start\") {\n                if (!stk.empty()) {\n                    result[stk.top()] += stoi(tokens[2]) - prev;\n                }\n                stk.emplace(stoi(tokens[0]));\n                prev = stoi(tokens[2]);\n            } else {\n                result[stk.top()] += stoi(tokens[2]) - prev + 1;\n                stk.pop();\n                prev = stoi(tokens[2]) + 1;\n            }\n        }\n        return result;\n    }\n\nprivate:\n    vector<string> split(const string& s, const char delim) {\n        vector<string> tokens;\n        stringstream ss(s);\n        string token;\n        while (getline(ss, token, delim)) {\n            tokens.emplace_back(token);\n        }\n        return tokens;\n    }\n};\n\n",
+      "sourcePath": "C++/exclusive-time-of-functions.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "exclusive-time-of-functions.py",
+      "code": "# Time:  O(n)\n# Space: O(n)\n\nclass Solution(object):\n    def exclusiveTime(self, n, logs):\n        \"\"\"\n        :type n: int\n        :type logs: List[str]\n        :rtype: List[int]\n        \"\"\"\n        result = [0] * n\n        stk, prev = [], 0\n        for log in logs:\n            tokens = log.split(\":\")\n            if tokens[1] == \"start\":\n                if stk:\n                    result[stk[-1]] += int(tokens[2]) - prev\n                stk.append(int(tokens[0]))\n                prev = int(tokens[2])\n            else:\n                result[stk.pop()] += int(tokens[2]) - prev + 1\n                prev = int(tokens[2]) + 1\n        return result\n\n",
+      "sourcePath": "Python/exclusive-time-of-functions.py"
+    }
+  },
+  "seo": {
+    "title": "Exclusive Time of Functions Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Exclusive Time of Functions (LeetCode #636). Pattern: stack. Time O(n), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Exclusive Time of Functions",
+      "Exclusive Time of Functions solution",
+      "Exclusive Time of Functions leetcode",
+      "stack",
+      "stack",
+      "medium"
+    ],
+    "canonicalPath": "/problems/exclusive-time-of-functions"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Exclusive Time of Functions?",
+      "answer": "The reference solutions aim for O(n) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Exclusive Time of Functions use?",
+      "answer": "It primarily maps to stack, within the broader topic of stack."
+    },
+    {
+      "question": "Is Exclusive Time of Functions good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/exclusive-time-of-functions/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the stack approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Exclusive Time of Functions (#636) — Medium. Pattern: stack. Complexity: O(n) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Exclusive Time of Functions: show input structure (stack), highlight the moving parts of the stack approach, and annotate each step with the maintained invariant and complexity."
+}

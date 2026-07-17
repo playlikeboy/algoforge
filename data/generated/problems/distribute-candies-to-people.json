@@ -1,0 +1,158 @@
+{
+  "id": "1103",
+  "number": 1103,
+  "slug": "distribute-candies-to-people",
+  "title": "Distribute Candies to People",
+  "difficulty": "Easy",
+  "topics": [
+    "math"
+  ],
+  "patterns": [
+    "binary-search"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n + logc)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/distribute-candies-to-people/",
+  "notes": [
+    "Binary Search"
+  ],
+  "relatedSlugs": [
+    "arranging-coins",
+    "check-if-a-number-is-majority-element-in-a-sorted-array",
+    "sum-of-mutated-array-closest-to-target",
+    "minimum-garden-perimeter-to-collect-enough-apples",
+    "largest-prime-from-consecutive-prime-sum",
+    "minimum-operations-to-transform-array-into-alternating-prime",
+    "maximum-number-of-alloys",
+    "maximum-number-that-sum-of-the-prices-is-less-than-or-equal-to-k"
+  ],
+  "prevSlug": "path-with-maximum-minimum-value",
+  "nextSlug": "path-in-zigzag-labelled-binary-tree",
+  "estimatedMinutes": 20,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Distribute Candies to People?\n\n**Distribute Candies to People** (LeetCode #1103) is a **Easy** problem that primarily trains **math**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **binary search**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt builds core muscle memory you will reuse on harder variants.\n Official solution notes mention: Binary Search.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/distribute-candies-to-people/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Distribute Candies to People\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **binary search**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n + logc)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n + logc)** time and **O(1)** space.\n\n### Pattern focus: binary search\n\nUse the pattern as a checklist:\n\n- **binary search** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n + logc)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Distribute Candies to People\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for binary search — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **binary search**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **math**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Distribute Candies to People** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **math**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "distribute-candies-to-people.cpp",
+      "code": "// Time:  O(n + logc), c is the number of candies\n// Space: O(1)\n\nclass Solution {\npublic:\n    vector<int> distributeCandies(int candies, int num_people) {\n        // find max integer p s.t. sum(1 + 2 + ... + p) <= C\n        // => remaining : 0 <= C-(1+p)*p/2 < p+1\n        // => -2p-2 < p^2+p-2C <= 0\n        // => 2C+1/4 < (p+3/2)^2 and (p+1/2)^2 <= 2C+1/4\n        // => sqrt(2C+1/4)-3/2 < p <= sqrt(2C+1/4)-1/2\n        // => p = floor(sqrt(2C+1/4)-1/2)\n        int p = int(sqrt(2 * candies + 0.25) - 0.5);\n        int remaining = candies - (p + 1) * p / 2;\n        int rows = p / num_people, cols = p % num_people;\n            \n        vector<int> result(num_people);\n        for (int i = 0; i < num_people; ++i) {\n            result[i] = (i < cols) ? (i + 1) * (rows + 1) + (rows * (rows + 1) / 2) * num_people\n                                   : (i + 1) * rows + ((rows - 1) * rows / 2) * num_people;\n        }\n        result[cols] += remaining;\n        return result;\n    }\n};\n\n// Time:  O(n + logc), c is the number of candies\n// Space: O(1)\nclass Solution2 {\npublic:\n    vector<int> distributeCandies(int candies, int num_people) {\n        // find max integer p s.t. sum(1 + 2 + ... + p) <= C\n        int left = 1, right = candies;\n        while (left <= right) {\n            const auto& mid = left + (right - left) / 2;\n            if (!(mid <= candies * 2 / (mid + 1))) {\n                right = mid - 1;\n            } else {\n                left = mid + 1;\n            }\n        }\n        int p = right;\n        int remaining = candies - (p + 1) * p / 2;\n        int rows = p / num_people, cols = p % num_people;\n            \n        vector<int> result(num_people);\n        for (int i = 0; i < num_people; ++i) {\n            result[i] = (i < cols) ? (i + 1) * (rows + 1) + (rows * (rows + 1) / 2) * num_people\n                                   : (i + 1) * rows + ((rows - 1) * rows / 2) * num_people;\n        }\n        result[cols] += remaining;\n        return result;\n    }\n};\n\n// Time:  O(sqrt(c)), c is the number of candies\n// Space: O(1)\nclass Solution3 {\npublic:\n    vector<int> distributeCandies(int candies, int num_people) {\n        vector<int> result(num_people);\n        for (int i = 0; candies; ++i) {\n            result[i % num_people] += min(candies, i + 1);\n            candies -= min(candies, i + 1);\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/distribute-candies-to-people.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "distribute-candies-to-people.py",
+      "code": "# Time:  O(n + logc), c is the number of candies\n# Space: O(1)\n\nclass Solution(object):\n    def distributeCandies(self, candies, num_people):\n        \"\"\"\n        :type candies: int\n        :type num_people: int\n        :rtype: List[int]\n        \"\"\"\n        # find max integer p s.t. sum(1 + 2 + ... + p) <= C\n        # => remaining : 0 <= C-(1+p)*p/2 < p+1\n        # => -2p-2 < p^2+p-2C <= 0\n        # => 2C+1/4 < (p+3/2)^2 and (p+1/2)^2 <= 2C+1/4\n        # => sqrt(2C+1/4)-3/2 < p <= sqrt(2C+1/4)-1/2\n        # => p = floor(sqrt(2C+1/4)-1/2)\n        p = int((2*candies + 0.25)**0.5 - 0.5) \n        remaining = candies - (p+1)*p//2\n        rows, cols = divmod(p, num_people)\n        \n        result = [0]*num_people\n        for i in xrange(num_people):\n            result[i] = (i+1)*(rows+1) + (rows*(rows+1)//2)*num_people if i < cols else \\\n                        (i+1)*rows + ((rows-1)*rows//2)*num_people\n        result[cols] += remaining\n        return result\n\n\n# Time:  O(n + logc), c is the number of candies\n# Space: O(1)\nclass Solution2(object):\n    def distributeCandies(self, candies, num_people):\n        \"\"\"\n        :type candies: int\n        :type num_people: int\n        :rtype: List[int]\n        \"\"\"\n        # find max integer p s.t. sum(1 + 2 + ... + p) <= C\n        left, right = 1, candies\n        while left <= right:\n            mid = left + (right-left)//2\n            if not ((mid <= candies*2 // (mid+1))):\n                right = mid-1\n            else:\n                left = mid+1\n        p = right\n        remaining = candies - (p+1)*p//2\n        rows, cols = divmod(p, num_people)\n        \n        result = [0]*num_people\n        for i in xrange(num_people):\n            result[i] = (i+1)*(rows+1) + (rows*(rows+1)//2)*num_people if i < cols else \\\n                        (i+1)*rows + ((rows-1)*rows//2)*num_people\n        result[cols] += remaining\n        return result\n\n\n# Time:  O(sqrt(c)), c is the number of candies\n# Space: O(1)\nclass Solution3(object):\n    def distributeCandies(self, candies, num_people):\n        \"\"\"\n        :type candies: int\n        :type num_people: int\n        :rtype: List[int]\n        \"\"\"\n        result = [0]*num_people\n        i = 0\n        while candies != 0:\n            result[i % num_people] += min(candies, i+1)\n            candies -= min(candies, i+1)\n            i += 1\n        return result\n",
+      "sourcePath": "Python/distribute-candies-to-people.py"
+    }
+  },
+  "seo": {
+    "title": "Distribute Candies to People Solution — Easy | AlgoForge",
+    "description": "Original Easy explanation for Distribute Candies to People (LeetCode #1103). Pattern: binary search. Time O(n + logc), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Distribute Candies to People",
+      "Distribute Candies to People solution",
+      "Distribute Candies to People leetcode",
+      "math",
+      "binary-search",
+      "easy"
+    ],
+    "canonicalPath": "/problems/distribute-candies-to-people"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Distribute Candies to People?",
+      "answer": "The reference solutions aim for O(n + logc) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Distribute Candies to People use?",
+      "answer": "It primarily maps to binary search, within the broader topic of math."
+    },
+    {
+      "question": "Is Distribute Candies to People good for interviews?",
+      "answer": "Yes — as a Easy problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/distribute-candies-to-people/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the binary search approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Distribute Candies to People (#1103) — Easy. Pattern: binary search. Complexity: O(n + logc) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Distribute Candies to People: show input structure (math), highlight the moving parts of the binary search approach, and annotate each step with the maintained invariant and complexity."
+}

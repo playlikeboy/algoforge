@@ -1,0 +1,159 @@
+{
+  "id": "3257",
+  "number": 3257,
+  "slug": "maximum-value-sum-by-placing-three-rooks-ii",
+  "title": "Maximum Value Sum by Placing Three Rooks II",
+  "difficulty": "Hard",
+  "topics": [
+    "binary-heap"
+  ],
+  "patterns": [
+    "heap"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(m * n)",
+  "spaceComplexity": "O(m + n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-value-sum-by-placing-three-rooks-ii/",
+  "notes": [
+    "Heap",
+    "Brute Force"
+  ],
+  "relatedSlugs": [
+    "find-median-from-data-stream",
+    "trapping-rain-water-ii",
+    "sliding-window-median",
+    "ipo",
+    "smallest-range",
+    "minimize-deviation-in-array",
+    "meeting-rooms-iii",
+    "maximum-value-sum-by-placing-three-rooks-i"
+  ],
+  "prevSlug": "maximum-value-sum-by-placing-three-rooks-i",
+  "nextSlug": "count-substrings-that-satisfy-k-constraint-i",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Maximum Value Sum by Placing Three Rooks II?\n\n**Maximum Value Sum by Placing Three Rooks II** (LeetCode #3257) is a **Hard** problem that primarily trains **binary heap**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **heap**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Heap, Brute Force.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/maximum-value-sum-by-placing-three-rooks-ii/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Maximum Value Sum by Placing Three Rooks II\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **heap**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(m * n)) and **space** (O(m + n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(m * n)** time and **O(m + n)** space.\n\n### Pattern focus: heap\n\nUse the pattern as a checklist:\n\n- **heap** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(m * n)** |\n| Space | **O(m + n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Maximum Value Sum by Placing Three Rooks II\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for heap — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **heap**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **binary heap**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Maximum Value Sum by Placing Three Rooks II** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **binary heap**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "maximum-value-sum-by-placing-three-rooks-ii.cpp",
+      "code": "// Time:  O(m * n * logk + nCr((k-1)*(2*k-1)+1), k) * k) = O(m * n)\n// Space: O(k * (m + n)) = O(m + n)\n\n// heap, brute force\nclass Solution {\npublic:\n    long long maximumValueSum(vector<vector<int>>& board) {\n        static const int k = 3;\n    \n        const auto& combinations = [](int n, int k, const auto& callback) {\n            static const auto& next_pos =\n                [](const auto& n, const auto& k, const auto& idxs) {\n                    int i = k - 1;\n                    for (; i >= 0; --i) {\n                        if (idxs[i] != i + n - k) {\n                            break;\n                        }\n                    }\n                    return i;\n                };\n        \n            vector<int> idxs(k);\n            iota(begin(idxs), end(idxs), 0);\n            callback(idxs);\n            for (int i; (i = next_pos(n, k, idxs)) >= 0;) {\n                ++idxs[i];\n                for (int j = i + 1; j < k; ++j) {\n                    idxs[j] = idxs[j - 1] + 1;\n                }\n                callback(idxs);\n            }\n        };\n    \n        using Data = tuple<int, int, int>;\n        vector<priority_queue<Data, vector<Data>, greater<Data>>> min_heaps(size(board[0]));\n        for (int i = 0; i < size(board); ++i) {\n            priority_queue<Data, vector<Data>, greater<Data>> min_heap;\n            for (int j = 0; j < size(board[0]); ++j) {\n                min_heap.emplace(board[i][j], i, j);\n                if (size(min_heap) == k + 1) {\n                    min_heap.pop();\n                }\n            }\n            while (!empty(min_heap)) {\n                const auto [v, i, j] = min_heap.top(); min_heap.pop();\n                min_heaps[j].emplace(v, i, j);\n                if (size(min_heaps[j]) == k + 1) {\n                    min_heaps[j].pop();\n                }\n            }\n        }\n        priority_queue<Data, vector<Data>, greater<Data>> min_heap;\n        for (auto& h : min_heaps) {\n            while (!empty(h)) {\n                const auto x = h.top(); h.pop();\n                min_heap.emplace(x);\n                if (size(min_heap) == ((k - 1) * (2 * k - 1) + 1) + 1) {  // each choice excludes at most 2k-1 candidates, we should have at least (k-1)*(2k-1)+1 candidates\n                    min_heap.pop();\n                }\n            }\n        }\n        int64_t result = numeric_limits<int64_t>::min();\n        vector<Data> candidates;\n        while (!empty(min_heap)) {\n            const auto x = min_heap.top(); min_heap.pop();\n            candidates.emplace_back(x);\n        }\n        combinations(size(candidates), k, \n                     [&](const vector<int>& idxs) {\n                        const auto& [x0, x1, x2] = candidates[idxs[0]];\n                        const auto& [y0, y1, y2] = candidates[idxs[1]];\n                        const auto& [z0, z1, z2] = candidates[idxs[2]];\n                        if ((x1 != y1 && y1 != z1 && z1 != x1) &&\n                            (x2 != y2 && y2 != z2 && z2 != x2)) {\n                            result = max(result, static_cast<int64_t>(x0) + y0 + z0);\n                        }\n                     });\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/maximum-value-sum-by-placing-three-rooks-ii.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "maximum-value-sum-by-placing-three-rooks-ii.py",
+      "code": "# Time:  O(m * n * logk + nCr((k-1)*(2*k-1)+1), k) * k) = O(m * n)\n# Space: O(k * (m + n)) = O(m + n)\n\nimport heapq\nimport itertools\n\n\n# heap, brute force\nclass Solution(object):\n    def maximumValueSum(self, board):\n        \"\"\"\n        :type board: List[List[int]]\n        :rtype: int\n        \"\"\"\n        k = 3\n        min_heaps = [[] for _ in xrange(len(board[0]))]\n        for i in xrange(len(board)):\n            min_heap = []\n            for j in xrange(len(board[0])):\n                heapq.heappush(min_heap, (board[i][j], i, j))\n                if len(min_heap) == k+1:\n                    heapq.heappop(min_heap)\n            for v, i, j in min_heap:\n                heapq.heappush(min_heaps[j], (v, i, j))\n                if len(min_heaps[j]) == k+1:\n                    heapq.heappop(min_heaps[j])\n        min_heap = []\n        for h in min_heaps:\n            for x in h:\n                heapq.heappush(min_heap, x)\n                if len(min_heap) == ((k-1)*(2*k-1)+1)+1:  # each choice excludes at most 2k-1 candidates, we should have at least (k-1)*(2k-1)+1 candidates\n                    heapq.heappop(min_heap)\n        return max(sum(x[0] for x in c) for c in itertools.combinations(min_heap, k) if len({x[1] for x in c}) == k == len({x[2] for x in c}))\n\n\n# Time:  O(m * n * logk + nCr((k-1)*(2*k-1)+1), k) * k) = O(m * n)\n# Space: O(k * (m + n)) = O(m + n)\nimport heapq\nimport itertools\n\n\n# heap, brute force\nclass Solution2(object):\n    def maximumValueSum(self, board):\n        \"\"\"\n        :type board: List[List[int]]\n        :rtype: int\n        \"\"\"\n        k = 3\n        rows = [heapq.nlargest(k, [(board[i][j], i, j) for j in xrange(len(board[0]))]) for i in xrange(len(board))]\n        cols = [heapq.nlargest(k, [(board[i][j], i, j) for i in xrange(len(board))]) for j in xrange(len(board[0]))]\n        min_heap = heapq.nlargest((k-1)*(2*k-1)+1, set(itertools.chain(*rows)) & set(itertools.chain(*cols)))  # each choice excludes at most 2k-1 candidates, we should have at least (k-1)*(2k-1)+1 candidates\n        return max(sum(x[0] for x in c) for c in itertools.combinations(min_heap, k) if len({x[1] for x in c}) == k == len({x[2] for x in c}))\n",
+      "sourcePath": "Python/maximum-value-sum-by-placing-three-rooks-ii.py"
+    }
+  },
+  "seo": {
+    "title": "Maximum Value Sum by Placing Three Rooks II Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Maximum Value Sum by Placing Three Rooks II (LeetCode #3257). Pattern: heap. Time O(m * n), space O(m + n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Maximum Value Sum by Placing Three Rooks II",
+      "Maximum Value Sum by Placing Three Rooks II solution",
+      "Maximum Value Sum by Placing Three Rooks II leetcode",
+      "binary-heap",
+      "heap",
+      "hard"
+    ],
+    "canonicalPath": "/problems/maximum-value-sum-by-placing-three-rooks-ii"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Maximum Value Sum by Placing Three Rooks II?",
+      "answer": "The reference solutions aim for O(m * n) time and O(m + n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Maximum Value Sum by Placing Three Rooks II use?",
+      "answer": "It primarily maps to heap, within the broader topic of binary heap."
+    },
+    {
+      "question": "Is Maximum Value Sum by Placing Three Rooks II good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/maximum-value-sum-by-placing-three-rooks-ii/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the heap approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Maximum Value Sum by Placing Three Rooks II (#3257) — Hard. Pattern: heap. Complexity: O(m * n) time / O(m + n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Maximum Value Sum by Placing Three Rooks II: show input structure (binary heap), highlight the moving parts of the heap approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,84 @@
+{
+  "slug": "hard-sort-problems",
+  "path": "/explore/hard-sort-problems",
+  "h1": "Hard Sort Problems",
+  "intro": "49 hard problems that drill the Sort pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "the-skyline-problem",
+    "reverse-pairscpp",
+    "minimum-cost-to-hire-k-workers",
+    "minimum-number-of-refueling-stops",
+    "closest-room",
+    "minimum-interval-to-include-each-query",
+    "maximum-total-beauty-of-the-gardens",
+    "number-of-excellent-pairs",
+    "minimize-maximum-value-in-a-grid",
+    "number-of-good-paths",
+    "minimum-number-of-operations-to-make-arrays-similar",
+    "sort-array-by-moving-items-to-empty-space",
+    "minimum-total-distance-traveled",
+    "minimum-time-to-complete-all-tasks",
+    "make-array-empty",
+    "power-of-heroes",
+    "maximum-strictly-increasing-cells-in-a-matrix",
+    "maximum-sum-queries",
+    "count-zero-request-servers",
+    "robot-collisions",
+    "minimum-time-to-make-array-sum-at-most-x",
+    "apply-operations-to-maximize-score",
+    "minimum-relative-loss-after-buying-chocolates",
+    "minimum-operations-to-form-subsequence-with-target-sum",
+    "maximum-strong-pair-xor-ii",
+    "apply-operations-to-maximize-frequency-score",
+    "maximum-number-of-intersections-on-the-chart",
+    "find-the-number-of-ways-to-place-people-ii",
+    "maximize-consecutive-elements-in-an-array-after-modification",
+    "maximum-total-reward-using-operations-ii",
+    "final-array-state-after-k-multiplication-operations-ii",
+    "minimum-amount-of-damage-dealt-to-bob",
+    "length-of-the-longest-increasing-path",
+    "maximum-frequency-of-an-element-after-performing-operations-ii",
+    "maximum-area-rectangle-with-point-constraints-ii",
+    "separate-squares-ii",
+    "maximize-the-distance-between-points-on-a-square",
+    "longest-common-prefix-of-k-strings-after-removal",
+    "threshold-majority-queries",
+    "next-special-palindrome-number",
+    "maximum-walls-destroyed-by-robots",
+    "maximum-total-subarray-value-ii",
+    "maximum-partition-factor",
+    "minimum-inversion-count-in-subarrays-of-fixed-length",
+    "minimum-cost-to-merge-sorted-lists",
+    "maximum-bitwise-and-after-increment-operations",
+    "maximize-fixed-points-after-deletions",
+    "power-update-after-k-th-largest-insertion-ii",
+    "maximum-consistent-columns-in-a-grid"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice hard Sort problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/sort",
+      "label": "Sort pattern"
+    },
+    {
+      "href": "/difficulty/hard",
+      "label": "All Hard problems"
+    }
+  ],
+  "seo": {
+    "title": "Hard Sort Problems | AlgoForge",
+    "description": "Practice hard Sort LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "hard Sort",
+      "Sort problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/hard-sort-problems"
+  },
+  "kind": "difficulty-pattern"
+}

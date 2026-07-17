@@ -1,0 +1,85 @@
+{
+  "slug": "medium-greedy-problems",
+  "path": "/explore/medium-greedy-problems",
+  "h1": "Medium Greedy Problems",
+  "intro": "255 medium problems that drill the Greedy pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "container-with-most-water",
+    "jump-game",
+    "gas-station",
+    "wiggle-subsequence",
+    "is-subsequence",
+    "integer-replacement",
+    "remove-k-digits",
+    "maximum-xor-of-two-numbers-in-an-array",
+    "non-overlapping-intervals",
+    "minimum-number-of-arrows-to-burst-balloons",
+    "find-permutation",
+    "task-scheduler",
+    "maximum-length-of-pair-chain",
+    "dota2-senate",
+    "split-array-into-consecutive-subsequences",
+    "monotone-increasing-digits",
+    "partition-labels",
+    "reorganize-string",
+    "score-after-flipping-matrix",
+    "advantage-shuffle",
+    "boats-to-save-people",
+    "broken-calculator",
+    "video-stitching",
+    "previous-permutation-with-one-swap",
+    "shortest-way-to-form-string",
+    "minimize-rounding-error-to-meet-target",
+    "largest-values-from-labels",
+    "maximum-nesting-depth-of-two-valid-parentheses-strings",
+    "minimum-cost-to-connect-sticks",
+    "reconstruct-a-2-row-binary-matrix",
+    "remove-interval",
+    "group-the-people-given-the-group-size-they-belong-to",
+    "remove-covered-intervals",
+    "divide-array-in-sets-of-k-consecutive-numbers",
+    "cinema-seat-allocation",
+    "construct-k-palindrome-strings",
+    "longest-happy-string",
+    "find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k",
+    "minimum-number-of-frogs-croaking",
+    "max-difference-you-can-get-from-changing-an-integer",
+    "check-if-a-string-can-break-another-string",
+    "avoid-flood-in-the-city",
+    "maximum-number-of-non-overlapping-substrings",
+    "minimum-swaps-to-arrange-a-binary-grid",
+    "maximum-number-of-non-overlapping-subarrays-with-sum-equals-target",
+    "minimum-numbers-of-function-calls-to-make-target-array",
+    "put-boxes-into-the-warehouse-i",
+    "maximum-length-of-subarray-with-positive-product",
+    "minimum-deletion-cost-to-avoid-repeating-letters",
+    "put-boxes-into-the-warehouse-ii"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice medium Greedy problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/greedy",
+      "label": "Greedy pattern"
+    },
+    {
+      "href": "/difficulty/medium",
+      "label": "All Medium problems"
+    }
+  ],
+  "seo": {
+    "title": "Medium Greedy Problems | AlgoForge",
+    "description": "Practice medium Greedy LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "medium Greedy",
+      "Greedy problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/medium-greedy-problems"
+  },
+  "kind": "difficulty-pattern"
+}

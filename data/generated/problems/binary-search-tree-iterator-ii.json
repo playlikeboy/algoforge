@@ -1,0 +1,153 @@
+{
+  "id": "1586",
+  "number": 1586,
+  "slug": "binary-search-tree-iterator-ii",
+  "title": "Binary Search Tree Iterator II",
+  "difficulty": "Medium",
+  "topics": [
+    "design"
+  ],
+  "patterns": [],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(1), amortized",
+  "spaceComplexity": "O(h)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/binary-search-tree-iterator-ii/",
+  "notes": [],
+  "relatedSlugs": [
+    "binary-search-tree-iterator",
+    "peeking-iterator",
+    "design-tic-tac-toe",
+    "design-snake-game",
+    "design-twitter",
+    "design-hit-counter",
+    "design-phone-directory",
+    "encode-and-decode-tinyurl"
+  ],
+  "prevSlug": "check-if-string-is-transformable-with-substring-sort-operations",
+  "nextSlug": "bank-account-summary-ii",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Binary Search Tree Iterator II?\n\n**Binary Search Tree Iterator II** (LeetCode #1586) is a **Medium** problem that primarily trains **design**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/binary-search-tree-iterator-ii/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Binary Search Tree Iterator II\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(1), amortized) and **space** (O(h)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(1), amortized** time and **O(h)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(1), amortized** |\n| Space | **O(h)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Binary Search Tree Iterator II\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **design**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Binary Search Tree Iterator II** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **design**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "binary-search-tree-iterator-ii.cpp",
+      "code": "// Time:  O(1), amortized\n// Space: O(h)\n\n/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode() : val(0), left(nullptr), right(nullptr) {}\n *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}\n * };\n */\nclass BSTIterator {\npublic:\n    BSTIterator(TreeNode* root) : pos_(-1) {\n        traverseLeft(root);\n    }\n    \n    bool hasNext() {\n        return pos_ + 1 != size(vals_) || !empty(stk_);\n    }\n    \n    int next() {\n        if (++pos_ == size(vals_)) {\n            TreeNode *node = stk_.back(); stk_.pop_back();\n            traverseLeft(node->right);\n            vals_.emplace_back(node->val);\n        }\n        return vals_[pos_];\n    }\n    \n    bool hasPrev() {\n        return pos_ - 1 >= 0;\n    }\n    \n    int prev() {\n        return vals_[--pos_];\n    }\n\nprivate:\n    void traverseLeft(TreeNode *node) {\n        for (; node != nullptr; node = node->left) {\n            stk_.emplace_back(node);\n        }\n    }\n    \n    vector<TreeNode *> stk_;\n    vector<int> vals_;\n    int pos_;\n};\n\n/**\n * Your BSTIterator object will be instantiated and called as such:\n * BSTIterator* obj = new BSTIterator(root);\n * bool param_1 = obj->hasNext();\n * int param_2 = obj->next();\n * bool param_3 = obj->hasPrev();\n * int param_4 = obj->prev();\n */\n",
+      "sourcePath": "C++/binary-search-tree-iterator-ii.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "binary-search-tree-iterator-ii.py",
+      "code": "# Time:  O(1), amortized\n# Space: O(h)\n\n# Definition for a binary tree node.\nclass TreeNode(object):\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\n\nclass BSTIterator(object):\n\n    def __init__(self, root):\n        \"\"\"\n        :type root: TreeNode\n        \"\"\"\n        self.__stk = []\n        self.__traversalLeft(root)\n        self.__vals = []\n        self.__pos = -1\n\n    def hasNext(self):\n        \"\"\"\n        :rtype: bool\n        \"\"\"\n        return self.__pos+1 != len(self.__vals) or self.__stk\n\n    def next(self):\n        \"\"\"\n        :rtype: int\n        \"\"\"\n        self.__pos += 1\n        if self.__pos == len(self.__vals):\n            node = self.__stk.pop()\n            self.__traversalLeft(node.right)\n            self.__vals.append(node.val)\n        return self.__vals[self.__pos]\n        \n    def hasPrev(self):\n        \"\"\"\n        :rtype: bool\n        \"\"\"\n        return self.__pos-1 >= 0\n\n    def prev(self):\n        \"\"\"\n        :rtype: int\n        \"\"\"\n        self.__pos -= 1\n        return self.__vals[self.__pos]\n    \n    def __traversalLeft(self, node):\n        while node is not None:\n            self.__stk.append(node)\n            node = node.left\n\n",
+      "sourcePath": "Python/binary-search-tree-iterator-ii.py"
+    }
+  },
+  "seo": {
+    "title": "Binary Search Tree Iterator II Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Binary Search Tree Iterator II (LeetCode #1586). Pattern: algorithms. Time O(1), amortized, space O(h). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Binary Search Tree Iterator II",
+      "Binary Search Tree Iterator II solution",
+      "Binary Search Tree Iterator II leetcode",
+      "design",
+      "medium"
+    ],
+    "canonicalPath": "/problems/binary-search-tree-iterator-ii"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Binary Search Tree Iterator II?",
+      "answer": "The reference solutions aim for O(1), amortized time and O(h) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Binary Search Tree Iterator II use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of design."
+    },
+    {
+      "question": "Is Binary Search Tree Iterator II good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/binary-search-tree-iterator-ii/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Binary Search Tree Iterator II (#1586) — Medium. Pattern: general problem-solving. Complexity: O(1), amortized time / O(h) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Binary Search Tree Iterator II: show input structure (design), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

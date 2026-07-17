@@ -1,0 +1,159 @@
+{
+  "id": "2249",
+  "number": 2249,
+  "slug": "count-lattice-points-inside-a-circle",
+  "title": "Count Lattice Points Inside a Circle",
+  "difficulty": "Medium",
+  "topics": [
+    "math"
+  ],
+  "patterns": [
+    "hash-map"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n * r^2)",
+  "spaceComplexity": "O(min(n * r^2, maxx * maxy))",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/count-lattice-points-inside-a-circle/",
+  "notes": [
+    "Math",
+    "Hash Table"
+  ],
+  "relatedSlugs": [
+    "random-pick-index",
+    "minimum-impossible-or",
+    "assign-elements-to-groups-with-constraints",
+    "find-maximum-area-of-a-triangle",
+    "count-the-number-of-good-partitions",
+    "maximum-subarray-with-equal-products",
+    "find-missing-elements",
+    "minimum-number-of-lines-to-cover-points"
+  ],
+  "prevSlug": "intersection-of-multiple-arrays",
+  "nextSlug": "count-number-of-rectangles-containing-each-point",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Count Lattice Points Inside a Circle?\n\n**Count Lattice Points Inside a Circle** (LeetCode #2249) is a **Medium** problem that primarily trains **math**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **hash map**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Math, Hash Table.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/count-lattice-points-inside-a-circle/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Count Lattice Points Inside a Circle\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **hash map**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n * r^2)) and **space** (O(min(n * r^2, maxx * maxy))) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n * r^2)** time and **O(min(n * r^2, maxx * maxy))** space.\n\n### Pattern focus: hash map\n\nUse the pattern as a checklist:\n\n- **hash map** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n * r^2)** |\n| Space | **O(min(n * r^2, maxx * maxy))** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Count Lattice Points Inside a Circle\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for hash map — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **hash map**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **math**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Count Lattice Points Inside a Circle** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **math**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "count-lattice-points-inside-a-circle.cpp",
+      "code": "// Time:  O(n * r^2)\n// Space: O(min(n * r^2, max_x * max_y))\n\n// math, hash table\nclass Solution {\npublic:\n    int countLatticePoints(vector<vector<int>>& circles) {\n        int max_y = 0;\n        for (const auto& circle : circles) {\n            max_y = max(max_y, circle[1] + circle[2]);\n        }\n        unordered_set<int> lookup;\n        for (const auto& circle : circles) {\n            for (int i = -circle[2]; i <= circle[2]; ++i) {\n                for (int j = -circle[2]; j <= circle[2]; ++j) {\n                    if (i * i + j * j <= circle[2] * circle[2]) {\n                        lookup.insert((circle[0] + i) * (max_y + 1) + (circle[1] + j));\n                    }\n                }\n            }\n        }\n        return size(lookup);\n    }\n};\n\n\n// Time:  O(n * max_x * max_y)\n// Space: O(1)\n// math\nclass Solution2 {\npublic:\n    int countLatticePoints(vector<vector<int>>& circles) {\n        int max_x = 0, max_y = 0;\n        for (const auto& circle : circles) {\n            max_x = max(max_x, circle[0] + circle[2]);\n            max_y = max(max_y, circle[1] + circle[2]);\n        }\n        int result = 0;\n        for (int i = 0; i <= max_x; ++i) {\n            for (int j = 0; j <= max_y; ++j) {\n                 for (const auto& circle : circles) {\n                    if ((i - circle[0]) * (i - circle[0]) + (j - circle[1]) * (j - circle[1]) <= (circle[2]) * circle[2]) {\n                        ++result;\n                        break;\n                    }\n                }\n            }\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/count-lattice-points-inside-a-circle.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "count-lattice-points-inside-a-circle.py",
+      "code": "# Time:  O(n * r^2)\n# Space: O(min(n * r^2, max_x * max_y))\n\n# math, hash table\nclass Solution(object):\n    def countLatticePoints(self, circles):\n        \"\"\"\n        :type circles: List[List[int]]\n        :rtype: int\n        \"\"\"\n        lookup = set()\n        for x, y, r in circles:\n            for i in xrange(-r, r+1):\n                for j in xrange(-r, r+1):\n                    if i**2+j**2 <= r**2:\n                        lookup.add(((x+i), (y+j)))\n        return len(lookup)\n\n\n# Time:  O(n * max_x * max_y)\n# Space: O(1)\n# math\nclass Solution2(object):\n    def countLatticePoints(self, circles):\n        \"\"\"\n        :type circles: List[List[int]]\n        :rtype: int\n        \"\"\"\n        max_x = max(x+r for x, _, r in circles)\n        max_y = max(y+r for _, y, r in circles)\n        result = 0\n        for i in xrange(max_x+1):\n            for j in xrange(max_y+1):\n                if any((i-x)**2+(j-y)**2 <= r**2 for x, y, r in circles):\n                    result += 1\n        return result\n",
+      "sourcePath": "Python/count-lattice-points-inside-a-circle.py"
+    }
+  },
+  "seo": {
+    "title": "Count Lattice Points Inside a Circle Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Count Lattice Points Inside a Circle (LeetCode #2249). Pattern: hash map. Time O(n * r^2), space O(min(n * r^2, maxx * maxy)). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Count Lattice Points Inside a Circle",
+      "Count Lattice Points Inside a Circle solution",
+      "Count Lattice Points Inside a Circle leetcode",
+      "math",
+      "hash-map",
+      "medium"
+    ],
+    "canonicalPath": "/problems/count-lattice-points-inside-a-circle"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Count Lattice Points Inside a Circle?",
+      "answer": "The reference solutions aim for O(n * r^2) time and O(min(n * r^2, maxx * maxy)) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Count Lattice Points Inside a Circle use?",
+      "answer": "It primarily maps to hash map, within the broader topic of math."
+    },
+    {
+      "question": "Is Count Lattice Points Inside a Circle good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/count-lattice-points-inside-a-circle/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the hash map approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Count Lattice Points Inside a Circle (#2249) — Medium. Pattern: hash map. Complexity: O(n * r^2) time / O(min(n * r^2, maxx * maxy)) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Count Lattice Points Inside a Circle: show input structure (math), highlight the moving parts of the hash map approach, and annotate each step with the maintained invariant and complexity."
+}

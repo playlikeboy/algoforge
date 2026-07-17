@@ -1,0 +1,41 @@
+{
+  "slug": "hard-manachers-algorithm-problems",
+  "path": "/explore/hard-manachers-algorithm-problems",
+  "h1": "Hard Manachers Algorithm Problems",
+  "intro": "6 hard problems that drill the Manachers Algorithm pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "shortest-palindrome",
+    "palindrome-partitioning-iv",
+    "maximum-product-of-the-length-of-two-palindromic-substrings",
+    "check-if-dfs-strings-are-palindromes",
+    "longest-palindrome-after-substring-concatenation-ii",
+    "palindromic-subarray-sum"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice hard Manachers Algorithm problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/manachers-algorithm",
+      "label": "Manachers Algorithm pattern"
+    },
+    {
+      "href": "/difficulty/hard",
+      "label": "All Hard problems"
+    }
+  ],
+  "seo": {
+    "title": "Hard Manachers Algorithm Problems | AlgoForge",
+    "description": "Practice hard Manachers Algorithm LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "hard Manachers Algorithm",
+      "Manachers Algorithm problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/hard-manachers-algorithm-problems"
+  },
+  "kind": "difficulty-pattern"
+}

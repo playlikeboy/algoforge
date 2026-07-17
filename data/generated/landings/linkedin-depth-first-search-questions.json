@@ -1,0 +1,46 @@
+{
+  "slug": "linkedin-depth-first-search-questions",
+  "path": "/explore/linkedin-depth-first-search-questions",
+  "h1": "Best Depth-First Search Questions for LinkedIn",
+  "intro": "A curated set of 3 Depth-First Search problems frequently useful for LinkedIn interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "number-of-islands",
+    "lowest-common-ancestor-of-a-binary-tree",
+    "nested-list-weight-sum"
+  ],
+  "faqs": [
+    {
+      "question": "How many Depth-First Search problems should I do for LinkedIn?",
+      "answer": "Quality over quantity: master patterns with 3 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Depth-First Search topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/linkedin",
+      "label": "LinkedIn interview hub"
+    },
+    {
+      "href": "/topics/depth-first-search",
+      "label": "Depth-First Search problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Depth-First Search Questions for LinkedIn | AlgoForge",
+    "description": "Top Depth-First Search coding interview questions for LinkedIn. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "LinkedIn Depth-First Search questions",
+      "Depth-First Search interview",
+      "LinkedIn leetcode"
+    ],
+    "canonicalPath": "/explore/linkedin-depth-first-search-questions"
+  },
+  "kind": "company-topic"
+}

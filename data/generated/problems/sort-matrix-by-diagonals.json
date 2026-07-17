@@ -1,0 +1,159 @@
+{
+  "id": "3446",
+  "number": 3446,
+  "slug": "sort-matrix-by-diagonals",
+  "title": "Sort Matrix by Diagonals",
+  "difficulty": "Medium",
+  "topics": [
+    "array"
+  ],
+  "patterns": [
+    "sort"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n^2 * logn)",
+  "spaceComplexity": "O(n^2)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/sort-matrix-by-diagonals/",
+  "notes": [
+    "Array",
+    "Sort"
+  ],
+  "relatedSlugs": [
+    "sort-the-matrix-diagonally",
+    "filter-restaurants-by-vegan-friendly-price-and-distance",
+    "maximum-consecutive-floors-without-special-floors",
+    "divide-intervals-into-minimum-number-of-groups",
+    "count-ways-to-group-overlapping-ranges",
+    "find-maximal-uncovered-ranges",
+    "divide-array-into-arrays-with-max-difference",
+    "minimum-energy-to-maintain-brightness"
+  ],
+  "prevSlug": "maximum-difference-between-even-and-odd-frequency-ii",
+  "nextSlug": "assign-elements-to-groups-with-constraints",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Sort Matrix by Diagonals?\n\n**Sort Matrix by Diagonals** (LeetCode #3446) is a **Medium** problem that primarily trains **array**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sort**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Array, Sort.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/sort-matrix-by-diagonals/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Sort Matrix by Diagonals\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sort**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n^2 * logn)) and **space** (O(n^2)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n^2 * logn)** time and **O(n^2)** space.\n\n### Pattern focus: sort\n\nUse the pattern as a checklist:\n\n- **sort** — confirm the invariant holds after each step\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n^2 * logn)** |\n| Space | **O(n^2)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Sort Matrix by Diagonals\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sort — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal sort solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `sort-matrix-by-diagonals`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sort**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **array**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Sort Matrix by Diagonals** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **array**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "sort-matrix-by-diagonals.cpp",
+      "code": "// Time:  O(n^2 * logn)\n// Space: O(n^2)\n\n// sort\nclass Solution {\npublic:\n    vector<vector<int>> sortMatrix(vector<vector<int>>& grid) {\n        vector<vector<int>> lookup(((size(grid) - 1) + (size(grid[0]) - 1)) - (0 - (size(grid[0]) - 1)) + 1);\n        const int shift = size(grid[0]) - 1;\n        for (int i = 0; i < size(grid); ++i) {\n            for (int j = 0; j < size(grid[0]); ++j) {\n                lookup[(i - j) + shift].emplace_back(grid[i][j]);\n            }\n        }\n        for (int i = 0; i < size(lookup); ++i) {\n            if (i - shift < 0) {\n                sort(begin(lookup[i]), end(lookup[i]), greater<int>());\n            } else {\n                sort(begin(lookup[i]), end(lookup[i]));\n            }\n        }\n        for (int i = 0; i < size(grid); ++i) {\n            for (int j = 0; j < size(grid[0]); ++j) {\n                grid[i][j] = lookup[(i - j) + shift].back(); lookup[(i - j) + shift].pop_back();\n            }\n        }\n        return grid;\n    }\n};\n\n// Time:  O(n^2 * logn)\n// Space: O(n^2)\n// sort\nclass Solution2 {\npublic:\n    vector<vector<int>> sortMatrix(vector<vector<int>>& grid) {\n        vector<vector<int>> lookup(((size(grid) - 1) + (size(grid[0]) - 1)) - (0 - (size(grid[0]) - 1)) + 1);\n        const int shift = size(grid[0]) - 1;\n        for (int i = 0; i < size(grid); ++i) {\n            for (int j = 0; j < size(grid[0]); ++j) {\n                lookup[((i - j) + size(lookup)) % size(lookup)].emplace_back(grid[i][j]);\n            }\n        }\n        for (int i = 0 - static_cast<int>(size(grid[0]) - 1); i <= static_cast<int>((size(grid) - 1) + (size(grid[0]) - 1)); ++i) {\n            if (i < 0) {\n                sort(begin(lookup[(i + size(lookup)) % size(lookup)]), end(lookup[(i + size(lookup)) % size(lookup)]), greater<int>());\n            } else {\n                sort(begin(lookup[(i + size(lookup)) % size(lookup)]), end(lookup[(i + size(lookup)) % size(lookup)]));\n            }\n        }\n        for (int i = 0; i < size(grid); ++i) {\n            for (int j = 0; j < size(grid[0]); ++j) {\n                grid[i][j] = lookup[((i - j) + size(lookup)) % size(lookup)].back(); lookup[((i - j) + size(lookup)) % size(lookup)].pop_back();\n            }\n        }\n        return grid;\n    }\n};\n",
+      "sourcePath": "C++/sort-matrix-by-diagonals.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "sort-matrix-by-diagonals.py",
+      "code": "# Time:  O(n^2 * logn)\n# Space: O(n^2)\n\n# sort\nclass Solution(object):\n    def sortMatrix(self, grid):\n        \"\"\"\n        :type grid: List[List[int]]\n        :rtype: List[List[int]]\n        \"\"\"\n        lookup = [[] for _ in xrange((len(grid)-1)+(len(grid[0])-1)-(0-(len(grid[0])-1))+1)]\n        for i in xrange(len(grid)):\n            for j in xrange(len(grid[0])):\n                lookup[i-j].append(grid[i][j])\n        for i in xrange(0-(len(grid[0])-1), (len(grid)-1)+(len(grid[0])-1)+1):\n            if i < 0:\n                lookup[i].sort(reverse=True)\n            else:\n                lookup[i].sort()\n        for i in xrange(len(grid)):\n            for j in xrange(len(grid[0])):\n                grid[i][j] = lookup[i-j].pop()\n        return grid\n",
+      "sourcePath": "Python/sort-matrix-by-diagonals.py"
+    }
+  },
+  "seo": {
+    "title": "Sort Matrix by Diagonals Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Sort Matrix by Diagonals (LeetCode #3446). Pattern: sort. Time O(n^2 * logn), space O(n^2). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Sort Matrix by Diagonals",
+      "Sort Matrix by Diagonals solution",
+      "Sort Matrix by Diagonals leetcode",
+      "array",
+      "sort",
+      "medium"
+    ],
+    "canonicalPath": "/problems/sort-matrix-by-diagonals"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Sort Matrix by Diagonals?",
+      "answer": "The reference solutions aim for O(n^2 * logn) time and O(n^2) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Sort Matrix by Diagonals use?",
+      "answer": "It primarily maps to sort, within the broader topic of array."
+    },
+    {
+      "question": "Is Sort Matrix by Diagonals good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/sort-matrix-by-diagonals/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sort approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Sort Matrix by Diagonals (#3446) — Medium. Pattern: sort. Complexity: O(n^2 * logn) time / O(n^2) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Sort Matrix by Diagonals: show input structure (array), highlight the moving parts of the sort approach, and annotate each step with the maintained invariant and complexity."
+}

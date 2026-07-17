@@ -1,0 +1,167 @@
+{
+  "id": "3013",
+  "number": 3013,
+  "slug": "divide-an-array-into-subarrays-with-minimum-cost-ii",
+  "title": "Divide an Array Into Subarrays With Minimum Cost II",
+  "difficulty": "Hard",
+  "topics": [
+    "two-pointers"
+  ],
+  "patterns": [
+    "sliding-window",
+    "heap",
+    "sorted-list"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogd)",
+  "spaceComplexity": "O(d)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/divide-an-array-into-subarrays-with-minimum-cost-ii/",
+  "notes": [
+    "Sliding Window",
+    "Heap",
+    "Freq Table",
+    "Ordered Set",
+    "BST",
+    "Sorted List"
+  ],
+  "relatedSlugs": [
+    "find-x-sum-of-all-k-long-subarrays-ii",
+    "find-x-sum-of-all-k-long-subarrays-i",
+    "minimum-operations-to-make-subarray-elements-equal",
+    "sum-of-weighted-modes-in-subarrays",
+    "shortest-subarray-with-sum-at-least-k",
+    "constrained-subset-sum",
+    "final-array-state-after-k-multiplication-operations-ii",
+    "minimum-absolute-difference-in-sliding-submatrix"
+  ],
+  "prevSlug": "minimize-length-of-array-using-operations",
+  "nextSlug": "minimum-number-of-pushes-to-type-word-i",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Divide an Array Into Subarrays With Minimum Cost II?\n\n**Divide an Array Into Subarrays With Minimum Cost II** (LeetCode #3013) is a **Hard** problem that primarily trains **two pointers**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sliding window, heap, and sorted list**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Sliding Window, Heap, Freq Table, Ordered Set.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/divide-an-array-into-subarrays-with-minimum-cost-ii/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Divide an Array Into Subarrays With Minimum Cost II\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sliding window, heap, and sorted list**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogd)) and **space** (O(d)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogd)** time and **O(d)** space.\n\n### Pattern focus: sliding window, heap, and sorted list\n\nUse the pattern as a checklist:\n\n- **sliding window** — confirm the invariant holds after each step\n- **heap** — confirm the invariant holds after each step\n- **sorted list** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogd)** |\n| Space | **O(d)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Divide an Array Into Subarrays With Minimum Cost II\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sliding window, heap, and sorted list — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sliding window, heap, and sorted list**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **two pointers**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Divide an Array Into Subarrays With Minimum Cost II** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **two pointers**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "divide-an-array-into-subarrays-with-minimum-cost-ii.cpp",
+      "code": "// Time:  O(nlogd)\n// Space: O(d)\n\n// fastest and less verbose\n// sliding window, heap\nclass Solution {\npublic:\n    long long minimumCost(vector<int>& nums, int k, int dist) {\n        static const int64_t INF = numeric_limits<int64_t>::max();\n\n        const auto& get_top = [](auto& heap, auto& total, const int d) {\n            while (-heap.top().second < d) {\n                heap.pop();\n                --total;\n            }\n            return heap.top();\n        };\n\n        priority_queue<pair<int, int>> max_heap;\n        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> min_heap;\n        int total1 = 0, total2 = 0;\n        int64_t mn = INF, curr = 0;\n        for (int i = 1; i < size(nums); ++i) {\n            max_heap.emplace(nums[i], -i);\n            curr += nums[i];\n            if (i > k - 1) {\n                const auto [x, idx] = get_top(max_heap, total1, i - (1 + dist)); max_heap.pop();\n                curr -= x;\n                min_heap.emplace(x, idx);\n            }\n            if (i > 1 + dist) {\n                if (get_top(min_heap, total2, i - (1 + dist)) <= pair(nums[i - (1 + dist)], -(i - (1 + dist)))) {\n                    lazy_delete(min_heap, total2, i - (1 + dist));\n                } else {\n                    lazy_delete(max_heap, total1, i - (1 + dist));                    \n                    curr -= nums[i - (1 + dist)] - min_heap.top().first;\n                    max_heap.emplace(min_heap.top()); min_heap.pop();\n                }\n            }\n            if (i >= k - 1) {\n                mn = min(mn, curr);\n            }\n        }\n        return nums[0] + mn;\n    }\n\nprivate:\n    template<typename T>\n    void lazy_delete(T& heap, int& total, const int d) {\n        ++total;\n        if (total <= size(heap) - total) {\n            return;\n        }\n        T new_heap;\n        while (!empty(heap)) {\n            const auto x = heap.top(); heap.pop();\n            if (-x.second <= d) {\n                --total;\n                continue;\n            }\n            new_heap.emplace(x);\n        }\n        heap = move(new_heap);\n    }\n};\n\n// Time:  O(nlogd)\n// Space: O(d)\n// faster but more verbose\n// sliding window, heap, freq table\nclass Solution2 {\npublic:\n    long long minimumCost(vector<int>& nums, int k, int dist) {\n        static const int64_t INF = numeric_limits<int64_t>::max();\n\n        const auto& get_top = [](auto& heap, auto& cnt, auto& total) {\n            while (cnt.count(heap.top())) {\n                const int x = heap.top(); heap.pop();\n                if (--cnt[x] == 0) {\n                    cnt.erase(x);\n                }\n                --total;\n            }\n            return heap.top();\n        };\n\n        priority_queue<int> max_heap;\n        priority_queue<int, vector<int>, greater<int>> min_heap;\n        unordered_map<int, int> cnt1, cnt2;\n        int total1 = 0, total2 = 0;\n        int64_t mn = INF, curr = 0;\n        for (int i = 1; i < size(nums); ++i) {\n            max_heap.emplace(nums[i]);\n            curr += nums[i];\n            if (size(max_heap) - total1 > k - 1) {\n                const int x = get_top(max_heap, cnt1, total1); max_heap.pop();\n                curr -= x;\n                min_heap.emplace(x);\n                \n            }\n            if ((size(max_heap) - total1) + (size(min_heap) - total2) > 1 + dist) {\n                if (get_top(min_heap, cnt2, total2) <= nums[i - (1 + dist)]) {\n                    lazy_delete(min_heap, cnt2, total2, nums[i - (1 + dist)]);\n                } else {\n                    lazy_delete(max_heap, cnt1, total1, nums[i - (1 + dist)]);\n                    curr -= nums[i - (1 + dist)] - min_heap.top();\n                    max_heap.emplace(min_heap.top()); min_heap.pop();\n                }\n            }\n            if (size(max_heap) - total1 == k - 1) {\n                mn = min(mn, curr);\n            }\n        }\n        return nums[0] + mn;\n    }\n\nprivate:\n    template<typename T>\n    void lazy_delete(T& heap, auto& cnt, int& total, int x) {\n        ++cnt[x];\n        ++total;\n        if (total <= size(heap) - total) {\n            return;\n        }\n        T new_heap;\n        while (!empty(heap)) {\n            const auto x = heap.top(); heap.pop();\n            if (cnt.count(x)) {\n                if (--cnt[x] == 0) {\n                    cnt.erase(x);\n                }\n                continue;\n            }\n            new_heap.emplace(x);\n        }\n        total = 0;\n        heap = move(new_heap);\n    }\n};\n\n// Time:  O(nlogd)\n// Space: O(d)\n// fast but verbose\n// sliding window, bst\nclass Solution3 {\npublic:\n    long long minimumCost(vector<int>& nums, int k, int dist) {\n        static const int64_t INF = numeric_limits<int64_t>::max();\n\n        multiset<int> bst1, bst2;\n        int64_t mn = INF, curr = 0;\n        for (int i = 1; i < size(nums); ++i) {\n            bst1.emplace(nums[i]);\n            curr += nums[i];\n            if (size(bst1) > k - 1) {\n                curr -= *rbegin(bst1);\n                bst2.emplace(*rbegin(bst1));\n                bst1.erase(prev(end(bst1)));\n            }\n            if (size(bst1) + size(bst2) > 1 + dist) {\n                if (*cbegin(bst2) <= nums[i - (1 + dist)]) {\n                    bst2.erase(bst2.find(nums[i - (1 + dist)]));\n                } else {\n                    bst1.erase(bst1.find(nums[i - (1 + dist)]));\n                    curr -= nums[i - (1 + dist)] - *cbegin(bst2);\n                    bst1.emplace(*cbegin(bst2));\n                    bst2.erase(begin(bst2));\n                }\n            }\n            if (size(bst1) == k - 1) {\n                mn = min(mn, curr);\n            }\n        }\n        return nums[0] + mn;\n    }\n};\n\n// Time:  O(nlogd)\n// Space: O(d)\n#include <ext/pb_ds/assoc_container.hpp>\n#include <ext/pb_ds/tree_policy.hpp>\nusing namespace __gnu_pbds;\n\n// concise but slow\n// sliding window, ordered set\nclass Solution4 {\npublic:\n    long long minimumCost(vector<int>& nums, int k, int dist) {\n        using ordered_set = tree<pair<int, int>, null_type, less<pair<int, int>>, rb_tree_tag, tree_order_statistics_node_update>;\n        ordered_set os;\n        for (int i = 1; i < 1 + (1 + dist); ++i) {\n            os.insert({nums[i], i});\n        }\n        int64_t curr = 0;\n        auto it = cbegin(os);\n        for (int i = 0; i < k - 1; ++i, ++it) {\n            curr += it->first;\n        }\n        int64_t mn = curr;\n        for (int i = 1 + (1 + dist); i < size(nums); ++i) {\n            os.insert({nums[i], i});\n            curr += min(nums[i] - os.find_by_order(k - 1)->first, 0);\n            curr -= min(nums[i - (1 + dist)] - os.find_by_order(k - 1)->first, 0);\n            os.erase({nums[i - (1 + dist)], i - (1 + dist)});\n            mn = min(mn, curr);\n        }\n        return nums[0] + mn;\n    }\n};\n",
+      "sourcePath": "C++/divide-an-array-into-subarrays-with-minimum-cost-ii.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "divide-an-array-into-subarrays-with-minimum-cost-ii.py",
+      "code": "# Time:  O(nlogd)\n# Space: O(d)\n\nimport heapq\n\n\n# sliding window, heap\nclass Solution(object):\n    def minimumCost(self, nums, k, dist):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :type dist: int\n        :rtype: int\n        \"\"\"\n        def get_top(heap, total):\n            while abs(heap[0][1]) < i-(1+dist):\n                heapq.heappop(heap)\n                total[0] -= 1\n            return heap[0]\n            \n        def lazy_delete(heap, total):\n            total[0] += 1\n            if total[0] <= len(heap)-total[0]:\n                return\n            heap[:] = [x for x in heap if abs(x[1]) > i-(1+dist)]\n            heapq.heapify(heap)\n            total[0] = 0\n\n        max_heap, min_heap = [], []\n        total1, total2 = [0], [0]\n        mn, curr = float(\"inf\"), 0\n        for i in xrange(1, len(nums)):\n            heapq.heappush(max_heap, (-nums[i], i))\n            curr += nums[i]\n            if i > k-1:\n                x, idx = get_top(max_heap, total1)\n                heapq.heappop(max_heap)\n                curr -= -x\n                heapq.heappush(min_heap, (-x, -idx))\n            if i > 1+dist:\n                x, idx = get_top(min_heap, total2)\n                if (x, idx) <= (nums[i-(1+dist)], -(i-(1+dist))):\n                    lazy_delete(min_heap, total2)\n                else:\n                    lazy_delete(max_heap, total1)\n                    heapq.heappop(min_heap)\n                    curr -= nums[i-(1+dist)]-x\n                    heapq.heappush(max_heap, (-x, -idx))\n            if i >= k-1:\n                mn = min(mn, curr)\n        return nums[0]+mn\n\n\n# Time:  O(nlogd)\n# Space: O(d)\nimport heapq\nimport collections\n\n\n# sliding window, heap, freq table\nclass Solution2(object):\n    def minimumCost(self, nums, k, dist):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :type dist: int\n        :rtype: int\n        \"\"\"\n        def get_top(heap, cnt, total):\n            while heap[0] in cnt:\n                x = heapq.heappop(heap)\n                cnt[x] -= 1\n                if cnt[x] == 0:\n                    del cnt[x]\n                total[0] -= 1\n            return heap[0]\n\n        def lazy_delete(heap, cnt, total, x):\n            cnt[x] += 1\n            total[0] += 1\n            if total[0] <= len(heap)-total[0]:\n                return\n            new_heap = []\n            for x in heap:\n                if x not in cnt:\n                    new_heap.append(x)\n                    continue\n                cnt[x] -= 1\n                if cnt[x] == 0:\n                    del cnt[x]\n            total[0] = 0\n            heapq.heapify(new_heap)\n            heap[:] = new_heap\n\n        max_heap, min_heap = [], []\n        cnt1, cnt2 = collections.Counter(), collections.Counter()\n        total1, total2 = [0], [0]\n        mn, curr = float(\"inf\"), 0\n        for i in xrange(1, len(nums)):\n            heapq.heappush(max_heap, -nums[i])\n            curr += nums[i]\n            if (len(max_heap)-total1[0]) > k-1:\n                x = get_top(max_heap, cnt1, total1)\n                curr -= -x\n                heapq.heappush(min_heap, -heapq.heappop(max_heap))\n            if (len(max_heap)-total1[0])+(len(min_heap)-total2[0]) > 1+dist:\n                x = get_top(min_heap, cnt2, total2)\n                if x <= nums[i-(1+dist)]:\n                    lazy_delete(min_heap, cnt2, total2, nums[i-(1+dist)])\n                else:\n                    lazy_delete(max_heap, cnt1, total1, -nums[i-(1+dist)])\n                    heapq.heappop(min_heap)\n                    curr -= nums[i-(1+dist)]-x\n                    heapq.heappush(max_heap, -x)\n            if len(max_heap)-total1[0] == k-1:\n                mn = min(mn, curr)\n        return nums[0]+mn\n\n\n# Time:  O(nlogd)\n# Space: O(d)\nfrom sortedcontainers import SortedList\n\n\n# sliding window, sorted list\nclass Solution3(object):\n    def minimumCost(self, nums, k, dist):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :type dist: int\n        :rtype: int\n        \"\"\"\n        sl1, sl2 = SortedList(), SortedList()\n        mn, curr = float(\"inf\"), 0\n        for i in xrange(1, len(nums)):\n            sl1.add(nums[i])\n            curr += nums[i]\n            if len(sl1) > k-1:\n                curr -= sl1[-1]\n                sl2.add(sl1.pop())\n            if len(sl1)+len(sl2) > 1+dist:\n                if sl2[0] <= nums[i-(1+dist)]:\n                    sl2.remove(nums[i-(1+dist)])\n                else:\n                    sl1.remove(nums[i-(1+dist)])\n                    curr -= nums[i-(1+dist)]-sl2[0]\n                    sl1.add(sl2.pop(0))\n            if len(sl1) == k-1:\n                mn = min(mn, curr)\n        return nums[0]+mn\n\n\n# Time:  O(nlogd)\n# Space: O(d)\nfrom sortedcontainers import SortedList\n\n\n# sliding window, sorted list\nclass Solution4(object):\n    def minimumCost(self, nums, k, dist):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :type dist: int\n        :rtype: int\n        \"\"\"\n        sl = SortedList(nums[1:1+(1+dist)])\n        mn = curr = sum(sl[:k-1])\n        for i in xrange(1+(1+dist), len(nums)):\n            sl.add(nums[i])\n            curr += min(nums[i]-sl[k-1], 0)\n            curr -= min(nums[i-(1+dist)]-sl[k-1], 0)\n            sl.remove(nums[i-(1+dist)])\n            mn = min(mn, curr)\n        return nums[0]+mn\n",
+      "sourcePath": "Python/divide-an-array-into-subarrays-with-minimum-cost-ii.py"
+    }
+  },
+  "seo": {
+    "title": "Divide an Array Into Subarrays With Minimum Cost II Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Divide an Array Into Subarrays With Minimum Cost II (LeetCode #3013). Pattern: sliding window. Time O(nlogd), space O(d). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Divide an Array Into Subarrays With Minimum Cost II",
+      "Divide an Array Into Subarrays With Minimum Cost II solution",
+      "Divide an Array Into Subarrays With Minimum Cost II leetcode",
+      "two-pointers",
+      "sliding-window",
+      "heap",
+      "sorted-list",
+      "hard"
+    ],
+    "canonicalPath": "/problems/divide-an-array-into-subarrays-with-minimum-cost-ii"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Divide an Array Into Subarrays With Minimum Cost II?",
+      "answer": "The reference solutions aim for O(nlogd) time and O(d) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Divide an Array Into Subarrays With Minimum Cost II use?",
+      "answer": "It primarily maps to sliding window, heap, and sorted list, within the broader topic of two pointers."
+    },
+    {
+      "question": "Is Divide an Array Into Subarrays With Minimum Cost II good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/divide-an-array-into-subarrays-with-minimum-cost-ii/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sliding window, heap, and sorted list approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Divide an Array Into Subarrays With Minimum Cost II (#3013) — Hard. Pattern: sliding window, heap, and sorted list. Complexity: O(nlogd) time / O(d) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Divide an Array Into Subarrays With Minimum Cost II: show input structure (two pointers), highlight the moving parts of the sliding window, heap, and sorted list approach, and annotate each step with the maintained invariant and complexity."
+}

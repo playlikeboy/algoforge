@@ -1,0 +1,40 @@
+{
+  "slug": "medium-tree-dp-problems",
+  "path": "/explore/medium-tree-dp-problems",
+  "h1": "Medium Tree Dp Problems",
+  "intro": "5 medium problems that drill the Tree Dp pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "choose-edges-to-maximize-score-in-a-tree",
+    "amount-of-time-for-binary-tree-to-be-infected",
+    "maximum-score-after-applying-operations-on-a-tree",
+    "maximize-the-number-of-target-nodes-after-connecting-trees-i",
+    "finish-time-of-tasks-i"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice medium Tree Dp problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/tree-dp",
+      "label": "Tree Dp pattern"
+    },
+    {
+      "href": "/difficulty/medium",
+      "label": "All Medium problems"
+    }
+  ],
+  "seo": {
+    "title": "Medium Tree Dp Problems | AlgoForge",
+    "description": "Practice medium Tree Dp LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "medium Tree Dp",
+      "Tree Dp problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/medium-tree-dp-problems"
+  },
+  "kind": "difficulty-pattern"
+}

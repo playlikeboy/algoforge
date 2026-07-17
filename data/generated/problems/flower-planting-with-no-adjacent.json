@@ -1,0 +1,156 @@
+{
+  "id": "1042",
+  "number": 1042,
+  "slug": "flower-planting-with-no-adjacent",
+  "title": "Flower Planting With No Adjacent",
+  "difficulty": "Easy",
+  "topics": [
+    "graph"
+  ],
+  "patterns": [
+    "graph-algorithms"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/flower-planting-with-no-adjacent/",
+  "notes": [],
+  "relatedSlugs": [
+    "reconstruct-itinerary",
+    "couples-holding-hands",
+    "maximum-students-taking-exam",
+    "minimum-number-of-vertices-to-reach-all-nodes",
+    "number-of-ways-to-reconstruct-a-tree",
+    "checking-existence-of-edge-length-limited-paths-ii",
+    "restore-the-array-from-adjacent-pairs",
+    "minimum-degree-of-a-connected-trio-in-a-graph"
+  ],
+  "prevSlug": "robot-bounded-in-circle",
+  "nextSlug": "partition-array-for-maximum-sum",
+  "estimatedMinutes": 28,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Flower Planting With No Adjacent?\n\n**Flower Planting With No Adjacent** (LeetCode #1042) is a **Easy** problem that primarily trains **graph**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **graph algorithms**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt builds core muscle memory you will reuse on harder variants.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/flower-planting-with-no-adjacent/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Flower Planting With No Adjacent\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **graph algorithms**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(n)** space.\n\n### Pattern focus: graph algorithms\n\nUse the pattern as a checklist:\n\n- **graph algorithms** — confirm the invariant holds after each step\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Flower Planting With No Adjacent\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for graph algorithms — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal graph algorithms solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `flower-planting-with-no-adjacent`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **graph algorithms**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **graph**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Flower Planting With No Adjacent** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **graph**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "flower-planting-with-no-adjacent.cpp",
+      "code": "// Time:  O(n)\n// Space: O(n)\n\nclass Solution {\npublic:\n    vector<int> gardenNoAdj(int N, vector<vector<int>>& paths) {\n        vector<int> result(N);\n        vector<vector<int>> G(N);\n        for (const auto& path : paths) {\n            int x = path[0], y = path[1];\n            G[x - 1].emplace_back(y - 1);\n            G[y - 1].emplace_back(x - 1);\n        }\n        for (int i = 0; i < N; ++i) {\n            unordered_set<int> candidates = {1, 2, 3, 4};\n            for (const auto& j : G[i]) {\n                candidates.erase(result[j]);\n            }\n            result[i] = *(candidates.cbegin());\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/flower-planting-with-no-adjacent.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "flower-planting-with-no-adjacent.py",
+      "code": "# Time:  O(n)\n# Space: O(n)\n\nclass Solution(object):\n    def gardenNoAdj(self, N, paths):\n        \"\"\"\n        :type N: int\n        :type paths: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        result = [0]*N\n        G = [[] for i in xrange(N)]\n        for x, y in paths:\n            G[x-1].append(y-1)\n            G[y-1].append(x-1)\n        for i in xrange(N):\n            result[i] = ({1, 2, 3, 4} - {result[j] for j in G[i]}).pop()\n        return result\n",
+      "sourcePath": "Python/flower-planting-with-no-adjacent.py"
+    }
+  },
+  "seo": {
+    "title": "Flower Planting With No Adjacent Solution — Easy | AlgoForge",
+    "description": "Original Easy explanation for Flower Planting With No Adjacent (LeetCode #1042). Pattern: graph algorithms. Time O(n), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Flower Planting With No Adjacent",
+      "Flower Planting With No Adjacent solution",
+      "Flower Planting With No Adjacent leetcode",
+      "graph",
+      "graph-algorithms",
+      "easy"
+    ],
+    "canonicalPath": "/problems/flower-planting-with-no-adjacent"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Flower Planting With No Adjacent?",
+      "answer": "The reference solutions aim for O(n) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Flower Planting With No Adjacent use?",
+      "answer": "It primarily maps to graph algorithms, within the broader topic of graph."
+    },
+    {
+      "question": "Is Flower Planting With No Adjacent good for interviews?",
+      "answer": "Yes — as a Easy problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/flower-planting-with-no-adjacent/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the graph algorithms approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Flower Planting With No Adjacent (#1042) — Easy. Pattern: graph algorithms. Complexity: O(n) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Flower Planting With No Adjacent: show input structure (graph), highlight the moving parts of the graph algorithms approach, and annotate each step with the maintained invariant and complexity."
+}

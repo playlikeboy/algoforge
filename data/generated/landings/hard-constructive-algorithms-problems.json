@@ -1,0 +1,46 @@
+{
+  "slug": "hard-constructive-algorithms-problems",
+  "path": "/explore/hard-constructive-algorithms-problems",
+  "h1": "Hard Constructive Algorithms Problems",
+  "intro": "11 hard problems that drill the Constructive Algorithms pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "shortest-impossible-sequence-of-rolls",
+    "minimum-money-required-before-transactions",
+    "find-the-string-with-lcp",
+    "color-the-triangle-red",
+    "find-a-good-subset-of-the-matrix",
+    "count-houses-in-a-circular-street-ii",
+    "maximum-number-of-groups-with-increasing-length",
+    "minimum-cost-to-equalize-array",
+    "find-the-largest-palindrome-divisible-by-k",
+    "construct-2d-grid-matching-graph-layout",
+    "create-grid-with-exactly-k-paths-ii"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice hard Constructive Algorithms problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/constructive-algorithms",
+      "label": "Constructive Algorithms pattern"
+    },
+    {
+      "href": "/difficulty/hard",
+      "label": "All Hard problems"
+    }
+  ],
+  "seo": {
+    "title": "Hard Constructive Algorithms Problems | AlgoForge",
+    "description": "Practice hard Constructive Algorithms LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "hard Constructive Algorithms",
+      "Constructive Algorithms problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/hard-constructive-algorithms-problems"
+  },
+  "kind": "difficulty-pattern"
+}

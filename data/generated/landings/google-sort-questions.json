@@ -1,0 +1,51 @@
+{
+  "slug": "google-sort-questions",
+  "path": "/explore/google-sort-questions",
+  "h1": "Best Sort Questions for Google",
+  "intro": "A curated set of 8 Sort problems frequently useful for Google interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "merge-intervals",
+    "insert-interval",
+    "insertion-sort-list",
+    "sort-list",
+    "maximum-gap",
+    "the-skyline-problem",
+    "wiggle-sort-ii",
+    "sort-characters-by-frequency"
+  ],
+  "faqs": [
+    {
+      "question": "How many Sort problems should I do for Google?",
+      "answer": "Quality over quantity: master patterns with 8 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Sort topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/google",
+      "label": "Google interview hub"
+    },
+    {
+      "href": "/topics/sort",
+      "label": "Sort problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Sort Questions for Google | AlgoForge",
+    "description": "Top Sort coding interview questions for Google. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Google Sort questions",
+      "Sort interview",
+      "Google leetcode"
+    ],
+    "canonicalPath": "/explore/google-sort-questions"
+  },
+  "kind": "company-topic"
+}

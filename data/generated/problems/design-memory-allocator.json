@@ -1,0 +1,158 @@
+{
+  "id": "2502",
+  "number": 2502,
+  "slug": "design-memory-allocator",
+  "title": "Design Memory Allocator",
+  "difficulty": "Medium",
+  "topics": [
+    "design"
+  ],
+  "patterns": [
+    "sorted-list"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "ctor: O(1) allocate: O(logn) free: O(logn)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/design-memory-allocator/",
+  "notes": [
+    "Sorted List"
+  ],
+  "relatedSlugs": [
+    "design-a-number-container-system",
+    "design-a-food-rating-system",
+    "design-a-todo-list",
+    "design-task-manager",
+    "implement-router",
+    "finding-mk-average",
+    "sequentially-ordinal-rank-tracker",
+    "count-integers-in-intervals"
+  ],
+  "prevSlug": "longest-square-streak-in-an-array",
+  "nextSlug": "maximum-number-of-points-from-grid-queries",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Design Memory Allocator?\n\n**Design Memory Allocator** (LeetCode #2502) is a **Medium** problem that primarily trains **design**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sorted list**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Sorted List.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/design-memory-allocator/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Design Memory Allocator\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sorted list**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (ctor: O(1) allocate: O(logn) free: O(logn)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **ctor: O(1) allocate: O(logn) free: O(logn)** time and **O(n)** space.\n\n### Pattern focus: sorted list\n\nUse the pattern as a checklist:\n\n- **sorted list** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **ctor: O(1) allocate: O(logn) free: O(logn)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Design Memory Allocator\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sorted list — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sorted list**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **design**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Design Memory Allocator** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **design**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "design-memory-allocator.cpp",
+      "code": "// Time:  ctor:     O(1)\n//        allocate: O(logn)\n//        free:     O(logn)\n// Space: O(n)\n\n// bst\nclass Allocator {\npublic:\n    Allocator(int n) : avails_{{0, n}} {\n    }\n    \n    int allocate(int size, int mID) {\n        for (const auto [l, s] : avails_) {\n            if (s < size) {\n                continue;\n            }\n            avails_.erase(l);\n            lookup_[mID].emplace_back(l, size);\n            if (s - size > 0) {\n                avails_.emplace(l + size, s - size);\n            }\n            return l;\n        }\n        return -1;\n    }\n    \n    int free(int mID) {\n        if (!lookup_.count(mID)) {\n            return 0;\n        }\n        int result = 0;\n        for (const auto& [l, s] : lookup_[mID]) {\n            auto it = avails_.emplace(l, s).first;\n            if (next(it) != end(avails_) && it->first + it->second == next(it)->first) {\n                it->second += next(it)->second;\n                avails_.erase(next(it));\n            }\n            if (it != begin(avails_) && prev(it)->first + prev(it)->second == it->first) {\n                prev(it)->second += it->second;\n                avails_.erase(it);\n            }\n            result += s;\n        }\n        lookup_.erase(mID);\n        return result;\n    }\n\nprivate:\n    map<int, int> avails_;\n    unordered_map<int, vector<pair<int, int>>> lookup_;\n};\n",
+      "sourcePath": "C++/design-memory-allocator.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "design-memory-allocator.py",
+      "code": "# Time:  ctor:     O(1)\n#        allocate: O(logn)\n#        free:     O(logn)\n# Space: O(n)\n\nfrom sortedcontainers import SortedList\nimport collections\n\n# sorted list\nclass Allocator(object):\n\n    def __init__(self, n):\n        \"\"\"\n        :type n: int\n        \"\"\"\n        self.__avails = SortedList([[0, n]])\n        self.__lookup = collections.defaultdict(list)\n\n    def allocate(self, size, mID):\n        \"\"\"\n        :type size: int\n        :type mID: int\n        :rtype: int\n        \"\"\"\n        for l, s in self.__avails:\n            if s < size:\n                continue\n            self.__avails.remove([l, s])\n            self.__lookup[mID].append([l, size])\n            if s-size > 0:\n                self.__avails.add([l+size, s-size])\n            return l\n        return -1\n\n    def free(self, mID):\n        \"\"\"\n        :type mID: int\n        :rtype: int\n        \"\"\"\n        if mID not in self.__lookup:\n            return 0\n        result = 0\n        for l, s in self.__lookup[mID]:\n            self.__avails.add([l, s])\n            i = self.__avails.bisect_left([l, s])\n            if i+1 < len(self.__avails) and self.__avails[i][0]+self.__avails[i][1] == self.__avails[i+1][0]:\n                self.__avails[i][1] += self.__avails[i+1][1]\n                del self.__avails[i+1]\n            if i-1 >= 0 and self.__avails[i-1][0]+self.__avails[i-1][1] == self.__avails[i][0]:\n                self.__avails[i-1][1] += self.__avails[i][1]\n                del self.__avails[i]            \n            result += s\n        del self.__lookup[mID]\n        return result\n",
+      "sourcePath": "Python/design-memory-allocator.py"
+    }
+  },
+  "seo": {
+    "title": "Design Memory Allocator Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Design Memory Allocator (LeetCode #2502). Pattern: sorted list. Time ctor: O(1) allocate: O(logn) free: O(logn), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Design Memory Allocator",
+      "Design Memory Allocator solution",
+      "Design Memory Allocator leetcode",
+      "design",
+      "sorted-list",
+      "medium"
+    ],
+    "canonicalPath": "/problems/design-memory-allocator"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Design Memory Allocator?",
+      "answer": "The reference solutions aim for ctor: O(1) allocate: O(logn) free: O(logn) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Design Memory Allocator use?",
+      "answer": "It primarily maps to sorted list, within the broader topic of design."
+    },
+    {
+      "question": "Is Design Memory Allocator good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/design-memory-allocator/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sorted list approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Design Memory Allocator (#2502) — Medium. Pattern: sorted list. Complexity: ctor: O(1) allocate: O(logn) free: O(logn) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Design Memory Allocator: show input structure (design), highlight the moving parts of the sorted list approach, and annotate each step with the maintained invariant and complexity."
+}

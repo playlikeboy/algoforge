@@ -1,0 +1,23 @@
+{
+  "type": "company",
+  "slug": "dropbox",
+  "name": "Dropbox",
+  "description": "Coding interview preparation for Dropbox: high-frequency patterns and problem sets.",
+  "problemCount": 4,
+  "problemSlugs": [
+    "word-break-ii",
+    "game-of-life",
+    "word-pattern",
+    "find-duplicate-file-in-system"
+  ],
+  "seo": {
+    "title": "Dropbox Coding Interview Questions | AlgoForge",
+    "description": "Prepare for Dropbox interviews with 4 problems, patterns, and roadmaps.",
+    "keywords": [
+      "Dropbox interview questions",
+      "Dropbox leetcode",
+      "Dropbox oa"
+    ],
+    "canonicalPath": "/companies/dropbox"
+  }
+}

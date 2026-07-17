@@ -1,0 +1,50 @@
+{
+  "slug": "easy-dynamic-programming-problems",
+  "path": "/explore/easy-dynamic-programming-problems",
+  "h1": "Easy Dynamic Programming Problems",
+  "intro": "15 easy problems that drill the Dynamic Programming pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "maximum-subarray",
+    "climbing-stairs",
+    "house-robber",
+    "paint-fence",
+    "range-sum-query-immutable",
+    "fibonacci-number",
+    "min-cost-climbing-stairs",
+    "rotated-digits",
+    "divisor-game",
+    "n-th-tribonacci-number",
+    "number-of-unequal-triplets-in-array",
+    "generate-fibonacci-sequence",
+    "subarrays-distinct-element-sum-of-squares-i",
+    "subarrays-distinct-element-sum-of-squares-ii",
+    "maximum-strong-pair-xor-i"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice easy Dynamic Programming problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/dynamic-programming",
+      "label": "Dynamic Programming pattern"
+    },
+    {
+      "href": "/difficulty/easy",
+      "label": "All Easy problems"
+    }
+  ],
+  "seo": {
+    "title": "Easy Dynamic Programming Problems | AlgoForge",
+    "description": "Practice easy Dynamic Programming LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "easy Dynamic Programming",
+      "Dynamic Programming problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/easy-dynamic-programming-problems"
+  },
+  "kind": "difficulty-pattern"
+}

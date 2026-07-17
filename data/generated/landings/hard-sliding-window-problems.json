@@ -1,0 +1,78 @@
+{
+  "slug": "hard-sliding-window-problems",
+  "path": "/explore/hard-sliding-window-problems",
+  "h1": "Hard Sliding Window Problems",
+  "intro": "43 hard problems that drill the Sliding Window pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "shortest-subarray-with-sum-at-least-k",
+    "subarrays-with-k-different-integers",
+    "distinct-echo-substrings",
+    "jump-game-v",
+    "constrained-subset-sum",
+    "find-a-value-of-a-mysterious-function-closest-to-target",
+    "maximum-number-of-visible-points",
+    "delivering-boxes-from-storage-to-ports",
+    "minimum-number-of-operations-to-make-array-continuous",
+    "count-subarrays-with-score-less-than-k",
+    "maximum-number-of-robots-within-budget",
+    "maximum-frequency-score-of-a-subarray",
+    "maximize-the-minimum-powered-city",
+    "sum-of-imbalance-numbers-of-all-subarrays",
+    "length-of-the-longest-valid-substring",
+    "maximize-value-of-function-in-a-ball-passing-game",
+    "count-of-sub-multisets-with-bounded-sum",
+    "apply-operations-to-maximize-frequency-score",
+    "divide-an-array-into-subarrays-with-minimum-cost-ii",
+    "find-the-median-of-the-uniqueness-array",
+    "find-subarray-with-bitwise-or-closest-to-k",
+    "count-the-number-of-inversions",
+    "count-substrings-that-satisfy-k-constraint-ii",
+    "final-array-state-after-k-multiplication-operations-ii",
+    "minimum-number-of-valid-strings-to-form-target-ii",
+    "count-substrings-that-can-be-rearranged-to-contain-a-string-ii",
+    "find-x-sum-of-all-k-long-subarrays-ii",
+    "count-substrings-with-k-frequency-characters-ii",
+    "maximum-frequency-of-an-element-after-performing-operations-ii",
+    "count-non-decreasing-subarrays-after-k-operations",
+    "longest-special-path",
+    "maximum-and-minimum-sums-of-at-most-size-k-subarrays",
+    "maximum-difference-between-even-and-odd-frequency-ii",
+    "maximize-the-distance-between-points-on-a-square",
+    "lexicographically-smallest-generated-string",
+    "longest-common-prefix-of-k-strings-after-removal",
+    "longest-special-path-ii",
+    "minimum-inversion-count-in-subarrays-of-fixed-length",
+    "maximum-subarray-xor-with-bounded-range",
+    "count-subarrays-with-k-distinct-integers",
+    "minimum-operations-to-make-all-grid-elements-equal",
+    "minimum-operations-to-make-array-modulo-alternating-ii",
+    "valid-subarrays-with-matching-sum-digits-ii"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice hard Sliding Window problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/sliding-window",
+      "label": "Sliding Window pattern"
+    },
+    {
+      "href": "/difficulty/hard",
+      "label": "All Hard problems"
+    }
+  ],
+  "seo": {
+    "title": "Hard Sliding Window Problems | AlgoForge",
+    "description": "Practice hard Sliding Window LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "hard Sliding Window",
+      "Sliding Window problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/hard-sliding-window-problems"
+  },
+  "kind": "difficulty-pattern"
+}

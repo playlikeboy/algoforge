@@ -1,0 +1,46 @@
+{
+  "slug": "twitter-design-questions",
+  "path": "/explore/twitter-design-questions",
+  "h1": "Best Design Questions for Twitter",
+  "intro": "A curated set of 3 Design problems frequently useful for Twitter interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "lru-cache",
+    "design-twitter",
+    "insert-delete-getrandom-o1"
+  ],
+  "faqs": [
+    {
+      "question": "How many Design problems should I do for Twitter?",
+      "answer": "Quality over quantity: master patterns with 3 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Design topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/twitter",
+      "label": "Twitter interview hub"
+    },
+    {
+      "href": "/topics/design",
+      "label": "Design problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Design Questions for Twitter | AlgoForge",
+    "description": "Top Design coding interview questions for Twitter. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Twitter Design questions",
+      "Design interview",
+      "Twitter leetcode"
+    ],
+    "canonicalPath": "/explore/twitter-design-questions"
+  },
+  "kind": "company-topic"
+}

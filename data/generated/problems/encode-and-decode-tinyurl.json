@@ -1,0 +1,158 @@
+{
+  "id": "535",
+  "number": 535,
+  "slug": "encode-and-decode-tinyurl",
+  "title": "Encode and Decode TinyURL",
+  "difficulty": "Medium",
+  "topics": [
+    "design"
+  ],
+  "patterns": [],
+  "companies": [
+    "amazon",
+    "google",
+    "uber",
+    "meta"
+  ],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(1)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/encode-and-decode-tinyurl/",
+  "notes": [],
+  "relatedSlugs": [
+    "binary-search-tree-iterator",
+    "peeking-iterator",
+    "design-tic-tac-toe",
+    "design-snake-game",
+    "design-twitter",
+    "design-hit-counter",
+    "design-phone-directory",
+    "design-circular-queue"
+  ],
+  "prevSlug": "game-play-analysis-iii",
+  "nextSlug": "construct-binary-tree-from-string",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Encode and Decode TinyURL?\n\n**Encode and Decode TinyURL** (LeetCode #535) is a **Medium** problem that primarily trains **design**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/encode-and-decode-tinyurl/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Encode and Decode TinyURL\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(1)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(1)** time and **O(n)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(1)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Encode and Decode TinyURL\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **design**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Encode and Decode TinyURL** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **design**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "encode-and-decode-tinyurl.cpp",
+      "code": "// Time:  O(1)\n// Space: O(n)\n\nclass Solution {\npublic:\n    Solution() : gen_((random_device())()) {\n    }\n\n    // Encodes a URL to a shortened URL.\n    string encode(string longUrl) {\n        string key = getRand();\n        while (lookup_.count(key)) {\n            key = getRand();\n        }\n        lookup_[key] = longUrl;\n        return \"http://tinyurl.com/\" + key;\n    }\n\n    // Decodes a shortened URL to its original URL.\n    string decode(string shortUrl) {\n        return lookup_[shortUrl.substr(tiny_url.length())];\n    }\n\nprivate:\n    string getRand() {\n        string random;\n        for (int i = 0; i < random_length; ++i) {\n            random += alphabet_[uniform_int_distribution<int>{0, alphabet_.length() - 1}(gen_)];\n        }\n        return random;\n    }\n\n    const int random_length = 6;\n    const string tiny_url = \"http://tinyurl.com/\";\n    const string alphabet_ = \"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\";\n    default_random_engine gen_;\n    unordered_map<string, string> lookup_;\n};\n\n// Your Solution object will be instantiated and called as such:\n// Solution solution;\n// solution.decode(solution.encode(url));\n",
+      "sourcePath": "C++/encode-and-decode-tinyurl.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "encode-and-decode-tinyurl.py",
+      "code": "# Time:  O(1)\n# Space: O(n)\n\nimport random\n\n\nclass Codec(object):\n    def __init__(self):\n        self.__random_length = 6\n        self.__tiny_url = \"http://tinyurl.com/\"\n        self.__alphabet = \"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\"\n        self.__lookup = {}\n\n    def encode(self, longUrl):\n        \"\"\"Encodes a URL to a shortened URL.\n\n        :type longUrl: str\n        :rtype: str\n        \"\"\"\n        def getRand():\n            rand = []\n            for _ in xrange(self.__random_length):\n                rand += self.__alphabet[random.randint(0, len(self.__alphabet)-1)]\n            return \"\".join(rand)\n\n        key = getRand()\n        while key in self.__lookup:\n            key = getRand()\n        self.__lookup[key] = longUrl\n        return self.__tiny_url + key\n\n    def decode(self, shortUrl):\n        \"\"\"Decodes a shortened URL to its original URL.\n\n        :type shortUrl: str\n        :rtype: str\n        \"\"\"\n        return self.__lookup[shortUrl[len(self.__tiny_url):]]\n\n\nfrom hashlib import sha256\n\n\nclass Codec2(object):\n\n    def __init__(self):\n        self._cache = {}\n        self.url = 'http://tinyurl.com/'\n\n    def encode(self, long_url):\n        \"\"\"Encodes a URL to a shortened URL.\n\n        :type long_url: str\n        :rtype: str\n        \"\"\"\n        key = sha256(long_url.encode()).hexdigest()[:6]\n        self._cache[key] = long_url\n        return self.url + key\n\n    def decode(self, short_url):\n        \"\"\"Decodes a shortened URL to its original URL.\n\n        :type short_url: str\n        :rtype: str\n        \"\"\"\n        key = short_url.replace(self.url, '')\n        return self._cache[key]\n\n\n",
+      "sourcePath": "Python/encode-and-decode-tinyurl.py"
+    }
+  },
+  "seo": {
+    "title": "Encode and Decode TinyURL Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Encode and Decode TinyURL (LeetCode #535). Pattern: algorithms. Time O(1), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Encode and Decode TinyURL",
+      "Encode and Decode TinyURL solution",
+      "Encode and Decode TinyURL leetcode",
+      "design",
+      "medium"
+    ],
+    "canonicalPath": "/problems/encode-and-decode-tinyurl"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Encode and Decode TinyURL?",
+      "answer": "The reference solutions aim for O(1) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Encode and Decode TinyURL use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of design."
+    },
+    {
+      "question": "Is Encode and Decode TinyURL good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/encode-and-decode-tinyurl/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Encode and Decode TinyURL (#535) — Medium. Pattern: general problem-solving. Complexity: O(1) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Encode and Decode TinyURL: show input structure (design), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

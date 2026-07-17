@@ -1,0 +1,46 @@
+{
+  "slug": "microsoft-binary-search-tree-questions",
+  "path": "/explore/microsoft-binary-search-tree-questions",
+  "h1": "Best Binary Search Tree Questions for Microsoft",
+  "intro": "A curated set of 3 Binary Search Tree problems frequently useful for Microsoft interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "kth-smallest-element-in-a-bst",
+    "lowest-common-ancestor-of-a-binary-search-tree",
+    "serialize-and-deserialize-bst"
+  ],
+  "faqs": [
+    {
+      "question": "How many Binary Search Tree problems should I do for Microsoft?",
+      "answer": "Quality over quantity: master patterns with 3 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Binary Search Tree topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/microsoft",
+      "label": "Microsoft interview hub"
+    },
+    {
+      "href": "/topics/binary-search-tree",
+      "label": "Binary Search Tree problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Binary Search Tree Questions for Microsoft | AlgoForge",
+    "description": "Top Binary Search Tree coding interview questions for Microsoft. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Microsoft Binary Search Tree questions",
+      "Binary Search Tree interview",
+      "Microsoft leetcode"
+    ],
+    "canonicalPath": "/explore/microsoft-binary-search-tree-questions"
+  },
+  "kind": "company-topic"
+}

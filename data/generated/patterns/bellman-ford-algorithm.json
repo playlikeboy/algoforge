@@ -1,0 +1,22 @@
+{
+  "type": "pattern",
+  "slug": "bellman-ford-algorithm",
+  "name": "Bellman Ford Algorithm",
+  "description": "Master the Bellman Ford Algorithm coding pattern with curated problems.",
+  "problemCount": 1,
+  "problemSlugs": [
+    "maximize-amount-after-two-days-of-conversions"
+  ],
+  "relatedTopics": [],
+  "seo": {
+    "title": "Bellman Ford Algorithm Pattern — Problems & Guide | AlgoForge",
+    "description": "Learn the Bellman Ford Algorithm pattern with 1 practice problems, interview tips, and visual intuition.",
+    "keywords": [
+      "Bellman Ford Algorithm",
+      "Bellman Ford Algorithm pattern",
+      "Bellman Ford Algorithm leetcode",
+      "coding patterns"
+    ],
+    "canonicalPath": "/patterns/bellman-ford-algorithm"
+  }
+}

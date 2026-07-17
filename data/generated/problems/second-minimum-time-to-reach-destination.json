@@ -1,0 +1,158 @@
+{
+  "id": "2045",
+  "number": 2045,
+  "slug": "second-minimum-time-to-reach-destination",
+  "title": "Second Minimum Time to Reach Destination",
+  "difficulty": "Medium",
+  "topics": [
+    "breadth-first-search"
+  ],
+  "patterns": [
+    "queue-bfs"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(\\",
+  "spaceComplexity": "E\\",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/second-minimum-time-to-reach-destination/",
+  "notes": [
+    "E\\"
+  ],
+  "relatedSlugs": [
+    "binary-tree-zigzag-level-order-traversal",
+    "word-ladder",
+    "surrounded-regions",
+    "clone-graph",
+    "course-schedule",
+    "course-schedule-ii",
+    "graph-valid-tree",
+    "walls-and-gates"
+  ],
+  "prevSlug": "count-number-of-maximum-bitwise-or-subsets",
+  "nextSlug": "sort-linked-list-already-sorted-using-absolute-values",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Second Minimum Time to Reach Destination?\n\n**Second Minimum Time to Reach Destination** (LeetCode #2045) is a **Medium** problem that primarily trains **breadth first search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **queue bfs**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: E\\.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/second-minimum-time-to-reach-destination/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Second Minimum Time to Reach Destination\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **queue bfs**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(\\) and **space** (E\\) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(\\** time and **E\\** space.\n\n### Pattern focus: queue bfs\n\nUse the pattern as a checklist:\n\n- **queue bfs** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(\\** |\n| Space | **E\\** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Second Minimum Time to Reach Destination\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for queue bfs — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **queue bfs**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **breadth first search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Second Minimum Time to Reach Destination** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **breadth first search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "second-minimum-time-to-reach-destination.cpp",
+      "code": "// Time:  O(|V| + |E|) = O(|E|) since graph is connected, O(|E|) >= O(|V|)\n// Space: O(|V| + |E|) = O(|E|)\n\nclass Solution {\npublic:\n    int secondMinimum(int n, vector<vector<int>>& edges, int time, int change) {\n        vector<vector<int>> adj(n);\n        for (const auto& edge : edges) {\n            adj[edge[0] - 1].emplace_back(edge[1] - 1);\n            adj[edge[1] - 1].emplace_back(edge[0] - 1);\n        }\n        return calc_time(time, change, bi_bfs(adj, 0, n - 1));\n    }\n\nprivate:\n    // Template:\n    // https://github.com/kamyu104/LeetCode-Solutions/blob/master/C++/nearest-exit-from-entrance-in-maze.cpp\n    int bi_bfs(const vector<vector<int>>& adj, int start, int end) {\n        unordered_set<int> left = {start}, right = {end}, lookup;\n        int result = 0, steps = 0;\n        while (!empty(left) && (!result || result + 2 > steps)) {  // modified\n            for (const auto& u : left) {\n                lookup.emplace(u);\n            }\n            unordered_set<int> new_left;\n            for (const auto& u : left) {\n                if (right.count(u)) {\n                    if (!result) {  // modified\n                        result = steps;\n                    } else if (result < steps) {  // modified\n                        return result + 1;\n                    }\n                }\n                for (const auto& v : adj[u]) {\n                    if (lookup.count(v)) {\n                        continue;\n                    }\n                    new_left.emplace(v);\n                }\n            }\n            left = move(new_left);\n            ++steps;\n            if (size(left) > size(right)) {\n                swap(left, right);\n            }\n        }\n        return result + 2;  // modified\n    }\n\n    int calc_time(int time, int change, int dist) {\n        int result = 0;\n        while (dist--) {\n            if (result / change % 2) {\n                result = (result / change + 1) * change;\n            }\n            result += time;\n        }\n        return result;\n    }\n};\n\n// Time:  O(|V| + |E|) = O(|E|) since graph is connected, O(|E|) >= O(|V|) \n// Space: O(|V| + |E|) = O(|E|)\nclass Solution2 {\npublic:\n    int secondMinimum(int n, vector<vector<int>>& edges, int time, int change) {\n        vector<vector<int>> adj(n);\n        for (const auto& edge : edges) {\n            adj[edge[0] - 1].emplace_back(edge[1] - 1);\n            adj[edge[1] - 1].emplace_back(edge[0] - 1);\n        }\n        const auto& dist_to_end = bfs(adj, 0);\n        const auto& dist_to_start = bfs(adj, n - 1);\n        int dist = dist_to_end[n - 1] + 2;  // always exists\n        for (int i = 0; i < n; ++i) {\n            if (dist_to_end[i] + dist_to_start[i] == dist_to_end[n - 1]) {\n                continue;\n            }\n            dist = min(dist, dist_to_end[i] + dist_to_start[i]);  // find second min\n            if (dist == dist_to_end[n - 1] + 1) {\n                break;\n            }\n        }\n        return calc_time(time, change, dist);\n    }\n\nprivate:\n    vector<int> bfs(const vector<vector<int>>& adj, int start) {\n        static const int INF = numeric_limits<int>::max();\n        vector<int> q = {start};\n        vector<int> dist(size(adj), INF);\n        dist[start] = 0;\n        while (!empty(q)) {\n            vector<int> new_q;\n            for (const auto& u : q) {\n                for (const auto& v: adj[u]) {\n                    if (dist[v] != INF) {\n                        continue;\n                    }\n                    dist[v] = dist[u] + 1;\n                    new_q.emplace_back(v);\n                }\n            }\n            q = move(new_q);\n        }\n        return dist;\n    }\n\n    int calc_time(int time, int change, int dist) {\n        int result = 0;\n        while (dist--) {\n            if (result / change % 2) {\n                result = (result / change + 1) * change;\n            }\n            result += time;\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/second-minimum-time-to-reach-destination.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "second-minimum-time-to-reach-destination.py",
+      "code": "# Time:  O(|V| + |E|) = O(|E|) since graph is connected, O(|E|) >= O(|V|) \n# Space: O(|V| + |E|) = O(|E|)\n\nclass Solution(object):\n    def secondMinimum(self, n, edges, time, change):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type time: int\n        :type change: int\n        :rtype: int\n        \"\"\"\n        # Template:\n        # https://github.com/kamyu104/LeetCode-Solutions/blob/master/Python/find-if-path-exists-in-graph.py\n        def bi_bfs(adj, start, target):\n            left, right = {start}, {target}\n            lookup = set()\n            result = steps = 0\n            while left and (not result or result+2 > steps):  # modified\n                for u in left:\n                    lookup.add(u)\n                new_left = set()\n                for u in left: \n                    if u in right:\n                        if not result:  # modified\n                            result = steps\n                        elif result < steps:  # modifeid\n                            return result+1\n                    for v in adj[u]:\n                        if v in lookup:\n                            continue\n                        new_left.add(v)\n                left = new_left\n                steps += 1\n                if len(left) > len(right): \n                    left, right = right, left\n            return result+2  # modified\n\n        def calc_time(time, change, dist):\n            result = 0\n            for _ in xrange(dist):\n                if result//change%2:\n                    result = (result//change+1)*change\n                result += time\n            return result\n\n        adj = [[] for _ in xrange(n)]\n        for u, v in edges:\n            adj[u-1].append(v-1)\n            adj[v-1].append(u-1)\n        return calc_time(time, change, bi_bfs(adj, 0, n-1))\n\n\n# Time:  O(|V| + |E|) = O(|E|) since graph is connected, O(|E|) >= O(|V|) \n# Space: O(|V| + |E|) = O(|E|)\nclass Solution2(object):\n    def secondMinimum(self, n, edges, time, change):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type time: int\n        :type change: int\n        :rtype: int\n        \"\"\"\n        INF = float(\"inf\")\n        def bfs(adj, start):\n            q = [start]\n            dist = [INF]*len(adj)\n            dist[start] = 0\n            while q:\n                new_q = []\n                for u in q:\n                    for v in adj[u]:\n                        if dist[v] != INF:\n                            continue\n                        dist[v] = dist[u]+1\n                        new_q.append(v)\n                q = new_q\n            return dist\n\n        def calc_time(time, change, dist):\n            result = 0\n            for _ in xrange(dist):\n                if result//change%2:\n                    result = (result//change+1)*change\n                result += time\n            return result\n\n        adj = [[] for _ in xrange(n)]\n        for u, v in edges:\n            adj[u-1].append(v-1)\n            adj[v-1].append(u-1)\n        dist_to_end, dist_to_start = bfs(adj, 0), bfs(adj, n-1)\n\n        dist = dist_to_end[n-1]+2  # always exists\n        for i in xrange(n):  # case of detour\n            if dist_to_end[i]+dist_to_start[i] == dist_to_end[n-1]:\n                continue\n            dist = min(dist, dist_to_end[i]+dist_to_start[i])  # find second min\n            if dist == dist_to_end[n-1]+1:\n                break\n        return calc_time(time, change, dist)\n",
+      "sourcePath": "Python/second-minimum-time-to-reach-destination.py"
+    }
+  },
+  "seo": {
+    "title": "Second Minimum Time to Reach Destination Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Second Minimum Time to Reach Destination (LeetCode #2045). Pattern: queue bfs. Time O(\\, space E\\. Multi-language solutions and interview tips.",
+    "keywords": [
+      "Second Minimum Time to Reach Destination",
+      "Second Minimum Time to Reach Destination solution",
+      "Second Minimum Time to Reach Destination leetcode",
+      "breadth-first-search",
+      "queue-bfs",
+      "medium"
+    ],
+    "canonicalPath": "/problems/second-minimum-time-to-reach-destination"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Second Minimum Time to Reach Destination?",
+      "answer": "The reference solutions aim for O(\\ time and E\\ space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Second Minimum Time to Reach Destination use?",
+      "answer": "It primarily maps to queue bfs, within the broader topic of breadth first search."
+    },
+    {
+      "question": "Is Second Minimum Time to Reach Destination good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/second-minimum-time-to-reach-destination/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the queue bfs approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Second Minimum Time to Reach Destination (#2045) — Medium. Pattern: queue bfs. Complexity: O(\\ time / E\\ space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Second Minimum Time to Reach Destination: show input structure (breadth first search), highlight the moving parts of the queue bfs approach, and annotate each step with the maintained invariant and complexity."
+}

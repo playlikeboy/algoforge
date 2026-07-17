@@ -1,0 +1,162 @@
+{
+  "id": "1851",
+  "number": 1851,
+  "slug": "minimum-interval-to-include-each-query",
+  "title": "Minimum Interval to Include Each Query",
+  "difficulty": "Hard",
+  "topics": [
+    "sort"
+  ],
+  "patterns": [
+    "sort",
+    "heap"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogn + klogk + klogn)",
+  "spaceComplexity": "O(n + k)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-interval-to-include-each-query/",
+  "notes": [
+    "Sort",
+    "Heap",
+    "Line Sweep"
+  ],
+  "relatedSlugs": [
+    "maximum-product-after-k-increments",
+    "the-skyline-problem",
+    "reverse-pairscpp",
+    "find-the-number-of-ways-to-place-people-ii",
+    "k-closest-points-to-origin",
+    "meeting-scheduler",
+    "sorting-the-sentence",
+    "the-number-of-the-smallest-unoccupied-chair"
+  ],
+  "prevSlug": "minimum-adjacent-swaps-to-reach-the-kth-smallest-number",
+  "nextSlug": "distinct-numbers-in-each-subarray",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Minimum Interval to Include Each Query?\n\n**Minimum Interval to Include Each Query** (LeetCode #1851) is a **Hard** problem that primarily trains **sort**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sort and heap**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Sort, Heap, Line Sweep.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/minimum-interval-to-include-each-query/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Minimum Interval to Include Each Query\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sort and heap**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogn + klogk + klogn)) and **space** (O(n + k)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogn + klogk + klogn)** time and **O(n + k)** space.\n\n### Pattern focus: sort and heap\n\nUse the pattern as a checklist:\n\n- **sort** — confirm the invariant holds after each step\n- **heap** — confirm the invariant holds after each step\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogn + klogk + klogn)** |\n| Space | **O(n + k)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Minimum Interval to Include Each Query\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sort and heap — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal sort and heap solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `minimum-interval-to-include-each-query`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sort and heap**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **sort**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Minimum Interval to Include Each Query** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **sort**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "minimum-interval-to-include-each-query.cpp",
+      "code": "// Time:  O(nlogn + klogk + klogn)\n// space: O(n + k)\n\nclass Solution {\npublic:\n    vector<int> minInterval(vector<vector<int>>& intervals, vector<int>& queries) {\n        sort(begin(intervals), end(intervals));\n        vector<pair<int, int>> sorted_queries;\n        for (int i = 0; i < size(queries); ++i) {\n            sorted_queries.emplace_back(queries[i], i);\n        }\n        sort(begin(sorted_queries), end(sorted_queries));\n        using P = pair<int, int>;\n        priority_queue<P, vector<P>, greater<P>> min_heap;\n        int i = 0;\n        vector<int> result(size(queries), -1);\n        for (const auto& [q, idx] : sorted_queries) {\n            for (; i != size(intervals) && intervals[i][0] <= q; ++i) {\n                min_heap.emplace(intervals[i][1] - intervals[i][0] + 1, i);\n            }\n            while (!empty(min_heap) && intervals[min_heap.top().second][1] < q) {\n                min_heap.pop();\n            }\n            result[idx] = (!empty(min_heap)) ? min_heap.top().first : -1;\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/minimum-interval-to-include-each-query.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "minimum-interval-to-include-each-query.py",
+      "code": "# Time:  O(nlogn + klogk + klogn)\n# space: O(n + k)\n\nimport heapq\n\n\nclass Solution(object):\n    def minInterval(self, intervals, queries):\n        \"\"\"\n        :type intervals: List[List[int]]\n        :type queries: List[int]\n        :rtype: List[int]\n        \"\"\"\n        intervals.sort()\n        queries = [(q, i) for i, q in enumerate(queries)]\n        queries.sort()\n        min_heap = []\n        i = 0\n        result =[-1]*len(queries)\n        for q, idx in queries:\n            while i != len(intervals) and intervals[i][0] <= q:\n                heapq.heappush(min_heap, [intervals[i][1]-intervals[i][0]+1, i])\n                i += 1\n            while min_heap and intervals[min_heap[0][1]][1] < q:\n                heapq.heappop(min_heap)\n            result[idx] = min_heap[0][0] if min_heap else -1\n        return result\n",
+      "sourcePath": "Python/minimum-interval-to-include-each-query.py"
+    }
+  },
+  "seo": {
+    "title": "Minimum Interval to Include Each Query Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Minimum Interval to Include Each Query (LeetCode #1851). Pattern: sort. Time O(nlogn + klogk + klogn), space O(n + k). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Minimum Interval to Include Each Query",
+      "Minimum Interval to Include Each Query solution",
+      "Minimum Interval to Include Each Query leetcode",
+      "sort",
+      "sort",
+      "heap",
+      "hard"
+    ],
+    "canonicalPath": "/problems/minimum-interval-to-include-each-query"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Minimum Interval to Include Each Query?",
+      "answer": "The reference solutions aim for O(nlogn + klogk + klogn) time and O(n + k) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Minimum Interval to Include Each Query use?",
+      "answer": "It primarily maps to sort and heap, within the broader topic of sort."
+    },
+    {
+      "question": "Is Minimum Interval to Include Each Query good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/minimum-interval-to-include-each-query/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sort and heap approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Minimum Interval to Include Each Query (#1851) — Hard. Pattern: sort and heap. Complexity: O(nlogn + klogk + klogn) time / O(n + k) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Minimum Interval to Include Each Query: show input structure (sort), highlight the moving parts of the sort and heap approach, and annotate each step with the maintained invariant and complexity."
+}

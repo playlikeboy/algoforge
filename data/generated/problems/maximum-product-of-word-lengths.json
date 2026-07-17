@@ -1,0 +1,164 @@
+{
+  "id": "318",
+  "number": 318,
+  "slug": "maximum-product-of-word-lengths",
+  "title": "Maximum Product of Word Lengths",
+  "difficulty": "Medium",
+  "topics": [
+    "bit-manipulation"
+  ],
+  "patterns": [
+    "bit-manipulation",
+    "counting-sort"
+  ],
+  "companies": [
+    "google"
+  ],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n) ~ O(n^2)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-product-of-word-lengths/",
+  "notes": [
+    "Bit Manipulation",
+    "Counting Sort",
+    "Pruning"
+  ],
+  "relatedSlugs": [
+    "single-number-ii",
+    "bitwise-and-of-numbers-range",
+    "single-number-iii",
+    "missing-number",
+    "utf-8-validation",
+    "total-hamming-distance",
+    "bitwise-ors-of-subarrays",
+    "xor-queries-of-a-subarray"
+  ],
+  "prevSlug": "shortest-distance-from-all-buildings",
+  "nextSlug": "bulb-switcher",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Maximum Product of Word Lengths?\n\n**Maximum Product of Word Lengths** (LeetCode #318) is a **Medium** problem that primarily trains **bit manipulation**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **bit manipulation and counting sort**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Bit Manipulation, Counting Sort, Pruning.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/maximum-product-of-word-lengths/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Maximum Product of Word Lengths\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **bit manipulation and counting sort**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n) ~ O(n^2)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n) ~ O(n^2)** time and **O(n)** space.\n\n### Pattern focus: bit manipulation and counting sort\n\nUse the pattern as a checklist:\n\n- **bit manipulation** — confirm the invariant holds after each step\n- **counting sort** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n) ~ O(n^2)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Maximum Product of Word Lengths\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for bit manipulation and counting sort — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **bit manipulation and counting sort**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **bit manipulation**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Maximum Product of Word Lengths** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **bit manipulation**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "maximum-product-of-word-lengths.cpp",
+      "code": "// Time:  O(n) ~ O(n^2)\n// Space: O(n)\n\n// Counting Sort + Pruning + Bit Manipulation\nclass Solution {\npublic:\n    int maxProduct(vector<string>& words) {\n        words = counting_sort(words);\n        vector<int> bits(words.size());\n        for (int i = 0; i < words.size(); ++i) {\n            for (const auto& c : words[i]) {\n                bits[i] |= (1 << (c - 'a'));\n            }\n        }\n        int max_product = 0;\n        for (int i = 0; i + 1 < words.size() && pow(words[i].length(), 2) > max_product; ++i) {\n            for (int j = i + 1; j < words.size() && words[i].length() * words[j].length() > max_product; ++j) {\n                if (!(bits[i] & bits[j])) {\n                    max_product = words[i].length() * words[j].length();\n                }\n            }\n        }\n        return max_product;\n    }\n\n    vector<string> counting_sort(const vector<string>& words) {\n        const int k = 1000;  // k is max length of words in the dictionary\n        vector<vector<string>> buckets(k);\n        for (const auto& word : words) {\n            buckets[word.length()].emplace_back(word);\n        }\n        vector<string> res;\n        for (int i = k - 1; i >= 0; --i) {\n            if (!buckets[i].empty()) {\n                move(buckets[i].begin(), buckets[i].end(), back_inserter(res));\n            }\n        }\n        return res;\n    }\n};\n\n// Time:  O(nlogn) ~ O(n^2)\n// Space: O(n)\n// Sorting + Pruning + Bit Manipulation\nclass Solution2 {\npublic:\n    int maxProduct(vector<string>& words) {\n        sort(words.begin(), words.end(), [](const string& a, const string& b) { return a.length() > b.length(); });\n        vector<int> bits(words.size());\n        for (int i = 0; i < words.size(); ++i) {\n            for (const auto& c : words[i]) {\n                bits[i] |= (1 << (c - 'a'));\n            }\n        }\n        int max_product = 0;\n        for (int i = 0; i + 1 < words.size() && pow(words[i].length(), 2) > max_product; ++i) {\n            for (int j = i + 1; j < words.size() && words[i].length() * words[j].length() > max_product; ++j) {\n                if (!(bits[i] & bits[j])) {\n                    max_product = words[i].length() * words[j].length();\n                }\n            }\n        }\n        return max_product;\n    }\n};\n",
+      "sourcePath": "C++/maximum-product-of-word-lengths.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "maximum-product-of-word-lengths.py",
+      "code": "# Time:  O(n) ~ O(n^2)\n# Space: O(n)\n\nclass Solution(object):\n    def maxProduct(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: int\n        \"\"\"\n        def counting_sort(words):\n            k = 1000  # k is max length of words in the dictionary\n            buckets = [[] for _ in xrange(k)]\n            for word in words:\n                buckets[len(word)].append(word)\n            res = []\n            for i in reversed(xrange(k)):\n                if buckets[i]:\n                    res += buckets[i]\n            return res\n\n        words = counting_sort(words)\n        bits = [0] * len(words)\n        for i, word in enumerate(words):\n            for c in word:\n                bits[i] |= (1 << (ord(c) - ord('a')))\n\n        max_product = 0\n        for i in xrange(len(words) - 1):\n            if len(words[i]) ** 2 <= max_product:\n                break\n            for j in xrange(i + 1, len(words)):\n                if len(words[i]) * len(words[j]) <= max_product:\n                    break\n                if not (bits[i] & bits[j]):\n                    max_product = len(words[i]) * len(words[j])\n        return max_product\n\n# Time:  O(nlogn) ~ O(n^2)\n# Space: O(n)\n# Sorting + Pruning + Bit Manipulation\nclass Solution2(object):\n    def maxProduct(self, words):\n        \"\"\"\n        :type words: List[str]\n        :rtype: int\n        \"\"\"\n        words.sort(key=lambda x: len(x), reverse=True)\n        bits = [0] * len(words)\n        for i, word in enumerate(words):\n            for c in word:\n                bits[i] |= (1 << (ord(c) - ord('a')))\n\n        max_product = 0\n        for i in xrange(len(words) - 1):\n            if len(words[i]) ** 2 <= max_product:\n                break\n            for j in xrange(i + 1, len(words)):\n                if len(words[i]) * len(words[j]) <= max_product:\n                    break\n                if not (bits[i] & bits[j]):\n                    max_product = len(words[i]) * len(words[j])\n        return max_product\n\n",
+      "sourcePath": "Python/maximum-product-of-word-lengths.py"
+    }
+  },
+  "seo": {
+    "title": "Maximum Product of Word Lengths Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Maximum Product of Word Lengths (LeetCode #318). Pattern: bit manipulation. Time O(n) ~ O(n^2), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Maximum Product of Word Lengths",
+      "Maximum Product of Word Lengths solution",
+      "Maximum Product of Word Lengths leetcode",
+      "bit-manipulation",
+      "bit-manipulation",
+      "counting-sort",
+      "medium"
+    ],
+    "canonicalPath": "/problems/maximum-product-of-word-lengths"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Maximum Product of Word Lengths?",
+      "answer": "The reference solutions aim for O(n) ~ O(n^2) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Maximum Product of Word Lengths use?",
+      "answer": "It primarily maps to bit manipulation and counting sort, within the broader topic of bit manipulation."
+    },
+    {
+      "question": "Is Maximum Product of Word Lengths good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/maximum-product-of-word-lengths/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the bit manipulation and counting sort approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Maximum Product of Word Lengths (#318) — Medium. Pattern: bit manipulation and counting sort. Complexity: O(n) ~ O(n^2) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Maximum Product of Word Lengths: show input structure (bit manipulation), highlight the moving parts of the bit manipulation and counting sort approach, and annotate each step with the maintained invariant and complexity."
+}

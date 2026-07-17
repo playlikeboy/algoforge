@@ -1,0 +1,156 @@
+{
+  "id": "1449",
+  "number": 1449,
+  "slug": "form-largest-integer-with-digits-that-add-up-to-target",
+  "title": "Form Largest Integer With Digits That Add up to Target",
+  "difficulty": "Hard",
+  "topics": [
+    "dynamic-programming"
+  ],
+  "patterns": [
+    "dynamic-programming"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(t)",
+  "spaceComplexity": "O(t)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/form-largest-integer-with-digits-that-add-up-to-target/",
+  "notes": [],
+  "relatedSlugs": [
+    "regular-expression-matching",
+    "edit-distance",
+    "scramble-string",
+    "interleaving-string",
+    "distinct-subsequences",
+    "best-time-to-buy-and-sell-stock-iii",
+    "palindrome-partitioning-ii",
+    "dungeon-game"
+  ],
+  "prevSlug": "count-good-nodes-in-binary-tree",
+  "nextSlug": "number-of-students-doing-homework-at-a-given-time",
+  "estimatedMinutes": 60,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Form Largest Integer With Digits That Add up to Target?\n\n**Form Largest Integer With Digits That Add up to Target** (LeetCode #1449) is a **Hard** problem that primarily trains **dynamic programming**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **dynamic programming**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/form-largest-integer-with-digits-that-add-up-to-target/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Form Largest Integer With Digits That Add up to Target\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **dynamic programming**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(t)) and **space** (O(t)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(t)** time and **O(t)** space.\n\n### Pattern focus: dynamic programming\n\nUse the pattern as a checklist:\n\n- **dynamic programming** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(t)** |\n| Space | **O(t)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Form Largest Integer With Digits That Add up to Target\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for dynamic programming — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **dynamic programming**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **dynamic programming**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Form Largest Integer With Digits That Add up to Target** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **dynamic programming**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "form-largest-integer-with-digits-that-add-up-to-target.cpp",
+      "code": "// Time:  O(t)\n// Space: O(t)\n\nclass Solution {\npublic:\n    string largestNumber(vector<int>& cost, int target) {\n        vector<int> dp(1);\n        dp[0] = 0;\n        for (int t = 1; t <= target; ++t) {\n            dp.emplace_back(-1);\n            for (int i = 0; i < 9; ++i) {\n                if (t < cost[i] || dp[t - cost[i]] < 0) {\n                    continue;\n                }\n                dp[t] = max(dp[t], dp[t - cost[i]] + 1);\n            }\n        }\n        if (dp[target] < 0) {\n            return \"0\";\n        }\n        string result;\n        for (int i = 8; i >= 0; --i) {\n            while (target >= cost[i] && dp[target] == dp[target - cost[i]] + 1) {\n                target -= cost[i];\n                result.push_back('1' + i);\n            }\n        }\n        return result;\n    }\n};\n\n// Time:  O(t)\n// Space: O(t)\nclass Solution2 {\npublic:\n    string largestNumber(vector<int>& cost, int target) {\n        const auto& key = [](const auto& a) {\n            return pair{accumulate(cbegin(a), cend(a), 0), a};\n        };\n        vector<vector<int>> dp = {vector<int>(9)};\n        for (int t = 1; t <= target; ++t) {\n            dp.emplace_back();\n            for (int i = 0; i < 9; ++i) {\n                if (t < cost[i] || dp[t - cost[i]].empty()) {\n                    continue;\n                }\n                auto curr = dp[t - cost[i]];\n                ++curr[8 - i];\n                if (key(curr) > key(dp[t])) {\n                    dp[t] = move(curr);\n                }\n            }\n        }\n        if (dp.back().empty()) {\n            return \"0\";\n        }\n        string result;\n        for (int i = 0; i < dp.back().size(); ++i) {\n            result += string(dp.back()[i], '1' + 8 - i);\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/form-largest-integer-with-digits-that-add-up-to-target.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "form-largest-integer-with-digits-that-add-up-to-target.py",
+      "code": "# Time:  O(t)\n# Space: O(t)\n\nclass Solution(object):\n    def largestNumber(self, cost, target):\n        \"\"\"\n        :type cost: List[int]\n        :type target: int\n        :rtype: str\n        \"\"\"\n        dp = [0]\n        for t in xrange(1, target+1):\n            dp.append(-1)\n            for i, c in enumerate(cost):\n                if t-c < 0 or dp[t-c] < 0:\n                    continue\n                dp[t] = max(dp[t], dp[t-c]+1)\n        if dp[target] < 0:\n            return \"0\"\n        result = []\n        for i in reversed(xrange(9)):\n            while target >= cost[i] and dp[target] == dp[target-cost[i]]+1:\n                target -= cost[i]\n                result.append(i+1)\n        return \"\".join(map(str, result))\n\n\n# Time:  O(t)\n# Space: O(t)\nclass Solution2(object):\n    def largestNumber(self, cost, target):\n        \"\"\"\n        :type cost: List[int]\n        :type target: int\n        :rtype: str\n        \"\"\"\n        def key(bag):\n            return sum(bag), bag\n        \n        dp = [[0]*9]\n        for t in xrange(1, target+1):\n            dp.append([])\n            for d, c in enumerate(cost):\n                if t < c or not dp[t-c]:\n                    continue\n                curr = dp[t-c][:]\n                curr[~d] += 1\n                if key(curr) > key(dp[t]):\n                    dp[-1] = curr        \n        if not dp[-1]:\n            return \"0\"\n        return \"\".join(str(9-i)*c for i, c in enumerate(dp[-1]))\n\n\n# Time:  O(t^2)\n# Space: O(t^2)\nclass Solution3(object):\n    def largestNumber(self, cost, target):\n        \"\"\"\n        :type cost: List[int]\n        :type target: int\n        :rtype: str\n        \"\"\"\n        dp = [0]\n        for t in xrange(1, target+1):\n            dp.append(-1)\n            for i, c in enumerate(cost):\n                if t-c < 0:\n                    continue\n                dp[t] = max(dp[t], dp[t-c]*10 + i+1)\n        return str(max(dp[t], 0))\n",
+      "sourcePath": "Python/form-largest-integer-with-digits-that-add-up-to-target.py"
+    }
+  },
+  "seo": {
+    "title": "Form Largest Integer With Digits That Add up to Target Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Form Largest Integer With Digits That Add up to Target (LeetCode #1449). Pattern: dynamic programming. Time O(t), space O(t). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Form Largest Integer With Digits That Add up to Target",
+      "Form Largest Integer With Digits That Add up to Target solution",
+      "Form Largest Integer With Digits That Add up to Target leetcode",
+      "dynamic-programming",
+      "dynamic-programming",
+      "hard"
+    ],
+    "canonicalPath": "/problems/form-largest-integer-with-digits-that-add-up-to-target"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Form Largest Integer With Digits That Add up to Target?",
+      "answer": "The reference solutions aim for O(t) time and O(t) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Form Largest Integer With Digits That Add up to Target use?",
+      "answer": "It primarily maps to dynamic programming, within the broader topic of dynamic programming."
+    },
+    {
+      "question": "Is Form Largest Integer With Digits That Add up to Target good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/form-largest-integer-with-digits-that-add-up-to-target/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the dynamic programming approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Form Largest Integer With Digits That Add up to Target (#1449) — Hard. Pattern: dynamic programming. Complexity: O(t) time / O(t) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Form Largest Integer With Digits That Add up to Target: show input structure (dynamic programming), highlight the moving parts of the dynamic programming approach, and annotate each step with the maintained invariant and complexity."
+}

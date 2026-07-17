@@ -1,0 +1,49 @@
+{
+  "slug": "meta-hash-table-questions",
+  "path": "/explore/meta-hash-table-questions",
+  "h1": "Best Hash Table Questions for Meta",
+  "intro": "A curated set of 6 Hash Table problems frequently useful for Meta interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "two-sum",
+    "group-anagrams",
+    "minimum-window-substring",
+    "find-all-anagrams-in-a-string",
+    "contiguous-array",
+    "subarray-sum-equals-k"
+  ],
+  "faqs": [
+    {
+      "question": "How many Hash Table problems should I do for Meta?",
+      "answer": "Quality over quantity: master patterns with 6 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Hash Table topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/meta",
+      "label": "Meta interview hub"
+    },
+    {
+      "href": "/topics/hash-table",
+      "label": "Hash Table problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Hash Table Questions for Meta | AlgoForge",
+    "description": "Top Hash Table coding interview questions for Meta. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Meta Hash Table questions",
+      "Hash Table interview",
+      "Meta leetcode"
+    ],
+    "canonicalPath": "/explore/meta-hash-table-questions"
+  },
+  "kind": "company-topic"
+}

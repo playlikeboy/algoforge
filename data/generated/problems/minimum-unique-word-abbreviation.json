@@ -1,0 +1,156 @@
+{
+  "id": "411",
+  "number": 411,
+  "slug": "minimum-unique-word-abbreviation",
+  "title": "Minimum Unique Word Abbreviation",
+  "difficulty": "Hard",
+  "topics": [
+    "bit-manipulation"
+  ],
+  "patterns": [
+    "bit-manipulation"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O((d + n) * 2^n)",
+  "spaceComplexity": "O(d)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-unique-word-abbreviation/",
+  "notes": [],
+  "relatedSlugs": [
+    "maximum-good-people-based-on-statements",
+    "find-the-k-th-character-in-string-game-ii",
+    "last-remaining-integer-after-alternating-deletion-operations",
+    "single-number",
+    "single-number-ii",
+    "reverse-bits",
+    "number-of-1-bits",
+    "bitwise-and-of-numbers-range"
+  ],
+  "prevSlug": "split-array-largest-sum",
+  "nextSlug": "fizz-buzz",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Minimum Unique Word Abbreviation?\n\n**Minimum Unique Word Abbreviation** (LeetCode #411) is a **Hard** problem that primarily trains **bit manipulation**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **bit manipulation**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/minimum-unique-word-abbreviation/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Minimum Unique Word Abbreviation\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **bit manipulation**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O((d + n) * 2^n)) and **space** (O(d)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O((d + n) * 2^n)** time and **O(d)** space.\n\n### Pattern focus: bit manipulation\n\nUse the pattern as a checklist:\n\n- **bit manipulation** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O((d + n) * 2^n)** |\n| Space | **O(d)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Minimum Unique Word Abbreviation\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for bit manipulation — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **bit manipulation**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **bit manipulation**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Minimum Unique Word Abbreviation** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **bit manipulation**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "minimum-unique-word-abbreviation.cpp",
+      "code": "// Time:  O((d + n) * 2^n)\n// Space: O(d)\n\n// optimized from Solution2\nclass Solution {\npublic:\n    string minAbbreviation(string target, vector<string>& dictionary) {\n        vector<int> diffs;\n        dictionary_to_diffs(target, dictionary, &diffs);\n        if (empty(diffs)) {\n            return to_string(size(target));\n        }\n        int total = 1 << size(target);\n        int result = total - 1;\n        for (int mask = 0; mask < total; ++mask) {\n            if (all_of(cbegin(diffs), cend(diffs), [&mask](int d) { return d & mask; })) {\n                if (bits_to_abbr_len(target, mask) < bits_to_abbr_len(target, result)) {\n                    result = mask;\n                }\n            }\n        }\n        return bits_to_abbr(target, result);\n    }\n\nprivate:\n    void dictionary_to_diffs(const string& target, const vector<string>& dictionary,\n                             vector<int> *diffs) {\n\n        for (const auto& word : dictionary) {\n            if (size(word) != size(target)) {\n                continue;\n            }\n            int bits = 0;\n            for (int i = 0; i < size(word); ++i) {\n                if (target[i] != word[i]) {\n                    bits |= 1 << i;\n                }\n            }\n            diffs->emplace_back(bits);\n        }\n    }\n\n    int bits_to_abbr_len(const string& target, int bits) {\n        int total = 0;\n        for (int i = 0, pre = 0; i < size(target); ++i, bits >>= 1) {\n            if (bits & 1) {\n                if (i - pre > 0) {\n                    total += size(to_string(i - pre));\n                }\n                pre = i + 1;\n                ++total;\n            } else if (i == size(target) - 1) {\n                total += size(to_string(i - pre + 1));\n            }\n        }\n        return total;\n    }\n    \n    string bits_to_abbr(const string& target, int bits) {\n        string abbr;\n        for (int i = 0, pre = 0; i < size(target); ++i, bits >>= 1) {\n            if (bits & 1) {\n                if (i - pre > 0) {\n                    abbr += to_string(i - pre);\n                }\n                pre = i + 1;\n                abbr.push_back(target[i]);\n            } else if (i == size(target) - 1) {\n                abbr += to_string(i - pre + 1);\n            }\n        }\n        return abbr;\n    }\n};\n\n// Time:  O((d + n) * 2^n)\n// Space: O(d + n)\nclass Solution2 {\npublic:\n    string minAbbreviation(string target, vector<string>& dictionary) {\n        vector<int> diffs;\n        dictionary_to_diffs(target, dictionary, &diffs);\n        if (empty(diffs)) {\n            return to_string(size(target));\n        }\n        int total = 1 << size(target);\n        string result = target;\n        for (int mask = 0; mask < total; ++mask) {\n            if (all_of(cbegin(diffs), cend(diffs), [&mask](int d) { return d & mask; })) {\n                auto abbr = bits_to_abbr(target, mask);\n                if (size(abbr) < size(result)) {\n                    result = move(abbr);\n                }\n            }\n        }\n        return result;\n    }\n\nprivate:\n    void dictionary_to_diffs(const string& target, const vector<string>& dictionary,\n                             vector<int> *diffs) {\n\n        for (const auto& word : dictionary) {\n            if (size(word) != size(target)) {\n                continue;\n            }\n            int bits = 0;\n            for (int i = 0; i < size(word); ++i) {\n                if (target[i] != word[i]) {\n                    bits |= 1 << i;\n                }\n            }\n            diffs->emplace_back(bits);\n        }\n    }\n\n    string bits_to_abbr(const string& target, int bits) {\n        string abbr;\n        for (int i = 0, pre = 0; i < size(target); ++i, bits >>= 1) {\n            if (bits & 1) {\n                if (i - pre > 0) {\n                    abbr += to_string(i - pre);\n                }\n                pre = i + 1;\n                abbr.push_back(target[i]);\n            } else if (i == size(target) - 1) {\n                abbr += to_string(i - pre + 1);\n            }\n        }\n        return abbr;\n    }\n};\n",
+      "sourcePath": "C++/minimum-unique-word-abbreviation.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "minimum-unique-word-abbreviation.py",
+      "code": "# Time:  O((d + n) * 2^n)\n# Space: O(d)\n\n# optimized from Solution2\nclass Solution(object):\n    def minAbbreviation(self, target, dictionary):\n        \"\"\"\n        :type target: str\n        :type dictionary: List[str]\n        :rtype: str\n        \"\"\"\n        def bits_to_abbr_len(targets, bits):\n            total = 0\n            pre = 0\n            for i in xrange(len(target)):\n                if bits & 1:\n                    if i - pre > 0:\n                        total += len(str(i - pre))\n                    pre = i + 1\n                    total += 1\n                elif i == len(target) - 1:\n                    total += len(str(i - pre + 1))\n                bits >>= 1\n            return total\n\n        def bits_to_abbr(targets, bits):\n            abbr = []\n            pre = 0\n            for i in xrange(len(target)):\n                if bits & 1:\n                    if i - pre > 0:\n                        abbr.append(str(i - pre))\n                    pre = i + 1\n                    abbr.append(target[i])\n                elif i == len(target) - 1:\n                    abbr.append(str(i - pre + 1))\n                bits >>= 1\n            return \"\".join(abbr)\n  \n        diffs = []\n        for word in dictionary:\n            if len(word) != len(target):\n                continue\n            diffs.append(sum(2**i for i, c in enumerate(word) if target[i] != c))\n\n        if not diffs:\n            return str(len(target))\n\n        result = 2**len(target)-1\n        for mask in xrange(2**len(target)):\n            if all(d & mask for d in diffs) and bits_to_abbr_len(target, mask) < bits_to_abbr_len(target, result):\n                result = mask\n        return bits_to_abbr(target, result)\n    \n\n# Time:  O((d + n) * 2^n)\n# Space: O(d + n)\nclass Solution2(object):\n    def minAbbreviation(self, target, dictionary):\n        \"\"\"\n        :type target: str\n        :type dictionary: List[str]\n        :rtype: str\n        \"\"\"\n        def bits_to_abbr(targets, bits):\n            abbr = []\n            pre = 0\n            for i in xrange(len(target)):\n                if bits & 1:\n                    if i - pre > 0:\n                        abbr.append(str(i - pre))\n                    pre = i + 1\n                    abbr.append(target[i])\n                elif i == len(target) - 1:\n                    abbr.append(str(i - pre + 1))\n                bits >>= 1\n            return \"\".join(abbr)\n  \n        diffs = []\n        for word in dictionary:\n            if len(word) != len(target):\n                continue\n            diffs.append(sum(2**i for i, c in enumerate(word) if target[i] != c))\n\n        if not diffs:\n            return str(len(target))\n\n        result = target\n        for mask in xrange(2**len(target)):\n            abbr = bits_to_abbr(target, mask)\n            if all(d & mask for d in diffs) and len(abbr) < len(result):\n                result = abbr\n        return result\n\n",
+      "sourcePath": "Python/minimum-unique-word-abbreviation.py"
+    }
+  },
+  "seo": {
+    "title": "Minimum Unique Word Abbreviation Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Minimum Unique Word Abbreviation (LeetCode #411). Pattern: bit manipulation. Time O((d + n) * 2^n), space O(d). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Minimum Unique Word Abbreviation",
+      "Minimum Unique Word Abbreviation solution",
+      "Minimum Unique Word Abbreviation leetcode",
+      "bit-manipulation",
+      "bit-manipulation",
+      "hard"
+    ],
+    "canonicalPath": "/problems/minimum-unique-word-abbreviation"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Minimum Unique Word Abbreviation?",
+      "answer": "The reference solutions aim for O((d + n) * 2^n) time and O(d) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Minimum Unique Word Abbreviation use?",
+      "answer": "It primarily maps to bit manipulation, within the broader topic of bit manipulation."
+    },
+    {
+      "question": "Is Minimum Unique Word Abbreviation good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/minimum-unique-word-abbreviation/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the bit manipulation approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Minimum Unique Word Abbreviation (#411) — Hard. Pattern: bit manipulation. Complexity: O((d + n) * 2^n) time / O(d) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Minimum Unique Word Abbreviation: show input structure (bit manipulation), highlight the moving parts of the bit manipulation approach, and annotate each step with the maintained invariant and complexity."
+}

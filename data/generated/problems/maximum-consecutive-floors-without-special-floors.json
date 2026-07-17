@@ -1,0 +1,158 @@
+{
+  "id": "2274",
+  "number": 2274,
+  "slug": "maximum-consecutive-floors-without-special-floors",
+  "title": "Maximum Consecutive Floors Without Special Floors",
+  "difficulty": "Medium",
+  "topics": [
+    "array"
+  ],
+  "patterns": [
+    "sort"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(nlogn)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/maximum-consecutive-floors-without-special-floors/",
+  "notes": [
+    "Sort"
+  ],
+  "relatedSlugs": [
+    "sort-the-matrix-diagonally",
+    "filter-restaurants-by-vegan-friendly-price-and-distance",
+    "divide-intervals-into-minimum-number-of-groups",
+    "count-ways-to-group-overlapping-ranges",
+    "find-maximal-uncovered-ranges",
+    "divide-array-into-arrays-with-max-difference",
+    "sort-matrix-by-diagonals",
+    "minimum-energy-to-maintain-brightness"
+  ],
+  "prevSlug": "find-resultant-array-after-removing-anagrams",
+  "nextSlug": "largest-combination-with-bitwise-and-greater-than-zero",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Maximum Consecutive Floors Without Special Floors?\n\n**Maximum Consecutive Floors Without Special Floors** (LeetCode #2274) is a **Medium** problem that primarily trains **array**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **sort**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Sort.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/maximum-consecutive-floors-without-special-floors/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Maximum Consecutive Floors Without Special Floors\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **sort**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(nlogn)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(nlogn)** time and **O(1)** space.\n\n### Pattern focus: sort\n\nUse the pattern as a checklist:\n\n- **sort** — confirm the invariant holds after each step\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(nlogn)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Maximum Consecutive Floors Without Special Floors\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for sort — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal sort solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `maximum-consecutive-floors-without-special-floors`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **sort**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **array**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Maximum Consecutive Floors Without Special Floors** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **array**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "maximum-consecutive-floors-without-special-floors.cpp",
+      "code": "// Time:  O(nlogn)\n// Space: O(1)\n\n// sort\nclass Solution {\npublic:\n    int maxConsecutive(int bottom, int top, vector<int>& special) {\n        sort(begin(special), end(special));\n        int result = max(special[0] - bottom, top - special.back());\n        for (int i = 1; i < size(special); ++i) {\n            result = max(result, special[i] - special[i - 1] - 1);\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/maximum-consecutive-floors-without-special-floors.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "maximum-consecutive-floors-without-special-floors.py",
+      "code": "# Time:  O(nlogn)\n# Space: O(1)\n\n# sort\nclass Solution(object):\n    def maxConsecutive(self, bottom, top, special):\n        \"\"\"\n        :type bottom: int\n        :type top: int\n        :type special: List[int]\n        :rtype: int\n        \"\"\"\n        special.sort()\n        result = max(special[0]-bottom, top-special[-1])\n        for i in xrange(1, len(special)):\n            result = max(result, special[i]-special[i-1]-1)\n        return result\n",
+      "sourcePath": "Python/maximum-consecutive-floors-without-special-floors.py"
+    }
+  },
+  "seo": {
+    "title": "Maximum Consecutive Floors Without Special Floors Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Maximum Consecutive Floors Without Special Floors (LeetCode #2274). Pattern: sort. Time O(nlogn), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Maximum Consecutive Floors Without Special Floors",
+      "Maximum Consecutive Floors Without Special Floors solution",
+      "Maximum Consecutive Floors Without Special Floors leetcode",
+      "array",
+      "sort",
+      "medium"
+    ],
+    "canonicalPath": "/problems/maximum-consecutive-floors-without-special-floors"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Maximum Consecutive Floors Without Special Floors?",
+      "answer": "The reference solutions aim for O(nlogn) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Maximum Consecutive Floors Without Special Floors use?",
+      "answer": "It primarily maps to sort, within the broader topic of array."
+    },
+    {
+      "question": "Is Maximum Consecutive Floors Without Special Floors good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/maximum-consecutive-floors-without-special-floors/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the sort approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Maximum Consecutive Floors Without Special Floors (#2274) — Medium. Pattern: sort. Complexity: O(nlogn) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Maximum Consecutive Floors Without Special Floors: show input structure (array), highlight the moving parts of the sort approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,167 @@
+{
+  "id": "3081",
+  "number": 3081,
+  "slug": "replace-question-marks-in-string-to-minimize-its-value",
+  "title": "Replace Question Marks in String to Minimize Its Value",
+  "difficulty": "Medium",
+  "topics": [
+    "sort"
+  ],
+  "patterns": [
+    "greedy",
+    "counting-sort",
+    "heap",
+    "prefix-sum"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n + 26 * log(26))",
+  "spaceComplexity": "O(n + 26)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/replace-question-marks-in-string-to-minimize-its-value/",
+  "notes": [
+    "Greedy",
+    "Counting Sort",
+    "Heap",
+    "Prefix Sum"
+  ],
+  "relatedSlugs": [
+    "h-index",
+    "meeting-scheduler",
+    "least-number-of-unique-integers-after-k-removals",
+    "the-number-of-the-smallest-unoccupied-chair",
+    "sort-vowels-in-a-string",
+    "top-k-frequent-elements",
+    "top-k-frequent-words",
+    "maximum-product-after-k-increments"
+  ],
+  "prevSlug": "mark-elements-on-array-by-performing-queries",
+  "nextSlug": "find-the-sum-of-the-power-of-all-subsequences",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Replace Question Marks in String to Minimize Its Value?\n\n**Replace Question Marks in String to Minimize Its Value** (LeetCode #3081) is a **Medium** problem that primarily trains **sort**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **greedy, counting sort, heap, and prefix sum**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Greedy, Counting Sort, Heap, Prefix Sum.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/replace-question-marks-in-string-to-minimize-its-value/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Replace Question Marks in String to Minimize Its Value\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **greedy, counting sort, heap, and prefix sum**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n + 26 * log(26))) and **space** (O(n + 26)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n + 26 * log(26))** time and **O(n + 26)** space.\n\n### Pattern focus: greedy, counting sort, heap, and prefix sum\n\nUse the pattern as a checklist:\n\n- **greedy** — confirm the invariant holds after each step\n- **counting sort** — confirm the invariant holds after each step\n- **heap** — confirm the invariant holds after each step\n- **prefix sum** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n + 26 * log(26))** |\n| Space | **O(n + 26)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Replace Question Marks in String to Minimize Its Value\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for greedy, counting sort, heap, and prefix sum — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **greedy, counting sort, heap, and prefix sum**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **sort**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Replace Question Marks in String to Minimize Its Value** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **sort**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "replace-question-marks-in-string-to-minimize-its-value.cpp",
+      "code": "// Time:  O(n + 26 * log(26))\n// Space: O(26)\n\n// greedy, counting sort, prefix sum\nclass Solution {\npublic:\n    string minimizeStringValue(string s) {\n        const auto& counting_sort = [](const auto& cnt) {\n            vector<int> result(accumulate(cbegin(cnt), cend(cnt), 0));\n            for (int i = 0, j = 0; i < size(cnt); ++i) {\n                for (int _ = 0; _ < cnt[i]; ++_) {\n                    result[j++] = i;\n                }\n            }\n            return result;\n        };\n\n        const auto& fill = [&](const auto& cnt) {\n            vector<int> result(26);\n            vector<pair<int, int>> pairs(size(cnt));\n            for (int i = 0; i < size(cnt); ++i) {\n                pairs[i] = {cnt[i], i};\n            }\n            sort(begin(pairs), end(pairs));\n            const int total = count(cbegin(s), cend(s), '?');\n            int curr = 0, i = 0;\n            for (; i + 1 < size(pairs); ++i) {\n                if (curr + (pairs[i + 1].first - pairs[i].first) * (i + 1) > total) {\n                    break;\n                }\n                curr += (pairs[i + 1].first - pairs[i].first) * (i + 1);\n            }            \n            const int q = (total - curr) / (i + 1);\n            const int r = (total - curr) % (i + 1);\n            for (int j = 0; j <= i; ++j) {\n                result[pairs[j].second] = (pairs[i].first - pairs[j].first) + q;\n            }\n            vector<int> cnt2(26);\n            for (int j = 0; j <= i; ++j) {\n                ++cnt2[pairs[j].second];\n            }\n            const auto& idxs = counting_sort(cnt2);\n            for (int _ = 0, j = 0; _ < r; ++_) {\n                ++result[idxs[j++]];\n            }\n            return result;\n        };\n\n        vector<int> cnt(26);\n        for (const auto& x : s) {\n            if (x == '?') {\n                continue;\n            }\n            ++cnt[x - 'a'];\n        }\n        const auto& idxs = counting_sort(fill(cnt));\n        int i = 0;\n        for (auto& x : s) {\n            if (x != '?') {\n                continue;\n            }\n            x = 'a' + idxs[i++];\n        }\n        return s;\n    }\n};\n\n// Time:  O(n + n * log(26))\n// Space: O(26)\n// greedy, counting sort, heap\nclass Solution2 {\npublic:\n    string minimizeStringValue(string s) {\n        const auto& counting_sort = [](const auto& cnt) {\n            vector<int> result(accumulate(cbegin(cnt), cend(cnt), 0));\n            for (int i = 0, j = 0; i < size(cnt); ++i) {\n                for (int _ = 0; _ < cnt[i]; ++_) {\n                    result[j++] = i;\n                }\n            }\n            return result;\n        };\n\n        vector<int> cnt(26);\n        for (const auto& x : s) {\n            if (x == '?') {\n                continue;\n            }\n            ++cnt[x - 'a'];\n        }\n        vector<pair<int, int>> pairs(size(cnt));\n        for (int i = 0; i < size(cnt); ++i) {\n            pairs[i] = {cnt[i], i};\n        }\n        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> min_heap(cbegin(pairs), cend(pairs));\n        vector<int> cnt2(26);\n        const int total = count(cbegin(s), cend(s), '?');\n        for (int _ = 0; _ < total; ++_) {\n            const auto [c, i] = min_heap.top(); min_heap.pop();\n            ++cnt2[i];\n            min_heap.emplace(c + 1, i);\n        }\n        const auto& idxs = counting_sort(cnt2);\n        int i = 0;\n        for (auto& x : s) {\n            if (x != '?') {\n                continue;\n            }\n            x = 'a' + idxs[i++];\n        }\n        return s;\n    }\n};\n\n// Time:  O(n + n * 26)\n// Space: O(26)\n// greedy, counting sort\nclass Solution3 {\npublic:\n    string minimizeStringValue(string s) {\n        const auto& counting_sort = [](const auto& cnt) {\n            vector<int> result(accumulate(cbegin(cnt), cend(cnt), 0));\n            for (int i = 0, j = 0; i < size(cnt); ++i) {\n                for (int _ = 0; _ < cnt[i]; ++_) {\n                    result[j++] = i;\n                }\n            }\n            return result;\n        };\n\n        vector<int> cnt(26);\n        for (const auto& x : s) {\n            if (x == '?') {\n                continue;\n            }\n            ++cnt[x - 'a'];\n        }\n        vector<int> cnt2(26);\n        const int total = count(cbegin(s), cend(s), '?');\n        for (int _ = 0; _ < total; ++_) {\n            int min_i = 0;\n            for (int i = 0; i < size(cnt); ++i) {\n                if (cnt[min_i] + cnt2[min_i] > cnt[i] + cnt2[i]) {\n                    min_i = i;\n                }\n            }\n            ++cnt2[min_i];\n        }\n        const auto& idxs = counting_sort(cnt2);\n        int i = 0;\n        for (auto& x : s) {\n            if (x != '?') {\n                continue;\n            }\n            x = 'a' + idxs[i++];\n        }\n        return s;\n    }\n};\n",
+      "sourcePath": "C++/replace-question-marks-in-string-to-minimize-its-value.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "replace-question-marks-in-string-to-minimize-its-value.py",
+      "code": "# Time:  O(n + 26 * log(26))\n# Space: O(26)\n\n# greedy, counting sort, prefix sum\nclass Solution(object):\n    def minimizeStringValue(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        def counting_sort(cnt):\n            for i in xrange(len(cnt)):\n                for _ in xrange(cnt[i]):\n                    yield i\n        \n        def fill(cnt):\n            result = [0]*26\n            a = [(x, i) for i, x in enumerate(cnt)]\n            a.sort()\n            total = s.count('?')\n            curr = 0\n            for i in xrange(len(a)-1):\n                if curr+(a[i+1][0]-a[i][0])*(i+1) > total:\n                    break\n                curr += (a[i+1][0]-a[i][0])*(i+1)\n            else:\n                i = len(a)-1\n            q, r = divmod(total-curr, i+1)\n            for j in xrange(i+1):\n                result[a[j][1]] = (a[i][0]-a[j][0])+q\n            cnt2 = [0]*26\n            for j in xrange(i+1):\n                cnt2[a[j][1]] += 1\n            it = counting_sort(cnt2)\n            for _ in xrange(r):\n                result[next(it)] += 1\n            return result\n    \n        cnt = [0]*26\n        for x in s:\n            if x == '?':\n                continue\n            cnt[ord(x)-ord('a')] += 1\n        it = counting_sort(fill(cnt))\n        result = list(s)\n        for i in xrange(len(result)):\n            if result[i] != '?':\n                continue\n            result[i] = chr(ord('a')+next(it))\n        return \"\".join(result)\n\n\n# Time:  O(n + n * log(26))\n# Space: O(26)\nimport heapq\n\n\n# greedy, counting sort, heap\nclass Solution2(object):\n    def minimizeStringValue(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        def counting_sort(cnt):\n            for i in xrange(len(cnt)):\n                for _ in xrange(cnt[i]):\n                    yield i\n\n        cnt = [0]*26\n        for x in s:\n            if x == '?':\n                continue\n            cnt[ord(x)-ord('a')] += 1\n        min_heap = [(x, i) for i, x in enumerate(cnt)]\n        heapq.heapify(min_heap)\n        cnt2 = [0]*26\n        for _ in xrange(s.count('?')):\n            c, i = heapq.heappop(min_heap)\n            heapq.heappush(min_heap, (c+1, i))\n            cnt2[i] += 1\n        it = counting_sort(cnt2)\n        result = list(s)\n        for i in xrange(len(result)):\n            if result[i] != '?':\n                continue\n            result[i] = chr(ord('a')+next(it))\n        return \"\".join(result)\n\n\n# Time:  O(n + n * 26)\n# Space: O(26)\n# greedy, counting sort\nclass Solution3(object):\n    def minimizeStringValue(self, s):\n        \"\"\"\n        :type s: str\n        :rtype: str\n        \"\"\"\n        def counting_sort(cnt):\n            for i in xrange(len(cnt)):\n                for _ in xrange(cnt[i]):\n                    yield i\n    \n        cnt = [0]*26\n        for x in s:\n            if x == '?':\n                continue\n            cnt[ord(x)-ord('a')] += 1\n        cnt2 = [0]*26\n        for _ in xrange(s.count('?')):\n            i = min(xrange(len(cnt)), key=lambda x: cnt[x]+cnt2[x])\n            cnt2[i] += 1\n        it = counting_sort(cnt2)\n        result = list(s)\n        for i in xrange(len(result)):\n            if result[i] != '?':\n                continue\n            result[i] = chr(ord('a')+next(it))\n        return \"\".join(result)\n",
+      "sourcePath": "Python/replace-question-marks-in-string-to-minimize-its-value.py"
+    }
+  },
+  "seo": {
+    "title": "Replace Question Marks in String to Minimize Its Value Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Replace Question Marks in String to Minimize Its Value (LeetCode #3081). Pattern: greedy. Time O(n + 26 * log(26)), space O(n + 26). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Replace Question Marks in String to Minimize Its Value",
+      "Replace Question Marks in String to Minimize Its Value solution",
+      "Replace Question Marks in String to Minimize Its Value leetcode",
+      "sort",
+      "greedy",
+      "counting-sort",
+      "heap",
+      "prefix-sum",
+      "medium"
+    ],
+    "canonicalPath": "/problems/replace-question-marks-in-string-to-minimize-its-value"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Replace Question Marks in String to Minimize Its Value?",
+      "answer": "The reference solutions aim for O(n + 26 * log(26)) time and O(n + 26) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Replace Question Marks in String to Minimize Its Value use?",
+      "answer": "It primarily maps to greedy, counting sort, heap, and prefix sum, within the broader topic of sort."
+    },
+    {
+      "question": "Is Replace Question Marks in String to Minimize Its Value good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/replace-question-marks-in-string-to-minimize-its-value/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the greedy, counting sort, heap, and prefix sum approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Replace Question Marks in String to Minimize Its Value (#3081) — Medium. Pattern: greedy, counting sort, heap, and prefix sum. Complexity: O(n + 26 * log(26)) time / O(n + 26) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Replace Question Marks in String to Minimize Its Value: show input structure (sort), highlight the moving parts of the greedy, counting sort, heap, and prefix sum approach, and annotate each step with the maintained invariant and complexity."
+}

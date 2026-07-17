@@ -1,0 +1,159 @@
+{
+  "id": "3991",
+  "number": 3991,
+  "slug": "sort-array-using-prefix-reversals",
+  "title": "Sort Array Using Prefix Reversals",
+  "difficulty": "Medium",
+  "topics": [
+    "breadth-first-search"
+  ],
+  "patterns": [
+    "queue-bfs"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n! * n * m)",
+  "spaceComplexity": "O(n! * n)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/sort-array-using-prefix-reversals/",
+  "notes": [
+    "BFS",
+    "Bi-BFS"
+  ],
+  "relatedSlugs": [
+    "binary-tree-zigzag-level-order-traversal",
+    "word-ladder",
+    "surrounded-regions",
+    "clone-graph",
+    "course-schedule",
+    "course-schedule-ii",
+    "graph-valid-tree",
+    "walls-and-gates"
+  ],
+  "prevSlug": "create-grid-with-exactly-k-paths-ii",
+  "nextSlug": null,
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Sort Array Using Prefix Reversals?\n\n**Sort Array Using Prefix Reversals** (LeetCode #3991) is a **Medium** problem that primarily trains **breadth first search**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **queue bfs**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: BFS, Bi-BFS.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/sort-array-using-prefix-reversals/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Sort Array Using Prefix Reversals\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **queue bfs**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n! * n * m)) and **space** (O(n! * n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n! * n * m)** time and **O(n! * n)** space.\n\n### Pattern focus: queue bfs\n\nUse the pattern as a checklist:\n\n- **queue bfs** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n! * n * m)** |\n| Space | **O(n! * n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Sort Array Using Prefix Reversals\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for queue bfs — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **queue bfs**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **breadth first search**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Sort Array Using Prefix Reversals** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **breadth first search**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "sort-array-using-prefix-reversals.cpp",
+      "code": "// Time:  O(n! * n * m)\n// Space: O(n! * n)\n\n// bi-bfs\nclass Solution {\npublic:\n    int sortArray(vector<int>& nums, vector<int>& pre) {\n        const auto& to_string = [](const auto& arr) {\n            string result;\n            result.reserve(size(arr));\n            for (const auto& x : arr) {\n                result.push_back('0' + x);\n            }\n            return result;\n        };\n\n        const auto& bi_bfs = [&](const auto& start, const auto& target) {\n            unordered_set<string> left = {start}, right = {target}, lookup;\n            for (int steps = 0; !empty(left); ++steps) {\n                if (size(left) > size(right)) {\n                    swap(left, right);\n                }\n                for (const auto& x : left) {\n                    lookup.emplace(x);\n                }\n                unordered_set<string> new_left;\n                for (auto x : left) {\n                    if (right.count(x)) {\n                        return steps;\n                    }\n                    for (const auto& i : pre) {\n                        reverse(begin(x), begin(x) + i);\n                        if (!lookup.count(x)) {\n                            new_left.emplace(x);\n                        }\n                        reverse(begin(x), begin(x) + i);\n                    }\n                }\n                left = move(new_left);\n            }\n            return -1;\n        };\n\n        vector<int> arr(size(nums));\n        iota(begin(arr), end(arr), 0);\n        return bi_bfs(to_string(nums), to_string(arr));\n    }\n};\n\n// Time:  O(n! * n * m)\n// Space: O(n! * n)\n// bfs\nclass Solution2 {\npublic:\n    int sortArray(vector<int>& nums, vector<int>& pre) {\n        const auto& to_string = [](const auto& arr) {\n            string result;\n            result.reserve(size(arr));\n            for (const auto& x : arr) {\n                result.push_back('0' + x);\n            }\n            return result;\n        };\n\n        const auto& bfs = [&](const auto& start, const auto& target) {\n            unordered_set<string> lookup = {start};\n            vector<string> q = {start};\n            for (int steps = 0; !empty(q); ++steps) {\n                vector<string> new_q;\n                for (auto x : q) {\n                    if (x == target) {\n                        return steps;\n                    }\n                    for (const auto& i : pre) {\n                        reverse(begin(x), begin(x) + i);\n                        if (!lookup.count(x)) {\n                            lookup.emplace(x);\n                            new_q.emplace_back(x);\n                        }\n                        reverse(begin(x), begin(x) + i);\n                    }\n                }\n                q = move(new_q);\n            }\n            return -1;\n        };\n\n        vector<int> arr(size(nums));\n        iota(begin(arr), end(arr), 0);\n        return bfs(to_string(nums), to_string(arr));\n    }\n};\n",
+      "sourcePath": "C++/sort-array-using-prefix-reversals.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "sort-array-using-prefix-reversals.py",
+      "code": "# Time:  O(n! * n * m)\n# Space: O(n! * n)\n\n# bi-bfs\nclass Solution(object):\n    def sortArray(self, nums, pre):\n        \"\"\"\n        :type nums: List[int]\n        :type pre: List[int]\n        :rtype: int\n        \"\"\"\n        def bi_bfs(start, target):\n            left, right = {start}, {target}\n            lookup = set()\n            steps = 0\n            while left:\n                if len(left) > len(right): \n                    left, right = right, left\n                for x in left:\n                    lookup.add(x)\n                new_left = set()\n                for x in left:\n                    if x in right: \n                        return steps\n                    for i in pre:\n                        nx = tuple(reversed(x[:i]))+x[i:]\n                        if nx in lookup:\n                            continue\n                        new_left.add(nx)\n                left = new_left\n                steps += 1\n            return -1\n\n        return bi_bfs(tuple(nums), tuple(xrange(len(nums))))\n\n\n# Time:  O(n! * n * m)\n# Space: O(n! * n)\n# bfs\nclass Solution2(object):\n    def sortArray(self, nums, pre):\n        \"\"\"\n        :type nums: List[int]\n        :type pre: List[int]\n        :rtype: int\n        \"\"\"\n        def bfs(start, target):\n            lookup = {start}\n            q = [start]\n            steps = 0\n            while q:\n                new_q = []\n                for x in q:\n                    if x == target:\n                        return steps\n                    for i in pre:\n                        nx = tuple(reversed(x[:i]))+x[i:]\n                        if nx in lookup:\n                            continue\n                        lookup.add(nx)\n                        new_q.append(nx)\n                q = new_q\n                steps += 1\n            return -1\n\n        return bfs(tuple(nums), tuple(xrange(len(nums))))\n",
+      "sourcePath": "Python/sort-array-using-prefix-reversals.py"
+    }
+  },
+  "seo": {
+    "title": "Sort Array Using Prefix Reversals Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Sort Array Using Prefix Reversals (LeetCode #3991). Pattern: queue bfs. Time O(n! * n * m), space O(n! * n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Sort Array Using Prefix Reversals",
+      "Sort Array Using Prefix Reversals solution",
+      "Sort Array Using Prefix Reversals leetcode",
+      "breadth-first-search",
+      "queue-bfs",
+      "medium"
+    ],
+    "canonicalPath": "/problems/sort-array-using-prefix-reversals"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Sort Array Using Prefix Reversals?",
+      "answer": "The reference solutions aim for O(n! * n * m) time and O(n! * n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Sort Array Using Prefix Reversals use?",
+      "answer": "It primarily maps to queue bfs, within the broader topic of breadth first search."
+    },
+    {
+      "question": "Is Sort Array Using Prefix Reversals good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/sort-array-using-prefix-reversals/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the queue bfs approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Sort Array Using Prefix Reversals (#3991) — Medium. Pattern: queue bfs. Complexity: O(n! * n * m) time / O(n! * n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Sort Array Using Prefix Reversals: show input structure (breadth first search), highlight the moving parts of the queue bfs approach, and annotate each step with the maintained invariant and complexity."
+}

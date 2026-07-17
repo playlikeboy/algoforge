@@ -1,0 +1,159 @@
+{
+  "id": "2512",
+  "number": 2512,
+  "slug": "reward-top-k-students",
+  "title": "Reward Top K Students",
+  "difficulty": "Medium",
+  "topics": [
+    "sort"
+  ],
+  "patterns": [
+    "partial-sort"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(pf * l + nf * l + n * l + klogk)",
+  "spaceComplexity": "O(pf * l + nf * l + n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/reward-top-k-students/",
+  "notes": [
+    "Partial Sort",
+    "Quick Select"
+  ],
+  "relatedSlugs": [
+    "sort-colors",
+    "insertion-sort-list",
+    "sort-list",
+    "largest-number",
+    "meeting-rooms-ii",
+    "h-index",
+    "wiggle-sort",
+    "wiggle-sort-ii"
+  ],
+  "prevSlug": "maximum-enemy-forts-that-can-be-captured",
+  "nextSlug": "minimize-the-maximum-of-two-arrays",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Reward Top K Students?\n\n**Reward Top K Students** (LeetCode #2512) is a **Medium** problem that primarily trains **sort**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **partial sort**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Partial Sort, Quick Select.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/reward-top-k-students/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Reward Top K Students\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **partial sort**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(pf * l + nf * l + n * l + klogk)) and **space** (O(pf * l + nf * l + n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(pf * l + nf * l + n * l + klogk)** time and **O(pf * l + nf * l + n)** space.\n\n### Pattern focus: partial sort\n\nUse the pattern as a checklist:\n\n- **partial sort** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(pf * l + nf * l + n * l + klogk)** |\n| Space | **O(pf * l + nf * l + n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Reward Top K Students\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for partial sort — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **partial sort**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **sort**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Reward Top K Students** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **sort**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "reward-top-k-students.cpp",
+      "code": "// Time:  O(pf * l + nf * l + n * l + klogk)\n// Space: O(pf * l + nf * l + n)\n\n// partial sort\nclass Solution {\npublic:\n    vector<int> topStudents(vector<string>& positive_feedback, vector<string>& negative_feedback, vector<string>& report, vector<int>& student_id, int k) {\n        unordered_set<string> pos(cbegin(positive_feedback), cend(positive_feedback));\n        unordered_set<string> neg(cbegin(negative_feedback), cend(negative_feedback));\n        vector<pair<int, int>> arr;\n        for (int i = 0; i < size(report); ++i) {\n            int score = 0;\n            for (int right = 0, left = 0; right < size(report[i]); ++right) {\n                if (right + 1 == size(report[i]) || report[i][right + 1] == ' ') {\n                    const auto& w = report[i].substr(left, right - left + 1);\n                    score += pos.count(w) ? 3 : neg.count(w) ? -1 : 0;\n                    left = right + 2;\n                }\n            }\n            arr.emplace_back(-score, student_id[i]);\n        }\n        partial_sort(begin(arr), begin(arr) + k, end(arr));\n        vector<int> result;\n        transform(begin(arr), begin(arr) + k, back_inserter(result), [](const auto& x) {\n            return x.second;\n        });\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/reward-top-k-students.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "reward-top-k-students.py",
+      "code": "# Time:  O(pf * l + nf * l + n * l + klogk)\n# Space: O(pf * l + nf * l + n)\n\nimport random\nimport itertools\n\n\n# quick select, partial sort\nclass Solution(object):\n    def topStudents(self, positive_feedback, negative_feedback, report, student_id, k):\n        \"\"\"\n        :type positive_feedback: List[str]\n        :type negative_feedback: List[str]\n        :type report: List[str]\n        :type student_id: List[int]\n        :type k: int\n        :rtype: List[int]\n        \"\"\"\n        def nth_element(nums, n, compare=lambda a, b: a < b):\n            def tri_partition(nums, left, right, target, compare):\n                mid = left\n                while mid <= right:\n                    if nums[mid] == target:\n                        mid += 1\n                    elif compare(nums[mid], target):\n                        nums[left], nums[mid] = nums[mid], nums[left]\n                        left += 1\n                        mid += 1\n                    else:\n                        nums[mid], nums[right] = nums[right], nums[mid]\n                        right -= 1\n                return left, right\n\n            left, right = 0, len(nums)-1\n            while left <= right:\n                pivot_idx = random.randint(left, right)\n                pivot_left, pivot_right = tri_partition(nums, left, right, nums[pivot_idx], compare)\n                if pivot_left <= n <= pivot_right:\n                    return\n                elif pivot_left > n:\n                    right = pivot_left-1\n                else:  # pivot_right < n.\n                    left = pivot_right+1\n\n        pos, neg = set(positive_feedback), set(negative_feedback)\n        arr = []\n        for i, r in itertools.izip(student_id, report):\n            score = sum(3 if w in pos else -1 if w in neg else 0 for w in r.split())\n            arr.append((-score, i))\n        nth_element(arr, k-1)\n        return [i for _, i in sorted(arr[:k])]\n",
+      "sourcePath": "Python/reward-top-k-students.py"
+    }
+  },
+  "seo": {
+    "title": "Reward Top K Students Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Reward Top K Students (LeetCode #2512). Pattern: partial sort. Time O(pf * l + nf * l + n * l + klogk), space O(pf * l + nf * l + n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Reward Top K Students",
+      "Reward Top K Students solution",
+      "Reward Top K Students leetcode",
+      "sort",
+      "partial-sort",
+      "medium"
+    ],
+    "canonicalPath": "/problems/reward-top-k-students"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Reward Top K Students?",
+      "answer": "The reference solutions aim for O(pf * l + nf * l + n * l + klogk) time and O(pf * l + nf * l + n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Reward Top K Students use?",
+      "answer": "It primarily maps to partial sort, within the broader topic of sort."
+    },
+    {
+      "question": "Is Reward Top K Students good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/reward-top-k-students/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the partial sort approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Reward Top K Students (#2512) — Medium. Pattern: partial sort. Complexity: O(pf * l + nf * l + n * l + klogk) time / O(pf * l + nf * l + n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Reward Top K Students: show input structure (sort), highlight the moving parts of the partial sort approach, and annotate each step with the maintained invariant and complexity."
+}

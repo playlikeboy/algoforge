@@ -1,0 +1,165 @@
+{
+  "id": "3762",
+  "number": 3762,
+  "slug": "minimum-operations-to-equalize-subarrays",
+  "title": "Minimum Operations to Equalize Subarrays",
+  "difficulty": "Hard",
+  "topics": [
+    "array"
+  ],
+  "patterns": [
+    "prefix-sum",
+    "persistent-segment-tree",
+    "binary-search"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O((n + q) * logn)",
+  "spaceComplexity": "O(nlogn)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-operations-to-equalize-subarrays/",
+  "notes": [
+    "Prefix Sum",
+    "Coordinate Compression",
+    "Persistent Segment Tree",
+    "Binary Search"
+  ],
+  "relatedSlugs": [
+    "minimum-absolute-difference-queries",
+    "longest-balanced-subarray-ii",
+    "maximum-white-tiles-covered-by-a-carpet",
+    "longest-balanced-subarray-i",
+    "maximum-fruits-harvested-after-at-most-k-steps",
+    "stamping-the-grid",
+    "count-the-number-of-houses-at-a-certain-distance-ii",
+    "count-subarrays-with-majority-element-ii"
+  ],
+  "prevSlug": "minimum-absolute-distance-between-mirror-pairs",
+  "nextSlug": "maximum-total-sum-with-threshold-constraints",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Minimum Operations to Equalize Subarrays?\n\n**Minimum Operations to Equalize Subarrays** (LeetCode #3762) is a **Hard** problem that primarily trains **array**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **prefix sum, persistent segment tree, and binary search**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Prefix Sum, Coordinate Compression, Persistent Segment Tree, Binary Search.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/minimum-operations-to-equalize-subarrays/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Minimum Operations to Equalize Subarrays\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **prefix sum, persistent segment tree, and binary search**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O((n + q) * logn)) and **space** (O(nlogn)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O((n + q) * logn)** time and **O(nlogn)** space.\n\n### Pattern focus: prefix sum, persistent segment tree, and binary search\n\nUse the pattern as a checklist:\n\n- **prefix sum** — confirm the invariant holds after each step\n- **persistent segment tree** — confirm the invariant holds after each step\n- **binary search** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O((n + q) * logn)** |\n| Space | **O(nlogn)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Minimum Operations to Equalize Subarrays\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for prefix sum, persistent segment tree, and binary search — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **prefix sum, persistent segment tree, and binary search**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **array**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Minimum Operations to Equalize Subarrays** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **array**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "minimum-operations-to-equalize-subarrays.cpp",
+      "code": "// Time:  O((n + q) * logn)\n// Space: O(nlogn)\n\n// prefix sum, persistent segment tree, binary search\nclass PersistentSegmentTree {\npublic:\n    PersistentSegmentTree(const auto& vals) \n      : sorted_unique_vals_(vals) {\n\n        sort(begin(sorted_unique_vals_), end(sorted_unique_vals_));\n        sorted_unique_vals_.erase(unique(begin(sorted_unique_vals_), end(sorted_unique_vals_)), end(sorted_unique_vals_));\n        n_ = size(sorted_unique_vals_);\n        val_to_idx_.reserve(n_);\n        for (int i = 0; i < n_; ++i) {\n            val_to_idx_[sorted_unique_vals_[i]] = i;\n        }\n        build(vals);\n    }\n\n    int64_t query(int l, int r) {\n        int a = roots_[l];\n        int b = roots_[r + 1];\n        int64_t left_cnt = 0, left_total = 0;\n        auto med_cnt = ((r - l + 1) / 2) + 1;\n        int left = 0, right = n_ - 1;\n        while (left < right) {\n            const auto& mid = left + (right - left) / 2;\n            const auto& cnt = nodes_[nodes_[b].left].cnt - nodes_[nodes_[a].left].cnt;\n            if (med_cnt <= cnt) {\n                a = nodes_[a].left;\n                b = nodes_[b].left;\n                right = mid;\n            } else {\n                left_cnt += cnt;\n                left_total += nodes_[nodes_[b].left].total - nodes_[nodes_[a].left].total;\n                med_cnt -= cnt;\n                a = nodes_[a].right;\n                b = nodes_[b].right;\n                left = mid + 1;\n            }\n        }\n        return (sorted_unique_vals_[left] * left_cnt - left_total) +\n               (((nodes_[roots_[r + 1]].total - nodes_[roots_[l]].total - left_total)) - sorted_unique_vals_[left] * ((r - l + 1) - left_cnt));\n    }\n\nprivate:\n    inline int new_node() {\n        nodes_.emplace_back();\n        return size(nodes_) - 1;\n    }\n\n    inline int copy_node(int idx) {\n        nodes_.emplace_back(nodes_[idx]);\n        return size(nodes_) - 1;\n    }\n\n    void build(const auto& vals) {\n        int root = new_node();\n        roots_.emplace_back(root);\n        for (const auto& x : vals) {\n            root = copy_node(root);\n            roots_.emplace_back(root);\n            int curr = root;\n            int left = 0, right = n_ - 1;\n            const auto& i = val_to_idx_[x];\n            while (left < right) {\n                ++nodes_[curr].cnt;\n                nodes_[curr].total += x;\n                const auto& mid = left + (right - left) / 2;\n                if (i <= mid) {\n                    curr = nodes_[curr].left = copy_node(nodes_[curr].left);\n                    right = mid;\n                } else {\n                    curr = nodes_[curr].right = copy_node(nodes_[curr].right);\n                    left = mid + 1;\n                }\n            }\n            ++nodes_[curr].cnt;\n            nodes_[curr].total += x;\n        }\n    }\n\n    struct Node {\n        int left = 0;\n        int right = 0;\n        int cnt = 0;\n        int64_t total = 0;\n    };\n\n    int n_;\n    vector<int64_t> sorted_unique_vals_;\n    unordered_map<int64_t, int> val_to_idx_;\n    vector<Node> nodes_;\n    vector<int> roots_;\n};\n\nclass Solution {\npublic:\n    vector<long long> minOperations(vector<int>& nums, int k,  vector<vector<int>>& queries) {\n        vector<int> prefix(size(nums) + 1);\n        for (int i = 0; i < size(nums); ++i) {\n            prefix[i + 1] = prefix[i] + (i - 1 >= 0 && nums[i] % k != nums[i - 1] % k ? 1 : 0);\n        }\n        vector<int64_t> vals(size(nums));\n        for (int i = 0; i < size(vals); ++i) {\n            vals[i] = nums[i] / k;\n        }\n        PersistentSegmentTree pst(vals);\n        vector<long long> result;\n        result.reserve(size(queries));\n        for (const auto& q : queries) {\n            const auto& s = q[0], &t = q[1];\n            result.emplace_back(prefix[t + 1] - prefix[s + 1] == 0 ? pst.query(s, t) : -1);\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/minimum-operations-to-equalize-subarrays.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "minimum-operations-to-equalize-subarrays.py",
+      "code": "# Time:  O((n + q) * logn)\n# Space: O(nlogn)\n\n# prefix sum, persistent segment tree, binary search\nclass PersistentSegmentTree(object):\n    LEFT, RIGHT, CNT, TOTAL = range(4)\n\n    def __init__(self, vals):\n        self.sorted_unique_vals = sorted(set(vals))\n        self.val_to_idx = {x: i for i, x in enumerate(self.sorted_unique_vals)}\n        self.n = len(self.val_to_idx)\n        self.roots = []\n        self.__build(vals)\n\n    def __new_node(self):\n        return [None, None, 0, 0]\n\n    def __build(self, vals):\n        root = self.__new_node()\n        self.roots.append(root)\n        for x in vals:\n            root = root[:]\n            self.roots.append(root)\n            curr = root\n            left, right = 0, self.n-1\n            i = self.val_to_idx[x]\n            while left < right:\n                curr[self.CNT] += 1\n                curr[self.TOTAL] += x\n                mid = left+(right-left)//2\n                if i <= mid:\n                    curr[self.LEFT] = curr = curr[self.LEFT][:] if curr[self.LEFT] else self.__new_node()\n                    right = mid\n                else:\n                    curr[self.RIGHT] = curr = curr[self.RIGHT][:] if curr[self.RIGHT] else self.__new_node()\n                    left = mid+1\n            curr[self.CNT] += 1\n            curr[self.TOTAL] += x\n\n    def query(self, l, r):\n        a, b = self.roots[l], self.roots[r+1]\n        left_cnt = left_total = 0\n        med_cnt = (r-l+1)//2+1\n        left, right = 0, self.n-1\n        while left < right:\n            mid = left+(right-left)//2\n            cnt = ((b[self.LEFT][self.CNT] if b and b[self.LEFT] else 0)-\n                   (a[self.LEFT][self.CNT] if a and a[self.LEFT] else 0))\n            if med_cnt <= cnt:\n                a = a[self.LEFT] if a else None\n                b = b[self.LEFT] if b else None\n                right = mid\n            else:\n                med_cnt -= cnt\n                left_cnt += cnt\n                left_total += ((b[self.LEFT][self.TOTAL] if b and b[self.LEFT] else 0)-\n                               (a[self.LEFT][self.TOTAL] if a and a[self.LEFT] else 0))\n                a = a[self.RIGHT] if a else None\n                b = b[self.RIGHT] if b else None\n                left = mid+1\n        return ((self.sorted_unique_vals[left]*left_cnt-left_total)+((self.roots[r+1][self.TOTAL]-\n                self.roots[l][self.TOTAL]-left_total)-self.sorted_unique_vals[left]*((r-l+1)-left_cnt)))\n\n\nclass Solution(object):\n    def minOperations(self, nums, k, queries):\n        \"\"\"\n        :type nums: List[int]\n        :type k: int\n        :type queries: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        prefix = [0]*(len(nums)+1)\n        for i, x in enumerate(nums):\n            prefix[i+1] = prefix[i]+(1 if i-1 >= 0 and nums[i]%k != nums[i-1]%k else 0)\n        pst = PersistentSegmentTree([x//k for x in nums])\n        return [pst.query(s, t) if prefix[t+1]-prefix[s+1] == 0 else -1 for s, t in queries]\n",
+      "sourcePath": "Python/minimum-operations-to-equalize-subarrays.py"
+    }
+  },
+  "seo": {
+    "title": "Minimum Operations to Equalize Subarrays Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Minimum Operations to Equalize Subarrays (LeetCode #3762). Pattern: prefix sum. Time O((n + q) * logn), space O(nlogn). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Minimum Operations to Equalize Subarrays",
+      "Minimum Operations to Equalize Subarrays solution",
+      "Minimum Operations to Equalize Subarrays leetcode",
+      "array",
+      "prefix-sum",
+      "persistent-segment-tree",
+      "binary-search",
+      "hard"
+    ],
+    "canonicalPath": "/problems/minimum-operations-to-equalize-subarrays"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Minimum Operations to Equalize Subarrays?",
+      "answer": "The reference solutions aim for O((n + q) * logn) time and O(nlogn) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Minimum Operations to Equalize Subarrays use?",
+      "answer": "It primarily maps to prefix sum, persistent segment tree, and binary search, within the broader topic of array."
+    },
+    {
+      "question": "Is Minimum Operations to Equalize Subarrays good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/minimum-operations-to-equalize-subarrays/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the prefix sum, persistent segment tree, and binary search approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Minimum Operations to Equalize Subarrays (#3762) — Hard. Pattern: prefix sum, persistent segment tree, and binary search. Complexity: O((n + q) * logn) time / O(nlogn) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Minimum Operations to Equalize Subarrays: show input structure (array), highlight the moving parts of the prefix sum, persistent segment tree, and binary search approach, and annotate each step with the maintained invariant and complexity."
+}

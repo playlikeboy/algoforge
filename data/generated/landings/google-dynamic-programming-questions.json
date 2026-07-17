@@ -1,0 +1,73 @@
+{
+  "slug": "google-dynamic-programming-questions",
+  "path": "/explore/google-dynamic-programming-questions",
+  "h1": "Best Dynamic Programming Questions for Google",
+  "intro": "A curated set of 30 Dynamic Programming problems frequently useful for Google interview prep. Focus on patterns, not brute memorization.",
+  "problemSlugs": [
+    "edit-distance",
+    "interleaving-string",
+    "distinct-subsequences",
+    "palindrome-partitioning-ii",
+    "word-break",
+    "best-time-to-buy-and-sell-stock-iv",
+    "house-robber",
+    "house-robber-ii",
+    "maximal-square",
+    "range-sum-query-2d-immutable",
+    "best-time-to-buy-and-sell-stock-with-cooldown",
+    "burst-balloons",
+    "optimal-account-balancing",
+    "count-the-repetitions",
+    "predict-the-winner",
+    "freedom-trail",
+    "remove-boxes",
+    "strange-printer",
+    "knight-probability-in-chessboard",
+    "maximum-sum-of-3-non-overlapping-subarrays",
+    "stickers-to-spell-word",
+    "largest-plus-sign",
+    "largest-sum-of-averages",
+    "race-car",
+    "binary-trees-with-factors",
+    "flip-string-to-monotone-increasing",
+    "minimum-falling-path-sum",
+    "distinct-subsequences-ii",
+    "tallest-billboard",
+    "minimum-cost-for-tickets"
+  ],
+  "faqs": [
+    {
+      "question": "How many Dynamic Programming problems should I do for Google?",
+      "answer": "Quality over quantity: master patterns with 15 well-understood problems, then expand."
+    },
+    {
+      "question": "Where should I start?",
+      "answer": "Start Easy/Medium in this list, then tackle Hard variants. Pair with the Dynamic Programming topic page and related roadmaps."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/companies/google",
+      "label": "Google interview hub"
+    },
+    {
+      "href": "/topics/dynamic-programming",
+      "label": "Dynamic Programming problems"
+    },
+    {
+      "href": "/roadmaps",
+      "label": "All roadmaps"
+    }
+  ],
+  "seo": {
+    "title": "Best Dynamic Programming Questions for Google | AlgoForge",
+    "description": "Top Dynamic Programming coding interview questions for Google. Practice list, FAQs, and pattern links.",
+    "keywords": [
+      "Google Dynamic Programming questions",
+      "Dynamic Programming interview",
+      "Google leetcode"
+    ],
+    "canonicalPath": "/explore/google-dynamic-programming-questions"
+  },
+  "kind": "company-topic"
+}

@@ -1,0 +1,155 @@
+{
+  "id": "707",
+  "number": 707,
+  "slug": "design-linked-list",
+  "title": "Design Linked List",
+  "difficulty": "Medium",
+  "topics": [
+    "design"
+  ],
+  "patterns": [],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/design-linked-list/",
+  "notes": [
+    "Design"
+  ],
+  "relatedSlugs": [
+    "binary-search-tree-iterator",
+    "peeking-iterator",
+    "design-tic-tac-toe",
+    "design-snake-game",
+    "design-twitter",
+    "design-hit-counter",
+    "design-phone-directory",
+    "encode-and-decode-tinyurl"
+  ],
+  "prevSlug": "design-hashmap",
+  "nextSlug": "insert-into-a-sorted-circular-linked-list",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Design Linked List?\n\n**Design Linked List** (LeetCode #707) is a **Medium** problem that primarily trains **design**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n Official solution notes mention: Design.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/design-linked-list/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Design Linked List\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(n)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Design Linked List\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **design**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Design Linked List** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **design**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "design-linked-list.cpp",
+      "code": "// Time:  O(n)\n// Space: O(n)\n\nstruct Node {\n    Node(int value) :\n         val(value),\n         next(nullptr),\n         prev(nullptr) {}\n    int val;\n    Node *next;\n    Node *prev;\n};\n\nclass MyLinkedList {\npublic:\n    /** Initialize your data structure here. */\n    MyLinkedList() : size_(0) {\n        head_ = tail_ = new Node(-1);\n        head_->next = tail_;\n        tail_->prev = head_;\n    }\n    \n    /** Get the value of the index-th node in the linked list. If the index is invalid, return -1. */\n    int get(int index) {\n        if (0 <= index && index <= size_ / 2) {\n            return forward(0, index, head_->next)->val;\n        } else if (size_ / 2 < index && index < size_) {\n            return backward(size_, index, tail_)->val;\n        }\n        return -1;\n    }\n    \n    /** Add a node of value val before the first element of the linked list.\n        After the insertion, the new node will be the first node of the linked list. */\n    void addAtHead(int val) {\n        add(head_, val);\n    }\n    \n    /** Append a node of value val to the last element of the linked list. */\n    void addAtTail(int val) {\n        add(tail_->prev, val);\n    }\n    \n    /** Add a node of value val before the index-th node in the linked list.\n        If index equals to the length of linked list,\n        the node will be appended to the end of linked list.\n        If index is greater than the length, the node will not be inserted. */\n    void addAtIndex(int index, int val) {\n        if (0 <= index && index <= size_ / 2) {\n            add(forward(0, index, head_->next)->prev, val);\n        } else if (size_ / 2 < index && index <= size_) {\n            add(backward(size_, index, tail_)->prev, val);\n        }\n    }\n    \n    /** Delete the index-th node in the linked list, if the index is valid. */\n    void deleteAtIndex(int index) {\n        if (0 <= index && index <= size_ / 2) {\n            remove(forward(0, index, head_->next));\n        } else if (size_ / 2 < index && index < size_) {\n            remove(backward(size_, index, tail_));\n        }\n    }\n    \nprivate:\n    void add(Node *preNode, int val) {\n        auto node = new Node(val);\n        node->prev = preNode;\n        node->next = preNode->next;\n        node->prev->next = node->next->prev = node;\n        ++size_;\n    }\n        \n    void remove(Node *node) {\n        node->prev->next = node->next;\n        node->next->prev = node->prev;\n        --size_;\n    }\n        \n    Node *forward(int start, int end, Node *curr) {\n        while (start != end) {\n            ++start;\n            curr = curr->next;\n        }\n        return curr;\n    }\n    \n    Node *backward(int start, int end, Node *curr) {\n        while (start != end) {\n            --start;\n            curr = curr->prev;\n        }\n        return curr;\n    }\n\n    Node *head_;\n    Node *tail_;\n    int size_;\n};\n\n/**\n * Your MyLinkedList object will be instantiated and called as such:\n * MyLinkedList obj = new MyLinkedList();\n * int param_1 = obj.get(index);\n * obj.addAtHead(val);\n * obj.addAtTail(val);\n * obj.addAtIndex(index,val);\n * obj.deleteAtIndex(index);\n */\n \n",
+      "sourcePath": "C++/design-linked-list.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "design-linked-list.py",
+      "code": "# Time:  O(n)\n# Space: O(n)\n\nclass Node(object):\n    def __init__(self, value):\n        self.val = value\n        self.next = self.prev = None\n\n\nclass MyLinkedList(object):\n\n    def __init__(self):\n        \"\"\"\n        Initialize your data structure here.\n        \"\"\"\n        self.__head = self.__tail = Node(-1)\n        self.__head.next = self.__tail\n        self.__tail.prev = self.__head\n        self.__size = 0\n\n    def get(self, index):\n        \"\"\"\n        Get the value of the index-th node in the linked list. If the index is invalid, return -1.\n        :type index: int\n        :rtype: int\n        \"\"\"\n        if 0 <= index <= self.__size // 2:\n            return self.__forward(0, index, self.__head.next).val\n        elif self.__size // 2 < index < self.__size:\n            return self.__backward(self.__size, index, self.__tail).val\n        return -1\n\n    def addAtHead(self, val):\n        \"\"\"\n        Add a node of value val before the first element of the linked list.\n        After the insertion, the new node will be the first node of the linked list.\n        :type val: int\n        :rtype: void\n        \"\"\"\n        self.__add(self.__head, val)\n\n    def addAtTail(self, val):\n        \"\"\"\n        Append a node of value val to the last element of the linked list.\n        :type val: int\n        :rtype: void\n        \"\"\"\n        self.__add(self.__tail.prev, val)\n\n    def addAtIndex(self, index, val):\n        \"\"\"\n        Add a node of value val before the index-th node in the linked list.\n        If index equals to the length of linked list,\n        the node will be appended to the end of linked list.\n        If index is greater than the length, the node will not be inserted.\n        :type index: int\n        :type val: int\n        :rtype: void\n        \"\"\"\n        if 0 <= index <= self.__size // 2:\n            self.__add(self.__forward(0, index, self.__head.next).prev, val)\n        elif self.__size // 2 < index <= self.__size:\n            self.__add(self.__backward(self.__size, index, self.__tail).prev, val)\n\n    def deleteAtIndex(self, index):\n        \"\"\"\n        Delete the index-th node in the linked list, if the index is valid.\n        :type index: int\n        :rtype: void\n        \"\"\"\n        if 0 <= index <= self.__size // 2:\n            self.__remove(self.__forward(0, index, self.__head.next))\n        elif self.__size // 2 < index < self.__size:\n            self.__remove(self.__backward(self.__size, index, self.__tail))\n\n    def __add(self, preNode, val):\n        node = Node(val)\n        node.prev = preNode\n        node.next = preNode.next\n        node.prev.next = node.next.prev = node\n        self.__size += 1\n        \n    def __remove(self, node):\n        node.prev.next = node.next\n        node.next.prev = node.prev\n        self.__size -= 1\n        \n    def __forward(self, start, end, curr):\n        while start != end:\n            start += 1\n            curr = curr.next\n        return curr\n    \n    def __backward(self, start, end, curr):\n        while start != end:\n            start -= 1\n            curr = curr.prev\n        return curr\n\n\n\n",
+      "sourcePath": "Python/design-linked-list.py"
+    }
+  },
+  "seo": {
+    "title": "Design Linked List Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Design Linked List (LeetCode #707). Pattern: algorithms. Time O(n), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Design Linked List",
+      "Design Linked List solution",
+      "Design Linked List leetcode",
+      "design",
+      "medium"
+    ],
+    "canonicalPath": "/problems/design-linked-list"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Design Linked List?",
+      "answer": "The reference solutions aim for O(n) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Design Linked List use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of design."
+    },
+    {
+      "question": "Is Design Linked List good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/design-linked-list/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Design Linked List (#707) — Medium. Pattern: general problem-solving. Complexity: O(n) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Design Linked List: show input structure (design), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

@@ -1,0 +1,55 @@
+{
+  "slug": "medium-trie-problems",
+  "path": "/explore/medium-trie-problems",
+  "h1": "Medium Trie Problems",
+  "intro": "20 medium problems that drill the Trie pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "implement-trie-prefix-tree",
+    "add-and-search-word-data-structure-design",
+    "maximum-xor-of-two-numbers-in-an-array",
+    "replace-words",
+    "implement-magic-dictionary",
+    "map-sum-pairs",
+    "short-encoding-of-words",
+    "remove-sub-folders-from-the-filesystem",
+    "search-suggestions-system",
+    "html-entity-parser",
+    "number-of-distinct-substrings-in-a-string",
+    "implement-trie-ii-prefix-tree",
+    "longest-word-with-all-prefixes",
+    "k-divisible-elements-subarrays",
+    "extra-characters-in-a-string",
+    "find-the-length-of-the-longest-common-prefix",
+    "shortest-uncommon-substring-in-an-array",
+    "construct-string-with-minimum-cost-easy",
+    "minimum-number-of-valid-strings-to-form-target-i",
+    "partition-string"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice medium Trie problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/trie",
+      "label": "Trie pattern"
+    },
+    {
+      "href": "/difficulty/medium",
+      "label": "All Medium problems"
+    }
+  ],
+  "seo": {
+    "title": "Medium Trie Problems | AlgoForge",
+    "description": "Practice medium Trie LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "medium Trie",
+      "Trie problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/medium-trie-problems"
+  },
+  "kind": "difficulty-pattern"
+}

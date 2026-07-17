@@ -1,0 +1,161 @@
+{
+  "id": "2714",
+  "number": 2714,
+  "slug": "find-shortest-path-with-k-hops",
+  "title": "Find Shortest Path with K Hops",
+  "difficulty": "Hard",
+  "topics": [
+    "graph"
+  ],
+  "patterns": [
+    "graph",
+    "dijkstras-algorithm"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n * k + (k * e) * log(n * k))",
+  "spaceComplexity": "O(n * k + e)",
+  "premium": true,
+  "leetcodeUrl": "https://leetcode.com/problems/find-shortest-path-with-k-hops/",
+  "notes": [
+    "Graph",
+    "Dijkstra's Algorithm"
+  ],
+  "relatedSlugs": [
+    "minimum-time-to-transport-all-individuals",
+    "minimum-cost-to-buy-apples-ii",
+    "minimum-time-to-reach-target-with-limited-power",
+    "minimum-cost-of-a-path-with-special-roads",
+    "find-minimum-time-to-reach-last-room-i",
+    "find-minimum-time-to-reach-last-room-ii",
+    "digit-operations-to-make-two-integers-equal",
+    "minimum-time-to-reach-destination-in-directed-graph"
+  ],
+  "prevSlug": "maximum-strictly-increasing-cells-in-a-matrix",
+  "nextSlug": "execute-cancellable-function-with-delay",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Find Shortest Path with K Hops?\n\n**Find Shortest Path with K Hops** (LeetCode #2714) is a **Hard** problem that primarily trains **graph**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **graph and dijkstras algorithm**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Graph, Dijkstra's Algorithm.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/find-shortest-path-with-k-hops/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Find Shortest Path with K Hops\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **graph and dijkstras algorithm**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n * k + (k * e) * log(n * k))) and **space** (O(n * k + e)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n * k + (k * e) * log(n * k))** time and **O(n * k + e)** space.\n\n### Pattern focus: graph and dijkstras algorithm\n\nUse the pattern as a checklist:\n\n- **graph** — confirm the invariant holds after each step\n- **dijkstras algorithm** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n * k + (k * e) * log(n * k))** |\n| Space | **O(n * k + e)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Find Shortest Path with K Hops\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for graph and dijkstras algorithm — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **graph and dijkstras algorithm**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **graph**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Find Shortest Path with K Hops** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **graph**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "find-shortest-path-with-k-hops.cpp",
+      "code": "// Time:  O(n * k + (e * k) * log(n * k))\n// Space: O(n * k + e)\n\n// dijkstra's algorithm\nclass Solution {\npublic:\n    int shortestPathWithHops(int n, vector<vector<int>>& edges, int s, int d, int k) {\n        vector<vector<pair<int, int>>> adj(n);\n        for (const auto& e : edges) {\n            adj[e[0]].emplace_back(e[1], e[2]);\n            adj[e[1]].emplace_back(e[0], e[2]);\n        }\n        const auto& modified_dijkstra = [&]() {\n            static const int INF = numeric_limits<int>::max();\n\n            vector<vector<int>> best(size(adj), vector<int>(k + 1, INF));\n            best[s][0] = 0;\n            priority_queue<tuple<int, int, int>, vector<tuple<int, int, int>>, greater<tuple<int, int, int>>> min_heap;\n            min_heap.emplace(best[s][0], s, 0);\n            while (!empty(min_heap)) {\n                const auto [curr, u, cnt] = min_heap.top(); min_heap.pop();\n                if (curr > best[u][cnt]) {\n                    continue;\n                }\n                if (u == d) {\n                    return curr;\n                }\n                for (const auto& [v, w] : adj[u]) {\n                    if (w < best[v][cnt] - curr) {\n                        best[v][cnt] = curr + w;\n                        min_heap.emplace(best[v][cnt], v, cnt);\n                    }\n                    if (cnt + 1 <= k && curr < best[v][cnt + 1]) {\n                        best[v][cnt + 1] = curr;\n                        min_heap.emplace(best[v][cnt + 1], v, cnt + 1);\n                    }\n                }\n            }\n            return -1;\n        };\n\n        return modified_dijkstra();\n    }\n};\n",
+      "sourcePath": "C++/find-shortest-path-with-k-hops.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "find-shortest-path-with-k-hops.py",
+      "code": "# Time:  O(n * k + (e * k) * log(n * k))\n# Space: O(n * k + e)\n\nimport heapq\n\n\n# dijkstra's algorithm\nclass Solution(object):\n    def shortestPathWithHops(self, n, edges, s, d, k):\n        \"\"\"\n        :type n: int\n        :type edges: List[List[int]]\n        :type s: int\n        :type d: int\n        :type k: int\n        :rtype: int\n        \"\"\"\n        def modified_dijkstra():\n            best = [[float(\"inf\")]*(k+1) for _ in xrange(len(adj))]\n            best[s][0] = 0\n            min_heap = [(best[s][0], s, 0)]\n            while min_heap:\n                curr, u, cnt = heapq.heappop(min_heap)\n                if curr > best[u][cnt]:\n                    continue\n                if u == d:\n                    return curr\n                for v, w in adj[u]:\n                    if curr+w < best[v][cnt]:\n                        best[v][cnt] = curr+w\n                        heapq.heappush(min_heap, (best[v][cnt], v, cnt))\n                    if cnt+1 <= k and curr < best[v][cnt+1]:\n                        best[v][cnt+1] = curr\n                        heapq.heappush(min_heap, (best[v][cnt+1], v, cnt+1))\n            return -1\n        \n        adj = [[] for _ in xrange(n)]\n        for u, v, w in edges:\n            adj[u].append((v, w))\n            adj[v].append((u, w))\n        return modified_dijkstra()\n",
+      "sourcePath": "Python/find-shortest-path-with-k-hops.py"
+    }
+  },
+  "seo": {
+    "title": "Find Shortest Path with K Hops Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Find Shortest Path with K Hops (LeetCode #2714). Pattern: graph. Time O(n * k + (k * e) * log(n * k)), space O(n * k + e). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Find Shortest Path with K Hops",
+      "Find Shortest Path with K Hops solution",
+      "Find Shortest Path with K Hops leetcode",
+      "graph",
+      "graph",
+      "dijkstras-algorithm",
+      "hard"
+    ],
+    "canonicalPath": "/problems/find-shortest-path-with-k-hops"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Find Shortest Path with K Hops?",
+      "answer": "The reference solutions aim for O(n * k + (k * e) * log(n * k)) time and O(n * k + e) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Find Shortest Path with K Hops use?",
+      "answer": "It primarily maps to graph and dijkstras algorithm, within the broader topic of graph."
+    },
+    {
+      "question": "Is Find Shortest Path with K Hops good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/find-shortest-path-with-k-hops/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the graph and dijkstras algorithm approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Find Shortest Path with K Hops (#2714) — Hard. Pattern: graph and dijkstras algorithm. Complexity: O(n * k + (k * e) * log(n * k)) time / O(n * k + e) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Find Shortest Path with K Hops: show input structure (graph), highlight the moving parts of the graph and dijkstras algorithm approach, and annotate each step with the maintained invariant and complexity."
+}

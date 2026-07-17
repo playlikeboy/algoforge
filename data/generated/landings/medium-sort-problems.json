@@ -1,0 +1,85 @@
+{
+  "slug": "medium-sort-problems",
+  "path": "/explore/medium-sort-problems",
+  "h1": "Medium Sort Problems",
+  "intro": "116 medium problems that drill the Sort pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "longest-uncommon-subsequence-ii",
+    "longest-word-in-dictionary-through-deleting",
+    "sort-the-matrix-diagonally",
+    "filter-restaurants-by-vegan-friendly-price-and-distance",
+    "maximum-number-of-events-that-can-be-attended",
+    "best-team-with-no-conflicts",
+    "largest-submatrix-with-rearrangements",
+    "reduction-operations-to-make-the-array-elements-equal",
+    "most-beautiful-item-for-each-query",
+    "k-highest-ranked-items-within-a-price-range",
+    "removing-minimum-number-of-magic-beans",
+    "sort-the-jumbled-numbers",
+    "find-players-with-zero-or-one-losses",
+    "maximum-product-after-k-increments",
+    "minimum-number-of-keypresses",
+    "maximum-consecutive-floors-without-special-floors",
+    "maximum-bags-with-full-capacity-of-rocks",
+    "minimum-lines-to-represent-a-line-chart",
+    "query-kth-smallest-trimmed-number",
+    "finding-the-number-of-visible-mountains",
+    "divide-intervals-into-minimum-number-of-groups",
+    "maximum-matching-of-players-with-trainers",
+    "minimum-number-of-operations-to-sort-a-binary-tree-by-level",
+    "maximum-star-sum-of-a-graph",
+    "sort-the-students-by-their-kth-score",
+    "maximum-price-to-fill-a-bag",
+    "count-the-number-of-fair-pairs",
+    "minimum-score-by-changing-two-elements",
+    "find-the-maximum-number-of-marked-indices",
+    "count-ways-to-group-overlapping-ranges",
+    "rearrange-array-to-maximize-prefix-score",
+    "maximize-greatness-of-an-array",
+    "find-score-of-an-array-after-marking-all-elements",
+    "minimum-operations-to-make-all-array-elements-equal",
+    "minimize-the-maximum-difference-of-pairs",
+    "find-maximal-uncovered-ranges",
+    "sum-in-a-matrix",
+    "join-two-arrays-by-id",
+    "movement-of-robots",
+    "find-the-value-of-the-partition",
+    "relocate-marbles",
+    "maximum-beauty-of-an-array-after-applying-operation",
+    "maximum-coins-heroes-can-collect",
+    "happy-students",
+    "maximum-number-of-alloys",
+    "maximum-length-of-semi-decreasing-subarrays",
+    "minimum-processing-time",
+    "high-access-employees",
+    "maximize-area-of-square-hole-in-grid",
+    "make-lexicographically-smallest-array-by-swapping-elements"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice medium Sort problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/sort",
+      "label": "Sort pattern"
+    },
+    {
+      "href": "/difficulty/medium",
+      "label": "All Medium problems"
+    }
+  ],
+  "seo": {
+    "title": "Medium Sort Problems | AlgoForge",
+    "description": "Practice medium Sort LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "medium Sort",
+      "Sort problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/medium-sort-problems"
+  },
+  "kind": "difficulty-pattern"
+}

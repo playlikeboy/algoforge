@@ -1,0 +1,85 @@
+{
+  "slug": "medium-prefix-sum-problems",
+  "path": "/explore/medium-prefix-sum-problems",
+  "h1": "Medium Prefix Sum Problems",
+  "intro": "99 medium problems that drill the Prefix Sum pattern — ideal for focused practice sessions.",
+  "problemSlugs": [
+    "ways-to-make-a-fair-array",
+    "ways-to-split-array-into-three-subarrays",
+    "change-minimum-characters-to-satisfy-one-of-three-conditions",
+    "can-you-eat-your-favorite-candy-on-your-favorite-day",
+    "maximum-absolute-sum-of-any-subarray",
+    "maximum-subarray-min-product",
+    "minimum-absolute-difference-queries",
+    "maximum-number-of-points-with-cost",
+    "binary-searchable-numbers-in-an-unsorted-array",
+    "widest-pair-of-indices-with-equal-range-sum",
+    "sum-of-beauty-in-the-array",
+    "grid-game",
+    "count-subarrays-with-more-ones-than-zeros",
+    "plates-between-candles",
+    "find-good-days-to-rob-the-bank",
+    "intervals-between-identical-elements",
+    "all-divisions-with-the-highest-score-of-a-binary-array",
+    "maximum-sum-score-of-array",
+    "maximum-trailing-zeros-in-a-cornered-path",
+    "minimum-average-difference",
+    "number-of-ways-to-split-array",
+    "maximum-white-tiles-covered-by-a-carpet",
+    "minimum-amount-of-time-to-collect-garbage",
+    "find-all-good-indices",
+    "range-product-queries-of-powers",
+    "number-of-substrings-with-fixed-ratio",
+    "maximum-number-of-integers-to-choose-from-a-range-i",
+    "maximum-number-of-integers-to-choose-from-a-range-ii",
+    "count-vowel-strings-in-ranges",
+    "find-the-divisibility-array-of-a-string",
+    "make-the-prefix-sum-non-negative",
+    "minimum-operations-to-make-all-array-elements-equal",
+    "sum-of-distances",
+    "find-the-score-of-all-prefixes-of-an-array",
+    "maximum-or",
+    "difference-of-number-of-distinct-values-on-diagonals",
+    "collecting-chocolates",
+    "count-of-interesting-subarrays",
+    "minimum-size-subarray-in-infinite-array",
+    "find-indices-with-index-and-value-difference-ii",
+    "construct-product-matrix",
+    "maximum-profitable-triplets-with-increasing-prices-i",
+    "minimum-sum-of-mountain-triplets-ii",
+    "count-beautiful-substrings-i",
+    "number-of-divisible-substrings",
+    "number-of-same-end-substrings",
+    "find-polygon-with-the-largest-perimeter",
+    "count-the-number-of-houses-at-a-certain-distance-i",
+    "maximum-good-subarray-sum",
+    "count-submatrices-with-top-left-element-and-sum-less-than-k"
+  ],
+  "faqs": [
+    {
+      "question": "Why practice medium Prefix Sum problems?",
+      "answer": "Difficulty-scoped drills lock the pattern before you mix constraints on harder variants."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "href": "/patterns/prefix-sum",
+      "label": "Prefix Sum pattern"
+    },
+    {
+      "href": "/difficulty/medium",
+      "label": "All Medium problems"
+    }
+  ],
+  "seo": {
+    "title": "Medium Prefix Sum Problems | AlgoForge",
+    "description": "Practice medium Prefix Sum LeetCode-style problems with explanations and complexity notes.",
+    "keywords": [
+      "medium Prefix Sum",
+      "Prefix Sum problems",
+      "leetcode patterns"
+    ],
+    "canonicalPath": "/explore/medium-prefix-sum-problems"
+  },
+  "kind": "difficulty-pattern"
+}

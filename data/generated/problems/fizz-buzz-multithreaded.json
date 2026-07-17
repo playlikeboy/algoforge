@@ -1,0 +1,153 @@
+{
+  "id": "1195",
+  "number": 1195,
+  "slug": "fizz-buzz-multithreaded",
+  "title": "Fizz Buzz Multithreaded",
+  "difficulty": "Medium",
+  "topics": [
+    "concurrency"
+  ],
+  "patterns": [],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/fizz-buzz-multithreaded/",
+  "notes": [],
+  "relatedSlugs": [
+    "print-foobar-alternately",
+    "print-zero-even-odd",
+    "design-bounded-blocking-queue",
+    "the-dining-philosophers",
+    "web-crawler-multithreaded",
+    "print-in-order",
+    "building-h2o",
+    "traffic-light-controlled-intersection"
+  ],
+  "prevSlug": "tournament-winners",
+  "nextSlug": "how-many-apples-can-you-put-into-the-basket",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Fizz Buzz Multithreaded?\n\n**Fizz Buzz Multithreaded** (LeetCode #1195) is a **Medium** problem that primarily trains **concurrency**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/fizz-buzz-multithreaded/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Fizz Buzz Multithreaded\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(1)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Fizz Buzz Multithreaded\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **concurrency**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Fizz Buzz Multithreaded** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **concurrency**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "fizz-buzz-multithreaded.cpp",
+      "code": "// Time:  O(n)\n// Space: O(1)\n\nclass FizzBuzz {\npublic:\n    FizzBuzz(int n) : n_(n) {\n    }\n\n    // printFizz() outputs \"fizz\".\n    void fizz(function<void()> printFizz) {\n        for (int i = 1; i <= n_; ++i) {\n            {\n                unique_lock<mutex> l(m_);\n                cv_.wait(l, [this]() { return curr_ % 4 == 0; });\n                ++curr_;\n                if (i % 3 == 0 && i % 5 != 0) {\n                    printFizz();\n                }\n            }\n            cv_.notify_all();\n        }\n    }\n\n    // printBuzz() outputs \"buzz\".\n    void buzz(function<void()> printBuzz) {\n        for (int i = 1; i <= n_; ++i) {\n            {\n                unique_lock<mutex> l(m_);\n                cv_.wait(l, [this]() { return curr_ % 4 == 1; });\n                ++curr_;\n                if (i % 3 != 0 && i % 5 == 0) {\n                    printBuzz();\n                }\n            }\n            cv_.notify_all();\n        }\n    }\n\n    // printFizzBuzz() outputs \"fizzbuzz\".\n    void fizzbuzz(function<void()> printFizzBuzz) {\n        for (int i = 1; i <= n_; ++i) {\n            {\n                unique_lock<mutex> l(m_);\n                cv_.wait(l, [this]() { return curr_ % 4 == 2; });\n                ++curr_;\n                if (i % 3 == 0 && i % 5 == 0) {\n                    printFizzBuzz();\n                }\n            }\n            cv_.notify_all();\n        }\n    }\n\n    // printNumber(x) outputs \"x\", where x is an integer.\n    void number(function<void(int)> printNumber) {\n        for (int i = 1; i <= n_; ++i) {\n            {\n                unique_lock<mutex> l(m_);\n                cv_.wait(l, [this]() { return curr_ % 4 == 3; });\n                ++curr_;\n                if (i % 3 != 0 && i % 5 != 0) {\n                    printNumber(i);\n                }\n            }\n            cv_.notify_all();\n        }\n    }\n\nprivate:\n    int n_;\n    int curr_ = 0;\n    mutex m_;\n    condition_variable cv_;\n};\n",
+      "sourcePath": "C++/fizz-buzz-multithreaded.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "fizz-buzz-multithreaded.py",
+      "code": "# Time:  O(n)\n# Space: O(1)\n\nimport threading\n\n\nclass FizzBuzz(object):\n    def __init__(self, n):\n        self.__n = n\n        self.__curr = 0\n        self.__cv = threading.Condition()\n\n    # printFizz() outputs \"fizz\"\n    def fizz(self, printFizz):\n        \"\"\"\n        :type printFizz: method\n        :rtype: void\n        \"\"\"\n        for i in xrange(1, self.__n+1):\n            with self.__cv:\n                while self.__curr % 4 != 0:\n                    self.__cv.wait()\n                self.__curr += 1\n                if i % 3 == 0 and i % 5 != 0:\n                    printFizz()\n                self.__cv.notify_all()\n\n    # printBuzz() outputs \"buzz\"\n    def buzz(self, printBuzz):\n        \"\"\"\n        :type printBuzz: method\n        :rtype: void\n        \"\"\"\n        for i in xrange(1, self.__n+1):\n            with self.__cv:\n                while self.__curr % 4 != 1:\n                    self.__cv.wait()\n                self.__curr += 1\n                if i % 3 != 0 and i % 5 == 0:\n                    printBuzz()\n                self.__cv.notify_all()\n\n    # printFizzBuzz() outputs \"fizzbuzz\"\n    def fizzbuzz(self, printFizzBuzz):\n        \"\"\"\n        :type printFizzBuzz: method\n        :rtype: void\n        \"\"\"\n        for i in xrange(1, self.__n+1):\n            with self.__cv:\n                while self.__curr % 4 != 2:\n                    self.__cv.wait()\n                self.__curr += 1\n                if i % 3 == 0 and i % 5 == 0:\n                    printFizzBuzz()\n                self.__cv.notify_all()\n\n    # printNumber(x) outputs \"x\", where x is an integer.\n    def number(self, printNumber):\n        \"\"\"\n        :type printNumber: method\n        :rtype: void\n        \"\"\"\n        for i in xrange(1, self.__n+1):\n            with self.__cv:\n                while self.__curr % 4 != 3:\n                    self.__cv.wait()\n                self.__curr += 1\n                if i % 3 != 0 and i % 5 != 0:\n                    printNumber(i)\n                self.__cv.notify_all()\n",
+      "sourcePath": "Python/fizz-buzz-multithreaded.py"
+    }
+  },
+  "seo": {
+    "title": "Fizz Buzz Multithreaded Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Fizz Buzz Multithreaded (LeetCode #1195). Pattern: algorithms. Time O(n), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Fizz Buzz Multithreaded",
+      "Fizz Buzz Multithreaded solution",
+      "Fizz Buzz Multithreaded leetcode",
+      "concurrency",
+      "medium"
+    ],
+    "canonicalPath": "/problems/fizz-buzz-multithreaded"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Fizz Buzz Multithreaded?",
+      "answer": "The reference solutions aim for O(n) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Fizz Buzz Multithreaded use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of concurrency."
+    },
+    {
+      "question": "Is Fizz Buzz Multithreaded good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/fizz-buzz-multithreaded/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Fizz Buzz Multithreaded (#1195) — Medium. Pattern: general problem-solving. Complexity: O(n) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Fizz Buzz Multithreaded: show input structure (concurrency), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

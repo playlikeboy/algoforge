@@ -1,0 +1,156 @@
+{
+  "id": "655",
+  "number": 655,
+  "slug": "print-binary-tree",
+  "title": "Print Binary Tree",
+  "difficulty": "Medium",
+  "topics": [
+    "tree"
+  ],
+  "patterns": [
+    "tree-traversal"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(h)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/print-binary-tree/",
+  "notes": [],
+  "relatedSlugs": [
+    "binary-tree-inorder-traversal",
+    "binary-tree-preorder-traversal",
+    "convert-binary-search-tree-to-sorted-doubly-linked-list",
+    "construct-quad-tree",
+    "n-ary-tree-level-order-traversal",
+    "flatten-a-multilevel-doubly-linked-list",
+    "minesweeper",
+    "construct-binary-tree-from-string"
+  ],
+  "prevSlug": "maximum-binary-tree",
+  "nextSlug": "coin-path",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Print Binary Tree?\n\n**Print Binary Tree** (LeetCode #655) is a **Medium** problem that primarily trains **tree**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **tree traversal**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/print-binary-tree/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Print Binary Tree\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **tree traversal**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(h)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(h)** space.\n\n### Pattern focus: tree traversal\n\nUse the pattern as a checklist:\n\n- **tree traversal** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(h)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Print Binary Tree\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for tree traversal — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **tree traversal**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **tree**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Print Binary Tree** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **tree**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "print-binary-tree.cpp",
+      "code": "// Time:  O(h * 2^h)\n// Space: O(h * 2^h)\n\n/**\n * Definition for a binary tree node.\n * struct TreeNode {\n *     int val;\n *     TreeNode *left;\n *     TreeNode *right;\n *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}\n * };\n */\nclass Solution {\npublic:\n    vector<vector<string>> printTree(TreeNode* root) {\n        auto h = getHeight(root), w = getWidth(root);\n        vector<vector<string>> result(h, vector<string>(w, \"\"));\n        preorderTraversal(root, 0, 0, w - 1, &result);\n        return result;\n    }\n\nprivate:\n    int getHeight(TreeNode* root) {\n        if (!root) {\n            return 0;\n        }\n        return max(getHeight(root->left), getHeight(root->right)) + 1;\n    }\n\n    int getWidth(TreeNode* root) {\n        if (!root) {\n            return 0;\n        }\n        return 2 * max(getWidth(root->left), getWidth(root->right)) + 1;\n    }\n\n    void preorderTraversal(TreeNode *root, int level, int left, int right, vector<vector<string>> *result) {\n        if (!root) {\n            return;\n        }\n        auto mid = left + (right - left) / 2;\n        (*result)[level][mid] = to_string(root->val);\n        preorderTraversal(root->left, level + 1, left, mid - 1, result);\n        preorderTraversal(root->right, level + 1, mid + 1, right, result);\n    }\n};\n",
+      "sourcePath": "C++/print-binary-tree.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "print-binary-tree.py",
+      "code": "# Time:  O(h * 2^h)\n# Space: O(h * 2^h)\n\nclass Solution(object):\n    def printTree(self, root):\n        \"\"\"\n        :type root: TreeNode\n        :rtype: List[List[str]]\n        \"\"\"\n        def getWidth(root):\n            if not root:\n                return 0\n            return 2 * max(getWidth(root.left), getWidth(root.right)) + 1\n\n        def getHeight(root):\n            if not root:\n                return 0\n            return max(getHeight(root.left), getHeight(root.right)) + 1\n\n        def preorderTraversal(root, level, left, right, result):\n            if not root:\n                return\n            mid = left + (right-left)/2\n            result[level][mid] = str(root.val)\n            preorderTraversal(root.left, level+1, left, mid-1, result)\n            preorderTraversal(root.right, level+1, mid+1, right, result)\n\n        h, w = getHeight(root), getWidth(root)\n        result = [[\"\"] * w for _ in xrange(h)]\n        preorderTraversal(root, 0, 0, w-1, result)\n        return result\n\n",
+      "sourcePath": "Python/print-binary-tree.py"
+    }
+  },
+  "seo": {
+    "title": "Print Binary Tree Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Print Binary Tree (LeetCode #655). Pattern: tree traversal. Time O(n), space O(h). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Print Binary Tree",
+      "Print Binary Tree solution",
+      "Print Binary Tree leetcode",
+      "tree",
+      "tree-traversal",
+      "medium"
+    ],
+    "canonicalPath": "/problems/print-binary-tree"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Print Binary Tree?",
+      "answer": "The reference solutions aim for O(n) time and O(h) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Print Binary Tree use?",
+      "answer": "It primarily maps to tree traversal, within the broader topic of tree."
+    },
+    {
+      "question": "Is Print Binary Tree good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/print-binary-tree/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the tree traversal approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Print Binary Tree (#655) — Medium. Pattern: tree traversal. Complexity: O(n) time / O(h) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Print Binary Tree: show input structure (tree), highlight the moving parts of the tree traversal approach, and annotate each step with the maintained invariant and complexity."
+}

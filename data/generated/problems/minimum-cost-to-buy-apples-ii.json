@@ -1,0 +1,161 @@
+{
+  "id": "3928",
+  "number": 3928,
+  "slug": "minimum-cost-to-buy-apples-ii",
+  "title": "Minimum Cost to Buy Apples II",
+  "difficulty": "Hard",
+  "topics": [
+    "graph"
+  ],
+  "patterns": [
+    "graph",
+    "dijkstras-algorithm"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n * (n + elogn))",
+  "spaceComplexity": "O(n + e)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/minimum-cost-to-buy-apples-ii/",
+  "notes": [
+    "Graph",
+    "Dijkstra's Algorithm"
+  ],
+  "relatedSlugs": [
+    "find-shortest-path-with-k-hops",
+    "minimum-time-to-transport-all-individuals",
+    "minimum-time-to-reach-target-with-limited-power",
+    "minimum-cost-of-a-path-with-special-roads",
+    "find-minimum-time-to-reach-last-room-i",
+    "find-minimum-time-to-reach-last-room-ii",
+    "digit-operations-to-make-two-integers-equal",
+    "minimum-time-to-reach-destination-in-directed-graph"
+  ],
+  "prevSlug": "minimize-array-sum-using-divisible-replacements",
+  "nextSlug": "minimum-partition-score-ii",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Minimum Cost to Buy Apples II?\n\n**Minimum Cost to Buy Apples II** (LeetCode #3928) is a **Hard** problem that primarily trains **graph**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **graph and dijkstras algorithm**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Graph, Dijkstra's Algorithm.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/minimum-cost-to-buy-apples-ii/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Minimum Cost to Buy Apples II\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **graph and dijkstras algorithm**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n * (n + elogn))) and **space** (O(n + e)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n * (n + elogn))** time and **O(n + e)** space.\n\n### Pattern focus: graph and dijkstras algorithm\n\nUse the pattern as a checklist:\n\n- **graph** — confirm the invariant holds after each step\n- **dijkstras algorithm** — confirm the invariant holds after each step\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n * (n + elogn))** |\n| Space | **O(n + e)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Minimum Cost to Buy Apples II\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for graph and dijkstras algorithm — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **graph and dijkstras algorithm**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **graph**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Minimum Cost to Buy Apples II** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **graph**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "minimum-cost-to-buy-apples-ii.cpp",
+      "code": "// Time:  O(n * (n + elogn))\n// Space: O(n + e)\n\n// dijkstra's algorithm\nclass Solution {\npublic:\n    vector<int> minCost(int n, vector<int>& prices, vector<vector<int>>& roads) {\n        static const auto& INF = numeric_limits<int64_t>::max();\n\n        vector<vector<pair<int, int64_t>>> adj(2 * n);\n        const auto& dijkstra = [&](int start, int target) {\n            vector<int64_t> best(size(adj), INF);\n            best[start] = 0;\n            priority_queue<pair<int64_t, int>, vector<pair<int64_t, int>>, greater<pair<int64_t, int>>> min_heap;\n            min_heap.emplace(best[start], start);\n            while (!empty(min_heap)) {\n                const auto [curr, u] = min_heap.top(); min_heap.pop();\n                if (curr != best[u]) {\n                    continue;\n                }\n                if (u == target) {\n                    return curr;\n                }\n                for (const auto& [v, w] : adj[u]) {\n                    if (best[v] - curr <= w) {\n                        continue;\n                    }\n                    best[v] = curr + w;\n                    min_heap.emplace(best[v], v);\n                }\n            }\n            return INF;\n        };\n\n        for (const auto& r : roads) {\n            const auto u = r[0], v = r[1];\n            const int64_t c = r[2], t = r[3];\n            adj[u].emplace_back(v, c);\n            adj[v].emplace_back(u, c);\n            adj[u + n].emplace_back(v + n, c * t);\n            adj[v + n].emplace_back(u + n, c * t);\n        }\n        for (int i = 0; i < n; ++i) {\n            adj[i].emplace_back(i + n , prices[i]);\n        }\n        vector<int> result(n);\n        for (int i = 0; i < n; ++i) {\n            result[i] = dijkstra(i, i + n);\n        }\n        return result;\n    }\n};\n\n// Time:  O(n * (n + elogn))\n// Space: O(n + e)\n// dijkstra's algorithm\nclass Solution2 {\npublic:\n    vector<int> minCost(int n, vector<int>& prices, vector<vector<int>>& roads) {\n        static const auto& INF = numeric_limits<int64_t>::max();\n\n        vector<vector<vector<pair<int, int64_t>>>> adj(2, vector<vector<pair<int, int64_t>>>(n));\n        const auto& dijkstra = [&](const auto& adj, int start) {\n            vector<int64_t> best(size(adj), INF);\n            best[start] = 0;\n            priority_queue<pair<int64_t, int>, vector<pair<int64_t, int>>, greater<pair<int64_t, int>>> min_heap;\n            min_heap.emplace(best[start], start);\n            while (!empty(min_heap)) {\n                const auto [curr, u] = min_heap.top(); min_heap.pop();\n                if (curr != best[u]) {\n                    continue;\n                }\n                for (const auto& [v, w] : adj[u]) {\n                    if (best[v] - curr <= w) {\n                        continue;\n                    }\n                    best[v] = curr + w;\n                    min_heap.emplace(best[v], v);\n                }\n            }\n            return best;\n        };\n\n        for (const auto& r : roads) {\n            const auto u = r[0], v = r[1];\n            const int64_t c = r[2], t = r[3];\n            adj[0][u].emplace_back(v, c);\n            adj[0][v].emplace_back(u, c);\n            adj[1][u].emplace_back(v, c * t);\n            adj[1][v].emplace_back(u, c * t);\n        }\n        vector<int> result(n);\n        for (int i = 0; i < n; ++i) {\n            vector<vector<int64_t>> dist = {dijkstra(adj[0], i), dijkstra(adj[1], i)};\n            int64_t mn = INF;\n            for (int j = 0; j < n; ++j) {\n                if (dist[0][j] != INF && dist[1][j] != INF) {\n                    mn = min(mn, dist[0][j] + prices[j] + dist[1][j]);\n                }\n            }\n            result[i] = mn;\n        }\n        return result;\n    }\n};\n",
+      "sourcePath": "C++/minimum-cost-to-buy-apples-ii.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "minimum-cost-to-buy-apples-ii.py",
+      "code": "# Time:  O(n * (n + elogn))\n# Space: O(n + e)\n\nimport heapq\n\n\n# dijkstra's algorithm\nclass Solution(object):\n    def minCost(self, n, prices, roads):\n        \"\"\"\n        :type n: int\n        :type prices: List[int]\n        :type roads: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        INF = float(\"inf\")\n        def dijkstra(start, target):\n            best = [INF]*len(adj)\n            best[start] = 0\n            min_heap = [(best[start], start)]\n            while min_heap:\n                curr, u = heapq.heappop(min_heap)\n                if curr != best[u]:\n                    continue\n                if u == target:\n                    return curr\n                for v, w in adj[u]:     \n                    if best[v] <= curr+w:\n                        continue\n                    best[v] = curr+w\n                    heapq.heappush(min_heap, (best[v], v))\n            return INF\n\n        adj = [[] for _ in xrange(2*n)]\n        for u, v, c, t in roads:\n            adj[u].append((v, c))\n            adj[v].append((u, c))\n            adj[u+n].append((v+n, c*t))\n            adj[v+n].append((u+n, c*t))\n        for i in xrange(n):\n            adj[i].append((i+n , prices[i]))\n        return [dijkstra(i, i+n) for i in xrange(n)]\n\n\n# Time:  O(n * (n + elogn))\n# Space: O(n + e)\nimport heapq\n\n\n# dijkstra's algorithm\nclass Solution2(object):\n    def minCost(self, n, prices, roads):\n        \"\"\"\n        :type n: int\n        :type prices: List[int]\n        :type roads: List[List[int]]\n        :rtype: List[int]\n        \"\"\"\n        INF = float(\"inf\")\n        def dijkstra(adj, start):\n            best = [INF]*len(adj)\n            best[start] = 0\n            min_heap = [(best[start], start)]\n            while min_heap:\n                curr, u = heapq.heappop(min_heap)\n                if curr != best[u]:\n                    continue\n                for v, w in adj[u]:     \n                    if best[v] <= curr+w:\n                        continue\n                    best[v] = curr+w\n                    heapq.heappush(min_heap, (best[v], v))\n            return best\n\n        adj = [[[] for _ in xrange(n)] for _ in xrange(2)]\n        for u, v, c, t in roads:\n            adj[0][u].append((v, c))\n            adj[0][v].append((u, c))\n            adj[1][u].append((v, c*t))\n            adj[1][v].append((u, c*t))\n        result = [0]*n\n        for i in xrange(n):\n            dist = [dijkstra(adj[j], i) for j in xrange(2)]\n            result[i] = min(dist[0][j]+prices[j]+dist[1][j] for j in xrange(n))\n        return result\n",
+      "sourcePath": "Python/minimum-cost-to-buy-apples-ii.py"
+    }
+  },
+  "seo": {
+    "title": "Minimum Cost to Buy Apples II Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Minimum Cost to Buy Apples II (LeetCode #3928). Pattern: graph. Time O(n * (n + elogn)), space O(n + e). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Minimum Cost to Buy Apples II",
+      "Minimum Cost to Buy Apples II solution",
+      "Minimum Cost to Buy Apples II leetcode",
+      "graph",
+      "graph",
+      "dijkstras-algorithm",
+      "hard"
+    ],
+    "canonicalPath": "/problems/minimum-cost-to-buy-apples-ii"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Minimum Cost to Buy Apples II?",
+      "answer": "The reference solutions aim for O(n * (n + elogn)) time and O(n + e) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Minimum Cost to Buy Apples II use?",
+      "answer": "It primarily maps to graph and dijkstras algorithm, within the broader topic of graph."
+    },
+    {
+      "question": "Is Minimum Cost to Buy Apples II good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/minimum-cost-to-buy-apples-ii/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the graph and dijkstras algorithm approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Minimum Cost to Buy Apples II (#3928) — Hard. Pattern: graph and dijkstras algorithm. Complexity: O(n * (n + elogn)) time / O(n + e) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Minimum Cost to Buy Apples II: show input structure (graph), highlight the moving parts of the graph and dijkstras algorithm approach, and annotate each step with the maintained invariant and complexity."
+}

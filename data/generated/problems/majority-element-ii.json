@@ -1,0 +1,156 @@
+{
+  "id": "229",
+  "number": 229,
+  "slug": "majority-element-ii",
+  "title": "Majority Element II",
+  "difficulty": "Medium",
+  "topics": [
+    "array"
+  ],
+  "patterns": [],
+  "companies": [
+    "amazon",
+    "zenefits"
+  ],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/majority-element-ii/",
+  "notes": [],
+  "relatedSlugs": [
+    "next-permutation",
+    "rotate-image",
+    "spiral-matrix",
+    "spiral-matrix-ii",
+    "set-matrix-zeroes",
+    "remove-duplicates-from-sorted-array-ii",
+    "missing-ranges",
+    "kth-largest-element-in-an-array"
+  ],
+  "prevSlug": "summary-ranges",
+  "nextSlug": "kth-smallest-element-in-a-bst",
+  "estimatedMinutes": 35,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Majority Element II?\n\n**Majority Element II** (LeetCode #229) is a **Medium** problem that primarily trains **array**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **general problem-solving**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nIt sits in the sweet spot of interview difficulty: multiple valid approaches, clear trade-offs.\n\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/majority-element-ii/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Majority Element II\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **general problem-solving**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n)) and **space** (O(1)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n)** time and **O(1)** space.\n\n### Pattern focus: general problem-solving\n\nUse the pattern as a checklist:\n\n- Identify the dominant pattern and stick to one clear invariant\n\nMultiple methods appear in the source solutions — compare them and explain when each is preferable.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n)** |\n| Space | **O(1)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Majority Element II\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for general problem-solving — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "ready",
+      "bodyMarkdown": "## Alternatives\n\nThe source file includes more than one method. Compare:\n\n1. **Primary optimized path** — best complexity for typical interviews.\n2. **Secondary approach** — often brute force, sorting-based, or space-optimized variant.\n\nPractice articulating **when** you would pick each (constraints, readability, follow-ups).\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **general problem-solving**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **array**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Majority Element II** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **array**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "majority-element-ii.cpp",
+      "code": "// Time:  O(n)\n// Space: O(1)\n\nclass Solution {\npublic:\n    vector<int> majorityElement(vector<int>& nums) {\n        int k = 3;\n        const int n = nums.size();\n        unordered_map<int, int> hash;\n\n        for (const auto& i : nums) {\n            ++hash[i];\n            // Detecting k items in hash, at least one of them must have exactly\n            // one in it. We will discard those k items by one for each.\n            // This action keeps the same mojority numbers in the remaining numbers.\n            // Because if x / n  > 1 / k is true, then (x - 1) / (n - k) > 1 / k is also true.\n            if (hash.size() == k) {\n                auto it = hash.begin();\n                while (it != hash.end()) {\n                    if (--(it->second) == 0) {\n                        hash.erase(it++);\n                    } else {\n                        ++it;\n                    }\n                }\n            }\n        }\n\n        // Resets hash for the following counting.\n        for (auto& it : hash) {\n            it.second = 0;\n        }\n\n        // Counts the occurrence of each candidate integer.\n        for (const auto& i : nums) {\n            auto it = hash.find(i);\n            if (it != hash.end()) {\n                ++it->second;\n            }\n        }\n\n        // Selects the integer which occurs > [n / k] times.\n        vector<int> ret;\n        for (const pair<int, int>& it : hash) {\n            if (it.second > n / k) {\n                ret.emplace_back(it.first);\n            }\n        }\n        return ret;\n    }\n};\n",
+      "sourcePath": "C++/majority-element-ii.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "majority-element-ii.py",
+      "code": "# Time:  O(n)\n# Space: O(1)\n\nimport collections\n\n\nclass Solution(object):\n    def majorityElement(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        k, n, cnts = 3, len(nums), collections.defaultdict(int)\n\n        for i in nums:\n            cnts[i] += 1\n            # Detecting k items in cnts, at least one of them must have exactly\n            # one in it. We will discard those k items by one for each.\n            # This action keeps the same mojority numbers in the remaining numbers.\n            # Because if x / n  > 1 / k is true, then (x - 1) / (n - k) > 1 / k is also true.\n            if len(cnts) == k:\n                for j in cnts.keys():\n                    cnts[j] -= 1\n                    if cnts[j] == 0:\n                        del cnts[j]\n\n        # Resets cnts for the following counting.\n        for i in cnts.keys():\n            cnts[i] = 0\n\n        # Counts the occurrence of each candidate integer.\n        for i in nums:\n            if i in cnts:\n                cnts[i] += 1\n\n        # Selects the integer which occurs > [n / k] times.\n        result = []\n        for i in cnts.keys():\n            if cnts[i] > n / k:\n                result.append(i)\n\n        return result\n\n    def majorityElement2(self, nums):\n        \"\"\"\n        :type nums: List[int]\n        :rtype: List[int]\n        \"\"\"\n        return [i[0] for i in collections.Counter(nums).items() if i[1] > len(nums) / 3]\n\n",
+      "sourcePath": "Python/majority-element-ii.py"
+    }
+  },
+  "seo": {
+    "title": "Majority Element II Solution — Medium | AlgoForge",
+    "description": "Original Medium explanation for Majority Element II (LeetCode #229). Pattern: algorithms. Time O(n), space O(1). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Majority Element II",
+      "Majority Element II solution",
+      "Majority Element II leetcode",
+      "array",
+      "medium"
+    ],
+    "canonicalPath": "/problems/majority-element-ii"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Majority Element II?",
+      "answer": "The reference solutions aim for O(n) time and O(1) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Majority Element II use?",
+      "answer": "It primarily maps to general problem-solving, within the broader topic of array."
+    },
+    {
+      "question": "Is Majority Element II good for interviews?",
+      "answer": "Yes — as a Medium problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/majority-element-ii/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the general problem-solving approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Majority Element II (#229) — Medium. Pattern: general problem-solving. Complexity: O(n) time / O(1) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Majority Element II: show input structure (array), highlight the moving parts of the general problem-solving approach, and annotate each step with the maintained invariant and complexity."
+}

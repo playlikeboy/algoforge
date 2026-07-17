@@ -1,0 +1,161 @@
+{
+  "id": "2949",
+  "number": 2949,
+  "slug": "count-beautiful-substrings-ii",
+  "title": "Count Beautiful Substrings II",
+  "difficulty": "Hard",
+  "topics": [
+    "hash-table"
+  ],
+  "patterns": [
+    "prefix-sum"
+  ],
+  "companies": [],
+  "languages": [
+    "cpp",
+    "python"
+  ],
+  "timeComplexity": "O(n + sqrt(k))",
+  "spaceComplexity": "O(n)",
+  "premium": false,
+  "leetcodeUrl": "https://leetcode.com/problems/count-beautiful-substrings-ii/",
+  "notes": [
+    "Brute Force",
+    "Number Theory",
+    "Prefix Sum",
+    "Freq Table"
+  ],
+  "relatedSlugs": [
+    "maximum-number-of-ways-to-partition-an-array",
+    "count-subarrays-with-median-k",
+    "palindrome-rearrangement-queries",
+    "count-distinct-subarrays-divisible-by-k-in-sorted-array",
+    "number-of-substrings-with-fixed-ratio",
+    "sum-of-distances",
+    "count-of-interesting-subarrays",
+    "count-beautiful-substrings-i"
+  ],
+  "prevSlug": "make-lexicographically-smallest-array-by-swapping-elements",
+  "nextSlug": "number-of-divisible-substrings",
+  "estimatedMinutes": 50,
+  "content": [
+    {
+      "id": "beginner",
+      "title": "Beginner Explanation",
+      "status": "ready",
+      "bodyMarkdown": "## What is Count Beautiful Substrings II?\n\n**Count Beautiful Substrings II** (LeetCode #2949) is a **Hard** problem that primarily trains **hash table**.\n\n### How to think about it\n\n1. **Restate the goal** in your own words before coding.\n2. Work a **tiny example** by hand so the invariant becomes obvious.\n3. Identify the **pattern** — this problem aligns with **prefix sum**.\n4. Only then translate the idea into code.\n\n### Why this problem matters\n\nHard problems force you to combine patterns and prove complexity carefully — interview gold.\n Official solution notes mention: Brute Force, Number Theory, Prefix Sum, Freq Table.\n\n> AlgoForge explanations are original teaching notes. Always open the [official problem statement on LeetCode](https://leetcode.com/problems/count-beautiful-substrings-ii/) for constraints and examples.\n"
+    },
+    {
+      "id": "interview",
+      "title": "Interview Walkthrough",
+      "status": "ready",
+      "bodyMarkdown": "## Interview approach for Count Beautiful Substrings II\n\n### Opening (30–60 seconds)\n\n- Clarify inputs/outputs and edge cases (empty input, single element, duplicates, overflow).\n- State a **brute force** so the interviewer knows you can solve it naively.\n- Propose the **optimal direction** tied to **prefix sum**.\n\n### Core solution narrative\n\n1. Define the **state** you track (pointers, DP cell, set membership, stack top, etc.).\n2. Explain the **transition** when you process the next element.\n3. Call out **time** (O(n + sqrt(k))) and **space** (O(n)) before coding.\n4. Code cleanly; narrate variable names.\n\n### What interviewers listen for\n\n- Correctness on edge cases\n- Complexity honesty\n- Ability to discuss **trade-offs** (e.g., hash map space vs. sort + two pointers)\n\n### Follow-up questions they may ask\n\n- Can you solve it with less memory?\n- What if the input stream is infinite / doesn't fit in RAM?\n- How would tests look for adversarial inputs?\n"
+    },
+    {
+      "id": "optimized",
+      "title": "Optimized Approach",
+      "status": "ready",
+      "bodyMarkdown": "## Optimized solution notes\n\nThe reference solutions on AlgoForge target **O(n + sqrt(k))** time and **O(n)** space.\n\n### Pattern focus: prefix sum\n\nUse the pattern as a checklist:\n\n- **prefix sum** — confirm the invariant holds after each step\n\nStart from the primary solution, then rewrite from memory to lock it in.\n\n### Implementation tips\n\n- Prefer readable names over micro-optimizations in interviews.\n- Extract helpers only when they clarify (e.g., expand-around-center, DFS visit).\n- After AC-level logic, re-scan for off-by-one and null checks.\n"
+    },
+    {
+      "id": "complexity",
+      "title": "Complexity Analysis",
+      "status": "ready",
+      "bodyMarkdown": "## Complexity\n\n| Measure | Bound |\n|--------|-------|\n| Time | **O(n + sqrt(k))** |\n| Space | **O(n)** |\n\n### How to justify this in an interview\n\n- **Time:** count loops, map/set operations, and recursive branching; state average vs worst case if relevant.\n- **Space:** include hash maps, recursion stack, and output allocation when the problem asks for it.\n\nIf your implementation differs from the reference, re-derive big-O from *your* code — never memorize a complexity you cannot defend.\n"
+    },
+    {
+      "id": "common-mistakes",
+      "title": "Common Mistakes",
+      "status": "ready",
+      "bodyMarkdown": "## Common mistakes on Count Beautiful Substrings II\n\n1. **Skipping edge cases** — empty collections, single-element inputs, max constraints.\n2. **Wrong invariant** for prefix sum — updating state too early or too late.\n3. **Mutating input unexpectedly** when the problem forbids it.\n4. **Off-by-one** in windows, ranges, or binary search bounds.\n5. **Ignoring overflow / precision** for integer arithmetic problems.\n6. **Overengineering** — jumping to an advanced structure when a simpler approach works.\n"
+    },
+    {
+      "id": "alternatives",
+      "title": "Alternative Approaches",
+      "status": "placeholder",
+      "bodyMarkdown": "## Alternatives\n\nPlaceholder for multi-approach comparison. Future AI content generation can expand:\n\n- Brute force baseline\n- Optimal prefix sum solution\n- Space-optimized rewrite\n\nPrompt slot: expand alternatives for `count-beautiful-substrings-ii`.\n"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Edge Cases",
+      "status": "ready",
+      "bodyMarkdown": "## Edge cases checklist\n\n- Minimum input size\n- Maximum input size / time limits\n- Duplicates and already-sorted input\n- Negative numbers / zeros (if applicable)\n- Disconnected structures (graphs/trees)\n- Single path vs branching recursion depth\n"
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern Recognition",
+      "status": "ready",
+      "bodyMarkdown": "## Spotting this pattern\n\nSignal phrases that point to **prefix sum**:\n\n- Sorted input or ability to sort without changing the answer class\n- Need for contiguous subarray / substring → consider sliding window\n- Need for O(1) membership → hash set/map\n- Optimal substructure + overlapping subproblems → DP\n- Connectivity / components → graph DFS/BFS or Union-Find\n\nPrimary topics: **hash table**.\n"
+    },
+    {
+      "id": "follow-ups",
+      "title": "Follow-up Interview Questions",
+      "status": "ready",
+      "bodyMarkdown": "## Follow-ups\n\n1. How does the solution change if the input is a stream?\n2. Can you solve it in-place?\n3. What if duplicates must be handled differently?\n4. How would you parallelize the approach?\n5. Design tests that would break a buggy implementation.\n"
+    },
+    {
+      "id": "practice",
+      "title": "Practice Recommendations",
+      "status": "ready",
+      "bodyMarkdown": "## What to practice next\n\n1. Re-solve **Count Beautiful Substrings II** in a second language (cpp, python).\n2. Drill 3–5 more problems tagged **hash table**.\n3. Teach the solution out loud in under 5 minutes.\n4. Add this problem to your revision calendar in 3 days and 14 days.\n"
+    }
+  ],
+  "solutions": {
+    "cpp": {
+      "language": "C++",
+      "languageSlug": "cpp",
+      "filename": "count-beautiful-substrings-ii.cpp",
+      "code": "// Time:  O(n + sqrt(k))\n// Space: O(n)\n\n// number theory, prefix sum, freq table\nclass Solution {\npublic:\n    int beautifulSubstrings(string s, int k) {\n        static const unordered_set<char> VOWELS = {'a', 'e', 'i', 'o', 'u'};\n    \n        vector<int> prefix(size(s) + 1);\n        for (int i = 0; i < size(s); ++i) {\n            prefix[i + 1] = prefix[i] + (VOWELS.count(s[i]) ? +1 : -1);\n        }\n        int new_k = 1;\n        int x = k;\n        for (int i = 2; i * i <= k; ++i) {\n            int cnt = 0;\n            for (; x % i == 0; x /= i) {\n                ++cnt;\n            }\n            if (cnt) {\n                new_k *= pow(i, (cnt + 1) / 2 + static_cast<int>(i == 2));\n            }\n        }\n        if (x != 1) {\n            new_k *= pow(x, (1 + 1) / 2 + static_cast<int>(x == 2));\n        }\n        unordered_map<int, unordered_map<int, int>> cnt;\n        int result = 0;\n        for (int i = 0; i < size(prefix); ++i) {\n            result += cnt[prefix[i]][i % new_k]++;\n        }\n        return result;\n    }\n};\n\n",
+      "sourcePath": "C++/count-beautiful-substrings-ii.cpp"
+    },
+    "python": {
+      "language": "Python",
+      "languageSlug": "python",
+      "filename": "count-beautiful-substrings-ii.py",
+      "code": "# Time:  O(n + sqrt(k))\n# Space: O(1)\n\nimport collections\n\n\n# number theory, prefix sum, freq table\nclass Solution(object):\n    def beautifulSubstrings(self, s, k):\n        \"\"\"\n        :type s: str\n        :type k: int\n        :rtype: int\n        \"\"\"\n        VOWELS = set(\"aeiou\")\n        prefix = [0]*(len(s)+1)\n        for i in xrange(len(s)):\n            prefix[i+1] = prefix[i]+(+1 if s[i] in VOWELS else -1)\n        new_k = 1\n        x = k\n        for i in xrange(2, k+1):\n            if i*i > k:\n                break\n            cnt = 0\n            while x%i == 0:\n                x //= i\n                cnt += 1\n            if cnt:\n                new_k *= i**((cnt+1)//2+int(i == 2))\n        if x != 1:\n            new_k *= x**((1+1)//2+int(x == 2))\n        cnt = collections.Counter()\n        result = 0\n        for i, p in enumerate(prefix):\n            result += cnt[p, i%new_k]\n            cnt[p, i%new_k] += 1\n        return result\n",
+      "sourcePath": "Python/count-beautiful-substrings-ii.py"
+    }
+  },
+  "seo": {
+    "title": "Count Beautiful Substrings II Solution — Hard | AlgoForge",
+    "description": "Original Hard explanation for Count Beautiful Substrings II (LeetCode #2949). Pattern: prefix sum. Time O(n + sqrt(k)), space O(n). Multi-language solutions and interview tips.",
+    "keywords": [
+      "Count Beautiful Substrings II",
+      "Count Beautiful Substrings II solution",
+      "Count Beautiful Substrings II leetcode",
+      "hash-table",
+      "prefix-sum",
+      "hard"
+    ],
+    "canonicalPath": "/problems/count-beautiful-substrings-ii"
+  },
+  "faqs": [
+    {
+      "question": "What is the time complexity of Count Beautiful Substrings II?",
+      "answer": "The reference solutions aim for O(n + sqrt(k)) time and O(n) space. Always re-derive complexity from the code you write in the interview."
+    },
+    {
+      "question": "What pattern does Count Beautiful Substrings II use?",
+      "answer": "It primarily maps to prefix sum, within the broader topic of hash table."
+    },
+    {
+      "question": "Is Count Beautiful Substrings II good for interviews?",
+      "answer": "Yes — as a Hard problem it is a solid practice target. Pair it with related problems in the same pattern family for spaced repetition."
+    },
+    {
+      "question": "Where can I read the official statement?",
+      "answer": "Open the official LeetCode page for constraints and examples: https://leetcode.com/problems/count-beautiful-substrings-ii/"
+    }
+  ],
+  "studyChecklist": [
+    "Read the official problem statement on LeetCode",
+    "Solve on paper / whiteboard first",
+    "Implement the prefix sum approach",
+    "Verify edge cases from the checklist",
+    "State time and space complexity aloud",
+    "Compare with the AlgoForge reference solution",
+    "Schedule a revision session"
+  ],
+  "revisionNotes": "Count Beautiful Substrings II (#2949) — Hard. Pattern: prefix sum. Complexity: O(n + sqrt(k)) time / O(n) space. Re-derive the invariant before coding.",
+  "visualizationDescription": "Conceptual diagram for Count Beautiful Substrings II: show input structure (hash table), highlight the moving parts of the prefix sum approach, and annotate each step with the maintained invariant and complexity."
+}
