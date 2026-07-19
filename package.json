@@ -13,7 +13,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "echo 'Configure wrangler pages deploy after Cloudflare project setup'",
+    "deploy": "wrangler deploy",
     "pipeline": "npm run fetch && npm run generate"
   },
   "dependencies": {
