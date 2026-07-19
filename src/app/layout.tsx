@@ -12,6 +12,7 @@ import {
   softwareApplicationJsonLd,
 } from "@/lib/seo/jsonld";
 import { siteConfig } from "@/lib/config";
+import { SearchModal } from "@/components/search/search-modal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,6 +49,7 @@ export default function RootLayout({
             {children}
           </main>
           <SiteFooter />
+          <SearchModal />
         </ThemeProvider>
       </body>
     </html>

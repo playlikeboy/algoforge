@@ -24,6 +24,7 @@ export function SearchClient({ documents }: { documents: SearchDocument[] }) {
         "difficulty",
         "topics",
         "patterns",
+        "number",
       ],
       searchOptions: {
         boost: { title: 3, keywords: 2 },
@@ -75,6 +76,11 @@ export function SearchClient({ documents }: { documents: SearchDocument[] }) {
               className="block rounded-xl border border-border bg-card p-4 hover:border-primary/40 transition-colors"
             >
               <div className="flex flex-wrap items-center gap-2">
+                {r.number && (
+                  <span className="text-[11px] font-mono font-bold text-muted-foreground">
+                    #{r.number}
+                  </span>
+                )}
                 <span className="text-[10px] uppercase tracking-wider font-semibold text-muted-foreground">
                   {r.type}
                 </span>

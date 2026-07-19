@@ -757,6 +757,7 @@ See [Longest Substring Without Repeating Characters](/problems/longest-substring
       topics: p.topics,
       patterns: p.patterns,
       keywords: [p.title, String(p.number), ...p.topics, ...p.patterns, ...p.companies].join(" "),
+      number: p.number,
     });
   }
   for (const t of topicsOut) {

@@ -140,6 +140,7 @@ export interface SearchDocument {
   topics?: string[];
   patterns?: string[];
   keywords: string;
+  number?: number;
 }
 
 export interface SiteManifest {
