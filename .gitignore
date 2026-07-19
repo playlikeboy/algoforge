@@ -46,3 +46,5 @@ next-env.d.ts
 # generated data is large; generate in CI — keep indexes optional
 # /data/generated/
 .deploy/
+.open-next/
+.wrangler/
