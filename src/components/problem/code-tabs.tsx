@@ -1,10 +1,27 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { Check, Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils/cn";
 import type { SolutionFile } from "@/lib/schema/types";
+
+// Import Prism and languages
+import Prism from "prismjs";
+import "prismjs/components/prism-c";
+import "prismjs/components/prism-cpp";
+import "prismjs/components/prism-python";
+import "prismjs/themes/prism-tomorrow.css";
+
+function getPrismGrammar(langSlug: string) {
+  const slug = langSlug.toLowerCase();
+  if (slug === "cpp" || slug === "c++") return Prism.languages.cpp;
+  if (slug === "python" || slug === "python3" || slug === "py") return Prism.languages.python;
+  if (slug === "c") return Prism.languages.c;
+  if (slug === "typescript" || slug === "ts") return Prism.languages.typescript;
+  if (slug === "javascript" || slug === "js") return Prism.languages.javascript;
+  return Prism.languages.clike;
+}
 
 export function CodeTabs({
   solutions,
@@ -18,6 +35,21 @@ export function CodeTabs({
     defaultLang && solutions[defaultLang] ? defaultLang : langs[0] ?? ""
   );
   const [copied, setCopied] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const sol = solutions[active];
+
+  const highlightedHtml = useMemo(() => {
+    if (!sol) return "";
+    if (!mounted) return sol.code;
+    const grammar = getPrismGrammar(active);
+    if (!grammar) return sol.code;
+    return Prism.highlight(sol.code, grammar, active);
+  }, [sol, active, mounted]);
 
   if (langs.length === 0) {
     return (
@@ -26,8 +58,6 @@ export function CodeTabs({
       </p>
     );
   }
-
-  const sol = solutions[active];
 
   async function copy() {
     if (!sol) return;
@@ -70,7 +100,14 @@ export function CodeTabs({
         </Button>
       </div>
       <pre className="overflow-x-auto p-4 text-[13px] leading-relaxed font-mono max-h-[32rem]">
-        <code>{sol?.code}</code>
+        {mounted ? (
+          <code
+            className={`language-${active}`}
+            dangerouslySetInnerHTML={{ __html: highlightedHtml }}
+          />
+        ) : (
+          <code>{sol?.code}</code>
+        )}
       </pre>
     </div>
   );

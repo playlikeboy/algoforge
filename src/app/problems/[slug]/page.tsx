@@ -14,6 +14,7 @@ import { DifficultyBadge, Badge } from "@/components/ui/badge";
 import { CodeTabs } from "@/components/problem/code-tabs";
 import { BookmarkButton } from "@/components/problem/bookmark-button";
 import { ConfidenceTracker } from "@/components/problem/confidence-tracker";
+import { ProblemVisualizer } from "@/components/problem/problem-visualizer";
 import { MarkdownBody } from "@/components/markdown-body";
 import { markdownToHtml } from "@/lib/markdown";
 import { ProblemList } from "@/components/problem/problem-list";
@@ -154,9 +155,7 @@ export default async function ProblemPage({
 
           <section id="visualization" className="mt-10 scroll-mt-24">
             <h2 className="text-xl font-bold mb-3">Visualization</h2>
-            <div className="rounded-xl border border-dashed border-border bg-muted/40 p-6 text-sm text-muted-foreground">
-              {problem.visualizationDescription}
-            </div>
+            <ProblemVisualizer slug={problem.slug} fallbackDescription={problem.visualizationDescription} />
           </section>
 
           <section id="checklist" className="mt-10 scroll-mt-24">
