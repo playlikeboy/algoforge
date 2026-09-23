@@ -4,23 +4,49 @@
 
 ```bash
 npm run pipeline
-npm run dev
-# production
-npm run build && npm start
+npm run lint
+npm run typecheck
+npm run build
 ```
 
-## Cloudflare Pages
+## GitHub Pages
 
-1. Connect GitHub repo
-2. Build command: `npm run pipeline && npm run build` (or use `prebuild`)
-3. Output: Next.js OpenNext adapter recommended (`@opennextjs/cloudflare`)
-4. Env: `NEXT_PUBLIC_SITE_URL=https://your-domain`
+The primary deployment is the project site:
 
-## GitHub Actions
+```text
+https://stack-shade.github.io/algoforge/
+```
 
-- `.github/workflows/deploy.yml` — CI build
-- `.github/workflows/pipeline.yml` — weekly data refresh
+The workflow is `.github/workflows/deploy.yml`.
+
+It installs dependencies, regenerates the content graph, runs lint and TypeScript checks, builds Next.js with:
+
+```text
+DEPLOY_TARGET=github-pages
+NEXT_PUBLIC_SITE_URL=https://stack-shade.github.io/algoforge
+NEXT_PUBLIC_BASE_PATH=/algoforge
+```
+
+and deploys `out/` with the official GitHub Pages actions.
+
+## Optional Cloudflare/OpenNext
+
+The repository keeps `open-next.config.ts` and Wrangler configuration for an optional custom-domain deployment.
+
+For a root custom domain:
+
+```text
+NEXT_PUBLIC_SITE_URL=https://algoforge.dev
+NEXT_PUBLIC_BASE_PATH=
+DEPLOY_TARGET=
+```
+
+Use `npm run deploy:cloudflare` only for that target.
+
+## URL rules
+
+Do not hard-code the production host in page components. Canonical URLs are built through `siteConfig.url`, while the project-site prefix used by client-side requests is `siteConfig.basePath`.
 
 ## Headers
 
-Configure Cloudflare Transform Rules or `_headers` for CSP, HSTS, and cache on static assets.
+For a custom-domain/Cloudflare deployment, configure CSP, HSTS, and cache policies at the edge. GitHub Pages does not provide the same edge configuration surface.

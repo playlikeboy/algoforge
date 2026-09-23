@@ -4,9 +4,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import { RAW, GENERATED, CURATED } from "./paths";
-import { toSlug, slugFromFilename } from "../src/lib/utils/slug";
-import type { Difficulty } from "../src/lib/schema/types";
-import { LANGUAGE_MAP } from "../src/lib/schema/types";
+import { toSlug, slugFromFilename } from "../lib/utils/slug";
+import type { Difficulty } from "../lib/schema/types";
+import { LANGUAGE_MAP } from "../lib/schema/types";
 
 export interface ParsedProblemRow {
   number: number;

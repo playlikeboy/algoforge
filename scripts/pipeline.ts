@@ -6,7 +6,7 @@ import path from "node:path";
 import { RAW, GENERATED, CURATED, AI_QUEUE } from "./paths";
 import { parseAllIndexes } from "./parse-index";
 import { generateContent } from "./generate-content";
-import type { Problem, SolutionFile, SearchDocument, SiteManifest, LandingPage } from "../src/lib/schema/types";
+import type { Problem, SolutionFile, SearchDocument, SiteManifest, LandingPage } from "../lib/schema/types";
 
 const PRIMARY_LANGS = ["python", "cpp", "java", "typescript", "go", "javascript", "rust", "csharp"];
 
@@ -876,7 +876,6 @@ See [Longest Substring Without Repeating Characters](/problems/longest-substring
     "/about/attribution",
     "/search",
     "/practice",
-    "/dashboard",
     "/difficulty/easy",
     "/difficulty/medium",
     "/difficulty/hard",
@@ -890,6 +889,10 @@ See [Longest Substring Without Repeating Characters](/problems/longest-substring
     ...landings.map((l) => l.path),
     ...[...langMap.keys()].map((l) => `/languages/${l}`),
   ];
+  if (sitemapPaths.length > 45000) {
+    throw new Error(`Sitemap contains ${sitemapPaths.length} URLs; split it into multiple sitemaps before deploying.`);
+  }
+
   writeJson(path.join(GENERATED, "sitemap-paths.json"), sitemapPaths);
 
   // RSS items
