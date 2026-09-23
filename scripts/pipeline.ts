@@ -6,7 +6,7 @@ import path from "node:path";
 import { RAW, GENERATED, CURATED, AI_QUEUE } from "./paths";
 import { parseAllIndexes } from "./parse-index";
 import { generateContent } from "./generate-content";
-import type { Problem, SolutionFile, SearchDocument, SiteManifest, LandingPage } from "../lib/schema/types";
+import type { Problem, SolutionFile, SearchDocument, SiteManifest, LandingPage } from "../src/lib/schema/types";
 
 const PRIMARY_LANGS = ["python", "cpp", "java", "typescript", "go", "javascript", "rust", "csharp"];
 

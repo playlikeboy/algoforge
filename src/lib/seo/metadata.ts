@@ -3,9 +3,10 @@ import { siteConfig } from "@/lib/config";
 import type { SeoFields } from "@/lib/schema/types";
 
 export function absoluteUrl(path: string): string {
+  if (/^https?:\/\//i.test(path)) return path;
   const base = siteConfig.url.replace(/\/$/, "");
-  const p = path.startsWith("/") ? path : `/${path}`;
-  return `${base}${p}`;
+  const p = path.startsWith("/") ? path : "/" + path;
+  return base + p;
 }
 
 export function buildMetadata(seo: SeoFields, extras?: Partial<Metadata>): Metadata {
@@ -16,16 +17,21 @@ export function buildMetadata(seo: SeoFields, extras?: Partial<Metadata>): Metad
     title: seo.title,
     description: seo.description,
     keywords: seo.keywords,
-    alternates: {
-      canonical: url,
-    },
+    alternates: { canonical: url },
     openGraph: {
       title: seo.title,
       description: seo.description,
       url,
       siteName: siteConfig.name,
-      type: "article",
-      images: [{ url: absoluteUrl(ogImage), width: 1200, height: 630, alt: seo.title }],
+      type: seo.canonicalPath === "/" ? "website" : "article",
+      images: [
+        {
+          url: absoluteUrl(ogImage),
+          width: 1200,
+          height: 630,
+          alt: seo.title,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
@@ -39,7 +45,7 @@ export function buildMetadata(seo: SeoFields, extras?: Partial<Metadata>): Metad
 
 export function defaultMetadata(): Metadata {
   return buildMetadata({
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    title: siteConfig.name + " — " + siteConfig.tagline,
     description: siteConfig.description,
     keywords: [...siteConfig.keywords],
     canonicalPath: "/",

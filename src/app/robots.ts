@@ -4,13 +4,15 @@ import { siteConfig } from "@/lib/config";
 export const revalidate = false;
 
 export default function robots(): MetadataRoute.Robots {
-  const base = siteConfig.url.replace(/\/$/, "");
+  const base = siteConfig.basePath || "";
+  const scoped = (path: string) => base + path;
+
   return {
     rules: {
       userAgent: "*",
-      allow: "/",
-      disallow: ["/dashboard", "/api/"],
+      allow: scoped("/"),
+      disallow: [scoped("/dashboard"), scoped("/api/")],
     },
-    sitemap: `${base}/sitemap.xml`,
+    sitemap: siteConfig.url + "/sitemap.xml",
   };
 }

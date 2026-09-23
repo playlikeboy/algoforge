@@ -23,7 +23,7 @@ export function websiteJsonLd() {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: `${siteConfig.url}/search?q={search_term_string}`,
+        urlTemplate: siteConfig.url + "/search?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },
@@ -50,9 +50,9 @@ export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((item, i) => ({
+    itemListElement: items.map((item, index) => ({
       "@type": "ListItem",
-      position: i + 1,
+      position: index + 1,
       name: item.name,
       item: absoluteUrl(item.path),
     })),
@@ -63,12 +63,12 @@ export function faqJsonLd(faqs: FaqItem[]) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
+    mainEntity: faqs.map((faq) => ({
       "@type": "Question",
-      name: f.question,
+      name: faq.question,
       acceptedAnswer: {
         "@type": "Answer",
-        text: f.answer,
+        text: faq.answer,
       },
     })),
   };
@@ -81,23 +81,22 @@ export function articleJsonLd(opts: {
   datePublished?: string;
   dateModified?: string;
 }) {
-  return {
+  const data: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: opts.title,
     description: opts.description,
     url: absoluteUrl(opts.path),
-    author: {
-      "@type": "Organization",
-      name: siteConfig.name,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: siteConfig.name,
-    },
-    datePublished: opts.datePublished ?? "2026-01-01",
-    dateModified: opts.dateModified ?? opts.datePublished ?? new Date().toISOString().slice(0, 10),
+    author: { "@type": "Organization", name: siteConfig.name },
+    publisher: { "@type": "Organization", name: siteConfig.name },
   };
+
+  if (opts.datePublished) data.datePublished = opts.datePublished;
+  if (opts.dateModified ?? opts.datePublished) {
+    data.dateModified = opts.dateModified ?? opts.datePublished;
+  }
+
+  return data;
 }
 
 export function howToJsonLd(opts: {
@@ -110,9 +109,9 @@ export function howToJsonLd(opts: {
     "@type": "HowTo",
     name: opts.name,
     description: opts.description,
-    step: opts.steps.map((text, i) => ({
+    step: opts.steps.map((text, index) => ({
       "@type": "HowToStep",
-      position: i + 1,
+      position: index + 1,
       text,
     })),
   };

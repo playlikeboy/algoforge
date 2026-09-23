@@ -6,7 +6,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://algoforge.dev",
   ogImage: "/og-default.png",
   links: {
-    github: "https://github.com/kamyu104/LeetCode-Solutions",
+    github: "https://github.com/SH20RAJ/algoforge",
     twitter: "https://x.com/algoforge",
   },
   creator: "AlgoForge",

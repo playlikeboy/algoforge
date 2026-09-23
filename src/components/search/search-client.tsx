@@ -32,23 +32,26 @@ export function SearchClient({ documents }: { documents: SearchDocument[] }) {
         prefix: true,
       },
     });
-    // Guard against duplicate IDs from pipeline edge cases
+
     const seen = new Set<string>();
-    const unique = documents.filter((d) => {
-      if (seen.has(d.id)) return false;
-      seen.add(d.id);
-      return true;
-    });
-    mini.addAll(unique);
+    mini.addAll(
+      documents.filter((doc) => {
+        if (seen.has(doc.id)) return false;
+        seen.add(doc.id);
+        return true;
+      })
+    );
+
     return mini;
   }, [documents]);
 
   useEffect(() => {
     if (!query.trim()) {
-      setResults(documents.filter((d) => d.type === "problem").slice(0, 12));
+      setResults(documents.filter((doc) => doc.type === "problem").slice(0, 12));
       return;
     }
-    const hits = index.search(query, { combineWith: "AND" }).slice(0, 30);
+
+    const hits = index.search(query, { combineWith: "OR" }).slice(0, 30);
     setResults(hits as unknown as SearchDocument[]);
   }, [query, index, documents]);
 
@@ -62,36 +65,40 @@ export function SearchClient({ documents }: { documents: SearchDocument[] }) {
           id="search"
           type="search"
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(event) => setQuery(event.target.value)}
           placeholder="Search Two Sum, DP, Google, Blind 75…"
           className="w-full rounded-xl border border-border bg-card px-4 py-3 text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-ring"
           autoFocus
         />
       </div>
+
       <ul className="space-y-2">
-        {results.map((r) => (
-          <li key={r.id}>
+        {results.map((result) => (
+          <li key={result.id}>
             <Link
-              href={r.path}
+              href={result.path}
               className="block rounded-xl border border-border bg-card p-4 hover:border-primary/40 transition-colors"
             >
               <div className="flex flex-wrap items-center gap-2">
-                {r.number && (
+                {result.number && (
                   <span className="text-[11px] font-mono font-bold text-muted-foreground">
-                    #{r.number}
+                    #{result.number}
                   </span>
                 )}
                 <span className="text-[10px] uppercase tracking-wider font-semibold text-muted-foreground">
-                  {r.type}
+                  {result.type}
                 </span>
-                {r.difficulty && <DifficultyBadge difficulty={r.difficulty} />}
+                {result.difficulty && <DifficultyBadge difficulty={result.difficulty} />}
               </div>
-              <p className="mt-1 font-semibold">{r.title}</p>
-              <p className="mt-1 text-sm text-muted-foreground line-clamp-2">{r.description}</p>
+              <p className="mt-1 font-semibold">{result.title}</p>
+              <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
+                {result.description}
+              </p>
             </Link>
           </li>
         ))}
       </ul>
+
       {results.length === 0 && (
         <p className="text-sm text-muted-foreground">No results. Try another query.</p>
       )}

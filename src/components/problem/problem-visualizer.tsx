@@ -155,8 +155,8 @@ function TwoSumVisualizer() {
       setTarget(tgt);
       setError("");
       setIsEditing(false);
-    } catch (err: any) {
-      setError(err.message || "Invalid input format.");
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : "Invalid input format.");
     }
   };
 

@@ -29,7 +29,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   ...defaultMetadata(),
   metadataBase: new URL(siteConfig.url),
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: siteConfig.basePath + "/favicon.ico" },
 };
 
 export default function RootLayout({
@@ -45,9 +45,7 @@ export default function RootLayout({
           <JsonLd data={websiteJsonLd()} />
           <JsonLd data={softwareApplicationJsonLd()} />
           <SiteHeader />
-          <main id="main" className="min-h-[70vh]">
-            {children}
-          </main>
+          <main id="main" className="min-h-[70vh]">{children}</main>
           <SiteFooter />
           <SearchModal />
         </ThemeProvider>
