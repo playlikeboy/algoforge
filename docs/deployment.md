@@ -3,6 +3,7 @@
 ## Local
 
 ```bash
+npm install
 npm run pipeline
 npm run lint
 npm run typecheck
@@ -19,7 +20,9 @@ https://stack-shade.github.io/algoforge/
 
 The workflow is `.github/workflows/deploy.yml`.
 
-It installs dependencies, regenerates the content graph, runs lint and TypeScript checks, builds Next.js with:
+It installs dependencies, validates the committed generated content, runs lint and TypeScript checks, builds Next.js as a static export, and deploys the `out/` directory with GitHub Pages Actions.
+
+Build-time URL settings are:
 
 ```text
 DEPLOY_TARGET=github-pages
@@ -27,13 +30,19 @@ NEXT_PUBLIC_SITE_URL=https://stack-shade.github.io/algoforge
 NEXT_PUBLIC_BASE_PATH=/algoforge
 ```
 
-and deploys `out/` with the official GitHub Pages actions.
+### One-time GitHub setting
+
+GitHub Pages must be enabled for the repository before the Actions deployment job can publish. In the repository, open:
+
+**Settings → Pages → Build and deployment → Source → GitHub Actions**
+
+After that setting is enabled, pushes to `main` use the workflow above.
 
 ## Optional Cloudflare/OpenNext
 
 The repository keeps `open-next.config.ts` and Wrangler configuration for an optional custom-domain deployment.
 
-For a root custom domain:
+For that target:
 
 ```text
 NEXT_PUBLIC_SITE_URL=https://algoforge.dev
@@ -41,7 +50,7 @@ NEXT_PUBLIC_BASE_PATH=
 DEPLOY_TARGET=
 ```
 
-Use `npm run deploy:cloudflare` only for that target.
+Use `npm run deploy:cloudflare` only for that deployment target.
 
 ## URL rules
 

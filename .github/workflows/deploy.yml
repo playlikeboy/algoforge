@@ -4,14 +4,7 @@ on:
   push:
     branches: [main]
   pull_request:
-  schedule:
-    - cron: "0 6 * * 1"
   workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: github-pages
@@ -26,15 +19,19 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 20
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: npm
+          package-manager-cache: false
 
       - name: Install dependencies
         run: npm install --no-audit --no-fund
@@ -46,30 +43,10 @@ jobs:
         run: test -s data/generated/site-manifest.json
 
       - name: Lint
-        run: |
-          set -o pipefail
-          npm run lint 2>&1 | tee lint.log
-
-      - name: Upload lint log
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: algoforge-lint-log
-          path: lint.log
-          retention-days: 7
+        run: npm run lint
 
       - name: Typecheck
-        run: |
-          set -o pipefail
-          npm run typecheck 2>&1 | tee typecheck.log
-
-      - name: Upload typecheck log
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: algoforge-typecheck-log
-          path: typecheck.log
-          retention-days: 7
+        run: npm run typecheck
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -78,7 +55,7 @@ jobs:
         run: npm run build
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./out
 
@@ -86,6 +63,10 @@ jobs:
     if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
