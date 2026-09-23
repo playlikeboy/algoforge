@@ -1,6 +1,8 @@
 name: Diagnose Data Pipeline
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -8,6 +10,7 @@ permissions:
 
 jobs:
   pipeline:
+    if: contains(github.event.head_commit.message, 'pipeline diagnostic') || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
