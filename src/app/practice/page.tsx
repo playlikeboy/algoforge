@@ -6,16 +6,22 @@ import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 
 export const metadata: Metadata = buildMetadata({
   title: "Practice Modes | AlgoForge",
-  description: "Random problem, daily challenge, and timed practice modes.",
+  description: "Practice pick, daily challenge, and timed practice modes.",
   keywords: ["leetcode practice", "daily challenge"],
   canonicalPath: "/practice",
 });
 
+function seededIndex(seed: number, length: number): number {
+  if (length === 0) return 0;
+  return Math.abs(Math.imul(seed, 9301) + 49297) % length;
+}
+
 export default function PracticePage() {
   const problems = getProblemsIndex();
-  const random = problems[Math.floor(Math.random() * Math.max(problems.length, 1))];
-  const dayIndex = Math.floor(Date.now() / 86400000) % Math.max(problems.length, 1);
-  const daily = problems[dayIndex];
+  const buildDate = process.env.NEXT_PUBLIC_BUILD_DATE ?? "2026-01-01";
+  const buildDay = Math.floor(Date.parse(buildDate + "T00:00:00Z") / 86400000);
+  const daily = problems[seededIndex(buildDay, problems.length)];
+  const random = problems[seededIndex(buildDay * 31 + 17, problems.length)];
 
   return (
     <div className="container-af py-10">
@@ -34,7 +40,7 @@ export default function PracticePage() {
         </div>
         <div className="rounded-2xl border border-border bg-card p-6">
           <h2 className="font-bold text-lg">Random problem</h2>
-          <p className="mt-2 text-sm text-muted-foreground">Refresh for a new draw.</p>
+          <p className="mt-2 text-sm text-muted-foreground">A deterministic seeded pick that changes with each production build.</p>
           {random && (
             <Link href={`/problems/${random.slug}`} className="mt-4 inline-block text-primary font-medium">
               {random.title} →

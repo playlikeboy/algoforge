@@ -99,11 +99,6 @@ function TwoSumVisualizer() {
   }, [array, target]);
 
   useEffect(() => {
-    setCurrentStep(0);
-    setIsPlaying(false);
-  }, [array, target]);
-
-  useEffect(() => {
     let timer: NodeJS.Timeout;
     if (isPlaying) {
       timer = setInterval(() => {

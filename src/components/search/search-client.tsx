@@ -8,7 +8,6 @@ import { DifficultyBadge } from "@/components/ui/badge";
 
 export function SearchClient({ documents }: { documents: SearchDocument[] }) {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState<SearchDocument[]>([]);
 
   const index = useMemo(() => {
     const mini = new MiniSearch<SearchDocument>({
@@ -45,14 +44,11 @@ export function SearchClient({ documents }: { documents: SearchDocument[] }) {
     return mini;
   }, [documents]);
 
-  useEffect(() => {
+  const results = useMemo(() => {
     if (!query.trim()) {
-      setResults(documents.filter((doc) => doc.type === "problem").slice(0, 12));
-      return;
+      return documents.filter((doc) => doc.type === "problem").slice(0, 12);
     }
-
-    const hits = index.search(query, { combineWith: "OR" }).slice(0, 30);
-    setResults(hits as unknown as SearchDocument[]);
+    return index.search(query, { combineWith: "OR" }).slice(0, 30) as unknown as SearchDocument[];
   }, [query, index, documents]);
 
   return (

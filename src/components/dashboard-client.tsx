@@ -1,19 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import Link from "next/link";
-import { getUserStore, type UserState } from "@/lib/user/store";
+import {
+  getServerUserStoreSnapshot,
+  getUserStoreSnapshot,
+  subscribeUserStore,
+} from "@/lib/user/store";
 
 export function DashboardClient() {
-  const [state, setState] = useState<UserState | null>(null);
-
-  useEffect(() => {
-    setState(getUserStore().getState());
-  }, []);
-
-  if (!state) {
-    return <p className="text-sm text-muted-foreground">Loading local progress…</p>;
-  }
+  const state = useSyncExternalStore(
+    subscribeUserStore,
+    getUserStoreSnapshot,
+    getServerUserStoreSnapshot
+  );
 
   const solved = Object.values(state.progress).filter((p) => p.status === "solved").length;
   const attempted = Object.values(state.progress).filter((p) => p.status === "attempted").length;

@@ -1,23 +1,30 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { Bookmark } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getUserStore } from "@/lib/user/store";
+import {
+  getServerUserStoreSnapshot,
+  getUserStore,
+  getUserStoreSnapshot,
+  subscribeUserStore,
+} from "@/lib/user/store";
 import { cn } from "@/lib/utils/cn";
 
 export function BookmarkButton({ slug }: { slug: string }) {
-  const [active, setActive] = useState(false);
+  const state = useSyncExternalStore(
+    subscribeUserStore,
+    getUserStoreSnapshot,
+    getServerUserStoreSnapshot
+  );
+  const active = state.bookmarks.includes(slug);
 
   useEffect(() => {
-    const store = getUserStore();
-    setActive(store.getState().bookmarks.includes(slug));
-    store.recordActivity();
+    getUserStore().recordActivity();
   }, [slug]);
 
   function toggle() {
-    const state = getUserStore().toggleBookmark(slug);
-    setActive(state.bookmarks.includes(slug));
+    getUserStore().toggleBookmark(slug);
   }
 
   return (

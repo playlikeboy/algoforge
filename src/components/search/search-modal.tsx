@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import MiniSearch from "minisearch";
 import { Search, Loader2, CornerDownLeft } from "lucide-react";
@@ -14,61 +14,15 @@ export function SearchModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [documents, setDocuments] = useState<SearchDocument[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [results, setResults] = useState<SearchDocument[]>([]);
+  const [loadError, setLoadError] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
-    if (!isOpen || documents.length > 0) return;
-
-    const controller = new AbortController();
-    setIsLoading(true);
-
-    fetch(siteConfig.basePath + "/api/search-docs", { signal: controller.signal })
-      .then((response) => {
-        if (!response.ok) throw new Error("Search index request failed");
-        return response.json();
-      })
-      .then((data: unknown) => {
-        if (!Array.isArray(data)) throw new Error("Invalid search index payload");
-        setDocuments(data as SearchDocument[]);
-      })
-      .catch((error: unknown) => {
-        if (error instanceof DOMException && error.name === "AbortError") return;
-        console.error("Failed to load search index:", error);
-      })
-      .finally(() => {
-        if (!controller.signal.aborted) setIsLoading(false);
-      });
-
-    return () => controller.abort();
-  }, [isOpen, documents.length]);
-
-  useEffect(() => {
-    const handleShortcut = (event: KeyboardEvent) => {
-      const active = document.activeElement;
-      if (
-        active &&
-        (active.tagName === "INPUT" ||
-          active.tagName === "TEXTAREA" ||
-          active.getAttribute("contenteditable") === "true")
-      ) {
-        return;
-      }
-
-      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
-        event.preventDefault();
-        setIsOpen((open) => !open);
-      } else if (event.key === "/") {
-        event.preventDefault();
-        setIsOpen(true);
-      }
-    };
-
-    window.addEventListener("keydown", handleShortcut);
-    return () => window.removeEventListener("keydown", handleShortcut);
-  }, []);
+  const closeModal = () => {
+    setIsOpen(false);
+    setQuery("");
+    setSelectedIndex(0);
+  };
 
   const index = useMemo(() => {
     if (documents.length === 0) return null;
@@ -107,27 +61,48 @@ export function SearchModal() {
     return mini;
   }, [documents]);
 
+  const results = useMemo(() => {
+    if (!isOpen) return [];
+    if (!query.trim()) {
+      return documents.filter((doc) => doc.type === "problem").slice(0, 8);
+    }
+    if (!index) return [];
+    return index.search(query, { combineWith: "OR" }).slice(0, 10) as unknown as SearchDocument[];
+  }, [isOpen, query, documents, index]);
+
+  const selectedResultIndex = Math.min(
+    selectedIndex,
+    Math.max(0, results.length - 1)
+  );
+  const isLoading = isOpen && documents.length === 0 && !loadError;
+
+  useEffect(() => {
+    if (!isOpen || documents.length > 0 || loadError) return;
+
+    const controller = new AbortController();
+
+    fetch(siteConfig.basePath + "/api/search-docs", {
+      signal: controller.signal,
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error("Search index request failed");
+        return response.json();
+      })
+      .then((data: unknown) => {
+        if (!Array.isArray(data)) throw new Error("Invalid search index payload");
+        setDocuments(data as SearchDocument[]);
+      })
+      .catch((error: unknown) => {
+        if (error instanceof DOMException && error.name === "AbortError") return;
+        console.error("Failed to load search index:", error);
+        setLoadError(true);
+      });
+
+    return () => controller.abort();
+  }, [isOpen, documents.length, loadError]);
+
   useEffect(() => {
     if (!isOpen) return;
-
-    if (!query.trim()) {
-      setResults(documents.filter((doc) => doc.type === "problem").slice(0, 8));
-      setSelectedIndex(0);
-      return;
-    }
-
-    if (!index) return;
-
-    setResults(index.search(query, { combineWith: "OR" }).slice(0, 10) as unknown as SearchDocument[]);
-    setSelectedIndex(0);
-  }, [query, index, documents, isOpen]);
-
-  useEffect(() => {
-    if (!isOpen) {
-      setQuery("");
-      document.body.style.overflow = "unset";
-      return;
-    }
 
     const timer = window.setTimeout(() => inputRef.current?.focus(), 50);
     document.body.style.overflow = "hidden";
@@ -139,43 +114,79 @@ export function SearchModal() {
   }, [isOpen]);
 
   useEffect(() => {
+    const handleShortcut = (event: KeyboardEvent) => {
+      const active = document.activeElement;
+      if (
+        active &&
+        (active.tagName === "INPUT" ||
+          active.tagName === "TEXTAREA" ||
+          active.getAttribute("contenteditable") === "true")
+      ) {
+        return;
+      }
+
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        setIsOpen((open) => {
+          if (open) {
+            setQuery("");
+            setSelectedIndex(0);
+          } else {
+            setLoadError(false);
+          }
+          return !open;
+        });
+      } else if (event.key === "/") {
+        event.preventDefault();
+        setLoadError(false);
+        setIsOpen(true);
+      }
+    };
+
+    window.addEventListener("keydown", handleShortcut);
+    return () => window.removeEventListener("keydown", handleShortcut);
+  }, []);
+
+  useEffect(() => {
     const handleNavigation = (event: KeyboardEvent) => {
       if (!isOpen) return;
 
       if (event.key === "Escape") {
-        setIsOpen(false);
+        closeModal();
       } else if (event.key === "ArrowDown") {
         event.preventDefault();
         setSelectedIndex((index) => (index + 1) % Math.max(1, results.length));
       } else if (event.key === "ArrowUp") {
         event.preventDefault();
-        setSelectedIndex((index) => (index - 1 + results.length) % Math.max(1, results.length));
+        setSelectedIndex(
+          (index) => (index - 1 + results.length) % Math.max(1, results.length)
+        );
       } else if (event.key === "Enter") {
         event.preventDefault();
-        const selected = results[selectedIndex];
-        if (selected) {
-          router.push(selected.path);
-          setIsOpen(false);
+        const result = results[selectedResultIndex];
+        if (result) {
+          router.push(result.path);
+          closeModal();
         }
       }
     };
 
     window.addEventListener("keydown", handleNavigation);
     return () => window.removeEventListener("keydown", handleNavigation);
-  }, [isOpen, results, selectedIndex, router]);
+  }, [isOpen, results, selectedResultIndex, router]);
 
   if (!isOpen) return null;
 
   return (
     <div
       className="fixed inset-0 z-50 flex items-start justify-center bg-black/60 backdrop-blur-sm p-4 pt-[15vh]"
-      onClick={() => setIsOpen(false)}
+      onClick={closeModal}
     >
       <div
         role="dialog"
         aria-modal="true"
         aria-label="Search AlgoForge"
-        className="w-full max-w-2xl rounded-2xl border border-border bg-card shadow-2xl overflow-hidden flex flex-col max-h-[60vh] transition-all"
+        className="w-full max-w-2xl rounded-2xl border border-border bg-card shadow-2xl overflow-hidden flex flex-col max-h-[60vh]"
         onClick={(event) => event.stopPropagation()}
       >
         <div className="flex items-center gap-3 border-b border-border px-4 py-3 bg-muted/20">
@@ -184,7 +195,10 @@ export function SearchModal() {
             ref={inputRef}
             type="search"
             value={query}
-            onChange={(event) => setQuery(event.target.value)}
+            onChange={(event) => {
+              setQuery(event.target.value);
+              setSelectedIndex(0);
+            }}
             placeholder="Type to search problems, topics, companies..."
             aria-label="Search problems, topics, and companies"
             className="w-full text-base bg-transparent border-0 focus:outline-none focus:ring-0 text-foreground"
@@ -203,11 +217,15 @@ export function SearchModal() {
             </div>
           ) : results.length === 0 ? (
             <div className="py-12 text-center text-sm text-muted-foreground">
-              {query ? `No results found for “${query}”` : "No results yet."}
+              {loadError
+                ? "Search is temporarily unavailable."
+                : query
+                  ? "No results found for “" + query + "”"
+                  : "No results yet."}
             </div>
           ) : (
             results.map((result, index) => {
-              const selected = index === selectedIndex;
+              const selected = index === selectedResultIndex;
               return (
                 <button
                   type="button"
@@ -220,7 +238,7 @@ export function SearchModal() {
                   )}
                   onClick={() => {
                     router.push(result.path);
-                    setIsOpen(false);
+                    closeModal();
                   }}
                   onMouseEnter={() => setSelectedIndex(index)}
                 >

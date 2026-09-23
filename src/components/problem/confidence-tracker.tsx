@@ -1,27 +1,28 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { getUserStore, type ProgressStatus } from "@/lib/user/store";
+import { useSyncExternalStore } from "react";
+import { getUserStore, type ProgressStatus, getServerUserStoreSnapshot, getUserStoreSnapshot, subscribeUserStore } from "@/lib/user/store";
 import { cn } from "@/lib/utils/cn";
 
 export function ConfidenceTracker({ slug }: { slug: string }) {
-  const [confidence, setConfidence] = useState(0);
-  const [status, setStatus] = useState<ProgressStatus>("todo");
+  const state = useSyncExternalStore(
+    subscribeUserStore,
+    getUserStoreSnapshot,
+    getServerUserStoreSnapshot
+  );
 
-  useEffect(() => {
-    const p = getUserStore().getState().progress[slug];
-    if (p) {
-      setConfidence(p.confidence);
-      setStatus(p.status);
-    }
-  }, [slug]);
+  const progress = state.progress[slug];
+  const confidence = progress?.confidence ?? 0;
+  const status: ProgressStatus = progress?.status ?? "todo";
 
-  function update(c: number) {
-    setConfidence(c);
+  function update(confidenceValue: number) {
     const nextStatus: ProgressStatus =
-      c >= 4 ? "solved" : c >= 1 ? "attempted" : "todo";
-    setStatus(nextStatus);
-    getUserStore().setProgress(slug, { confidence: c, status: nextStatus });
+      confidenceValue >= 4 ? "solved" : confidenceValue >= 1 ? "attempted" : "todo";
+
+    getUserStore().setProgress(slug, {
+      confidence: confidenceValue,
+      status: nextStatus,
+    });
   }
 
   return (

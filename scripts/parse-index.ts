@@ -3,7 +3,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
-import { RAW, GENERATED, CURATED } from "./paths";
+import { RAW, GENERATED } from "./paths";
 import { toSlug, slugFromFilename } from "../lib/utils/slug";
 import type { Difficulty } from "../lib/schema/types";
 import { LANGUAGE_MAP } from "../lib/schema/types";

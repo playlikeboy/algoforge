@@ -39,6 +39,9 @@ jobs:
       - name: Install dependencies
         run: npm install --no-audit --no-fund
 
+      - name: Set build date
+        run: echo "NEXT_PUBLIC_BUILD_DATE=$(date -u +%F)" >> "$GITHUB_ENV"
+
       - name: Validate generated data
         run: test -s data/generated/site-manifest.json
 

@@ -1,12 +1,11 @@
 "use client";
 
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState } from "react";
 import { Check, Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils/cn";
 import type { SolutionFile } from "@/lib/schema/types";
 
-// Import Prism and languages
 import Prism from "prismjs";
 import "prismjs/components/prism-c";
 import "prismjs/components/prism-cpp";
@@ -35,21 +34,14 @@ export function CodeTabs({
     defaultLang && solutions[defaultLang] ? defaultLang : langs[0] ?? ""
   );
   const [copied, setCopied] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const sol = solutions[active];
 
   const highlightedHtml = useMemo(() => {
     if (!sol) return "";
-    if (!mounted) return sol.code;
     const grammar = getPrismGrammar(active);
-    if (!grammar) return sol.code;
-    return Prism.highlight(sol.code, grammar, active);
-  }, [sol, active, mounted]);
+    return grammar ? Prism.highlight(sol.code, grammar, active) : sol.code;
+  }, [sol, active]);
 
   if (langs.length === 0) {
     return (
@@ -63,7 +55,7 @@ export function CodeTabs({
     if (!sol) return;
     await navigator.clipboard.writeText(sol.code);
     setCopied(true);
-    setTimeout(() => setCopied(false), 1500);
+    window.setTimeout(() => setCopied(false), 1500);
   }
 
   return (
@@ -73,6 +65,7 @@ export function CodeTabs({
           {langs.map((lang) => (
             <button
               key={lang}
+              type="button"
               role="tab"
               aria-selected={active === lang}
               className={cn(
@@ -100,14 +93,10 @@ export function CodeTabs({
         </Button>
       </div>
       <pre className="overflow-x-auto p-4 text-[13px] leading-relaxed font-mono max-h-[32rem]">
-        {mounted ? (
-          <code
-            className={`language-${active}`}
-            dangerouslySetInnerHTML={{ __html: highlightedHtml }}
-          />
-        ) : (
-          <code>{sol?.code}</code>
-        )}
+        <code
+          className={`language-${active}`}
+          dangerouslySetInnerHTML={{ __html: highlightedHtml }}
+        />
       </pre>
     </div>
   );
