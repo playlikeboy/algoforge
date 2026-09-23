@@ -43,7 +43,17 @@ jobs:
         run: test -s data/generated/site-manifest.json
 
       - name: Lint
-        run: npm run lint
+        run: |
+          set -o pipefail
+          npm run lint 2>&1 | tee lint.log
+
+      - name: Upload lint log
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: algoforge-lint-log
+          path: lint.log
+          retention-days: 7
 
       - name: Typecheck
         run: npm run typecheck
