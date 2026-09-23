@@ -19,6 +19,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      pages_configured: ${{ steps.pages.outcome }}
     permissions:
       contents: read
     timeout-minutes: 20
@@ -49,18 +51,25 @@ jobs:
         run: npm run typecheck
 
       - name: Configure GitHub Pages
+        id: pages
+        continue-on-error: true
         uses: actions/configure-pages@v5
 
       - name: Build static site
         run: npm run build
 
+      - name: Report Pages status
+        if: steps.pages.outcome != 'success'
+        run: echo "GitHub Pages is not enabled; build succeeded and deployment will be skipped."
+
       - name: Upload Pages artifact
+        if: steps.pages.outcome == 'success'
         uses: actions/upload-pages-artifact@v5
         with:
           path: ./out
 
   deploy:
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && needs.build.outputs.pages_configured == 'success'
     needs: build
     runs-on: ubuntu-latest
     permissions:
