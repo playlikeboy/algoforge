@@ -40,8 +40,63 @@ const createDefaultState = (): UserState => ({
 
 const SERVER_STATE = createDefaultState();
 
+function dateKey(date: Date): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return String(year) + "-" + month + "-" + day;
+}
+
 function todayKey(): string {
-  return new Date().toISOString().slice(0, 10);
+  return dateKey(new Date());
+}
+
+function isProgressStatus(value: unknown): value is ProgressStatus {
+  return value === "todo" || value === "attempted" || value === "solved" || value === "review";
+}
+
+function normalizeState(raw: unknown): UserState {
+  const fallback = createDefaultState();
+  if (!raw || typeof raw !== "object") return fallback;
+
+  const value = raw as Partial<UserState>;
+  const bookmarks = Array.isArray(value.bookmarks)
+    ? value.bookmarks.filter((slug): slug is string => typeof slug === "string" && slug.trim().length > 0)
+    : [];
+
+  const progress: Record<string, ProblemProgress> = {};
+  if (value.progress && typeof value.progress === "object") {
+    for (const [slug, entry] of Object.entries(value.progress)) {
+      if (!entry || typeof entry !== "object") continue;
+      const candidate = entry as Partial<ProblemProgress>;
+      progress[slug] = {
+        status: isProgressStatus(candidate.status) ? candidate.status : "todo",
+        confidence:
+          typeof candidate.confidence === "number" && Number.isFinite(candidate.confidence)
+            ? Math.min(5, Math.max(0, candidate.confidence))
+            : 0,
+        notes: typeof candidate.notes === "string" ? candidate.notes : "",
+        lastSeen: typeof candidate.lastSeen === "string" ? candidate.lastSeen : new Date().toISOString(),
+      };
+    }
+  }
+
+  const streakValue = value.streak && typeof value.streak === "object" ? value.streak : {};
+  const current =
+    typeof streakValue.current === "number" && Number.isFinite(streakValue.current)
+      ? Math.max(0, Math.floor(streakValue.current))
+      : 0;
+  const lastDate =
+    typeof streakValue.lastDate === "string" || streakValue.lastDate === null
+      ? streakValue.lastDate
+      : null;
+
+  return {
+    bookmarks: [...new Set(bookmarks)],
+    progress,
+    streak: { current, lastDate },
+    version: 1,
+  };
 }
 
 export class LocalStorageUserStore implements UserStore {
@@ -56,7 +111,7 @@ export class LocalStorageUserStore implements UserStore {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
       if (!raw) return;
-      this.state = { ...createDefaultState(), ...JSON.parse(raw) } as UserState;
+      this.state = normalizeState(JSON.parse(raw));
     } catch {
       this.state = createDefaultState();
     }
@@ -94,10 +149,12 @@ export class LocalStorageUserStore implements UserStore {
 
   toggleBookmark(slug: string): UserState {
     const state = this.getState();
+    const normalizedSlug = slug.trim();
+    if (!normalizedSlug) return state;
     const bookmarks = new Set(state.bookmarks);
 
-    if (bookmarks.has(slug)) bookmarks.delete(slug);
-    else bookmarks.add(slug);
+    if (bookmarks.has(normalizedSlug)) bookmarks.delete(normalizedSlug);
+    else bookmarks.add(normalizedSlug);
 
     return this.save({ ...state, bookmarks: [...bookmarks] });
   }
@@ -111,6 +168,13 @@ export class LocalStorageUserStore implements UserStore {
       lastSeen: new Date().toISOString(),
     };
 
+    const confidence =
+      typeof patch.confidence === "number" && Number.isFinite(patch.confidence)
+        ? Math.min(5, Math.max(0, patch.confidence))
+        : previous.confidence;
+    const status = isProgressStatus(patch.status) ? patch.status : previous.status;
+    const notes = typeof patch.notes === "string" ? patch.notes : previous.notes;
+
     return this.save({
       ...state,
       progress: {
@@ -118,6 +182,9 @@ export class LocalStorageUserStore implements UserStore {
         [slug]: {
           ...previous,
           ...patch,
+          confidence,
+          status,
+          notes,
           lastSeen: new Date().toISOString(),
         },
       },
@@ -132,7 +199,7 @@ export class LocalStorageUserStore implements UserStore {
 
     const yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);
-    const yesterdayKey = yesterday.toISOString().slice(0, 10);
+    const yesterdayKey = dateKey(yesterday);
     const current =
       state.streak.lastDate === yesterdayKey ? state.streak.current + 1 : 1;
 
