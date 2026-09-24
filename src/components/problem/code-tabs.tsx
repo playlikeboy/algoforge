@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { Check, Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils/cn";
@@ -35,21 +35,16 @@ export function CodeTabs({
   );
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);
+  const activeLanguage =
+    solutions[active] ? active : defaultLang && solutions[defaultLang] ? defaultLang : langs[0] ?? "";
 
-  useEffect(() => {
-    setActive((current) => {
-      if (solutions[current]) return current;
-      return defaultLang && solutions[defaultLang] ? defaultLang : langs[0] ?? "";
-    });
-  }, [defaultLang, langs, solutions]);
-
-  const sol = solutions[active];
+  const sol = solutions[activeLanguage];
 
   const highlightedHtml = useMemo(() => {
     if (!sol) return "";
-    const grammar = getPrismGrammar(active);
+    const grammar = getPrismGrammar(activeLanguage);
     return grammar ? Prism.highlight(sol.code, grammar, active) : sol.code;
-  }, [sol, active]);
+  }, [sol, activeLanguage]);
 
   if (langs.length === 0) {
     return (
@@ -83,10 +78,10 @@ export function CodeTabs({
               key={lang}
               type="button"
               role="tab"
-              aria-selected={active === lang}
+              aria-selected={activeLanguage === lang}
               className={cn(
                 "rounded-md px-2.5 py-1 text-xs font-medium transition-colors",
-                active === lang
+                activeLanguage === lang
                   ? "bg-white/15 text-white"
                   : "text-slate-400 hover:text-white hover:bg-white/5"
               )}
