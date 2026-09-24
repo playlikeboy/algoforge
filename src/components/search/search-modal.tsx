@@ -17,6 +17,7 @@ export function SearchModal() {
   const [loadError, setLoadError] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
+  const previousBodyOverflowRef = useRef("");
 
   const closeModal = () => {
     setIsOpen(false);
@@ -105,11 +106,13 @@ export function SearchModal() {
     if (!isOpen) return;
 
     const timer = window.setTimeout(() => inputRef.current?.focus(), 50);
+    previousBodyOverflowRef.current = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
     return () => {
       window.clearTimeout(timer);
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = previousBodyOverflowRef.current;
+      previousBodyOverflowRef.current = "";
     };
   }, [isOpen]);
 
@@ -217,11 +220,22 @@ export function SearchModal() {
             </div>
           ) : results.length === 0 ? (
             <div className="py-12 text-center text-sm text-muted-foreground">
-              {loadError
-                ? "Search is temporarily unavailable."
-                : query
-                  ? "No results found for “" + query + "”"
-                  : "No results yet."}
+              {loadError ? (
+                <div className="flex flex-col items-center gap-2">
+                  <span>Search is temporarily unavailable.</span>
+                  <button
+                    type="button"
+                    onClick={() => setLoadError(false)}
+                    className="rounded-lg border border-border px-3 py-1.5 text-xs font-semibold hover:bg-muted"
+                  >
+                    Retry
+                  </button>
+                </div>
+              ) : query ? (
+                "No results found for “" + query + "”"
+              ) : (
+                "No results yet."
+              )}
             </div>
           ) : (
             results.map((result, index) => {
