@@ -81,7 +81,8 @@ function normalizeState(raw: unknown): UserState {
     }
   }
 
-  const streakValue = value.streak && typeof value.streak === "object" ? value.streak : {};
+  const streakValue: Partial<UserState["streak"]> =
+    value.streak && typeof value.streak === "object" ? value.streak : {};
   const current =
     typeof streakValue.current === "number" && Number.isFinite(streakValue.current)
       ? Math.max(0, Math.floor(streakValue.current))
