@@ -15,6 +15,7 @@ export function SearchModal() {
   const [query, setQuery] = useState("");
   const [documents, setDocuments] = useState<SearchDocument[]>([]);
   const [loadError, setLoadError] = useState(false);
+  const [retryToken, setRetryToken] = useState(0);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
   const previousBodyOverflowRef = useRef("");
@@ -100,7 +101,7 @@ export function SearchModal() {
       });
 
     return () => controller.abort();
-  }, [isOpen, documents.length, loadError]);
+  }, [isOpen, documents.length, loadError, retryToken]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -225,7 +226,10 @@ export function SearchModal() {
                   <span>Search is temporarily unavailable.</span>
                   <button
                     type="button"
-                    onClick={() => setLoadError(false)}
+                    onClick={() => {
+                      setLoadError(false);
+                      setRetryToken((token) => token + 1);
+                    }}
                     className="rounded-lg border border-border px-3 py-1.5 text-xs font-semibold hover:bg-muted"
                   >
                     Retry
