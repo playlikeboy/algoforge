@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Check, Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils/cn";
@@ -34,6 +34,14 @@ export function CodeTabs({
     defaultLang && solutions[defaultLang] ? defaultLang : langs[0] ?? ""
   );
   const [copied, setCopied] = useState(false);
+  const [copyError, setCopyError] = useState(false);
+
+  useEffect(() => {
+    setActive((current) => {
+      if (solutions[current]) return current;
+      return defaultLang && solutions[defaultLang] ? defaultLang : langs[0] ?? "";
+    });
+  }, [defaultLang, langs, solutions]);
 
   const sol = solutions[active];
 
@@ -53,9 +61,17 @@ export function CodeTabs({
 
   async function copy() {
     if (!sol) return;
-    await navigator.clipboard.writeText(sol.code);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1500);
+    setCopyError(false);
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error("Clipboard unavailable");
+      await navigator.clipboard.writeText(sol.code);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1500);
+    } catch (error) {
+      console.error("Failed to copy code:", error);
+      setCopyError(true);
+      window.setTimeout(() => setCopyError(false), 1800);
+    }
   }
 
   return (
@@ -89,7 +105,7 @@ export function CodeTabs({
           aria-label="Copy code"
         >
           {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
-          {copied ? "Copied" : "Copy"}
+          {copied ? "Copied" : copyError ? "Copy failed" : "Copy"}
         </Button>
       </div>
       <pre className="overflow-x-auto p-4 text-[13px] leading-relaxed font-mono max-h-[32rem]">
