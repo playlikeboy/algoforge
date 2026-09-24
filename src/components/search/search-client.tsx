@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import MiniSearch from "minisearch";
 import type { SearchDocument } from "@/lib/schema/types";
